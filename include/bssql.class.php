@@ -183,7 +183,26 @@ if ( !class_exists( "BSSQL" ) ) {
        return $defaults;
       }
       
-       function get_bzone(){
+      function get_boss_offsets(){
+      
+      }
+      
+      function get_zone_offsets(){
+      }
+      
+      function update_boss_offsets(){
+      }
+      
+      function update_zone_offsets(){
+      }
+      
+      function reset_boss_offsets_to_defaults(){
+      }
+      
+      function reset_zone_offsets_to_defaults(){
+      }
+      
+      function get_bzone(){
        global $eqdkp, $user;
        
        $game_arr = explode('_', $eqdkp->config['default_game']);
