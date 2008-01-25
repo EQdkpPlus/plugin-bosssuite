@@ -1,0 +1,63 @@
+<form method="post" action="{F_CONFIG}" name="post">
+<table border="0" width="100%" cellspacing="1" cellpadding="2">
+            <tr>
+                 <th align="center" colspan="2">{L_GENERAL}</th>
+            </tr>
+            <tr>
+                <td class="row2">{L_SOURCE}</td>
+                <td class="row1">
+                    <select name="source" class="input">
+                    <!-- BEGIN source_row -->
+                        <option value="{source_row.VALUE}"{source_row.SELECTED}>{source_row.OPTION}</option>
+                    <!-- END source_row -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="60%" class="row2">{L_ZONEINFO}</td>
+                <td width="40%" class="row1">
+                    <select size="1" name="zoneInfo">
+                        <option value="rname" {ZONEINFO_SEL_RNAME}>{L_RNAME}</option>
+                        <option value="rnote" {ZONEINFO_SEL_RNOTE}>{L_RNOTE}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="60%" class="row2">{L_BOSSINFO}</td>
+                <td width="40%" class="row1">
+                    <select size="1" name="bossInfo">
+                        <option value="rname" {BOSSINFO_SEL_RNAME}>{L_RNAME}</option>
+                        <option value="rnote" {BOSSINFO_SEL_RNOTE}>{L_RNOTE}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%" class="row2">{L_NOTEDELIM}</td>
+                <td width="90%" class="row1"><input type="text" name="notedelim" size="32" value="{BP_NOTEDELIM}" class="input" /></td>
+            </tr>
+            <tr>
+                <td width="60%" class="row2">{L_NAMEDELIM}</td>
+                <td width="40%" class="row1"><input type="text" name="namedelim" size="32" value="{BP_NAMEDELIM}" class="input" /></td>
+            </tr>
+            <tr>
+                <td width="60%" class="row2">{L_TABLES}</td>
+                <td width="40%" class="row1"><input type="text" name="tables" size="32" value="{BP_TABLES}" class="input" /></td>
+            </tr>
+</table>
+<br>
+<br>
+<table width="100%" border="0" cellspacing="1" cellpadding="2">
+    <tr>
+        <th align="center" colspan="2">{L_PINFO}</th>
+    </tr>
+    <tr>
+        <td>{PARSE_CONFIG}</td>
+    </tr>
+</table>
+<br>
+<br>
+<table width="100%" border="0" cellspacing="1" cellpadding="2">
+ <tr><th align="center" colspan="2"><input type="submit" name="bpsavebu" value="{L_SUBMIT}" class="mainoption" /></th></tr>
+</table>
+</form>
+{CREDITS}

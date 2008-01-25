@@ -1,0 +1,133 @@
+<?php
+/******************************
+ * EQdkp BossSuite4
+ * by sz3
+ * 
+ * Copyright 2006
+ * Licensed under the GNU GPL.  See COPYING for full terms.
+ * ------------------
+ * bosssuite_plugin_class.php
+ * 19.01.08 sz3
+ ******************************/
+
+if (!defined('EQDKP_INC')) {
+	die('You cannot access this file directly.');
+}
+
+// Set table names
+global $table_prefix;
+if (!defined('BS_CONFIG_TABLE')) { define('BS_CONFIG_TABLE', $table_prefix . 'bs_config'); }
+if (!defined('BS_ZONE_TABLE')) { define('BS_ZONE_TABLE', $table_prefix . 'bs_zonedata'); }
+if (!defined('BS_BOSS_TABLE')) { define('BS_BOSS_TABLE', $table_prefix . 'bs_bossdata'); }
+if (!defined('BS_MAX_DATE')) { define('BS_MAX_DATE', mktime (0,0,0,1,1,2015)); }
+if (!defined('BS_MIN_DATE')) { define('BS_MIN_DATE', mktime (0,0,0,1,1,2000)); }
+
+class bosssuite_Plugin_Class extends EQdkp_Plugin {
+	function bosssuite_plugin_class($pm) {
+		
+		global $eqdkp, $eqdkp_root_path, $user, $SID, $table_prefix;
+		
+		$this->eqdkp_plugin($pm);
+		$this->pm->get_language_pack('bosssuite');
+
+		$this->add_data(array (
+			'name' => 'BossSuite MGS',
+			'code' => 'bosssuite',
+			'path' => 'bosssuite',
+			'contact' => 'sz3@gmx.net',
+			'template_path' => 'plugins/bosssuite/templates/',
+			'version' => '0.0.1'
+		));
+
+		//Permissions
+		$this->add_permission('2380', 'a_bosssuite_conf', 'N', $user->lang['bb_pm_conf']);
+		$this->add_permission('2381', 'a_bosssuite_offs', 'N', $user->lang['bb_pm_offs']);
+
+		$this->add_permission('2387', 'u_bosssuite_bp_view', 'Y', $user->lang['bb_pm_conf']);
+		$this->add_permission('2388', 'u_bosssuite_bl_view', 'Y', $user->lang['bb_pm_offs']);
+		$this->add_permission('2389', 'u_bosssuite_bc_view', 'Y', $user->lang['bb_pm_pcon']);
+
+
+		if (!($this->pm->check(PLUGIN_INSTALLED, 'bosssuite'))){
+    		//Grant permissions to installing user
+    		if ( $user->data['user_id'] != ANONYMOUS ){
+    		      $pids = "'2380', '2381', '2382', '2387', '2388', '2389'";
+    		      
+    			    $sql = "DELETE FROM ".AUTH_USERS_TABLE." WHERE user_id='".$user->data['user_id']."' AND auth_id IN (".$pids.")";
+          		$this->add_sql(SQL_INSTALL, $sql);
+ 
+              $parr = explode(', ', $pids);
+              foreach ($parr as $pid){                     
+             		  $sql = "INSERT INTO ".AUTH_USERS_TABLE." (user_id, auth_id, auth_setting) VALUES ('".$user->data['user_id']."',".$pid.",'Y')";
+              		$this->add_sql(SQL_INSTALL, $sql);
+              }
+        	}
+      
+      		//Create tables on install		
+      		$sql = "CREATE TABLE IF NOT EXISTS " . BS_CONFIG_TABLE . " (
+      				    `plugin_id` varchar(32) NOT NULL default '',
+      				    `game_id` varchar(32) NOT NULL default '',
+                  `config_name` varchar(255) NOT NULL default '',
+      		        `config_value` varchar(255) default '')";				    
+      		$this->add_sql(SQL_INSTALL, $sql);
+      		
+      		$sql = "CREATE TABLE IF NOT EXISTS " . BS_ZONE_TABLE . " (
+          				`game_id` varchar(32) NOT NULL default 'unknown',
+      		    		`zone_id` varchar(32) NOT NULL default 'unknown',
+      		    		`zone_string` varchar(255) NOT NULL default '',
+      		    		`zone_co_offs` smallint(5) NOT NULL default '0',
+      		    		`zone_fd_offs` int(11) NOT NULL default '".BS_MAX_DATE."',
+      		    		`zone_ld_offs` int(11) NOT NULL default '".BS_MIN_DATE."'
+      				    )";				    
+      		$this->add_sql(SQL_INSTALL, $sql);
+      		
+      		$sql = "CREATE TABLE IF NOT EXISTS " . BS_BOSS_TABLE . " (
+          				`game_id` varchar(32) NOT NULL default 'unknown',
+      		    		`boss_id` varchar(32) NOT NULL default 'unknown',
+      		    		`boss_string` varchar(255) NOT NULL default '',
+      		    		`boss_co_offs` smallint(5) NOT NULL default '0',
+      		    		`boss_fd_offs` int(11) NOT NULL default '".BS_MAX_DATE."',
+      		    		`boss_ld_offs` int(11) NOT NULL default '".BS_MIN_DATE."'
+      				    )";			    
+      		$this->add_sql(SQL_INSTALL, $sql);
+    		
+		}else{
+    		//Menus
+    		$this->add_menu('admin_menu', $this->gen_admin_menu());
+    	
+    		//Drop table on deinstall
+    		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_ZONE_TABLE);
+    		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_BOSS_TABLE);
+    		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_CONFIG_TABLE);
+    		}
+	}
+
+	function gen_admin_menu() {
+		if ($this->pm->check(PLUGIN_INSTALLED, 'bosssuite')) {
+			global $db, $user, $SID, $eqdkp_root_path, $eqdkp;
+
+			$url_prefix = ( EQDKP_VERSION <  '1.3.2' ) ? $eqdkp_root_path : '';
+
+			$admin_menu = array (
+				'bosssuite' => array (
+					0 => $user->lang['bs_am_title'],
+					1 => array (
+						'link' => $url_prefix . 'plugins/bosssuite/admin/settings.php' . $SID,
+						'text' => $user->lang['bs_am_conf'],
+						'check' => 'a_bosssuite_conf'
+					),
+					2 => array (
+						'link' => $url_prefix . 'plugins/bosssuite/admin/offsets.php' . $SID,
+						'text' => $user->lang['bs_am_offs'],
+						'check' => 'a_bosssuite_offs'
+					),
+
+				)
+			);
+
+			return $admin_menu;
+		}
+		return;
+	}
+}
+?>

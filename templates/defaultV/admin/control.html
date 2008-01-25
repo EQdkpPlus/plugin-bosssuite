@@ -1,0 +1,66 @@
+<!-- INCLUDE ../../../../templates/defaultV/page_header.html -->
+<form method="post" action="{F_CONFIG}" name="post">
+<table width="100%" border="0" cellspacing="1" cellpadding="2">
+	<tr><th>{L_PLUGIN}</th><th>{L_PERMISSION}</th><th colspan="2">{L_ALL_USERS}</th></tr>
+	<tr class="row1">
+		<td>{L_BB}</td>
+		<td>{L_BB_CONF}</td>
+		<td><input type="submit" name="bb_pcon_bb_conf_grant_bu" value="{L_GRANT}" class="mainoption" /></td>
+		<td><input type="submit" name="bb_pcon_bb_conf_revoke_bu" value="{L_REVOKE}" class="mainoption" /></td>
+	</tr>
+	<tr class="row2">
+		<td>{L_BB}</td>
+		<td>{L_BB_OFFS}</td>
+		<td><input type="submit" name="bb_pcon_bb_offs_grant_bu" value="{L_GRANT}" class="mainoption" /></td>
+		<td><input type="submit" name="bb_pcon_bb_offs_revoke_bu" value="{L_REVOKE}" class="mainoption" /></td>
+	</tr>
+	<tr class="row1">
+		<td>{L_BB}</td>
+		<td>{L_BB_PCON}</td>
+		<td><input type="submit" name="bb_pcon_bb_pcon_grant_bu" value="{L_GRANT}" class="mainoption" /></td>
+		<td><input type="submit" name="bb_pcon_bb_pcon_revoke_bu" value="{L_REVOKE}" class="mainoption" /></td>
+	</tr>
+	
+	<!-- IF SHOW_BP -->
+	<tr class="row2">
+		<td>{L_BP}</td>
+		<td>{L_BP_VIEW}</td>
+		<td><input type="submit" name="bb_pcon_bp_view_grant_bu" value="{L_GRANT}" class="mainoption" /></td>
+		<td><input type="submit" name="bb_pcon_bp_view_revoke_bu" value="{L_REVOKE}" class="mainoption" /></td>
+	</tr>
+	<tr class="row1">
+		<td>{L_BP}</td>
+		<td>{L_BP_CONF}</td>
+		<td><input type="submit" name="bb_pcon_bp_conf_grant_bu" value="{L_GRANT}" class="mainoption" /></td>
+		<td><input type="submit" name="bb_pcon_bp_conf_revoke_bu" value="{L_REVOKE}" class="mainoption" /></td>
+	</tr>
+	<!-- ENDIF -->
+
+	<!-- IF SHOW_BC -->
+	<tr class="row2">
+		<td>{L_BC}</td>
+		<td>{L_BC_VIEW}</td>
+		<td><input type="submit" name="bb_pcon_bc_view_grant_bu" value="{L_GRANT}" class="mainoption" /></td>
+		<td><input type="submit" name="bb_pcon_bc_view_revoke_bu" value="{L_REVOKE}" class="mainoption" /></td>
+	</tr>
+	<tr class="row1">
+		<td>{L_BC}</td>
+		<td>{L_BC_CONF}</td>
+		<td><input type="submit" name="bb_pcon_bc_conf_grant_bu" value="{L_GRANT}" class="mainoption" /></td>
+		<td><input type="submit" name="bb_pcon_bc_conf_revoke_bu" value="{L_REVOKE}" class="mainoption" /></td>
+	</tr>
+	<!-- ENDIF -->
+
+	<!-- IF SHOW_BL -->
+	<tr class="row2">
+		<td>{L_BL}</td>
+		<td>{L_BL_VIEW}</td>
+		<td><input type="submit" name="bb_pcon_bl_view_grant_bu" value="{L_GRANT}" class="mainoption" /></td>
+		<td><input type="submit" name="bb_pcon_bl_view_revoke_bu" value="{L_REVOKE}" class="mainoption" /></td>
+	</tr>
+	<!-- ENDIF -->
+
+</table>
+</form>
+{CREDITS}
+<!-- INCLUDE ../../../../templates/defaultV/page_tail.html -->
