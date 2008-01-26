@@ -90,16 +90,23 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
       		    		`boss_ld_offs` int(11) NOT NULL default '".BS_MIN_DATE."'
       				    )";			    
       		$this->add_sql(SQL_INSTALL, $sql);
+
+//		global $table_prefix;
+		
+		$this->add_sql(SQL_INSTALL, "INSERT INTO " . $table_prefix . "config VALUES ('bs_showBC', '1');");
+    $this->add_sql(SQL_INSTALL, "INSERT INTO " . $table_prefix . "config VALUES ('bs_linkBL', '1');");
     		
 		}else{
     		//Menus
     		$this->add_menu('admin_menu', $this->gen_admin_menu());
-    	  	$this->add_menu('main_menu1', $this->gen_main_menu1());
+    	  $this->add_menu('main_menu1', $this->gen_main_menu1());
     		//Drop table on deinstall
     		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_ZONE_TABLE);
     		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_BOSS_TABLE);
     		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_CONFIG_TABLE);
-    		}
+    		$this->add_sql(SQL_UNINSTALL, "DELETE FROM " . $table_prefix . "config WHERE config_name='bs_showBC';");
+        $this->add_sql(SQL_UNINSTALL, "DELETE FROM " . $table_prefix . "config WHERE config_name='bs_linkBL';");
+    }
 	}
 
 function gen_main_menu1() {
