@@ -21,8 +21,7 @@ if ( !class_exists( "BSSQL" ) ) {
           require($default_file);
           return $defaults;
         }else{
-          require(dirname(__FILE__).'/../games/'.$game_arr[0].'/'.$plugin.'/index.php');
-          require(dirname(__FILE__).'/../games/'.$game_arr[0].'/'.$plugin.'/lang/'.$default_lang.'/defaults.php');
+          require(dirname(__FILE__).'/../games/'.$game_arr[0].'/'.$plugin.'/defaults.php');
           return $defaults;
         }
       }

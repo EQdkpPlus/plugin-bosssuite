@@ -73,4 +73,37 @@ $lang['bs_ol_ld'] = "Last Date";
 $lang['bs_ol_co'] = "Counter";
 $lang['bs_ol_submit'] = "Save";
 
+//Settings
+$lang['lang'] = "english";
+$lang['baseurl'] = "http://wow.allakhazam.com/db/mob.html?wmob=";
+$lang['dateFormat'] = "%m/%d/%Y";
+
+//User Page
+$lang['bp_um_link'] = "BossProgress";
+$lang['firstkill'] = "First kill: ";
+$lang['lastkill'] = "Last kill: ";
+$lang['firstvisit'] = "First visit: ";
+$lang['lastvisit'] = "Last visit: ";
+$lang['zonevisitcount'] = "Visit count: ";
+$lang['bosskillcount'] = "Kill count: ";
+$lang['status'] = "Status: ";
+$lang['never'] = "Never";
+
+$lang['opt_general'] = "General settings";
+$lang['opt_dynloc'] = "Hide zones with no boss kills?";
+$lang['opt_dynboss'] = "Hide never killed bosses?";
+$lang['opt_showzone'] = "Show: ";
+$lang['opt_showSB'] = "Show a zone progression bar?";
+$lang['opt_zhiType'] = "How to display the progress in the header image?";
+$lang['zhi_jitter'] ="old photo";
+$lang['zhi_bw'] = "black/white";
+$lang['zhi_none'] = "not at all";
+$lang['opt_style'] = "Style: ";
+$lang['bp_style_bp'] = "BossProgress default";
+$lang['bp_style_bps'] = "BossProgress simple";
+$lang['bp_style_rp2r'] = "Raidprogress 2/row";
+$lang['bp_style_rp3r'] = "Raidprogress 3/row";
+
+
+
 ?>

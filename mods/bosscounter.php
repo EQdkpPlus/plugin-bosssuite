@@ -23,9 +23,10 @@ global $user , $eqdkp;
 // new mgs class
 require(dirname(__FILE__).'/../include/bsmgs.class.php');
 $mybsmgs = new BSMGS();
+
 if (!$mybsmgs->game_supported('bossbase')){
   $bcout = '<table width=100% class="borderless" cellspacing="0" cellpadding="2">
-		        <tr><th colspan="2" align="center">Bosscounter</th></tr>'."\n".
+		        <tr><th colspan="2" align="center">BossCounter</th></tr>'."\n".
 	         '<td>GAME NOT SUPPORTED!</td></tr></table>';
 	$bchout = '<table cellpadding=2 cellspacing=0 border=0 width='.$BKtablewidth.' align=center>'."\n".
 	          '<tr><td>GAME NOT SUPPORTED</td></tr></table>';
@@ -72,7 +73,6 @@ if ($bb_conf['source'] == 'both'){
 # Output
 ####################################################
 
-
 //VERTICAL
 $bcout = '<table width=100% class="borderless" cellspacing="0" cellpadding="2">
 		  <tr><th colspan="2" align="center">Bosscounter</th></tr>'."\n";
@@ -87,19 +87,17 @@ foreach ($sbzone as $zone => $bosses)
 	
 	if ((!$bc_conf['dynZone']) or ($loc_killed > 0)) 
 	{
-		$bcout .= bc_html_get_zsb($user->lang[$zone]['short'], $loc_killed, sizeof($data[$zone]['bosses']));
+		$bcout .=  '<tr><th align="left">'.$user->lang[$zone]['short'].'</th><th align="right">'.$loc_killed.'/'.sizeof($data[$zone]['bosses']).'</th></tr>'."\n"; 
 		$bi = 1; //row number 1/2
 		foreach($bosses as $boss){
 			if ((!$bc_conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)){
-		    	$bcout .= bc_html_get_bossinfo($bi, $boss, $data[$zone]['bosses'][$boss]['kc']);
+		    	$bcout .= '<tr class="row'.($bi+1).'"><td align="left">'.bc_html_get_bosslink($boss).'</td><td align="right">'.$data[$zone]['bosses'][$boss]['kc'].'</td></tr>' . "\n";
 				$bi = 1 - $bi;
 			}
 		}									
 	}
 }
-
 $bcout .= '</table>'."\n";
-
 
 //HORIZONTAL
 $bi = 1;
@@ -108,11 +106,8 @@ $bchout .= '<table cellpadding=2 cellspacing=0 border=0 width='.$BKtablewidth.' 
 
 foreach ($sbzone as $zone => $bosses) 
 {
-
-		  $bchout .= '<tr class="row'.($bi+1).'" align="left">'."\n";
-		  	if(true){
+		  $bchout .= '<tr class="row'.($bi+1).'" align="left">'."\n";  
 			$bchout .= '<td colspan="8" style="text-decoration:underline"><span style="font-size:1em">'.$user->lang[$zone]['long'].'</span></td></tr>'."\n";
-			}
 		  $bchout .= '<tr class="row'.($bi+1).'">'."\n";
 		  $i=0;
 
@@ -137,11 +132,10 @@ foreach ($sbzone as $zone => $bosses)
 }
 
 $tpl->assign_var('BOSSKILLV',$bcout);
-
 $tpl->assign_var('BOSSKILL',$bchout);
 	
 	
-	function bc_get_sql_data_string($tablestring){
+function bc_get_sql_data_string($tablestring){
 $tables = array();
 if($tablestring != '')
     $tables = explode(", ", $tablestring);
@@ -221,40 +215,6 @@ function bc_fetch_bi($bzone, $data, $bb_conf, $bb_pboss) {
     }
     mysql_free_result($result);
     return $data;
-}
-
-
-
-// header zeile
-function bc_html_get_zsb($location, $killed, $total){
-	return '<tr><th align="left">'.$location.'</th><th align="right">'.$killed.'/'.$total.'</th></tr>'."\n";
-}
-
-
-function bc_html_get_bossinfo($rowid, $bossid, $count){ 
-	$bossinfo  = '<tr class="row' . ($rowid +1) . '">';
-	$bossinfo .= '<td align="left">';
-	$bossinfo .= bc_html_get_bosslink($bossid);
-	$bossinfo .='</td><td align="right">';	
-	$bossinfo .= $count;
-	$bossinfo .= '</td></tr>' . "\n";
-	
-	return $bossinfo;
-}
-
-function bc_html_get_zsb_h($location){
-	return '<tr><th colspan=2>'.$location.'</th></tr>'."\n";
-}
-
-function bc_html_get_bossinfo_h($rowid, $bossid, $count){ 
-//	$bossinfo  = '<tr class="row' . ($rowid +1) . '">';
-	$bossinfo .= '<td align="left">';
-	$bossinfo .= bc_html_get_bosslink($bossid);
-	$bossinfo .='</td><td align="right">';	
-	$bossinfo .= $count;
-	$bossinfo .= '</td>';//</tr>' . "\n";
-	
-	return $bossinfo;
 }
 
 function bc_html_get_bosslink($bossid){

@@ -31,7 +31,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 		$this->pm->get_language_pack('bosssuite');
 
 		$this->add_data(array (
-			'name' => 'BossSuite MGS',
+			'name' => 'BossSuite 4 - MGS',
 			'code' => 'bosssuite',
 			'path' => 'bosssuite',
 			'contact' => 'sz3@gmx.net',
@@ -94,12 +94,28 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 		}else{
     		//Menus
     		$this->add_menu('admin_menu', $this->gen_admin_menu());
-    	
+    	  	$this->add_menu('main_menu1', $this->gen_main_menu1());
     		//Drop table on deinstall
     		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_ZONE_TABLE);
     		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_BOSS_TABLE);
     		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_CONFIG_TABLE);
     		}
+	}
+
+function gen_main_menu1() {
+		if ($this->pm->check(PLUGIN_INSTALLED, 'bosssuite')) {
+			global $db, $user, $SID;
+
+			$main_menu1 = array (
+				array (
+					'link' => 'plugins/' . $this->get_data('path') . '/bossprogress.php' . $SID,
+					'text' => $user->lang['bp_um_link'],
+					'check' => 'u_bosssuite_bp_view'
+			));
+
+			return $main_menu1;
+		}
+		return;
 	}
 
 	function gen_admin_menu() {
