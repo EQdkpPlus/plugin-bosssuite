@@ -84,23 +84,23 @@ $arrvals = array (
 	'BOSSINFO_SEL_RNOTE'    => ( $bs_conf['bossInfo'] == "rnote" ) ? ' selected="selected"' : '',	
 	
 	// Language
-	'L_GENERAL' => $user->lang['bb_al_general'],
-	'L_NOTEDELIM' => $user->lang['bb_al_delimRNO'],
-  'L_NAMEDELIM' => $user->lang['bb_al_delimRNA'],
-  'L_TABLES' => $user->lang['bb_al_tables'],
-  'L_PINFO' => $user->lang['bb_al_parseInfo'],
-  'L_SUBMIT' => $user->lang['bb_al_submit'],
-	'L_ZONEINFO' => $user->lang['bb_al_zoneInfo'],
-	'L_BOSSINFO' => $user->lang['bb_al_bossInfo'],
-	'L_RNAME' => $user->lang['bb_ao_rname'],
-	'L_RNOTE' => $user->lang['bb_ao_rnote'],
-	'L_SOURCE' => $user->lang['bb_al_source'],
+	'L_GENERAL' => $user->lang['bs_al_general'],
+	'L_NOTEDELIM' => $user->lang['bs_al_delimRNO'],
+  'L_NAMEDELIM' => $user->lang['bs_al_delimRNA'],
+  'L_TABLES' => $user->lang['bs_al_tables'],
+  'L_PINFO' => $user->lang['bs_al_parseInfo'],
+  'L_SUBMIT' => $user->lang['bs_al_submit'],
+	'L_ZONEINFO' => $user->lang['bs_al_zoneInfo'],
+	'L_BOSSINFO' => $user->lang['bs_al_bossInfo'],
+	'L_RNAME' => $user->lang['bs_ao_rname'],
+	'L_RNOTE' => $user->lang['bs_ao_rnote'],
+	'L_SOURCE' => $user->lang['bs_al_source'],
 
 );
 
-$bs_source['database'] = $user->lang['bb_source_db'];
-$bs_source['offsets'] = $user->lang['bb_source_offs'];
-$bs_source['both'] = $user->lang['bb_source_both'];
+$bs_source['database'] = $user->lang['bs_source_db'];
+$bs_source['offsets'] = $user->lang['bs_source_offs'];
+$bs_source['both'] = $user->lang['bs_source_both'];
 
 foreach ($bs_source as $value => $option) {
 	$tpl->assign_block_vars('source_row', array (

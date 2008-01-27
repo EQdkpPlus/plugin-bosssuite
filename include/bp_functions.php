@@ -18,39 +18,6 @@
  * 16.04.07 sz3
  ******************************/
 
-define ('MAXDATE', mktime (0,0,0,1,1,2015));
-define ('MINDATE', mktime (0,0,0,1,1,2000));
-
-// Save or add values to the database.
-function bp_update_config($fieldname,$insertvalue) {
-global $eqdkp_root_path, $user, $SID, $table_prefix, $db;
-    	$sql = "UPDATE `".$table_prefix."bp_config` SET config_value='".strip_tags(htmlspecialchars($insertvalue))."' WHERE config_name='".$fieldname."';";
-		$db->query($sql);
-		if (mysql_affected_rows() == 0){
-			$sql = "INSERT INTO `".$table_prefix."bp_config` VALUES('".$fieldname."', '".strip_tags(htmlspecialchars($insertvalue))."');";	
-			$db->query($sql);
-		}
-}
-
-
-
-// Get configuration from database
-function bp_get_config() {
-global $db, $table_prefix;
-$sql = 'SELECT * FROM ' . $table_prefix . 'bp_config ORDER BY config_name';
-if (!($settings_result = $db->query($sql))) {
-	message_die('Could not obtain bossprogress configuration data', '', __FILE__, __LINE__, $sql);
-}
-
-while($roww = $db->fetch_record($settings_result)) {
-    $conf[$roww['config_name']] = $roww['config_value'];
-}	
-
-return $conf;
-}
-
-
-
 function bp_get_sql_data_string($tablestring){
 $tables = array();
 if($tablestring != '')
@@ -90,13 +57,13 @@ function bp_get_visible_bzone($zones, $conf){
 function bp_init_data_array($bzone){
 foreach ($bzone as $zone => $bosses) {
 	$data[$zone]['vc'] = 0 + $zo_vc[$zone];
-	$data[$zone]['fvd']=MAXDATE;
-	$data[$zone]['lvd']=MINDATE;
+	$data[$zone]['fvd']=BS_MAX_DATE;
+	$data[$zone]['lvd']=BS_MIN_DATE;
 			 
 	foreach ($bosses as $boss){
     	$data[$zone][bosses][$boss]['kc'] = 0;
-    	$data[$zone][bosses][$boss]['fkd']=MAXDATE;
-    	$data[$zone][bosses][$boss]['lkd']=MINDATE;
+    	$data[$zone][bosses][$boss]['fkd']=BS_MAX_DATE;
+    	$data[$zone][bosses][$boss]['lkd']=BS_MIN_DATE;
 	}
 }
 

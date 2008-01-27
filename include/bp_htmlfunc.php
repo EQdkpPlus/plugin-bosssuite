@@ -360,7 +360,7 @@ $devout = "";
 
 function bp_date2text($date) {
 global $user;
-	if (($date == MAXDATE) or ($date == MINDATE)) {
+	if (($date == BS_MAX_DATE) or ($date == BS_MIN_DATE)) {
 		return $user->lang['never'];
 	} else {
 		return strftime($user->lang['dateFormat'], $date);

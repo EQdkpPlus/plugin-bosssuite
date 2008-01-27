@@ -19,7 +19,7 @@ $eqdkp_root_path = './../../../';
 include_once ($eqdkp_root_path . 'common.php');
 
 // Check user permission
-$user->check_auth('a_bossbase_offs');
+$user->check_auth('a_bosssuite_offs');
 
 if (!$pm->check(PLUGIN_INSTALLED, 'bosssuite')) {
 	message_die('The BossSuite plugin is not installed.');
@@ -74,7 +74,7 @@ foreach ($bzone as $zoneid => $bosslist){
     $zbcode .= "\t".'<div class="accordion_content">'."\n";
     
     $zbcode .= '<table width="100%" border="0" cellspacing="1" cellpadding="2">';
-    $zbcode .= '<tr><th>'.$user->lang['bb_ol_in'].'</th><th>'.$user->lang['bb_ol_fd'].'</th><th>'.$user->lang['bb_ol_ld'].'</th><th>'.$user->lang['bb_ol_co'].'</th></tr>';
+    $zbcode .= '<tr><th>'.$user->lang['bs_ol_in'].'</th><th>'.$user->lang['bs_ol_fd'].'</th><th>'.$user->lang['bs_ol_ld'].'</th><th>'.$user->lang['bs_ol_co'].'</th></tr>';
     
     $zbcode .= '<tr>';
     $zbcode .= '<td width="40%" class="row2">' .$user->lang[$zoneid]['long']. '</td>';
