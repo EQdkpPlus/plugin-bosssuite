@@ -36,6 +36,9 @@ if ( !class_exists( "BSMGS" ) ) {
        
     function load_game_specific_language($plugin){
         global $user;
+        if (!$this->game_supported($plugin)) {
+        	return false;
+        }
         $filename = dirname(__FILE__).'/../games/'.$this->game.'/'.$plugin.'/lang/'.$this->user_lang.'/lang_add.php';
         if (file_exists($filename)){
           require($filename);

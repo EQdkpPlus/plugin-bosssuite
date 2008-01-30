@@ -103,5 +103,38 @@ $lang['bp_style_bp'] = "BossProgress default";
 $lang['bp_style_bps'] = "BossProgress simple";
 $lang['bp_style_rp2r'] = "Raidprogress 2/row";
 $lang['bp_style_rp3r'] = "Raidprogress 3/row";
+/*
+$lang = array(//_merge($lang, array( 
 
+'bossloot' => 'Bossloot',
+'bossloot_pm_view' => 'view Bossloot',
+'bossloot_pm_conf' => 'configure Bossloot',
+
+'bl_loottable' => 'Loottable for: ',
+'bl_kc_p1' => ' (killed ',
+'bl_kc_p2' => ' times)',
+
+'bl_itemname' => 'Item name',
+'bl_itemcount' => 'Drop count',
+'bl_droprate' => 'Drop rate',
+
+'bl_dl' => 'Dropped loot',
+'bl_ndl' => 'Never dropped loot',
+'bl_wl' => 'Wrong loot',
+
+//Admin menu
+'bl_opt_minitemqual' => 'Minimum item quality to be shown:',
+'bl_opt_itemlang' => 'Item language',
+'bl_opt_ndl' => 'Show loot that never dropped for you?',
+'bl_opt_wl' => 'Show loot that was found, but not belongs to the boss?',
+'bl_opt_is' => 'Get Itemstats data for new items?',
+
+'bl_credits_p1' => 'EQDKP BossLoot v',
+'bl_credits_p2' => ' by sz3',
+'bl_credits_ll' => 'Loot list: ',
+'bl_credits_bi' => 'Boss images: ',
+'bl_no_lootlist_credits' => 'no lootlist selected/found',
+'bl_no_bossimages_credits' => 'no bossimage credits found',
+);
+*/
 ?>

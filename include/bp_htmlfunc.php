@@ -91,11 +91,10 @@ if (file_exists("games/WoW/bossprogress/images/bosses/" . $bossname . ".gif")) {
 }
 
 function bp_html_get_bosslink($bossid){
-global $eqdkp, $pm, $user, $SID;
-	if ( $pm->check(PLUGIN_INSTALLED, 'bossloot') )
-		return '<a href="' . $eqdkp->config['server_path'] . 'plugins/bossloot/bossloot.php'.$SID.'&amp;bossid='.$bossid.'">'.$user->lang[$bossid]['long'].'</a><br />';
+global $eqdkp_root_path, $pm, $user, $SID;
+		return '<a href="' . $eqdkp_root_path . 'plugins/bosssuite/bossloot.php'.$SID.'&amp;bossid='.$bossid.'">'.$user->lang[$bossid]['long'].'</a><br />';
 	
-	return '<a href="' . $user->lang['baseurl'] . $user->lang[$bossid]['id'] . '" target="bossinfo">' . $user->lang[$bossid]['long'] . '</a><br />';
+
 
 }
 

@@ -21,8 +21,12 @@ if ( !class_exists( "BSSQL" ) ) {
           require($default_file);
           return $defaults;
         }else{
-          require(dirname(__FILE__).'/../games/'.$game_arr[0].'/'.$plugin.'/defaults.php');
-          return $defaults;
+          if (file_exists(dirname(__FILE__).'/../games/'.$game_arr[0].'/'.$plugin.'/defaults.php')){
+            require(dirname(__FILE__).'/../games/'.$game_arr[0].'/'.$plugin.'/defaults.php');
+            return $defaults;
+          }else{
+            return array();
+          }
         }
       }
       
@@ -183,16 +187,79 @@ if ( !class_exists( "BSSQL" ) ) {
       }
       
       function get_boss_offsets(){
+        global $eqdkp, $db, $table_prefix;
       
+        $game_arr = explode('_', $eqdkp->config['default_game']);
+        $game = $game_arr[0];
+        
+      	$sql = 'SELECT boss_id, boss_co_offs, boss_fd_offs, boss_ld_offs FROM `' . BS_BOSS_TABLE . "` WHERE game_id='".$game."';";
+      	if (!($settings_result = $db->query($sql))) {
+      		message_die('Could not obtain boss offset data', '', __FILE__, __LINE__, $sql);
+      	}
+      
+      	while($roww = $db->fetch_record($settings_result)) { 
+      	   		$conf[$roww['boss_id']]['counter'] = $roww['boss_co_offs'];
+      	   		$conf[$roww['boss_id']]['fd'] = $roww['boss_fd_offs'];
+      	   		$conf[$roww['boss_id']]['ld'] = $roww['boss_ld_offs'];
+      	}	
+      	
+      	if (!empty($conf))
+      	   return $conf;
+      	else
+      	   return $this->reset_boss_offsets_to_defaults();
       }
       
       function get_zone_offsets(){
+        global $eqdkp, $db, $table_prefix;
+      
+        $game_arr = explode('_', $eqdkp->config['default_game']);
+        $game = $game_arr[0];
+        
+      	$sql = 'SELECT zone_id, zone_co_offs, zone_fd_offs, zone_ld_offs FROM `' . BS_ZONE_TABLE . "` WHERE game_id='".$game."';";
+      	if (!($settings_result = $db->query($sql))) {
+      		message_die('Could not obtain zone offset data', '', __FILE__, __LINE__, $sql);
+      	}
+      
+      	while($roww = $db->fetch_record($settings_result)) { 
+      	   		$conf[$roww['zone_id']]['counter'] = $roww['zone_co_offs'];
+      	   		$conf[$roww['zone_id']]['fd'] = $roww['zone_fd_offs'];
+      	   		$conf[$roww['zone_id']]['ld'] = $roww['zone_ld_offs'];
+      	}	
+      	
+      	if (!empty($conf))
+      	   return $conf;
+      	else
+      	   return $this->reset_zone_offsets_to_defaults();
       }
       
-      function update_boss_offsets(){
+      function update_boss_offsets($offsets, $id, $fdate, $ldate, $counter){
+      global $eqdkp, $user, $db;
+      
+        $game_arr = explode('_', $eqdkp->config['default_game']);
+        $game = $game_arr[0];
+        
+      if(array_key_exists( $id, $offsets )){
+        $sql = "UPDATE `".BS_BOSS_TABLE."` SET boss_co_offs='".$counter."', boss_ld_offs='".$ldate."', boss_fd_offs='".$fdate."' WHERE boss_id='".$id."' AND game_id='".$game."';";
+      	$db->query($sql);
+      }else{
+      	$sql = "INSERT INTO `".BS_BOSS_TABLE."` VALUES('".$game."','".$id."', '', '".$counter."', '".$fdate."', '".$ldate."');";	
+      	$db->query($sql);
+      	}
       }
       
-      function update_zone_offsets(){
+      function update_zone_offsets($offsets, $id, $fdate, $ldate, $counter){
+      global $eqdkp, $user, $db;
+      
+        $game_arr = explode('_', $eqdkp->config['default_game']);
+        $game = $game_arr[0];
+        
+      if(array_key_exists( $id, $offsets )){
+        $sql = "UPDATE `".BS_ZONE_TABLE."` SET zone_co_offs='".$counter."', zone_ld_offs='".$ldate."', zone_fd_offs='".$fdate."' WHERE zone_id='".$id."' AND game_id='".$game."';";
+      	$db->query($sql);
+      }else{
+      	$sql = "INSERT INTO `".BS_ZONE_TABLE."` VALUES('".$game."','".$id."', '', '".$counter."', '".$fdate."', '".$ldate."');";	
+      	$db->query($sql);
+      	}
       }
       
       function reset_boss_offsets_to_defaults(){
