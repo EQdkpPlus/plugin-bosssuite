@@ -9,6 +9,12 @@
  * bp_functions.php
 
  ******************************/
+
+if ( !defined('EQDKP_INC') ){
+    header('HTTP/1.0 404 Not Found');exit;
+} 
+
+ 
 function bp_html_get_zhi($zhi_type, $location, $loc_completed){
 global $user, $eqdkp;
 
@@ -80,19 +86,19 @@ global $user;
 
 
 function bp_html_get_boss_image_td($bossname, $bosscount) {
-if ($bosscount == 0)
-	$bossname .= "_b";
-
-if (file_exists("games/WoW/bossprogress/images/bosses/" . $bossname . ".gif")) {
-	return '<td width="60" height="60" align="center"><img src="games/WoW/bossprogress/images/bosses/' . $bossname . '.gif" height="60" border="0" alt="' . $bossname . '" /></td>';
-} else {
-	return '<td width="60" height="60" align="center"><img src="games/WoW/bossprogress/images/bosses/turkey.gif" height="60" border="0" alt= "' . $bossname . '" /></td>';
-}
+  if ($bosscount == 0)
+  	$bossname .= "_b";
+  
+  if (file_exists("games/WoW/bossprogress/images/bosses/" . $bossname . ".gif")) {
+  	return '<td width="60" height="60" align="center"><img src="games/WoW/bossprogress/images/bosses/' . $bossname . '.gif" height="60" border="0" alt="' . $bossname . '" /></td>';
+  } else {
+  	return '<td width="60" height="60" align="center"><img src="games/WoW/bossprogress/images/bosses/turkey.gif" height="60" border="0" alt= "' . $bossname . '" /></td>';
+  }
 }
 
 function bp_html_get_bosslink($bossid){
 global $eqdkp_root_path, $pm, $user, $SID;
-		return '<a href="' . $eqdkp_root_path . 'plugins/bosssuite/bossloot.php'.$SID.'&amp;bossid='.$bossid.'">'.$user->lang[$bossid]['long'].'</a><br />';
+  return '<a href="' . $eqdkp_root_path . 'plugins/bosssuite/bossloot.php'.$SID.'&amp;bossid='.$bossid.'">'.$user->lang[$bossid]['long'].'</a><br />';
 	
 
 

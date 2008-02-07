@@ -41,8 +41,6 @@ if (count($tables) == 0) {
 return $sql;
 }
 
-
-
 function bp_get_visible_bzone($zones, $conf){
 	$szones = array();
 	foreach($zones as $zone => $bosses){
@@ -53,25 +51,22 @@ function bp_get_visible_bzone($zones, $conf){
 	return $szones;
 }
 
-
 function bp_init_data_array($bzone){
-foreach ($bzone as $zone => $bosses) {
-	$data[$zone]['vc'] = 0 + $zo_vc[$zone];
-	$data[$zone]['fvd']=BS_MAX_DATE;
-	$data[$zone]['lvd']=BS_MIN_DATE;
-			 
-	foreach ($bosses as $boss){
-    	$data[$zone][bosses][$boss]['kc'] = 0;
-    	$data[$zone][bosses][$boss]['fkd']=BS_MAX_DATE;
-    	$data[$zone][bosses][$boss]['lkd']=BS_MIN_DATE;
-	}
+  foreach ($bzone as $zone => $bosses) {
+  	$data[$zone]['vc'] = 0 + $zo_vc[$zone];
+  	$data[$zone]['fvd']=BS_MAX_DATE;
+  	$data[$zone]['lvd']=BS_MIN_DATE;
+  			 
+  	foreach ($bosses as $boss){
+      	$data[$zone][bosses][$boss]['kc'] = 0;
+      	$data[$zone][bosses][$boss]['fkd']=BS_MAX_DATE;
+      	$data[$zone][bosses][$boss]['lkd']=BS_MIN_DATE;
+  	}
+  }
+  
+  return $data;
+
 }
-
-return $data;
-
-}
-
-
 
 function bp_fetch_bzi($bzone, $data, $bb_conf, $bb_pzone, $bb_pboss) {
 	$delim = array (

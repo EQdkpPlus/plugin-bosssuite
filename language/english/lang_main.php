@@ -103,8 +103,8 @@ $lang['bp_style_bp'] = "BossProgress default";
 $lang['bp_style_bps'] = "BossProgress simple";
 $lang['bp_style_rp2r'] = "Raidprogress 2/row";
 $lang['bp_style_rp3r'] = "Raidprogress 3/row";
-/*
-$lang = array(//_merge($lang, array( 
+
+$lang = array_merge($lang, array( 
 
 'bossloot' => 'Bossloot',
 'bossloot_pm_view' => 'view Bossloot',
@@ -135,6 +135,6 @@ $lang = array(//_merge($lang, array(
 'bl_credits_bi' => 'Boss images: ',
 'bl_no_lootlist_credits' => 'no lootlist selected/found',
 'bl_no_bossimages_credits' => 'no bossimage credits found',
-);
-*/
+));
+
 ?>

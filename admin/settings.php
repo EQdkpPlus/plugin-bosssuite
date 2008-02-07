@@ -57,6 +57,10 @@ $bc_conf = $mybssql->get_config('bosscounter');
 
 // Saving
 if ($_POST['bpsavebu']){
+  //General Config
+  $eqdkp->config_set('bs_showBC', $_POST['ebc']);
+  $eqdkp->config_set('bs_linkBL', $_POST['en2l']);
+
   //BossBase Config
 	$mybssql->update_config('bossbase', $bs_conf, 'zoneInfo', $_POST['zoneInfo']);
 	$mybssql->update_config('bossbase', $bs_conf, 'bossInfo', $_POST['bossInfo']);
@@ -98,10 +102,21 @@ $bl_conf = $mybssql->get_config('bossloot');
 $bp_conf = $mybssql->get_config('bossprogress');
 $bc_conf = $mybssql->get_config('bosscounter');
 
+global $eqdkp, $SID;
+
 $arrvals = array (
   'CREDITS' => $user->lang['bs_credits1'] . $pm->get_data('bosssuite', 'version') . $user->lang['bs_credits2'],
 	'F_CONFIG' => 'settings.php' . $SID,
-
+   
+  //General
+  'BS_EBC'    => ( $eqdkp->config['bs_showBC'] == 1 ) ? ' checked="checked"' : '',
+	'BS_EN2L'   => ( $eqdkp->config['bs_linkBL'] == 1 ) ? ' checked="checked"' : '',
+   
+   // Language
+	'L_EBC' => "Enable bosscounter", //$user->lang['bs_al_general'],
+	'L_EN2L' => "Enable note 2 link",//$user->lang['bs_al_delimRNO'],
+   
+  //BossBase
 	'BP_NOTEDELIM' => $bs_conf['noteDelim'],
 	'BP_NAMEDELIM' => $bs_conf['nameDelim'],
 	'BP_TABLES' => $bs_conf['tables'],

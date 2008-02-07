@@ -59,24 +59,13 @@ require(dirname(__FILE__).'/include/bssql.class.php');
 $mybssql = new BSSQL();
 
 $bzone = $mybsmgs->get_bzone();
+$bb_conf = $mybssql->get_config('bossbase');
+$bb_pboss = $mybssql->get_parse_boss();
+$bb_pzone = $mybssql->get_parse_zone();
+$bp_conf = $mybssql->get_config('bossprogress');
+//$bzone = bb_get_bzone();
+$sbzone = $bzone;//bc_get_visible_bzone($bzone, $bc_conf);
 
-	$bb_conf = $mybssql->get_config('bossbase');
-	$bb_pboss = $mybssql->get_parse_boss();
-	$bb_pzone = $mybssql->get_parse_zone();
-	$bp_conf = $mybssql->get_config('bossprogress');
-	//$bzone = bb_get_bzone();
-	$sbzone = $bzone;//bc_get_visible_bzone($bzone, $bc_conf);
-/*
-require_once(dirname(__FILE__).'/../bossbase/include/extfunc.php');
-$bb_conf = bb_get_parse_config();
-$bb_pzone = bb_get_parse_zone();
-$bb_pboss = bb_get_parse_boss();
-
-$bp_conf = bp_get_config();
-
-$bzone = bb_get_bzone();
-$sbzone = bp_get_visible_bzone($bzone, $bp_conf);
-*/
 # Get data from database
 ####################################################
 if ($bb_conf['source'] == 'database'){
@@ -84,30 +73,30 @@ if ($bb_conf['source'] == 'database'){
 	$data = bp_fetch_bzi($sbzone, $data, $bb_conf, $bb_pzone, $bb_pboss);
 }
 if ($bb_conf['source'] == 'offsets'){
-	$bb_boffs = bb_get_boss_offsets();
-	$bb_zoffs = bb_get_zone_offsets();
+	$bb_boffs = $mybssql->get_boss_offsets();
+	$bb_zoffs = $mybssql->bb_get_zone_offsets();
 	foreach($bzone as $zone => $bosses){
 		$data[$zone]['fvd'] = $bb_zoffs[$zone]['fd'];
 		$data[$zone]['lvd'] = $bb_zoffs[$zone]['ld'];
-		$data[$zone]['vc'] = $bb_zoffs[$zone]['co'];		
+		$data[$zone]['vc'] = $bb_zoffs[$zone]['counter'];		
 		foreach($bosses as $boss){
 			$data[$zone][bosses][$boss]['fkd'] = $bb_boffs[$boss]['fd'];
 			$data[$zone][bosses][$boss]['lkd'] = $bb_boffs[$boss]['ld'];
-			$data[$zone][bosses][$boss]['kc'] = $bb_boffs[$boss]['co'];		
+			$data[$zone][bosses][$boss]['kc'] = $bb_boffs[$boss]['counter'];		
 		}
 	}
 }
 if ($bb_conf['source'] == 'both'){
-	$bb_boffs = bb_get_boss_offsets();
-	$bb_zoffs = bb_get_zone_offsets();
+	$bb_boffs = $mybssql->get_boss_offsets();
+	$bb_zoffs = $mybssql->get_zone_offsets();
 	foreach($bzone as $zone => $bosses){
 		$data[$zone]['fvd'] = $bb_zoffs[$zone]['fd'];
 		$data[$zone]['lvd'] = $bb_zoffs[$zone]['ld'];
-		$data[$zone]['vc'] = $bb_zoffs[$zone]['co'];		
+		$data[$zone]['vc'] = $bb_zoffs[$zone]['counter'];		
 		foreach($bosses as $boss){
 			$data[$zone][bosses][$boss]['fkd'] = $bb_boffs[$boss]['fd'];
 			$data[$zone][bosses][$boss]['lkd'] = $bb_boffs[$boss]['ld'];
-			$data[$zone][bosses][$boss]['kc'] = $bb_boffs[$boss]['co'];		
+			$data[$zone][bosses][$boss]['kc'] = $bb_boffs[$boss]['counter'];		
 		}
 	}
 	$data = bp_fetch_bzi($sbzone, $data, $bb_conf, $bb_pzone, $bb_pboss);	

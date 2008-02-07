@@ -156,26 +156,26 @@ $lang['eye'] = array('long' => 'The Eye', 'short' => 'Eye');
 $lang['alar'] = array('id' =>'19514', 'long' => 'Al\'Ar the Phoenix God', 'short' => 'Al\'Ar');
 $lang['vreaver'] = array('id' =>'19516', 'long' => 'Void Reaver', 'short' => 'Reaver');
 $lang['solarian'] = array('id' =>'18805', 'long' => 'High Astromancer Solarian', 'short' => 'Solarian');
-$lang['kaelthas'] = array('id' =>'99999', 'long' => 'Kael\'thas Sunstrider', 'short' => 'Kaelthas');
+$lang['kaelthas'] = array('id' =>'19622', 'long' => 'Kael\'thas Sunstrider', 'short' => 'Kaelthas');
 
 /******Battle of Mount Hyjal*****/
 $lang['hyjal'] = array('long' => 'Battle of Mount Hyjal', 'short' => 'Hyjal');
-$lang['winterchill'] = array('id' =>'99999', 'long' => 'Rage Winterchill', 'short' => 'Winterchill');
-$lang['anetheron'] = array('id' =>'99999', 'long' => 'Anetheron', 'short' => 'Anetheron');
-$lang['kazrogal'] = array('id' =>'99999', 'long' => 'Kaz\'rogal', 'short' => 'Kaz\'rogal');
-$lang['azgalor'] = array('id' =>'99999', 'long' => 'Azgalor', 'short' => 'Azgalor');
-$lang['archimonde'] = array('id' =>'99999', 'long' => 'Archimonde', 'short' => 'Archimonde');
+$lang['winterchill'] = array('id' =>'17767', 'long' => 'Rage Winterchill', 'short' => 'Winterchill');
+$lang['anetheron'] = array('id' =>'17808', 'long' => 'Anetheron', 'short' => 'Anetheron');
+$lang['kazrogal'] = array('id' =>'17888', 'long' => 'Kaz\'rogal', 'short' => 'Kaz\'rogal');
+$lang['azgalor'] = array('id' =>'17842', 'long' => 'Azgalor', 'short' => 'Azgalor');
+$lang['archimonde'] = array('id' =>'17968', 'long' => 'Archimonde', 'short' => 'Archimonde');
 
 /******The Black Temple*****/
 $lang['temple'] = array('long' => 'The Black Temple', 'short' => 'Temple');
-$lang['najentus'] = array('id' =>'99999', 'long' => 'High Warlord Naj\'entus', 'short' => 'Naj\'entus');
-$lang['supremus'] = array('id' =>'99999', 'long' => 'Supremus', 'short' => 'Supremus');
-$lang['akama'] = array('id' =>'99999', 'long' => 'Akama', 'short' => 'Akama');
-$lang['gorefiend'] = array('id' =>'99999', 'long' => 'Teron Gorefiend', 'short' => 'Gorefiend');
+$lang['najentus'] = array('id' =>'22887', 'long' => 'High Warlord Naj\'entus', 'short' => 'Naj\'entus');
+$lang['supremus'] = array('id' =>'22898', 'long' => 'Supremus', 'short' => 'Supremus');
+$lang['akama'] = array('id' =>'22841', 'long' => 'Akama', 'short' => 'Akama');
+$lang['gorefiend'] = array('id' =>'22871', 'long' => 'Teron Gorefiend', 'short' => 'Gorefiend');
 $lang['essence'] = array('id' =>'99999', 'long' => 'Essence of Souls', 'short' => 'Essence');
-$lang['bloodboil'] = array('id' =>'99999', 'long' => 'Gurtogg Bloodboil', 'short' => 'Bloodboil');
-$lang['shahraz'] = array('id' =>'99999', 'long' => 'Mother Shahraz', 'short' => 'Shahraz');
+$lang['bloodboil'] = array('id' =>'22948', 'long' => 'Gurtogg Bloodboil', 'short' => 'Bloodboil');
+$lang['shahraz'] = array('id' =>'22947', 'long' => 'Mother Shahraz', 'short' => 'Shahraz');
 $lang['council'] = array('id' =>'99999', 'long' => 'Illidari Council', 'short' => 'Council');
-$lang['illidan'] = array('id' =>'99999', 'long' => 'Illidan Stormrage', 'short' => 'Illidan');
+$lang['illidan'] = array('id' =>'22917', 'long' => 'Illidan Stormrage', 'short' => 'Illidan');
 
 ?>

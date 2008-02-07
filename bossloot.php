@@ -13,7 +13,6 @@
 
 // EQdkp required files/vars
 define('EQDKP_INC', true);
-define('PLUGIN', 'bossloot');
 
 $eqdkp_root_path = './../../';
 
