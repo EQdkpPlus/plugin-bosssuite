@@ -21,7 +21,7 @@ include_once ($eqdkp_root_path . 'common.php');
 global $user , $eqdkp;
 
 // new mgs class
-require(dirname(__FILE__).'/../include/bsmgs.class.php');
+require_once(dirname(__FILE__).'/../include/bsmgs.class.php');
 $mybsmgs = new BSMGS();
 
 if (!$mybsmgs->game_supported('bossbase')){
@@ -35,36 +35,36 @@ if (!$mybsmgs->game_supported('bossbase')){
 $mybsmgs->load_game_specific_language('bossbase');
 
 // sql class
-require(dirname(__FILE__).'/../include/bssql.class.php');
+require_once(dirname(__FILE__).'/../include/bssql.class.php');
 $mybssql = new BSSQL();
 
 $bzone = $mybsmgs->get_bzone();
-
-	$bb_conf = $mybssql->get_config('bossbase');
-	$bb_pboss = $mybssql->get_parse_boss();
-	$bc_conf = $mybssql->get_config('bosscounter');
-	//$bzone = bb_get_bzone();
-	$sbzone = $bzone;//bc_get_visible_bzone($bzone, $bc_conf);
+$bb_conf = $mybssql->get_config('bossbase');
+$bb_pboss = $mybssql->get_parse_boss();
+$bc_conf = $mybssql->get_config('bosscounter');
+$sbzone = $bzone;//bc_get_visible_bzone($bzone, $bc_conf);
 
 # Get data from database&/offsets
 ####################################################
 if ($bb_conf['source'] == 'database'){
-    $data = bc_init_data_array($sbzone);
+    foreach ($bzone as $zone => $bosses) {
+      foreach ($bosses as $boss){
+        $data[$zone]['bosses'][$boss]['kc'] = 0;
+      }
+    }
     $data = bc_fetch_bi($sbzone, $data, $bb_conf, $bb_pboss);
-}
-if ($bb_conf['source'] == 'offsets'){
-    $bb_boffs = bb_get_boss_offsets();
+} else if ($bb_conf['source'] == 'offsets'){
+    $bb_boffs = $mybssql->get_boss_offsets();
     foreach($sbzone as $zone => $bosses){
         foreach($bosses as $boss){
-            $data[$zone]['bosses'][$boss]['kc'] = $bb_boffs[$boss]['co'];
+            $data[$zone]['bosses'][$boss]['kc'] = $bb_boffs[$boss]['counter'];
         }
     }
-}
-if ($bb_conf['source'] == 'both'){
-    $bb_boffs = bb_get_boss_offsets();
+} else if ($bb_conf['source'] == 'both'){
+    $bb_boffs = $mybssql->get_boss_offsets();
     foreach($sbzone as $zone => $bosses){
         foreach($bosses as $boss){
-            $data[$zone]['bosses'][$boss]['kc'] = $bb_boffs[$boss]['co'];
+            $data[$zone]['bosses'][$boss]['kc'] = $bb_boffs[$boss]['counter'];
         }
     }
     $data = bc_fetch_bi($sbzone, $data, $bb_conf, $bb_pboss);
@@ -136,28 +136,27 @@ $tpl->assign_var('BOSSKILL',$bchout);
 	
 	
 function bc_get_sql_data_string($tablestring){
-$tables = array();
-if($tablestring != '')
-    $tables = explode(", ", $tablestring);
-
-$sql = "";
-if (count($tables) == 0) {
-    $sql = "SELECT raid_name AS rname, raid_note AS rnote FROM " . RAIDS_TABLE . ";";
-} else {
-    $bpinc = 0;
-    foreach ($tables as $raidtable) {
-        if ($bpinc == 0) {
-            $sql .= "SELECT raid_name AS rname, raid_note AS rnote FROM " . $raidtable . "_raids";
-            $bpinc++;
-        } else {
-            $sql .= " UNION ALL SELECT raid_name, raid_note FROM " . $raidtable . "_raids";
-        }
-    }
-    $sql .= ";";
+  $tables = array();
+  if($tablestring != '')
+      $tables = explode(", ", $tablestring);
+  
+  $sql = "";
+  if (count($tables) == 0) {
+      $sql = "SELECT raid_name AS rname, raid_note AS rnote FROM " . RAIDS_TABLE . ";";
+  } else {
+      $bpinc = 0;
+      foreach ($tables as $raidtable) {
+          if ($bpinc == 0) {
+              $sql .= "SELECT raid_name AS rname, raid_note AS rnote FROM " . $raidtable . "_raids";
+              $bpinc++;
+          } else {
+              $sql .= " UNION ALL SELECT raid_name, raid_note FROM " . $raidtable . "_raids";
+          }
+      }
+      $sql .= ";";
+  }
+  return $sql;
 }
-return $sql;
-}
-
 
 function bc_get_visible_bzone($zones, $conf){
     $szones = array();
@@ -168,18 +167,6 @@ function bc_get_visible_bzone($zones, $conf){
     }
     return $szones;
 }
-
-
-function bc_init_data_array($bzone){
-foreach ($bzone as $zone => $bosses) {
-    foreach ($bosses as $boss){
-        $data[$zone]['bosses'][$boss]['kc'] = 0;
-    }
-}
-return $data;
-}
-
-
 
 function bc_fetch_bi($bzone, $data, $bb_conf, $bb_pboss) {
     $delim = array (
@@ -220,9 +207,8 @@ function bc_fetch_bi($bzone, $data, $bb_conf, $bb_pboss) {
 function bc_html_get_bosslink($bossid){
 global $eqdkp, $pm, $user, $SID;
     if ( $pm->check(PLUGIN_INSTALLED, 'bossloot') )
-		return '<a href="' . $eqdkp->config['server_path'] . 'plugins/bossloot/bossloot.php'.$SID.'&amp;bossid='.$bossid.'">'.$user->lang[$bossid]['short'].'</a><br />';
+		  return '<a href="' . $eqdkp->config['server_path'] . 'plugins/bossloot/bossloot.php'.$SID.'&amp;bossid='.$bossid.'">'.$user->lang[$bossid]['short'].'</a><br />';
     return '<a href="' . $user->lang['baseurl'] . $user->lang[$bossid]['id'] . '" target="bossinfo">' . $user->lang[$bossid]['short'] . '</a><br />';
 }
-
 	
 ?>

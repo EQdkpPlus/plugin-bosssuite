@@ -1,6 +1,56 @@
 <form method="post" action="{F_CONFIG}" name="post">
 <table border="0" width="100%" cellspacing="1" cellpadding="2">
             <tr>
+                 <th align="center" colspan="2">{L_GENERAL}: BossBase</th>
+            </tr>
+            <tr>
+                <td class="row2">{L_SOURCE}</td>
+                <td class="row1">
+                    <select name="source" class="input">
+                    <!-- BEGIN source_row -->
+                        <option value="{source_row.VALUE}"{source_row.SELECTED}>{source_row.OPTION}</option>
+                    <!-- END source_row -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="60%" class="row2">{L_ZONEINFO}</td>
+                <td width="40%" class="row1">
+                    <select size="1" name="zoneInfo">
+                        <option value="rname" {ZONEINFO_SEL_RNAME}>{L_RNAME}</option>
+                        <option value="rnote" {ZONEINFO_SEL_RNOTE}>{L_RNOTE}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="60%" class="row2">{L_BOSSINFO}</td>
+                <td width="40%" class="row1">
+                    <select size="1" name="bossInfo">
+                        <option value="rname" {BOSSINFO_SEL_RNAME}>{L_RNAME}</option>
+                        <option value="rnote" {BOSSINFO_SEL_RNOTE}>{L_RNOTE}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="10%" class="row2">{L_NOTEDELIM}</td>
+                <td width="90%" class="row1"><input type="text" name="notedelim" size="32" value="{BP_NOTEDELIM}" class="input" /></td>
+            </tr>
+            <tr>
+                <td width="60%" class="row2">{L_NAMEDELIM}</td>
+                <td width="40%" class="row1"><input type="text" name="namedelim" size="32" value="{BP_NAMEDELIM}" class="input" /></td>
+            </tr>
+            <tr>
+                <td width="60%" class="row2">{L_TABLES}</td>
+                <td width="40%" class="row1"><input type="text" name="tables" size="32" value="{BP_TABLES}" class="input" /></td>
+            </tr>
+</table>
+<br />
+<br />
+<table border="0" width="100%" cellspacing="1" cellpadding="2">
+			<tr>
+   				 <th align="center" colspan="2">{L_GENERAL}: BossLoot</th>
+			</tr>
+            <tr>
                  <td class="row2">{L_ITEMLANG}</td>
                  <td class="row1">
                     <select name="itemlang" class="input">
@@ -35,13 +85,77 @@
                 <td width="30%" class="row1"><input type="checkbox" name="is" value="1" {BL_IS} /></td>
             </tr>
 </table>
+<br />
+<br />
+<table border="0" width="100%" cellspacing="1" cellpadding="2">
+			<tr>
+   				 <th align="center" colspan="2">{L_GENERAL}: BossProgress</th>
+			</tr>
+			<tr>
+				<td width="60%" class="row2">{L_BP_ZHITYPE}</td>
+				<td width="40%" class="row1">
+					<select size="1" name="bp_zhiType">
+						<option value="0" {BP_ZHITYPE_SEL_JITTER}>{L_BP_JITTER}</option>
+						<option value="1" {BP_ZHITYPE_SEL_BW}>{L_BP_BW}</option>
+						<option value="2" {BP_ZHITYPE_SEL_NONE}>{L_BP_NONE}</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				 <td class="row2">{L_BP_STYLE}</td>
+				 <td class="row1">
+				 	<select name="bp_style" class="input">
+					<!-- BEGIN bp_style_row -->
+						<option value="{bp_style_row.VALUE}"{bp_style_row.SELECTED}>{bp_style_row.OPTION}</option>
+					<!-- END bp_style_row -->
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td width="70%" class="row2">{L_BP_SHOWSB}</td>
+				<td width="30%" class="row1"><input type="checkbox" name="bp_showSB" value="1" {BP_SHOWSB} /></td>
+			</tr>
+
+
+			<tr>
+				<td width="30%" class="row2">{L_BP_DYNLOC}</td>
+				<td width="70%" class="row1"><input type="checkbox" name="bp_dynloc" value="1" {BP_DYNLOC} /></td>
+			</tr>
+			<tr>
+				<td width="70%" class="row2">{L_BP_DYNBOSS}</td>
+				<td width="30%" class="row1"><input type="checkbox" name="bp_dynboss" value="1" {BP_DYNBOSS} /></td>
+			</tr>
+</table>
+<br />
+<br />
+<table border="0" width="100%" cellspacing="1" cellpadding="2">
+			<tr>
+   				 <th align="center" colspan="2">{L_GENERAL}: BossCounter</th>
+			</tr>
+			<tr>
+			<tr>
+				<td width="30%" class="row2">{L_BC_DYNLOC}</td>
+				<td width="70%" class="row1"><input type="checkbox" name="bc_dynloc" value="1" {BC_DYNLOC} /></td>
+			</tr>
+			<tr>
+				<td width="70%" class="row2">{L_BC_DYNBOSS}</td>
+				<td width="30%" class="row1"><input type="checkbox" name="bc_dynboss" value="1" {BC_DYNBOSS} /></td>
+			</tr>
+</table>
+<br />
+<br />
+<table width="100%" border="0" cellspacing="1" cellpadding="2">
+    <tr>
+        <th align="center" colspan="2">{L_PINFO}</th>
+    </tr>
+    <tr>
+        <td>{PARSE_CONFIG}</td>
+    </tr>
+</table>
+<br>
+<br>
 <table width="100%" border="0" cellspacing="1" cellpadding="2">
  <tr><th align="center" colspan="2"><input type="submit" name="bpsavebu" value="{L_SUBMIT}" class="mainoption" /></th></tr>
 </table>
 </form>
-<br />
-<center><span class='copy'>
-  {BL_CREDITS}
-  <br />{BL_LL_CREDITS}
-  <br />{BL_BI_CREDITS}
-</span></center>
+{CREDITS}

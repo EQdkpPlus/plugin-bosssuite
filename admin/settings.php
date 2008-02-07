@@ -39,6 +39,7 @@ if (!$mybsmgs->game_supported('bossbase'))
   message_die("GAME NOT SUPPORTED");
 
 $mybsmgs->load_game_specific_language('bossbase');
+$mybsmgs->load_game_specific_language('bossloot');
 
 // sql class
 require(dirname(__FILE__).'/../include/bssql.class.php');
@@ -46,13 +47,17 @@ $mybssql = new BSSQL();
 
 $bzone = $mybsmgs->get_bzone();
 
-$bs_conf = $mybssql->get_config('bossbase');
 $pzrow = $mybssql->get_parse_zone();
 $pbrow = $mybssql->get_parse_boss();
 
+$bs_conf = $mybssql->get_config('bossbase');
+$bl_conf = $mybssql->get_config('bossloot');
+$bp_conf = $mybssql->get_config('bossprogress');
+$bc_conf = $mybssql->get_config('bosscounter');
+
 // Saving
 if ($_POST['bpsavebu']){
-  	// global config
+  //BossBase Config
 	$mybssql->update_config('bossbase', $bs_conf, 'zoneInfo', $_POST['zoneInfo']);
 	$mybssql->update_config('bossbase', $bs_conf, 'bossInfo', $_POST['bossInfo']);
 	$mybssql->update_config('bossbase', $bs_conf, 'noteDelim', $_POST['notedelim']);
@@ -65,11 +70,33 @@ if ($_POST['bpsavebu']){
 			$mybssql->update_parse_boss($pbrow, $bossid, $_POST['pb_'.$bossid]);
 		}
 	}
+	
+	//BossLoot Config
+	$mybssql->update_config('bossloot', $bl_conf, 'item_minqual', $_POST['itemqual']);
+	$mybssql->update_config('bossloot', $bl_conf, 'item_lang', $_POST['itemlang']);
+	$mybssql->update_config('bossloot', $bl_conf, 'show_ndl', $_POST['ndl']);
+	$mybssql->update_config('bossloot', $bl_conf, 'show_wl', $_POST['wl']);
+	$mybssql->update_config('bossloot', $bl_conf, 'get_itemstats', $_POST['is']);
+	
+	//BossProgress Config
+	$mybssql->update_config('bossprogress', $bp_conf, 'style', $_POST['bp_style']);
+	$mybssql->update_config('bossprogress', $bp_conf, 'dynZone', $_POST['bp_dynloc']);
+ 	$mybssql->update_config('bossprogress', $bp_conf, 'dynBoss', $_POST['bp_dynboss']);
+	$mybssql->update_config('bossprogress', $bp_conf, 'zhiType', $_POST['bp_zhiType']);
+	$mybssql->update_config('bossprogress', $bp_conf, 'showSB', $_POST['bp_showSB']);
+	
+	//BossProgress Config
+	$mybssql->update_config('bosscounter', $bc_conf, 'dynZone', $_POST['bc_dynloc']);
+ 	$mybssql->update_config('bosscounter', $bc_conf, 'dynBoss', $_POST['bc_dynboss']);
 }
 
-$bs_conf = $mybssql->get_config('bossbase');
 $pzrow = $mybssql->get_parse_zone();
 $pbrow = $mybssql->get_parse_boss();
+
+$bs_conf = $mybssql->get_config('bossbase');
+$bl_conf = $mybssql->get_config('bossloot');
+$bp_conf = $mybssql->get_config('bossprogress');
+$bc_conf = $mybssql->get_config('bosscounter');
 
 $arrvals = array (
   'CREDITS' => $user->lang['bs_credits1'] . $pm->get_data('bosssuite', 'version') . $user->lang['bs_credits2'],
@@ -95,12 +122,52 @@ $arrvals = array (
 	'L_RNAME' => $user->lang['bs_ao_rname'],
 	'L_RNOTE' => $user->lang['bs_ao_rnote'],
 	'L_SOURCE' => $user->lang['bs_al_source'],
+	
+	//BossLoot
+	'BL_NDL' => ($bl_conf['show_ndl'] == 1) ? ' checked="checked"' : '',
+	'BL_WL' => ($bl_conf['show_wl'] == 1) ? ' checked="checked"' : '',
+	'BL_IS' => ($bl_conf['get_itemstats'] == 1) ? ' checked="checked"' : '',
+	
+	// Language
+	'L_ITEMQUAL' => $user->lang['bl_opt_minitemqual'],
+	'L_ITEMLANG' => $user->lang['bl_opt_itemlang'],
+	'L_NDL' => $user->lang['bl_opt_ndl'],
+	'L_WL' => $user->lang['bl_opt_wl'],
+	'L_IS' => $user->lang['bl_opt_is'],
+	
+	//BossProgress
+	'BP_DYNLOC' => ($bp_conf['dynZone'] == 1) ? ' checked="checked"' : '',
+	'BP_DYNBOSS' => ($bp_conf['dynBoss'] == 1) ? ' checked="checked"' : '',
+	'BP_SHOWSB' => ($bp_conf['showSB'] == 1) ? ' checked="checked"' : '',
+	
+	// Language
+	'L_BP_DYNLOC'      => $user->lang['opt_dynloc'],
+	'L_BP_DYNBOSS'    => $user->lang['opt_dynboss'],
+	'L_BP_ZHITYPE' => $user->lang['opt_zhiType'],
+	'L_BP_SHOWSB' => $user->lang['opt_showSB'],
+	'L_BP_STYLE' => $user->lang['opt_style'],	
 
+	'L_BP_JITTER' => $user->lang['zhi_jitter'],
+	'L_BP_BW' => $user->lang['zhi_bw'],
+	'L_BP_NONE' => $user->lang['zhi_none'],
+
+	'BP_ZHITYPE_SEL_JITTER'    => ( $bp_conf['zhiType'] == "0" ) ? ' selected="selected"' : '',
+	'BP_ZHITYPE_SEL_BW'    => ( $bp_conf['zhiType'] == "1" ) ? ' selected="selected"' : '',
+	'BP_ZHITYPE_SEL_NONE'    => ( $bp_conf['zhiType'] == "2" ) ? ' selected="selected"' : '',
+	
+  //BossCounter
+	'BC_DYNLOC' => ($bc_conf['dynZone'] == 1) ? ' checked="checked"' : '',
+	'BC_DYNBOSS' => ($bc_conf['dynBoss'] == 1) ? ' checked="checked"' : '',
+	
+	// Language
+	'L_BC_DYNLOC'      => $user->lang['opt_dynloc'],
+	'L_BC_DYNBOSS'    => $user->lang['opt_dynboss'],
 );
 
 $bs_source['database'] = $user->lang['bs_source_db'];
 $bs_source['offsets'] = $user->lang['bs_source_offs'];
 $bs_source['both'] = $user->lang['bs_source_both'];
+
 
 foreach ($bs_source as $value => $option) {
 	$tpl->assign_block_vars('source_row', array (
@@ -127,11 +194,51 @@ foreach ($bzone as $zoneid => $bosslist){
   
   $zbcode .= "\t\t</table></div>\n";
 }
-
-$arrvals['PARSE_CONFIG'] = $zbcode.'</div></div>';
+$zbcode .= '</div></div>';
+$arrvals['PARSE_CONFIG'] = $zbcode;
 
 //Output
 $tpl->assign_vars($arrvals);
+
+require(dirname(__FILE__).'/../include/blmgs.class.php');
+$myblmgs = new BLMGS();
+
+//minimum item quality setting
+$bl_qual = $myblmgs-> bl_get_item_qualities();
+foreach ($bl_qual as $value) {
+    $tpl->assign_block_vars('itemqual_row', array (
+	        'VALUE' => $value,
+	        'SELECTED' => ($bl_conf['item_minqual'] == $value) ? ' selected="selected"' : '',
+	        'OPTION' => $user->lang['item_qual_'.$value]
+		)
+	);
+}
+
+//item language settings
+$bl_itemlang = $myblmgs->bl_get_supported_item_languages();
+foreach ($bl_itemlang as $id => $value) {
+    $tpl->assign_block_vars('itemlang_row', array (
+	        'VALUE' => $value,
+	        'SELECTED' => ($bl_conf['item_lang'] == $value) ? ' selected="selected"' : '',
+	        'OPTION' => ($user->lang['item_lang_'.$value] == '') ? $value : $user->lang['item_lang_'.$value]
+		)
+	);
+}
+
+//BossProgress styles
+$bp_styles['0'] = $user->lang['bp_style_bp'];
+$bp_styles['1'] = $user->lang['bp_style_bps'];
+$bp_styles['2'] = $user->lang['bp_style_rp2r'];
+$bp_styles['3'] = $user->lang['bp_style_rp3r'];
+
+foreach ($bp_styles as $value => $option) {
+    $tpl->assign_block_vars('bp_style_row', array (
+	        'VALUE' => $value,
+	        'SELECTED' => ($bp_conf['style'] == $value) ? ' selected="selected"' : '',
+	        'OPTION' => $option
+		)
+	);
+}
 
 $eqdkp->set_vars(array (
 	'page_title' => sprintf($user->lang['admin_title_prefix'], $eqdkp->config['guildtag'], $eqdkp->config['dkp_name']).': '.$user->lang['bs_am_conf'],
