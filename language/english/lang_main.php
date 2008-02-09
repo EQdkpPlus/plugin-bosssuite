@@ -104,6 +104,7 @@ $lang['bp_style_bps'] = "BossProgress simple";
 $lang['bp_style_rp2r'] = "Raidprogress 2/row";
 $lang['bp_style_rp3r'] = "Raidprogress 3/row";
 
+
 $lang = array_merge($lang, array( 
 
 'bossloot' => 'Bossloot',
@@ -135,6 +136,8 @@ $lang = array_merge($lang, array(
 'bl_credits_bi' => 'Boss images: ',
 'bl_no_lootlist_credits' => 'no lootlist selected/found',
 'bl_no_bossimages_credits' => 'no bossimage credits found',
+
+'item_qual_-1' => 'all',
 ));
 
 ?>

@@ -52,8 +52,14 @@ if ( !class_exists( "BLMGS" ) ) {
     }
        
     function bl_get_item_qualities(){
-      require(dirname(__FILE__).'/../games/'.$this->game.'/bossloot/index.php');
-      return $item_qualities;
+      $file = dirname(__FILE__).'/../games/'.$this->game.'/bossloot/index.php';
+      $item_quals = array('-1');
+      
+      if (file_exists($file)){
+        require(dirname(__FILE__).'/../games/'.$this->game.'/bossloot/index.php');
+        $item_quals = array_merge($item_quals, $item_qualities); 
+      }
+      return $item_quals;
     }
     
     function bl_get_supported_item_languages(){
