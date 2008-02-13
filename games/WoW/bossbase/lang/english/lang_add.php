@@ -178,4 +178,13 @@ $lang['shahraz'] = array('id' =>'22947', 'long' => 'Mother Shahraz', 'short' => 
 $lang['council'] = array('id' =>'99999', 'long' => 'Illidari Council', 'short' => 'Council');
 $lang['illidan'] = array('id' =>'22917', 'long' => 'Illidan Stormrage', 'short' => 'Illidan');
 
+/******Sunwell Plateau*****/
+$lang['sunwell'] = array('long' => 'Sunwell Plateau', 'short' => 'SW');
+$lang['kalecgos'] = array('id' =>'99999', 'long' => 'Kalecgos', 'short' => 'Kalecgos');
+$lang['brutallus'] = array('id' =>'99999', 'long' => 'Brutallus', 'short' => 'Brutallus');
+$lang['felmyst'] = array('id' =>'99999', 'long' => 'Felmyst', 'short' => 'Felmyst');
+$lang['fetwins'] = array('id' =>'99999', 'long' => 'Female Eredar Twins', 'short' => 'Twins');
+$lang['muru'] = array('id' =>'99999', 'long' => 'M\'uru', 'short' => 'M\'uru');
+$lang['kiljaeden'] = array('id' =>'99999', 'long' => 'Kil\'jaeden', 'short' => 'Kil\'jaeden');
+
 ?>

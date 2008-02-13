@@ -160,6 +160,14 @@ $bzone = array (
 		'shahraz',
 		'council',
 		'illidan'
+	),
+	'sunwell' => array (
+		'kalecgos',
+		'brutallus',
+		'felmyst',
+		'fetwins',
+		'muru',
+		'kiljaeden'
 	)
 );
 

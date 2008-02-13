@@ -198,7 +198,7 @@ if ( !class_exists( "BSSQL" ) ) {
       	}
       
       	while($roww = $db->fetch_record($settings_result)) { 
-      	   		$conf[$roww['boss_id']]['counter'] = $roww['boss_co_offs'];
+              $conf[$roww['boss_id']]['counter'] = $roww['boss_co_offs'];
       	   		$conf[$roww['boss_id']]['fd'] = $roww['boss_fd_offs'];
       	   		$conf[$roww['boss_id']]['ld'] = $roww['boss_ld_offs'];
       	}	
@@ -221,7 +221,7 @@ if ( !class_exists( "BSSQL" ) ) {
       	}
       
       	while($roww = $db->fetch_record($settings_result)) { 
-      	   		$conf[$roww['zone_id']]['counter'] = $roww['zone_co_offs'];
+      	   		$conf[$roww['zone_id']]['counter'] = 0 + $roww['zone_co_offs'];
       	   		$conf[$roww['zone_id']]['fd'] = $roww['zone_fd_offs'];
       	   		$conf[$roww['zone_id']]['ld'] = $roww['zone_ld_offs'];
       	}	

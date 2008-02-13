@@ -90,7 +90,7 @@ function bp_html_get_boss_image_td($bossname, $bosscount) {
   	$bossname .= "_b";
   
   if (file_exists("games/WoW/bossprogress/images/bosses/" . $bossname . ".gif")) {
-  	return '<td width="60" height="60" align="center"><img src="games/WoW/bossprogress/images/bosses/' . $bossname . '.gif" height="60" border="0" alt="' . $bossname . '" /></td>';
+  	return '<td width="60" height="60" align="center"><img src="games/WoW/bossprogress/images/bosses/' . $bossname . '.gif" align="center" border="0" alt="' . $bossname . '" /></td>';
   } else {
   	return '<td width="60" height="60" align="center"><img src="games/WoW/bossprogress/images/bosses/turkey.gif" height="60" border="0" alt= "' . $bossname . '" /></td>';
   }

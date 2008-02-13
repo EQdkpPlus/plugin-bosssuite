@@ -74,7 +74,7 @@ if ($bb_conf['source'] == 'database'){
 }
 if ($bb_conf['source'] == 'offsets'){
 	$bb_boffs = $mybssql->get_boss_offsets();
-	$bb_zoffs = $mybssql->bb_get_zone_offsets();
+	$bb_zoffs = $mybssql->get_zone_offsets();
 	foreach($bzone as $zone => $bosses){
 		$data[$zone]['fvd'] = $bb_zoffs[$zone]['fd'];
 		$data[$zone]['lvd'] = $bb_zoffs[$zone]['ld'];

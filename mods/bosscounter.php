@@ -57,14 +57,14 @@ if ($bb_conf['source'] == 'database'){
     $bb_boffs = $mybssql->get_boss_offsets();
     foreach($sbzone as $zone => $bosses){
         foreach($bosses as $boss){
-            $data[$zone]['bosses'][$boss]['kc'] = $bb_boffs[$boss]['counter'];
+            $data[$zone]['bosses'][$boss]['kc'] = 0+$bb_boffs[$boss]['counter'];
         }
     }
 } else if ($bb_conf['source'] == 'both'){
     $bb_boffs = $mybssql->get_boss_offsets();
     foreach($sbzone as $zone => $bosses){
         foreach($bosses as $boss){
-            $data[$zone]['bosses'][$boss]['kc'] = $bb_boffs[$boss]['counter'];
+            $data[$zone]['bosses'][$boss]['kc'] = 0+$bb_boffs[$boss]['counter'];
         }
     }
     $data = bc_fetch_bi($sbzone, $data, $bb_conf, $bb_pboss);
