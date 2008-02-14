@@ -99,6 +99,11 @@ if ($bb_conf['source'] == 'database'){
   $data = $myblsql->bl_fetch_bli($bb_conf, $bb_pboss, $bossid);  
   $bb_boffs = $mybssql->get_boss_offsets();
   $data['kc'] +=  $bb_boffs[$bossid]['co'];
+} else if ($bb_conf['source'] == 'cache'){
+  $data = $myblsql->bl_fetch_bli($bb_conf, $bb_pboss, $bossid);  
+  $bb_boffs = $mybssql->get_boss_offsets();
+  $data['kc'] +=  $bb_boffs[$bossid]['co'];
+
 }
 
 //Name

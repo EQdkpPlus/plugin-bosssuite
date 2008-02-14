@@ -37,9 +37,6 @@ if ( !$pm->check(PLUGIN_INSTALLED, 'bosssuite') )
 	message_die('BossSuite plugin not installed.');
 }
 
-require(dirname(__FILE__).'/mods/data2cache.php');
-bs_data2cache();
-
 # Get configuration data from the database
 ####################################################
 // new mgs class

@@ -68,6 +68,8 @@ if ($bb_conf['source'] == 'database'){
         }
     }
     $data = bc_fetch_bi($sbzone, $data, $bb_conf, $bb_pboss);
+} else if ($bb_conf['source'] == 'cache'){
+  $data = $mybssql->get_cache();
 }
 
 # Output
