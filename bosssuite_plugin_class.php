@@ -17,8 +17,13 @@ if (!defined('EQDKP_INC')) {
 // Set table names
 global $table_prefix;
 if (!defined('BS_CONFIG_TABLE')) { define('BS_CONFIG_TABLE', $table_prefix . 'bs_config'); }
-if (!defined('BS_ZONE_TABLE')) { define('BS_ZONE_TABLE', $table_prefix . 'bs_zonedata'); }
-if (!defined('BS_BOSS_TABLE')) { define('BS_BOSS_TABLE', $table_prefix . 'bs_bossdata'); }
+
+if (!defined('BS_ZONE_TABLE')) { define('BS_ZONE_TABLE', $table_prefix . 'bs_data_zone'); }
+if (!defined('BS_BOSS_TABLE')) { define('BS_BOSS_TABLE', $table_prefix . 'bs_data_boss'); }
+
+if (!defined('BS_ZONE_CACHE')) { define('BS_ZONE_CACHE', $table_prefix . 'bs_cache_zone'); }
+if (!defined('BS_BOSS_CACHE')) { define('BS_BOSS_CACHE', $table_prefix . 'bs_cache_boss'); }
+
 if (!defined('BS_MAX_DATE')) { define('BS_MAX_DATE', mktime (0,0,0,1,1,2015)); }
 if (!defined('BS_MIN_DATE')) { define('BS_MIN_DATE', mktime (0,0,0,1,1,2000)); }
 
@@ -31,7 +36,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 		$this->pm->get_language_pack('bosssuite');
 
 		$this->add_data(array (
-			'name' => 'BossSuite 4 - MGS',
+			'name' => 'BossSuite 4 - MGS<br />Testing only!!',
 			'code' => 'bosssuite',
 			'path' => 'bosssuite',
 			'contact' => 'sz3@gmx.net',
@@ -68,7 +73,8 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
       				    `plugin_id` varchar(32) NOT NULL default '',
       				    `game_id` varchar(32) NOT NULL default '',
                   `config_name` varchar(255) NOT NULL default '',
-      		        `config_value` varchar(255) default '')";				    
+      		        `config_value` varchar(255) default '',
+                  PRIMARY KEY  (`game_id`,`plugin_id`,`config_name`))";				    
       		$this->add_sql(SQL_INSTALL, $sql);
       		
       		$sql = "CREATE TABLE IF NOT EXISTS " . BS_ZONE_TABLE . " (
@@ -77,8 +83,8 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
       		    		`zone_string` varchar(255) NOT NULL default '',
       		    		`zone_co_offs` smallint(5) NOT NULL default '0',
       		    		`zone_fd_offs` int(11) NOT NULL default '".BS_MAX_DATE."',
-      		    		`zone_ld_offs` int(11) NOT NULL default '".BS_MIN_DATE."'
-      				    )";				    
+      		    		`zone_ld_offs` int(11) NOT NULL default '".BS_MIN_DATE."',
+      				    PRIMARY KEY  (`game_id`,`zone_id`))";				    
       		$this->add_sql(SQL_INSTALL, $sql);
       		
       		$sql = "CREATE TABLE IF NOT EXISTS " . BS_BOSS_TABLE . " (
@@ -87,8 +93,28 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
       		    		`boss_string` varchar(255) NOT NULL default '',
       		    		`boss_co_offs` smallint(5) NOT NULL default '0',
       		    		`boss_fd_offs` int(11) NOT NULL default '".BS_MAX_DATE."',
-      		    		`boss_ld_offs` int(11) NOT NULL default '".BS_MIN_DATE."'
-      				    )";			    
+      		    		`boss_ld_offs` int(11) NOT NULL default '".BS_MIN_DATE."',
+      				    PRIMARY KEY  (`game_id`,`boss_id`))";			    
+      		$this->add_sql(SQL_INSTALL, $sql);
+      		
+      		$sql = "CREATE TABLE IF NOT EXISTS " . BS_ZONE_CACHE . " (
+          				`game_id` varchar(32) NOT NULL default 'unknown',
+      		    		`zone_id` varchar(32) NOT NULL default 'unknown',
+      		    		`zone_co_cache` smallint(5) NOT NULL default '0',
+      		    		`zone_zk_cache` smallint(5) NOT NULL default '0',
+      		    		`zone_fd_cache` int(11) NOT NULL default '".BS_MAX_DATE."',
+      		    		`zone_ld_cache` int(11) NOT NULL default '".BS_MIN_DATE."',
+      				    PRIMARY KEY  (`game_id`,`zone_id`))";				    
+      				    
+      		$this->add_sql(SQL_INSTALL, $sql);
+      		
+      		$sql = "CREATE TABLE IF NOT EXISTS " . BS_BOSS_CACHE . " (
+          				`game_id` varchar(32) NOT NULL default 'unknown',
+      		    		`boss_id` varchar(32) NOT NULL default 'unknown',
+      		    		`boss_co_cache` smallint(5) NOT NULL default '0',
+      		    		`boss_fd_cache` int(11) NOT NULL default '".BS_MAX_DATE."',
+      		    		`boss_ld_cache` int(11) NOT NULL default '".BS_MIN_DATE."',
+      				    PRIMARY KEY  (`game_id`,`boss_id`))";			    
       		$this->add_sql(SQL_INSTALL, $sql);
 
 //		global $table_prefix;
@@ -103,6 +129,8 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
     		//Drop table on deinstall
     		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_ZONE_TABLE);
     		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_BOSS_TABLE);
+    		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_ZONE_CACHE);
+    		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_BOSS_CACHE);
     		$this->add_sql(SQL_UNINSTALL, "DROP TABLE IF EXISTS " . BS_CONFIG_TABLE);
     		$this->add_sql(SQL_UNINSTALL, "DELETE FROM " . $table_prefix . "config WHERE config_name='bs_showBC';");
         $this->add_sql(SQL_UNINSTALL, "DELETE FROM " . $table_prefix . "config WHERE config_name='bs_linkBL';");

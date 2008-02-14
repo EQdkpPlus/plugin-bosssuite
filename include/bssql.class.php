@@ -277,6 +277,66 @@ if ( !class_exists( "BSSQL" ) ) {
     	 require(dirname(__FILE__).'/../games/'.$game.'/bossbase/bzone.php');
 	     return $bzone;
     }
+    
+    function update_cache($data, $bzone){
+      global $eqdkp, $user, $db;
+      $game_arr = explode('_', $eqdkp->config['default_game']);
+      $game = $game_arr[0];
+      $sql = "TRUNCATE TABLE `".BS_ZONE_CACHE."`;";
+      $db->query($sql);
+      $sql = "TRUNCATE TABLE `".BS_BOSS_CACHE."`;";
+      $db->query($sql);
+      foreach ($bzone as $zone => $bosses){
+	      $sql = "INSERT INTO `".BS_ZONE_CACHE."` VALUES('".$game."', '".$zone."', '".$data[$zone]['vc']."', '".$data[$zone]['zk']."', '".$data[$zone]['fvd']."', '".$data[$zone]['lvd']."');";	
+     	  $db->query($sql);
+	      foreach ($bosses as $boss){
+		      $sql = "INSERT INTO `".BS_BOSS_CACHE."` VALUES('".$game."','".$boss."', '".$data[$zone]['bosses'][$boss]['kc']."', '".$data[$zone]['bosses'][$boss]['fkd']."', '".$data[$zone]['bosses'][$boss]['lkd']."');";	
+      	  $db->query($sql);
+	      }
+		  }
+    }
+    
+    function get_cache(){
+        global $eqdkp, $db, $table_prefix;
+      
+        $game_arr = explode('_', $eqdkp->config['default_game']);
+        $game = $game_arr[0];
+        
+        $data = array();
+      	$sql = 'SELECT * FROM `' . BS_ZONE_CACHE . "` WHERE game_id='".$game."';";
+      	if (!($result = $db->query($sql))) {
+      		message_die('Could not obtain zone cache', '', __FILE__, __LINE__, $sql);
+      	}
+      
+      	while($roww = $db->fetch_record($result)) { 
+      	   		$data[$roww['zone_id']]['vc'] = $roww['zone_co_cache'];
+      	   		$data[$roww['zone_id']]['zk'] = $roww['zone_zk_cache'];
+      	   		$data[$roww['zone_id']]['fvd'] = $roww['zone_fd_cache'];
+      	   		$data[$roww['zone_id']]['lvd'] = $roww['zone_ld_cache'];
+      	}	
+      	
+      	$sql = 'SELECT * FROM `' . BS_BOSS_CACHE . "` WHERE game_id='".$game."';";
+      	if (!($result2 = $db->query($sql))) {
+      		message_die('Could not obtain boss cache', '', __FILE__, __LINE__, $sql);
+      	}
+      	
+        unset($roww);
+        
+      	while($roww = $db->fetch_record($result2)) { 
+              $data[$roww['boss_id']]['kc'] = $roww['boss_co_cache'];
+      	   		$data[$roww['boss_id']]['fkd'] = $roww['boss_fd_cache'];
+      	   		$data[$roww['boss_id']]['lkd'] = $roww['boss_ld_cache'];
+      	}	
+      	
+      	$bzone = $this->get_bzone();
+      	foreach ( $bzone as $zone => $bosses){
+          foreach ($bosses as $boss){
+            $data[$zone]['bosses'][$boss] = $data[$boss];
+          }
+        }
+       // print_r($data);
+      	return $data;
+    }
   }
 }
 ?>

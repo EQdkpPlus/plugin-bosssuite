@@ -182,6 +182,7 @@ $arrvals = array (
 $bs_source['database'] = $user->lang['bs_source_db'];
 $bs_source['offsets'] = $user->lang['bs_source_offs'];
 $bs_source['both'] = $user->lang['bs_source_both'];
+$bs_source['cache'] = $user->lang['bs_source_cache'];
 
 
 foreach ($bs_source as $value => $option) {

@@ -81,7 +81,7 @@ foreach ($sbzone as $zone => $bosses)
 {
 	 $loc_killed = 0;
 	 foreach ($data[$zone]['bosses'] as $boss){
-		if ($boss[kc] > 0)
+		if ($boss['kc'] > 0)
 			$loc_killed++;
 	}
 	

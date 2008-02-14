@@ -1,4 +1,4 @@
-<?php
+f<?php
 /******************************
  * EQdkp Bossprogress2
  * by sz3
@@ -148,29 +148,24 @@ global $user;
 $zonei = 1;
 foreach ($sbzone as $zone => $bosses){
     $zonei = 1 - $zonei;
-    $loc_killed = 0;
-    foreach ($data[$zone][bosses] as $boss){
-        if ($boss[kc] > 0)
-            $loc_killed++;
-    }
     if ($zonei == 0){
         $bpout .= '<tr><td width="50%" valign="top"><table width="100%">' . "\n";
     }else{
         $bpout .= '<td width="50%" valign="top"><table width="100%">' . "\n";
     }
     $bpout .= "\t" . '<tr><th colspan="3">'.$user->lang[$zone]['long'].'</th></tr>'. "\n";
-    if ((!$conf['dynZone']) or ($loc_killed > 0)){
-        $loc_completed = round($loc_killed / count($bosses) * 100);
+    if ((!$conf['dynZone']) or ($data[$zone]['zk'] > 0)){
+        $loc_completed = round($data[$zone]['zk'] / count($bosses) * 100);
 		$bpout .= '<tr><td class="row1"></td><td class="row2"><dl style="width:197px; height:20px"><dd style="width:197px; height:20px"><div style="width:' . $loc_completed . '%; height:18px"><strong>' . $loc_completed . '%</strong></div></dd></dl></td>';
-		$bpout .= '<td class="row2">'.$loc_killed .'/'. count($bosses) . '('. $loc_completed .'%)</td></tr>';
+		$bpout .= '<td class="row2">'.$data[$zone]['zk'] .'/'. count($bosses) . '('. $loc_completed .'%)</td></tr>';
         
         $bi = 1; //row number 1/2
         $printed = 0;
 
         foreach($bosses as $boss){
-        if ((!$conf['dynBoss']) or ($data[$zone][bosses][$boss][kc] > 0)) {
+        if ((!$conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)) {
             $rowid = $bi + 1;
-            if ($data[$zone][bosses][$boss][kc] > 0){
+            if ($data[$zone]['bosses'][$boss]['kc'] > 0){
                 $bpout .= "\t" . '<tr><td style="width: 25px; height: 19px" align="center" class="row1"><img src="images/bossprogress/rp/checkmark.gif" width="20" height="15" border="0" /><td class="row'. (($printed%2)+1) .'" colspan="2">'.bp_html_get_bosslink($boss).'</td></tr>'."\n";
             }else{
                 $bpout .= "\t" . '<tr><td style="width: 25px; height: 19px" align="center" class="row1">&nbsp;</td><td class="row'. $rowid .'" colspan="2">'.bp_html_get_bosslink($boss).'</td></tr>'."\n";
@@ -202,11 +197,6 @@ function bp_html_get_zoneinfo_rp3r($conf, $data, $sbzone){
 global $user;
 $zonei = 0;
 foreach ($sbzone as $zone => $bosses){
-    $loc_killed = 0;
-    foreach ($data[$zone][bosses] as $boss){
-        if ($boss[kc] > 0)
-            $loc_killed++;
-    }
     switch(($zonei%3)){
 	case 0: $bpout .= '<tr><td width="33%" valign="top"><table width="100%">' . "\n";
 			break;
@@ -218,14 +208,14 @@ foreach ($sbzone as $zone => $bosses){
     $bpout .= "\t" . '<tr><th colspan=3>'.$user->lang[$zone]['long'].'</th></tr>'. "\n";
     $printed = 0;
 
-	if ((!$conf['dynZone']) or ($loc_killed > 0)){
-        $loc_completed = round($loc_killed / count($bosses) * 100);
+	if ((!$conf['dynZone']) or ($data[$zone]['zk'] > 0)){
+        $loc_completed = round($data[$zone]['zk'] / count($bosses) * 100);
 		$bpout .= '<tr><td class="row1"></td><td class="row2"><dl style="width:197px; height:20px"><dd style="width:197px; height:20px"><div style="width:' . $loc_completed . '%; height:18px"><strong>' . $loc_completed . '%</strong></div></dd></dl></td>';
-		$bpout .= '<td class="row2">'.$loc_killed .'/'. count($bosses) . '('. $loc_completed .'%)</td></tr>';
+		$bpout .= '<td class="row2">'.$data[$zone]['zk'] .'/'. count($bosses) . '('. $loc_completed .'%)</td></tr>';
         foreach($bosses as $boss){
-        	if ((!$conf['dynBoss']) or ($data[$zone][bosses][$boss][kc] > 0)) {
+        	if ((!$conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)) {
             	$rowid = ($printed%2)+1;
-				if ($data[$zone][bosses][$boss][kc] > 0){
+				if ($data[$zone]['bosses'][$boss][kc] > 0){
                 	$bpout .= "\t" . '<tr><td style="width: 25px; height: 18px" align="center" class="row1"><img src="images/bossprogress/rp/checkmark.gif" width="20" height="15" border="0" /><td class="row'. $rowid .'" colspan="2">'.bp_html_get_bosslink($boss).'</td></tr>'."\n";
            		}else{
                 	$bpout .= "\t" . '<tr><td style="width: 25px; height: 18px" align="center" class="row1">&nbsp;</td><td class="row'. $rowid . '" colspan="2">'.bp_html_get_bosslink($boss).'</td></tr>'."\n";
@@ -264,23 +254,17 @@ return $bpout;
 
 function bp_html_get_zoneinfo_bp($conf, $data, $sbzone){
 foreach ($sbzone as $zone => $bosses){
-    $loc_killed = 0;
-    foreach ($data[$zone][bosses] as $boss){
-        if ($boss[kc] > 0)
-            $loc_killed++;
-    }
-
-    if ((!$conf['dynZone']) or ($loc_killed > 0)){
-        $loc_completed = round($loc_killed / count($bosses) * 100);
+    if ((!$conf['dynZone']) or ($data[$zone]['zk'] > 0)){
+        $loc_completed = round($data[$zone]['zk'] / count($bosses) * 100);
         $bpout .= bp_html_get_zhi($conf['zhiType'], $zone, $loc_completed);
         if($conf['showSB'])
-            $bpout .= bp_html_get_zsb($zone, $loc_killed, $loc_completed, count($bosses),$data[$zone][fvd],$data[$zone][lvd],$data[$zone][kc]);
+            $bpout .= bp_html_get_zsb($zone, $data[$zone]['zk'], $loc_completed, count($bosses),$data[$zone]['fvd'],$data[$zone]['lvd'],$data[$zone]['kc']);
         $bi = 1; //row number 1/2
         $printed = 0;
 
         foreach($bosses as $boss){
-        if ((!$conf['dynBoss']) or ($data[$zone][bosses][$boss][kc] > 0)) {
-            $bpout .= bp_html_get_bossinfo($bi, $boss, $data[$zone][bosses][$boss][fkd], $data[$zone][bosses][$boss][lkd], $data[$zone][bosses][$boss][kc]);
+        if ((!$conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)) {
+            $bpout .= bp_html_get_bossinfo($bi, $boss, $data[$zone]['bosses'][$boss]['fkd'], $data[$zone]['bosses'][$boss]['lkd'], $data[$zone]['bosses'][$boss]['kc']);
             $bi = 1 - $bi;
             $printed++;
         }
@@ -296,23 +280,17 @@ return $bpout;
 
 function bp_html_get_zoneinfo_bps($conf, $data, $sbzone){
 foreach ($sbzone as $zone => $bosses){
-    $loc_killed = 0;
-    foreach ($data[$zone][bosses] as $boss){
-        if ($boss[kc] > 0)
-            $loc_killed++;
-    }
-
-    if ((!$conf['dynZone']) or ($loc_killed > 0)){
-        $loc_completed = round($loc_killed / count($bosses) * 100);
+    if ((!$conf['dynZone']) or ($data[$zone]['zk'] > 0)){
+        $loc_completed = round($data[$zone]['zk'] / count($bosses) * 100);
         $bpout .= bp_html_get_zhi($conf['zhiType'], $zone, $loc_completed);
         if($conf['showSB'])
-            $bpout .= bp_html_get_zsb($zone, $loc_killed, $loc_completed, count($bosses),$data[$zone][fvd],$data[$zone][lvd],$data[$zone][kc]);
+            $bpout .= bp_html_get_zsb($zone, $data[$zone]['zk'], $loc_completed, count($bosses),$data[$zone]['fvd'],$data[$zone]['lvd'],$data[$zone]['kc']);
         $bi = 1; //row number 1/2
         $printed = 0;
 
         foreach($bosses as $boss){
-        if ((!$conf['dynBoss']) or ($data[$zone][bosses][$boss][kc] > 0)) {
-            $bpout .= bp_html_get_bossinfo_simple($bi, $boss, $data[$zone][bosses][$boss][fkd], $data[$zone][bosses][$boss][lkd], $data[$zone][bosses][$boss][kc]);
+        if ((!$conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)) {
+            $bpout .= bp_html_get_bossinfo_simple($bi, $boss, $data[$zone]['bosses'][$boss]['fkd'], $data[$zone]['bosses'][$boss]['lkd'], $data[$zone]['bosses'][$boss]['kc']);
 
             $bi = 1 - $bi;
             $printed++;

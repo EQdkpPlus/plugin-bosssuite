@@ -37,6 +37,8 @@ if ( !$pm->check(PLUGIN_INSTALLED, 'bosssuite') )
 	message_die('BossSuite plugin not installed.');
 }
 
+require(dirname(__FILE__).'/mods/data2cache.php');
+bs_data2cache();
 
 # Get configuration data from the database
 ####################################################
@@ -71,35 +73,53 @@ $sbzone = $bzone;//bc_get_visible_bzone($bzone, $bc_conf);
 if ($bb_conf['source'] == 'database'){
 	$data = bp_init_data_array($bzone);
 	$data = bp_fetch_bzi($sbzone, $data, $bb_conf, $bb_pzone, $bb_pboss);
-}
-if ($bb_conf['source'] == 'offsets'){
+	foreach ($sbzone as $zone => $bosses){
+    $data[$zone]['zk'] = 0;
+    foreach ($data[$zone]['bosses'] as $boss){
+      if ($boss['kc'] > 0)
+        $data[$zone]['zk']++;
+      }
+    }
+} else if ($bb_conf['source'] == 'offsets'){
 	$bb_boffs = $mybssql->get_boss_offsets();
 	$bb_zoffs = $mybssql->get_zone_offsets();
 	foreach($bzone as $zone => $bosses){
 		$data[$zone]['fvd'] = $bb_zoffs[$zone]['fd'];
 		$data[$zone]['lvd'] = $bb_zoffs[$zone]['ld'];
 		$data[$zone]['vc'] = $bb_zoffs[$zone]['counter'];		
+		$data[$zone]['zk'] = 0;
 		foreach($bosses as $boss){
-			$data[$zone][bosses][$boss]['fkd'] = $bb_boffs[$boss]['fd'];
-			$data[$zone][bosses][$boss]['lkd'] = $bb_boffs[$boss]['ld'];
-			$data[$zone][bosses][$boss]['kc'] = $bb_boffs[$boss]['counter'];		
+			$data[$zone]['bosses'][$boss]['fkd'] = $bb_boffs[$boss]['fd'];
+			$data[$zone]['bosses'][$boss]['lkd'] = $bb_boffs[$boss]['ld'];
+			$data[$zone]['bosses'][$boss]['kc'] = $bb_boffs[$boss]['counter'];
+      if ($data[$zone]['bosses'][$boss]['kc'])
+        $data[$zone]['zk']++;	
 		}
 	}
-}
-if ($bb_conf['source'] == 'both'){
+}else if ($bb_conf['source'] == 'both'){
 	$bb_boffs = $mybssql->get_boss_offsets();
 	$bb_zoffs = $mybssql->get_zone_offsets();
 	foreach($bzone as $zone => $bosses){
 		$data[$zone]['fvd'] = $bb_zoffs[$zone]['fd'];
 		$data[$zone]['lvd'] = $bb_zoffs[$zone]['ld'];
-		$data[$zone]['vc'] = $bb_zoffs[$zone]['counter'];		
+		$data[$zone]['vc'] = $bb_zoffs[$zone]['counter'];
+    $data[$zone]['zk'] = 0;		
 		foreach($bosses as $boss){
-			$data[$zone][bosses][$boss]['fkd'] = $bb_boffs[$boss]['fd'];
-			$data[$zone][bosses][$boss]['lkd'] = $bb_boffs[$boss]['ld'];
-			$data[$zone][bosses][$boss]['kc'] = $bb_boffs[$boss]['counter'];		
+			$data[$zone]['bosses'][$boss]['fkd'] = $bb_boffs[$boss]['fd'];
+			$data[$zone]['bosses'][$boss]['lkd'] = $bb_boffs[$boss]['ld'];
+			$data[$zone]['bosses'][$boss]['kc'] = $bb_boffs[$boss]['counter'];		
 		}
 	}
-	$data = bp_fetch_bzi($sbzone, $data, $bb_conf, $bb_pzone, $bb_pboss);	
+	$data = bp_fetch_bzi($sbzone, $data, $bb_conf, $bb_pzone, $bb_pboss);
+  foreach ($sbzone as $zone => $bosses){
+    $data[$zone]['zk'] = 0;
+    foreach ($data[$zone]['bosses'] as $boss){
+      if ($boss['kc'] > 0)
+        $data[$zone]['zk']++;
+      }
+    }	
+}else if ($bb_conf['source'] == 'cache'){
+  $data = $mybssql->get_cache();
 }
 
 # Output

@@ -63,6 +63,8 @@ $lang['bs_al_source'] = "Data source:";
 $lang['bs_source_db'] = "database";
 $lang['bs_source_offs'] = "offsets";
 $lang['bs_source_both'] = "both";
+$lang['bs_source_cache'] = "cache";
+
 
 
 // offset page
