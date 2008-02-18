@@ -84,6 +84,8 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
       		    		`zone_co_offs` smallint(5) NOT NULL default '0',
       		    		`zone_fd_offs` int(11) NOT NULL default '".BS_MAX_DATE."',
       		    		`zone_ld_offs` int(11) NOT NULL default '".BS_MIN_DATE."',
+      		    		`zone_sz_bp` boolean default true,
+      		    		`zone_sz_bc` boolean default true,
       				    PRIMARY KEY  (`game_id`,`zone_id`))";				    
       		$this->add_sql(SQL_INSTALL, $sql);
       		

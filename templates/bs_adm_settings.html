@@ -1,3 +1,19 @@
+<script type="text/javascript" src="./../include/javascripts/prototype.js"></script>
+<script type="text/javascript" src="./../include/javascripts/effects.js"></script>
+<script type="text/javascript" src="./../include/javascripts/accordion.js"></script>
+
+
+<script type="text/javascript">
+Event.observe(window, 'load', loadAccordions, false);  
+function loadAccordions() {  
+    var parseAccordion = new accordion('vertical_container_parse'); 
+    parseAccordion.activate($$('#vertical_container_parse .accordion_toggle')[0]);
+    var bpszAccordion = new accordion('vertical_container_bpsz');   
+    var bcszAccordion = new accordion('vertical_container_bcsz');    
+}
+
+</script>
+
 <form method="post" action="{F_CONFIG}" name="post">
 <table border="0" width="100%" cellspacing="1" cellpadding="2">
             <tr>
@@ -8,11 +24,10 @@
                 <td width="30%" class="row1"><input type="checkbox" name="ebc" value="1" {BS_EBC} /></td>
             </tr>
             <tr>
-                <td width="70%" class="row2">{L_EN2L}</td>
-                <td width="30%" class="row1"><input type="checkbox" name="en2l" value="1" {BS_EN2L} /></td>
+                <td class="row2">{L_EN2L}</td>
+                <td class="row1"><input type="checkbox" name="en2l" value="1" {BS_EN2L} /></td>
             </tr>
 </table>
-<br />
 <br />
 <table border="0" width="100%" cellspacing="1" cellpadding="2">
             <tr>
@@ -29,8 +44,8 @@
                 </td>
             </tr>
             <tr>
-                <td width="60%" class="row2">{L_ZONEINFO}</td>
-                <td width="40%" class="row1">
+                <td width="70%" class="row2">{L_ZONEINFO}</td>
+                <td width="30%" class="row1">
                     <select size="1" name="zoneInfo">
                         <option value="rname" {ZONEINFO_SEL_RNAME}>{L_RNAME}</option>
                         <option value="rnote" {ZONEINFO_SEL_RNOTE}>{L_RNOTE}</option>
@@ -38,8 +53,8 @@
                 </td>
             </tr>
             <tr>
-                <td width="60%" class="row2">{L_BOSSINFO}</td>
-                <td width="40%" class="row1">
+                <td class="row2">{L_BOSSINFO}</td>
+                <td class="row1">
                     <select size="1" name="bossInfo">
                         <option value="rname" {BOSSINFO_SEL_RNAME}>{L_RNAME}</option>
                         <option value="rnote" {BOSSINFO_SEL_RNOTE}>{L_RNOTE}</option>
@@ -47,27 +62,26 @@
                 </td>
             </tr>
             <tr>
-                <td width="10%" class="row2">{L_NOTEDELIM}</td>
-                <td width="90%" class="row1"><input type="text" name="notedelim" size="32" value="{BP_NOTEDELIM}" class="input" /></td>
+                <td class="row2">{L_NOTEDELIM}</td>
+                <td class="row1"><input type="text" name="notedelim" size="32" value="{BP_NOTEDELIM}" class="input" /></td>
             </tr>
             <tr>
-                <td width="60%" class="row2">{L_NAMEDELIM}</td>
-                <td width="40%" class="row1"><input type="text" name="namedelim" size="32" value="{BP_NAMEDELIM}" class="input" /></td>
+                <td class="row2">{L_NAMEDELIM}</td>
+                <td class="row1"><input type="text" name="namedelim" size="32" value="{BP_NAMEDELIM}" class="input" /></td>
             </tr>
             <tr>
-                <td width="60%" class="row2">{L_TABLES}</td>
-                <td width="40%" class="row1"><input type="text" name="tables" size="32" value="{BP_TABLES}" class="input" /></td>
+                <td class="row2">{L_TABLES}</td>
+                <td class="row1"><input type="text" name="tables" size="32" value="{BP_TABLES}" class="input" /></td>
             </tr>
 </table>
-<br />
 <br />
 <table border="0" width="100%" cellspacing="1" cellpadding="2">
 			<tr>
    				 <th align="center" colspan="2">{L_GENERAL}: BossLoot</th>
 			</tr>
             <tr>
-                 <td class="row2">{L_ITEMLANG}</td>
-                 <td class="row1">
+                 <td width="70%" class="row2">{L_ITEMLANG}</td>
+                 <td width="30%" class="row1">
                     <select name="itemlang" class="input">
                     <!-- BEGIN itemlang_row -->
                         <option value="{itemlang_row.VALUE}"{itemlang_row.SELECTED}>{itemlang_row.OPTION}</option>
@@ -86,29 +100,28 @@
                 </td>
             </tr>
             <tr>
-                <td width="70%" class="row2">{L_NDL}</td>
-                <td width="30%" class="row1"><input type="checkbox" name="ndl" value="1" {BL_NDL} /></td>
+                <td class="row2">{L_NDL}</td>
+                <td class="row1"><input type="checkbox" name="ndl" value="1" {BL_NDL} /></td>
             </tr>
 
 
             <tr>
-                <td width="30%" class="row2">{L_WL}</td>
-                <td width="70%" class="row1"><input type="checkbox" name="wl" value="1" {BL_WL} /></td>
+                <td class="row2">{L_WL}</td>
+                <td class="row1"><input type="checkbox" name="wl" value="1" {BL_WL} /></td>
             </tr>
             <tr>
-                <td width="70%" class="row2">{L_IS}</td>
-                <td width="30%" class="row1"><input type="checkbox" name="is" value="1" {BL_IS} /></td>
+                <td class="row2">{L_IS}</td>
+                <td class="row1"><input type="checkbox" name="is" value="1" {BL_IS} /></td>
             </tr>
 </table>
-<br />
 <br />
 <table border="0" width="100%" cellspacing="1" cellpadding="2">
 			<tr>
    				 <th align="center" colspan="2">{L_GENERAL}: BossProgress</th>
 			</tr>
 			<tr>
-				<td width="60%" class="row2">{L_BP_ZHITYPE}</td>
-				<td width="40%" class="row1">
+				<td width="70%" class="row2">{L_BP_ZHITYPE}</td>
+				<td width="30%" class="row1">
 					<select size="1" name="bp_zhiType">
 						<option value="0" {BP_ZHITYPE_SEL_JITTER}>{L_BP_JITTER}</option>
 						<option value="1" {BP_ZHITYPE_SEL_BW}>{L_BP_BW}</option>
@@ -127,21 +140,21 @@
 				</td>
 			</tr>
 			<tr>
-				<td width="70%" class="row2">{L_BP_SHOWSB}</td>
-				<td width="30%" class="row1"><input type="checkbox" name="bp_showSB" value="1" {BP_SHOWSB} /></td>
-			</tr>
-
-
-			<tr>
-				<td width="30%" class="row2">{L_BP_DYNLOC}</td>
-				<td width="70%" class="row1"><input type="checkbox" name="bp_dynloc" value="1" {BP_DYNLOC} /></td>
+				<td class="row2">{L_BP_SHOWSB}</td>
+				<td class="row1"><input type="checkbox" name="bp_showSB" value="1" {BP_SHOWSB} /></td>
 			</tr>
 			<tr>
-				<td width="70%" class="row2">{L_BP_DYNBOSS}</td>
-				<td width="30%" class="row1"><input type="checkbox" name="bp_dynboss" value="1" {BP_DYNBOSS} /></td>
+				<td class="row2">{L_BP_DYNLOC}</td>
+				<td class="row1"><input type="checkbox" name="bp_dynloc" value="1" {BP_DYNLOC} /></td>
+			</tr>
+			<tr>
+				<td class="row2">{L_BP_DYNBOSS}</td>
+				<td class="row1"><input type="checkbox" name="bp_dynboss" value="1" {BP_DYNBOSS} /></td>
+			</tr>
+			<tr>
+			  <td colspan="2">{SHOW_BP}</td>
 			</tr>
 </table>
-<br />
 <br />
 <table border="0" width="100%" cellspacing="1" cellpadding="2">
 			<tr>
@@ -149,15 +162,17 @@
 			</tr>
 			<tr>
 			<tr>
-				<td width="30%" class="row2">{L_BC_DYNLOC}</td>
-				<td width="70%" class="row1"><input type="checkbox" name="bc_dynloc" value="1" {BC_DYNLOC} /></td>
+				<td width="70%" class="row2">{L_BC_DYNLOC}</td>
+				<td width="30%" class="row1"><input type="checkbox" name="bc_dynloc" value="1" {BC_DYNLOC} /></td>
 			</tr>
 			<tr>
-				<td width="70%" class="row2">{L_BC_DYNBOSS}</td>
-				<td width="30%" class="row1"><input type="checkbox" name="bc_dynboss" value="1" {BC_DYNBOSS} /></td>
+				<td class="row2">{L_BC_DYNBOSS}</td>
+				<td class="row1"><input type="checkbox" name="bc_dynboss" value="1" {BC_DYNBOSS} /></td>
+			</tr>
+			<tr>
+			  <td colspan="2">{SHOW_BC}</td>
 			</tr>
 </table>
-<br />
 <br />
 <table width="100%" border="0" cellspacing="1" cellpadding="2">
     <tr>
@@ -167,8 +182,7 @@
         <td>{PARSE_CONFIG}</td>
     </tr>
 </table>
-<br>
-<br>
+<br />
 <table width="100%" border="0" cellspacing="1" cellpadding="2">
  <tr><th align="center" colspan="2"><input type="submit" name="bpsavebu" value="{L_SUBMIT}" class="mainoption" /></th></tr>
 </table>

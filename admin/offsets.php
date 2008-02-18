@@ -37,7 +37,7 @@ $mybsmgs->load_game_specific_language('bossbase');
 require(dirname(__FILE__).'/../include/bssql.class.php');
 $mybssql = new BSSQL();
 
-$bzone = $mybsmgs->get_bzone();
+$bzone = $mybssql->get_bzone();
 
 // Saving
 if ($_POST['bpsavebu']){

@@ -45,7 +45,7 @@ $mybsmgs->load_game_specific_language('bossloot');
 require(dirname(__FILE__).'/../include/bssql.class.php');
 $mybssql = new BSSQL();
 
-$bzone = $mybsmgs->get_bzone();
+$bzone = $mybssql->get_bzone();
 
 $pzrow = $mybssql->get_parse_zone();
 $pbrow = $mybssql->get_parse_boss();
@@ -54,6 +54,8 @@ $bs_conf = $mybssql->get_config('bossbase');
 $bl_conf = $mybssql->get_config('bossloot');
 $bp_conf = $mybssql->get_config('bossprogress');
 $bc_conf = $mybssql->get_config('bosscounter');
+$bc_sbzone = $mybssql->get_bzone('bosscounter');
+$bp_sbzone = $mybssql->get_bzone('bossprogress');
 
 // Saving
 if ($_POST['bpsavebu']){
@@ -68,13 +70,7 @@ if ($_POST['bpsavebu']){
 	$mybssql->update_config('bossbase', $bs_conf, 'nameDelim', $_POST['namedelim']);
 	$mybssql->update_config('bossbase', $bs_conf, 'tables', $_POST['tables']);
 	$mybssql->update_config('bossbase', $bs_conf, 'source', $_POST['source']);
-	foreach ($bzone as $zoneid => $bosslist){
-		$mybssql->update_parse_zone($pzrow, $zoneid, $_POST['pz_'.$zoneid]);
-		foreach ($bosslist as $bossid){
-			$mybssql->update_parse_boss($pbrow, $bossid, $_POST['pb_'.$bossid]);
-		}
-	}
-	
+
 	//BossLoot Config
 	$mybssql->update_config('bossloot', $bl_conf, 'item_minqual', $_POST['itemqual']);
 	$mybssql->update_config('bossloot', $bl_conf, 'item_lang', $_POST['itemlang']);
@@ -88,10 +84,24 @@ if ($_POST['bpsavebu']){
  	$mybssql->update_config('bossprogress', $bp_conf, 'dynBoss', $_POST['bp_dynboss']);
 	$mybssql->update_config('bossprogress', $bp_conf, 'zhiType', $_POST['bp_zhiType']);
 	$mybssql->update_config('bossprogress', $bp_conf, 'showSB', $_POST['bp_showSB']);
+	foreach ($bzone as $zoneid => $bosslist){
+		$mybssql->update_zone_visibility('bossprogress', $zoneid, $_POST['bp_sz_'.$zoneid]);
+	}
 	
-	//BossProgress Config
+	//BossCounter Config
 	$mybssql->update_config('bosscounter', $bc_conf, 'dynZone', $_POST['bc_dynloc']);
  	$mybssql->update_config('bosscounter', $bc_conf, 'dynBoss', $_POST['bc_dynboss']);
+ 	foreach ($bzone as $zoneid => $bosslist){
+		$mybssql->update_zone_visibility('bosscounter', $zoneid, $_POST['bc_sz_'.$zoneid]);
+	}
+	
+ 	//Zone parse strings
+ 	foreach ($bzone as $zoneid => $bosslist){
+		$mybssql->update_parse_zone($pzrow, $zoneid, $_POST['pz_'.$zoneid]);
+		foreach ($bosslist as $bossid){
+			$mybssql->update_parse_boss($pbrow, $bossid, $_POST['pb_'.$bossid]);
+		}
+	}
 }
 
 $pzrow = $mybssql->get_parse_zone();
@@ -101,6 +111,8 @@ $bs_conf = $mybssql->get_config('bossbase');
 $bl_conf = $mybssql->get_config('bossloot');
 $bp_conf = $mybssql->get_config('bossprogress');
 $bc_conf = $mybssql->get_config('bosscounter');
+$bc_sbzone = $mybssql->get_bzone('bosscounter');
+$bp_sbzone = $mybssql->get_bzone('bossprogress');
 
 global $eqdkp, $SID;
 
@@ -194,8 +206,44 @@ foreach ($bs_source as $value => $option) {
 	);
 }
 
+//Show zones BossSuite
+$zbcode = '<div id="container"><div id="vertical_container_bpsz">';
+$zbcode .= '<h2 class="accordion_toggle">'.$user->lang['bs_al_showZone'].'</h2>'."\n";
+$zbcode .= "\t".'<div class="accordion_content">'."\n";
+$zbcode .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
+foreach ($bzone as $zoneid => $bosslist){
+  $zbcode .= "\t\t\t".'<tr><td width="70%" class="row2">' . $user->lang[$zoneid]['long']. '</td>';
+  $zbcode .= '<td class="row1"><input type="checkbox" name="bp_sz_'.$zoneid.'" value="1" ';
+  if ( array_key_exists($zoneid, $bp_sbzone) )
+    $zbcode .= 'checked="checked"';
+  $zbcode .= ' /></td></tr>'."\n";
+}
+$zbcode .= "\t\t</table>\n";
+$zbcode .= "\t</div>\n";
+$zbcode .= '</div></div>';
+
+$arrvals['SHOW_BP'] = $zbcode;
+
+//Show zones BossCounter
+$zbcode = '<div id="container"><div id="vertical_container_bcsz">';
+$zbcode .= '<h2 class="accordion_toggle">'.$user->lang['bs_al_showZone'].'</h2>'."\n";
+$zbcode .= "\t".'<div class="accordion_content">'."\n";
+$zbcode .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
+foreach ($bzone as $zoneid => $bosslist){
+  $zbcode .= "\t\t\t".'<tr><td width="70%" class="row2">' . $user->lang[$zoneid]['long']. '</td>';
+  $zbcode .= '<td class="row1"><input type="checkbox" name="bc_sz_'.$zoneid.'" value="1" ';
+  if ( array_key_exists($zoneid, $bc_sbzone) )
+    $zbcode .= 'checked="checked"';
+  $zbcode .= ' /></td></tr>'."\n";
+}
+$zbcode .= "\t\t</table>\n";
+$zbcode .= "\t</div>\n";
+$zbcode .= '</div></div>';
+
+$arrvals['SHOW_BC'] = $zbcode;
+
 //Parse string settings
-$zbcode = '<div id="container"><div id="vertical_container">';
+$zbcode = '<div id="container"><div id="vertical_container_parse">';
 foreach ($bzone as $zoneid => $bosslist){
   $zbcode .= '<h2 class="accordion_toggle">'.$user->lang[$zoneid]['long'].'</h2>'."\n";
   $zbcode .= "\t".'<div class="accordion_content">'."\n";

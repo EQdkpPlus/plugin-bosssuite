@@ -38,16 +38,15 @@ $mybsmgs->load_game_specific_language('bossbase');
 require_once(dirname(__FILE__).'/../include/bssql.class.php');
 $mybssql = new BSSQL();
 
-$bzone = $mybsmgs->get_bzone();
 $bb_conf = $mybssql->get_config('bossbase');
 $bb_pboss = $mybssql->get_parse_boss();
 $bc_conf = $mybssql->get_config('bosscounter');
-$sbzone = $bzone;//bc_get_visible_bzone($bzone, $bc_conf);
+$sbzone = $mybssql->get_bzone('bosscounter');
 
 # Get data from database&/offsets
 ####################################################
 if ($bb_conf['source'] == 'database'){
-    foreach ($bzone as $zone => $bosses) {
+    foreach ($sbzone as $zone => $bosses) {
       foreach ($bosses as $boss){
         $data[$zone]['bosses'][$boss]['kc'] = 0;
       }
@@ -158,16 +157,6 @@ function bc_get_sql_data_string($tablestring){
       $sql .= ";";
   }
   return $sql;
-}
-
-function bc_get_visible_bzone($zones, $conf){
-    $szones = array();
-    foreach($zones as $zone => $bosses){
-        if ($conf['sz_'.$zone] == '1'){
-            $szones[$zone] = $bosses;
-        }
-    }
-    return $szones;
 }
 
 function bc_fetch_bi($bzone, $data, $bb_conf, $bb_pboss) {

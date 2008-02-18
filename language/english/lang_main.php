@@ -64,7 +64,7 @@ $lang['bs_source_db'] = "database";
 $lang['bs_source_offs'] = "offsets";
 $lang['bs_source_both'] = "both";
 $lang['bs_source_cache'] = "cache";
-
+$lang['bs_al_showZone'] = "Select zones to show within the plugin:";
 
 
 // offset page

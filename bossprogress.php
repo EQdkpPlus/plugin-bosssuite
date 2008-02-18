@@ -57,18 +57,15 @@ $mybsmgs->load_game_specific_language('bossbase');
 require(dirname(__FILE__).'/include/bssql.class.php');
 $mybssql = new BSSQL();
 
-$bzone = $mybsmgs->get_bzone();
+$sbzone = $mybssql->get_bzone('bossprogress');
 $bb_conf = $mybssql->get_config('bossbase');
 $bb_pboss = $mybssql->get_parse_boss();
 $bb_pzone = $mybssql->get_parse_zone();
 $bp_conf = $mybssql->get_config('bossprogress');
-//$bzone = bb_get_bzone();
-$sbzone = $bzone;//bc_get_visible_bzone($bzone, $bc_conf);
 
 # Get data from database
 ####################################################
 if ($bb_conf['source'] == 'database'){
-	$data = bp_init_data_array($bzone);
 	$data = bp_fetch_bzi($sbzone, $data, $bb_conf, $bb_pzone, $bb_pboss);
 	foreach ($sbzone as $zone => $bosses){
     $data[$zone]['zk'] = 0;

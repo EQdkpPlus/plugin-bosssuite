@@ -1,4 +1,4 @@
-f<?php
+<?php
 /******************************
  * EQdkp Bossprogress2
  * by sz3

@@ -19,12 +19,7 @@ if ( !class_exists( "BSMGS" ) ) {
       $game_arr = explode('_', $eqdkp->config['default_game']);
       return $game_arr[0];
     }
-    
-    function get_bzone(){
-    	 require(dirname(__FILE__).'/../games/'.$this->game.'/bossbase/bzone.php');
-	     return $bzone;
-    }
-  
+      
     function get_current_language(){
       global $user;
       return $user->lang_name;
