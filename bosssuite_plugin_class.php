@@ -163,7 +163,7 @@ function gen_main_menu1() {
 
 			$admin_menu = array (
 				'bosssuite' => array (
-					0 => $user->lang['bs_am_title'],
+					0 => '<A HREF="'. $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php" title="Plugin for progress and extended boss/zone information" TARGET="_top">'.$user->lang['bs_am_title'].'</A>',
 					1 => array (
 						'link' => $url_prefix . 'plugins/bosssuite/admin/settings.php' . $SID,
 						'text' => $user->lang['bs_am_conf'],
