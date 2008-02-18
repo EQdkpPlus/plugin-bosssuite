@@ -54,7 +54,7 @@ $mybsmgs->load_game_specific_language('bossloot');
 require(dirname(__FILE__).'/include/bssql.class.php');
 $mybssql = new BSSQL();
 
-  $bzone = $mybsmgs->get_bzone();
+  $bzone = $mybssql->get_bzone();
 	$bb_conf = $mybssql->get_config('bossbase');
 	$bb_pboss = $mybssql->get_parse_boss();
 	$bl_conf = $mybssql->get_config('bossloot');

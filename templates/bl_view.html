@@ -1,4 +1,16 @@
 <!-- Thats the data table ;) we don't change anything here :P -->
+<script type="text/javascript" src="./include/javascripts/prototype.js"></script>
+<script type="text/javascript" src="./include/javascripts/effects.js"></script>
+<script type="text/javascript" src="./include/javascripts/accordion.js"></script>
+
+<script type="text/javascript">
+Event.observe(window, 'load', loadAccordions, false);  
+function loadAccordions() {  
+    var bottomAccordion = new accordion('vertical_container'); 
+    bottomAccordion.activate($$('#vertical_container .accordion_toggle')[0]);  
+}
+</script>
+
 <table width="100%" align="center" class="borderless" cellpadding="1" cellspacing="1">
 	<form method="get" action="{F_ACTION}" name="get">
     {BOSSLOOT}
