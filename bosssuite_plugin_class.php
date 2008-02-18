@@ -36,7 +36,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 		$this->pm->get_language_pack('bosssuite');
 
 		$this->add_data(array (
-			'name' => 'BossSuite 4 - MGS<br />Testing only!!',
+			'name' => '<A HREF="'. $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php" title="Plugin for progress and extended boss/zone information" TARGET="_top">BossSuite 4 - MGS<br />Testing only!!</A>',
 			'code' => 'bosssuite',
 			'path' => 'bosssuite',
 			'contact' => 'sz3@gmx.net',
