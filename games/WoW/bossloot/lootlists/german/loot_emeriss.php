@@ -12,7 +12,7 @@ $loot = array(
 	array( "id" => "20644", "qual" => "4", "name" => "In Alpträume gehüllter Gegenstand" ),
 	array( "id" => "20600", "qual" => "4", "name" => "Malfurions Siegelring" ),
 	array( "id" => "20623", "qual" => "4", "name" => "Reif der ruhelosen Träume" ),
-	array( "id" => "20621", "qual" => "4", "name" => "Boots of the Endless Moor" ),
+	array( "id" => "20621", "qual" => "4", "name" => "Stiefel des endlosen Moors" ),
 	array( "id" => "20622", "qual" => "4", "name" => "Drachenherzhalskette" ),
 	array( "id" => "20624", "qual" => "4", "name" => "Ring der Untoten" ),
 	array( "id" => "20599", "qual" => "4", "name" => "Polierte Eisenholzarmbrust" ),

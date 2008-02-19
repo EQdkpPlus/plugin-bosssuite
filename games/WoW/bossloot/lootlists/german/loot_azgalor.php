@@ -6,9 +6,9 @@ $loot = array(
 	array( "id" => "30896", "qual" => "4", "name" => "Ruhm des Verteidigers" ),
 	array( "id" => "30897", "qual" => "4", "name" => "Gurt der Hoffnung" ),
 	array( "id" => "30901", "qual" => "4", "name" => "Grenzenlose Qual" ),
-	array( "id" => "31092", "qual" => "4", "name" => "Gloves of the Forgotten Conqueror" ),
-	array( "id" => "31094", "qual" => "4", "name" => "Gloves of the Forgotten Protector" ),
-	array( "id" => "31093", "qual" => "4", "name" => "Gloves of the Forgotten Vanquisher" ),
+	array( "id" => "31092", "qual" => "4", "name" => "Handschuhe des vergessenen Eroberers" ),
+	array( "id" => "31094", "qual" => "4", "name" => "Handschuhe des vergessenen Beschützers" ),
+	array( "id" => "31093", "qual" => "4", "name" => "Handschuhe des vergessenen Bezwingers" ),
 );
 
 

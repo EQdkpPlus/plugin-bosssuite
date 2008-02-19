@@ -1,6 +1,6 @@
 <?php
 $loot = array(
-	array( "id" => "32524", "qual" => "4", "name" => "Shroud of the Higborne" ),
+	array( "id" => "32524", "qual" => "4", "name" => "Shroud of the Highborne" ),
 	array( "id" => "32525", "qual" => "4", "name" => "Cowl of the Illidari High Lord" ),
 	array( "id" => "32235", "qual" => "4", "name" => "Cursed Vision of Sargeras" ),
 	array( "id" => "32521", "qual" => "4", "name" => "Faceplate of the Impenetrable" ),
@@ -9,6 +9,7 @@ $loot = array(
 	array( "id" => "32496", "qual" => "4", "name" => "Memento of Tyrande" ),
 	array( "id" => "32837", "qual" => "5", "name" => "Warglaive of Azzinoth" ),
 	array( "id" => "32838", "qual" => "5", "name" => "Warglaive of Azzinoth" ),
+	array( "id" => "34544", "qual" => "4", "name" => "Essence of the Immortals" ),
 	array( "id" => "31089", "qual" => "4", "name" => "Chestguard of the Forgotten Conqueror" ),
 	array( "id" => "31091", "qual" => "4", "name" => "Chestguard of the Forgotten Protector" ),
 	array( "id" => "31090", "qual" => "4", "name" => "Chestguard of the Forgotten Vanquisher" ),

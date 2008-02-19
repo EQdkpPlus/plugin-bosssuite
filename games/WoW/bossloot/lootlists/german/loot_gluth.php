@@ -18,7 +18,7 @@ $loot = array(
 	array( "id" => "22356", "qual" => "4", "name" => "Entweihter Taillenschutz" ),
 	array( "id" => "22372", "qual" => "4", "name" => "Entweihte Sandalen" ),
 	array( "id" => "22365", "qual" => "4", "name" => "Entweihte Stiefel" ),
-	array( "id" => "22358", "qual" => "4", "name" => "Desecrated Sabatons" ),
+	array( "id" => "22358", "qual" => "4", "name" => "Entweihte Sabatons" ),
 );
 
 

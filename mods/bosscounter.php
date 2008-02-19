@@ -73,10 +73,13 @@ if ($bb_conf['source'] == 'database'){
 
 # Output
 ####################################################
-
 //VERTICAL
 $bcout = '<table width=100% class="borderless" cellspacing="0" cellpadding="2">
 		  <tr><th colspan="2" align="center">Bosscounter</th></tr>'."\n";
+
+// new link class
+require_once(dirname(__FILE__).'/../include/bslink.class.php');
+$mybslink = new BSLINK($bc_conf['linkurl'], $bc_conf['linklength']);
 
 foreach ($sbzone as $zone => $bosses) 
 {
@@ -92,7 +95,7 @@ foreach ($sbzone as $zone => $bosses)
 		$bi = 1; //row number 1/2
 		foreach($bosses as $boss){
 			if ((!$bc_conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)){
-		    	$bcout .= '<tr class="row'.($bi+1).'"><td align="left">'.bc_html_get_bosslink($boss).'</td><td align="right">'.$data[$zone]['bosses'][$boss]['kc'].'</td></tr>' . "\n";
+		    	$bcout .= '<tr class="row'.($bi+1).'"><td align="left">'.$mybslink->get_boss_link($boss).'</td><td align="right">'.$data[$zone]['bosses'][$boss]['kc'].'</td></tr>' . "\n";
 				$bi = 1 - $bi;
 			}
 		}									
@@ -115,8 +118,8 @@ foreach ($sbzone as $zone => $bosses)
 		  foreach ($bosses as $boss)
 		  {
 				$i++;
-				$bchout .= '<td align="left" width="10%" class="bossname"><span style="font-size:1em">' .  bc_html_get_bosslink($boss) . '</span></td>'."\n";
-				$bchout .= '<td align="left" width="5%" class="bosscount"><span style="font-size:1em">' .  $data[$zone]['bosses'][$boss]['kc'] . '</span></td>'."\n";
+				$bchout .= '<td align="left" width="10%" class="bossname"><span style="font-size:1em">' . $mybslink->get_boss_link($boss) . '</span></td>'."\n";
+				$bchout .= '<td align="left" width="5%" class="bosscount"><span style="font-size:1em">' . $data[$zone]['bosses'][$boss]['kc'] . '</span></td>'."\n";
 				if (($i % 4) == 0)
 				{
 					$bchout .= '</tr><tr class="row'.($bi+1).'">'."\n";
@@ -193,13 +196,6 @@ function bc_fetch_bi($bzone, $data, $bb_conf, $bb_pboss) {
     }
     mysql_free_result($result);
     return $data;
-}
-
-function bc_html_get_bosslink($bossid){
-global $eqdkp, $pm, $user, $SID;
-    if ( $pm->check(PLUGIN_INSTALLED, 'bossloot') )
-		  return '<a href="' . $eqdkp->config['server_path'] . 'plugins/bossloot/bossloot.php'.$SID.'&amp;bossid='.$bossid.'">'.$user->lang[$bossid]['short'].'</a><br />';
-    return '<a href="' . $user->lang['baseurl'] . $user->lang[$bossid]['id'] . '" target="bossinfo">' . $user->lang[$bossid]['short'] . '</a><br />';
 }
 	
 ?>

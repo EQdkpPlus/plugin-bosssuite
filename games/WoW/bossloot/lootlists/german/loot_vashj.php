@@ -12,6 +12,7 @@ $loot = array(
 	array( "id" => "30103", "qual" => "4", "name" => "Vashjs Fangzahn" ),
 	array( "id" => "30108", "qual" => "4", "name" => "Szepter der Lichtertiefe" ),
 	array( "id" => "30105", "qual" => "4", "name" => "Langbogen des Schlangenrückens" ),
+	array( "id" => "34544", "qual" => "4", "name" => "Essence of the Immortals" ),
 	array( "id" => "30242", "qual" => "4", "name" => "Helm des bezwungenen Champions" ),
 	array( "id" => "30243", "qual" => "4", "name" => "Helm des bezwungenen Verteidigers" ),
 	array( "id" => "30244", "qual" => "4", "name" => "Helm des bezwungenen Helden" ),

@@ -152,6 +152,21 @@ function loadAccordions() {
 				<td class="row1"><input type="checkbox" name="bp_dynboss" value="1" {BP_DYNBOSS} /></td>
 			</tr>
 			<tr>
+				<td class="row2">{L_BP_LINK}</td>
+				<td class="row1">
+         	<select name="bp_linkurl" class="input">
+					<!-- BEGIN bp_linkurl_row -->
+						<option value="{bp_linkurl_row.VALUE}"{bp_linkurl_row.SELECTED}>{bp_linkurl_row.OPTION}</option>
+					<!-- END bp_linkurl_row -->
+					</select>
+        	<select name="bp_linklength" class="input">
+					<!-- BEGIN bp_linklength_row -->
+						<option value="{bp_linklength_row.VALUE}"{bp_linklength_row.SELECTED}>{bp_linklength_row.OPTION}</option>
+					<!-- END bp_linklength_row -->
+					</select>
+        </td>
+			</tr>
+			<tr>
 			  <td colspan="2">{SHOW_BP}</td>
 			</tr>
 </table>
@@ -168,6 +183,21 @@ function loadAccordions() {
 			<tr>
 				<td class="row2">{L_BC_DYNBOSS}</td>
 				<td class="row1"><input type="checkbox" name="bc_dynboss" value="1" {BC_DYNBOSS} /></td>
+			</tr>
+			<tr>
+				<td class="row2">{L_BC_LINK}</td>
+				<td class="row1">
+         	<select name="bc_linkurl" class="input">
+					<!-- BEGIN bc_linkurl_row -->
+						<option value="{bc_linkurl_row.VALUE}"{bc_linkurl_row.SELECTED}>{bc_linkurl_row.OPTION}</option>
+					<!-- END bc_linkurl_row -->
+					</select>
+        	<select name="bc_linklength" class="input">
+					<!-- BEGIN bc_linklength_row -->
+						<option value="{bc_linklength_row.VALUE}"{bc_linklength_row.SELECTED}>{bc_linklength_row.OPTION}</option>
+					<!-- END bc_linklength_row -->
+					</select>
+        </td>
 			</tr>
 			<tr>
 			  <td colspan="2">{SHOW_BC}</td>

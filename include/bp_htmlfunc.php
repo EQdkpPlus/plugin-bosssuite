@@ -96,28 +96,20 @@ function bp_html_get_boss_image_td($bossname, $bosscount) {
   }
 }
 
-function bp_html_get_bosslink($bossid){
-global $eqdkp_root_path, $pm, $user, $SID;
-  return '<a href="' . $eqdkp_root_path . 'plugins/bosssuite/bossloot.php'.$SID.'&amp;bossid='.$bossid.'">'.$user->lang[$bossid]['long'].'</a><br />';
-	
-
-
-}
-
-function bp_html_get_bossinfo($rowid, $bossname, $firstkill, $lastkill, $count) {
+function bp_html_get_bossinfo($rowid, $bossname, $bosslink, $firstkill, $lastkill, $count) {
 global $user;
 	$firstkill_date = bp_date2text($firstkill);
 	$lastkill_date = bp_date2text($lastkill);
 	if (($rowid % 2)) {
 		$bossinfo = '<tr class="row' . ($rowid +1) . '">';
 		$bossinfo .= bp_html_get_boss_image_td($bossname, $count);
-		$bossinfo .= '<td align="left">Name: ' . bp_html_get_bosslink($bossname);
+		$bossinfo .= '<td align="left">Name: ' . $bosslink . '<br />';
 		$bossinfo .= $user->lang['firstkill'] . $firstkill_date . '<br />';
 		$bossinfo .= $user->lang['lastkill'] . $lastkill_date . '<br />';
 		$bossinfo .= $user->lang['bosskillcount'] . $count;
 		$bossinfo .= '</td>' . "\n";
 	} else {
-		$bossinfo .= '<td align="right">Name: ' . bp_html_get_bosslink($bossname);
+		$bossinfo .= '<td align="right">Name: ' . $bosslink . '<br />';
 		$bossinfo .= $user->lang['firstkill'] . $firstkill_date . '<br />';
 		$bossinfo .= $user->lang['lastkill'] . $lastkill_date . '<br />';
 		$bossinfo .= $user->lang['bosskillcount'] . $count . '</td>';
@@ -130,12 +122,12 @@ global $user;
 
 
 
-function bp_html_get_bossinfo_simple($rowid, $bossname, $firstkill, $lastkill, $count) {
+function bp_html_get_bossinfo_simple($rowid, $bosslink, $firstkill, $lastkill, $count) {
 global $user;
 	$firstkill_date = bp_date2text($firstkill);
 	$lastkill_date = bp_date2text($lastkill);
 	$bossinfo = '<tr class="row' . ($rowid +1) . '">';
-	$bossinfo .= '<td align="left">Name: ' . bp_html_get_bosslink($bossname).'</td>';
+	$bossinfo .= '<td align="left">Name: ' .$bosslink .'</td>';
 	$bossinfo .= '<td align="left">' . $user->lang['firstkill'] . $firstkill_date . '</td>';
 	$bossinfo .= '<td align="left">' . $user->lang['lastkill'] . $lastkill_date . '</td>';
 	$bossinfo .= '<td align="left">' . $user->lang['bosskillcount'] . $count . '</td></tr>';
@@ -145,6 +137,10 @@ global $user;
 
 function bp_html_get_zoneinfo_rp2r($conf, $data, $sbzone){
 global $user;
+// new link class
+require_once(dirname(__FILE__).'/bslink.class.php');
+$mybslink = new BSLINK($conf['linkurl'], $conf['linklength']);
+
 $zonei = 1;
 foreach ($sbzone as $zone => $bosses){
     $zonei = 1 - $zonei;
@@ -166,9 +162,9 @@ foreach ($sbzone as $zone => $bosses){
         if ((!$conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)) {
             $rowid = $bi + 1;
             if ($data[$zone]['bosses'][$boss]['kc'] > 0){
-                $bpout .= "\t" . '<tr><td style="width: 25px; height: 19px" align="center" class="row1"><img src="images/bossprogress/rp/checkmark.gif" width="20" height="15" border="0" /><td class="row'. (($printed%2)+1) .'" colspan="2">'.bp_html_get_bosslink($boss).'</td></tr>'."\n";
+                $bpout .= "\t" . '<tr><td style="width: 25px; height: 19px" align="center" class="row1"><img src="images/bossprogress/rp/checkmark.gif" width="20" height="15" border="0" /><td class="row'. (($printed%2)+1) .'" colspan="2">'.bp_html_get_bosslink($mybslink->get_boss_link($boss)).'</td></tr>'."\n";
             }else{
-                $bpout .= "\t" . '<tr><td style="width: 25px; height: 19px" align="center" class="row1">&nbsp;</td><td class="row'. $rowid .'" colspan="2">'.bp_html_get_bosslink($boss).'</td></tr>'."\n";
+                $bpout .= "\t" . '<tr><td style="width: 25px; height: 19px" align="center" class="row1">&nbsp;</td><td class="row'. $rowid .'" colspan="2">'.bp_html_get_bosslink($mybslink->get_boss_link($boss)).'</td></tr>'."\n";
             $bi = 1 - $bi;
             }
             $printed++;
@@ -195,6 +191,10 @@ return $bpout;
 
 function bp_html_get_zoneinfo_rp3r($conf, $data, $sbzone){
 global $user;
+// new link class
+require_once(dirname(__FILE__).'/bslink.class.php');
+$mybslink = new BSLINK($conf['linkurl'], $conf['linklength']);
+
 $zonei = 0;
 foreach ($sbzone as $zone => $bosses){
     switch(($zonei%3)){
@@ -216,9 +216,9 @@ foreach ($sbzone as $zone => $bosses){
         	if ((!$conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)) {
             	$rowid = ($printed%2)+1;
 				if ($data[$zone]['bosses'][$boss][kc] > 0){
-                	$bpout .= "\t" . '<tr><td style="width: 25px; height: 18px" align="center" class="row1"><img src="images/bossprogress/rp/checkmark.gif" width="20" height="15" border="0" /><td class="row'. $rowid .'" colspan="2">'.bp_html_get_bosslink($boss).'</td></tr>'."\n";
+                	$bpout .= "\t" . '<tr><td style="width: 25px; height: 18px" align="center" class="row1"><img src="images/bossprogress/rp/checkmark.gif" width="20" height="15" border="0" /><td class="row'. $rowid .'" colspan="2">'.bp_html_get_bosslink($mybslink->get_boss_link($boss)).'</td></tr>'."\n";
            		}else{
-                	$bpout .= "\t" . '<tr><td style="width: 25px; height: 18px" align="center" class="row1">&nbsp;</td><td class="row'. $rowid . '" colspan="2">'.bp_html_get_bosslink($boss).'</td></tr>'."\n";
+                	$bpout .= "\t" . '<tr><td style="width: 25px; height: 18px" align="center" class="row1">&nbsp;</td><td class="row'. $rowid . '" colspan="2">'.bp_html_get_bosslink($mybslink->get_boss_link($boss)).'</td></tr>'."\n";
             	}
             	$printed++;
         	}	
@@ -253,6 +253,10 @@ return $bpout;
 
 
 function bp_html_get_zoneinfo_bp($conf, $data, $sbzone){
+// new link class
+require_once(dirname(__FILE__).'/bslink.class.php');
+$mybslink = new BSLINK($conf['linkurl'], $conf['linklength']);
+
 foreach ($sbzone as $zone => $bosses){
     if ((!$conf['dynZone']) or ($data[$zone]['zk'] > 0)){
         $loc_completed = round($data[$zone]['zk'] / count($bosses) * 100);
@@ -264,7 +268,7 @@ foreach ($sbzone as $zone => $bosses){
 
         foreach($bosses as $boss){
         if ((!$conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)) {
-            $bpout .= bp_html_get_bossinfo($bi, $boss, $data[$zone]['bosses'][$boss]['fkd'], $data[$zone]['bosses'][$boss]['lkd'], $data[$zone]['bosses'][$boss]['kc']);
+            $bpout .= bp_html_get_bossinfo($bi, $boss, $mybslink->get_boss_link($boss), $data[$zone]['bosses'][$boss]['fkd'], $data[$zone]['bosses'][$boss]['lkd'], $data[$zone]['bosses'][$boss]['kc']);
             $bi = 1 - $bi;
             $printed++;
         }
@@ -279,6 +283,9 @@ return $bpout;
 }
 
 function bp_html_get_zoneinfo_bps($conf, $data, $sbzone){
+// new link class
+require_once(dirname(__FILE__).'/bslink.class.php');
+$mybslink = new BSLINK($conf['linkurl'], $conf['linklength']);
 foreach ($sbzone as $zone => $bosses){
     if ((!$conf['dynZone']) or ($data[$zone]['zk'] > 0)){
         $loc_completed = round($data[$zone]['zk'] / count($bosses) * 100);
@@ -290,7 +297,7 @@ foreach ($sbzone as $zone => $bosses){
 
         foreach($bosses as $boss){
         if ((!$conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)) {
-            $bpout .= bp_html_get_bossinfo_simple($bi, $boss, $data[$zone]['bosses'][$boss]['fkd'], $data[$zone]['bosses'][$boss]['lkd'], $data[$zone]['bosses'][$boss]['kc']);
+            $bpout .= bp_html_get_bossinfo_simple($bi, $mybslink->get_boss_link($boss), $data[$zone]['bosses'][$boss]['fkd'], $data[$zone]['bosses'][$boss]['lkd'], $data[$zone]['bosses'][$boss]['kc']);
 
             $bi = 1 - $bi;
             $printed++;

@@ -12,7 +12,7 @@ $loot = array(
 	array( "id" => "20644", "qual" => "4", "name" => "In Alpträume gehüllter Gegenstand" ),
 	array( "id" => "20600", "qual" => "4", "name" => "Malfurions Siegelring" ),
 	array( "id" => "20626", "qual" => "4", "name" => "Schwarzrindengelenkbänder" ),
-	array( "id" => "20625", "qual" => "4", "name" => "Belt of the Dark Bog" ),
+	array( "id" => "20625", "qual" => "4", "name" => "Gürtel der dunklen Sümpfe" ),
 	array( "id" => "20628", "qual" => "4", "name" => "Deviatwachstumskappe" ),
 	array( "id" => "20627", "qual" => "4", "name" => "Hose des dunklen Herzens" ),
 	array( "id" => "20629", "qual" => "4", "name" => "Heimtückische Fußschützer" ),

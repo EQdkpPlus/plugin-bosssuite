@@ -4,7 +4,7 @@ $loot = array(
 	array( "id" => "29984", "qual" => "4", "name" => "Girdle of Zaetar" ),
 	array( "id" => "29985", "qual" => "4", "name" => "Void Reaver Greaves" ),
 	array( "id" => "29983", "qual" => "4", "name" => "Fel-Steel Warhelm" ),
-	array( "id" => "32515", "qual" => "4", "name" => "Wristgaurds of Determination" ),
+	array( "id" => "32515", "qual" => "4", "name" => "Wristguards of Determination" ),
 	array( "id" => "30619", "qual" => "4", "name" => "Fel Reaver's Piston" ),
 	array( "id" => "30450", "qual" => "4", "name" => "Warp-Spring Coil" ),
 	array( "id" => "30248", "qual" => "4", "name" => "Pauldrons of the Vanquished Champion" ),

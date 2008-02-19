@@ -8,6 +8,7 @@ if ( !class_exists( "BSMGS" ) ) {
   class BSMGS{
     var $game;
     var $user_lang;
+    var $id_list;
     
     function BSMGS(){
       $this->game = $this->get_current_game();

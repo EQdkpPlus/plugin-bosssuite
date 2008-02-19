@@ -84,13 +84,18 @@ if ($_POST['bpsavebu']){
  	$mybssql->update_config('bossprogress', $bp_conf, 'dynBoss', $_POST['bp_dynboss']);
 	$mybssql->update_config('bossprogress', $bp_conf, 'zhiType', $_POST['bp_zhiType']);
 	$mybssql->update_config('bossprogress', $bp_conf, 'showSB', $_POST['bp_showSB']);
-	foreach ($bzone as $zoneid => $bosslist){
+	$mybssql->update_config('bossprogress', $bp_conf, 'linkurl', $_POST['bp_linkurl']);
+ 	$mybssql->update_config('bossprogress', $bp_conf, 'linklength', $_POST['bp_linklength']);
+  foreach ($bzone as $zoneid => $bosslist){
 		$mybssql->update_zone_visibility('bossprogress', $zoneid, $_POST['bp_sz_'.$zoneid]);
 	}
 	
 	//BossCounter Config
 	$mybssql->update_config('bosscounter', $bc_conf, 'dynZone', $_POST['bc_dynloc']);
  	$mybssql->update_config('bosscounter', $bc_conf, 'dynBoss', $_POST['bc_dynboss']);
+ 	$mybssql->update_config('bosscounter', $bc_conf, 'linkurl', $_POST['bc_linkurl']);
+ 	$mybssql->update_config('bosscounter', $bc_conf, 'linklength', $_POST['bc_linklength']);
+ 	
  	foreach ($bzone as $zoneid => $bosslist){
 		$mybssql->update_zone_visibility('bosscounter', $zoneid, $_POST['bc_sz_'.$zoneid]);
 	}
@@ -299,6 +304,49 @@ foreach ($bp_styles as $value => $option) {
     $tpl->assign_block_vars('bp_style_row', array (
 	        'VALUE' => $value,
 	        'SELECTED' => ($bp_conf['style'] == $value) ? ' selected="selected"' : '',
+	        'OPTION' => $option
+		)
+	);
+}
+
+require_once(dirname(__FILE__).'/../include/bslink.class.php');
+$mybslink = new BSLINK('none','');
+$bs_sources = $mybslink->get_sources();
+
+foreach ($bs_sources as $value => $options) {
+    $tpl->assign_block_vars('bc_linkurl_row', array (
+	        'VALUE' => $value,
+	        'SELECTED' => ($bc_conf['linkurl'] == $value) ? ' selected="selected"' : '',
+	        'OPTION' => $options['name']
+		)
+	);
+}
+
+foreach ($bs_sources as $value => $options) {
+    $tpl->assign_block_vars('bp_linkurl_row', array (
+	        'VALUE' => $value,
+	        'SELECTED' => ($bp_conf['linkurl'] == $value) ? ' selected="selected"' : '',
+	        'OPTION' => $options['name']
+		)
+	);
+}
+
+$bs_linklength['short'] = 'short name';//$user->lang['bp_style_bp'];
+$bs_linklength['long'] = 'long name';//$user->lang['bp_style_bps'];
+
+foreach ($bs_linklength as $value => $option) {
+    $tpl->assign_block_vars('bc_linklength_row', array (
+	        'VALUE' => $value,
+	        'SELECTED' => ($bc_conf['linklength'] == $value) ? ' selected="selected"' : '',
+	        'OPTION' => $option
+		)
+	);
+}
+
+foreach ($bs_linklength as $value => $option) {
+    $tpl->assign_block_vars('bp_linklength_row', array (
+	        'VALUE' => $value,
+	        'SELECTED' => ($bp_conf['linklength'] == $value) ? ' selected="selected"' : '',
 	        'OPTION' => $option
 		)
 	);

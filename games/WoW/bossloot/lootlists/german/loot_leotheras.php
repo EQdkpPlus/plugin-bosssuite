@@ -1,6 +1,6 @@
 <?php
 $loot = array(
-	array( "id" => "30092", "qual" => "4", "name" => "Stiefel aus Orcas Balg" ),
+	array( "id" => "30092", "qual" => "4", "name" => "Stiefel aus Orcahaut" ),
 	array( "id" => "30097", "qual" => "4", "name" => "Stachelige Korallenschulterpolster" ),
 	array( "id" => "30091", "qual" => "4", "name" => "Pirscherbänder des sicheren Ziels" ),
 	array( "id" => "30096", "qual" => "4", "name" => "Gurt des Unverwundbaren" ),
