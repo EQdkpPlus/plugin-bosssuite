@@ -19,7 +19,7 @@ function bp_html_get_zhi($zhi_type, $location, $loc_completed){
 global $user, $eqdkp;
 
   $game_arr = explode('_', $eqdkp->config['default_game']);
-	$basepath = 'games/'.$game_arr[0].'/bossprogress/images/';
+	$basepath = 'games/'.$game_arr[0].'/images/';
 	$zone_basepath = $basepath . 'zones/';
   $lang_basepath = $zone_basepath . 'lang/'.$user->lang['lang'].'/';
 	// 0 = jitter, 1 = sw, 2 = none
@@ -89,10 +89,10 @@ function bp_html_get_boss_image_td($bossname, $bosscount) {
   if ($bosscount == 0)
   	$bossname .= "_b";
   
-  if (file_exists("games/WoW/bossprogress/images/bosses/" . $bossname . ".gif")) {
-  	return '<td width="60" height="60" align="center"><img src="games/WoW/bossprogress/images/bosses/' . $bossname . '.gif" align="center" border="0" alt="' . $bossname . '" /></td>';
+  if (file_exists("games/WoW/images/bosses/small/" . $bossname . ".gif")) {
+  	return '<td width="60" height="60" align="center"><img src="games/WoW/images/bosses/small/' . $bossname . '.gif" align="center" border="0" alt="' . $bossname . '" /></td>';
   } else {
-  	return '<td width="60" height="60" align="center"><img src="games/WoW/bossprogress/images/bosses/turkey.gif" height="60" border="0" alt= "' . $bossname . '" /></td>';
+  	return '<td width="60" height="60" align="center"><img src="games/WoW/images/bosses/small/turkey.gif" height="60" border="0" alt= "' . $bossname . '" /></td>';
   }
 }
 

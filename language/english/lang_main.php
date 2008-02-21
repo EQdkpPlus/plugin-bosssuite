@@ -68,7 +68,7 @@ $lang = array(
 'bs_source_offs' => 'offsets',
 'bs_source_both' => 'both',
 'bs_source_cache' => 'cache',
-'bs_al_showZone' => 'Select zones to show within the plugin:',
+'bs_al_showZone' => 'Click me to select the zones which should be shown within the plugin:',
 
 
 // offset page

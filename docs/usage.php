@@ -33,6 +33,7 @@ if (!$pm->check(PLUGIN_INSTALLED, 'bosssuite')) {
 }
 
 $bs_usage = 'HELLO!';
+
 # Assign Vars
 ####################################################
 $tpl->assign_vars(array (

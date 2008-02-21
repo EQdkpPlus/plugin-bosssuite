@@ -16,14 +16,14 @@ if ( !class_exists( "BSSQL" ) ) {
       function get_defaults($plugin){
         global $eqdkp, $user;
         $game_arr = explode('_', $eqdkp->config['default_game']);
-        $default_file = dirname(__FILE__).'/../games/'.$game_arr[0].'/'.$plugin.'/lang/'.$user->lang_name.'/defaults.php';
+        $default_file = dirname(__FILE__).'/../games/'.$game_arr[0].'/lang/'.$user->lang_name.'/defaults.php';
         if (file_exists($default_file)){
           require($default_file);
-          return $defaults;
+          return $defaults[$plugin];
         }else{
-          if (file_exists(dirname(__FILE__).'/../games/'.$game_arr[0].'/'.$plugin.'/defaults.php')){
-            require(dirname(__FILE__).'/../games/'.$game_arr[0].'/'.$plugin.'/defaults.php');
-            return $defaults;
+          if (file_exists(dirname(__FILE__).'/../games/'.$game_arr[0].'/defaults.php')){
+            require(dirname(__FILE__).'/../games/'.$game_arr[0].'/defaults.php');
+            return $defaults[$plugin];
           }else{
             return array();
           }
@@ -277,7 +277,7 @@ if ( !class_exists( "BSSQL" ) ) {
        $game_arr = explode('_', $eqdkp->config['default_game']);
        $game = $game_arr[0];
        
-    	 require(dirname(__FILE__).'/../games/'.$game.'/bossbase/bzone.php');
+    	 require(dirname(__FILE__).'/../games/'.$game.'/bzone.php');
     	 if ($plugin == 'all'){
 	       return $bzone;
 	     } else if ($plugin == 'bossprogress'){   

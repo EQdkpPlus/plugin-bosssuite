@@ -27,7 +27,7 @@ if ( !class_exists( "BSMGS" ) ) {
     }
     
     function game_supported($plugin){
-      return file_exists(dirname(__FILE__).'/../games/'.$this->game.'/'.$plugin.'/index.php');
+      return file_exists(dirname(__FILE__).'/../games/'.$this->game.'/index.php');
     }
        
     function load_game_specific_language($plugin){
@@ -35,12 +35,12 @@ if ( !class_exists( "BSMGS" ) ) {
         if (!$this->game_supported($plugin)) {
         	return false;
         }
-        $filename = dirname(__FILE__).'/../games/'.$this->game.'/'.$plugin.'/lang/'.$this->user_lang.'/lang_add.php';
+        $filename = dirname(__FILE__).'/../games/'.$this->game.'/lang/'.$this->user_lang.'/lang_'.$plugin.'.php';
         if (file_exists($filename)){
           require($filename);
         }else{
-          require(dirname(__FILE__).'/../games/'.$this->game.'/'.$plugin.'/index.php');
-          require(dirname(__FILE__).'/../games/'.$this->game.'/'.$plugin.'/lang/'.$default_lang.'/lang_add.php');
+          require(dirname(__FILE__).'/../games/'.$this->game.'/index.php');
+          require(dirname(__FILE__).'/../games/'.$this->game.'/lang/'.$default_lang.'/lang_'.$plugin.'.php');
         }
         $user->lang = array_merge($user->lang, $lang);
     }
