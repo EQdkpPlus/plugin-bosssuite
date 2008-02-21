@@ -10,5 +10,7 @@ if ( !defined('EQDKP_INC') ){
 		'zhiType' => '0',
 		'style' => '0',
 		'showSB' => '0',
+		'linkurl' => 'bossloot',
+    'linklength' => 'long',
     );
 ?>

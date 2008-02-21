@@ -6,5 +6,7 @@ if ( !defined('EQDKP_INC') ){
 		$defaults = array(
         'dynZone' => '0',
         'dynBoss' => '0',
+        'linkurl' => 'bossloot',
+        'linklength' => 'short',
     );
 ?>
