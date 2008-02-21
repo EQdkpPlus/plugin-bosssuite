@@ -88,11 +88,12 @@ global $user;
 function bp_html_get_boss_image_td($bossname, $bosscount) {
   if ($bosscount == 0)
   	$bossname .= "_b";
-  
-  if (file_exists("games/WoW/images/bosses/small/" . $bossname . ".gif")) {
-  	return '<td width="60" height="60" align="center"><img src="games/WoW/images/bosses/small/' . $bossname . '.gif" align="center" border="0" alt="' . $bossname . '" /></td>';
+  $game_arr = explode('_', $eqdkp->config['default_game']);
+
+  if (file_exists("games/'.$game_arr[0].'/images/bosses/small/" . $bossname . ".gif")) {
+  	return '<td width="60" height="60" align="center"><img src="games/'.$game_arr[0].'/images/bosses/small/' . $bossname . '.gif" align="center" border="0" alt="' . $bossname . '" /></td>';
   } else {
-  	return '<td width="60" height="60" align="center"><img src="games/WoW/images/bosses/small/turkey.gif" height="60" border="0" alt= "' . $bossname . '" /></td>';
+  	return '<td width="60" height="60" align="center"><img src="games/'.$game_arr[0].'/images/bosses/small/turkey.gif" height="60" border="0" alt= "' . $bossname . '" /></td>';
   }
 }
 
