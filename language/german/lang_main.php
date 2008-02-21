@@ -31,7 +31,7 @@ $lang = array(
 'bs_credits2' => ' by sz3 (detailed credits will follow!)</span></center>',
 
 // admin page
-'bs_al_submit' => 'Save',
+'bs_al_submit' => 'Speichern',
 'bs_al_parse' => 'String(s) for: ',
 'bs_al_general' => 'General settings',
 'bs_al_delimRNO' => 'Raidnote delimiter (Opt.: Regular Expression):',

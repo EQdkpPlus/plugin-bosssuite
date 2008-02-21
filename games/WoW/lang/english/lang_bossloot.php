@@ -12,7 +12,6 @@
 
 $lang = array(
     //Item languages
-    'item_lang_none' => 'none',
     'item_lang_english' => 'english',
     'item_lang_german' => 'german',
 
