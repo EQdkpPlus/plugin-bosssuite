@@ -45,12 +45,12 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 		));
 
 		//Permissions
-		$this->add_permission('2380', 'a_bosssuite_conf', 'N', $user->lang['bb_pm_conf']);
-		$this->add_permission('2381', 'a_bosssuite_offs', 'N', $user->lang['bb_pm_offs']);
+		$this->add_permission('2380', 'a_bosssuite_conf', 'N', $user->lang['bs_pm_conf']);
+		$this->add_permission('2381', 'a_bosssuite_offs', 'N', $user->lang['bs_pm_offs']);
 
-		$this->add_permission('2387', 'u_bosssuite_bp_view', 'Y', $user->lang['bb_pm_conf']);
-		$this->add_permission('2388', 'u_bosssuite_bl_view', 'Y', $user->lang['bb_pm_offs']);
-		$this->add_permission('2389', 'u_bosssuite_bc_view', 'Y', $user->lang['bb_pm_pcon']);
+		$this->add_permission('2387', 'u_bosssuite_bp_view', 'Y', $user->lang['bs_bp_view']);
+		$this->add_permission('2388', 'u_bosssuite_bl_view', 'Y', $user->lang['bs_bl_view']);
+		$this->add_permission('2389', 'u_bosssuite_bc_view', 'Y', $user->lang['bs_bc_view']);
 
 
 		if (!($this->pm->check(PLUGIN_INSTALLED, 'bosssuite'))){

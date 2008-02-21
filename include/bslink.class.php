@@ -27,7 +27,7 @@ if ( !class_exists( "BSLINK" ) ) {
         $this->source = 'bossloot';
       }else if( !($source == '') ){
         $game_arr = explode('_', $eqdkp->config['default_game']);
-        require(dirname(__FILE__).'/../games/'.$game_arr[0].'/linklist.php');
+        include(dirname(__FILE__).'/../games/'.$game_arr[0].'/linklist.php');
         $this->baselink = $sources[$source]['baseurl'];
         $this->linklist = $idlist[$sources[$source]['idlist']];
       }
@@ -47,7 +47,7 @@ if ( !class_exists( "BSLINK" ) ) {
     function get_sources(){
     global $eqdkp;
         $game_arr = explode('_', $eqdkp->config['default_game']);
-        require(dirname(__FILE__).'/../games/'.$game_arr[0].'/linklist.php');
+        include(dirname(__FILE__).'/../games/'.$game_arr[0].'/linklist.php');
         $sources['none'] = array('name' => 'none', 'idlist' => 'default', 'baseurl' => 'http://wow.allakhazam.com/db/mob.html?wmob=');
         $sources['bossloot'] = array('name' => 'BossLoot', 'idlist' => 'default', 'baseurl' => 'http://wow.buffed.de/?n=');
         return $sources;

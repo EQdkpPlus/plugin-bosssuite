@@ -66,7 +66,9 @@ $bp_conf = $mybssql->get_config('bossprogress');
 # Get data from database
 ####################################################
 if ($bb_conf['source'] == 'database'){
+  $data = bp_init_data_array($sbzone);
 	$data = bp_fetch_bzi($sbzone, $data, $bb_conf, $bb_pzone, $bb_pboss);
+	//print_r($data);
 	foreach ($sbzone as $zone => $bosses){
     $data[$zone]['zk'] = 0;
     foreach ($data[$zone]['bosses'] as $boss){
@@ -91,9 +93,10 @@ if ($bb_conf['source'] == 'database'){
 		}
 	}
 }else if ($bb_conf['source'] == 'both'){
+  $data = bp_init_data_array($sbzone);
 	$bb_boffs = $mybssql->get_boss_offsets();
 	$bb_zoffs = $mybssql->get_zone_offsets();
-	foreach($bzone as $zone => $bosses){
+	foreach($sbzone as $zone => $bosses){
 		$data[$zone]['fvd'] = $bb_zoffs[$zone]['fd'];
 		$data[$zone]['lvd'] = $bb_zoffs[$zone]['ld'];
 		$data[$zone]['vc'] = $bb_zoffs[$zone]['counter'];

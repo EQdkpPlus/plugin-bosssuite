@@ -15,19 +15,16 @@ $lang = array(
 'bosssuite' => 'BossSuite',
 
 //Permissions
-'bs_pm_conf' => 'config',
+'bs_pm_conf' => 'configure',
 'bs_pm_offs' => 'offsets',
-'bs_pm_pcon' => 'permission control',
+'bs_bp_view' => 'view BossProgresss',
+'bs_bl_view' => 'view BossLoot',
+'bs_bc_view' => 'view BossCounter',
 
 //Admin menu
 'bs_am_title' => 'BossSuite',
-'bs_am_pcon' => 'BB: Permissions',
 'bs_am_conf' => 'Settings',
 'bs_am_offs' => 'Offsets',
-'bs_am_strings' => 'Strings',
-'bs_am_bp_conf' => 'BP: Settings',
-'bs_am_bc_conf' => 'BC: Settings',
-'bs_am_bl_conf' => 'BL: Settings',
 
 //PCON
 'bs_pcon_bs_conf' => '<b>configure</b>',
@@ -61,6 +58,9 @@ $lang = array(
 'bs_al_parseInfo' => 'Attention! Please keep in mind that the following strings are case-sensitive! JinDo won\'t match Jindo!',
 'bs_al_zoneInfo' => 'Where (in the raid entry) to look for zone infos?',
 'bs_al_bossInfo' => 'Where (in the raid entry) to look for boss infos?',
+'bs_al_linkInfo' => 'Link options:',
+'bs_al_name' => 'Name',
+'bs_al_trigger' => 'String trigger(s)',
 'bs_ao_rnote' => 'raidnote',
 'bs_ao_rname' => 'raidname',
 'bs_al_source' => 'Data source:',

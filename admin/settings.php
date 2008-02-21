@@ -47,18 +47,20 @@ $mybssql = new BSSQL();
 
 $bzone = $mybssql->get_bzone();
 
-$pzrow = $mybssql->get_parse_zone();
-$pbrow = $mybssql->get_parse_boss();
-
-$bs_conf = $mybssql->get_config('bossbase');
-$bl_conf = $mybssql->get_config('bossloot');
-$bp_conf = $mybssql->get_config('bossprogress');
-$bc_conf = $mybssql->get_config('bosscounter');
-$bc_sbzone = $mybssql->get_bzone('bosscounter');
-$bp_sbzone = $mybssql->get_bzone('bossprogress');
-
 // Saving
 if ($_POST['bpsavebu']){
+  $pzrow = $mybssql->get_parse_zone();
+  $pbrow = $mybssql->get_parse_boss();
+  
+  $bs_conf = $mybssql->get_config('bossbase');
+  $bl_conf = $mybssql->get_config('bossloot');
+  $bp_conf = $mybssql->get_config('bossprogress');
+  $bc_conf = $mybssql->get_config('bosscounter');
+  $bc_sbzone = $mybssql->get_bzone('bosscounter');
+  $bp_sbzone = $mybssql->get_bzone('bossprogress');
+  $boss_offsets = $mybssql->get_boss_offsets();
+  $zone_offsets = $mybssql->get_zone_offsets();
+
   //General Config
   $eqdkp->config_set('bs_showBC', $_POST['ebc']);
   $eqdkp->config_set('bs_linkBL', $_POST['en2l']);
@@ -107,6 +109,18 @@ if ($_POST['bpsavebu']){
 			$mybssql->update_parse_boss($pbrow, $bossid, $_POST['pb_'.$bossid]);
 		}
 	}
+	/*
+	foreach ($bzone as $zoneid => $bosslist){
+		$fdate = mktime(0,0,0,$_POST['fdm_'.$zoneid],$_POST['fdd_'.$zoneid],$_POST['fdY_'.$zoneid]);
+		$ldate = mktime(0,0,0,$_POST['ldm_'.$zoneid],$_POST['ldd_'.$zoneid],$_POST['ldY_'.$zoneid]);
+		$mybssql->update_zone_offsets($zone_offsets, $zoneid, $fdate, $ldate, $_POST['co_'.$zoneid]);
+
+		foreach ($bosslist as $bossid){
+			$fdate = mktime(0,0,0,$_POST['fdm_'.$bossid],$_POST['fdd_'.$bossid],$_POST['fdY_'.$bossid]);
+			$ldate = mktime(0,0,0,$_POST['ldm_'.$bossid],$_POST['ldd_'.$bossid],$_POST['ldY_'.$bossid]);
+			$mybssql->update_boss_offsets($boss_offsets, $bossid, $fdate, $ldate, $_POST['co_'.$bossid]);
+		}
+	}*/
 }
 
 $pzrow = $mybssql->get_parse_zone();
@@ -118,6 +132,8 @@ $bp_conf = $mybssql->get_config('bossprogress');
 $bc_conf = $mybssql->get_config('bosscounter');
 $bc_sbzone = $mybssql->get_bzone('bosscounter');
 $bp_sbzone = $mybssql->get_bzone('bossprogress');
+$boss_offsets = $mybssql->get_boss_offsets();
+$zone_offsets = $mybssql->get_zone_offsets();
 
 global $eqdkp, $SID;
 
@@ -154,6 +170,9 @@ $arrvals = array (
 	'L_RNAME' => $user->lang['bs_ao_rname'],
 	'L_RNOTE' => $user->lang['bs_ao_rnote'],
 	'L_SOURCE' => $user->lang['bs_al_source'],
+	'L_BP_LINK' => $user->lang['bs_al_linkInfo'],
+	'L_BC_LINK' =>  $user->lang['bs_al_linkInfo'],
+	'L_OFFSET_INFO' => $user->lang['bs_ol_dateFormat'],
 	
 	//BossLoot
 	'BL_NDL' => ($bl_conf['show_ndl'] == 1) ? ' checked="checked"' : '',
@@ -193,14 +212,14 @@ $arrvals = array (
 	
 	// Language
 	'L_BC_DYNLOC'      => $user->lang['opt_dynloc'],
-	'L_BC_DYNBOSS'    => $user->lang['opt_dynboss'],
+	'L_BC_DYNBOSS'    => $user->lang['opt_dynboss'],	
 );
 
+//Source selection
 $bs_source['database'] = $user->lang['bs_source_db'];
 $bs_source['offsets'] = $user->lang['bs_source_offs'];
 $bs_source['both'] = $user->lang['bs_source_both'];
 $bs_source['cache'] = $user->lang['bs_source_cache'];
-
 
 foreach ($bs_source as $value => $option) {
 	$tpl->assign_block_vars('source_row', array (
@@ -217,7 +236,7 @@ $zbcode .= '<h2 class="accordion_toggle">'.$user->lang['bs_al_showZone'].'</h2>'
 $zbcode .= "\t".'<div class="accordion_content">'."\n";
 $zbcode .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
 foreach ($bzone as $zoneid => $bosslist){
-  $zbcode .= "\t\t\t".'<tr><td width="70%" class="row2">' . $user->lang[$zoneid]['long']. '</td>';
+  $zbcode .= "\t\t\t".'<tr><td width="70%" class="row2" align="right">' . $user->lang[$zoneid]['long']. ':</td>';
   $zbcode .= '<td class="row1"><input type="checkbox" name="bp_sz_'.$zoneid.'" value="1" ';
   if ( array_key_exists($zoneid, $bp_sbzone) )
     $zbcode .= 'checked="checked"';
@@ -235,7 +254,7 @@ $zbcode .= '<h2 class="accordion_toggle">'.$user->lang['bs_al_showZone'].'</h2>'
 $zbcode .= "\t".'<div class="accordion_content">'."\n";
 $zbcode .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
 foreach ($bzone as $zoneid => $bosslist){
-  $zbcode .= "\t\t\t".'<tr><td width="70%" class="row2">' . $user->lang[$zoneid]['long']. '</td>';
+  $zbcode .= "\t\t\t".'<tr><td width="70%" class="row2" align="right">' . $user->lang[$zoneid]['long']. ':</td>';
   $zbcode .= '<td class="row1"><input type="checkbox" name="bc_sz_'.$zoneid.'" value="1" ';
   if ( array_key_exists($zoneid, $bc_sbzone) )
     $zbcode .= 'checked="checked"';
@@ -253,12 +272,13 @@ foreach ($bzone as $zoneid => $bosslist){
   $zbcode .= '<h2 class="accordion_toggle">'.$user->lang[$zoneid]['long'].'</h2>'."\n";
   $zbcode .= "\t".'<div class="accordion_content">'."\n";
   $zbcode .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
-  $zbcode .= "\t\t".'<tr><td width="40%" class="row2">' . $user->lang['bs_al_parse'].$user->lang[$zoneid]['long']. '</td>';
-  $zbcode .= '<td width="60%" class="row1"><input type="text" name="pz_' . $zoneid .'" size="64" value="' . $pzrow['pz_'.$zoneid] . '" class="input" /></td></tr>'."\n";
+  $zbcode .= "\t\t".'<tr><th align="center" width="30%">' .$user->lang['bs_al_name']. '</th><th align="center">'.$user->lang['bs_al_trigger'].'</th></tr>'."\n";
+  $zbcode .= "\t\t".'<tr><td class="row2" align="right">'.$user->lang[$zoneid]['long'].':</td>';
+  $zbcode .= '<td class="row1"><input type="text" name="pz_' . $zoneid .'" size="80" value="' . $pzrow['pz_'.$zoneid] . '" class="input" /></td></tr>'."\n";
 
   foreach ($bosslist as $bossid){
-    $zbcode .= "\t\t".'<tr><td class="row2">' . $user->lang['bs_al_parse'].$user->lang[$bossid]['long'] . '</td>'; 
-    $zbcode .= '<td class="row1"><input type="text" name="pb_' . $bossid .'" size="64" value="' . $pbrow['pb_'.$bossid] .'" class="input" /></td></tr>'."\n";
+    $zbcode .= "\t\t".'<tr><td class="row2" align="right">'.$user->lang[$bossid]['long'].':</td>'; 
+    $zbcode .= '<td class="row1"><input type="text" name="pb_' . $bossid .'" size="80" value="' . $pbrow['pb_'.$bossid] .'" class="input" /></td></tr>'."\n";
   }
   
   $zbcode .= "\t\t</table></div>\n";
@@ -309,48 +329,87 @@ foreach ($bp_styles as $value => $option) {
 	);
 }
 
+// Link source selection
 require_once(dirname(__FILE__).'/../include/bslink.class.php');
 $mybslink = new BSLINK('none','');
 $bs_sources = $mybslink->get_sources();
-
-foreach ($bs_sources as $value => $options) {
-    $tpl->assign_block_vars('bc_linkurl_row', array (
-	        'VALUE' => $value,
-	        'SELECTED' => ($bc_conf['linkurl'] == $value) ? ' selected="selected"' : '',
-	        'OPTION' => $options['name']
-		)
-	);
-}
-
-foreach ($bs_sources as $value => $options) {
-    $tpl->assign_block_vars('bp_linkurl_row', array (
-	        'VALUE' => $value,
-	        'SELECTED' => ($bp_conf['linkurl'] == $value) ? ' selected="selected"' : '',
-	        'OPTION' => $options['name']
-		)
-	);
-}
-
 $bs_linklength['short'] = 'short name';//$user->lang['bp_style_bp'];
 $bs_linklength['long'] = 'long name';//$user->lang['bp_style_bps'];
+
+foreach ($bs_sources as $value => $options) {
+  $tpl->assign_block_vars('bc_linkurl_row', array (
+	  'VALUE' => $value,
+	  'SELECTED' => ($bc_conf['linkurl'] == $value) ? ' selected="selected"' : '',
+	  'OPTION' => $options['name']
+	));
+
+	$tpl->assign_block_vars('bp_linkurl_row', array (
+	  'VALUE' => $value,
+	  'SELECTED' => ($bp_conf['linkurl'] == $value) ? ' selected="selected"' : '',
+	  'OPTION' => $options['name']
+	));
+}
 
 foreach ($bs_linklength as $value => $option) {
     $tpl->assign_block_vars('bc_linklength_row', array (
 	        'VALUE' => $value,
 	        'SELECTED' => ($bc_conf['linklength'] == $value) ? ' selected="selected"' : '',
 	        'OPTION' => $option
-		)
-	);
-}
+		));
 
-foreach ($bs_linklength as $value => $option) {
-    $tpl->assign_block_vars('bp_linklength_row', array (
+		$tpl->assign_block_vars('bp_linklength_row', array (
 	        'VALUE' => $value,
 	        'SELECTED' => ($bp_conf['linklength'] == $value) ? ' selected="selected"' : '',
 	        'OPTION' => $option
-		)
-	);
+		));
 }
+
+/*
+//Offaet input
+$zbcode = '<div id="container"><div id="vertical_container">';
+foreach ($bzone as $zoneid => $bosslist){
+    $zbcode .= '<h2 class="accordion_toggle">'.$user->lang[$zoneid]['long'].'</h2>'."\n";
+    $zbcode .= "\t".'<div class="accordion_content">'."\n";
+    
+    $zbcode .= '<table width="100%" border="0" cellspacing="1" cellpadding="2">';
+    $zbcode .= '<tr><th>'.$user->lang['bs_ol_in'].'</th><th>'.$user->lang['bs_ol_fd'].'</th><th>'.$user->lang['bs_ol_ld'].'</th><th>'.$user->lang['bs_ol_co'].'</th></tr>';
+    
+    $zbcode .= '<tr>';
+    $zbcode .= '<td width="40%" class="row2" align="right">' .$user->lang[$zoneid]['long']. ':</td>';
+    $zbcode .= '<td class="row1" align="center">';
+    $zbcode .= '<input type="text" name="fdm_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%m',$zobe_offsets[$zoneid]['fd']) .'" class="input" />/';
+    $zbcode .= '<input type="text" name="fdd_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%d',$zone_offsets[$zoneid]['fd']) .'" class="input" />/';
+    $zbcode .= '<input type="text" name="fdY_' . $zoneid .'" size="5" maxlength="4" value="' . strftime('%Y',$zone_offsets[$zoneid]['fd']) .'" class="input" />';
+    $zbcode .= '</td>';
+    $zbcode .= '<td class="row1" align="center">';
+    $zbcode .= '<input type="text" name="ldm_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%m',$zone_offsets[$zoneid]['ld']) .'" class="input" />/';
+    $zbcode .= '<input type="text" name="ldd_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%d',$zone_offsets[$zoneid]['ld']) .'" class="input" />/';
+    $zbcode .= '<input type="text" name="ldY_' . $zoneid .'" size="5" maxlength="4" value="' . strftime('%Y',$zone_offsets[$zoneid]['ld']) .'" class="input" />';
+    $zbcode .= '</td>';
+    $zbcode .= '<td class="row1" align="center"><input type="text" name="co_' . $zoneid .'" size="3" value="' . $zone_offsets[$zoneid]['counter'] . '" class="input" /></td>';
+    $zbcode .= '</tr>';
+			
+   	foreach ($bosslist as $bossid){
+    		$zbcode .= '<tr>';
+    		$zbcode .= '<td class="row2" align="right">' . $user->lang[$bossid]['long'] . ':</td>';
+    		$zbcode .= '<td class="row1" align="center">';
+    		$zbcode .= '<input type="text" name="fdm_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%m',$boss_offsets[$bossid]['fd']) .'" class="input" />/';
+    		$zbcode .= '<input type="text" name="fdd_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%d',$boss_offsets[$bossid]['fd']) .'" class="input" />/';
+    		$zbcode .= '<input type="text" name="fdY_' . $bossid .'" size="5" maxlength="4" value="' . strftime('%Y',$boss_offsets[$bossid]['fd']) .'" class="input" />';
+    		$zbcode.= '</td>';
+    		$zbcode .= '<td class="row1" align="center">';
+    		$zbcode .= '<input type="text" name="ldm_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%m',$boss_offsets[$bossid]['ld']) .'" class="input" />/';
+    		$zbcode .= '<input type="text" name="ldd_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%d',$boss_offsets[$bossid]['ld']) .'" class="input" />/';
+    		$zbcode .= '<input type="text" name="ldY_' . $bossid .'" size="5" maxlength="4" value="' . strftime('%Y',$boss_offsets[$bossid]['ld']) .'" class="input" />';
+    		$zbcode.= '</td>';
+    		$zbcode .= '<td class="row1" align="center"><input type="text" name="co_' . $bossid .'" size="3" value="' . $boss_offsets[$bossid]['counter'] .'" class="input" /></td>';
+    		$zbcode .= '</tr>';
+	  }
+  	$zbcode .= "</table></div>";
+}
+$arrvals['OFFSET_CONFIG'] = $zbcode.'</div></div>';
+$tpl->assign_vars($arrvals);
+*/
 
 $eqdkp->set_vars(array (
 	'page_title' => sprintf($user->lang['admin_title_prefix'], $eqdkp->config['guildtag'], $eqdkp->config['dkp_name']).': '.$user->lang['bs_am_conf'],

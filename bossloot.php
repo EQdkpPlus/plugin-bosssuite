@@ -167,6 +167,7 @@ if ($bl_conf['show_ndl'] == true){
 				}else{
 					$is_itemname = $name;
 				}
+				//$bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'itemstats/updateitem.php?item='.urlencode(urlencode($name)).'">'.$is_itemname.'</a></td></tr>'."\n";
 				$bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3">'.$is_itemname.'</td></tr>'."\n";
 				$printed2++;
 			}

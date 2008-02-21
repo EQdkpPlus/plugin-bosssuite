@@ -41,9 +41,26 @@ if (count($tables) == 0) {
 return $sql;
 }
 
+function bp_init_data_array($bzone){
+foreach ($bzone as $zone => $bosses) {
+	$data[$zone]['vc'] = 0 + $zo_vc[$zone];
+	$data[$zone]['fvd']=BS_MAX_DATE;
+	$data[$zone]['lvd']=BS_MIN_DATE;
+			 
+	foreach ($bosses as $boss){
+    	$data[$zone]['bosses'][$boss]['kc'] = 0;
+    	$data[$zone]['bosses'][$boss]['fkd']=BS_MAX_DATE;
+    	$data[$zone]['bosses'][$boss]['lkd']=BS_MIN_DATE;
+	}
+}
+
+return $data;
+
+}
+
 function bp_fetch_bzi($bzone, $data, $bb_conf, $bb_pzone, $bb_pboss) {
 	$delim = array (
-    	'rnote' => '/'.$bb_conf['noteDelim'].'/',
+    'rnote' => '/'.$bb_conf['noteDelim'].'/',
 		'rname' => '/'.$bb_conf['nameDelim'].'/'
 	);
 
@@ -67,12 +84,12 @@ function bp_fetch_bzi($bzone, $data, $bb_conf, $bb_pzone, $bb_pboss) {
 			foreach ($zone_element as $raid){
 				$zparseList = preg_split("/\', \'/", stripslashes(trim($bb_pzone['pz_'.$zone], "\' ")));
 				if (in_array(stripslashes(trim($raid)), $zparseList)) {
-					$data[$zone][vc]++;
-					if ($data[$zone][fvd] > $row["rdate"]) {
-						$data[$zone][fvd] = $row["rdate"];
+					$data[$zone]['vc']++;
+					if ($data[$zone]['fvd'] > $row["rdate"]) {
+						$data[$zone]['fvd'] = $row["rdate"];
 					}
-					if ($data[$zone][lvd] < $row["rdate"]) {
-						$data[$zone][lvd] = $row["rdate"];
+					if ($data[$zone]['lvd'] < $row["rdate"]) {
+						$data[$zone]['lvd'] = $row["rdate"];
 					}
 				}	
 			}
@@ -88,12 +105,12 @@ function bp_fetch_bzi($bzone, $data, $bb_conf, $bb_pzone, $bb_pboss) {
 				foreach ($bosses as $boss){
         			$bparseList = preg_split("/\', \'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
 					if (in_array(stripslashes(trim($raid)), $bparseList)) {
-						$data[$zone][bosses][$boss][kc]++;
-						if ($data[$zone][bosses][$boss][fkd] > $row["rdate"]) {
-							$data[$zone][bosses][$boss][fkd] = $row["rdate"];
+						$data[$zone]['bosses'][$boss]['kc']++;
+						if ($data[$zone]['bosses'][$boss]['fkd'] > $row["rdate"]) {
+							$data[$zone]['bosses'][$boss]['fkd'] = $row["rdate"];
 						}
-						if ($data[$zone][bosses][$boss][lkd] < $row["rdate"]) {
-							$data[$zone][bosses][$boss][lkd] = $row["rdate"];
+						if ($data[$zone]['bosses'][$boss]['lkd'] < $row["rdate"]) {
+							$data[$zone]['bosses'][$boss]['lkd'] = $row["rdate"];
 						}
 					}		
 				}
