@@ -175,6 +175,7 @@ if ($bl_conf['show_ndl'] == true){
 	}
 }
 
+if($bl_conf['eyecandy'] == true){
 // Loot output
 $bl_out .= '<tr><td><div id="container"><div id="vertical_container">'."\n";
 
@@ -185,7 +186,7 @@ if ($bl_cloot != ''){
     $bl_out .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
     $bl_out .= "\t\t\t".'<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>'."\n";
     $bl_out .= "\t\t\t".$bl_cloot."\n";
-    $bl_out .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed0 . ' Items found</td></tr>'."\n";
+    $bl_out .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed0 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";
     $bl_out .= "\t\t".'</table>'."\n";
     $bl_out .= "\t".'</div>'."\n";
 }
@@ -197,7 +198,7 @@ if ($bl_ndloot != ''){
     $bl_out .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
     $bl_out .= "\t\t\t".'<tr class="row2"><th colspan="3">'.$user->lang['bl_itemname'].'</th></tr>'."\n";
     $bl_out .= $bl_ndloot;
-    $bl_out .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed2 . ' Items found</td></tr>'."\n";
+    $bl_out .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed2 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";
     $bl_out .= "\t\t".'</table>'."\n";
     $bl_out .= "\t".'</div>'."\n";
 }
@@ -209,13 +210,44 @@ if (($bl_conf['show_wl'] == true) && ($bl_wloot != '')){
     $bl_out .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
     $bl_out .= "\t\t\t".'<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>'."\n";
     $bl_out .= $bl_wloot;
-    $bl_out .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed1 . ' Items found</td></tr>'."\n";
+    $bl_out .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed1 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";
     $bl_out .= "\t\t".'</table>'."\n";
     $bl_out .= "\t".'</div>'."\n";
 }
 
 $bl_out .= '</div></div></td></tr>';
+}else{
+// Loot output
+$bl_out .= '<tr><td>';
+//Dropped loot
+if ($bl_cloot != ''){
+    $bl_out .= '<tr><td><table width="100%"><tr class="row2"<th colspan="3" align="center">'.$user->lang['bl_dl'].'</th></tr>';
+    $bl_out .= '<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>'; 	  	  	
+    $bl_out .= $bl_cloot;
+    $bl_out .= '<tr><td colspan="3" align="right">' . $printed0 . ' '.$user->lang['bl_itemsfound'].'</td></tr>';
+    $bl_out .= '</table></td></tr>';
+}
 
+//never dropped loot
+if ($bl_ndloot != ''){
+    $bl_out .= '<tr><td><table width="100%"><tr class="row2"<th colspan="3" align="center">'.$user->lang['bl_ndl'].'</th></tr>'."\n";
+    $bl_out .= '<tr class="row2"><th colspan="3">'.$user->lang['bl_itemname'].'</th></tr>'."\n";
+    $bl_out .= $bl_ndloot;
+    $bl_out .= '<tr><td colspan="3" align="right">' . $printed2 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";
+    $bl_out .= '</table></td></tr>';
+}
+
+//wrong loot
+if (($bl_conf['show_wl'] == true) && ($bl_wloot != '')){
+    $bl_out .= '<tr><td><table width="100%"><tr class="row2"<th colspan="3" align="center">'.$user->lang['bl_wl'].'</th></tr>';
+    $bl_out .= '<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>';
+    $bl_out .= $bl_wloot;
+    $bl_out .= '<tr><td colspan="3" align="right">' . $printed1 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";
+    $bl_out .= '</table></td></tr>';
+}
+
+$bl_out .= '</td></tr>';
+}
 # Assign Vars
 # ####################################################
 $tpl->assign_vars(array (

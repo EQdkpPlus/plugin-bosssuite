@@ -78,6 +78,7 @@ if ($_POST['bpsavebu']){
 	$mybssql->update_config('bossloot', $bl_conf, 'item_lang', $_POST['itemlang']);
 	$mybssql->update_config('bossloot', $bl_conf, 'show_ndl', $_POST['ndl']);
 	$mybssql->update_config('bossloot', $bl_conf, 'show_wl', $_POST['wl']);
+	$mybssql->update_config('bossloot', $bl_conf, 'eyecandy', $_POST['bl_eyecandy']);
 	$mybssql->update_config('bossloot', $bl_conf, 'get_itemstats', $_POST['is']);
 	
 	//BossProgress Config
@@ -173,11 +174,13 @@ $arrvals = array (
 	'L_BP_LINK' => $user->lang['bs_al_linkInfo'],
 	'L_BC_LINK' =>  $user->lang['bs_al_linkInfo'],
 	'L_OFFSET_INFO' => $user->lang['bs_ol_dateFormat'],
+	'L_BL_EYECANDY' => $user->lang['bl_opt_eyecandy'],
 	
 	//BossLoot
 	'BL_NDL' => ($bl_conf['show_ndl'] == 1) ? ' checked="checked"' : '',
 	'BL_WL' => ($bl_conf['show_wl'] == 1) ? ' checked="checked"' : '',
 	'BL_IS' => ($bl_conf['get_itemstats'] == 1) ? ' checked="checked"' : '',
+	'BL_EYECANDY' => ($bl_conf['eyecandy'] == 1) ? ' checked="checked"' : '',
 	
 	// Language
 	'L_ITEMQUAL' => $user->lang['bl_opt_minitemqual'],

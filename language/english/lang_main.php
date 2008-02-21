@@ -111,10 +111,6 @@ $lang = array(
 'bp_style_rp3r' => 'Raidprogress 3/row',
 
 
-'bossloot' => 'Bossloot',
-'bossloot_pm_view' => 'view Bossloot',
-'bossloot_pm_conf' => 'configure Bossloot',
-
 'bl_loottable' => 'Loottable for: ',
 'bl_kc_p1' => ' (killed ',
 'bl_kc_p2' => ' times)',
@@ -127,12 +123,15 @@ $lang = array(
 'bl_ndl' => 'Never dropped loot',
 'bl_wl' => 'Wrong loot',
 
+'bl_itemsfound' => 'items found',
+
 //Admin menu
 'bl_opt_minitemqual' => 'Minimum item quality to be shown:',
 'bl_opt_itemlang' => 'Item language',
 'bl_opt_ndl' => 'Show loot that never dropped for you?',
 'bl_opt_wl' => 'Show loot that was found, but not belongs to the boss?',
 'bl_opt_is' => 'Get Itemstats data for new items?',
+'bl_opt_eyecandy' => 'Enable eye-candy on the BossLoot page?',
 
 'bl_credits_p1' => 'EQDKP BossLoot v',
 'bl_credits_p2' => ' by sz3',
