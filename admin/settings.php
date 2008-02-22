@@ -139,7 +139,7 @@ $zone_offsets = $mybssql->get_zone_offsets();
 global $eqdkp, $SID;
 
 $arrvals = array (
-  'CREDITS' => $user->lang['bs_credits1'] . $pm->get_data('bosssuite', 'version') . $user->lang['bs_credits2'],
+  'CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'F_CONFIG' => 'settings.php' . $SID,
    
   //General

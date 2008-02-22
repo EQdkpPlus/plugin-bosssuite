@@ -26,10 +26,6 @@ $lang = array(
 'bs_am_conf' => 'Settings',
 'bs_am_offs' => 'Offsets',
 
-//Credits
-'bs_credits1' => '<br /><center><span class=\'copy\'>EQDKP BossSuite v',
-'bs_credits2' => ' by sz3 (detailed credits will follow!)</span></center>',
-
 // admin page
 'bs_al_submit' => 'Save',
 'bs_al_parse' => 'String(s) for: ',
@@ -114,8 +110,8 @@ $lang = array(
 'bl_opt_is' => 'Get Itemstats data for new items?',
 'bl_opt_eyecandy' => 'Enable eye-candy on the BossLoot page?',
 
-'bl_credits_p1' => 'EQDKP BossLoot v',
-'bl_credits_p2' => ' by sz3',
+'bs_credits_p1' => 'EQDKP BossSuite v',
+'bs_credits_p2' => ' MGS by sz3',
 'bl_credits_ll' => 'Loot list: ',
 'bl_credits_bi' => 'Boss images: ',
 'bl_no_lootlist_credits' => 'no lootlist selected/found',

@@ -140,7 +140,7 @@ switch ($bp_conf['style']){
 ####################################################
 $tpl->assign_vars(array (
 	'BOSSKILLVV' => $bpout,
-	'CREDITS' => $credits1 . $pm->get_data('bosssuite', 'version') . $credits2
+	'CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 ));
 
 $eqdkp->set_vars(array (

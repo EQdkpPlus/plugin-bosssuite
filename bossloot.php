@@ -253,7 +253,7 @@ $bl_out .= '</td></tr>';
 $tpl->assign_vars(array (
 	'F_ACTION' => 'bossloot.php' . $SID,
 	'BOSSLOOT' => $bl_out,
-	'BL_CREDITS' => $user->lang['bl_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bl_credits_p2'],
+	'CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'BL_LL_CREDITS' => $user->lang['bl_credits_ll'].$myblmgs->bl_get_lootlist_credits($bl_conf['item_lang']),
 	'BL_BI_CREDITS' => $user->lang['bl_credits_bi'].$myblmgs->bl_get_bossimages_credits()
 ));

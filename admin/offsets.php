@@ -61,7 +61,7 @@ $boss_offsets = $mybssql->get_boss_offsets();
 $zone_offsets = $mybssql->get_zone_offsets();
 
 $arrvals = array (
-	'CREDITS' => $user->lang['bs_credits1'] . $pm->get_data('bosssuite', 'version') . $user->lang['bs_credits2'],
+	'CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'F_CONFIG' => 'offsets.php' . $SID,
 	'L_OFFSET_INFO' => $user->lang['bs_ol_dateFormat'],
 	'L_SUBMIT' => $user->lang['bs_ol_submit']
