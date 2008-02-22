@@ -77,7 +77,7 @@ if ( !class_exists( "BLMGS" ) ) {
     
     function bl_get_bossimage($bossid){
     global $user;
-      if (file_exists("games/'.$game_arr[0].'/images/bosses/big/" . $bossname . ".gif")) {
+      if (file_exists('games/'.$this->game.'/images/bosses/big/' . $bossid . '.gif')) {
         return '<img src="./games/'.$this->game.'/images/bosses/big/'.$bossid.'.gif" alt="'.$bossid.'" _base_target="_self">';
       }else{
         return '<img src="./games/default/images/bosses/big/unknown.gif" alt="'.$bossid.'" _base_target="_self"><br />'.$user->lang['bs_image_not_found'];
