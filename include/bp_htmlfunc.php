@@ -47,9 +47,9 @@ global $user, $eqdkp;
   
   $header1 = '<tr width="800"><td colspan="4" class="row1">';
   if ( !file_exists(dirname(__file__).'/../'.$eimg))
-    $eimg = 'images/bossprogress/bp_style/zones/default.jpg';
+    $eimg = 'games/default/images/zones/default.jpg';
   if ( !file_exists(dirname(__file__).'/../'.$simg))
-    $simg = 'images/bossprogress/bp_style/zones/default.jpg';
+    $simg = 'games/default/images/zones/default.jpg';
 
   if ($eimg != $simg){
     $header2 = '<div style="background-image:url('.$simg.'); position:relative; top:0px; z-index: 0; width:800px; height:100px;">';

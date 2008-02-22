@@ -57,13 +57,14 @@ if ( !class_exists( "BLSQL" ) ) {
                 while($row2 = mysql_fetch_assoc($result2)){
                   $data['items'][$row2['item_name']]['dc']++;
                   $data['items'][$row2['item_name']]['id'] = $row2['item_id'];
-                }	
+                }
+                mysql_free_result($result2);	
               }
             }
           }
         }
         mysql_free_result($result);
-        mysql_free_result($result2);
+        
         return $data;
       }
   }
