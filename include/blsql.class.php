@@ -18,7 +18,7 @@ if ( !class_exists( "BLSQL" ) ) {
   class BLSQL{// extends BBSQL{
 
       function bl_fetch_bli($bb_conf, $bb_pboss, $boss) {
-      global $table_prefix;
+      global $db, $table_prefix;
         
         $delim = array (
           'rnote' => '/'.$bb_conf['noteDelim'].'/',
@@ -39,9 +39,11 @@ if ( !class_exists( "BLSQL" ) ) {
         foreach ($tables as $prefix){
          
           $sql = "SELECT raid_id AS id, raid_name AS rname, raid_note AS rnote FROM " . $prefix . "_raids;";
-          $result = mysql_query($sql) or message_die(mysql_error());
+          //$result = mysql_query($sql) or message_die(mysql_error());
+          //while ($row = mysql_fetch_assoc($result)) {
           
-          while ($row = mysql_fetch_assoc($result)) {
+          $result = $db->query($sql);
+          foreach($db->fetch_record_set() as $row) {
             if ($delim[$bossInfo] != "//"){
               $boss_element = preg_split($delim[$bossInfo], $row[$bossInfo], -1, PREG_SPLIT_NO_EMPTY);
             } else {
@@ -63,7 +65,7 @@ if ( !class_exists( "BLSQL" ) ) {
             }
           }
         }
-        mysql_free_result($result);
+        //mysql_free_result($result);
         
         return $data;
       }

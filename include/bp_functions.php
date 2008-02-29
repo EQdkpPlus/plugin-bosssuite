@@ -59,7 +59,8 @@ return $data;
 }
 
 function bp_fetch_bzi($bzone, $data, $bb_conf, $bb_pzone, $bb_pboss) {
-	$delim = array (
+	global $db;
+  $delim = array (
     'rnote' => '/'.$bb_conf['noteDelim'].'/',
 		'rname' => '/'.$bb_conf['nameDelim'].'/'
 	);
@@ -70,10 +71,14 @@ function bp_fetch_bzi($bzone, $data, $bb_conf, $bb_pzone, $bb_pboss) {
 	#Get data from the raids tables
 	##################################################
 	$sql = bp_get_sql_data_string($bb_conf['tables']);	
-	$result = mysql_query($sql) or message_die(mysql_error());
-
-	while ($row = mysql_fetch_assoc($result)) {
-		foreach ($bzone as $zone => $bosses){
+	
+  //$result = mysql_query($sql) or message_die(mysql_error());
+	//while ($row = mysql_fetch_assoc($result)) {
+	
+  $result = $db->query($sql);
+	foreach($db->fetch_record_set() as $row) {
+	
+  	foreach ($bzone as $zone => $bosses){
 			# Get zoneinfo from current row
 			################################
 			if ($delim[$zoneInfo] != "//"){
@@ -117,7 +122,7 @@ function bp_fetch_bzi($bzone, $data, $bb_conf, $bb_pzone, $bb_pboss) {
 			}
 		}	
 	}
-	mysql_free_result($result);
+	//mysql_free_result($result);
 	return $data;
 }
 ?>

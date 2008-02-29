@@ -119,10 +119,8 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
       				    PRIMARY KEY  (`game_id`,`boss_id`))";			    
       		$this->add_sql(SQL_INSTALL, $sql);
 
-//		global $table_prefix;
-		
-		$this->add_sql(SQL_INSTALL, "INSERT INTO " . $table_prefix . "config VALUES ('bs_showBC', '1');");
-    $this->add_sql(SQL_INSTALL, "INSERT INTO " . $table_prefix . "config VALUES ('bs_linkBL', '1');");
+  	 	    $this->add_sql(SQL_INSTALL, "INSERT INTO " . $table_prefix . "config VALUES ('bs_showBC', '1');");
+          $this->add_sql(SQL_INSTALL, "INSERT INTO " . $table_prefix . "config VALUES ('bs_linkBL', '1');");
     		
 		}else{
     		//Menus
