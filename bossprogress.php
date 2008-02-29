@@ -29,8 +29,6 @@ global $user;
 $user->check_auth('u_bosssuite_bp_view');
 
 require_once(dirname(__FILE__).'/include/bp_functions.php');
-require_once(dirname(__FILE__).'/include/bp_htmlfunc.php');
-
 
 if ( !$pm->check(PLUGIN_INSTALLED, 'bosssuite') )
 {
@@ -122,13 +120,17 @@ if ($bb_conf['source'] == 'database'){
 # Output
 ####################################################
 switch ($bp_conf['style']){
-	case 0:	$bpout = bp_html_get_zoneinfo_bp($bp_conf, $data, $sbzone);
+	case 0:	require_once(dirname(__FILE__).'/include/bp_styles/bp_style.php');
+          $bpout = bp_html_get_zoneinfo_bp($bp_conf, $data, $sbzone);
 			break; 	
-	case 1: $bpout = bp_html_get_zoneinfo_bps($bp_conf, $data, $sbzone);
+	case 1: require_once(dirname(__FILE__).'/include/bp_styles/bp_style_simple.php');
+          $bpout = bp_html_get_zoneinfo_bps($bp_conf, $data, $sbzone);
 			break;
-	case 2: $bpout = bp_html_get_zoneinfo_rp2r($bp_conf, $data, $sbzone);
+	case 2: require_once(dirname(__FILE__).'/include/bp_styles/rp_2_column.php');
+          $bpout = bp_html_get_zoneinfo_rp2r($bp_conf, $data, $sbzone);
 			break;
-	case 3: $bpout = bp_html_get_zoneinfo_rp3r($bp_conf, $data, $sbzone);
+	case 3: require_once(dirname(__FILE__).'/include/bp_styles/rp_3_column.php');
+          $bpout = bp_html_get_zoneinfo_rp3r($bp_conf, $data, $sbzone);
 			break;
 }
 
