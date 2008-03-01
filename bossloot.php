@@ -222,49 +222,8 @@ if (($bl_conf['show_wl'] == true) && ($bl_wloot != '')){
     $bl_acc_array[$bl_acc_title] = $bl_acc_content;
 }
 
-$bl_out .= '<tr><td>'.$jqueryp->accordion('bl_accordion',$bl_acc_array).'</td></tr>';
+$bl_out .= '<tr><td>'.$bl_jquery->accordion('bl_accordion',$bl_acc_array).'</td></tr>';
 
-// Loot output
-/*$bl_out .= '<tr><td><div id="container"><div id="vertical_container">'."\n";
-
-//Dropped loot
-if ($bl_cloot != ''){
-    $bl_out .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang['bl_dl'].'</th></tr></table></h2>';
-    $bl_out .= "\t".'<div class="accordion_content">'."\n";
-    $bl_out .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
-    $bl_out .= "\t\t\t".'<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>'."\n";
-    $bl_out .= "\t\t\t".$bl_cloot."\n";
-    $bl_out .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed0 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";
-    $bl_out .= "\t\t".'</table>'."\n";
-    $bl_out .= "\t".'</div>'."\n";
-}
-
-//never dropped loot
-if ($bl_ndloot != ''){
-    $bl_out .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang['bl_ndl'].'</th></tr></table></h2>'."\n";
-    $bl_out .= "\t".'<div class="accordion_content">'."\n";
-    $bl_out .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
-    $bl_out .= "\t\t\t".'<tr class="row2"><th colspan="3">'.$user->lang['bl_itemname'].'</th></tr>'."\n";
-    $bl_out .= $bl_ndloot;
-    $bl_out .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed2 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";
-    $bl_out .= "\t\t".'</table>'."\n";
-    $bl_out .= "\t".'</div>'."\n";
-}
-
-//wrong loot
-if (($bl_conf['show_wl'] == true) && ($bl_wloot != '')){
-    $bl_out .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang['bl_wl'].'</th></tr></table></h2>'."\n";
-    $bl_out .= "\t".'<div class="accordion_content">'."\n";
-    $bl_out .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
-    $bl_out .= "\t\t\t".'<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>'."\n";
-    $bl_out .= $bl_wloot;
-    $bl_out .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed1 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";
-    $bl_out .= "\t\t".'</table>'."\n";
-    $bl_out .= "\t".'</div>'."\n";
-}
-
-$bl_out .= '</div></div></td></tr>';
-*/
 }else{
 // Loot output
 $bl_out .= '<tr><td>';
