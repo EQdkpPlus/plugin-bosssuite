@@ -176,8 +176,56 @@ if ($bl_conf['show_ndl'] == true){
 }
 
 if($bl_conf['eyecandy'] == true){
+
+# Output
+####################################################
+require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
+$bl_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
+require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
+$bl_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
+/*if (!(IS_PLUS)){
+  $plus_page_header  = $jquery->Header();
+}*/
+
+$bl_acc_array = array();
+
+//Dropped loot
+if ($bl_cloot != ''){
+    $bl_acc_title = '<table width="100%"><tr><th>'.$user->lang['bl_dl'].'</th></tr></table>';
+    $bl_acc_content = "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
+    $bl_acc_content .= "\t\t\t".'<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>'."\n";
+    $bl_acc_content .= "\t\t\t".$bl_cloot."\n";
+    $bl_acc_content .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed0 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";
+    $bl_acc_content .= "\t\t".'</table>'."\n";
+    $bl_acc_array[$bl_acc_title] = $bl_acc_content;
+}
+
+//never dropped loot
+if ($bl_ndloot != ''){
+    $bl_acc_title = '<table width="100%"><tr><th>'.$user->lang['bl_ndl'].'</th></tr></table>'."\n";
+    $bl_acc_content = "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
+    $bl_acc_content .= "\t\t\t".'<tr class="row2"><th colspan="3">'.$user->lang['bl_itemname'].'</th></tr>'."\n";
+    $bl_acc_content .= $bl_ndloot;
+    $bl_acc_content .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed2 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";
+    $bl_acc_content .= "\t\t".'</table>'."\n";
+    $bl_acc_array[$bl_acc_title] = $bl_acc_content;
+}
+
+//wrong loot
+if (($bl_conf['show_wl'] == true) && ($bl_wloot != '')){
+    $bl_acc_title = '<table width="100%"><tr><th>'.$user->lang['bl_wl'].'</th></tr></table>'."\n";
+    $bl_acc_content = "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
+    $bl_acc_content .= "\t\t\t".'<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>'."\n";
+    $bl_acc_content .= $bl_wloot;
+    $bl_acc_content .= "\t\t\t".'<tr class="row2"><td colspan="3" align="right">' . $printed1 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";
+    $bl_acc_content .= "\t\t".'</table>'."\n";
+    $bl_acc_array[$bl_acc_title] = $bl_acc_content;
+}
+
+$bl_out .= '<tr><td>'.$jqueryp->accordion('bl_accordion',$bl_acc_array).'</td></tr>';
+
 // Loot output
-$bl_out .= '<tr><td><div id="container"><div id="vertical_container">'."\n";
+/*$bl_out .= '<tr><td><div id="container"><div id="vertical_container">'."\n";
 
 //Dropped loot
 if ($bl_cloot != ''){
@@ -216,6 +264,7 @@ if (($bl_conf['show_wl'] == true) && ($bl_wloot != '')){
 }
 
 $bl_out .= '</div></div></td></tr>';
+*/
 }else{
 // Loot output
 $bl_out .= '<tr><td>';
