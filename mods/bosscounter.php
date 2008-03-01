@@ -70,10 +70,15 @@ if ($bb_conf['source'] == 'database'){
 } else if ($bb_conf['source'] == 'cache'){
   $data = $mybssql->get_cache();
 }
-    if ($bc_conf['eyecandy'] == 1){
+
+// new link class
+require_once(dirname(__FILE__).'/../include/bslink.class.php');
+$mybslink = new BSLINK($bc_conf['linkurl'], $bc_conf['linklength']);
+    
+if ($bc_conf['eyecandy'] == 1){
     # Output
     ####################################################
-    require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
+    /*require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
     $wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
     require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
     $bc_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
@@ -81,9 +86,6 @@ if ($bb_conf['source'] == 'database'){
       $plus_page_header  = $jquery->Header();
     }*/
     
-    // new link class
-    require_once(dirname(__FILE__).'/../include/bslink.class.php');
-    $mybslink = new BSLINK($bc_conf['linkurl'], $bc_conf['linklength']);
     $bc_acc_array = array();
     $i = 1;
     foreach ($sbzone as $zone => $bosslist){
@@ -110,9 +112,8 @@ if ($bb_conf['source'] == 'database'){
     }
     $bcout = '<table width=100% class="borderless" cellspacing="0" cellpadding="0">';
     $bcout .= '<tr><th colspan="2" align="center">BossCounter</th></tr><tr><td>'."\n";
-    $bcout .= $bc_jquery->accordion('bc_accordion',$bc_acc_array);
+    $bcout .= $jqueryp->accordion('bc_accordion',$bc_acc_array);
     $bcout .= '</td></tr></table>';
-    
 }else{
     $bcout = '<table width=100% class="borderless" cellspacing="0" cellpadding="2">
     		  <tr><th colspan="2" align="center">Bosscounter</th></tr>'."\n";
