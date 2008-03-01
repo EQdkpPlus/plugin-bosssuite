@@ -71,60 +71,67 @@ if ($bb_conf['source'] == 'database'){
   $data = $mybssql->get_cache();
 }
 
-# Output
-####################################################
-// new link class
-require_once(dirname(__FILE__).'/../include/bslink.class.php');
-$mybslink = new BSLINK($bc_conf['linkurl'], $bc_conf['linklength']);
-
-//VERTICAL
-if ($bc_conf['eyecandy'] == 1){
-    //WITH ACCORDION
-    $bspath = $eqdkp_root_path.'plugins/bosssuite/';
-    $bcout = '
-    <style type="text/css">
-
-#basic-accordion{
-	//border:5px solid #EEE;
-	//padding:5px;
-	//width:350px;
-	//position:absolute;
-	//left:50%;
-	//top:50%;
-	//margin-left:-175px;
-	//z-index:2;
-	//margin-top:-100px;
-}
-
-.accordion_headings{
-	//padding:5px;
-	//background:#99CC00;
-	//color:#FFFFFF;
-	//border:1px solid #FFF;
-	cursor:pointer;
-	font-weight:bold;
-}
-
-.accordion_headings:hover{
-	background:#00CCFF;
-}
-
-.accordion_child{
-	//padding:15px;
-	//background:#EEE;
-}
-
-.header_highlight{
-	//background:#00CCFF;
-}
-
-</style>
-<script type="text/javascript" src="'.$bspath.'include/javascripts/accordian-src.js"></script>';
-$bcout .= "<script type=\"text/javascript\">new Accordian('basic-accordion',5,'header_highlight'); </script>";
+    # Output
+    ####################################################
+    // new link class
+    require_once(dirname(__FILE__).'/../include/bslink.class.php');
+    $mybslink = new BSLINK($bc_conf['linkurl'], $bc_conf['linklength']);
+    
+    //VERTICAL
+    if ($bc_conf['eyecandy'] == 1){
+        //WITH ACCORDION
+        $bspath = $eqdkp_root_path.'plugins/bosssuite/';
+        $bcout = '
+        <style type="text/css">
+    
+    #basic-accordion{
+    	//border:5px solid #EEE;
+    	//padding:5px;
+    	//width:350px;
+    	//position:absolute;
+    	//left:50%;
+    	//top:50%;
+    	//margin-left:-175px;
+    	//z-index:2;
+    	//margin-top:-100px;
+    }
+    
+    .accordion_headings{
+    	//padding:5px;
+    	//background:#99CC00;
+    	//color:#FFFFFF;
+    	//border:1px solid #FFF;
+    	cursor:pointer;
+    	font-weight:bold;
+    }
+    
+    .accordion_headings:hover{
+    	background:#00CCFF;
+    }
+    
+    .accordion_child{
+    	//padding:15px;
+    	//background:#EEE;
+    }
+    
+    .header_highlight{
+    	//background:#00CCFF;
+    }
+    
+    </style>
+    <script type="text/javascript" src="'.$bspath.'include/javascripts/accordian-src.js"></script>';
+    $bcout .= "
+    <script type=\"text/javascript\">
+    Event.observe(window, 'load', loadAccordions, false);  
+    function loadAccordions() {  
+      new Accordian('basic-accordion',5,'header_highlight');
+    } 
+    </script> 
+    ";
     
     $bcout .= '<table width=100% class="borderless" cellspacing="0" cellpadding="0">';
     $bcout .= '<tr><th colspan="2" align="center">BossCounter</th></tr>'."\n";
-    $bcout .= '<tr><td><div id="basic-accordion">';
+    $bcout .= "<tr><td><div id='basic-accordion'>";
     $i = 1;
     foreach ($sbzone as $zone => $bosslist){
       $loc_killed = 0;
