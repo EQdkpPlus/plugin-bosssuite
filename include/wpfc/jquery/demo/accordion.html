@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>jQuery Accordion Test</title>
+	
+<script language="javascript" src="../js/jquery.min.js"></script>
+<script language="javascript" src="../js/jquery.accordion.min.js"></script>
+<style type="text/css">
+#nav  {
+	width: 260px;
+	font-family: verdana;
+	margin:  0px;
+	padding: 0px;
+	border: 1px solid black;
+}
+#nav div.content {
+	margin-bottom : 10px;
+	border: none;
+	color: #0c449b;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 0px;
+	padding: 10px;
+	background-color: #80cfe2;
+	overflow: hidden;
+	height: 10em;	
+}
+#nav div.title {
+	cursor:pointer;
+	display:block;
+	padding:5px;
+	margin-top: 0;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 12px;
+	color: white;
+	background-color: #00a0c6;
+	border: none;
+}
+#nav div.title:hover {
+	color: #00a0c6;
+	background-color: white;
+}
+#nav div.title.selected {
+	color: white;
+	background-color: #80cfe2;
+	border-bottom: 1px solid black;
+}
+</style>
+
+</head>
+<body>
+
+                
+<div id="nav">
+ <div>
+   <div class="title">Header 1</div>
+   <div class="content">Content 1</div>
+ </div>
+ <div>
+   <div class="title">Header 2</div>
+   <div class="content">Content 2</div>
+ </div>
+</div>
+<script>
+  jQuery('#nav').Accordion({
+    header: '.title',
+    animated: false
+  });
+</script>
+	</body>
+</html>
