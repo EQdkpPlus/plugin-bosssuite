@@ -82,6 +82,77 @@ if ($bc_conf['eyecandy'] == 1){
     //WITH ACCORDION
     $bspath = $eqdkp_root_path.'plugins/bosssuite/';
     $bcout = '
+    <style type="text/css">
+
+#basic-accordian{
+	border:5px solid #EEE;
+	padding:5px;
+	width:350px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-175px;
+	z-index:2;
+	margin-top:-100px;
+}
+
+.accordion_headings{
+	padding:5px;
+	background:#99CC00;
+	color:#FFFFFF;
+	border:1px solid #FFF;
+	cursor:pointer;
+	font-weight:bold;
+}
+
+.accordion_headings:hover{
+	background:#00CCFF;
+}
+
+.accordion_child{
+	padding:15px;
+	background:#EEE;
+}
+
+.header_highlight{
+	background:#00CCFF;
+}
+
+</style>
+<script type="text/javascript" src="'.$bspath.'include/javascripts/accordian-src.js"></script>
+<script type="text/javascript">new Accordian(\'basic-accordian\',5,\'header_highlight\'); </script>
+    ';
+    
+    $bcout .= '<table width=100% class="borderless" cellspacing="0" cellpadding="0">';
+    $bcout .= '<tr><th colspan="2" align="center">BossCounter</th></tr>'."\n";
+    $bcout .= '<tr><td><div id="basic-accordion">';
+    foreach ($sbzone as $zone => $bosslist){
+      $loc_killed = 0;
+    	 foreach ($data[$zone]['bosses'] as $boss){
+    		if ($boss['kc'] > 0)
+    			$loc_killed++;
+    	}
+    	if ((!$bc_conf['dynZone']) or ($loc_killed > 0)) 
+    	{
+        $bcout .= '<div id="test-header" class="accordion_headings header_highlight" ><table width=100% class="borderless" cellspacing="0" cellpadding="0"><tr><th width="80%">'.$user->lang[$zone]['short'].'</th><th>'.$loc_killed.'/'.sizeof($data[$zone]['bosses']).'</th></tr></table></div>'."\n";
+        $bcout .= "\t".'<div id="test-content">'."\n";
+        $bcout .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
+        $bi = 1; //row number 1/2
+        foreach ($bosslist as $boss){
+          if ((!$bc_conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)){
+            $bcout .= "\t\t".'<tr class="row'.($bi+1).'"><td align="left">'.$mybslink->get_boss_link($boss).'</td>'; 
+            $bcout .= '<td align="right">'.$data[$zone]['bosses'][$boss]['kc'].'</td></tr>'."\n";
+            $bi = 1 - $bi;
+          }
+        }
+        $bcout .= "\t\t</table></div>\n";
+      }
+    }
+    $bcout .= '</div></td></tr></table>';
+/*
+//WITH ACCORDION
+    $bspath = $eqdkp_root_path.'plugins/bosssuite/';
+    $bcout = '
     <style type="text/css" >
     .accordion_toggle {
       display: block;
@@ -148,7 +219,7 @@ if ($bc_conf['eyecandy'] == 1){
       }
     }
     $bcout .= '</div></div></td></tr></table>';
-
+*/
 }else{
     $bcout = '<table width=100% class="borderless" cellspacing="0" cellpadding="2">
     		  <tr><th colspan="2" align="center">Bosscounter</th></tr>'."\n";
