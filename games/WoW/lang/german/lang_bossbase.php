@@ -120,7 +120,7 @@ $lang['attumen'] = array('long' => 'Attumen der Jäger', 'short' => 'Attumen');
 $lang['moroes'] = array('long' => 'Moroes', 'short' => 'Moroes');
 $lang['maiden'] = array('long' => 'Tugendhafte Maid', 'short' => 'Maid');
 $lang['curator'] = array('long' => 'Der Kurator', 'short' => 'Kurator');
-$lang['illhoof'] = array('long' => 'Terestian Siechhuf', 'short' => 'Terestian Illhoof');
+$lang['illhoof'] = array('long' => 'Terestian Siechhuf', 'short' => 'Siechhuf');
 $lang['aran'] = array('long' => 'Arans Schemen', 'short' => 'Aran');
 $lang['netherspite'] = array('long' => 'Nethergroll', 'short' => 'Nethergroll');
 $lang['malchezaar'] = array('long' => 'Prinz Malchezaar', 'short' => 'Malchezaar');

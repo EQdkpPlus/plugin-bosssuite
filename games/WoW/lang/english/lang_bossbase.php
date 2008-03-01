@@ -120,7 +120,7 @@ $lang['attumen'] = array('long' => 'Attumen the Huntsman', 'short' => 'Attumen')
 $lang['moroes'] = array('long' => 'Moroes', 'short' => 'Moroes');
 $lang['maiden'] = array('long' => 'Maiden of Virtue', 'short' => 'Maiden');
 $lang['curator'] = array('long' => 'The Curator', 'short' => 'Curator');
-$lang['illhoof'] = array('long' => 'Terestian Illhoof', 'short' => 'Terestian Illhoof');
+$lang['illhoof'] = array('long' => 'Terestian Illhoof', 'short' => 'Illhoof');
 $lang['aran'] = array('long' => 'Shade of Aran', 'short' => 'Aran');
 $lang['netherspite'] = array('long' => 'Netherspite', 'short' => 'Netherspite');
 $lang['malchezaar'] = array('long' => 'Prince Malchezaar', 'short' => 'Malchezaar');
@@ -148,7 +148,7 @@ $lang['hydross'] = array('long' => 'Hydross the Unstable', 'short' => 'Hydross')
 $lang['leotheras'] = array('long' => 'Leotheras the Blind', 'short' => 'Leotheras');
 $lang['karathress'] = array('long' => 'Fathom-Lord Karathress', 'short' => 'Karathress');
 $lang['morogrim'] = array('long' => 'Morogrim Tidewalker', 'short' => 'Morogrim');
-$lang['lurker'] = array('id' => '21217', 'long' => 'The Lurker Below', 'short' => 'Lurker');
+$lang['lurker'] = array('long' => 'The Lurker Below', 'short' => 'Lurker');
 $lang['vashj'] = array('long' => 'Lady Vashj', 'short' => 'Vashj');
 
 /******The Eye*****/

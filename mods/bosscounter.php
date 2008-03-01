@@ -77,118 +77,104 @@ if ($bb_conf['source'] == 'database'){
 require_once(dirname(__FILE__).'/../include/bslink.class.php');
 $mybslink = new BSLINK($bc_conf['linkurl'], $bc_conf['linklength']);
 
-
 //VERTICAL
-$bcout = '<table width=100% class="borderless" cellspacing="0" cellpadding="2">
-		  <tr><th colspan="2" align="center">Bosscounter</th></tr>'."\n";
-
-foreach ($sbzone as $zone => $bosses) 
-{
-	 $loc_killed = 0;
-	 foreach ($data[$zone]['bosses'] as $boss){
-		if ($boss['kc'] > 0)
-			$loc_killed++;
-	}
-	
-	if ((!$bc_conf['dynZone']) or ($loc_killed > 0)) 
-	{
-		$bcout .=  '<tr><th align="left">'.$user->lang[$zone]['short'].'</th><th align="right">'.$loc_killed.'/'.sizeof($data[$zone]['bosses']).'</th></tr>'."\n"; 
-		$bi = 1; //row number 1/2
-		foreach($bosses as $boss){
-			if ((!$bc_conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)){
-		    	$bcout .= '<tr class="row'.($bi+1).'"><td align="left">'.$mybslink->get_boss_link($boss).'</td><td align="right">'.$data[$zone]['bosses'][$boss]['kc'].'</td></tr>' . "\n";
-				$bi = 1 - $bi;
-			}
-		}									
-	}
-}
-$bcout .= '</table>'."\n";
-
-//ACCORDION TEST
-$bspath = $eqdkp_root_path.'plugins/bosssuite/';
-$zbcode = '
-<style type="text/css" >
-.accordion_toggle {
-  display: block;
-  //	background:#000000 url(images/thcellpic.gif);
-	//color:#EDD76F;
-	font-size:11px;
-  //height: 20px;
-  //width: 100%;
-  //padding: 0 0 0 0;
-  //line-height: 20px;
-  //color: #ffffff;
-  //font-weight: normal;
-  //text-decoration: none;
-  outline: none;
-  //font-size: 12px;
-  //color: #FFFFFF;
-  //border-bottom: 1px solid #ffffff;
-  cursor: pointer;
-  //margin: 0 0 0 0;
-}
-
-.accordion_toggle_active {
-  //color: #EDD76F;
-  //border-bottom: 1px solid #ffffff;
-}
-
-.accordion_content {
-  //background-color: #ffffff;
-  //color: #FFFFFF;
-  overflow: hidden;
-}
-
-.accordion_content h2 {
-  //margin: 15px 0 5px 10px;
-  //color: #FFFFFF;
-}
-</style>
-
-<script type="text/javascript" src="'.$bspath.'/include/javascripts/prototype.js"></script>
-<script type="text/javascript" src="'.$bspath.'/include/javascripts/effects.js"></script>
-<script type="text/javascript" src="'.$bspath.'/include/javascripts/accordion.js"></script>
-
-<script type="text/javascript">
-Event.observe(window, \'load\', loadAccordions, false);  
-function loadAccordions() {  
-    var bcAccordion = new accordion(\'vertical_container_bosscounter\'); 
-    bcAccordion.activate($$(\'#vertical_container_bosscounter .accordion_toggle\')[0]);  
-    //bcAccordion.activate($$(\'#vertical_container_bosscounter .th\')[0]);
-}
-</script>
-';
-
-$zbcode .= '<table width=100% class="borderless" cellspacing="0" cellpadding="0">';
-$zbcode .= '<tr><th colspan="2" align="center">BossCounter</th></tr>'."\n";
-$zbcode .= '<tr><td><div id="container"><div id="vertical_container_bosscounter">';
-foreach ($sbzone as $zone => $bosslist){
-  $loc_killed = 0;
-	 foreach ($data[$zone]['bosses'] as $boss){
-		if ($boss['kc'] > 0)
-			$loc_killed++;
-	}
-	if ((!$bc_conf['dynZone']) or ($loc_killed > 0)) 
-	{
-    $zbcode .= '<h2 class="accordion_toggle">'.$user->lang[$zone]['short'].':'.$loc_killed.'/'.sizeof($data[$zone]['bosses']).'</h2>'."\n";
-    //$zbcode .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
-    //$zbcode .= '<tr><td colspan="2"><h2 class="accordion_toggle">'.$user->lang[$zone]['short'].':'.$loc_killed.'/'.sizeof($data[$zone]['bosses']).'</h2></td></tr>'."\n";
-    //$zbcode .= '<tr><th align="left">'.$user->lang[$zone]['short'].'</th><th align="right">'.$loc_killed.'/'.sizeof($data[$zone]['bosses']).'</th></tr>'."\n";
-    $zbcode .= "\t".'<div class="accordion_content">'."\n";
-    $zbcode .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
-    $bi = 1; //row number 1/2
-    foreach ($bosslist as $boss){
-      if ((!$bc_conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)){
-        $zbcode .= "\t\t".'<tr class="row'.($bi+1).'"><td align="left">'.$mybslink->get_boss_link($boss).'</td>'; 
-        $zbcode .= '<td align="right">'.$data[$zone]['bosses'][$boss]['kc'].'</td></tr>'."\n";
-        $bi = 1 - $bi;
+if ($bc_conf['eyecandy'] == 1){
+    //WITH ACCORDION
+    $bspath = $eqdkp_root_path.'plugins/bosssuite/';
+    $bcout = '
+    <style type="text/css" >
+    .accordion_toggle {
+      display: block;
+    	//font-size:11px;
+      padding: 0 0 0 0;
+      outline: none;
+      cursor: pointer;
+      margin: 0 0 0 0;
+    }
+    
+    .accordion_toggle_active {
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
+    
+    .accordion_content {
+      overflow: hidden;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
+    
+    .accordion_content h2 {
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
+    </style>
+    
+    <script type="text/javascript" src="'.$bspath.'/include/javascripts/prototype.js"></script>
+    <script type="text/javascript" src="'.$bspath.'/include/javascripts/effects.js"></script>
+    <script type="text/javascript" src="'.$bspath.'/include/javascripts/accordion.js"></script>
+    
+    <script type="text/javascript">
+    Event.observe(window, \'load\', loadAccordions, false);  
+    function loadAccordions() {  
+        var bcAccordion = new accordion(\'vertical_container_bosscounter\'); 
+        bcAccordion.activate($$(\'#vertical_container_bosscounter .accordion_toggle\')[0]);  
+    }
+    </script>
+    ';
+    
+    $bcout .= '<table width=100% class="borderless" cellspacing="0" cellpadding="0">';
+    $bcout .= '<tr><th colspan="2" align="center">BossCounter</th></tr>'."\n";
+    $bcout .= '<tr><td><div id="container"><div id="vertical_container_bosscounter">';
+    foreach ($sbzone as $zone => $bosslist){
+      $loc_killed = 0;
+    	 foreach ($data[$zone]['bosses'] as $boss){
+    		if ($boss['kc'] > 0)
+    			$loc_killed++;
+    	}
+    	if ((!$bc_conf['dynZone']) or ($loc_killed > 0)) 
+    	{
+        $bcout .= '<h2 class="accordion_toggle"><table width=100% class="borderless" cellspacing="0" cellpadding="0"><tr><th width="80%">'.$user->lang[$zone]['short'].'</th><th>'.$loc_killed.'/'.sizeof($data[$zone]['bosses']).'</th></tr></table></h2>'."\n";
+        $bcout .= "\t".'<div class="accordion_content">'."\n";
+        $bcout .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
+        $bi = 1; //row number 1/2
+        foreach ($bosslist as $boss){
+          if ((!$bc_conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)){
+            $bcout .= "\t\t".'<tr class="row'.($bi+1).'"><td align="left">'.$mybslink->get_boss_link($boss).'</td>'; 
+            $bcout .= '<td align="right">'.$data[$zone]['bosses'][$boss]['kc'].'</td></tr>'."\n";
+            $bi = 1 - $bi;
+          }
+        }
+        $bcout .= "\t\t</table></div>\n";
       }
     }
-    $zbcode .= "\t\t</table></div>\n";
-  }
-}
-$zbcode .= '</div></div></td></tr></table>';
+    $bcout .= '</div></div></td></tr></table>';
 
+}else{
+    $bcout = '<table width=100% class="borderless" cellspacing="0" cellpadding="2">
+    		  <tr><th colspan="2" align="center">Bosscounter</th></tr>'."\n";
+    
+    foreach ($sbzone as $zone => $bosses) 
+    {
+    	 $loc_killed = 0;
+    	 foreach ($data[$zone]['bosses'] as $boss){
+    		if ($boss['kc'] > 0)
+    			$loc_killed++;
+    	}
+    	
+    	if ((!$bc_conf['dynZone']) or ($loc_killed > 0)) 
+    	{
+    		$bcout .=  '<tr><th align="left">'.$user->lang[$zone]['short'].'</th><th align="right">'.$loc_killed.'/'.sizeof($data[$zone]['bosses']).'</th></tr>'."\n"; 
+    		$bi = 1; //row number 1/2
+    		foreach($bosses as $boss){
+    			if ((!$bc_conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)){
+    		    	$bcout .= '<tr class="row'.($bi+1).'"><td align="left">'.$mybslink->get_boss_link($boss).'</td><td align="right">'.$data[$zone]['bosses'][$boss]['kc'].'</td></tr>' . "\n";
+    				$bi = 1 - $bi;
+    			}
+    		}									
+    	}
+    }
+    $bcout .= '</table>'."\n";
+}
 
 
 //HORIZONTAL
@@ -224,7 +210,6 @@ foreach ($sbzone as $zone => $bosses)
 }
 
 $tpl->assign_var('BOSSKILLV',$bcout);
-//$tpl->assign_var('BOSSKILLV',$zbcode);
 $tpl->assign_var('BOSSKILL',$bchout);
 	
 	
@@ -263,10 +248,6 @@ global $db;
     #Get data from the raids tables
     ##################################################
     $sql = bc_get_sql_data_string($bb_conf['tables']);
-    
-    //$result = mysql_query($sql) or message_die(mysql_error());
-    //while ($row = mysql_fetch_assoc($result)) {
-    
     $result = $db->query($sql);
 	  foreach($db->fetch_record_set() as $row) {
         foreach ($bzone as $zone => $bosses){

@@ -18,6 +18,7 @@ $defaults['bosscounter'] = array(
   'dynBoss' => '0',
   'linkurl' => 'bossloot',
   'linklength' => 'short',
+  'eyecandy' => '0',
 );
 
 $defaults['bossloot'] = array(
@@ -26,7 +27,7 @@ $defaults['bossloot'] = array(
   'show_ndl' => '1',
   'show_wl' => '1',
   'get_itemstats' => '1',
-  'eyecandy' => '1',
+  'eyecandy' => '0',
 );
 
 $defaults['bossprogress'] = array(

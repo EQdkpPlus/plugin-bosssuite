@@ -5,22 +5,77 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $bzone = array (
-	'misc' => array (
-		'azuregos',
-		'kazzak'
+	'sunwell' => array (
+		'kalecgos',
+		'brutallus',
+		'felmyst',
+		'fetwins',
+		'muru',
+		'kiljaeden'
 	),
-	'bwl' => array (
-		'razorgore',
-		'vaelastrasz',
-		'lashlayer',
-		'firemaw',
-		'ebonroc',
-		'flamegor',
-		'chromaggus',
-		'nefarian'
+	'temple' => array (
+		'najentus',
+		'supremus',
+		'akama',
+		'gorefiend',
+		'essence',
+		'bloodboil',
+		'shahraz',
+		'council',
+		'illidan'
 	),
-	'onylair' => array (
-		'onyxia'
+	'hyjal' => array (
+		'winterchill',
+		'anetheron',
+		'kazrogal',
+		'azgalor',
+		'archimonde'
+	),
+	'eye' => array (
+    'alar',
+    'vreaver',
+    'solarian',
+    'kaelthas'
+  ),
+  'serpent' => array (
+		'hydross',
+		'karathress',
+		'morogrim',
+		'leotheras',
+		'lurker',
+		'vashj'
+	),
+	'maglair' => array (
+		'magtheridon'
+	),
+  'gruuls' => array (
+		'maulgar',
+		'gruul'
+	),
+	'za' => array (
+		'nalorakk',
+		'akilzon',
+		'halazzi',
+		'janalai',
+		'malacrass',
+		'zuljin'
+	),
+	'kara' => array (
+		'attumen',
+		'moroes',
+		'maiden',
+		'opera',
+		'curator',
+		'illhoof',
+		'aran',
+		'chess',
+		'netherspite',
+		'malchezaar',
+		'nightbane'
+	),
+	'outdoor2' => array (
+		'doomkazzak',
+		'doomwalker'
 	),
 	'dream' => array (
 		'ysondre',
@@ -28,54 +83,9 @@ $bzone = array (
 		'emeriss',
 		'lethon'
 	),
-	'mc' => array (
-		'lucifron',
-		'magmadar',
-		'gehennas',
-		'garr',
-		'geddon',
-		'shazzrah',
-		'sulfuron',
-		'golemagg',
-		'majordomo',
-		'ragnaros'
-	),
-	'zg' => array (
-		'mandokir',
-		'jindo',
-		'gahzranka',
-		'grilek',
-		'hazzarah',
-		'renataki',
-		'wushoolay',
-		'thekal',
-		'arlokk',
-		'jeklik',
-		'marli',
-		'venoxis',
-		'hakkar'
-	),
-	'aq20' => array (
-		'kurinnaxx',
-		'rajaxx',
-		'ayamiss',
-		'buru',
-		'moam',
-		'ossirian'
-	),
-	'aq40' => array (
-		'skeram',
-		'kri',
-		'yauj',
-		'vem',
-		'sartura',
-		'fankriss',
-		'huhuran',
-		'viscidus',
-		'veknilash',
-		'veklor',
-		'ouro',
-		'cthun'
+	'misc' => array (
+		'azuregos',
+		'kazzak'
 	),
 	'naxx' => array (
 		'anubrekhan',
@@ -97,78 +107,68 @@ $bzone = array (
 		'sapphiron',
 		'kelthuzad'		
 	),
-	'outdoor2' => array (
-		'doomkazzak',
-		'doomwalker'
+	'aq40' => array (
+		'skeram',
+		'kri',
+		'yauj',
+		'vem',
+		'sartura',
+		'fankriss',
+		'huhuran',
+		'viscidus',
+		'veknilash',
+		'veklor',
+		'ouro',
+		'cthun'
 	),
-	'maglair' => array (
-		'magtheridon'
+	'bwl' => array (
+		'razorgore',
+		'vaelastrasz',
+		'lashlayer',
+		'firemaw',
+		'ebonroc',
+		'flamegor',
+		'chromaggus',
+		'nefarian'
 	),
-	'kara' => array (
-		'attumen',
-		'moroes',
-		'maiden',
-		'opera',
-		'curator',
-		'illhoof',
-		'aran',
-		'chess',
-		'netherspite',
-		'malchezaar',
-		'nightbane'
+	'mc' => array (
+		'lucifron',
+		'magmadar',
+		'gehennas',
+		'garr',
+		'geddon',
+		'shazzrah',
+		'sulfuron',
+		'golemagg',
+		'majordomo',
+		'ragnaros'
 	),
-	'za' => array (
-		'nalorakk',
-		'akilzon',
-		'halazzi',
-		'janalai',
-		'malacrass',
-		'zuljin'
+	'onylair' => array (
+		'onyxia'
 	),
-	'gruuls' => array (
-		'maulgar',
-		'gruul'
+	'aq20' => array (
+		'kurinnaxx',
+		'rajaxx',
+		'ayamiss',
+		'buru',
+		'moam',
+		'ossirian'
 	),
-	'serpent' => array (
-		'hydross',
-		'karathress',
-		'morogrim',
-		'leotheras',
-		'lurker',
-		'vashj'
+	'zg' => array (
+		'mandokir',
+		'jindo',
+		'gahzranka',
+		'grilek',
+		'hazzarah',
+		'renataki',
+		'wushoolay',
+		'thekal',
+		'arlokk',
+		'jeklik',
+		'marli',
+		'venoxis',
+		'hakkar'
 	),
-	'eye' => array (
-        	'alar',
-    	      'vreaver',
-    	      'solarian',
-		'kaelthas'
-    ),
-	'hyjal' => array (
-		'winterchill',
-		'anetheron',
-		'kazrogal',
-		'azgalor',
-		'archimonde'
-	),
-	'temple' => array (
-		'najentus',
-		'supremus',
-		'akama',
-		'gorefiend',
-		'essence',
-		'bloodboil',
-		'shahraz',
-		'council',
-		'illidan'
-	),
-	'sunwell' => array (
-		'kalecgos',
-		'brutallus',
-		'felmyst',
-		'fetwins',
-		'muru',
-		'kiljaeden'
-	)
 );
 
 

@@ -70,7 +70,7 @@ $arrvals = array (
 $zbcode = '<div id="container"><div id="vertical_container">';
 
 foreach ($bzone as $zoneid => $bosslist){
-    $zbcode .= '<h2 class="accordion_toggle">'.$user->lang[$zoneid]['long'].'</h2>'."\n";
+    $zbcode .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang[$zoneid]['long'].'</th></tr></table></h2>'."\n";
     $zbcode .= "\t".'<div class="accordion_content">'."\n";
     
     $zbcode .= '<table width="100%" border="0" cellspacing="1" cellpadding="2">';

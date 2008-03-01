@@ -94,6 +94,7 @@ if ($_POST['bpsavebu']){
 	}
 	
 	//BossCounter Config
+	$mybssql->update_config('bosscounter', $bc_conf, 'eyecandy', $_POST['bc_eyecandy']);
 	$mybssql->update_config('bosscounter', $bc_conf, 'dynZone', $_POST['bc_dynloc']);
  	$mybssql->update_config('bosscounter', $bc_conf, 'dynBoss', $_POST['bc_dynboss']);
  	$mybssql->update_config('bosscounter', $bc_conf, 'linkurl', $_POST['bc_linkurl']);
@@ -212,10 +213,12 @@ $arrvals = array (
   //BossCounter
 	'BC_DYNLOC' => ($bc_conf['dynZone'] == 1) ? ' checked="checked"' : '',
 	'BC_DYNBOSS' => ($bc_conf['dynBoss'] == 1) ? ' checked="checked"' : '',
+	'BC_EYECANDY' => ($bc_conf['eyecandy'] == 1) ? ' checked="checked"' : '',
 	
 	// Language
 	'L_BC_DYNLOC'      => $user->lang['opt_dynloc'],
-	'L_BC_DYNBOSS'    => $user->lang['opt_dynboss'],	
+	'L_BC_DYNBOSS'    => $user->lang['opt_dynboss'],
+	'L_BC_EYECANDY' => $user->lang['bl_opt_eyecandy'],
 );
 
 //Source selection
@@ -235,7 +238,7 @@ foreach ($bs_source as $value => $option) {
 
 //Show zones BossSuite
 $zbcode = '<div id="container"><div id="vertical_container_bpsz">';
-$zbcode .= '<h2 class="accordion_toggle">'.$user->lang['bs_al_showZone'].'</h2>'."\n";
+$zbcode .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang['bs_al_showZone'].'</th></tr></table></h2>'."\n";
 $zbcode .= "\t".'<div class="accordion_content">'."\n";
 $zbcode .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
 foreach ($bzone as $zoneid => $bosslist){
@@ -253,7 +256,7 @@ $arrvals['SHOW_BP'] = $zbcode;
 
 //Show zones BossCounter
 $zbcode = '<div id="container"><div id="vertical_container_bcsz">';
-$zbcode .= '<h2 class="accordion_toggle">'.$user->lang['bs_al_showZone'].'</h2>'."\n";
+$zbcode .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang['bs_al_showZone'].'</th></tr></table></h2>'."\n";
 $zbcode .= "\t".'<div class="accordion_content">'."\n";
 $zbcode .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
 foreach ($bzone as $zoneid => $bosslist){
@@ -272,7 +275,7 @@ $arrvals['SHOW_BC'] = $zbcode;
 //Parse string settings
 $zbcode = '<div id="container"><div id="vertical_container_parse">';
 foreach ($bzone as $zoneid => $bosslist){
-  $zbcode .= '<h2 class="accordion_toggle">'.$user->lang[$zoneid]['long'].'</h2>'."\n";
+  $zbcode .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang[$zoneid]['long'].'</th></tr></table></h2>'."\n";
   $zbcode .= "\t".'<div class="accordion_content">'."\n";
   $zbcode .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
   $zbcode .= "\t\t".'<tr><th align="center" width="30%">' .$user->lang['bs_al_name']. '</th><th align="center">'.$user->lang['bs_al_trigger'].'</th></tr>'."\n";

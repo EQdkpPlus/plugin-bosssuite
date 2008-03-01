@@ -181,7 +181,7 @@ $bl_out .= '<tr><td><div id="container"><div id="vertical_container">'."\n";
 
 //Dropped loot
 if ($bl_cloot != ''){
-    $bl_out .= '<h2 class="accordion_toggle">'.$user->lang['bl_dl'].'</h2>';
+    $bl_out .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang['bl_dl'].'</th></tr></table></h2>';
     $bl_out .= "\t".'<div class="accordion_content">'."\n";
     $bl_out .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
     $bl_out .= "\t\t\t".'<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>'."\n";
@@ -193,7 +193,7 @@ if ($bl_cloot != ''){
 
 //never dropped loot
 if ($bl_ndloot != ''){
-    $bl_out .= '<h2 class="accordion_toggle">'.$user->lang['bl_ndl'].'</h2>'."\n";
+    $bl_out .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang['bl_ndl'].'</th></tr></table></h2>'."\n";
     $bl_out .= "\t".'<div class="accordion_content">'."\n";
     $bl_out .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
     $bl_out .= "\t\t\t".'<tr class="row2"><th colspan="3">'.$user->lang['bl_itemname'].'</th></tr>'."\n";
@@ -205,7 +205,7 @@ if ($bl_ndloot != ''){
 
 //wrong loot
 if (($bl_conf['show_wl'] == true) && ($bl_wloot != '')){
-    $bl_out .= '<h2 class="accordion_toggle">'.$user->lang['bl_wl'].'</h2>'."\n";
+    $bl_out .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang['bl_wl'].'</th></tr></table></h2>'."\n";
     $bl_out .= "\t".'<div class="accordion_content">'."\n";
     $bl_out .= "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
     $bl_out .= "\t\t\t".'<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>'."\n";
