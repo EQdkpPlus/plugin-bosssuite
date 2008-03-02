@@ -158,33 +158,33 @@
 			<tr>
    				 <th align="center" colspan="2">{L_BP_STYLE_OPTS}</th>
 			</tr>
-			<tr>
-				<td width="70%" class="row2">{L_BP_ZHITYPE}</td>
-				<td width="30%" class="row1">
-					<select size="1" name="bp_zhiType">
-						<option value="0" {BP_ZHITYPE_SEL_JITTER}>{L_BP_JITTER}</option>
-						<option value="1" {BP_ZHITYPE_SEL_BW}>{L_BP_BW}</option>
-						<option value="2" {BP_ZHITYPE_SEL_NONE}>{L_BP_NONE}</option>
-					</select>
-				</td>
-			</tr>
 		 	<tr>
-				<td width="70%" class="row2">{L_BP_ZHITYPE}</td>
-				<td width="30%" class="row1">
-					<select size="1" name="bp_zhiType">
-						<option value="0" {BP_ZHITYPE_SEL_JITTER}>{L_BP_JITTER}</option>
-						<option value="1" {BP_ZHITYPE_SEL_BW}>{L_BP_BW}</option>
-						<option value="2" {BP_ZHITYPE_SEL_NONE}>{L_BP_NONE}</option>
+				<td width="70%" class="row2">{L_BP_SI_STYLE}</td>
+        <td class="row1">
+				 	<select name="bp_si_style" class="input">
+					<!-- BEGIN bp_si_style_row -->
+						<option value="{bp_si_style_row.VALUE}"{bp_si_style_row.SELECTED}>{bp_si_style_row.OPTION}</option>
+					<!-- END bp_si_style_row -->
 					</select>
 				</td>
 			</tr>
 			<tr>
-				<td width="70%" class="row2">{L_BP_ZHITYPE}</td>
-				<td width="30%" class="row1">
-					<select size="1" name="bp_zhiType">
-						<option value="0" {BP_ZHITYPE_SEL_JITTER}>{L_BP_JITTER}</option>
-						<option value="1" {BP_ZHITYPE_SEL_BW}>{L_BP_BW}</option>
-						<option value="2" {BP_ZHITYPE_SEL_NONE}>{L_BP_NONE}</option>
+			  <td width="70%" class="row2">{L_BP_EI_STYLE}</td>
+		  	<td class="row1">
+				 	<select name="bp_ei_style" class="input">
+					<!-- BEGIN bp_ei_style_row -->
+						<option value="{bp_ei_style_row.VALUE}"{bp_ei_style_row.SELECTED}>{bp_ei_style_row.OPTION}</option>
+					<!-- END bp_ei_style_row -->
+					</select>
+				</td>
+			</tr>
+			<tr>
+			  <td width="70%" class="row2">{L_BP_ZTEXT}</td>
+		  	<td class="row1">
+				 	<select name="bp_ztext_style" class="input">
+					<!-- BEGIN bp_ztext_style_row -->
+						<option value="{bp_ztext_style_row.VALUE}"{bp_ztext_style_row.SELECTED}>{bp_ztext_style_row.OPTION}</option>
+					<!-- END bp_ztext_style_row -->
 					</select>
 				</td>
 			</tr>

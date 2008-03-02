@@ -85,8 +85,12 @@ if ($_POST['bpsavebu']){
 	$mybssql->update_config('bossprogress', $bp_conf, 'style', $_POST['bp_style']);
 	$mybssql->update_config('bossprogress', $bp_conf, 'dynZone', $_POST['bp_dynloc']);
  	$mybssql->update_config('bossprogress', $bp_conf, 'dynBoss', $_POST['bp_dynboss']);
-	$mybssql->update_config('bossprogress', $bp_conf, 'zhiType', $_POST['bp_zhiType']);
-	$mybssql->update_config('bossprogress', $bp_conf, 'showSB', $_POST['bp_showSB']);
+	
+  $mybssql->update_config('bossprogress', $bp_conf, 'bp_si_style', $_POST['bp_si_style']);
+  $mybssql->update_config('bossprogress', $bp_conf, 'bp_ei_style', $_POST['bp_ei_style']);
+  $mybssql->update_config('bossprogress', $bp_conf, 'bp_ztext_style', $_POST['bp_ztext_style']);
+	
+  $mybssql->update_config('bossprogress', $bp_conf, 'showSB', $_POST['bp_showSB']);
 	$mybssql->update_config('bossprogress', $bp_conf, 'linkurl', $_POST['bp_linkurl']);
  	$mybssql->update_config('bossprogress', $bp_conf, 'linklength', $_POST['bp_linklength']);
   foreach ($bzone as $zoneid => $bosslist){
@@ -199,17 +203,8 @@ $arrvals = array (
 	// Language
 	'L_BP_DYNLOC'      => $user->lang['opt_dynloc'],
 	'L_BP_DYNBOSS'    => $user->lang['opt_dynboss'],
-	'L_BP_ZHITYPE' => $user->lang['opt_zhiType'],
 	'L_BP_SHOWSB' => $user->lang['opt_showSB'],
 	'L_BP_STYLE' => $user->lang['opt_style'],	
-
-	'L_BP_JITTER' => $user->lang['zhi_jitter'],
-	'L_BP_BW' => $user->lang['zhi_bw'],
-	'L_BP_NONE' => $user->lang['zhi_none'],
-
-	'BP_ZHITYPE_SEL_JITTER'    => ( $bp_conf['zhiType'] == "0" ) ? ' selected="selected"' : '',
-	'BP_ZHITYPE_SEL_BW'    => ( $bp_conf['zhiType'] == "1" ) ? ' selected="selected"' : '',
-	'BP_ZHITYPE_SEL_NONE'    => ( $bp_conf['zhiType'] == "2" ) ? ' selected="selected"' : '',
 	
   //BossCounter
 	'BC_DYNLOC' => ($bc_conf['dynZone'] == 1) ? ' checked="checked"' : '',
@@ -310,12 +305,43 @@ $bp_styles['2'] = $user->lang['bp_style_rp2r'];
 $bp_styles['3'] = $user->lang['bp_style_rp3r'];
 
 foreach ($bp_styles as $value => $option) {
-    $tpl->assign_block_vars('bp_style_row', array (
-	        'VALUE' => $value,
-	        'SELECTED' => ($bp_conf['style'] == $value) ? ' selected="selected"' : '',
-	        'OPTION' => $option
-		)
-	);
+  $tpl->assign_block_vars('bp_style_row', array (
+    'VALUE' => $value,
+    'SELECTED' => ($bp_conf['style'] == $value) ? ' selected="selected"' : '',
+    'OPTION' => $option
+  ));
+}
+
+//BossProgress zone image styles
+$bp_zi_styles['normal'] = 'normal';//$user->lang['bp_style_bp'];
+$bp_zi_styles['sepia'] = 'sepia';//$user->lang['bp_style_bps'];
+$bp_zi_styles['grey'] = 'grey';//$user->lang['bp_style_rp2r'];
+
+foreach ($bp_zi_styles as $value => $option) {
+  $tpl->assign_block_vars('bp_si_style_row', array (
+    'VALUE' => $value,
+    'SELECTED' => ($bp_conf['bp_si_style'] == $value) ? ' selected="selected"' : '',
+    'OPTION' => $option
+  ));
+  
+  $tpl->assign_block_vars('bp_ei_style_row', array (
+    'VALUE' => $value,
+    'SELECTED' => ($bp_conf['bp_ei_style'] == $value) ? ' selected="selected"' : '',
+    'OPTION' => $option
+  ));
+}
+
+//BossProgress zone text style
+$bp_ztext_style['none'] = 'none';
+$bp_ztext_style['png'] = 'png';
+$bp_ztext_style['text'] = 'text';
+
+foreach ($bp_ztext_style as $value => $option) {
+  $tpl->assign_block_vars('bp_ztext_style_row', array (
+    'VALUE' => $value,
+    'SELECTED' => ($bp_conf['bp_ztext_style'] == $value) ? ' selected="selected"' : '',
+    'OPTION' => $option
+  ));
 }
 
 // Link source selection

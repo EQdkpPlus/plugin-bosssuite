@@ -15,37 +15,17 @@ if ( !defined('EQDKP_INC') ){
 } 
 
  
-function bp_html_get_zhi($zhi_type, $location, $loc_completed){
+function bp_html_get_zhi($bp_conf, $location, $loc_completed){
 global $user, $eqdkp;
 
   $game_arr = explode('_', $eqdkp->config['default_game']);
-	$basepath = 'games/'.$game_arr[0].'/images/';
-	$zone_basepath = $basepath . 'zones/';
-  $lang_basepath = $zone_basepath . 'lang/'.$user->lang['lang'].'/';
-	// 0 = jitter, 1 = sw, 2 = none
-	switch ($zhi_type) {
-	case 0:
-		$eimg = $zone_basepath . 'normal/' . $location . '.jpg';
-		$simg = $zone_basepath . 'photo/' . $location . '.jpg';
-		$limg = $lang_basepath.$location.'.png';
-		break;
-	case 1:
-  	$eimg = $zone_basepath . 'normal/' . $location . '.jpg';
-		$simg = $zone_basepath . 'sw/' . $location . '.jpg';
-		$limg = $lang_basepath.$location.'.png';
-		break;
-	case 2:
-		$eimg = $zone_basepath . 'normal/' . $location . '.jpg';
-		$simg = $zone_basepath . 'normal/' . $location . '.jpg';
-		$limg = $lang_basepath.$location.'.png';
-	 	break;
-	default:
-		$eimg = $zone_basepath . 'normal/' . $location . '.jpg';
-		$simg = $zone_basepath . 'photo/' . $location . '.jpg';
-		break;
-	}
   
+  $simg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['bp_si_style'].'/'.$location.'.jpg';
+  $eimg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['bp_ei_style'].'/'.$location.'.jpg';
+   
   $header1 = '<tr width="800"><td colspan="4" class="row1">';
+
+  //Images  
   if ( !file_exists(dirname(__file__).'/../../'.$eimg))
     $eimg = 'games/default/images/zones/default.jpg';
   if ( !file_exists(dirname(__file__).'/../../'.$simg))
@@ -61,10 +41,18 @@ global $user, $eqdkp;
     $header5 = '</div></div>';
   }
   
-  if ( !file_exists(dirname(__file__).'/../../'.$limg)){
+  //Language
+  if ( 'png' == $bp_conf['bp_ztext_style'] ){
+    $limg = 'games/'.$game_arr[0].'/images/zones/lang/'.$user->lang['lang'].'/'.$location.'.png';
+    if (!file_exists(dirname(__file__).'/../../'.$limg)){
+      $header4 = '<div style="position:absolute; font-size:3em; top:5px; z-index: 10; width:800px; height:100%;">FB'.$user->lang[$location]['long'];
+    }else{
+      $header4 = '<div style="background-image:url('.$limg.'); position:absolute; top:5px; z-index: 10; width:800px; height:100%; background-repeat: no-repeat;">';
+    }
+  } elseif ( 'text' == $bp_conf['bp_ztext_style'] ){
     $header4 = '<div style="position:absolute; font-size:3em; top:5px; z-index: 10; width:800px; height:100%;">'.$user->lang[$location]['long'];
-  }else{
-    $header4 = '<div style="background-image:url('.$limg.'); position:absolute; top:5px; z-index: 10; width:800px; height:100%; background-repeat: no-repeat;">';
+  } elseif ( 'none' ==  $bp_conf['bp_ztext_style'] ){
+    $header4 = '';
   }
    
   $header6 = '</td></tr>';   
@@ -102,7 +90,7 @@ $mybslink = new BSLINK($conf['linkurl'], $conf['linklength']);
 foreach ($sbzone as $zone => $bosses){
     if ((!$conf['dynZone']) or ($data[$zone]['zk'] > 0)){
         $loc_completed = round($data[$zone]['zk'] / count($bosses) * 100);
-        $bpout .= bp_html_get_zhi($conf['zhiType'], $zone, $loc_completed);
+        $bpout .= bp_html_get_zhi($conf, $zone, $loc_completed);
         if($conf['showSB'])
             $bpout .= bp_html_get_zsb($zone, $data[$zone]['zk'], $loc_completed, count($bosses),$data[$zone]['fvd'],$data[$zone]['lvd'],$data[$zone]['kc']);
         $bi = 1; //row number 1/2

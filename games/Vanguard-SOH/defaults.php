@@ -39,5 +39,8 @@ $defaults['bossprogress'] = array(
   'showSB' => '0',
   'linkurl' => 'bossloot',
   'linklength' => 'long',
+  'bp_si_style' => 'normal',
+  'bp_ei_style' => 'normal',
+  'bp_ztext_style' => 'text',
 );
 ?>
