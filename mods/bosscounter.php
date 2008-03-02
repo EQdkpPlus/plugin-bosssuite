@@ -96,7 +96,7 @@ if ($bc_conf['eyecandy'] == 1){
     	}
     	if ((!$bc_conf['dynZone']) or ($loc_killed > 0)) 
     	{
-        $bc_acc_title = '<table width=100% class="borderless" cellspacing="0" cellpadding="0"><tr><th width="80%">'.$user->lang[$zone]['short'].'</th><th>'.$loc_killed.'/'.sizeof($data[$zone]['bosses']).'</th></tr></table>'."\n";
+        $bc_acc_title = '<table width=100% class="borderless" cellspacing="0" cellpadding="0"><tr><th width="80%">'.$user->lang[$zone][$bc_conf['zonelength']].'</th><th>'.$loc_killed.'/'.sizeof($data[$zone]['bosses']).'</th></tr></table>'."\n";
         $bc_acc_content = '<table width="100%" border="0" cellspacing="1" cellpadding="2">';
         $bi = 1; //row number 1/2
         foreach ($bosslist as $boss){

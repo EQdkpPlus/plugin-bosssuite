@@ -18,6 +18,7 @@ $defaults['bosscounter'] = array(
   'dynBoss' => '0',
   'linkurl' => 'bossloot',
   'linklength' => 'short',
+  'zonelength' => 'short',
   'eyecandy' => '0',
 );
 

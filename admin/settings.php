@@ -99,6 +99,7 @@ if ($_POST['bpsavebu']){
  	$mybssql->update_config('bosscounter', $bc_conf, 'dynBoss', $_POST['bc_dynboss']);
  	$mybssql->update_config('bosscounter', $bc_conf, 'linkurl', $_POST['bc_linkurl']);
  	$mybssql->update_config('bosscounter', $bc_conf, 'linklength', $_POST['bc_linklength']);
+ 	$mybssql->update_config('bosscounter', $bc_conf, 'zonelength', $_POST['bc_zonelength']);
  	
  	foreach ($bzone as $zoneid => $bosslist){
 		$mybssql->update_zone_visibility('bosscounter', $zoneid, $_POST['bc_sz_'.$zoneid]);
@@ -237,7 +238,7 @@ foreach ($bs_source as $value => $option) {
 }
 
 //Show zones BossSuite
-$zbcode = '<table width="100%"><tr><th colspan="2">'.$user->lang['bs_al_showZone'].'</th></tr>'."\n";
+$zbcode = '<tr><th colspan="2">'.$user->lang['bs_al_showZone'].'</th></tr>'."\n";
 foreach ($bzone as $zoneid => $bosslist){
   $zbcode .= "\t".'<tr><td width="70%" class="row2" align="right">' . $user->lang[$zoneid]['long']. ':</td>';
   $zbcode .= '<td class="row1"><input type="checkbox" name="bp_sz_'.$zoneid.'" value="1" ';
@@ -245,12 +246,10 @@ foreach ($bzone as $zoneid => $bosslist){
     $zbcode .= 'checked="checked"';
   $zbcode .= ' /></td></tr>'."\n";
 }
-$zbcode .= "</table>\n";
-
 $arrvals['SHOW_BP'] = $zbcode;
 
 //Show zones BossCounter
-$zbcode = '<table width="100%"><tr><th colspan="2">'.$user->lang['bs_al_showZone'].'</th></tr>'."\n";
+$zbcode = '<tr><th colspan="2">'.$user->lang['bs_al_showZone'].'</th></tr>'."\n";
 foreach ($bzone as $zoneid => $bosslist){
   $zbcode .= "\t".'<tr><td width="70%" class="row2" align="right">' . $user->lang[$zoneid]['long']. ':</td>';
   $zbcode .= '<td class="row1"><input type="checkbox" name="bc_sz_'.$zoneid.'" value="1" ';
@@ -258,8 +257,6 @@ foreach ($bzone as $zoneid => $bosslist){
     $zbcode .= 'checked="checked"';
   $zbcode .= ' /></td></tr>'."\n";
 }
-$zbcode .= "</table>\n";
-
 $arrvals['SHOW_BC'] = $zbcode;
 
 //Parse string settings
@@ -325,8 +322,7 @@ foreach ($bp_styles as $value => $option) {
 require_once(dirname(__FILE__).'/../include/bslink.class.php');
 $mybslink = new BSLINK('none','');
 $bs_sources = $mybslink->get_sources();
-$bs_linklength['short'] = 'short name';//$user->lang['bp_style_bp'];
-$bs_linklength['long'] = 'long name';//$user->lang['bp_style_bps'];
+
 
 foreach ($bs_sources as $value => $options) {
   $tpl->assign_block_vars('bc_linkurl_row', array (
@@ -342,6 +338,8 @@ foreach ($bs_sources as $value => $options) {
 	));
 }
 
+$bs_linklength['short'] = 'short name';//$user->lang['bp_style_bp'];
+$bs_linklength['long'] = 'long name';//$user->lang['bp_style_bps'];
 foreach ($bs_linklength as $value => $option) {
     $tpl->assign_block_vars('bc_linklength_row', array (
 	        'VALUE' => $value,
@@ -352,6 +350,12 @@ foreach ($bs_linklength as $value => $option) {
 		$tpl->assign_block_vars('bp_linklength_row', array (
 	        'VALUE' => $value,
 	        'SELECTED' => ($bp_conf['linklength'] == $value) ? ' selected="selected"' : '',
+	        'OPTION' => $option
+		));
+		
+		$tpl->assign_block_vars('bc_zonelength_row', array (
+	        'VALUE' => $value,
+	        'SELECTED' => ($bc_conf['zonelength'] == $value) ? ' selected="selected"' : '',
 	        'OPTION' => $option
 		));
 }

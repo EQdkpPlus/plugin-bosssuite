@@ -121,31 +121,7 @@
 			<tr>
    				 <th align="center" colspan="2">{L_GENERAL}: BossProgress</th>
 			</tr>
-			<tr>
-				<td width="70%" class="row2">{L_BP_ZHITYPE}</td>
-				<td width="30%" class="row1">
-					<select size="1" name="bp_zhiType">
-						<option value="0" {BP_ZHITYPE_SEL_JITTER}>{L_BP_JITTER}</option>
-						<option value="1" {BP_ZHITYPE_SEL_BW}>{L_BP_BW}</option>
-						<option value="2" {BP_ZHITYPE_SEL_NONE}>{L_BP_NONE}</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				 <td class="row2">{L_BP_STYLE}</td>
-				 <td class="row1">
-				 	<select name="bp_style" class="input">
-					<!-- BEGIN bp_style_row -->
-						<option value="{bp_style_row.VALUE}"{bp_style_row.SELECTED}>{bp_style_row.OPTION}</option>
-					<!-- END bp_style_row -->
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td class="row2">{L_BP_SHOWSB}</td>
-				<td class="row1"><input type="checkbox" name="bp_showSB" value="1" {BP_SHOWSB} /></td>
-			</tr>
-			<tr>
+						<tr>
 				<td class="row2">{L_BP_DYNLOC}</td>
 				<td class="row1"><input type="checkbox" name="bp_dynloc" value="1" {BP_DYNLOC} /></td>
 			</tr>
@@ -168,6 +144,55 @@
 					</select>
         </td>
 			</tr>
+				<tr>
+				 <td class="row2">{L_BP_STYLE}</td>
+				 <td class="row1">
+				 	<select name="bp_style" class="input">
+					<!-- BEGIN bp_style_row -->
+						<option value="{bp_style_row.VALUE}"{bp_style_row.SELECTED}>{bp_style_row.OPTION}</option>
+					<!-- END bp_style_row -->
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+   				 <th align="center" colspan="2">{L_BP_STYLE_OPTS}</th>
+			</tr>
+			<tr>
+				<td width="70%" class="row2">{L_BP_ZHITYPE}</td>
+				<td width="30%" class="row1">
+					<select size="1" name="bp_zhiType">
+						<option value="0" {BP_ZHITYPE_SEL_JITTER}>{L_BP_JITTER}</option>
+						<option value="1" {BP_ZHITYPE_SEL_BW}>{L_BP_BW}</option>
+						<option value="2" {BP_ZHITYPE_SEL_NONE}>{L_BP_NONE}</option>
+					</select>
+				</td>
+			</tr>
+		 	<tr>
+				<td width="70%" class="row2">{L_BP_ZHITYPE}</td>
+				<td width="30%" class="row1">
+					<select size="1" name="bp_zhiType">
+						<option value="0" {BP_ZHITYPE_SEL_JITTER}>{L_BP_JITTER}</option>
+						<option value="1" {BP_ZHITYPE_SEL_BW}>{L_BP_BW}</option>
+						<option value="2" {BP_ZHITYPE_SEL_NONE}>{L_BP_NONE}</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td width="70%" class="row2">{L_BP_ZHITYPE}</td>
+				<td width="30%" class="row1">
+					<select size="1" name="bp_zhiType">
+						<option value="0" {BP_ZHITYPE_SEL_JITTER}>{L_BP_JITTER}</option>
+						<option value="1" {BP_ZHITYPE_SEL_BW}>{L_BP_BW}</option>
+						<option value="2" {BP_ZHITYPE_SEL_NONE}>{L_BP_NONE}</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="row2">{L_BP_SHOWSB}</td>
+				<td class="row1"><input type="checkbox" name="bp_showSB" value="1" {BP_SHOWSB} /></td>
+			</tr>
+
 			<tr>
 			  <td colspan="2">{SHOW_BP}</td>
 			</tr>
@@ -189,6 +214,16 @@
 			<tr>
 				<td class="row2">{L_BC_DYNBOSS}</td>
 				<td class="row1"><input type="checkbox" name="bc_dynboss" value="1" {BC_DYNBOSS} /></td>
+			</tr>
+			<tr>
+				<td class="row2">{L_BC_ZONELENGTH}</td>
+				<td class="row1">
+         	<select name="bc_zonelength" class="input">
+					<!-- BEGIN bc_zonelength_row -->
+						<option value="{bc_zonelength_row.VALUE}"{bc_zonelength_row.SELECTED}>{bc_zonelength_row.OPTION}</option>
+					<!-- END bc_zonelength_row -->
+					</select>
+        </td>
 			</tr>
 			<tr>
 				<td class="row2">{L_BC_LINK}</td>
@@ -217,6 +252,16 @@
     </tr>
     <tr>
         <td>{PARSE_CONFIG}</td>
+    </tr>
+</table>
+</div>
+<div id="fragment-7">
+<table width="100%" border="0" cellspacing="1" cellpadding="2">
+    <tr>
+        <th align="center" colspan="2">{L_PINFO}</th>
+    </tr>
+    <tr>
+        <td>OFFSETS</td>
     </tr>
 </table>
 </div>
