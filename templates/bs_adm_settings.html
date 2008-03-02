@@ -1,22 +1,17 @@
-<script type="text/javascript" src="./../include/javascripts/prototype.js"></script>
-<script type="text/javascript" src="./../include/javascripts/effects.js"></script>
-<script type="text/javascript" src="./../include/javascripts/accordion.js"></script>
-
-
-<script type="text/javascript">
-Event.observe(window, 'load', loadAccordions, false);  
-function loadAccordions() {  
-    var parseAccordion = new accordion('vertical_container_parse'); 
-    parseAccordion.activate($$('#vertical_container_parse .accordion_toggle')[0]);
-    var bpszAccordion = new accordion('vertical_container_bpsz');   
-    var bcszAccordion = new accordion('vertical_container_bcsz');    
-    var offsetAccordion = new accordion('vertical_container'); 
-    offsetAccordion.activate($$('#vertical_container .accordion_toggle')[0]);
-}
-
-</script>
-
+{TABOUT}
 <form method="post" action="{F_CONFIG}" name="post">
+<div id="bs_adm_tabs">
+<ul>
+    <li><a href="#fragment-1"><span>{L_GENERAL}</span></a></li>
+    <li><a href="#fragment-2"><span>{L_BOSSBASE}</span></a></li>
+    <li><a href="#fragment-3"><span>{L_BOSSLOOT}</span></a></li>
+    <li><a href="#fragment-4"><span>{L_BOSSPROGRESS}</span></a></li>
+    <li><a href="#fragment-5"><span>{L_BOSSCOUNTER}</span></a></li>
+    <li><a href="#fragment-6"><span>{L_TRIGGERS}</span></a></li>
+    <li><a href="#fragment-7"><span>{L_OFFSETS}</span></a></li>
+</ul>
+
+<div id="fragment-1">
 <table border="0" width="100%" cellspacing="1" cellpadding="2">
             <tr>
                  <th align="center" colspan="2">{L_GENERAL}</th>
@@ -30,7 +25,8 @@ function loadAccordions() {
                 <td class="row1"><input type="checkbox" name="en2l" value="1" {BS_EN2L} /></td>
             </tr>
 </table>
-<br />
+</div>
+<div id="fragment-2">
 <table border="0" width="100%" cellspacing="1" cellpadding="2">
             <tr>
                  <th align="center" colspan="2">{L_GENERAL}: BossBase</th>
@@ -76,7 +72,8 @@ function loadAccordions() {
                 <td class="row1"><input type="text" name="tables" size="32" value="{BP_TABLES}" class="input" /></td>
             </tr>
 </table>
-<br />
+</div>
+<div id="fragment-3">
 <table border="0" width="100%" cellspacing="1" cellpadding="2">
 			<tr>
    				 <th align="center" colspan="2">{L_GENERAL}: BossLoot</th>
@@ -118,7 +115,8 @@ function loadAccordions() {
                 <td class="row1"><input type="checkbox" name="is" value="1" {BL_IS} /></td>
             </tr>
 </table>
-<br />
+</div>
+<div id="fragment-4">
 <table border="0" width="100%" cellspacing="1" cellpadding="2">
 			<tr>
    				 <th align="center" colspan="2">{L_GENERAL}: BossProgress</th>
@@ -174,7 +172,8 @@ function loadAccordions() {
 			  <td colspan="2">{SHOW_BP}</td>
 			</tr>
 </table>
-<br />
+</div>
+<div id="fragment-5">
 <table border="0" width="100%" cellspacing="1" cellpadding="2">
 			<tr>
    				 <th align="center" colspan="2">{L_GENERAL}: BossCounter</th>
@@ -210,7 +209,8 @@ function loadAccordions() {
 			  <td colspan="2">{SHOW_BC}</td>
 			</tr>
 </table>
-<br />
+</div>
+<div id="fragment-6">
 <table width="100%" border="0" cellspacing="1" cellpadding="2">
     <tr>
         <th align="center" colspan="2">{L_PINFO}</th>
@@ -219,7 +219,8 @@ function loadAccordions() {
         <td>{PARSE_CONFIG}</td>
     </tr>
 </table>
-<br />
+</div>
+</div>
 <table width="100%" border="0" cellspacing="1" cellpadding="2">
  <tr><th align="center" colspan="2"><input type="submit" name="bpsavebu" value="{L_SUBMIT}" class="mainoption" /></th></tr>
 </table>
