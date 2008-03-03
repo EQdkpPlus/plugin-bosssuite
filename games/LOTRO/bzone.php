@@ -25,14 +25,14 @@ $bzone = array (
     'remmenaeg',
 ),
 'rift' => array (
-    'zurm',
     'barz',
+    'zurm',
     'fruz',
     'zogtark',
-    'narnalubat',
+    'narnulubat',
     'shadow_eater',
     'thrang',
-    'balrog',
+    'thaurlach',
 ),
 'urugarth' => array (
     'akrur',

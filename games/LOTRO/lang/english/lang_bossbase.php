@@ -22,19 +22,20 @@ $lang['fornost'] = array('long' => 'Fornost', 'short' => 'Fornost');
 $lang['brogadan'] = array('long' => 'Brogadan', 'short' => 'Bragadan');
 $lang['megoriath'] = array('long' => 'Megoriath', 'short' => 'Megoriath');
 $lang['rhavameldir'] = array('long' => 'Rhavameldir', 'short' => 'Rhavameldir');
+$lang['warchief_burzghash'] = array('long' => 'Warchief Búrzgâsh', 'short' => 'Búrzgâsh');
 $lang['zhurmat'] = array('long' => 'Zhurmat', 'short' => 'Zhurmat');
 $lang['remmenaeg'] = array('long' => 'Remmenaeg', 'short' => 'Remmenaeg');
 
 /******The Rift*****/
-$lang['rift'] = array('long' => 'The Rift of Nurz Ghashu', 'short' => 'The Rift');
+$lang['rift'] = array('long' => 'The Rift of Nûrz Ghâshu', 'short' => 'The Rift');
 $lang['zurm'] = array('long' => 'Zurm', 'short' => 'Zurm');
 $lang['barz'] = array('long' => 'Barz', 'short' => 'Barz');
-$lang['fruz'] = array('long' => 'Fruz', 'short' => 'Fruz');
+$lang['fruz'] = array('long' => 'Frûz', 'short' => 'Frûz');
 $lang['zogtark'] = array('long' => 'Zogtark', 'short' => 'Zogtark');
-$lang['narnalubat'] = array('long' => 'Narnalubat', 'short' => 'Narnalubat');
-$lang['shadow_eater'] = array('long' => 'Shadow Eater', 'short' => 'Shadow Eater');
-$lang['thrang'] = array('long' => 'Thrang', 'short' => 'Thrang');
-$lang['balrog'] = array('long' => 'Thaurlach', 'short' => 'Thaurlach');
+$lang['narnulubat'] = array('long' => 'Narnûlubat', 'short' => 'Narnûalubat');
+$lang['shadow_eater'] = array('long' => 'Shadow Eater', 'short' => 'Eater');
+$lang['thrang'] = array('long' => 'Thrâng', 'short' => 'Thrâng');
+$lang['thaurlach'] = array('long' => 'Thaurlach', 'short' => 'Thaurlach');
 
 /******Urugarth*****/
 $lang['urugarth'] = array('long' => 'Urugarth', 'short' => 'Urugarth');
@@ -58,5 +59,6 @@ $lang['mormoz'] = array('long' => 'Mormoz', 'short' => 'Mormoz');
 $lang['tarbam'] = array('long' => 'Tarbam', 'short' => 'Tarbam');
 $lang['urro'] = array('long' => 'Urro', 'short' => 'Urro');
 $lang['zurtith'] = array('long' => 'Zurtith', 'short' => 'Zurtith');
-
+$lang['tarlug'] = array('long' => 'Tarlug', 'short' => 'Tarlug');
+    
 ?>
