@@ -25,6 +25,7 @@ $idlist['default'] = array(
     'megoriath' => '13020', 
     'rhavameldir' => '12017', 
     'zhurmat' => '11981',
+    'warchief_burzghash' => '99999',
     'remmenaeg' => '14601', 
     
     /******The Rift*****/
@@ -32,10 +33,10 @@ $idlist['default'] = array(
     'barz' => '13020',
     'fruz' => '12017',
     'zogtark' => '11981',
-    'narnalubat' => '14601',
+    'narnulubat' => '14601',
     'shadow_eater' => '14601',
     'thrang' => '14601',
-    'balrog' => '14601',
+    'thaurlach' => '14601',
     
     /******Urugarth*****/
     'akrur' => '12435',
@@ -57,5 +58,6 @@ $idlist['default'] = array(
     'tarbam' => '14601',
     'urro' => '14601',
     'zurtith' => '14601',
+    'tarlug' => '2303',
 );
 ?>

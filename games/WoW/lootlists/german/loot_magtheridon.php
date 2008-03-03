@@ -20,6 +20,7 @@ $loot = array(
 	array( "id" => "28790", "qual" => "4", "name" => "Lichtwächterband der Naaru" ),
 	array( "id" => "28793", "qual" => "4", "name" => "Band des purpurroten Furors" ),
 	array( "id" => "28792", "qual" => "4", "name" => "A'dals Siegel der Verteidigung" ),
+	array( "id" => "34845", "qual" => "3", "name" => "Pit Lord's Satchel" ),
 );
 
 
