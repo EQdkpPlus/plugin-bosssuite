@@ -148,6 +148,14 @@ $arrvals = array (
   'CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'F_CONFIG' => 'settings.php' . $SID,
    
+  //Tabs
+  'L_BOSSBASE' => 'BossBase',
+  'L_BOSSLOOT' => 'BossLoot',
+  'L_BOSSPROGRESS' => 'BossProgress',
+  'L_BOSSCOUNTER' => 'BossCounter',
+  'L_TRIGGERS' => 'Triggers',
+  'L_OFFSETS' => 'Offsets',
+  
   //General
   'BS_EBC'    => ( $eqdkp->config['bs_showBC'] == 1 ) ? ' checked="checked"' : '',
 	'BS_EN2L'   => ( $eqdkp->config['bs_linkBL'] == 1 ) ? ' checked="checked"' : '',
@@ -205,6 +213,10 @@ $arrvals = array (
 	'L_BP_DYNBOSS'    => $user->lang['opt_dynboss'],
 	'L_BP_SHOWSB' => $user->lang['opt_showSB'],
 	'L_BP_STYLE' => $user->lang['opt_style'],	
+	'L_BP_STYLE_OPTS' => 'BossProgress Style Options',
+	'L_BP_SI_STYLE' => 'Image to start with:',
+	'L_BP_EI_STYLE' => 'Image to end with:',
+	'L_BP_ZTEXT' => 'ZoneName as ',
 	
   //BossCounter
 	'BC_DYNLOC' => ($bc_conf['dynZone'] == 1) ? ' checked="checked"' : '',
@@ -215,6 +227,7 @@ $arrvals = array (
 	'L_BC_DYNLOC'      => $user->lang['opt_dynloc'],
 	'L_BC_DYNBOSS'    => $user->lang['opt_dynboss'],
 	'L_BC_EYECANDY' => $user->lang['bl_opt_eyecandy'],
+	'L_BC_ZONELENGTH' => 'Zonename length',
 );
 
 //Source selection
