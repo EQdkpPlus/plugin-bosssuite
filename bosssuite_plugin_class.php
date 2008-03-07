@@ -172,6 +172,11 @@ function gen_main_menu1() {
 						'text' => $user->lang['bs_am_offs'],
 						'check' => 'a_bosssuite_offs'
 					),
+					3 => array (
+						'link' => $url_prefix . 'plugins/bosssuite/admin/cache.php' . $SID,
+						'text' => $user->lang['bs_am_cache'],
+						'check' => 'a_bosssuite_conf'
+					),
 
 				)
 			);

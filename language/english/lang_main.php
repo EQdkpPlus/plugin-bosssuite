@@ -25,6 +25,7 @@ $lang = array(
 'bs_am_title' => 'BossSuite',
 'bs_am_conf' => 'Settings',
 'bs_am_offs' => 'Offsets',
+'bs_am_cache' => 'Cache',
 
 // admin page
 'bs_al_submit' => 'Save',
@@ -58,7 +59,9 @@ $lang = array(
 'bs_ol_co' => 'Counter',
 'bs_ol_submit' => 'Save',
 
-
+// cache page
+'bs_adm_cache_info' => 'Cache: Using the cache function should decrease loading times on dkp systems with many raids',
+'bs_adm_cache_refresh' => 'Refresh Cache',
 
 //BossProgress User Page
 'bp_um_link' => 'BossProgress',

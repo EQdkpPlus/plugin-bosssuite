@@ -13,8 +13,30 @@ if (!defined('EQDKP_INC')) {
 	die('You cannot access this file directly.');
 }
 
-function bs_data2cache(){
+function bs_get_sql_data_string($tablestring){
+  $tables = array();
+  if($tablestring != '')
+      $tables = explode(", ", $tablestring);
+  
+  $sql = "";
+  if (count($tables) == 0) {
+      $sql = "SELECT raid_name AS rname, raid_note AS rnote, raid_date AS rdate FROM " . RAIDS_TABLE . ";";
+  } else {
+      $bpinc = 0;
+      foreach ($tables as $raidtable) {
+          if ($bpinc == 0) {
+              $sql .= "SELECT raid_name AS rname, raid_note AS rnote, raid_date AS rdate FROM " . $raidtable . "_raids";
+              $bpinc++;
+          } else {
+              $sql .= " UNION ALL SELECT raid_name, raid_note, raid_date AS rdate FROM " . $raidtable . "_raids";
+          }
+      }
+      $sql .= ";";
+  }
+  return $sql;
+}
 
+function bs_data2cache(){
 // new mgs class
 require(dirname(__FILE__).'/../include/bsmgs.class.php');
 $mybsmgs = new BSMGS();
@@ -29,7 +51,7 @@ if (!$mybsmgs->game_supported('bossbase')){
   require(dirname(__FILE__).'/../include/bssql.class.php');
   $mybssql = new BSSQL();
   
-  $bzone = $mybsmgs->get_bzone();
+  $bzone = $mybssql->get_bzone();
   
   $bb_conf = $mybssql->get_config('bossbase');
   $bb_pboss = $mybssql->get_parse_boss();
@@ -62,7 +84,7 @@ if (!$mybsmgs->game_supported('bossbase')){
 
 	#Get data from the raids tables
 	##################################################
-	$sql = bp_get_sql_data_string($bb_conf['tables']);	
+	$sql = bs_get_sql_data_string($bb_conf['tables']);	
 	$result = mysql_query($sql) or message_die(mysql_error());
 
 	while ($row = mysql_fetch_assoc($result)) {
@@ -119,12 +141,8 @@ if (!$mybsmgs->game_supported('bossbase')){
 	}
 	
 		}
-		$mybssql->update_cache($data, $bzone);
+		$mybssql->update_cache($data);
 	
 }
-
 }
-
-
-
 ?>

@@ -23,7 +23,7 @@ global $user, $eqdkp;
   $simg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['bp_si_style'].'/'.$location.'.jpg';
   $eimg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['bp_ei_style'].'/'.$location.'.jpg';
    
-  $header1 = '<tr width="800"><td colspan="4" class="row1">';
+  $header1 = '<tr width="100%"><td colspan="4">';
 
   //Images  
   if ( !file_exists(dirname(__file__).'/../../'.$eimg))
@@ -32,11 +32,26 @@ global $user, $eqdkp;
     $simg = 'games/default/images/zones/default.jpg';
 
   if ($eimg != $simg){
-    $header2 = '<div style="background-image:url('.$simg.'); position:relative; top:0px; z-index: 0; width:800px; height:100px;">';
-    $header3 = '<div style="background-image:url('.$eimg.'); position:absolute; top:0px; z-index: 5; width:'. $loc_completed . '%; height:100px;">';
-    $header5 = '</div></div></div>';
+    if ($loc_completed == 0){
+      $ssize = getImageSize($simg);
+      $header2 = '<div style="background-image:url('.$simg.'); position:relative; top:0px; z-index: 0; width:'.$ssize[0].'px; height:'.$ssize[1].'px;">';
+      $header3 = '';
+      $header5 = '</div></div>';
+    } elseif ($loc_completed == 100){
+      $esize = getImageSize($eimg);
+      $header2 = '';
+      $header3 = '<div style="background-image:url('.$eimg.'); position:relative; top:0px; z-index: 5; width:100%; height:'.$esize[1].'px;">';
+      $header5 = '</div></div>';
+    } else {
+      $ssize = getImageSize($simg);
+      $esize = getImageSize($eimg);
+      $header2 = '<div style="background-image:url('.$simg.'); position:relative; top:0px; z-index: 0; width:'.$ssize[0].'px; height:'.$ssize[1].'px;">';
+      $header3 = '<div style="background-image:url('.$eimg.'); position:absolute; top:0px; z-index: 5; width:'. $loc_completed . '%; height:'.$esize[1].'px;">';
+      $header5 = '</div></div></div>';
+    }
   }else{
-    $header2 = '<div style="background-image:url('.$simg.'); position:relative; top:0px; z-index: 0; width:800px; height:100px;">';
+    $ssize = getImageSize($simg);
+    $header2 = '<div style="background-image:url('.$simg.'); position:relative; top:0px; z-index: 0; width:'.$ssize[0].'px; height:'.$ssize[1].'px;">';
     $header3 = '';
     $header5 = '</div></div>';
   }

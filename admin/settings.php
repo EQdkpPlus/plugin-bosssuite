@@ -399,6 +399,54 @@ foreach ($bs_linklength as $value => $option) {
 		));
 }
 
+$zbcode = '<div id="container"><div id="vertical_container">';
+
+foreach ($bzone as $zoneid => $bosslist){
+    $zbcode .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang[$zoneid]['long'].'</th></tr></table></h2>'."\n";
+    $zbcode .= "\t".'<div class="accordion_content">'."\n";
+    
+    $zbcode .= '<table width="100%" border="0" cellspacing="1" cellpadding="2">';
+    $zbcode .= '<tr><th>'.$user->lang['bs_ol_in'].'</th><th>'.$user->lang['bs_ol_fd'].'</th><th>'.$user->lang['bs_ol_ld'].'</th><th>'.$user->lang['bs_ol_co'].'</th></tr>';
+    
+    $zbcode .= '<tr>';
+    $zbcode .= '<td width="40%" class="row2">' .$user->lang[$zoneid]['long']. '</td>';
+    $zbcode .= '<td class="row1">';
+    $zbcode .= '<input type="text" name="fdm_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%m',$zobe_offsets[$zoneid]['fd']) .'" class="input" />/';
+    $zbcode .= '<input type="text" name="fdd_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%d',$zone_offsets[$zoneid]['fd']) .'" class="input" />/';
+    $zbcode .= '<input type="text" name="fdY_' . $zoneid .'" size="5" maxlength="4" value="' . strftime('%Y',$zone_offsets[$zoneid]['fd']) .'" class="input" />';
+    $zbcode .= '</td>';
+    $zbcode .= '<td class="row1">';
+    $zbcode .= '<input type="text" name="ldm_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%m',$zone_offsets[$zoneid]['ld']) .'" class="input" />/';
+    $zbcode .= '<input type="text" name="ldd_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%d',$zone_offsets[$zoneid]['ld']) .'" class="input" />/';
+    $zbcode .= '<input type="text" name="ldY_' . $zoneid .'" size="5" maxlength="4" value="' . strftime('%Y',$zone_offsets[$zoneid]['ld']) .'" class="input" />';
+    $zbcode .= '</td>';
+    $zbcode .= '<td class="row1"><input type="text" name="co_' . $zoneid .'" size="3" value="' . $zone_offsets[$zoneid]['counter'] . '" class="input" /></td>';
+    $zbcode .= '</tr>';
+			
+   	foreach ($bosslist as $bossid){
+    		$zbcode .= '<tr>';
+    		$zbcode .= '<td class="row2">' . $user->lang[$bossid]['long'] . '</td>';
+    		$zbcode .= '<td class="row1">';
+    		$zbcode .= '<input type="text" name="fdm_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%m',$boss_offsets[$bossid]['fd']) .'" class="input" />/';
+    		$zbcode .= '<input type="text" name="fdd_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%d',$boss_offsets[$bossid]['fd']) .'" class="input" />/';
+    		$zbcode .= '<input type="text" name="fdY_' . $bossid .'" size="5" maxlength="4" value="' . strftime('%Y',$boss_offsets[$bossid]['fd']) .'" class="input" />';
+    		$zbcode.= '</td>';
+    		$zbcode .= '<td class="row1">';
+    		$zbcode .= '<input type="text" name="ldm_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%m',$boss_offsets[$bossid]['ld']) .'" class="input" />/';
+    		$zbcode .= '<input type="text" name="ldd_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%d',$boss_offsets[$bossid]['ld']) .'" class="input" />/';
+    		$zbcode .= '<input type="text" name="ldY_' . $bossid .'" size="5" maxlength="4" value="' . strftime('%Y',$boss_offsets[$bossid]['ld']) .'" class="input" />';
+    		$zbcode.= '</td>';
+    		$zbcode .= '<td class="row1"><input type="text" name="co_' . $bossid .'" size="3" value="' . $boss_offsets[$bossid]['counter'] .'" class="input" /></td>';
+    		$zbcode .= '</tr>';
+	}
+    
+  	$zbcode .= "</table></div>";
+	$arrvals['OFFSETS'] = $zbcode.'</div></div>';
+}
+
+//Output
+$tpl->assign_vars($arrvals);
+
 require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
 $bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
 require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 

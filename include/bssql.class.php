@@ -325,8 +325,9 @@ if ( !class_exists( "BSSQL" ) ) {
         }
     }
     
-    function update_cache($data, $bzone){
+    function update_cache($data){
       global $eqdkp, $user, $db;
+      $bzone = $this->get_bzone();
       $game_arr = explode('_', $eqdkp->config['default_game']);
       $game = $game_arr[0];
       $sql = "TRUNCATE TABLE `".BS_ZONE_CACHE."`;";
