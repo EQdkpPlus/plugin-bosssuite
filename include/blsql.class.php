@@ -4,20 +4,37 @@ if ( !defined('EQDKP_INC') )
      die('Do not access this file directly.');
 }
 
-/*
-if ( !class_exists( "BBSQL") ) {
-  include_once(dirname(__FILE__).'/bbsql.class.php');
+
+if ( !class_exists( "BSSQL") ) {
+  include_once(dirname(__FILE__).'/bssql.class.php');
 }
-*/
+
 
 if ( !class_exists( "BLSQL" ) ) {
   /**
-  * BPSQL class
-  * BossBase SQL class
+  * BLSQL class
+  * BossLoot SQL class
   */
-  class BLSQL{// extends BBSQL{
+  class BLSQL extends BSSQL{
 
-      function bl_fetch_bli($bb_conf, $bb_pboss, $boss) {
+      function get_data($bb_conf, $bossid){
+          if ($bb_conf['source'] == 'database'){
+            $data = $this->get_db_data($bb_conf, $bossid);
+          } else if ($bb_conf['source'] == 'offsets'){
+            message_die("Source = offsets => no loot!");
+          } else if ($bb_conf['source'] == 'both'){
+            $data = $this->get_db_data($bb_conf, $bossid);  
+            $bb_boffs = $this->get_boss_offsets();
+            $data['kc'] +=  $bb_boffs[$bossid]['counter'];
+          } else if ($bb_conf['source'] == 'cache'){
+            $data = $this->get_db_data($bb_conf, $bossid);  
+            $bb_boffs = $this->get_boss_offsets();
+            $data['kc'] +=  $bb_boffs[$bossid]['counter'];
+          }
+          return $data;
+      }
+
+      function get_db_data($bb_conf, $boss) {
       global $db, $table_prefix;
         
         $delim = array (
@@ -26,6 +43,7 @@ if ( !class_exists( "BLSQL" ) ) {
         );
         
         $bossInfo = $bb_conf['bossInfo'];
+        $bb_pboss = $this->get_parse_boss();
         
         $data['kc'] = 0;
         $data['rids'] = "";
@@ -64,9 +82,7 @@ if ( !class_exists( "BLSQL" ) ) {
               }
             }
           }
-        }
-        //mysql_free_result($result);
-        
+        }      
         return $data;
       }
   }

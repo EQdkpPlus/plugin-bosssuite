@@ -51,24 +51,14 @@ $mybsmgs->load_game_specific_language('bossbase');
 $mybsmgs->load_game_specific_language('bossloot');
 
 // sql class
-require(dirname(__FILE__).'/include/bssql.class.php');
-$mybssql = new BSSQL();
-
-  $bzone = $mybssql->get_bzone();
-	$bb_conf = $mybssql->get_config('bossbase');
-	$bb_pboss = $mybssql->get_parse_boss();
-	$bl_conf = $mybssql->get_config('bossloot');
-	//$bzone = bb_get_bzone();
-	$sbzone = $bzone;//bc_get_visible_bzone($bzone, $bc_conf);
-
-
-require(dirname(__FILE__).'/include/blmgs.class.php');
-$myblmgs = new BLMGS();
-
-// sql class
 require(dirname(__FILE__).'/include/blsql.class.php');
 $myblsql = new BLSQL();
 
+$bb_conf = $myblsql->get_config('bossbase');
+$bl_conf = $myblsql->get_config('bossloot');
+
+require(dirname(__FILE__).'/include/blmgs.class.php');
+$myblmgs = new BLMGS();
 
 if (isset($_GET['boss'])){
 	$bossname = $_GET['boss'];
@@ -89,22 +79,7 @@ if (isset($_GET['boss'])){
 	message_die("no bossname/id given");
 }
 
-
-
-if ($bb_conf['source'] == 'database'){
-	$data = $myblsql->bl_fetch_bli($bb_conf, $bb_pboss, $bossid);
-} else if ($bb_conf['source'] == 'offsets'){
-	message_die("Source = offsets => no loot!");
-} else if ($bb_conf['source'] == 'both'){
-  $data = $myblsql->bl_fetch_bli($bb_conf, $bb_pboss, $bossid);  
-  $bb_boffs = $mybssql->get_boss_offsets();
-  $data['kc'] +=  $bb_boffs[$bossid]['co'];
-} else if ($bb_conf['source'] == 'cache'){
-  $data = $myblsql->bl_fetch_bli($bb_conf, $bb_pboss, $bossid);  
-  $bb_boffs = $mybssql->get_boss_offsets();
-  $data['kc'] +=  $bb_boffs[$bossid]['co'];
-
-}
+$data = $myblsql->get_data($bb_conf, $bossid); 
 
 //Name
 $bl_out  = '<tr class="row2"><th colspan="3" align="center">'. $user->lang['bl_loottable'].$user->lang[$bossid]['long'].$user->lang['bl_kc_p1'].$data['kc'].$user->lang['bl_kc_p2'].'</th></tr>'."\n";
@@ -183,9 +158,6 @@ require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php');
 $bl_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
 require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
 $bl_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
-/*if (!(IS_PLUS)){
-  $plus_page_header  = $jquery->Header();
-}*/
 
 $bl_acc_array = array();
 
