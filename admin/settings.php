@@ -226,7 +226,7 @@ $arrvals = array (
 	// Language
 	'L_BC_DYNLOC'      => $user->lang['opt_dynloc'],
 	'L_BC_DYNBOSS'    => $user->lang['opt_dynboss'],
-	'L_BC_EYECANDY' => $user->lang['bl_opt_eyecandy'],
+	'L_BC_EYECANDY' => $user->lang['bc_opt_eyecandy'],
 	'L_BC_ZONELENGTH' => 'Zonename length',
 );
 

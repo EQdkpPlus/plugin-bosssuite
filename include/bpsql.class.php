@@ -117,8 +117,11 @@ if ( !class_exists( "BPSQL" ) ) {
         	$sql = $this->get_sql_data_string($bb_conf['tables']);	
         
           $result = $db->query($sql);
-        	foreach($db->fetch_record_set() as $row) {
-        	
+          $dbdata = $db->fetch_record_set();
+          if (!is_array($dbdata)){
+            return $data;
+          }
+        	foreach($dbdata as $row) {
           	foreach ($bzone as $zone => $bosses){
         			# Get zoneinfo from current row
         			################################

@@ -51,8 +51,8 @@ if (!$mybsmgs->game_supported('bossbase')){
   $mybsmgs->load_game_specific_language('bossbase');
   require_once(dirname(__FILE__).'/../include/bslink.class.php');
   $mybslink = new BSLINK($bc_conf['linkurl'], $bc_conf['linklength']);
-      
-  if ($bc_conf['eyecandy'] == 1){
+
+  if (($bc_conf['eyecandy'] == 1) && (strpos(EQDKPPLUS_VERSION, '0.5') === 0)){
       # Output
       ####################################################
       /*require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
@@ -97,15 +97,9 @@ if (!$mybsmgs->game_supported('bossbase')){
       
       foreach ($sbzone as $zone => $bosses) 
       {
-      	 $loc_killed = 0;
-      	 foreach ($data[$zone]['bosses'] as $boss){
-      		if ($boss['kc'] > 0)
-      			$loc_killed++;
-      	}
-      	
-      	if ((!$bc_conf['dynZone']) or ($loc_killed > 0)) 
+      	if ((!$bc_conf['dynZone']) or ($data[$zone]['zk'] > 0)) 
       	{
-      		$bcout .=  '<tr><th align="left">'.$user->lang[$zone]['short'].'</th><th align="right">'.$loc_killed.'/'.sizeof($data[$zone]['bosses']).'</th></tr>'."\n"; 
+      		$bcout .=  '<tr><th align="left">'.$user->lang[$zone]['short'].'</th><th align="right">'.$data[$zone]['zk'].'/'.sizeof($data[$zone]['bosses']).'</th></tr>'."\n"; 
       		$bi = 1; //row number 1/2
       		foreach($bosses as $boss){
       			if ((!$bc_conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)){

@@ -112,7 +112,7 @@ $lang = array(
 'bl_opt_wl' => 'Show loot that was found, but not belongs to the boss?',
 'bl_opt_is' => 'Get Itemstats data for new items?',
 'bl_opt_eyecandy' => 'Enable eye-candy (accordions)?',
-
+'bc_opt_eyecandy' => 'Enable eye-candy (accordions)? (PLUS 0.5+ ONLY!)',
 'bs_credits_p1' => 'EQDKP BossSuite v',
 'bs_credits_p2' => ' MGS by sz3',
 'bl_credits_ll' => 'Loot list: ',
