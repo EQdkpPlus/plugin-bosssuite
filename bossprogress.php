@@ -28,14 +28,12 @@ global $user;
 
 $user->check_auth('u_bosssuite_bp_view');
 
-require_once(dirname(__FILE__).'/include/bp_functions.php');
-
 if ( !$pm->check(PLUGIN_INSTALLED, 'bosssuite') )
 {
 	message_die('BossSuite plugin not installed.');
 }
 
-# Get configuration data from the database
+# Check whether the current game is supported
 ####################################################
 // new mgs class
 require(dirname(__FILE__).'/include/bsmgs.class.php');
@@ -48,95 +46,37 @@ if (!$mybsmgs->game_supported('bossbase')){
 	$bchout = '<table cellpadding=2 cellspacing=0 border=0 width='.$BKtablewidth.' align=center>'."\n".
 	          '<tr><td>GAME NOT SUPPORTED</td></tr></table>';
 }else{
+  # Get configuration data
+  ####################################################
+  require(dirname(__FILE__).'/include/bpsql.class.php');
+  $mybpsql = new BPSQL();
+  
+  $sbzone = $mybpsql->get_bzone('bossprogress');
+  $bb_conf = $mybpsql->get_config('bossbase');
+  $bp_conf = $mybpsql->get_config('bossprogress');
+  
+  # Get data
+  ####################################################
+  $data = $mybpsql->get_data($bb_conf, $sbzone);
+  
+  # Get output
+  ####################################################
+  $mybsmgs->load_game_specific_language('bossbase');
+  switch ($bp_conf['style']){
+  	case 0:	require_once(dirname(__FILE__).'/include/bp_styles/bp_style.php');
+            $bpout = bp_html_get_zoneinfo_bp($bp_conf, $data, $sbzone);
+  			break; 	
+  	case 1: require_once(dirname(__FILE__).'/include/bp_styles/bp_style_simple.php');
+            $bpout = bp_html_get_zoneinfo_bps($bp_conf, $data, $sbzone);
+  			break;
+  	case 2: require_once(dirname(__FILE__).'/include/bp_styles/rp_2_column.php');
+            $bpout = bp_html_get_zoneinfo_rp2r($bp_conf, $data, $sbzone);
+  			break;
+  	case 3: require_once(dirname(__FILE__).'/include/bp_styles/rp_3_column.php');
+            $bpout = bp_html_get_zoneinfo_rp3r($bp_conf, $data, $sbzone);
+  			break;
+  }
 
-$mybsmgs->load_game_specific_language('bossbase');
-
-// sql class
-require(dirname(__FILE__).'/include/bssql.class.php');
-$mybssql = new BSSQL();
-
-$sbzone = $mybssql->get_bzone('bossprogress');
-$bb_conf = $mybssql->get_config('bossbase');
-$bb_pboss = $mybssql->get_parse_boss();
-$bb_pzone = $mybssql->get_parse_zone();
-$bp_conf = $mybssql->get_config('bossprogress');
-
-# Get data from database
-####################################################
-if ($bb_conf['source'] == 'database'){
-  $data = bp_init_data_array($sbzone);
-	$data = bp_fetch_bzi($sbzone, $data, $bb_conf, $bb_pzone, $bb_pboss);
-	//print_r($data);
-	foreach ($sbzone as $zone => $bosses){
-    $data[$zone]['zk'] = 0;
-    foreach ($data[$zone]['bosses'] as $boss){
-      if ($boss['kc'] > 0)
-        $data[$zone]['zk']++;
-      }
-    }
-} else if ($bb_conf['source'] == 'offsets'){
-	$bb_boffs = $mybssql->get_boss_offsets();
-	$bb_zoffs = $mybssql->get_zone_offsets();
-	foreach($bzone as $zone => $bosses){
-		$data[$zone]['fvd'] = $bb_zoffs[$zone]['fd'];
-		$data[$zone]['lvd'] = $bb_zoffs[$zone]['ld'];
-		$data[$zone]['vc'] = $bb_zoffs[$zone]['counter'];		
-		$data[$zone]['zk'] = 0;
-		foreach($bosses as $boss){
-			$data[$zone]['bosses'][$boss]['fkd'] = $bb_boffs[$boss]['fd'];
-			$data[$zone]['bosses'][$boss]['lkd'] = $bb_boffs[$boss]['ld'];
-			$data[$zone]['bosses'][$boss]['kc'] = $bb_boffs[$boss]['counter'];
-      if ($data[$zone]['bosses'][$boss]['kc'])
-        $data[$zone]['zk']++;	
-		}
-	}
-}else if ($bb_conf['source'] == 'both'){
-  $data = bp_init_data_array($sbzone);
-	$bb_boffs = $mybssql->get_boss_offsets();
-	$bb_zoffs = $mybssql->get_zone_offsets();
-	foreach($sbzone as $zone => $bosses){
-		$data[$zone]['fvd'] = $bb_zoffs[$zone]['fd'];
-		$data[$zone]['lvd'] = $bb_zoffs[$zone]['ld'];
-		$data[$zone]['vc'] = $bb_zoffs[$zone]['counter'];
-    $data[$zone]['zk'] = 0;		
-		foreach($bosses as $boss){
-			$data[$zone]['bosses'][$boss]['fkd'] = $bb_boffs[$boss]['fd'];
-			$data[$zone]['bosses'][$boss]['lkd'] = $bb_boffs[$boss]['ld'];
-			$data[$zone]['bosses'][$boss]['kc'] = $bb_boffs[$boss]['counter'];		
-		}
-	}
-	$data = bp_fetch_bzi($sbzone, $data, $bb_conf, $bb_pzone, $bb_pboss);
-  foreach ($sbzone as $zone => $bosses){
-    $data[$zone]['zk'] = 0;
-    foreach ($data[$zone]['bosses'] as $boss){
-      if ($boss['kc'] > 0)
-        $data[$zone]['zk']++;
-      }
-    }	
-}else if ($bb_conf['source'] == 'cache'){
-  $data = $mybssql->get_cache();
-}
-
-# Output
-####################################################
-switch ($bp_conf['style']){
-	case 0:	require_once(dirname(__FILE__).'/include/bp_styles/bp_style.php');
-          $bpout = bp_html_get_zoneinfo_bp($bp_conf, $data, $sbzone);
-			break; 	
-	case 1: require_once(dirname(__FILE__).'/include/bp_styles/bp_style_simple.php');
-          $bpout = bp_html_get_zoneinfo_bps($bp_conf, $data, $sbzone);
-			break;
-	case 2: require_once(dirname(__FILE__).'/include/bp_styles/rp_2_column.php');
-          $bpout = bp_html_get_zoneinfo_rp2r($bp_conf, $data, $sbzone);
-			break;
-	case 3: require_once(dirname(__FILE__).'/include/bp_styles/rp_3_column.php');
-          $bpout = bp_html_get_zoneinfo_rp3r($bp_conf, $data, $sbzone);
-			break;
-}
-
-# Developer Output
-####################################################
-#$bpout = bp_html_dev_out($bzone);
 }
 # Assign Vars
 ####################################################

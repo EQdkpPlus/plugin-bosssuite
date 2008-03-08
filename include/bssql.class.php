@@ -382,9 +382,9 @@ if ( !class_exists( "BSSQL" ) ) {
             $data[$zone]['bosses'][$boss] = $data[$boss];
           }
         }
-       // print_r($data);
       	return $data;
     }
-  }
-}
+    
+  }//end class
+}//end if
 ?>
