@@ -91,6 +91,16 @@ global $user;
 //Output
 $tpl->assign_vars($arrvals);
 
+require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
+$bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
+require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
+$bs_adm_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
+$tpl->assign_vars(array(
+  'JS_ABOUT' => $bs_adm_jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
+	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
+	'BS_INFO_IMG' => '../images/credits/info.png',
+  ));
+
 $eqdkp->set_vars(array (
 	'page_title' => sprintf($user->lang['admin_title_prefix'], $eqdkp->config['guildtag'], $eqdkp->config['dkp_name']).': '.$user->lang['bs_conf_pagetitle'],
 	'template_path' => $pm->get_data('bosssuite', 'template_path'),

@@ -114,13 +114,19 @@ $lang = array(
 'bl_opt_eyecandy' => 'Enable eye-candy (accordions)?',
 'bc_opt_eyecandy' => 'Enable eye-candy (accordions)? (PLUS 0.5+ ONLY!)',
 'bs_credits_p1' => 'EQDKP BossSuite v',
-'bs_credits_p2' => ' MGS by sz3',
+'bs_credits_p2' => ' by sz3',
 'bl_credits_ll' => 'Loot list: ',
 'bl_credits_bi' => 'Boss images: ',
 'bl_no_lootlist_credits' => 'no lootlist selected/found',
 'bl_no_bossimages_credits' => 'no bossimage credits found',
 
 'item_qual_-1' => 'all',
+
+//About page
+'bs_about_header' => 'About the BossSuite plugins',
+'bs_additions' => 'Contributions:',
+'bs_copyright' => 'Copyright:',
+'bs_url_web' => 'Web',
 );
 
 ?>

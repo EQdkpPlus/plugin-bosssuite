@@ -228,14 +228,20 @@ if (($bl_conf['show_wl'] == true) && ($bl_wloot != '')){
 
 $bl_out .= '</td></tr>';
 }
+
+require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
+$bs_bl_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
+require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
+$bs_bl_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
+
 # Assign Vars
 # ####################################################
 $tpl->assign_vars(array (
 	'F_ACTION' => 'bossloot.php' . $SID,
 	'BOSSLOOT' => $bl_out,
-	'CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
-	'BL_LL_CREDITS' => $user->lang['bl_credits_ll'].$myblmgs->bl_get_lootlist_credits($bl_conf['item_lang']),
-	'BL_BI_CREDITS' => $user->lang['bl_credits_bi'].$myblmgs->bl_get_bossimages_credits()
+	'JS_ABOUT' => $bs_bl_jquery->Dialog_URL('About', $user->lang['bs_about_header'], 'about.php', '400', '400'),
+	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
+	'BS_INFO_IMG' => 'images/credits/info.png',
 ));
 
 $eqdkp->set_vars(array (
