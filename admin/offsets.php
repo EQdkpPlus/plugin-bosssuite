@@ -60,22 +60,20 @@ if ($_POST['bpsavebu']){
 $boss_offsets = $mybssql->get_boss_offsets();
 $zone_offsets = $mybssql->get_zone_offsets();
 
-$arrvals = array (
-	'CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
-	'F_CONFIG' => 'offsets.php' . $SID,
-	'L_OFFSET_INFO' => $user->lang['bs_ol_dateFormat'],
-	'L_SUBMIT' => $user->lang['bs_ol_submit']
-);
+# Output
+####################################################
+require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
+$bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
+require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
+$bs_adm_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
 
-$zbcode = '<div id="container"><div id="vertical_container">';
+$bs_off_acc_array = array();
 
 foreach ($bzone as $zoneid => $bosslist){
-    $zbcode .= '<h2 class="accordion_toggle"><table width="100%"><tr><th>'.$user->lang[$zoneid]['long'].'</th></tr></table></h2>'."\n";
-    $zbcode .= "\t".'<div class="accordion_content">'."\n";
+    $acc_title = '<table width="100%"><tr><th>'.$user->lang[$zoneid]['long'].'</th></tr></table>'."\n";
     
-    $zbcode .= '<table width="100%" border="0" cellspacing="1" cellpadding="2">';
-    $zbcode .= '<tr><th>'.$user->lang['bs_ol_in'].'</th><th>'.$user->lang['bs_ol_fd'].'</th><th>'.$user->lang['bs_ol_ld'].'</th><th>'.$user->lang['bs_ol_co'].'</th></tr>';
-    
+    $zbcode = '<table width="100%" border="0" cellspacing="1" cellpadding="2">';
+    $zbcode .= '<tr><th>'.$user->lang['bs_ol_in'].'</th><th>'.$user->lang['bs_ol_fd'].'</th><th>'.$user->lang['bs_ol_ld'].'</th><th>'.$user->lang['bs_ol_co'].'</th></tr>';    
     $zbcode .= '<tr>';
     $zbcode .= '<td width="40%" class="row2">' .$user->lang[$zoneid]['long']. '</td>';
     $zbcode .= '<td class="row1">';
@@ -106,23 +104,21 @@ foreach ($bzone as $zoneid => $bosslist){
     		$zbcode.= '</td>';
     		$zbcode .= '<td class="row1"><input type="text" name="co_' . $bossid .'" size="3" value="' . $boss_offsets[$bossid]['counter'] .'" class="input" /></td>';
     		$zbcode .= '</tr>';
-	}
-    
-  	$zbcode .= "</table></div>";
-	$arrvals['OFFSET_CONFIG'] = $zbcode.'</div></div>';
+	  }
+	  $zbcode .= '</table>';
+	  
+    $bs_off_acc_array[$acc_title] = $zbcode;
 }
 
 //Output
-$tpl->assign_vars($arrvals);
-
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
-$bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
-$bs_adm_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
 $tpl->assign_vars(array(
-  'JS_ABOUT' => $bs_adm_jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
-	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
-	'BS_INFO_IMG' => '../images/credits/info.png',
+	'F_CONFIG'      => 'offsets.php' . $SID,
+	'L_OFFSET_INFO' => $user->lang['bs_ol_dateFormat'],
+	'L_SUBMIT'      => $user->lang['bs_ol_submit'],
+  'OFFSET_CONFIG' => $bs_adm_jquery->accordion('bs_off_accordion', $bs_off_acc_array),
+  'JS_ABOUT'      => $bs_adm_jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
+	'L_CREDITS'     => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
+	'BS_INFO_IMG'   => '../images/credits/info.png',
   ));
 
 $eqdkp->set_vars(array (
