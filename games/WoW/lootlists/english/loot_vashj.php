@@ -16,7 +16,6 @@ $loot = array(
 	array( "id" => "30242", "qual" => "4", "name" => "Helm of the Vanquished Champion" ),
 	array( "id" => "30243", "qual" => "4", "name" => "Helm of the Vanquished Defender" ),
 	array( "id" => "30244", "qual" => "4", "name" => "Helm of the Vanquished Hero" ),
-	array( "id" => "32895", "qual" => "4", "name" => "Scroll of the Maelstrom" ),
 	array( "id" => "29906", "qual" => "1", "name" => "Vashj's Vial Remnant" ),
 );
 

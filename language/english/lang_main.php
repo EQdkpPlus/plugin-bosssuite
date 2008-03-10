@@ -29,7 +29,6 @@ $lang = array(
 
 // admin page
 'bs_al_submit' => 'Save',
-'bs_al_parse' => 'String(s) for: ',
 'bs_al_general' => 'General settings',
 'bs_al_delimRNO' => 'Raidnote delimiter (Opt.: Regular Expression):',
 'bs_al_delimRNA' => 'Raidname delimiter (Opt.: Regular Expression):',
@@ -47,7 +46,7 @@ $lang = array(
 'bs_source_offs' => 'offsets',
 'bs_source_both' => 'both',
 'bs_source_cache' => 'cache',
-'bs_al_showZone' => 'Click me to select the zones which should be shown within the plugin:',
+'bs_al_showZone' => 'Select the zones which should be shown within the plugin:',
 'lang' => 'english',
 'dateFormat' => '%m/%d/%Y',
 
@@ -100,17 +99,17 @@ $lang = array(
 
 'bl_dl' => 'Dropped loot',
 'bl_ndl' => 'Never dropped loot',
-'bl_wl' => 'Wrong loot',
+'bl_wl' => 'Wrong assigned/unclear loot',
 
 'bl_itemsfound' => 'items found',
 'item_lang_none' => 'none',
 
 //Admin menu
 'bl_opt_minitemqual' => 'Minimum item quality to be shown:',
-'bl_opt_itemlang' => 'Item language',
+'bl_opt_itemlang' => 'Select lootlist',
 'bl_opt_ndl' => 'Show loot that never dropped for you?',
 'bl_opt_wl' => 'Show loot that was found, but not belongs to the boss?',
-'bl_opt_is' => 'Get Itemstats data for new items?',
+'bl_opt_is' => 'Enable Itemstats for never dropped items?',
 'bl_opt_eyecandy' => 'Enable eye-candy (accordions)?',
 'bc_opt_eyecandy' => 'Enable eye-candy (accordions)? (PLUS 0.5+ ONLY!)',
 'bs_credits_p1' => 'EQDKP BossSuite v',
@@ -123,10 +122,30 @@ $lang = array(
 'item_qual_-1' => 'all',
 
 //About page
-'bs_about_header' => 'About the BossSuite plugins',
+'bs_about_header' => 'About the BossSuite',
 'bs_additions' => 'Contributions:',
 'bs_copyright' => 'Copyright:',
 'bs_url_web' => 'Web',
+'bs_short_desc' => 'Extended loot/progression information.',
+'bs_game_not_supported' => 'Sorry, your game is not supported.',
+'bs_enable_bosscounter' => 'Enable BossCounter',
+'bs_enable_note2link' => 'Enable note2link',
+
+'bs_img_style_normal' => 'normal',
+'bs_img_style_sepia' => 'sepia',
+'bs_img_style_grey' => 'grey',
+'bs_style_sname' => 'short name',
+'bs_style_lname' => 'long name',
+'bs_opt_zlength' => 'Select zone name length',
+'bs_trigger' => 'Trigger',
+'bs_bp_style_options' => 'BossProgress Style Options',
+'bs_bp_style_si' => 'Image to start with:',
+'bs_bp_style_ei' => 'Image to end with:',
+'bs_bp_style_ztext' => 'ZoneName as ',
+'bs_bp_style_ztext_none' => 'none',
+'bs_bp_style_ztext_png' => 'png',
+'bs_bp_style_ztext_text' => 'text',
+'bl_opt_lootlist' => 'Lootlist options, only work if a lootlist is selected'
 );
 
 ?>

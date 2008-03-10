@@ -22,7 +22,6 @@ $loot = array(
 	array( "id" => "30017", "qual" => "4", "name" => "Telonicus's Pendant of Mayhem" ),
 	array( "id" => "30007", "qual" => "4", "name" => "The Darkener's Grasp" ),
 	array( "id" => "30015", "qual" => "4", "name" => "The Sun King's Talisman" ),
-	array( "id" => "32896", "qual" => "4", "name" => "Scroll of the Sun" ),
 	array( "id" => "29905", "qual" => "1", "name" => "Kael's Vial Remnant" ),
 );
 

@@ -22,7 +22,6 @@ $loot = array(
 	array( "id" => "30017", "qual" => "4", "name" => "Telonicus' Chaosanhänger" ),
 	array( "id" => "30007", "qual" => "4", "name" => "Griff des Verfinsterers" ),
 	array( "id" => "30015", "qual" => "4", "name" => "Sonnenkönigs Talisman" ),
-	array( "id" => "32896", "qual" => "4", "name" => "Schriftrolle der Sonne" ),
 	array( "id" => "29905", "qual" => "1", "name" => "Überreste von Kaels Phiole" ),
 );
 

@@ -52,17 +52,9 @@ if (!$mybsmgs->game_supported('bossbase')){
   require_once(dirname(__FILE__).'/../include/bslink.class.php');
   $mybslink = new BSLINK($bc_conf['linkurl'], $bc_conf['linklength']);
 
-  if (($bc_conf['eyecandy'] == 1) && (strpos(EQDKPPLUS_VERSION, '0.5') === 0)){
+  if (($bc_conf['eyecandy'] == 1) && (isset($jqueryp))){
       # Output
-      ####################################################
-      /*require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
-      $wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
-      require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
-      $bc_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
-      /*if (!(IS_PLUS)){
-        $plus_page_header  = $jquery->Header();
-      }*/
-      
+      ####################################################     
       $bc_acc_array = array();
       $i = 1;
       foreach ($sbzone as $zone => $bosslist){

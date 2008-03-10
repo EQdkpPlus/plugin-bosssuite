@@ -20,7 +20,7 @@ $loot = array(
 	array( "id" => "28790", "qual" => "4", "name" => "Naaru Lightwarden's Band" ),
 	array( "id" => "28793", "qual" => "4", "name" => "Band of Crimson Fury" ),
 	array( "id" => "28792", "qual" => "4", "name" => "A'dal's Signet of Defense" ),
-	array( "id" => "34845", "qual" => "3", "name" => "Pit Lord's Satchel" ),
+	array( "id" => "34845", "qual" => "4", "name" => "Pit Lord's Satchel" ),
 );
 
 

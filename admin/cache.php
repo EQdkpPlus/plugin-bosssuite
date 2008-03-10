@@ -29,7 +29,7 @@ if (!$pm->check(PLUGIN_INSTALLED, 'bosssuite')) {
 require(dirname(__FILE__).'/../include/bsmgs.class.php');
 $mybsmgs = new BSMGS();
 if (!$mybsmgs->game_supported('bossbase'))
-  message_die("GAME NOT SUPPORTED");
+  message_die($user->lang['bs_game_not_supported']);
 
 $mybsmgs->load_game_specific_language('bossbase');
 
@@ -46,14 +46,6 @@ if ($_POST['bs_refresh']){
 }
 
 $bs_cache = $mybssql->get_cache();
-
-
-$arrvals = array (
-	'CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
-	'F_CONFIG' => 'cache.php' . $SID,
-	'L_CACHE_INFO' => $user->lang['bs_adm_cache_info'],
-	'L_REFRESH' => $user->lang['bs_adm_cache_refresh']
-);
 
 foreach ($bzone as $zoneid => $bosslist){   
     $zbcode .= '<table width="100%" border="0" cellspacing="1" cellpadding="2">';
@@ -76,7 +68,6 @@ foreach ($bzone as $zoneid => $bosslist){
     		$zbcode .= '</tr>';
 	  }
   $zbcode .= "</table>";
-	$arrvals['CACHE_OUTPUT'] = $zbcode;
 }
 
 function bs_date2text($date) {
@@ -89,17 +80,21 @@ global $user;
 }
 
 //Output
-$tpl->assign_vars($arrvals);
-
 require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
 $bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
 require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
 $bs_adm_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
-$tpl->assign_vars(array(
+
+$tpl->assign_vars(array (
+	'F_CONFIG' => 'cache.php' . $SID,
+	'L_CACHE_INFO' => $user->lang['bs_adm_cache_info'],
+	'L_REFRESH' => $user->lang['bs_adm_cache_refresh'],
   'JS_ABOUT' => $bs_adm_jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
+	'CACHE_OUTPUT' => $zbcode,
 	'BS_INFO_IMG' => '../images/credits/info.png',
-  ));
+  )
+);
 
 $eqdkp->set_vars(array (
 	'page_title' => sprintf($user->lang['admin_title_prefix'], $eqdkp->config['guildtag'], $eqdkp->config['dkp_name']).': '.$user->lang['bs_conf_pagetitle'],
