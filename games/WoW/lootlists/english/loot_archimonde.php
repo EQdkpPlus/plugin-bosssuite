@@ -15,7 +15,6 @@ $loot = array(
 	array( "id" => "31097", "qual" => "4", "name" => "Helm of the Forgotten Conqueror" ),
 	array( "id" => "31095", "qual" => "4", "name" => "Helm of the Forgotten Protector" ),
 	array( "id" => "31096", "qual" => "4", "name" => "Helm of the Forgotten Vanquisher" ),
-	array( "id" => "34544", "qual" => "4", "name" => "Essence of the Immortals" ),
 );
 
 

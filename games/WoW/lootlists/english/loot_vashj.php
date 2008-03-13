@@ -12,7 +12,6 @@ $loot = array(
 	array( "id" => "30103", "qual" => "4", "name" => "Fang of Vashj" ),
 	array( "id" => "30108", "qual" => "4", "name" => "Lightfathom Scepter" ),
 	array( "id" => "30105", "qual" => "4", "name" => "Serpent Spine Longbow" ),
-	array( "id" => "34544", "qual" => "4", "name" => "Essence of the Immortals" ),
 	array( "id" => "30242", "qual" => "4", "name" => "Helm of the Vanquished Champion" ),
 	array( "id" => "30243", "qual" => "4", "name" => "Helm of the Vanquished Defender" ),
 	array( "id" => "30244", "qual" => "4", "name" => "Helm of the Vanquished Hero" ),

@@ -12,7 +12,6 @@ $loot = array(
 	array( "id" => "29993", "qual" => "4", "name" => "Twinblade of the Phoenix" ),
 	array( "id" => "29996", "qual" => "4", "name" => "Rod of the Sun King" ),
 	array( "id" => "29988", "qual" => "4", "name" => "The Nexus Key" ),
-	array( "id" => "34544", "qual" => "4", "name" => "Essence of the Immortals" ),
 	array( "id" => "30236", "qual" => "4", "name" => "Chestguard of the Vanquished Champion" ),
 	array( "id" => "30237", "qual" => "4", "name" => "Chestguard of the Vanquished Defender" ),
 	array( "id" => "30238", "qual" => "4", "name" => "Chestguard of the Vanquished Hero" ),

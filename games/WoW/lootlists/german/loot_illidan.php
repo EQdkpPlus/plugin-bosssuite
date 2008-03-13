@@ -9,7 +9,6 @@ $loot = array(
 	array( "id" => "32496", "qual" => "4", "name" => "Tyrandes Andenken" ),
 	array( "id" => "32837", "qual" => "5", "name" => "Kriegsgleve von Azzinoth" ),
 	array( "id" => "32838", "qual" => "5", "name" => "Kriegsgleve von Azzinoth" ),
-	array( "id" => "34544", "qual" => "4", "name" => "Essence of the Immortals" ),
 	array( "id" => "31089", "qual" => "4", "name" => "Brustschutz des vergessenen Eroberers" ),
 	array( "id" => "31091", "qual" => "4", "name" => "Brustschutz des vergessenen Beschützers" ),
 	array( "id" => "31090", "qual" => "4", "name" => "Brustschutz des vergessenen Bezwingers" ),

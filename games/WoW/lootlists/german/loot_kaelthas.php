@@ -12,7 +12,6 @@ $loot = array(
 	array( "id" => "29993", "qual" => "4", "name" => "Zwillingsklinge des Phönix" ),
 	array( "id" => "29996", "qual" => "4", "name" => "Rute des Sonnenkönigs" ),
 	array( "id" => "29988", "qual" => "4", "name" => "Der Nexusschlüssel" ),
-	array( "id" => "34544", "qual" => "4", "name" => "Essence of the Immortals" ),
 	array( "id" => "30236", "qual" => "4", "name" => "Brustschutz des bezwungenen Champions" ),
 	array( "id" => "30237", "qual" => "4", "name" => "Brustschutz des bezwungenen Verteidigers" ),
 	array( "id" => "30238", "qual" => "4", "name" => "Brustschutz des bezwungenen Helden" ),

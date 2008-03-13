@@ -11,7 +11,6 @@ $loot = array(
 	array( "id" => "34390", "qual" => "4", "name" => "Erupting Epaulets" ),
 	array( "id" => "34192", "qual" => "4", "name" => "Pauldrons of Perseverance" ),
 	array( "id" => "34388", "qual" => "4", "name" => "Pauldrons of Berserking" ),
-	array( "id" => "34544", "qual" => "4", "name" => "Essence of the Immortals" ),
 	array( "id" => "35290", "qual" => "4", "name" => "Sin'dorei Pendant of Conquest" ),
 	array( "id" => "35291", "qual" => "4", "name" => "Sin'dorei Pendant of Salvation" ),
 	array( "id" => "35292", "qual" => "4", "name" => "Sin'dorei Pendant of Triumph" ),
