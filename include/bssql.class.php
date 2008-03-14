@@ -154,39 +154,35 @@ if ( !class_exists( "BSSQL" ) ) {
       }
       
       function reset_pboss_to_defaults(){
-       global $user;
-       
-       $bzone = $this->get_bzone();
-	     foreach ($bzone as $zone => $bosses){
-	       foreach ($bosses as $boss){
-       if (strcmp($user->lang[$boss]['long'], $user->lang[$boss]['short'])){
-				$bossstring = "''". str_replace("'", "''", $user->lang[$boss]['long']) . "'', ''" .  str_replace("'", "''", $user->lang[$boss]['short']) . "''";
-			}else{
-				$bossstring = "''". str_replace("'", "''", $user->lang[$boss]['long']) . "''";
-			}   
-            $defaults['pb_'.$boss] = $bossstring;
-            $this->update_parse_boss(array(), $boss, $bossstring);     
-       }
-         }
-       
-       return $defaults;
+        global $user;
+        $bzone = $this->get_bzone();
+	      foreach ($bzone as $zone => $bosses){
+	        foreach ($bosses as $boss){
+           if (strcmp($user->lang[$boss]['long'], $user->lang[$boss]['short'])){
+				     $bossstring = "''". str_replace("'", "''", $user->lang[$boss]['long']) . "'', ''" .  str_replace("'", "''", $user->lang[$boss]['short']) . "''";
+			     }else{
+				     $bossstring = "''". str_replace("'", "''", $user->lang[$boss]['long']) . "''";
+			     }   
+           $this->update_parse_boss(array(), $boss, $bossstring);
+           $defaults['pb_'.$boss] = str_replace("''", "'", $bossstring);     
+          }
+        }
+        return $defaults;
       }
       
       function reset_pzone_to_defaults(){
-       global $user;
-       
-       $bzone = $this->get_bzone();
-	     foreach ($bzone as $zone => $bosses){
-       if (strcmp($user->lang[$zone]['long'], $user->lang[$zone]['short'])){
-				$zonestring = "''". str_replace("'", "''", $user->lang[$zone]['long']) . "'', ''" .  str_replace("'", "''", $user->lang[$zone]['short']) . "''";
-			}else{
-				$zonestring = "''". str_replace("'", "''", $user->lang[$zone]['long']) . "''";
-			}   
-            $defaults['pz_'.$zone] = $zonestring;
-            $this->update_parse_zone(array(), $zone, $zonestring);
-         
-       }
-       return $defaults;
+        global $user;       
+        $bzone = $this->get_bzone();
+	      foreach ($bzone as $zone => $bosses){
+          if (strcmp($user->lang[$zone]['long'], $user->lang[$zone]['short'])){
+				    $zonestring = "''". str_replace("'", "''", $user->lang[$zone]['long']) . "'', ''" .  str_replace("'", "''", $user->lang[$zone]['short']) . "''";
+			    }else{
+				    $zonestring = "''". str_replace("'", "''", $user->lang[$zone]['long']) . "''";
+			    }   
+          $this->update_parse_zone(array(), $zone, $zonestring);         
+          $defaults['pz_'.$zone] = str_replace("''", "'", $zonestring);
+        }
+        return $defaults;
       }
       
       function get_boss_offsets(){

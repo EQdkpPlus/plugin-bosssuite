@@ -48,6 +48,7 @@ if (!$mybsmgs->game_supported('bossbase')){
 }else{
   # Get configuration data
   ####################################################
+  $mybsmgs->load_game_specific_language('bossbase');
   require(dirname(__FILE__).'/include/bpsql.class.php');
   $mybpsql = new BPSQL();
   
@@ -61,7 +62,6 @@ if (!$mybsmgs->game_supported('bossbase')){
   
   # Get output
   ####################################################
-  $mybsmgs->load_game_specific_language('bossbase');
   switch ($bp_conf['style']){
   	case 0:	require_once(dirname(__FILE__).'/include/bp_styles/bp_style.php');
             $bpout = bp_html_get_zoneinfo_bp($bp_conf, $data, $sbzone);

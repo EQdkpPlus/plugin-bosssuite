@@ -83,7 +83,7 @@ if ( !class_exists( "BCSQL" ) ) {
       }
    
       function get_db_data($bzone, $data, $bb_conf) {
-      global $db;
+      global $db, $user;
           $delim = array (
               'rnote' => '/'.$bb_conf['noteDelim'].'/',
               'rname' => '/'.$bb_conf['nameDelim'].'/'

@@ -35,6 +35,8 @@ if (!$mybsmgs->game_supported('bossbase')){
 }else{
   # Get configuration data from the database
   ####################################################
+  $mybsmgs->load_game_specific_language('bossbase');
+  
   require_once(dirname(__FILE__).'/../include/bcsql.class.php');
   $mybcsql = new BCSQL();
   
@@ -48,7 +50,7 @@ if (!$mybsmgs->game_supported('bossbase')){
   
   # Get output
   ####################################################
-  $mybsmgs->load_game_specific_language('bossbase');
+ 
   require_once(dirname(__FILE__).'/../include/bslink.class.php');
   $mybslink = new BSLINK($bc_conf['linkurl'], $bc_conf['linklength']);
 
