@@ -31,14 +31,20 @@ $user->check_auth('a_bosssuite_conf');
 if (!$pm->check(PLUGIN_INSTALLED, 'bosssuite')) {
 	message_die('The BossSuite plugin is not installed.');
 }
+require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
+$bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
+require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
+$bs_adm_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
 
-$bs_usage = 'HELLO!';
+require_once(dirname(__FILE__).'/lang/english/lang_usage.php');
 
 # Assign Vars
 ####################################################
 $tpl->assign_vars(array (
-	'USAGE' => $bs_usage,
-	'CREDITS' => $credits1 . $pm->get_data('bosssuite', 'version') . $credits2
+	'USAGE'         => $usage_html,
+	'JS_ABOUT'      => $bs_adm_jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
+	'L_CREDITS'     => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
+		'BS_INFO_IMG'   => '../images/credits/info.png',
 ));
 
 $eqdkp->set_vars(array (
