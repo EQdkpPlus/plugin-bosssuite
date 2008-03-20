@@ -131,7 +131,7 @@ $idlist['default'] = array(
   'janalai' => '23578',
   'halazzi' => '23577',
   'malacrass' => '24364',
-  'zuljin' => '99999',
+  'zuljin' => '23863',
   
   /******Gruul's Lair*****/
   'maulgar' => '18831',
@@ -170,11 +170,11 @@ $idlist['default'] = array(
   'illidan' => '22917',
   
   /******Sunwell Plateau*****/
-  'kalecgos' => '99999',
-  'brutallus' => '99999',
-  'felmyst' => '99999',
+  'kalecgos' => '24850',
+  'brutallus' => '24882',
+  'felmyst' => '25038',
   'fetwins' => '99999',
-  'muru' => '99999',
+  'muru' => '25741',
   'kiljaeden' => '99999',
 );
 
