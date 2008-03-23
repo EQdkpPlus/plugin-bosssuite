@@ -11,7 +11,7 @@ $lang['bogbereth'] = array('long' => 'Bogbereth', 'short' => 'Bogbereth');
 
 /******Helegrod*****/
 $lang['helegrod'] = array('long' => 'Helegrod', 'short' => 'Helegrod');
-$lang['servants'] = array('long' => 'Servants of Four', 'short' => 'Servants');
+$lang['servants'] = array('long' => 'Servants Four', 'short' => 'Servants');
 $lang['grisgart'] = array('long' => 'Grisgart', 'short' => 'Grisgart');
 $lang['zaudru'] = array('long' => 'Zaudru', 'short' => 'Zaudru');
 $lang['storvagun'] = array('long' => 'Storvagun', 'short' => 'Storvagun');
@@ -32,33 +32,43 @@ $lang['zurm'] = array('long' => 'Zurm', 'short' => 'Zurm');
 $lang['barz'] = array('long' => 'Barz', 'short' => 'Barz');
 $lang['fruz'] = array('long' => 'Frûz', 'short' => 'Frûz');
 $lang['zogtark'] = array('long' => 'Zogtark', 'short' => 'Zogtark');
-$lang['narnulubat'] = array('long' => 'Narnûlubat', 'short' => 'Narnûalubat');
+$lang['narnulubat'] = array('long' => 'Narnûlubat', 'short' => 'Narnûlubat');
 $lang['shadow_eater'] = array('long' => 'Shadow Eater', 'short' => 'Eater');
 $lang['thrang'] = array('long' => 'Thrâng', 'short' => 'Thrâng');
 $lang['thaurlach'] = array('long' => 'Thaurlach', 'short' => 'Thaurlach');
 
 /******Urugarth*****/
 $lang['urugarth'] = array('long' => 'Urugarth', 'short' => 'Urugarth');
-$lang['akrur'] = array('long' => 'Akrur', 'short' => 'Akrur');
-$lang['athpukh'] = array('long' => 'Athpukh', 'short' => 'Athpukh');
-$lang['atkpuh'] = array('long' => 'Athpuh', 'short' => 'Athpuh');
+$lang['sorkrank'] = array('long' => 'Sorkrank', 'short' => 'Sorkrank');
+$lang['burzfil'] = array('long' => 'Burzfil', 'short' => 'Burzfil');
 $lang['dushkal'] = array('long' => 'Dushkal', 'short' => 'Dushkal');
-$lang['gruglok'] = array('long' => 'Gruglok', 'short' => 'Gruglok');
+$lang['akrur'] = array('long' => 'Akrur', 'short' => 'Akrur');
 $lang['kughurz'] = array('long' => 'Kughurz', 'short' => 'Kughurz');
-$lang['lagmas'] = array('long' => 'Lagmas', 'short' => 'Lagmas');
+$lang['lamkarn'] = array('long' => 'Lamkarn', 'short' => 'Lamkarn');
+$lang['athpukh'] = array('long' => 'Athpukh', 'short' => 'Athpukh');
 $lang['lhugrien'] = array('long' => 'Lhugrien', 'short' => 'Lhugrien');
 $lang['morthrang'] = array('long' => 'Morthrang', 'short' => 'Morthrang');
+$lang['gruglok'] = array('long' => 'Gruglok', 'short' => 'Gruglok');
+$lang['lagmas'] = array('long' => 'Lagmas', 'short' => 'Lagmas');
+
+/*****Barad Gularan*******/
+$lang['barad_gularan'] = array('long' => 'Barad Gúlaran', 'short' => 'BG');
+$lang['wisdan'] = array('long' => 'Castellan Wisdán', 'short' => 'Wisdan');
+$lang['udonion'] = array('long' => 'Udonion', 'short' => 'Udonion');
+
 
 /******Carn Dum*****/
 $lang['carn_dum'] = array('long' => 'Carn Dum', 'short' => 'CD');
-$lang['azgoth'] = array('long' => 'Azgoth', 'short' => 'Azgoth');
+$lang['urro'] = array('long' => 'Urro', 'short' => 'Urro');
 $lang['barashal'] = array('long' => 'Barashal', 'short' => 'Barashal');
 $lang['helchgam'] = array('long' => 'Helchgam', 'short' => 'Helchgam');
-$lang['bolgrukh'] = array('long' => 'Bolgrukh', 'short' => 'Bolgrukh');
-$lang['mormoz'] = array('long' => 'Mormoz', 'short' => 'Mormoz');
-$lang['tarbam'] = array('long' => 'Tarbam', 'short' => 'Tarbam');
-$lang['urro'] = array('long' => 'Urro', 'short' => 'Urro');
-$lang['zurtith'] = array('long' => 'Zurtith', 'short' => 'Zurtith');
+$lang['salvakh'] = array('long' => 'Salvakh', 'short' => 'Salvakh');
+$lang['azgoth'] = array('long' => 'Azgoth', 'short' => 'Azgoth');
 $lang['tarlug'] = array('long' => 'Tarlug', 'short' => 'Tarlug');
+$lang['mormoz'] = array('long' => 'Mormoz', 'short' => 'Mormoz');
+$lang['rodakhan'] = array('long' => 'Rodakhan', 'short' => 'Rodkhan');
+$lang['mura'] = array('long' => 'Mura', 'short' => 'Mura');
+$lang['gurthal'] = array('long' => 'Gurthal', 'short' => 'Gurthal');
+$lang['mordirith'] = array('long' => 'Mordirith', 'short' => 'Mordirith');
     
 ?>

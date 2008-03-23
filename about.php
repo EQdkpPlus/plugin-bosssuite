@@ -32,7 +32,7 @@ foreach ($additions as $key => $value){
 }
 
 $wow_additions = array(
-    'Language files'    => ' Trionix, sz3 and many others',
+    'Basic support'    => ' Trionix, sz3 and many others',
     'Zone images'       => ' Cattiebrie, Trionix, sz3',
     'Boss images' 	    => ' Cattiebrie, mikedoh, Trionix, sz3 ',
     'Lootlists'		      => ' extracted from Daviesh\' Atlasloot by sz3',
@@ -47,7 +47,7 @@ foreach ($wow_additions as $key => $value){
 }
 
 $vsoh_additions = array(
-    'Language files'    => ' Sult',
+    'Basic support'    => ' Sult',
 );
       
 foreach ($vsoh_additions as $key => $value){
@@ -59,7 +59,7 @@ foreach ($vsoh_additions as $key => $value){
 }
 
 $lotro_additions = array(
-  'Language files'    => ' aeglis',
+  'Basic support'    => ' aeglis, markan',
 );
       
 foreach ($lotro_additions as $key => $value){
