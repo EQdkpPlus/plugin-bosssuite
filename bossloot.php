@@ -110,7 +110,7 @@ if ((is_array($loottable)) && !(empty($loottable))){
                 $droprate = round($itemcount/$data['kc']*100,2);
                 $rowid0 = $printed0%2+1;
                 $is_itemname = itemstats_decorate_name(stripslashes($itemname));
-                $bl_cloot .= "\t\t\t".'<tr class="row'.$rowid0.'"><td><a href="'.$eqdkp->config['server_path'].'viewitem.php?s=&i='.$itemeid.'">'.$is_itemname.'</a></td><td>'.$itemcount.'</td><td>'.$droprate.'%</td></tr>'."\n";
+                $bl_cloot .= "\t\t\t".'<tr class="row'.$rowid0.'"><td><a href="'.$eqdkp_root_path.'viewitem.php?s=&i='.$itemeid.'">'.$is_itemname.'</a></td><td>'.$itemcount.'</td><td>'.$droprate.'%</td></tr>'."\n";
                 $printed0++;
             } else {
                 $rowid1 = $printed1%2+1;
