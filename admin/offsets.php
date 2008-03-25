@@ -70,7 +70,7 @@ $bs_adm_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'
 $bs_off_acc_array = array();
 
 foreach ($bzone as $zoneid => $bosslist){
-    $acc_title = '<table width="100%"><tr><th>'.$user->lang[$zoneid]['long'].'</th></tr></table>'."\n";
+    $acc_title = '<table width="100%"><tr style="cursor:pointer;"><th>'.$user->lang[$zoneid]['long'].'</th></tr></table>'."\n";
     
     $zbcode = '<table width="100%" border="0" cellspacing="1" cellpadding="2">';
     $zbcode .= '<tr><th>'.$user->lang['bs_ol_in'].'</th><th>'.$user->lang['bs_ol_fd'].'</th><th>'.$user->lang['bs_ol_ld'].'</th><th>'.$user->lang['bs_ol_co'].'</th></tr>';    

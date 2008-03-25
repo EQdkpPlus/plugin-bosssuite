@@ -166,7 +166,7 @@ $bl_acc_array = array();
 
 //Dropped loot
 if ($bl_cloot != ''){
-    $bl_acc_title = '<table width="100%"><tr><th>'.$user->lang['bl_dl'].'</th></tr></table>';
+    $bl_acc_title = '<table width="100%"><tr style="cursor:pointer;"><th>'.$user->lang['bl_dl'].'</th></tr></table>';
     $bl_acc_content = "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
     $bl_acc_content .= "\t\t\t".'<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>'."\n";
     $bl_acc_content .= "\t\t\t".$bl_cloot."\n";
@@ -177,7 +177,7 @@ if ($bl_cloot != ''){
 
 //never dropped loot
 if ($bl_ndloot != ''){
-    $bl_acc_title = '<table width="100%"><tr><th>'.$user->lang['bl_ndl'].'</th></tr></table>'."\n";
+    $bl_acc_title = '<table width="100%"><tr style="cursor:pointer;"><th>'.$user->lang['bl_ndl'].'</th></tr></table>'."\n";
     $bl_acc_content = "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
     $bl_acc_content .= "\t\t\t".'<tr class="row2"><th colspan="3">'.$user->lang['bl_itemname'].'</th></tr>'."\n";
     $bl_acc_content .= $bl_ndloot;
@@ -188,7 +188,7 @@ if ($bl_ndloot != ''){
 
 //wrong loot
 if (($bl_conf['show_wl'] == true) && ($bl_wloot != '')){
-    $bl_acc_title = '<table width="100%"><tr><th>'.$user->lang['bl_wl'].'</th></tr></table>'."\n";
+    $bl_acc_title = '<table width="100%"><tr style="cursor:pointer;"><th>'.$user->lang['bl_wl'].'</th></tr></table>'."\n";
     $bl_acc_content = "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
     $bl_acc_content .= "\t\t\t".'<tr class="row2"><th>'.$user->lang['bl_itemname'].'</th><th>'.$user->lang['bl_itemcount'].'</th><th>'.$user->lang['bl_droprate'].'</th></tr>'."\n";
     $bl_acc_content .= $bl_wloot;
