@@ -45,13 +45,17 @@ if ($_POST['bpsavebu']){
 	$zone_offsets = $mybssql->get_zone_offsets();
 	
 	foreach ($bzone as $zoneid => $bosslist){
-		$fdate = mktime(0,0,0,$_POST['fdm_'.$zoneid],$_POST['fdd_'.$zoneid],$_POST['fdY_'.$zoneid]);
-		$ldate = mktime(0,0,0,$_POST['ldm_'.$zoneid],$_POST['ldd_'.$zoneid],$_POST['ldY_'.$zoneid]);
-		$mybssql->update_zone_offsets($zone_offsets, $zoneid, $fdate, $ldate, $_POST['co_'.$zoneid]);
+		/*$fdate = mktime(0,0,0,$_POST['fdm_'.$zoneid],$_POST['fdd_'.$zoneid],$_POST['fdY_'.$zoneid]);
+		$ldate = mktime(0,0,0,$_POST['ldm_'.$zoneid],$_POST['ldd_'.$zoneid],$_POST['ldY_'.$zoneid]);*/
+		$fdate = bs_text2date($_POST['dp_fd_'.$zoneid], true);
+		$ldate = bs_text2date($_POST['dp_ld_'.$zoneid], false);
+    $mybssql->update_zone_offsets($zone_offsets, $zoneid, $fdate, $ldate, $_POST['co_'.$zoneid]);
 
 		foreach ($bosslist as $bossid){
-			$fdate = mktime(0,0,0,$_POST['fdm_'.$bossid],$_POST['fdd_'.$bossid],$_POST['fdY_'.$bossid]);
-			$ldate = mktime(0,0,0,$_POST['ldm_'.$bossid],$_POST['ldd_'.$bossid],$_POST['ldY_'.$bossid]);
+			/*$fdate = mktime(0,0,0,$_POST['fdm_'.$bossid],$_POST['fdd_'.$bossid],$_POST['fdY_'.$bossid]);
+			$ldate = mktime(0,0,0,$_POST['ldm_'.$bossid],$_POST['ldd_'.$bossid],$_POST['ldY_'.$bossid]);*/
+			$fdate = bs_text2date($_POST['dp_fd_'.$bossid], true);
+		  $ldate = bs_text2date($_POST['dp_ld_'.$bossid], false);
 			$mybssql->update_boss_offsets($boss_offsets, $bossid, $fdate, $ldate, $_POST['co_'.$bossid]);
 		}
 	}
@@ -77,14 +81,16 @@ foreach ($bzone as $zoneid => $bosslist){
     $zbcode .= '<tr>';
     $zbcode .= '<td width="40%" class="row2">' .$user->lang[$zoneid]['long']. '</td>';
     $zbcode .= '<td class="row1">';
-    $zbcode .= '<input type="text" name="fdm_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%m',$zobe_offsets[$zoneid]['fd']) .'" class="input" />/';
-    $zbcode .= '<input type="text" name="fdd_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%d',$zone_offsets[$zoneid]['fd']) .'" class="input" />/';
-    $zbcode .= '<input type="text" name="fdY_' . $zoneid .'" size="5" maxlength="4" value="' . strftime('%Y',$zone_offsets[$zoneid]['fd']) .'" class="input" />';
+    $zbcode .= $bs_adm_jquery->Calendar("dp_fd_".$zoneid, bs_date2text($zone_offsets[$zoneid]['fd']), '', $user->lang['bs_out_date_format']);
+    //$zbcode .= '<input type="text" name="fdm_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%m',$zobe_offsets[$zoneid]['fd']) .'" class="input" />/';
+    //$zbcode .= '<input type="text" name="fdd_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%d',$zone_offsets[$zoneid]['fd']) .'" class="input" />/';
+    //$zbcode .= '<input type="text" name="fdY_' . $zoneid .'" size="5" maxlength="4" value="' . strftime('%Y',$zone_offsets[$zoneid]['fd']) .'" class="input" />';
     $zbcode .= '</td>';
     $zbcode .= '<td class="row1">';
-    $zbcode .= '<input type="text" name="ldm_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%m',$zone_offsets[$zoneid]['ld']) .'" class="input" />/';
-    $zbcode .= '<input type="text" name="ldd_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%d',$zone_offsets[$zoneid]['ld']) .'" class="input" />/';
-    $zbcode .= '<input type="text" name="ldY_' . $zoneid .'" size="5" maxlength="4" value="' . strftime('%Y',$zone_offsets[$zoneid]['ld']) .'" class="input" />';
+    $zbcode .= $bs_adm_jquery->Calendar("dp_ld_".$zoneid, bs_date2text($zone_offsets[$zoneid]['ld']), '', $user->lang['bs_out_date_format']);
+    //$zbcode .= '<input type="text" name="ldm_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%m',$zone_offsets[$zoneid]['ld']) .'" class="input" />/';
+    //$zbcode .= '<input type="text" name="ldd_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%d',$zone_offsets[$zoneid]['ld']) .'" class="input" />/';
+    //$zbcode .= '<input type="text" name="ldY_' . $zoneid .'" size="5" maxlength="4" value="' . strftime('%Y',$zone_offsets[$zoneid]['ld']) .'" class="input" />';
     $zbcode .= '</td>';
     $zbcode .= '<td class="row1"><input type="text" name="co_' . $zoneid .'" size="3" value="' . $zone_offsets[$zoneid]['counter'] . '" class="input" /></td>';
     $zbcode .= '</tr>';
@@ -93,14 +99,16 @@ foreach ($bzone as $zoneid => $bosslist){
     		$zbcode .= '<tr>';
     		$zbcode .= '<td class="row2">' . $user->lang[$bossid]['long'] . '</td>';
     		$zbcode .= '<td class="row1">';
-    		$zbcode .= '<input type="text" name="fdm_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%m',$boss_offsets[$bossid]['fd']) .'" class="input" />/';
-    		$zbcode .= '<input type="text" name="fdd_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%d',$boss_offsets[$bossid]['fd']) .'" class="input" />/';
-    		$zbcode .= '<input type="text" name="fdY_' . $bossid .'" size="5" maxlength="4" value="' . strftime('%Y',$boss_offsets[$bossid]['fd']) .'" class="input" />';
+    		$zbcode .= $bs_adm_jquery->Calendar("dp_fd_".$bossid, bs_date2text($boss_offsets[$bossid]['fd']), '', $user->lang['bs_out_date_format']);
+    		//$zbcode .= '<input type="text" name="fdm_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%m',$boss_offsets[$bossid]['fd']) .'" class="input" />/';
+    		//$zbcode .= '<input type="text" name="fdd_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%d',$boss_offsets[$bossid]['fd']) .'" class="input" />/';
+    		//$zbcode .= '<input type="text" name="fdY_' . $bossid .'" size="5" maxlength="4" value="' . strftime('%Y',$boss_offsets[$bossid]['fd']) .'" class="input" />';
     		$zbcode.= '</td>';
     		$zbcode .= '<td class="row1">';
-    		$zbcode .= '<input type="text" name="ldm_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%m',$boss_offsets[$bossid]['ld']) .'" class="input" />/';
-    		$zbcode .= '<input type="text" name="ldd_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%d',$boss_offsets[$bossid]['ld']) .'" class="input" />/';
-    		$zbcode .= '<input type="text" name="ldY_' . $bossid .'" size="5" maxlength="4" value="' . strftime('%Y',$boss_offsets[$bossid]['ld']) .'" class="input" />';
+    		$zbcode .= $bs_adm_jquery->Calendar("dp_ld_".$bossid, bs_date2text($boss_offsets[$bossid]['ld']), '', $user->lang['bs_out_date_format']);
+        //$zbcode .= '<input type="text" name="ldm_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%m',$boss_offsets[$bossid]['ld']) .'" class="input" />/';
+    		//$zbcode .= '<input type="text" name="ldd_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%d',$boss_offsets[$bossid]['ld']) .'" class="input" />/';
+    		//$zbcode .= '<input type="text" name="ldY_' . $bossid .'" size="5" maxlength="4" value="' . strftime('%Y',$boss_offsets[$bossid]['ld']) .'" class="input" />';
     		$zbcode.= '</td>';
     		$zbcode .= '<td class="row1"><input type="text" name="co_' . $bossid .'" size="3" value="' . $boss_offsets[$bossid]['counter'] .'" class="input" /></td>';
     		$zbcode .= '</tr>';
@@ -113,7 +121,7 @@ foreach ($bzone as $zoneid => $bosslist){
 //Output
 $tpl->assign_vars(array(
 	'F_CONFIG'      => 'offsets.php' . $SID,
-	'L_OFFSET_INFO' => $user->lang['bs_ol_dateFormat'],
+	'L_OFFSET_INFO' => $user->lang['bs_ol_dateFormat'].$user->lang['bs_out_date_format'],
 	'L_SUBMIT'      => $user->lang['bs_ol_submit'],
   'OFFSET_CONFIG' => $bs_adm_jquery->accordion('bs_off_accordion', $bs_off_acc_array),
   'JS_ABOUT'      => $bs_adm_jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
@@ -128,3 +136,30 @@ $eqdkp->set_vars(array (
 	'display' => true
 	)
 );
+
+function bs_date2text($date) {
+global $user;
+	if (($date == BS_MAX_DATE) or ($date == BS_MIN_DATE)) {
+		return '';
+	} else {
+		return strftime($user->lang['dateFormat'], $date);
+	}
+}
+
+function bs_text2date($text, $max_date) {
+  global $user;
+  if (($text == $user->lang['never']) || ($text == '')){
+    if ($max_date){
+      return BS_MAX_DATE;
+    } else {
+      return BS_MIN_DATE;
+    }
+  } else {
+    $day = substr($text, $user->lang['bs_date_day']['start'], $user->lang['bs_date_day']['length']);
+    $month = substr($text, $user->lang['bs_date_month']['start'], $user->lang['bs_date_month']['length']);
+    $year = substr($text, $user->lang['bs_date_year']['start'], $user->lang['bs_date_year']['length']);
+    return mktime(0,0,0,$month,$day,$year);
+  }
+}
+
+?>

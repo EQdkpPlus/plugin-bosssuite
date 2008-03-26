@@ -36,12 +36,12 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 		$this->pm->get_language_pack('bosssuite');
 
 		$this->add_data(array (
-			'name' => '<A HREF="'. $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php" title="'.$user->lang['bs_short_desc'].'" TARGET="_top">BossSuite 4 - MGS</A>',
+			'name' => '<A HREF="'. $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php" title="'.$user->lang['bs_short_desc'].'" style="cursor:help;" TARGET="_top">BossSuite 4 - MGS</A>',
 			'code' => 'bosssuite',
 			'path' => 'bosssuite',
 			'contact' => 'sz3@gmx.net',
 			'template_path' => 'plugins/bosssuite/templates/',
-			'version' => '4.0.beta2'
+			'version' => '4.0.beta3'
 		));
 
 		//Permissions
@@ -161,7 +161,7 @@ function gen_main_menu1() {
 
 			$admin_menu = array (
 				'bosssuite' => array (
-					0 => '<A HREF="'. $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php" title="'.$user->lang['bs_short_desc'].'" TARGET="_top">'.$user->lang['bs_am_title'].'</A>',
+					0 => '<A HREF="'. $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php" style="cursor:help;" title="'.$user->lang['bs_short_desc'].'" TARGET="_top">'.$user->lang['bs_am_title'].'</A>',
 					1 => array (
 						'link' => $url_prefix . 'plugins/bosssuite/admin/settings.php' . $SID,
 						'text' => $user->lang['bs_am_conf'],

@@ -36,7 +36,7 @@ if ( !class_exists( "BLSQL" ) ) {
 
       function get_db_data($bb_conf, $boss) {
       global $db, $table_prefix;
-        
+        echo($table_prefix);
         $delim = array (
           'rnote' => '/'.$bb_conf['noteDelim'].'/',
           'rname' => '/'.$bb_conf['nameDelim'].'/'

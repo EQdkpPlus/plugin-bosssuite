@@ -48,10 +48,15 @@ $lang = array(
 'bs_source_cache' => 'Cache',
 'bs_al_showZone' => 'Auswahl der Zonen die in diesem Plugin angezeigt werden sollen:',
 'lang' => 'german',
+
 'dateFormat' => '%d.%m.%Y',
+'bs_out_date_format' => 'dd.mm.yy', 
+'bs_date_day' => array('start' => 0, 'length' => 2),
+'bs_date_month' => array('start' => 3, 'length' => 2), 
+'bs_date_year' => array('start' => 6, 'length' => 4),
 
 // offset page
-'bs_ol_dateFormat' => 'Das Datumsformat ist: MM/DD/YYYY',
+'bs_ol_dateFormat' => 'Das Datumsformat ist: ',
 'bs_ol_in' => 'Name',
 'bs_ol_fd' => 'Erstes Datum',
 'bs_ol_ld' => 'Letztes Datum',
