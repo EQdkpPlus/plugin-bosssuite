@@ -37,7 +37,13 @@ $mybsmgs->load_game_specific_language('bossbase');
 require(dirname(__FILE__).'/../include/bssql.class.php');
 $mybssql = new BSSQL();
 
-$bzone = $mybssql->get_bzone();
+$full_bzone = $mybssql->get_bzone();
+
+if (isset($_POST['offset_zoneselect']) && $_POST['offset_zoneselect'] != 'all_zones'){
+  $bzone[$_POST['offset_zoneselect']] = $full_bzone[$_POST['offset_zoneselect']];
+}else{
+  $bzone = $full_bzone;
+}
 
 // Saving
 if ($_POST['bpsavebu']){
@@ -45,15 +51,11 @@ if ($_POST['bpsavebu']){
 	$zone_offsets = $mybssql->get_zone_offsets();
 	
 	foreach ($bzone as $zoneid => $bosslist){
-		/*$fdate = mktime(0,0,0,$_POST['fdm_'.$zoneid],$_POST['fdd_'.$zoneid],$_POST['fdY_'.$zoneid]);
-		$ldate = mktime(0,0,0,$_POST['ldm_'.$zoneid],$_POST['ldd_'.$zoneid],$_POST['ldY_'.$zoneid]);*/
 		$fdate = bs_text2date($_POST['dp_fd_'.$zoneid], true);
 		$ldate = bs_text2date($_POST['dp_ld_'.$zoneid], false);
     $mybssql->update_zone_offsets($zone_offsets, $zoneid, $fdate, $ldate, $_POST['co_'.$zoneid]);
 
 		foreach ($bosslist as $bossid){
-			/*$fdate = mktime(0,0,0,$_POST['fdm_'.$bossid],$_POST['fdd_'.$bossid],$_POST['fdY_'.$bossid]);
-			$ldate = mktime(0,0,0,$_POST['ldm_'.$bossid],$_POST['ldd_'.$bossid],$_POST['ldY_'.$bossid]);*/
 			$fdate = bs_text2date($_POST['dp_fd_'.$bossid], true);
 		  $ldate = bs_text2date($_POST['dp_ld_'.$bossid], false);
 			$mybssql->update_boss_offsets($boss_offsets, $bossid, $fdate, $ldate, $_POST['co_'.$bossid]);
@@ -66,6 +68,23 @@ $zone_offsets = $mybssql->get_zone_offsets();
 
 # Output
 ####################################################
+//minimum item quality setting
+$tpl->assign_block_vars('offset_select_row', array (
+	        'VALUE' => 'all_zones',
+	        'SELECTED' => (isset($_POST['offset_zoneselect']) &&  $_POST['offset_zoneselect'] == 'all_zones') ? ' selected="selected"' : '',
+	        'OPTION' => $user->lang['all_zones']
+		)
+);
+
+foreach ($full_bzone as $zoneid => $bosses) {
+    $tpl->assign_block_vars('offset_select_row', array (
+	        'VALUE' => $zoneid,
+	        'SELECTED' => (isset($_POST['offset_zoneselect']) &&  $_POST['offset_zoneselect'] == $zoneid) ? ' selected="selected"' : '',
+	        'OPTION' => $user->lang[$zoneid]['long']
+		)
+	);
+}
+
 require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
 $bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
 require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
@@ -82,15 +101,9 @@ foreach ($bzone as $zoneid => $bosslist){
     $zbcode .= '<td width="40%" class="row2">' .$user->lang[$zoneid]['long']. '</td>';
     $zbcode .= '<td class="row1">';
     $zbcode .= $bs_adm_jquery->Calendar("dp_fd_".$zoneid, bs_date2text($zone_offsets[$zoneid]['fd']), '', $user->lang['bs_out_date_format']);
-    //$zbcode .= '<input type="text" name="fdm_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%m',$zobe_offsets[$zoneid]['fd']) .'" class="input" />/';
-    //$zbcode .= '<input type="text" name="fdd_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%d',$zone_offsets[$zoneid]['fd']) .'" class="input" />/';
-    //$zbcode .= '<input type="text" name="fdY_' . $zoneid .'" size="5" maxlength="4" value="' . strftime('%Y',$zone_offsets[$zoneid]['fd']) .'" class="input" />';
     $zbcode .= '</td>';
     $zbcode .= '<td class="row1">';
     $zbcode .= $bs_adm_jquery->Calendar("dp_ld_".$zoneid, bs_date2text($zone_offsets[$zoneid]['ld']), '', $user->lang['bs_out_date_format']);
-    //$zbcode .= '<input type="text" name="ldm_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%m',$zone_offsets[$zoneid]['ld']) .'" class="input" />/';
-    //$zbcode .= '<input type="text" name="ldd_' . $zoneid .'" size="3" maxlength="2" value="' . strftime('%d',$zone_offsets[$zoneid]['ld']) .'" class="input" />/';
-    //$zbcode .= '<input type="text" name="ldY_' . $zoneid .'" size="5" maxlength="4" value="' . strftime('%Y',$zone_offsets[$zoneid]['ld']) .'" class="input" />';
     $zbcode .= '</td>';
     $zbcode .= '<td class="row1"><input type="text" name="co_' . $zoneid .'" size="3" value="' . $zone_offsets[$zoneid]['counter'] . '" class="input" /></td>';
     $zbcode .= '</tr>';
@@ -100,15 +113,9 @@ foreach ($bzone as $zoneid => $bosslist){
     		$zbcode .= '<td class="row2">' . $user->lang[$bossid]['long'] . '</td>';
     		$zbcode .= '<td class="row1">';
     		$zbcode .= $bs_adm_jquery->Calendar("dp_fd_".$bossid, bs_date2text($boss_offsets[$bossid]['fd']), '', $user->lang['bs_out_date_format']);
-    		//$zbcode .= '<input type="text" name="fdm_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%m',$boss_offsets[$bossid]['fd']) .'" class="input" />/';
-    		//$zbcode .= '<input type="text" name="fdd_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%d',$boss_offsets[$bossid]['fd']) .'" class="input" />/';
-    		//$zbcode .= '<input type="text" name="fdY_' . $bossid .'" size="5" maxlength="4" value="' . strftime('%Y',$boss_offsets[$bossid]['fd']) .'" class="input" />';
     		$zbcode.= '</td>';
     		$zbcode .= '<td class="row1">';
     		$zbcode .= $bs_adm_jquery->Calendar("dp_ld_".$bossid, bs_date2text($boss_offsets[$bossid]['ld']), '', $user->lang['bs_out_date_format']);
-        //$zbcode .= '<input type="text" name="ldm_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%m',$boss_offsets[$bossid]['ld']) .'" class="input" />/';
-    		//$zbcode .= '<input type="text" name="ldd_' . $bossid .'" size="3" maxlength="2" value="' . strftime('%d',$boss_offsets[$bossid]['ld']) .'" class="input" />/';
-    		//$zbcode .= '<input type="text" name="ldY_' . $bossid .'" size="5" maxlength="4" value="' . strftime('%Y',$boss_offsets[$bossid]['ld']) .'" class="input" />';
     		$zbcode.= '</td>';
     		$zbcode .= '<td class="row1"><input type="text" name="co_' . $bossid .'" size="3" value="' . $boss_offsets[$bossid]['counter'] .'" class="input" /></td>';
     		$zbcode .= '</tr>';
@@ -121,6 +128,7 @@ foreach ($bzone as $zoneid => $bosslist){
 //Output
 $tpl->assign_vars(array(
 	'F_CONFIG'      => 'offsets.php' . $SID,
+	'L_OFFSET_ZONESELECT' => $user->lang['bs_ol_zoneselect'],
 	'L_OFFSET_INFO' => $user->lang['bs_ol_dateFormat'].$user->lang['bs_out_date_format'],
 	'L_SUBMIT'      => $user->lang['bs_ol_submit'],
   'OFFSET_CONFIG' => $bs_adm_jquery->accordion('bs_off_accordion', $bs_off_acc_array),

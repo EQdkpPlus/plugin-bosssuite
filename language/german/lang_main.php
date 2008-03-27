@@ -77,6 +77,8 @@ $lang = array(
 'bosskillcount' => 'Siegesanzahl: ',
 'status' => 'Status: ',
 'never' => 'Niemals',
+'all_zones' => 'alle Zonen',
+'bs_ol_zoneselect' => 'Auswahl der Zone(n):',
 
 'opt_general' => 'Allgemeine Einstellungen',
 'opt_dynloc' => 'Verstecke Zonen ohne Siege über Bosse?',

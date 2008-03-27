@@ -77,6 +77,8 @@ $lang = array(
 'bosskillcount' => 'Kill count: ',
 'status' => 'Status: ',
 'never' => 'Never',
+'all_zones' => 'all zones',
+'bs_ol_zoneselect' => 'Zone selection:',
 
 'opt_general' => 'General settings',
 'opt_dynloc' => 'Hide zones with no boss kills?',
