@@ -148,8 +148,8 @@ if ($bl_conf['show_ndl'] == true){
 				}else{
 					$is_itemname = $name;
 				}
-				//$bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'itemstats/updateitem.php?item='.urlencode(urlencode($name)).'">'.$is_itemname.'</a></td></tr>'."\n";
-				$bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3">'.$is_itemname.'</td></tr>'."\n";
+        $bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'plugins/bosssuite/bs_update_item.php?item='.urlencode(urlencode($name)).'">'.$is_itemname.'</a></td></tr>'."\n";
+				//$bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3">'.$is_itemname.'</td></tr>'."\n";
 				$printed2++;
 			}
 		}
@@ -160,8 +160,6 @@ if($bl_conf['eyecandy'] == true){
 
 # Output
 ####################################################
-
-
 $bl_acc_array = array();
 
 //Dropped loot
@@ -177,7 +175,11 @@ if ($bl_cloot != ''){
 
 //never dropped loot
 if ($bl_ndloot != ''){
-    $bl_acc_title = '<table width="100%"><tr style="cursor:pointer;"><th>'.$user->lang['bl_ndl'].'</th></tr></table>'."\n";
+    if ($bb_conf['source'] == 'offsets'){
+      $bl_acc_title = '<table width="100%"><tr style="cursor:pointer;"><th>'.$user->lang['bl_loottable_offsets'].'</th></tr></table>'."\n";
+    }else{
+      $bl_acc_title = '<table width="100%"><tr style="cursor:pointer;"><th>'.$user->lang['bl_ndl'].'</th></tr></table>'."\n";
+    }
     $bl_acc_content = "\t\t".'<table width="100%" border="0" cellspacing="1" cellpadding="2">'."\n";
     $bl_acc_content .= "\t\t\t".'<tr class="row2"><th colspan="3">'.$user->lang['bl_itemname'].'</th></tr>'."\n";
     $bl_acc_content .= $bl_ndloot;
@@ -213,7 +215,12 @@ if ($bl_cloot != ''){
 
 //never dropped loot
 if ($bl_ndloot != ''){
-    $bl_out .= '<tr><td><table width="100%"><tr class="row2"<th colspan="3" align="center">'.$user->lang['bl_ndl'].'</th></tr>'."\n";
+    if ($bb_conf['source'] == 'offsets'){
+      $bl_out .= '<tr><td><table width="100%"><tr class="row2"<th colspan="3" align="center">'.$user->lang['bl_loottable_offsets'].'</th></tr>'."\n";
+    }else{
+      $bl_out .= '<tr><td><table width="100%"><tr class="row2"<th colspan="3" align="center">'.$user->lang['bl_ndl'].'</th></tr>'."\n";
+    }
+    
     $bl_out .= '<tr class="row2"><th colspan="3">'.$user->lang['bl_itemname'].'</th></tr>'."\n";
     $bl_out .= $bl_ndloot;
     $bl_out .= '<tr><td colspan="3" align="right">' . $printed2 . ' '.$user->lang['bl_itemsfound'].'</td></tr>'."\n";

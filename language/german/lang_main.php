@@ -121,7 +121,7 @@ $lang = array(
 'bl_credits_bi' => 'Bossbilder: ',
 'bl_no_lootlist_credits' => 'keine Lootliste gefunden/ausgewählt',
 'bl_no_bossimages_credits' => 'keine Credits für die BossBilder gefunden',
-
+'bl_loottable_offsets' => '(Offset Modus) Gegenstandsliste:',
 'item_qual_-1' => 'alle',
 
 //About page
@@ -148,7 +148,9 @@ $lang = array(
 'bs_bp_style_ztext_none' => 'garnicht',
 'bs_bp_style_ztext_png' => 'png',
 'bs_bp_style_ztext_text' => 'Text',
-'bl_opt_lootlist' => 'Einstellungen für Lootlisten, funktionieren nur, wenn eine Lootliste ausgewählt wurde'
+'bl_opt_lootlist' => 'Einstellungen für Lootlisten, funktionieren nur, wenn eine Lootliste ausgewählt wurde',
+
+'bs_updateitem_l_name' => 'Updateseite für',
 );
 
 ?>

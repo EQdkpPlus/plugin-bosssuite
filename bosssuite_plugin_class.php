@@ -41,7 +41,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 			'path' => 'bosssuite',
 			'contact' => 'sz3@gmx.net',
 			'template_path' => 'plugins/bosssuite/templates/',
-			'version' => '4.0.beta4'
+			'version' => '4.0.beta5'
 		));
 
 		//Permissions

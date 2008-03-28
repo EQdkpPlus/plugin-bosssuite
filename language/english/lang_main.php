@@ -103,7 +103,7 @@ $lang = array(
 'bl_itemname' => 'Item name',
 'bl_itemcount' => 'Drop count',
 'bl_droprate' => 'Drop rate',
-
+'bl_loottable_offsets' => '(Offset mode) Item list:',
 'bl_dl' => 'Dropped loot',
 'bl_ndl' => 'Never dropped loot',
 'bl_wl' => 'Wrong assigned/unclear loot',
@@ -152,7 +152,9 @@ $lang = array(
 'bs_bp_style_ztext_none' => 'none',
 'bs_bp_style_ztext_png' => 'png',
 'bs_bp_style_ztext_text' => 'text',
-'bl_opt_lootlist' => 'Lootlist options, only work if a lootlist is selected'
+'bl_opt_lootlist' => 'Lootlist options, only work if a lootlist is selected',
+
+'bs_updateitem_l_name' => 'Updatepage for',
 );
 
 ?>

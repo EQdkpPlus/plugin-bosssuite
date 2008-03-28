@@ -21,15 +21,16 @@ if ( !class_exists( "BLSQL" ) ) {
           if ($bb_conf['source'] == 'database'){
             $data = $this->get_db_data($bb_conf, $bossid);
           } else if ($bb_conf['source'] == 'offsets'){
-            message_die("Source = offsets => no loot!");
+            $bb_boffs = $this->get_boss_offsets();
+            $data['kc'] = $bb_boffs[$bossid]['counter'];
           } else if ($bb_conf['source'] == 'both'){
             $data = $this->get_db_data($bb_conf, $bossid);  
             $bb_boffs = $this->get_boss_offsets();
-            $data['kc'] +=  $bb_boffs[$bossid]['counter'];
+            $data['kc'] += $bb_boffs[$bossid]['counter'];
           } else if ($bb_conf['source'] == 'cache'){
             $data = $this->get_db_data($bb_conf, $bossid);  
             $bb_boffs = $this->get_boss_offsets();
-            $data['kc'] +=  $bb_boffs[$bossid]['counter'];
+            $data['kc'] += $bb_boffs[$bossid]['counter'];
           }
           return $data;
       }
