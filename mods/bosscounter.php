@@ -53,7 +53,9 @@ if (!$mybsmgs->game_supported('bossbase')){
 
   require_once(dirname(__FILE__).'/../include/bslink.class.php');
   $mybslink = new BSLINK($bc_conf['linkurl'], $bc_conf['linklength']);
-
+  
+  global $jqueryp;
+  
   if (($bc_conf['eyecandy'] == 1) && (isset($jqueryp))){
       # Output
       ####################################################
