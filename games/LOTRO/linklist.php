@@ -13,7 +13,14 @@ $idlist['default'] = array(
     'ferndur' => '6109',
     'bogbereth' => 'bogbereth',
     
-    /******Helegrod*****/
+    /*******Annuminas*************/
+    'nengon' => '6109',
+    'guloth' => 'Guloth',
+    'balhest' => 'Balhest',
+    'shingrinder' => 'Shingrinder',
+    'valandil' => 'Dolvaethor',
+	
+	/******Helegrod*****/
     'servants' => '12435',
     'grisgart' => '13020',
     'zaudru' => '12017', 

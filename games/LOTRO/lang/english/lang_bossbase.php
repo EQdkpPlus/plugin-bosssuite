@@ -9,6 +9,16 @@ $lang['misc'] = array('long' => 'Miscellaneous bosses', 'short' => 'Misc');
 $lang['ferndur'] = array('long' => 'Ferndur', 'short' => 'Ferndur');
 $lang['bogbereth'] = array('long' => 'Bogbereth', 'short' => 'Bogbereth');
 
+/********Annuminas************/
+$lang['glinghant'] = array('long' => 'Annuminas - Glinghant', 'short' => 'Annu - Garden');
+$lang['nengon'] = array('long' => 'Nengon', 'short' => 'Nengon');
+$lang['ost_elendil'] = array('long' => 'Annuminas - Ost Elendil', 'short' => 'Annu - Palace');
+$lang['guloth'] = array('long' => 'Guloth', 'short' => 'Guloth');
+$lang['balhest'] = array('long' => 'Balhest', 'short' => 'Balhest');
+$lang['haudh_valandil'] = array('long' => 'Annuminas - Haudh Valandil', 'short' => 'Annu - Tomb');
+$lang['shingrinder'] = array('long' => 'Shingrinder', 'short' => 'Shingrinder');
+$lang['valandil'] = array('long' => 'Valandil of Arnor', 'short' => 'Valandil');
+
 /******Helegrod*****/
 $lang['helegrod'] = array('long' => 'Helegrod', 'short' => 'Helegrod');
 $lang['servants'] = array('long' => 'Servants Four', 'short' => 'Servants');

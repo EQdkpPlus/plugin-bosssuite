@@ -5,24 +5,12 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $bzone = array (
-'misc' => array (
-    'ferndur',
-    'bogbereth'
-),
 'helegrod' => array (
     'servants',
     'grisgart',
     'zaudru',
     'storvagun',
     'thorog',
-),
-'fornost' => array (
-    'brogadan',
-    'megoriath',
-    'rhavameldir',
-    'warchief_burzghash',
-    'zhurmat',
-    'remmenaeg',
 ),
 'rift' => array (
     'barz',
@@ -37,6 +25,17 @@ $bzone = array (
 'barad_gularan' => array (
   	'wisdan',
   	'udonion',
+),
+'glinghant' => array (
+	'nengon',
+),
+'ost_elendil' => array (
+	'guloth',
+	'balhest',
+),
+'haudh_valandil' => array (
+	'shingrinder',
+	'valandil',
 ),
 'urugarth' => array (
     'sorkrank',
@@ -63,6 +62,18 @@ $bzone = array (
     'mura',
     'gurthal',
     'mordirith',
+),
+'misc' => array (
+    'ferndur',
+    'bogbereth'
+),
+'fornost' => array (
+    'brogadan',
+    'megoriath',
+    'rhavameldir',
+    'warchief_burzghash',
+    'zhurmat',
+    'remmenaeg',
 )
 );
 
