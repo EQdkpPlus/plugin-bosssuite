@@ -17,7 +17,7 @@ $lang = array(
 //Permissions
 'bs_pm_conf' => 'configure',
 'bs_pm_offs' => 'offsets',
-'bs_bp_view' => 'view BossProgresss',
+'bs_bp_view' => 'view BossProgress',
 'bs_bl_view' => 'view BossLoot',
 'bs_bc_view' => 'view BossCounter',
 

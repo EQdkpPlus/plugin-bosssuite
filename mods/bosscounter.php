@@ -95,7 +95,7 @@ if (!$mybsmgs->game_supported('bossbase')){
       {
       	if ((!$bc_conf['dynZone']) or ($data[$zone]['zk'] > 0))
       	{
-      		$bcout .=  '<tr><th align="left">'.$user->lang[$zone]['short'].'</th><th align="right">'.$data[$zone]['zk'].'/'.sizeof($data[$zone]['bosses']).'</th></tr>'."\n";
+      		$bcout .=  '<tr><th align="left">'.$user->lang[$zone][$bc_conf['zonelength']].'</th><th align="right">'.$data[$zone]['zk'].'/'.sizeof($data[$zone]['bosses']).'</th></tr>'."\n";
       		$bi = 1; //row number 1/2
       		foreach($bosses as $boss){
       			if ((!$bc_conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)){
@@ -116,7 +116,7 @@ if (!$mybsmgs->game_supported('bossbase')){
   foreach ($sbzone as $zone => $bosses)
   {
   		  $bchout .= '<tr class="row'.($bi+1).'" align="left">'."\n";
-  			$bchout .= '<td colspan="8" style="text-decoration:underline"><span style="font-size:1em">'.$user->lang[$zone]['long'].'</span></td></tr>'."\n";
+  			$bchout .= '<td colspan="8" style="text-decoration:underline"><span style="font-size:1em">'.$user->lang[$zone][$bc_conf['zonelength']].'</span></td></tr>'."\n";
   		  $bchout .= '<tr class="row'.($bi+1).'">'."\n";
   		  $i=0;
 
