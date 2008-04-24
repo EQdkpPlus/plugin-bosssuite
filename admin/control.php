@@ -1,13 +1,10 @@
 <?php
 /******************************
- * EQdkp BossBase
- * by sz3
- * 
- * Copyright 2006
- * Licensed under the GNU GPL.  See COPYING for full terms.
- * ------------------
- * control.php
- * 01.06.07 sz3
+ * EQdkp BossSuite
+ * (c) 2006 - 2008
+ * created by sz3 
+ * ---------------------------
+ * $Id$
  ******************************/
 
 // EQdkp required files/vars

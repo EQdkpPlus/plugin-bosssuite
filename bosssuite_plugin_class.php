@@ -1,13 +1,10 @@
 <?php
 /******************************
- * EQdkp BossSuite4
- * by sz3
- * 
- * Copyright 2006
- * Licensed under the GNU GPL.  See COPYING for full terms.
- * ------------------
- * bosssuite_plugin_class.php
- * 19.01.08 sz3
+ * EQdkp BossSuite
+ * (c) 2006 - 2008
+ * created by sz3 
+ * ---------------------------
+ * $Id$
  ******************************/
 
 if (!defined('EQDKP_INC')) {

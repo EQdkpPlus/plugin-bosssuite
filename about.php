@@ -1,11 +1,10 @@
 <?php
 /******************************
- * EQdkp RaidPlan
- * (c) 2005 - 2007
- * past dev by Urox, A.Stranger
- * continued by Wallenium 
+ * EQdkp BossSuite
+ * (c) 2006 - 2008
+ * created by sz3 
  * ---------------------------
- * $Id: about.php 1423 2008-02-07 22:11:09Z wallenium $
+ * $Id$
  ******************************/
 
 define('EQDKP_INC', true);

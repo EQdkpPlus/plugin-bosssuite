@@ -1,13 +1,10 @@
 <?php
 /******************************
- * EQdkp Bossprogress2
- * by sz3
- *  
- * Copyright 2006
- * Licensed under the GNU GPL.  See COPYING for full terms.
- * ------------------
- * bp_functions.php
-
+ * EQdkp BossSuite
+ * (c) 2006 - 2008
+ * created by sz3 
+ * ---------------------------
+ * $Id$
  ******************************/
 
 if ( !defined('EQDKP_INC') ){

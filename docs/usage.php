@@ -1,20 +1,10 @@
 <?php
 /******************************
- * EQdkp BossBase
- * by sz3
- * 
- * Additional Credits should go to 
- * Corgan's bosscounter mod
- * Wallenium's ItemSpecials plugin
- * Magnus' raidprogress plugin
- * 
- * which all lend inspiration and/or code bits 
- *  
- * Copyright 2006
- * Licensed under the GNU GPL.  See COPYING for full terms.
- * ------------------
- * settings.php
- * 22.01.07 sz3
+ * EQdkp BossSuite
+ * (c) 2006 - 2008
+ * created by sz3 
+ * ---------------------------
+ * $Id$
  ******************************/
 
 // EQdkp required files/vars

@@ -1,14 +1,11 @@
 <?php
-/*********************************************************************
- *
- *     EQdkp BossLoot by sz3
- *
- *     loot extracted from
- *         Daviesh' AtlasLoot WoW Addon
- *
- *     Licensed under the GNU GPL.  See COPYING for full terms.
- *
-*********************************************************************/
+/******************************
+ * EQdkp BossSuite
+ * (c) 2006 - 2008
+ * created by sz3 
+ * ---------------------------
+ * $Id$
+ ******************************/
 
 $lang = array(
     //Item languages

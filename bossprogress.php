@@ -1,21 +1,10 @@
 <?php
 /******************************
- * EQdkp Bossprogress2
- * by sz3
- * 
- * Additional Credits should go to 
- * Corgan's bosscounter mod
- * Wallenium's ItemSpecials plugin
- * Magnus' raidprogress plugin
- * 
- * which all lend inspiration and/or code bits 
- *  
- * Copyright 2006
- * Licensed under the GNU GPL.  See COPYING for full terms.
- * ------------------
- * bossprogress.php
- * 02.10.06 sz3
- * 16.04.07 sz3
+ * EQdkp BossSuite
+ * (c) 2006 - 2008
+ * created by sz3 
+ * ---------------------------
+ * $Id$
  ******************************/
 
 define('EQDKP_INC', true);

@@ -1,14 +1,12 @@
 <?php
 /******************************
-* EQdkp BossLoot
-* by sz3
-*
-* Copyright 2006
-* Licensed under the GNU GPL.  See COPYING for full terms.
-* ------------------
-* note2link.php
-* 01.05.07 sz3
-******************************/
+ * EQdkp BossSuite
+ * (c) 2006 - 2008
+ * created by sz3 
+ * ---------------------------
+ * $Id$
+ ******************************/
+ 
 if (!defined('EQDKP_INC')) {
 	die('You cannot access this file directly.');
 }
