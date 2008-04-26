@@ -65,7 +65,8 @@ ul.intro_message a:hover, td.intro_message a:hover, tr.intro_message a:hover, ta
 			<tr>
 				<td colspan=2>
           &copy; 2006 - {L_YEARR} {L_TXT_DEVTEAM}<br/>
-          {L_URL_WEB}: <a class="linkcrap" href="http://{D_WEB_URL}" target="_blank">{D_WEB_URL}</a>
+          {L_URL_WEB}: <a class="linkcrap" href="http://{D_WEB_URL}" target="_blank">{D_WEB_URL}</a><br/><br/>
+          {L_IMAGE_CREDITS}
         </td>
 			</tr>
 			<tr>
@@ -82,10 +83,12 @@ ul.intro_message a:hover, td.intro_message a:hover, tr.intro_message a:hover, ta
 				<td><h3>{L_WOW_ADDITONS}</h3></td>
 			</tr>
 			<tr>
-				<td  valign="top">
+			 <td  valign="top">
+			    <table>
           <!-- BEGIN wow_addition_row -->
-            <b>{wow_addition_row.KEY}</b>: {wow_addition_row.VALUE}<br />
-          <!-- END wow_addition_row -->
+            <tr><td><b>{wow_addition_row.KEY}</b>:</td><td>{wow_addition_row.VALUE}</td>
+          <!-- END wow_addition_row -->        
+          </table>
         </td>
 			</tr>
 			<tr>

@@ -31,10 +31,13 @@ foreach ($additions as $key => $value){
 }
 
 $wow_additions = array(
-    'Basic support'    => ' Trionix, sz3 and many others',
-    'Zone images'       => ' Cattiebrie, Trionix, sz3',
-    'Boss images' 	    => ' Cattiebrie, mikedoh, Trionix, sz3 ',
-    'Lootlists'		      => ' extracted from Daviesh\' Atlasloot by sz3',
+    'General'           => '© <a href="http://www.blizzard.com/legalfaq.shtml">World of Warcraft and Blizzard Entertainment </a> are trademarks or registered trademarks of Blizzard Entertainment, Inc.  in the U.S. and/or other countries.',
+    'Basic support'     => 'Trionix, sz3 and many others',
+    'Zone images'       => '™&amp;© by <a href="http://www.blizzard.com/legalfaq.shtml">Blizzard Entertainment</a> and <a href="http://sonsofthestorm.com/">Sons of the Storm</a>.<br />
+                            adjusted for the use within the BossSuite by Cattiebrie, Trionix and sz3',
+    'Boss images' 	    => 'All characters and designs are ™ & © their respective owners. <br/>
+                            captured for the BossSuite from the World of Warcraft game files by Cattiebrie, mikedoh, Trionix, sz3 ',
+    'Lootlists'		      => 'extracted from <a href="http://www.daviesh.net/atlasloot_enhanced/">Daviesh\' Atlasloot enhanced</a> by sz3',
 );
       
 foreach ($wow_additions as $key => $value){
@@ -74,10 +77,11 @@ $tpl->assign_vars(array(
     'D_AUTHOR_CITY'             => 'Germany',
     'D_WEB_URL'                 => 'eqdkp-plus.com',
     'L_URL_WEB'                 => $user->lang['bs_url_web'],
+    'L_IMAGE_CREDITS'           => 'All images contained in this plugin are copyrighted by their respective creators. This is a fan made plugin and not intended for profit.',
     'L_ADDITONS'                => $user->lang['bs_additions'],
-    'L_WOW_ADDITONS'            => $user->lang['bs_additions'] . ' World of Warcraft',
-    'L_VSOH_ADDITONS'           => $user->lang['bs_additions'] . ' Vanguard - Saga of Heroes',
-    'L_LOTRO_ADDITONS'          => $user->lang['bs_additions'] . ' Lord of the rings: online',
+    'L_WOW_ADDITONS'            => $user->lang['bs_additions'] . ' World of Warcraft™',
+    'L_VSOH_ADDITONS'           => $user->lang['bs_additions'] . ' Vanguard - Saga of Heroes™',
+    'L_LOTRO_ADDITONS'          => $user->lang['bs_additions'] . ' Lord of the rings: online™',
     'L_TXT_DEVTEAM'							=> $user->lang['bs_credits_p2'],
     'L_DEVTEAM'									=> $user->lang['bs_copyright'],
     'L_VERSION'                 => $pm->get_data('bosssuite', 'version'),
