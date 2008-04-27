@@ -240,6 +240,7 @@ $bl_out .= '</td></tr>';
 # ####################################################
 $tpl->assign_vars(array (
 	'F_ACTION' => 'bossloot.php' . $SID,
+	'JQUERY_INCLUDES'   => $bl_jquery->Header(),
 	'BOSSLOOT' => $bl_out,
 	'JS_ABOUT' => $bl_jquery->Dialog_URL('About', $user->lang['bs_about_header'], 'about.php', '400', '400'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
