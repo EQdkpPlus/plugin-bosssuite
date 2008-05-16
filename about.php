@@ -72,6 +72,18 @@ foreach ($lotro_additions as $key => $value){
   );
 }
 
+$eq2_additions = array(
+  'Basic support'    => ' Brinelan, of the Guk server',
+);
+      
+foreach ($eq2_additions as $key => $value){
+  $tpl->assign_block_vars('eq2_addition_row', array(
+      'KEY'    => $key,
+      'VALUE' => $value,
+    )
+  );
+}
+
 $tpl->assign_vars(array(
     'I_ITEM_NAME'               => 'credits/bs4_logo.jpg',
     'D_AUTHOR_CITY'             => 'Germany',
@@ -82,6 +94,7 @@ $tpl->assign_vars(array(
     'L_WOW_ADDITONS'            => $user->lang['bs_additions'] . ' World of Warcraft™',
     'L_VSOH_ADDITONS'           => $user->lang['bs_additions'] . ' Vanguard - Saga of Heroes™',
     'L_LOTRO_ADDITONS'          => $user->lang['bs_additions'] . ' Lord of the rings: online™',
+    'L_EQ2_ADDITONS'            => $user->lang['bs_additions'] . ' Everquest II™',
     'L_TXT_DEVTEAM'							=> $user->lang['bs_credits_p2'],
     'L_DEVTEAM'									=> $user->lang['bs_copyright'],
     'L_VERSION'                 => $pm->get_data('bosssuite', 'version'),
