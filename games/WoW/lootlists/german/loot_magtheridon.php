@@ -12,6 +12,7 @@ $loot = array(
 	array( "id" => "28782", "qual" => "4", "name" => "Pulsierender Kristallherzstab" ),
 	array( "id" => "29458", "qual" => "4", "name" => "Aegis des Verteidigers" ),
 	array( "id" => "28783", "qual" => "4", "name" => "Vernichtungszauberstab der Eredar" ),
+	array( "id" => "34846", "qual" => "2", "name" => "Schwarzer Sack voller Edelsteine" ),
 	array( "id" => "29754", "qual" => "4", "name" => "Brustschutz des gefallenen Champions" ),
 	array( "id" => "29753", "qual" => "4", "name" => "Brustschutz des gefallenen Verteidigers" ),
 	array( "id" => "29755", "qual" => "4", "name" => "Brustschutz des gefallenen Helden" ),
@@ -20,7 +21,7 @@ $loot = array(
 	array( "id" => "28790", "qual" => "4", "name" => "Lichtwächterband der Naaru" ),
 	array( "id" => "28793", "qual" => "4", "name" => "Band des purpurroten Furors" ),
 	array( "id" => "28792", "qual" => "4", "name" => "A'dals Siegel der Verteidigung" ),
-	array( "id" => "34845", "qual" => "4", "name" => "Pit Lord's Satchel" ),
+	array( "id" => "34845", "qual" => "4", "name" => "Ranzen des Grubenlords" ),
 );
 
 

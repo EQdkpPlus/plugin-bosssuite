@@ -16,7 +16,7 @@ $loot = array(
 	array( "id" => "19861", "qual" => "4", "name" => "Berührung des Chaos" ),
 	array( "id" => "19802", "qual" => "4", "name" => "Herz von Hakkar" ),
 	array( "id" => "19950", "qual" => "4", "name" => "Zandalarianisches Heldenamulett" ),
-	array( "id" => "19949", "qual" => "4", "name" => "Zandalarianisches Heldenmedallion" ),
+	array( "id" => "19949", "qual" => "4", "name" => "Zandalarianisches Heldenmedaillon" ),
 	array( "id" => "19948", "qual" => "4", "name" => "Zandalarianisches Heldenabzeichen" ),
 	array( "id" => "19943", "qual" => "1", "name" => "Gewaltig viel Mojo" ),
 );

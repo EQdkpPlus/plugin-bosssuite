@@ -2,6 +2,8 @@
 $loot = array(
 	array( "id" => "34170", "qual" => "4", "name" => "Pantalons des schwindenden Zwists" ),
 	array( "id" => "34386", "qual" => "4", "name" => "Pantalons des aufbrausenden Zwists" ),
+	array( "id" => "34169", "qual" => "4", "name" => "Bundhosen der natürlichen Aggression" ),
+	array( "id" => "34384", "qual" => "4", "name" => "Bundhosen der natürlichen Pracht" ),
 	array( "id" => "34168", "qual" => "4", "name" => "Beinschützer des Sternenjägers" ),
 	array( "id" => "34167", "qual" => "4", "name" => "Beinplatten des heiligen Molochs" ),
 	array( "id" => "34382", "qual" => "4", "name" => "Beinschützer des Richters" ),

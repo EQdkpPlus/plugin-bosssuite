@@ -13,7 +13,7 @@ $loot = array(
 	array( "id" => "33478", "qual" => "4", "name" => "Jin'rohk, die große Apokalypse" ),
 	array( "id" => "33476", "qual" => "4", "name" => "Spaltbeil des Unbarmherzigen" ),
 	array( "id" => "33468", "qual" => "4", "name" => "Dunkler Segen" ),
-	array( "id" => "33474", "qual" => "4", "name" => "Alter Langbogen der Sin'dorei" ),
+	array( "id" => "33474", "qual" => "4", "name" => "Alter Langbogen der Amani" ),
 	array( "id" => "33102", "qual" => "4", "name" => "Zul'jins Blut" ),
 );
 

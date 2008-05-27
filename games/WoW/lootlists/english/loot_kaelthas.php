@@ -4,7 +4,7 @@ $loot = array(
 	array( "id" => "29989", "qual" => "4", "name" => "Sunshower Light Cloak" ),
 	array( "id" => "29994", "qual" => "4", "name" => "Thalassian Wildercloak" ),
 	array( "id" => "29990", "qual" => "4", "name" => "Crown of the Sun" ),
-	array( "id" => "29987", "qual" => "4", "name" => "Gauntlets of the Sun-King" ),
+	array( "id" => "29987", "qual" => "4", "name" => "Gauntlets of the Sun King" ),
 	array( "id" => "29995", "qual" => "4", "name" => "Leggings of Murderous Intent" ),
 	array( "id" => "29991", "qual" => "4", "name" => "Sunhawk Leggings" ),
 	array( "id" => "29998", "qual" => "4", "name" => "Royal Gauntlets of Silvermoon" ),

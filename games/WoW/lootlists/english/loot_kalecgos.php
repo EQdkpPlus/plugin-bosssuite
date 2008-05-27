@@ -2,6 +2,8 @@
 $loot = array(
 	array( "id" => "34170", "qual" => "4", "name" => "Pantaloons of Calming Strife" ),
 	array( "id" => "34386", "qual" => "4", "name" => "Pantaloons of Growing Strife" ),
+	array( "id" => "34169", "qual" => "4", "name" => "Breeches of Natural Aggression" ),
+	array( "id" => "34384", "qual" => "4", "name" => "Breeches of Natural Splendor" ),
 	array( "id" => "34168", "qual" => "4", "name" => "Starstalker Legguards" ),
 	array( "id" => "34167", "qual" => "4", "name" => "Legplates of the Holy Juggernaut" ),
 	array( "id" => "34382", "qual" => "4", "name" => "Judicator's Legguards" ),

@@ -12,6 +12,7 @@ $loot = array(
 	array( "id" => "28782", "qual" => "4", "name" => "Crystalheart Pulse-Staff" ),
 	array( "id" => "29458", "qual" => "4", "name" => "Aegis of the Vindicator" ),
 	array( "id" => "28783", "qual" => "4", "name" => "Eredar Wand of Obliteration" ),
+	array( "id" => "34846", "qual" => "2", "name" => "Black Sack of Gems" ),
 	array( "id" => "29754", "qual" => "4", "name" => "Chestguard of the Fallen Champion" ),
 	array( "id" => "29753", "qual" => "4", "name" => "Chestguard of the Fallen Defender" ),
 	array( "id" => "29755", "qual" => "4", "name" => "Chestguard of the Fallen Hero" ),

@@ -1,7 +1,7 @@
 <?php
 $loot = array(
 	array( "id" => "28744", "qual" => "4", "name" => "Uni-Mind Headdress" ),
-	array( "id" => "28742", "qual" => "4", "name" => "Pantaloons of Repentence" ),
+	array( "id" => "28742", "qual" => "4", "name" => "Pantaloons of Repentance" ),
 	array( "id" => "28732", "qual" => "4", "name" => "Cowl of Defiance" ),
 	array( "id" => "28741", "qual" => "4", "name" => "Skulker's Greaves" ),
 	array( "id" => "28735", "qual" => "4", "name" => "Earthblood Chestguard" ),

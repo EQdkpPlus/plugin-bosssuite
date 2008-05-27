@@ -10,7 +10,7 @@ $loot = array(
 	array( "id" => "28502", "qual" => "4", "name" => "Unterarmschienen des Mutes" ),
 	array( "id" => "28505", "qual" => "4", "name" => "Stulpen der erneuten Hoffnung" ),
 	array( "id" => "29434", "qual" => "4", "name" => "Abzeichen der Gerechtigkeit" ),
-	array( "id" => "28509", "qual" => "4", "name" => "Worgklauenhalskette" ),
+	array( "id" => "28509", "qual" => "4", "name" => "Worgenklauenhalskette" ),
 	array( "id" => "28510", "qual" => "4", "name" => "Spektrales Band der Innervation" ),
 	array( "id" => "28504", "qual" => "4", "name" => "Stahlfalkenarmbrust" ),
 	array( "id" => "30480", "qual" => "4", "name" => "Zügel des feurigen Schlachtrosses" ),

@@ -1,7 +1,7 @@
 <?php
 $loot = array(
 	array( "id" => "29977", "qual" => "4", "name" => "Bundhose der Sternenseele" ),
-	array( "id" => "29972", "qual" => "4", "name" => "Beinkleider des Astronomen" ),
+	array( "id" => "29972", "qual" => "4", "name" => "Beinkleider des Astromanten" ),
 	array( "id" => "29966", "qual" => "4", "name" => "Unterarmschienen des Beendens" ),
 	array( "id" => "29976", "qual" => "4", "name" => "Stulpen des Weltensturms" ),
 	array( "id" => "29951", "qual" => "4", "name" => "Stiefel des Sternenwandlers" ),
