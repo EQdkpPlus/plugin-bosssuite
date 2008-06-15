@@ -1,11 +1,12 @@
 <?php
 /******************************
- * EQdkp BossBase
- * Copyright 2005
- * Licensed under the GNU GPL.  See COPYING for full terms.
- * ------------------
- * lang_main.php
+ * EQdkp BossSuite
+ * (c) 2006 - 2008
+ * created by sz3
+ * ---------------------------
+ * $Id$
  ******************************/
+
 if ( !defined('EQDKP_INC') ){
     header('HTTP/1.0 404 Not Found');exit;
 }
@@ -30,17 +31,17 @@ $lang = array(
 // admin page
 'bs_al_submit' => 'Сохранить',
 'bs_al_general' => 'Главные настройки',
-'bs_al_delimRNO' => 'RAIDnote delimiter (Opt.: Regular Expression):',
-'bs_al_delimRNA' => 'RAIDname delimiter (Opt.: Regular Expression):',
+'bs_al_delimRNO' => 'Рейд заметка delimiter (Opt.: Regular Expression):',
+'bs_al_delimRNA' => 'Название Рейда delimiter (Opt.: Regular Expression):',
 'bs_al_tables' => 'Opt.: EQdkp список prefix(ов) (пусто => только текущий prefix):',
 'bs_al_parseInfo' => 'Внимание! Пожалуйста, keep in mind that the following strings are case-sensitive! JinDo won\'t match Jindo!',
-'bs_al_zoneInfo' => 'Где (in the RAID entry) to look for zone infos?',
-'bs_al_bossInfo' => 'Где (in the RAID entry) to look for boss infos?',
+'bs_al_zoneInfo' => 'Где (in the Рейд entry) to look for zone infos?',
+'bs_al_bossInfo' => 'Где (in the Рейд entry) to look for boss infos?',
 'bs_al_linkInfo' => 'Link опции:',
-'bs_al_name' => 'Название',
+'bs_al_name' => 'Имя',
 'bs_al_trigger' => 'Строка триггера(ов)',
-'bs_ao_rnote' => 'Заметка RAIDа',
-'bs_ao_rname' => 'Название RAIDa',
+'bs_ao_rnote' => 'Заметка Рейда',
+'bs_ao_rname' => 'Название Рейда',
 'bs_al_source' => 'Исходные данные:',
 'bs_source_db' => 'База данных',
 'bs_source_offs' => 'offsets',
@@ -50,32 +51,31 @@ $lang = array(
 'lang' => 'english',
 
 'dateFormat' => '%m/%d/%Y',
-'bs_out_date_format' => 'Месяц/День/Год',
+'bs_out_date_format' => 'mm/dd/yy',
 'bs_date_day' => array('start' => 3, 'length' => 2),
 'bs_date_month' => array('start' => 0, 'length' => 2),
 'bs_date_year' => array('start' => 6, 'length' => 4),
 
 // offset page
 'bs_ol_dateFormat' => 'Формат даты: ',
-'bs_ol_in' => 'Название',
+'bs_ol_in' => 'Имя',
 'bs_ol_fd' => 'Первая дата',
 'bs_ol_ld' => 'Последняя дата',
 'bs_ol_co' => 'Счетчик',
 'bs_ol_submit' => 'Сохранить',
 
 // cache page
-'bs_adm_cache_info' => 'КЭШ: Используя функцию кэш, должно сократиться время загрузки на DKP системах с многочисленными RAID(ами)',
+'bs_adm_cache_info' => 'КЭШ: Используя функцию кэш, должно сократиться время загрузки на DKP системах с многочисленными Рейдами',
 'bs_adm_cache_refresh' => 'Обновить кэш',
 
 //BossProgress User Page
-
 'bp_um_link' => 'PvE Прогресс',
 'firstkill' => 'Первое убийство: ',
 'lastkill' => 'Последнее убийство: ',
 'firstvisit' => 'Первый визит: ',
 'lastvisit' => 'Последний визит: ',
-'zonevisitcount' => 'Стоимость визита: ',
-'bosskillcount' => 'Стоимость убийства: ',
+'zonevisitcount' => 'Количество визитов: ',
+'bosskillcount' => 'Количество убийств: ',
 'status' => 'Статус: ',
 'never' => 'Никогда',
 'all_zones' => 'Все зоны',
@@ -93,23 +93,23 @@ $lang = array(
 'opt_style' => 'Стиль: ',
 'bp_style_bp' => 'Босс прогресс стандартный',
 'bp_style_bps' => 'Босс прогресс простой',
-'bp_style_rp2r' => 'Прогресс RAIDа 2/ряд',
-'bp_style_rp3r' => 'Прогресс RAIDа 3/ряд',
+'bp_style_rp2r' => 'Прогресс Рейда 2/ряд',
+'bp_style_rp3r' => 'Прогресс Рейда 3/ряд',
 
 
 'bl_loottable' => 'Список трофеев: ',
-'bl_kc_p1' => ' (убит ',
-'bl_kc_p2' => ' раз)',
+'bl_kc_p1' => ' убит ',
+'bl_kc_p2' => ' раз(а)',
 'bs_image_not_found' => 'Извините, изображение босса не было найдено. Если вы нашли одно, не стесняйтесь вносить свой вклад в проект.',
 'bl_itemname' => 'Название предмета',
-'bl_itemcount' => 'Значение шанса выпадания',
+'bl_itemcount' => 'Значение шанса выпадения',
 'bl_droprate' => 'Шанс выпадения',
 'bl_loottable_offsets' => '(Offset mode) Список предметов:',
 'bl_dl' => 'Выпавшие трофеи',
 'bl_ndl' => 'Ни разу не выпавшие трофеи',
 'bl_wl' => 'Wrong assigned/unclear loot',
 
-'bl_itemsfound' => 'Предметы найдены',
+'bl_itemsfound' => 'Предметов найдено',
 'item_lang_none' => 'Ни один',
 
 //Admin menu
@@ -120,9 +120,9 @@ $lang = array(
 'bl_opt_is' => 'Включить статистику предметов для ни разу не выпавших трофеев?',
 'bl_opt_eyecandy' => 'Включить eye-candy (аккордеоны)?',
 'bc_opt_eyecandy' => 'Включить eye-candy (аккордеоны)? (Только на PLUS 0.5+ !)',
-'bs_credits_p1' => 'EQDKP BossSuite v',
+'bs_credits_p1' => 'EQDKP BossSuite версия',
 'bs_credits_p2' => ' by sz3',
-'bl_credits_ll' => 'Список троффев: ',
+'bl_credits_ll' => 'Список трофеев: ',
 'bl_credits_bi' => 'Изображения боссов: ',
 'bl_no_lootlist_credits' => 'Список предметов не выбран/найден',
 'bl_no_bossimages_credits' => 'Главные изображения боссов не найдены',
@@ -139,9 +139,9 @@ $lang = array(
 'bs_enable_bosscounter' => 'Включить BossCounter',
 'bs_enable_note2link' => 'Включить note2link',
 
-'bs_img_style_normal' => 'Баланс',
+'bs_img_style_normal' => 'Нормально',
 'bs_img_style_sepia' => 'Сепия',
-'bs_img_style_grey' => 'Сервый',
+'bs_img_style_grey' => 'Серый',
 'bs_style_sname' => 'Короткое название',
 'bs_style_lname' => 'Длинное название',
 'bs_opt_zlength' => 'Выбранное название зоны длинное',
