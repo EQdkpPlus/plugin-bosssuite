@@ -44,7 +44,7 @@ if (!$mybsmgs->game_supported('bossbase')){
   $sbzone = $mybpsql->get_bzone('bossprogress');
   $bb_conf = $mybpsql->get_config('bossbase');
   $bp_conf = $mybpsql->get_config('bossprogress');
-  
+
   # Get data
   ####################################################
   $data = $mybpsql->get_data($bb_conf, $sbzone);

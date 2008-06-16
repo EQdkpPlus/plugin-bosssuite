@@ -61,7 +61,13 @@ foreach ($vsoh_additions as $key => $value){
 }
 
 $lotro_additions = array(
-  'Basic support'    => ' aeglis, markan',
+  'Basic support'    => 'aeglis, markan',
+  'Zone images'      => 'dinatius from "The Watch of Windfola"',
+  'Boss images'      => 'Barz, Thaurlach and Thorog are from The Watch of Windfola</br>
+                         Zurm, Fruz, Narnulubat, and Thrang are from Precept kinship, EU Laurelin server (via allakhazam)</br>
+                         Zaudru is from lotro.allakhazam.com</br>
+                         Storvagun is from ingamers.de</br>
+                         adjusted for the use within the BossSuite by dinatius',            
 );
       
 foreach ($lotro_additions as $key => $value){

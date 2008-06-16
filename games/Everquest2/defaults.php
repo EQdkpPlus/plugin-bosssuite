@@ -12,40 +12,40 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $defaults['bossbase'] = array(
-  'bossInfo' => 'rnote',
-  'zoneInfo' => 'rname',
-  'nameDelim' => ',',
-  'noteDelim' => ',',
-  'tables' => '',
-  'source' => 'database'
+  'bb_bossInfo' => 'rnote',
+  'bb_zoneInfo' => 'rname',
+  'bb_nameDelim' => ',',
+  'bb_noteDelim' => ',',
+  'bb_tables' => '',
+  'bb_source' => 'database'
 );
 
 $defaults['bosscounter'] = array(
-  'dynZone' => '0',
-  'dynBoss' => '0',
-  'linkurl' => 'bossloot',
-  'linklength' => 'short',
-  'zonelength' => 'short',
-  'eyecandy' => '0',
+  'bc_dynZone' => '0',
+  'bc_dynBoss' => '0',
+  'bc_linkurl' => 'bossloot',
+  'bc_linklength' => 'short',
+  'bc_zonelength' => 'short',
+  'bc_eyecandy' => '0',
 );
 
 $defaults['bossloot'] = array(
-  'item_minqual' => '-1',
-  'item_lang' => 'none',
-  'show_ndl' => '0',
-  'show_wl' => '0',
-  'get_itemstats' => '0',
-  'eyecandy' => '0',
+  'bl_item_minqual' => '-1',
+  'bl_item_lang' => 'none',
+  'bl_show_ndl' => '0',
+  'bl_show_wl' => '0',
+  'bl_get_itemstats' => '0',
+  'bl_eyecandy' => '0',
 );
 
 $defaults['bossprogress'] = array(
-  'dynZone' => '0',
-  'dynBoss' => '0',
-  'zhiType' => '0',
-  'style' => '0',
-  'showSB' => '0',
-  'linkurl' => 'bossloot',
-  'linklength' => 'long',
+  'bp_dynZone' => '0',
+  'bp_dynBoss' => '0',
+  'bp_zhiType' => '0',
+  'bp_style' => '0',
+  'bp_showSB' => '0',
+  'bp_linkurl' => 'bossloot',
+  'bp_linklength' => 'long',
   'bp_si_style' => 'normal',
   'bp_ei_style' => 'normal',
   'bp_ztext_style' => 'text',

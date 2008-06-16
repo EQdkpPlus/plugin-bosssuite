@@ -22,6 +22,12 @@ if (!$pm->check(PLUGIN_INSTALLED, 'bosssuite')) {
 	message_die('The BossSuite plugin is not installed.');
 }
 
+//wpfc
+require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
+$bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
+$bs_adm_jquery = $bs_adm_wpfccore->InitJquery(); 
+$bs_adm_wpfccore->InitAdmin();
+
 // new mgs class
 require(dirname(__FILE__).'/../include/bsmgs.class.php');
 $mybsmgs = new BSMGS();
@@ -56,44 +62,42 @@ if ($_POST['bpsavebu']){
   $eqdkp->config_set('bs_linkBL', $_POST['en2l']);
 
   //BossBase Config
-	$mybssql->update_config('bossbase', $bs_conf, 'zoneInfo', $_POST['zoneInfo']);
-	$mybssql->update_config('bossbase', $bs_conf, 'bossInfo', $_POST['bossInfo']);
-	$mybssql->update_config('bossbase', $bs_conf, 'noteDelim', $_POST['notedelim']);
-	$mybssql->update_config('bossbase', $bs_conf, 'nameDelim', $_POST['namedelim']);
-	$mybssql->update_config('bossbase', $bs_conf, 'tables', $_POST['tables']);
-	$mybssql->update_config('bossbase', $bs_conf, 'source', $_POST['source']);
+	$mybssql->update_config('bossbase', $bs_conf, 'bb_zoneInfo', $_POST['zoneInfo']);
+	$mybssql->update_config('bossbase', $bs_conf, 'bb_bossInfo', $_POST['bossInfo']);
+	$mybssql->update_config('bossbase', $bs_conf, 'bb_noteDelim', $_POST['notedelim']);
+	$mybssql->update_config('bossbase', $bs_conf, 'bb_nameDelim', $_POST['namedelim']);
+	$mybssql->update_config('bossbase', $bs_conf, 'bb_tables', $_POST['tables']);
+	$mybssql->update_config('bossbase', $bs_conf, 'bb_source', $_POST['source']);
 
 	//BossLoot Config
-	$mybssql->update_config('bossloot', $bl_conf, 'item_minqual', $_POST['itemqual']);
-	$mybssql->update_config('bossloot', $bl_conf, 'item_lang', $_POST['itemlang']);
-	$mybssql->update_config('bossloot', $bl_conf, 'show_ndl', $_POST['ndl']);
-	$mybssql->update_config('bossloot', $bl_conf, 'show_wl', $_POST['wl']);
-	$mybssql->update_config('bossloot', $bl_conf, 'eyecandy', $_POST['bl_eyecandy']);
-	$mybssql->update_config('bossloot', $bl_conf, 'get_itemstats', $_POST['is']);
+	$mybssql->update_config('bossloot', $bl_conf, 'bl_item_minqual', $_POST['itemqual']);
+	$mybssql->update_config('bossloot', $bl_conf, 'bl_item_lang', $_POST['itemlang']);
+	$mybssql->update_config('bossloot', $bl_conf, 'bl_show_ndl', $_POST['ndl']);
+	$mybssql->update_config('bossloot', $bl_conf, 'bl_show_wl', $_POST['wl']);
+	$mybssql->update_config('bossloot', $bl_conf, 'bl_eyecandy', $_POST['bl_eyecandy']);
+	$mybssql->update_config('bossloot', $bl_conf, 'bl_get_itemstats', $_POST['is']);
 	
 	//BossProgress Config
-	$mybssql->update_config('bossprogress', $bp_conf, 'style', $_POST['bp_style']);
-	$mybssql->update_config('bossprogress', $bp_conf, 'dynZone', $_POST['bp_dynloc']);
- 	$mybssql->update_config('bossprogress', $bp_conf, 'dynBoss', $_POST['bp_dynboss']);
-	
+	$mybssql->update_config('bossprogress', $bp_conf, 'bp_style', $_POST['bp_style']);
+	$mybssql->update_config('bossprogress', $bp_conf, 'bp_dynZone', $_POST['bp_dynloc']);
+ 	$mybssql->update_config('bossprogress', $bp_conf, 'bp_dynBoss', $_POST['bp_dynboss']);
   $mybssql->update_config('bossprogress', $bp_conf, 'bp_si_style', $_POST['bp_si_style']);
   $mybssql->update_config('bossprogress', $bp_conf, 'bp_ei_style', $_POST['bp_ei_style']);
   $mybssql->update_config('bossprogress', $bp_conf, 'bp_ztext_style', $_POST['bp_ztext_style']);
-	
-  $mybssql->update_config('bossprogress', $bp_conf, 'showSB', $_POST['bp_showSB']);
-	$mybssql->update_config('bossprogress', $bp_conf, 'linkurl', $_POST['bp_linkurl']);
- 	$mybssql->update_config('bossprogress', $bp_conf, 'linklength', $_POST['bp_linklength']);
+  $mybssql->update_config('bossprogress', $bp_conf, 'bp_showSB', $_POST['bp_showSB']);
+	$mybssql->update_config('bossprogress', $bp_conf, 'bp_linkurl', $_POST['bp_linkurl']);
+ 	$mybssql->update_config('bossprogress', $bp_conf, 'bp_linklength', $_POST['bp_linklength']);
   foreach ($bzone as $zoneid => $bosslist){
 		$mybssql->update_zone_visibility('bossprogress', $zoneid, $_POST['bp_sz_'.$zoneid]);
 	}
 	
 	//BossCounter Config
-	$mybssql->update_config('bosscounter', $bc_conf, 'eyecandy', $_POST['bc_eyecandy']);
-	$mybssql->update_config('bosscounter', $bc_conf, 'dynZone', $_POST['bc_dynloc']);
- 	$mybssql->update_config('bosscounter', $bc_conf, 'dynBoss', $_POST['bc_dynboss']);
- 	$mybssql->update_config('bosscounter', $bc_conf, 'linkurl', $_POST['bc_linkurl']);
- 	$mybssql->update_config('bosscounter', $bc_conf, 'linklength', $_POST['bc_linklength']);
- 	$mybssql->update_config('bosscounter', $bc_conf, 'zonelength', $_POST['bc_zonelength']);
+	$mybssql->update_config('bosscounter', $bc_conf, 'bc_eyecandy', $_POST['bc_eyecandy']);
+	$mybssql->update_config('bosscounter', $bc_conf, 'bc_dynZone', $_POST['bc_dynloc']);
+ 	$mybssql->update_config('bosscounter', $bc_conf, 'bc_dynBoss', $_POST['bc_dynboss']);
+ 	$mybssql->update_config('bosscounter', $bc_conf, 'bc_linkurl', $_POST['bc_linkurl']);
+ 	$mybssql->update_config('bosscounter', $bc_conf, 'bc_linklength', $_POST['bc_linklength']);
+ 	$mybssql->update_config('bosscounter', $bc_conf, 'bc_zonelength', $_POST['bc_zonelength']);
  	
  	foreach ($bzone as $zoneid => $bosslist){
 		$mybssql->update_zone_visibility('bosscounter', $zoneid, $_POST['bc_sz_'.$zoneid]);
@@ -120,6 +124,13 @@ $bc_sbzone = $mybssql->get_bzone('bosscounter');
 $bp_sbzone = $mybssql->get_bzone('bossprogress');
 $boss_offsets = $mybssql->get_boss_offsets();
 $zone_offsets = $mybssql->get_zone_offsets();
+
+//Updater
+$bsupdater = new PluginUpdater('bosssuite','4.0.5','bb_inst_version','bs_config','include');
+$drpdwonarry = array(
+										'4.0.5' => sprintf($user->lang['puc_update_txt'],'4.0.5','4.0.6'),
+										);
+$bsupdater->OutputForm($bs_conf['inst_version'], $drpdwonarry);
 
 global $eqdkp, $SID;
 
@@ -378,12 +389,8 @@ foreach ($bs_linklength as $value => $option) {
 		));
 }
 
-
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
-$bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
-$bs_adm_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
 $tpl->assign_vars(array(
+  'UPDATER' => $bsupdater->OutputHTML(),
   'TABOUT' => $bs_adm_jquery->Header().$bs_adm_jquery->Tab_header('bs_adm_tabs'),
   'JS_ABOUT' => $bs_adm_jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],

@@ -38,7 +38,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 			'path' => 'bosssuite',
 			'contact' => 'sz3@gmx.net',
 			'template_path' => 'plugins/bosssuite/templates/',
-			'version' => '4.0.beta5'
+			'version' => '4.0.6'
 		));
 
 		//Permissions
@@ -67,15 +67,12 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
       
       		//Create tables on install		
       		$sql = "CREATE TABLE IF NOT EXISTS " . BS_CONFIG_TABLE . " (
-      				    `plugin_id` varchar(32) NOT NULL default '',
-      				    `game_id` varchar(32) NOT NULL default '',
                   `config_name` varchar(255) NOT NULL default '',
       		        `config_value` varchar(255) default '',
-                  PRIMARY KEY  (`game_id`,`plugin_id`,`config_name`))";				    
+                  PRIMARY KEY  (`config_name`))";				    
       		$this->add_sql(SQL_INSTALL, $sql);
       		
       		$sql = "CREATE TABLE IF NOT EXISTS " . BS_ZONE_TABLE . " (
-          				`game_id` varchar(32) NOT NULL default 'unknown',
       		    		`zone_id` varchar(32) NOT NULL default 'unknown',
       		    		`zone_string` varchar(255) NOT NULL default '',
       		    		`zone_co_offs` smallint(5) NOT NULL default '0',
@@ -83,42 +80,39 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
       		    		`zone_ld_offs` int(11) NOT NULL default '".BS_MIN_DATE."',
       		    		`zone_sz_bp` tinyint(1) default '1',
       		    		`zone_sz_bc` tinyint(1) default '1',
-      				    PRIMARY KEY  (`game_id`,`zone_id`))";				    
+      				    PRIMARY KEY  (`zone_id`))";				    
       		$this->add_sql(SQL_INSTALL, $sql);
       		
       		$sql = "CREATE TABLE IF NOT EXISTS " . BS_BOSS_TABLE . " (
-          				`game_id` varchar(32) NOT NULL default 'unknown',
       		    		`boss_id` varchar(32) NOT NULL default 'unknown',
       		    		`boss_string` varchar(255) NOT NULL default '',
       		    		`boss_co_offs` smallint(5) NOT NULL default '0',
       		    		`boss_fd_offs` int(11) NOT NULL default '".BS_MAX_DATE."',
       		    		`boss_ld_offs` int(11) NOT NULL default '".BS_MIN_DATE."',
-      				    PRIMARY KEY  (`game_id`,`boss_id`))";			    
+      				    PRIMARY KEY  (`boss_id`))";			    
       		$this->add_sql(SQL_INSTALL, $sql);
       		
       		$sql = "CREATE TABLE IF NOT EXISTS " . BS_ZONE_CACHE . " (
-          				`game_id` varchar(32) NOT NULL default 'unknown',
       		    		`zone_id` varchar(32) NOT NULL default 'unknown',
       		    		`zone_co_cache` smallint(5) NOT NULL default '0',
       		    		`zone_zk_cache` smallint(5) NOT NULL default '0',
       		    		`zone_fd_cache` int(11) NOT NULL default '".BS_MAX_DATE."',
       		    		`zone_ld_cache` int(11) NOT NULL default '".BS_MIN_DATE."',
-      				    PRIMARY KEY  (`game_id`,`zone_id`))";				    
+      				    PRIMARY KEY  (`zone_id`))";				    
       				    
       		$this->add_sql(SQL_INSTALL, $sql);
       		
       		$sql = "CREATE TABLE IF NOT EXISTS " . BS_BOSS_CACHE . " (
-          				`game_id` varchar(32) NOT NULL default 'unknown',
       		    		`boss_id` varchar(32) NOT NULL default 'unknown',
       		    		`boss_co_cache` smallint(5) NOT NULL default '0',
       		    		`boss_fd_cache` int(11) NOT NULL default '".BS_MAX_DATE."',
       		    		`boss_ld_cache` int(11) NOT NULL default '".BS_MIN_DATE."',
-      				    PRIMARY KEY  (`game_id`,`boss_id`))";			    
+      				    PRIMARY KEY  (`boss_id`))";			    
       		$this->add_sql(SQL_INSTALL, $sql);
 
   	 	    $this->add_sql(SQL_INSTALL, "INSERT INTO " . $table_prefix . "config VALUES ('bs_showBC', '1');");
           $this->add_sql(SQL_INSTALL, "INSERT INTO " . $table_prefix . "config VALUES ('bs_linkBL', '1');");
-    		
+    		  
 		}else{
     		//Menus
     		$this->add_menu('admin_menu', $this->gen_admin_menu());

@@ -17,8 +17,8 @@ global $user, $eqdkp;
 
   $game_arr = explode('_', $eqdkp->config['default_game']);
   
-  $simg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['bp_si_style'].'/'.$location.'.jpg';
-  $eimg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['bp_ei_style'].'/'.$location.'.jpg';
+  $simg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['si_style'].'/'.$location.'.jpg';
+  $eimg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['ei_style'].'/'.$location.'.jpg';
    
   $header1 = '<tr width="100%"><td colspan="4">';
 
@@ -54,16 +54,16 @@ global $user, $eqdkp;
   }
   
   //Language
-  if ( 'png' == $bp_conf['bp_ztext_style'] ){
+  if ( 'png' == $bp_conf['ztext_style'] ){
     $limg = 'games/'.$game_arr[0].'/images/zones/lang/'.$user->lang['lang'].'/'.$location.'.png';
     if (!file_exists(dirname(__file__).'/../../'.$limg)){
       $header4 = '<div style="position:absolute; font-size:3em; top:5px; z-index: 10; width:800px; height:100%;">FB'.$user->lang[$location]['long'];
     }else{
       $header4 = '<div style="background-image:url('.$limg.'); position:absolute; top:5px; z-index: 10; width:800px; height:100%; background-repeat: no-repeat;">';
     }
-  } elseif ( 'text' == $bp_conf['bp_ztext_style'] ){
+  } elseif ( 'text' == $bp_conf['ztext_style'] ){
     $header4 = '<div style="position:absolute; font-size:3em; top:5px; z-index: 10; width:800px; height:100%;">'.$user->lang[$location]['long'];
-  } elseif ( 'none' ==  $bp_conf['bp_ztext_style'] ){
+  } elseif ( 'none' ==  $bp_conf['ztext_style'] ){
     $header4 = '';
   }
    
@@ -85,26 +85,26 @@ global $user;
 
 
 
-function bp_html_get_boss_image_td($bossname, $bosscount) {
+function bp_html_get_boss_image_td($bossname, $bosscount, $imagetype) {
 global $eqdkp;
   if ($bosscount == 0)
   	$bossname .= "_b";
   $game_arr = explode('_', $eqdkp->config['default_game']);
-  
-  if (file_exists('games/'.$game_arr[0].'/images/bosses/small/' . $bossname . ".gif")) {
-  	return '<td width="60" height="60" align="center"><img src="games/'.$game_arr[0].'/images/bosses/small/' . $bossname . '.gif" align="center" border="0" alt="' . $bossname . '" /></td>';
+
+  if (file_exists('games/'.$game_arr[0].'/images/bosses/small/' . $bossname . ".".$imagetype)) {
+  	return '<td width="60" height="60" align="center"><img src="games/'.$game_arr[0].'/images/bosses/small/' . $bossname . '.'.$imagetype.'" align="center" border="0" alt="' . $bossname . '" /></td>';
   } else {
   	return '<td width="60" height="60" align="center"><img src="games/default/images/bosses/small/unknown.gif" height="60" border="0" alt= "' . $bossname . '" /></td>';
   }
 }
 
-function bp_html_get_bossinfo($rowid, $bossname, $bosslink, $firstkill, $lastkill, $count) {
+function bp_html_get_bossinfo($rowid, $bossname, $bosslink, $firstkill, $lastkill, $count, $imagetype) {
 global $user;
 	$firstkill_date = bp_date2text($firstkill);
 	$lastkill_date = bp_date2text($lastkill);
 	if (($rowid % 2)) {
 		$bossinfo = '<tr class="row' . ($rowid +1) . '">';
-		$bossinfo .= bp_html_get_boss_image_td($bossname, $count);
+		$bossinfo .= bp_html_get_boss_image_td($bossname, $count, $imagetype);
 		$bossinfo .= '<td align="left">Name: ' . $bosslink . '<br />';
 		$bossinfo .= $user->lang['firstkill'] . $firstkill_date . '<br />';
 		$bossinfo .= $user->lang['lastkill'] . $lastkill_date . '<br />';
@@ -115,7 +115,7 @@ global $user;
 		$bossinfo .= $user->lang['firstkill'] . $firstkill_date . '<br />';
 		$bossinfo .= $user->lang['lastkill'] . $lastkill_date . '<br />';
 		$bossinfo .= $user->lang['bosskillcount'] . $count . '</td>';
-		$bossinfo .= bp_html_get_boss_image_td($bossname, $count);
+		$bossinfo .= bp_html_get_boss_image_td($bossname, $count, $imagetype);
 		$bossinfo .= '</tr>' . "\n";
 	}
 
@@ -138,7 +138,7 @@ foreach ($sbzone as $zone => $bosses){
 
         foreach($bosses as $boss){
         if ((!$conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)) {
-            $bpout .= bp_html_get_bossinfo($bi, $boss, $mybslink->get_boss_link($boss), $data[$zone]['bosses'][$boss]['fkd'], $data[$zone]['bosses'][$boss]['lkd'], $data[$zone]['bosses'][$boss]['kc']);
+            $bpout .= bp_html_get_bossinfo($bi, $boss, $mybslink->get_boss_link($boss), $data[$zone]['bosses'][$boss]['fkd'], $data[$zone]['bosses'][$boss]['lkd'], $data[$zone]['bosses'][$boss]['kc'], $conf['boss_image_type']);
             $bi = 1 - $bi;
             $printed++;
         }
