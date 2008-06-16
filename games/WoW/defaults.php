@@ -49,5 +49,6 @@ $defaults['bossprogress'] = array(
   'bp_si_style' => 'sepia',
   'bp_ei_style' => 'normal',
   'bp_ztext_style' => 'png',
+  'bp_boss_image_type' => 'gif',
 );
 ?>
