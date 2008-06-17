@@ -45,6 +45,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 		));
 		
 		$this->additional_data = array(
+		  'author' => 'sz3',
     	'description' => $user->lang['bs_short_desc'],
     	'homepage' => 'http://www.eqdkp-plus.com/',
       'manuallink' => $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php',
