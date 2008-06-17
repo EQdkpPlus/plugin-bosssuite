@@ -40,8 +40,9 @@ if (!$mybsmgs->game_supported('bossbase')){
   $mybsmgs->load_game_specific_language('bossbase');
   require(dirname(__FILE__).'/include/bpsql.class.php');
   $mybpsql = new BPSQL();
+
+  $sbzone = $mybpsql->get_bzone('bossprogress');  
   
-  $sbzone = $mybpsql->get_bzone('bossprogress');
   $bb_conf = $mybpsql->get_config('bossbase');
   $bp_conf = $mybpsql->get_config('bossprogress');
 
