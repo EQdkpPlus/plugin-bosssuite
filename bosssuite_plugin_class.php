@@ -25,6 +25,9 @@ if (!defined('BS_MAX_DATE')) { define('BS_MAX_DATE', mktime (0,0,0,1,1,2015)); }
 if (!defined('BS_MIN_DATE')) { define('BS_MIN_DATE', mktime (0,0,0,1,1,2000)); }
 
 class bosssuite_Plugin_Class extends EQdkp_Plugin {
+
+  var $additional_data;
+
 	function bosssuite_plugin_class($pm) {
 		
 		global $eqdkp, $eqdkp_root_path, $user, $SID, $table_prefix;
@@ -33,13 +36,19 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 		$this->pm->get_language_pack('bosssuite');
 
 		$this->add_data(array (
-			'name' => '<A HREF="'. $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php" title="'.$user->lang['bs_short_desc'].'" style="cursor:help;" TARGET="_top">BossSuite 4 - MGS</A>',
+			'name' => 'BossSuite 4 MGS',
 			'code' => 'bosssuite',
 			'path' => 'bosssuite',
 			'contact' => 'sz3@gmx.net',
 			'template_path' => 'plugins/bosssuite/templates/',
 			'version' => '4.0.6'
 		));
+		
+		$this->additional_data = array(
+    	'description' => $user->lang['bs_short_desc'],
+    	'homepage' => 'http://www.eqdkp-plus.com/',
+      'manuallink' => $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php',
+    );
 
 		//Permissions
 		$this->add_permission('2380', 'a_bosssuite_conf', 'N', $user->lang['bs_pm_conf']);
