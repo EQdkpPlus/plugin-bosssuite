@@ -323,13 +323,13 @@ $bp_zi_styles['grey'] = $user->lang['bs_img_style_grey'];
 foreach ($bp_zi_styles as $value => $option) {
   $tpl->assign_block_vars('bp_si_style_row', array (
     'VALUE' => $value,
-    'SELECTED' => ($bp_conf['bp_si_style'] == $value) ? ' selected="selected"' : '',
+    'SELECTED' => ($bp_conf['si_style'] == $value) ? ' selected="selected"' : '',
     'OPTION' => $option
   ));
   
   $tpl->assign_block_vars('bp_ei_style_row', array (
     'VALUE' => $value,
-    'SELECTED' => ($bp_conf['bp_ei_style'] == $value) ? ' selected="selected"' : '',
+    'SELECTED' => ($bp_conf['ei_style'] == $value) ? ' selected="selected"' : '',
     'OPTION' => $option
   ));
 }
@@ -342,7 +342,7 @@ $bp_ztext_style['text'] = $user->lang['bs_bp_style_ztext_text'];
 foreach ($bp_ztext_style as $value => $option) {
   $tpl->assign_block_vars('bp_ztext_style_row', array (
     'VALUE' => $value,
-    'SELECTED' => ($bp_conf['bp_ztext_style'] == $value) ? ' selected="selected"' : '',
+    'SELECTED' => ($bp_conf['ztext_style'] == $value) ? ' selected="selected"' : '',
     'OPTION' => $option
   ));
 }
