@@ -88,7 +88,7 @@ global $user;
 	$firstkill_date = bp_date2text($firstkill);
 	$lastkill_date = bp_date2text($lastkill);
 	$bossinfo = '<tr class="row' . ($rowid +1) . '">';
-	$bossinfo .= '<td align="left">Name: ' .$bosslink .'</td>';
+	$bossinfo .= '<td align="left">' . $user->lang['bs_al_name'] . ': ' .$bosslink .'</td>';
 	$bossinfo .= '<td align="left">' . $user->lang['firstkill'] . $firstkill_date . '</td>';
 	$bossinfo .= '<td align="left">' . $user->lang['lastkill'] . $lastkill_date . '</td>';
 	$bossinfo .= '<td align="left">' . $user->lang['bosskillcount'] . $count . '</td></tr>';

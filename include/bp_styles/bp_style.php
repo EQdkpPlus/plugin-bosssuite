@@ -105,13 +105,13 @@ global $user;
 	if (($rowid % 2)) {
 		$bossinfo = '<tr class="row' . ($rowid +1) . '">';
 		$bossinfo .= bp_html_get_boss_image_td($bossname, $count, $imagetype);
-		$bossinfo .= '<td align="left">Name: ' . $bosslink . '<br />';
+		$bossinfo .= '<td align="left">' . $user->lang['bs_al_name'] . ': ' . $bosslink . '<br />';
 		$bossinfo .= $user->lang['firstkill'] . $firstkill_date . '<br />';
 		$bossinfo .= $user->lang['lastkill'] . $lastkill_date . '<br />';
 		$bossinfo .= $user->lang['bosskillcount'] . $count;
 		$bossinfo .= '</td>' . "\n";
 	} else {
-		$bossinfo .= '<td align="right">Name: ' . $bosslink . '<br />';
+		$bossinfo .= '<td align="right">' . $user->lang['bs_al_name'] . ': ' . $bosslink . '<br />';
 		$bossinfo .= $user->lang['firstkill'] . $firstkill_date . '<br />';
 		$bossinfo .= $user->lang['lastkill'] . $lastkill_date . '<br />';
 		$bossinfo .= $user->lang['bosskillcount'] . $count . '</td>';
