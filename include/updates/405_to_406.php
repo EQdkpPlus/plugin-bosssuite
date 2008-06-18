@@ -14,6 +14,10 @@ $sec_version = '4.0.5';
 $updateDESC = array(
   '',
 	'remove old entries for other games',
+	'remove old entries for other games',
+	'remove old entries for other games',
+	'remove old entries for other games',
+	'remove old entries for other games',
   'switch to new config format',
   'switch to new config format',
   'switch to new config format',
@@ -58,6 +62,10 @@ if($currentgame == 'LOTRO')
 
 $updateSQL = array(
   "DELETE FROM ".$table_prefix."bs_config WHERE game_id != '".$currentgame."'",
+  "DELETE FROM ".$table_prefix."bs_data_zone WHERE game_id != '".$currentgame."'",
+  "DELETE FROM ".$table_prefix."bs_data_boss WHERE game_id != '".$currentgame."'",
+  "DELETE FROM ".$table_prefix."bs_cache_zone WHERE game_id != '".$currentgame."'",
+  "DELETE FROM ".$table_prefix."bs_cache_boss WHERE game_id != '".$currentgame."'",
   "UPDATE ".$table_prefix."bs_config SET config_name='bb_bossInfo' WHERE config_name='bossInfo' AND plugin_id='bossbase';",
   "UPDATE ".$table_prefix."bs_config SET config_name='bb_zoneInfo' WHERE config_name='zoneInfo' AND plugin_id='bossbase';",
   "UPDATE ".$table_prefix."bs_config SET config_name='bb_nameDelim' WHERE config_name='nameDelim' AND plugin_id='bossbase';","UPDATE ".$table_prefix."bs_config SET config_name='bb_bossInfo' WHERE config_name='bossInfo' AND plugin_id='bossbase';",
