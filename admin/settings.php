@@ -87,8 +87,10 @@ if ($_POST['bpsavebu']){
   $mybssql->update_config('bossprogress', $bp_conf, 'bp_showSB', $_POST['bp_showSB']);
 	$mybssql->update_config('bossprogress', $bp_conf, 'bp_linkurl', $_POST['bp_linkurl']);
  	$mybssql->update_config('bossprogress', $bp_conf, 'bp_linklength', $_POST['bp_linklength']);
+ 	
   foreach ($bzone as $zoneid => $bosslist){
-		$mybssql->update_zone_visibility('bossprogress', $zoneid, $_POST['bp_sz_'.$zoneid]);
+    $value = ($_POST['bp_sz_'.$zoneid] == 1) ? 1 : 0;
+		$mybssql->update_zone_visibility('bossprogress', $zoneid, $value);
 	}
 	
 	//BossCounter Config
@@ -100,7 +102,8 @@ if ($_POST['bpsavebu']){
  	$mybssql->update_config('bosscounter', $bc_conf, 'bc_zonelength', $_POST['bc_zonelength']);
  	
  	foreach ($bzone as $zoneid => $bosslist){
-		$mybssql->update_zone_visibility('bosscounter', $zoneid, $_POST['bc_sz_'.$zoneid]);
+ 	  $value = ($_POST['bc_sz_'.$zoneid] == 1) ? 1 : 0;
+		$mybssql->update_zone_visibility('bosscounter', $zoneid, $value);
 	}
 	
  	//Zone parse strings
