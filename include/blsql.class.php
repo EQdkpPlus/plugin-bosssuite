@@ -59,8 +59,12 @@ if ( !class_exists( "BLSQL" ) ) {
         
         if($bb_conf['tables'] != '')
           $tables = explode(", ", $bb_conf['tables']);
-        else
-          $tables[0] = trim(substr($table_prefix, 0, -1));
+        else{
+          if(substr($table_prefix,-1) == "_")        
+            $tables[0] = trim(substr($table_prefix, 0, -1));
+          else $tables[0] = trim($table_prefix);
+        }
+        
       
         foreach ($tables as $prefix){
          
