@@ -22,7 +22,7 @@ $loot = array(
 	array( "id" => "21679", "qual" => "4", "name" => "Kalimdors Rache" ),
 	array( "id" => "21608", "qual" => "4", "name" => "Amulett von Vek'nilash" ),
 	array( "id" => "20726", "qual" => "3", "name" => "Formel: Handschuhe - Bedrohung" ),
-	array( "id" => "21237", "qual" => "4", "name" => "Imperiale Qirajiinsignie" ),
+	array( "id" => "21237", "qual" => "4", "name" => "Imperiales Qirajiinsigne" ),
 	array( "id" => "21273", "qual" => "4", "name" => "Gesegneter Akolytenstab der Qiraji" ),
 	array( "id" => "21275", "qual" => "4", "name" => "Gesegneter Weissagungsstab der Qiraji" ),
 	array( "id" => "21268", "qual" => "4", "name" => "Gesegneter Qirajikriegshammer" ),

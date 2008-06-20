@@ -10,7 +10,7 @@ $loot = array(
 	array( "id" => "16966", "qual" => "4", "name" => "Brustplatte des Zorns" ),
 	array( "id" => "16958", "qual" => "4", "name" => "Brustplatte des Richturteils" ),
 	array( "id" => "19003", "qual" => "4", "name" => "Kopf von Nefarian" ),
-	array( "id" => "19383", "qual" => "4", "name" => "Medallion des Meisterdrachentöters" ),
+	array( "id" => "19383", "qual" => "4", "name" => "Medaillon des Meisterdrachentöters" ),
 	array( "id" => "19384", "qual" => "4", "name" => "Ring des Meisterdrachentöters" ),
 	array( "id" => "19366", "qual" => "4", "name" => "Kugel des Meisterdrachentöters" ),
 	array( "id" => "19378", "qual" => "4", "name" => "Umhang des Brutlords" ),

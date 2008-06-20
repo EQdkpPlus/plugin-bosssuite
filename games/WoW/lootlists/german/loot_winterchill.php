@@ -12,7 +12,7 @@ $loot = array(
 	array( "id" => "30861", "qual" => "4", "name" => "Grimmige Fesseln" ),
 	array( "id" => "30865", "qual" => "4", "name" => "Klinge des Fährtenlesers" ),
 	array( "id" => "30872", "qual" => "4", "name" => "Chronik der dunklen Geheimnisse" ),
-	array( "id" => "32459", "qual" => "1", "name" => "Befristetes Phylakterium" ),
+	array( "id" => "32459", "qual" => "1", "name" => "Zeitverzerrtes Phylakterium" ),
 );
 
 

@@ -6,7 +6,7 @@ $loot = array(
 	array( "id" => "21693", "qual" => "4", "name" => "Erscheinung des Verschlingers" ),
 	array( "id" => "21692", "qual" => "4", "name" => "Triadengurt" ),
 	array( "id" => "21695", "qual" => "4", "name" => "Angelistas Berührung" ),
-	array( "id" => "21237", "qual" => "4", "name" => "Imperiale Qirajiinsignie" ),
+	array( "id" => "21237", "qual" => "4", "name" => "Imperiales Qirajiinsigne" ),
 	array( "id" => "21232", "qual" => "4", "name" => "Imperiale Qirajiwaffe" ),
 	array( "id" => "21680", "qual" => "4", "name" => "Weste der zügigen Vollstreckung" ),
 	array( "id" => "21603", "qual" => "4", "name" => "Zauberstab des Qirajiadels" ),

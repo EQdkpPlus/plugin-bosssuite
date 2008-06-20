@@ -9,7 +9,7 @@ $loot = array(
 	array( "id" => "32333", "qual" => "4", "name" => "Gurt der Stabilität" ),
 	array( "id" => "32341", "qual" => "4", "name" => "Gamaschen der göttlichen Vergeltung" ),
 	array( "id" => "32335", "qual" => "4", "name" => "Unaufhaltsamer Ring des Angreifers" ),
-	array( "id" => "32501", "qual" => "4", "name" => "Insignien des Schattenmondklans" ),
+	array( "id" => "32501", "qual" => "4", "name" => "Insigne des Schattenmondklans" ),
 	array( "id" => "32269", "qual" => "4", "name" => "Schicksalsbote" ),
 	array( "id" => "32344", "qual" => "4", "name" => "Stab der vollständigen Genesung" ),
 	array( "id" => "32343", "qual" => "4", "name" => "Zauberstab des prismatischen Kerns" ),

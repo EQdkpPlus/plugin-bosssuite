@@ -13,7 +13,7 @@ $loot = array(
 	array( "id" => "21670", "qual" => "4", "name" => "Abzeichen der Schwarmwache" ),
 	array( "id" => "21666", "qual" => "4", "name" => "Sarturas Macht" ),
 	array( "id" => "21673", "qual" => "4", "name" => "Silithidenklaue" ),
-	array( "id" => "21237", "qual" => "4", "name" => "Imperiale Qirajiinsignie" ),
+	array( "id" => "21237", "qual" => "4", "name" => "Imperiales Qirajiinsigne" ),
 	array( "id" => "21273", "qual" => "4", "name" => "Gesegneter Akolytenstab der Qiraji" ),
 	array( "id" => "21275", "qual" => "4", "name" => "Gesegneter Weissagungsstab der Qiraji" ),
 	array( "id" => "21268", "qual" => "4", "name" => "Gesegneter Qirajikriegshammer" ),

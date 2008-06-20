@@ -5,7 +5,7 @@ $loot = array(
 	array( "id" => "16933", "qual" => "4", "name" => "Gürtel der Nemesis" ),
 	array( "id" => "16936", "qual" => "4", "name" => "Gürtel des Drachenjägers" ),
 	array( "id" => "16903", "qual" => "4", "name" => "Sturmgrimms Gürtel" ),
-	array( "id" => "16910", "qual" => "4", "name" => "Blutfanggürtel" ),
+	array( "id" => "16910", "qual" => "4", "name" => "BlutfanggÃ¼rtel" ),
 	array( "id" => "16944", "qual" => "4", "name" => "Gürtel der zehn Stürme" ),
 	array( "id" => "16960", "qual" => "4", "name" => "Gürtelbund des Zorns" ),
 	array( "id" => "16952", "qual" => "4", "name" => "Gürtel des Richturteils" ),

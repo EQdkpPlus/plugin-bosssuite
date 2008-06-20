@@ -8,7 +8,7 @@ $loot = array(
 	array( "id" => "23570", "qual" => "4", "name" => "Jom Gabbar" ),
 	array( "id" => "20927", "qual" => "4", "name" => "Ouros intakte Haut" ),
 	array( "id" => "20931", "qual" => "4", "name" => "Haut des großen Sandwurms" ),
-	array( "id" => "21237", "qual" => "4", "name" => "Imperiale Qirajiinsignie" ),
+	array( "id" => "21237", "qual" => "4", "name" => "Imperiales Qirajiinsigne" ),
 	array( "id" => "21273", "qual" => "4", "name" => "Gesegneter Akolytenstab der Qiraji" ),
 	array( "id" => "21275", "qual" => "4", "name" => "Gesegneter Weissagungsstab der Qiraji" ),
 	array( "id" => "21268", "qual" => "4", "name" => "Gesegneter Qirajikriegshammer" ),

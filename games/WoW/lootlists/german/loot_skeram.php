@@ -13,7 +13,7 @@ $loot = array(
 	array( "id" => "21707", "qual" => "4", "name" => "Ring des wirren Gedankens" ),
 	array( "id" => "21703", "qual" => "4", "name" => "Hammer von Ji'zhi" ),
 	array( "id" => "21128", "qual" => "4", "name" => "Stab der Qirajipropheten" ),
-	array( "id" => "21237", "qual" => "4", "name" => "Imperiale Qirajiinsignie" ),
+	array( "id" => "21237", "qual" => "4", "name" => "Imperiales Qirajiinsigne" ),
 	array( "id" => "21273", "qual" => "4", "name" => "Gesegneter Akolytenstab der Qiraji" ),
 	array( "id" => "21275", "qual" => "4", "name" => "Gesegneter Weissagungsstab der Qiraji" ),
 	array( "id" => "21268", "qual" => "4", "name" => "Gesegneter Qirajikriegshammer" ),

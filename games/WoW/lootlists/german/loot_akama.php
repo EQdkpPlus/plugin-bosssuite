@@ -12,7 +12,7 @@ $loot = array(
 	array( "id" => "32278", "qual" => "4", "name" => "Handschutz der stillen Gerechtigkeit" ),
 	array( "id" => "32263", "qual" => "4", "name" => "Beinschützer des Prätorianers" ),
 	array( "id" => "32268", "qual" => "4", "name" => "Myrmidonentreter" ),
-	array( "id" => "32266", "qual" => "4", "name" => "Ring der zweifelhaften Absicht" ),
+	array( "id" => "32266", "qual" => "4", "name" => "Ring of Deceitful Intent" ),
 	array( "id" => "32361", "qual" => "4", "name" => "Ikone des blinden Sehers" ),
 );
 

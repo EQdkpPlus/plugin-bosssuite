@@ -13,7 +13,7 @@ $loot = array(
 	array( "id" => "21664", "qual" => "4", "name" => "Stachelhalsschmuck" ),
 	array( "id" => "22402", "qual" => "4", "name" => "Buchband der Anmut" ),
 	array( "id" => "22396", "qual" => "4", "name" => "Totem des Lebens" ),
-	array( "id" => "21237", "qual" => "4", "name" => "Imperiale Qirajiinsignie" ),
+	array( "id" => "21237", "qual" => "4", "name" => "Imperiales Qirajiinsigne" ),
 	array( "id" => "21273", "qual" => "4", "name" => "Gesegneter Akolytenstab der Qiraji" ),
 	array( "id" => "21275", "qual" => "4", "name" => "Gesegneter Weissagungsstab der Qiraji" ),
 	array( "id" => "21268", "qual" => "4", "name" => "Gesegneter Qirajikriegshammer" ),

@@ -9,7 +9,7 @@ $loot = array(
 	array( "id" => "22399", "qual" => "4", "name" => "Götze der Gesundheit" ),
 	array( "id" => "20932", "qual" => "4", "name" => "Dominanzbindungen der Qiraji" ),
 	array( "id" => "20928", "qual" => "4", "name" => "Befehlsbindungen der Qiraji" ),
-	array( "id" => "21237", "qual" => "4", "name" => "Imperiale Qirajiinsignie" ),
+	array( "id" => "21237", "qual" => "4", "name" => "Imperiales Qirajiinsigne" ),
 	array( "id" => "21273", "qual" => "4", "name" => "Gesegneter Akolytenstab der Qiraji" ),
 	array( "id" => "21275", "qual" => "4", "name" => "Gesegneter Weissagungsstab der Qiraji" ),
 	array( "id" => "21268", "qual" => "4", "name" => "Gesegneter Qirajikriegshammer" ),

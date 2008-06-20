@@ -11,7 +11,7 @@ $loot = array(
 	array( "id" => "32245", "qual" => "4", "name" => "Schienbeinschützer des Gezeitenstampfers" ),
 	array( "id" => "32238", "qual" => "4", "name" => "Ring der friedvollen Wogen" ),
 	array( "id" => "32247", "qual" => "4", "name" => "Ring der gebändigten Stürme" ),
-	array( "id" => "32237", "qual" => "4", "name" => "Zorn des Maelstroms" ),
+	array( "id" => "32237", "qual" => "4", "name" => "Zorn des Mahlstroms" ),
 	array( "id" => "32236", "qual" => "4", "name" => "Brausende Flut" ),
 	array( "id" => "32248", "qual" => "4", "name" => "Hellebarde der Verwüstung" ),
 );

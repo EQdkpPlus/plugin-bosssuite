@@ -7,7 +7,7 @@ $loot = array(
 	array( "id" => "34340", "qual" => "4", "name" => "Dark Conjuror's Collar" ),
 	array( "id" => "34342", "qual" => "4", "name" => "Handguards of the Dawn" ),
 	array( "id" => "34406", "qual" => "4", "name" => "Gloves of Tyri's Power" ),
-	array( "id" => "34344", "qual" => "4", "name" => "Handguards of the Defiled Worlds" ),
+	array( "id" => "34344", "qual" => "4", "name" => "Handguards of Defiled Worlds" ),
 	array( "id" => "34244", "qual" => "4", "name" => "Duplicitous Guise" ),
 	array( "id" => "34404", "qual" => "4", "name" => "Mask of the Fury Hunter" ),
 	array( "id" => "34245", "qual" => "4", "name" => "Cover of Ursol the Wise" ),
