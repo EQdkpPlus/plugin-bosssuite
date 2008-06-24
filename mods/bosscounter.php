@@ -25,7 +25,7 @@ $mybsmgs = new BSMGS();
 if (!$mybsmgs->game_supported('bossbase')){
   $bcout = '<table width=100% class="borderless" cellspacing="0" cellpadding="2">
 		        <tr><th colspan="2" align="center">BossCounter</th></tr>'."\n".
-	         '<td>GAME NOT SUPPORTED!</td></tr></table>';
+	         '<tr><td>GAME NOT SUPPORTED!</td></tr></table>';
 	$bchout = '<table cellpadding=2 cellspacing=0 border=0 width='.$BKtablewidth.' align=center>'."\n".
 	          '<tr><td>GAME NOT SUPPORTED</td></tr></table>';
 }else{
@@ -79,14 +79,14 @@ if (!$mybsmgs->game_supported('bossbase')){
           $bc_acc_array[$bc_acc_title] = $bc_acc_content;
         }
       }
-      $bcout = '<table width=100% class="forumline" cellspacing="0" cellpadding="0">';
-      $bcout .= '<tr><th colspan="2" align="center">BossCounter</th></tr><tr><td>'."\n";
+      $bcout = '<table width=100% class="forumline" cellspacing="0" cellpadding="0"><tr><th colspan="2" align="center">BossCounter</th></tr>';
+      $bcout .= '<tr><td>'."\n";
       $bcout .= $jqueryp->accordion('bc_accordion',$bc_acc_array);
-      $bcout .= '</td></tr></table>';
+      $bcout .= '</td></tr>';
+      $bcout .= '</table>';
   }else{
-      $bcout = '<table width=100% class="forumline" cellspacing="0" cellpadding="2">
-      		  <tr><th colspan="2" align="center">Bosscounter</th></tr>'."\n";
-
+      $bcout = '<table width=100% class="forumline" cellspacing="0" cellpadding="0"><tr><th colspan="2" align="center">BossCounter</th></tr>';
+      
       foreach ($sbzone as $zone => $bosses)
       {
       	if ((!$bc_conf['dynZone']) or ($data[$zone]['zk'] > 0))
@@ -101,7 +101,7 @@ if (!$mybsmgs->game_supported('bossbase')){
       		}
       	}
       }
-      $bcout .= '</table>'."\n";
+      $bcout .= '</table>';
   }
 
   //HORIZONTAL

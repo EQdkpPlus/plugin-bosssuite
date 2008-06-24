@@ -55,7 +55,9 @@ if(!function_exists(bosscounter_v_module)){
 		//$DKPInfo = $hellworld;
     
     // return the output for module manager
-		return $bcout;
+    $bla = '<table width=100% class="forumline" cellspacing="0" cellpadding="0"><tr><th colspan="2" align="center">BossCounter</th></tr>';
+    $blupp = '</table>';
+		return '<table width=100% cellspacing="0" cellpadding="0">'.substr($bcout, strlen($bla), -(strlen($blupp))).'</table>';
   }
 }
 ?>
