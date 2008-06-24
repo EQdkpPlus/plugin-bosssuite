@@ -11,6 +11,6 @@ if ( !defined('EQDKP_INC') ){
     header('HTTP/1.0 404 Not Found');exit;
 } 
 $default_lang = 'english';
-$item_qualities = array ();
+$item_qualities = array (0, 1, 2 , 3 ,4, 5);
 
 ?>
