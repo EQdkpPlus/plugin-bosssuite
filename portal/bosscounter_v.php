@@ -20,7 +20,12 @@ $portal_module['bosscounter_v'] = array(                   // the same name as t
 			'contact'		    => 'sz3@gmx.net',          // email adress
 			'description'   => 'Show the vertical BossCounter',           // Detailed Description
 			'positions'     => array('left1', 'left2', 'right'), // Which blocks should be usable? left1 (over menu), left2 (under menu), right, middle
-      'settings'      => '0'                               // 0  = no settings, 1 = settings
+      'settings'      => '0',                               // 0  = no settings, 1 = settings
+      'install'       => array(
+                            'autoenable'        => '1',
+                            'defaultposition'   => 'right',
+                            'defaultnumber'     => '1',
+                         ),  
     );
 
 /* Define the Settings if needed
@@ -41,7 +46,7 @@ Settings page is created dynamically
 // the name MUST be FOLDERNAME_module, if not an error will occur
 if(!function_exists(bosscounter_v_module)){
   function bosscounter_v_module(){
-  	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus, $pm;
+  	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus;
   	  include_once(dirname(__FILE__).'/../mods/bosscounter.php');
       $bla = '<table width=100% class="forumline" cellspacing="0" cellpadding="0"><tr><th colspan="2" align="center">BossCounter</th></tr>';
       $blupp = '</table>';

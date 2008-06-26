@@ -20,7 +20,12 @@ $portal_module['bosscounter_h'] = array(                   // the same name as t
 			'contact'		    => 'sz3@gmx.net',          // email adress
 			'description'   => 'Show the horizontal BossCounter',           // Detailed Description
 			'positions'     => array('middle'), // Which blocks should be usable? left1 (over menu), left2 (under menu), right, middle
-      'settings'      => '0'                               // 0  = no settings, 1 = settings
+      'settings'      => '0',                               // 0  = no settings, 1 = settings
+      'install'       => array(
+                            'autoenable'        => '0',
+                            'defaultposition'   => 'middle',
+                            'defaultnumber'     => '1',
+                          ),
     );
 
 /* Define the Settings if needed
@@ -41,13 +46,9 @@ Settings page is created dynamically
 // the name MUST be FOLDERNAME_module, if not an error will occur
 if(!function_exists(bosscounter_h_module)){
   function bosscounter_h_module(){
-  	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus, $pm;
-  	if ( ($pm->check(PLUGIN_INSTALLED, 'bosssuite')) ){ 
+  	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus;
   	  include_once(dirname(__FILE__).'/../mods/bosscounter.php');
 		  return $bchout;
-    }else{
-      return "BossSuite not installed!";
-    }
   }
 }
 ?>
