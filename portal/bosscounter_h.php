@@ -43,11 +43,11 @@ if(!function_exists(bosscounter_h_module)){
   function bosscounter_h_module(){
   	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus, $pm;
   	if ( ($pm->check(PLUGIN_INSTALLED, 'bosssuite')) ){ 
-  	 include_once(dirname(__FILE__).'/../mods/bosscounter.php');
+  	  include_once(dirname(__FILE__).'/../mods/bosscounter.php');
 		  return $bchout;
-		}
-  }else{
+    }else{
       return "BossSuite not installed!";
+    }
   }
 }
 ?>
