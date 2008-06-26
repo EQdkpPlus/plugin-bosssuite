@@ -41,21 +41,13 @@ Settings page is created dynamically
 // the name MUST be FOLDERNAME_module, if not an error will occur
 if(!function_exists(bosscounter_h_module)){
   function bosscounter_h_module(){
-  	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus;
-  	
-  	include_once(dirname(__FILE__).'/../mods/bosscounter.php');
-  	
-  	// Set the output: If custom one is entered in the setting output this one
-  	// $conf_plus for config values, $plang for language values
-  	//$hellworld = ($conf_plus['pk_helloworld_useroutput']) ? $conf_plus['pk_helloworld_useroutput'] : $plang['portal_gelloworld_text'];
-  	
-  	// Start the Output
-  	// DO NOT USE ECHO()!
-  	// You can use HTML if you want.
-		//$DKPInfo = $hellworld;
-    
-    // return the output for module manager
-		return $bchout;
+  	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus, $pm;
+  	if ( ($pm->check(PLUGIN_INSTALLED, 'bosssuite')) ){ 
+  	 include_once(dirname(__FILE__).'/../mods/bosscounter.php');
+		  return $bchout;
+		}
+  }else{
+      return "BossSuite not installed!";
   }
 }
 ?>
