@@ -408,7 +408,16 @@ if ( !class_exists( "BSSQL" ) ) {
         }
       	return $data;
     }
-    
+
+    //function from http://de2.php.net/manual/en/function.in-array.php
+    //contact at simplerezo dot com   
+    function in_array_nocase($search, &$array) {
+      $search = strtolower($search);
+      foreach ($array as $item)
+        if (strtolower($item) == $search)
+          return TRUE;
+      return FALSE;
+    } 
   }//end class
 }//end if
 ?>

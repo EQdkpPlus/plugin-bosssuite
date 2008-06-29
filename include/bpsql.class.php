@@ -139,8 +139,8 @@ if ( !class_exists( "BPSQL" ) ) {
         				$zone_element = array($row[$zoneInfo]);
         			}
         			foreach ($zone_element as $raid){
-        				$zparseList = preg_split("/\', \'/", stripslashes(trim($bb_pzone['pz_'.$zone], "\' ")));
-        				if (in_array(stripslashes(trim($raid)), $zparseList)) {
+        				$zparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pzone['pz_'.$zone], "\' ")));
+        				if ($this->in_array_nocase(stripslashes(trim($raid)), $zparseList)) {
         					$data[$zone]['vc']++;
         					if ($data[$zone]['fvd'] > $row["rdate"]) {
         						$data[$zone]['fvd'] = $row["rdate"];
@@ -160,8 +160,8 @@ if ( !class_exists( "BPSQL" ) ) {
         			}
         			foreach ($boss_element as $raid){
         				foreach ($bosses as $boss){
-                			$bparseList = preg_split("/\', \'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
-        					if (in_array(stripslashes(trim($raid)), $bparseList)) {
+                			$bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
+        					if ($this->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
         						$data[$zone]['bosses'][$boss]['kc']++;
         						if ($data[$zone]['bosses'][$boss]['fkd'] > $row["rdate"]) {
         							$data[$zone]['bosses'][$boss]['fkd'] = $row["rdate"];

@@ -35,7 +35,6 @@ $lang = array(
 'bs_al_delimRNO' => 'Raidnote delimiter (Opt.: Regular Expression):',
 'bs_al_delimRNA' => 'Raidname delimiter (Opt.: Regular Expression):',
 'bs_al_tables' => 'Opt.: EQdkp prefixlist (empty => only current prefix):',
-'bs_al_parseInfo' => 'Attention! Please keep in mind that the following strings are case-sensitive! JinDo won\'t match Jindo!',
 'bs_al_zoneInfo' => 'Where (in the raid entry) to look for zone infos?',
 'bs_al_bossInfo' => 'Where (in the raid entry) to look for boss infos?',
 'bs_al_linkInfo' => 'Link options:',

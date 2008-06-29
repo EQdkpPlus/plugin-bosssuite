@@ -36,7 +36,6 @@ $lang = array(
 'bs_al_delimRNO' => 'Raid 注释分隔符 (Opt.: 正则表达式):',
 'bs_al_delimRNA' => 'Raid 名称分隔符 (Opt.: 正则表达式):',
 'bs_al_tables' => 'Opt.: EQdkp prefixlist (empty => only current prefix):',
-'bs_al_parseInfo' => '注意!请记住下面的字符串是大小写敏感的! JinDo 不匹配 Jindo!',
 'bs_al_zoneInfo' => '哪里 (在 raid 入口) 查找区域信息?',
 'bs_al_bossInfo' => '哪里 (在 raid 入口) 查找首领信息?',
 'bs_al_linkInfo' => '链接选项:',

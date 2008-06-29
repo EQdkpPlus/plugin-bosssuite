@@ -83,7 +83,7 @@ if ( !class_exists( "BLSQL" ) ) {
             }
             foreach ($boss_element as $raid){
               $bparseList = preg_split("/\', \'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
-              if (in_array(stripslashes(trim($raid)), $bparseList)) {
+              if ($this->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
                 $data['kc']++;
                 $data['rids'] .= $row['id'] . "\n";
                 $sql2 = "Select item_name, item_id from ". $prefix ."_items where raid_id = '".$row['id']."' order by item_name";

@@ -21,17 +21,19 @@ $idlist['default'] = array(
     'bogbereth' => 'Bogbereth',
 
     /*******Annuminas*************/
-    'nengon' => '6109',
+    'nengon' => 'Nengon',
     'guloth' => 'Guloth',
     'balhest' => 'Balhest',
     'shingrinder' => 'Shingrinder',
-    'valandil' => 'Dolvaethor',
+    'dolvaethor' => 'Dolvaethor',
+    'valandil' => 'Valandil',
 
 	/******Helegrod*****/
-    'servants' => '12435',
-    'grisgart' => '13020',
-    'zaudru' => '12017',
-    'storvagun' => '11981',
+	'coldbear' => 'Coldbear',
+    'servants' => 'The_Four_Hill-men',
+    'grisgart' => 'Grisgart',
+    'zaudru' => 'Zaudru',
+    'storvagun' => 'Storvagun',
     'thorog' => 'Thorog',
 
     /******Fornost*****/
@@ -39,6 +41,10 @@ $idlist['default'] = array(
     'megoriath' => 'Megoriath',
     'rhavameldir' => 'Rhavameldir',
     'zhurmat' => 'Zhurmat',
+    'zanthrug' => 'Zanthrug',
+    'riamul' => 'Riamul',
+    'krithmog' => 'Krithmog',
+    'einiora' => 'Einiora',
     'warchief_burzghash' => 'Warchief_B%C3%BArzg%C3%A2sh',
     'remmenaeg' => 'Remmenaeg',
 
@@ -53,25 +59,26 @@ $idlist['default'] = array(
     'thaurlach' => 'Thaurlach',
 
     /******Urugarth*****/
-    'akrur' => '12435',
-    'athpukh' => '13020',
-    'dushkal' => '11981',
-    'gruglok' => '14601',
-    'kughurz' => '14601',
-    'lagmas' => '14601',
-    'lhugrien' => '14601',
-    'morthrang' => '14601',
+    'akrur' => 'Arkur',
+    'athpukh' => 'Athpukh',
+    'dushkal' => 'Dushk%C3%A2l',
+    'gruglok' => 'Gruglok',
+    'kughurz' => 'Kugh%C3%BBrz',
+    'lagmas' => 'Lagmas',
+    'lhugrien' => 'Lhugrien',
+    'morthrang' => 'Morthrang',
     'sorkrank' => 'Sorkrank',
     'burzfil' => 'Burzf%C3%AEl',
-    'lamkarn' => '14601',
+    'lamkarn' => 'Lamkarn',
 
     /******Barad Gularan*******/
+    'forvengwath' => 'Forvengwath',
     'wisdan' => 'Castellan_Wisd%C3%A1n',
     'udunion' => 'Ud%C3%BAnion',
 
     /******Carn Dum*****/
     'urro' => 'Urro',
-    'barashal' => '12435',
+    'barashal' => 'Barashal',
     'helchgam' => 'Helchgam',
     'salvakh' => 'S%C3%A1lvakh',
     'azgoth' => 'Azgoth',
@@ -80,6 +87,21 @@ $idlist['default'] = array(
     'rodakhan' => 'Rodakhan',
     'mura' => 'M%C3%BAra',
     'gurthul' => 'G%C3%BArthul',
-    'mordirith' => 'Mordirith'
+    'mordirith' => 'Mordirith',
+    
+    /******The Great Barrow*****/
+    'gaerthel_gaerdring' => 'The_Great_Barrow#Bosses',
+	'thadur' => 'Thad%C3%BAr_the_Ravager',
+	'sambrog' => 'Sambrog',
+	
+	/******Garth Agarwen*****/
+    'temair' => 'Temair_the_Devoted',
+	'grimbark' => 'Grimbark',
+	'edan_esyld' => 'Edan_and_Esyld',
+	'ivar' => 'Ivar_the_Bloodhand',
+	'vatar' => 'Vatar',
+	'naruhel' => 'Naruhel'
+    
+    
 );
 ?>

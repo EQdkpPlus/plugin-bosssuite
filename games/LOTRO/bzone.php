@@ -13,6 +13,7 @@ if ( !defined('EQDKP_INC') ){
 
 $bzone = array (
 'helegrod' => array (
+	'coldbear',
     'servants',
     'grisgart',
     'zaudru',
@@ -30,6 +31,7 @@ $bzone = array (
     'thaurlach',
 ),
 'barad_gularan' => array (
+	'forvengwath',
   	'wisdan',
   	'udunion',
 ),
@@ -42,6 +44,7 @@ $bzone = array (
 ),
 'haudh_valandil' => array (
 	'shingrinder',
+	'dolvaethor',
 	'valandil',
 ),
 'urugarth' => array (
@@ -72,15 +75,32 @@ $bzone = array (
 ),
 'misc' => array (
     'ferndur',
-    'bogbereth'
+    'bogbereth',
 ),
 'fornost' => array (
     'brogadan',
     'megoriath',
     'rhavameldir',
     'warchief_burzghash',
+    'zanthrug',
+    'riamul',
     'zhurmat',
+    'krithmog',
+    'einiora',
     'remmenaeg',
+),
+'great_barrow' => array (
+	'gaerthel_gaerdring',
+	'thadur',
+	'sambrog',
+),
+'garth_agarwen' => array (
+	'temair',
+	'grimbark',
+	'edan_esyld',
+	'ivar',
+	'vatar',
+	'naruhel',
 )
 );
 

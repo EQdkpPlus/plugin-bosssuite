@@ -36,7 +36,6 @@ $lang = array(
 'bs_al_delimRNO' => 'Рейд заметка delimiter (Opt.: Regular Expression):',
 'bs_al_delimRNA' => 'Название Рейда delimiter (Opt.: Regular Expression):',
 'bs_al_tables' => 'Opt.: EQdkp список prefix(ов) (пусто => только текущий prefix):',
-'bs_al_parseInfo' => 'Внимание! Пожалуйста, keep in mind that the following strings are case-sensitive! JinDo won\'t match Jindo!',
 'bs_al_zoneInfo' => 'Где (in the Рейд entry) to look for zone infos?',
 'bs_al_bossInfo' => 'Где (in the Рейд entry) to look for boss infos?',
 'bs_al_linkInfo' => 'Link опции:',

@@ -36,7 +36,6 @@ $lang = array(
 'bs_al_delimRNO' => 'Trennzeichen für die Raidnotiz (Opt.: Regulärer Ausdruck):',
 'bs_al_delimRNA' => 'Trennzeichen für den Raidnamen (Opt.: Regulärer Ausdruck):',
 'bs_al_tables' => 'Opt.: EQdkp Präfixliste (leer => nur aktuelles Präfix):',
-'bs_al_parseInfo' => 'Achtung! Die folgenden Zeichenketten sind "case-sensitive"! JinDo ist nicht das gleiche wie Jindo!',
 'bs_al_zoneInfo' => 'Wo sind die Zonen Infos zu finden?',
 'bs_al_bossInfo' => 'Wo sind die Boss Infos zu finden?',
 'bs_al_linkInfo' => 'Link Optionen:',

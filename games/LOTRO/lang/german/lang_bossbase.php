@@ -24,10 +24,12 @@ $lang['guloth'] = array('long' => 'Guloth', 'short' => 'Guloth');
 $lang['balhest'] = array('long' => 'Balhest', 'short' => 'Balhest');
 $lang['haudh_valandil'] = array('long' => 'Annuminas - Haudh Valandil', 'short' => 'Annu - Grab');
 $lang['shingrinder'] = array('long' => 'Shingrinder', 'short' => 'Shingrinder');
+$lang['dolvaethor'] = array('long' => 'Dolvaethor', 'short' => 'Dolvaethor');
 $lang['valandil'] = array('long' => 'Valandil von Arnor', 'short' => 'Valandil');
 
 /******Helegrod*****/
 $lang['helegrod'] = array('long' => 'Helegrod', 'short' => 'Helegrod');
+$lang['coldbear'] = array('long' => 'Kältebär', 'short' => 'Kältebär');
 $lang['servants'] = array('long' => 'Die vier Diener', 'short' => 'Vier Diener');
 $lang['grisgart'] = array('long' => 'Grisgart', 'short' => 'Grisgart');
 $lang['zaudru'] = array('long' => 'Zaudru', 'short' => 'Zaudru');
@@ -41,6 +43,10 @@ $lang['megoriath'] = array('long' => 'Megoriath', 'short' => 'Megoriath');
 $lang['rhavameldir'] = array('long' => 'Rhavameldir', 'short' => 'Rhavameldir');
 $lang['warchief_burzghash'] = array('long' => 'Warchief Búrzgâsh', 'short' => 'Búrzgâsh');
 $lang['zhurmat'] = array('long' => 'Zhurmat', 'short' => 'Zhurmat');
+$lang['riamul'] = array('long' => 'Riamul', 'short' => 'Riamul');
+$lang['zanthrug'] = array('long' => 'Zanthrug', 'short' => 'Zanthrug');
+$lang['krithmog'] = array('long' => 'Krithmog', 'short' => 'Krithmog');
+$lang['einiora'] = array('long' => 'Einiora', 'short' => 'Einiora');
 $lang['remmenaeg'] = array('long' => 'Remmenaeg', 'short' => 'Remmenaeg');
 
 /******The Rift*****/
@@ -55,7 +61,7 @@ $lang['thrang'] = array('long' => 'Thrâng', 'short' => 'Thrâng');
 $lang['thaurlach'] = array('long' => 'Thaurlach', 'short' => 'Thaurlach');
 
 /******Urugarth*****/
-$lang['urugarth'] = array('long' => 'Urugarth', 'short' => 'Urugarth');
+$lang['urugarth'] = array('long' => 'Urugarth', 'short' => 'Uru');
 $lang['sorkrank'] = array('long' => 'Sorkrank', 'short' => 'Sorkrank');
 $lang['burzfil'] = array('long' => 'Burzfil', 'short' => 'Burzfil');
 $lang['dushkal'] = array('long' => 'Dushkal', 'short' => 'Dushkal');
@@ -70,6 +76,7 @@ $lang['lagmas'] = array('long' => 'Lagmas', 'short' => 'Lagmas');
 
 /*****Barad Gularan*******/
 $lang['barad_gularan'] = array('long' => 'Barad Gúlaran', 'short' => 'BG');
+$lang['forvengwath'] = array('long' => 'Forvengwath', 'short' => 'Forvengwath');
 $lang['wisdan'] = array('long' => 'Castellan Wisdán', 'short' => 'Wisdan');
 $lang['udunion'] = array('long' => 'Udúnion', 'short' => 'Udúnion');
 
@@ -87,5 +94,20 @@ $lang['rodakhan'] = array('long' => 'Rodakhan', 'short' => 'Rodakhan');
 $lang['mura'] = array('long' => 'Múra', 'short' => 'Múra');
 $lang['gurthul'] = array('long' => 'Gúrthul', 'short' => 'Gúrthul');
 $lang['mordirith'] = array('long' => 'Mordirith', 'short' => 'Mordirith');
+
+/******The Great Barrow*****/
+$lang['great_barrow'] = array('long' => 'Das Große Hügelgrab', 'short' => 'Hügelgrab');
+$lang['gaerthel_gaerdring'] = array('long' => 'Gaerthel & Gaerdring', 'short' => 'G & G');
+$lang['thadur'] = array('long' => 'Thadúr der Schleifer', 'short' => 'Thadúr');
+$lang['sambrog'] = array('long' => 'Sambrog', 'short' => 'Sambrog');
+
+/******Garth Agarwen*****/
+$lang['garth_agarwen'] = array('long' => 'Garth Agarwen', 'short' => 'GA');
+$lang['temair'] = array('long' => 'Temair die ergebene', 'short' => 'Temair');
+$lang['grimbark'] = array('long' => 'Grimton', 'short' => 'Grimton');
+$lang['edan_esyld'] = array('long' => 'Edan & Esyld', 'short' => 'E & E');
+$lang['ivar'] = array('long' => 'Ivar Bluthand', 'short' => 'Ivar');
+$lang['vatar'] = array('long' => 'Vatar', 'short' => 'Vatar');
+$lang['naruhel'] = array('long' => 'Naruhel - Die Rote Maid', 'short' => 'Naruhel');
 
 ?>

@@ -14,10 +14,12 @@ if ( !defined('EQDKP_INC') ){
 	$up_versions 	= array(
 												1 => '4.0.5',
                         2 => '4.0.6',
+                        3 => '4.0.7',
 											);
 											
 	$up_updates 	= array(
 												1 => '405_to_406.php',
                         2 => false,
+                        3 => false,
 												);
 ?>
