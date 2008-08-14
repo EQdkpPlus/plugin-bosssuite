@@ -12,10 +12,6 @@ if ( !defined('EQDKP_INC') )
     die('Do not access this file directly.');
 }
 
-include_once ($eqdkp_root_path . 'common.php');
-
-global $user , $eqdkp;
-
 // new mgs class
 require_once(dirname(__FILE__).'/../include/bsmgs.class.php');
 $mybsmgs = new BSMGS();
