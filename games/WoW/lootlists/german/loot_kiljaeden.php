@@ -4,7 +4,7 @@ $loot = array(
 	array( "id" => "34242", "qual" => "4", "name" => "Tattered Cape of Antonidas" ),
 	array( "id" => "34339", "qual" => "4", "name" => "Gugel des reinen Lichtes" ),
 	array( "id" => "34405", "qual" => "4", "name" => "Helm der arkanen Reinheit" ),
-	array( "id" => "34340", "qual" => "4", "name" => "Halsband des Schwarzkünstlers" ),
+	array( "id" => "34340", "qual" => "4", "name" => "Kragen des Schwarzkünstlers" ),
 	array( "id" => "34342", "qual" => "4", "name" => "Handschützer des Morgens" ),
 	array( "id" => "34406", "qual" => "4", "name" => "Handschuhe von Tyris Macht" ),
 	array( "id" => "34344", "qual" => "4", "name" => "Handschützer der entweihten Welten" ),
