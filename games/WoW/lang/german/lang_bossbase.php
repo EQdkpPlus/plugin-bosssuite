@@ -190,7 +190,7 @@ $lang['sunwell'] = array('long' => 'Sunwell Plateau', 'short' => 'SW');
 $lang['kalecgos'] = array('long' => 'Kalecgos', 'short' => 'Kalecgos');
 $lang['brutallus'] = array('long' => 'Brutallus', 'short' => 'Brutallus');
 $lang['felmyst'] = array('long' => 'Teufelsruch', 'short' => 'Teufelsruch');
-$lang['fetwins'] = array('long' => 'Female Eredar Twins', 'short' => 'Twins');
+$lang['fetwins'] = array('long' => 'Eredar Zwillinge', 'short' => 'Zwillinge');
 $lang['muru'] = array('long' => 'M\'uru', 'short' => 'M\'uru');
 $lang['kiljaeden'] = array('long' => 'Kil\'jaeden', 'short' => 'Kil\'jaeden');
 ?>
