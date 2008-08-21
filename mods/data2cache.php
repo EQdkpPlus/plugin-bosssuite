@@ -95,7 +95,7 @@ if (!$mybsmgs->game_supported('bossbase')){
 				$zone_element = array($row[$zoneInfo]);
 			}
 			foreach ($zone_element as $raid){
-				$zparseList = preg_split("/\', \'/", stripslashes(trim($bb_pzone['pz_'.$zone], "\' ")));
+				$zparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pzone['pz_'.$zone], "\' ")));
 				if (in_array(stripslashes(trim($raid)), $zparseList)) {
 					$data[$zone]['vc']++;
 					if ($data[$zone]['fvd'] > $row["rdate"]) {
@@ -116,7 +116,7 @@ if (!$mybsmgs->game_supported('bossbase')){
 			}
 			foreach ($boss_element as $raid){
 				foreach ($bosses as $boss){
-        			$bparseList = preg_split("/\', \'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
+        			$bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
 					if (in_array(stripslashes(trim($raid)), $bparseList)) {
 						$data[$zone]['bosses'][$boss]['kc']++;
 						if ($data[$zone]['bosses'][$boss]['fkd'] > $row["rdate"]) {
