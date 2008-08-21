@@ -120,7 +120,7 @@ if ( !class_exists( "BCSQL" ) ) {
                   }
                   foreach ($boss_element as $raid){
                       foreach ($bosses as $boss){
-                          $bparseList = preg_split("/\', \'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
+                          $bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
                           if ($this->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
                               $data[$zone]['bosses'][$boss]['kc']++;
                           }

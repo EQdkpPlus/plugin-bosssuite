@@ -82,7 +82,7 @@ if ( !class_exists( "BLSQL" ) ) {
               $boss_element = array($row[$bossInfo]);
             }
             foreach ($boss_element as $raid){
-              $bparseList = preg_split("/\', \'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
+              $bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
               if ($this->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
                 $data['kc']++;
                 $data['rids'] .= $row['id'] . "\n";
