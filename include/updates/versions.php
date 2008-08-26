@@ -10,18 +10,15 @@
 if ( !defined('EQDKP_INC') ){
     header('HTTP/1.0 404 Not Found');exit;
 }
-
-	$up_versions 	= array(
-												1 => '4.0.5',
-                        2 => '4.0.6',
-                        3 => '4.0.7',
-                        4 => '4.0.8',
-											);
 											
 	$up_updates 	= array(
-												1 => '405_to_406.php',
-                        2 => false,
-                        3 => false,
-                        4 => false,
-												);
+	      '4.0.6'   => array(
+                      'file'  => '405_to_406.php',
+                      'old'   => '4.0.5',
+        ),
+        '4.0.9'   => array(
+                      'file'  => '406_to_409.php',
+                      'old'   => '4.0.6',
+        ),
+  );
 ?>

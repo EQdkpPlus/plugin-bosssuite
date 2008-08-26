@@ -21,7 +21,7 @@ if ( !$pm->check(PLUGIN_INSTALLED, 'bosssuite') )
 {
 	message_die('BossSuite plugin not installed.');
 }
-
+  
 # Check whether the current game is supported
 ####################################################
 // new mgs class
