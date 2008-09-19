@@ -8,7 +8,9 @@ $loot = array(
 	array( "id" => "0005", "qual" => "4", "name" => "Rift-defender's Boots"),
 	array( "id" => "0006", "qual" => "4", "name" => "Boots of the Elder Days"),
 	array( "id" => "0007", "qual" => "4", "name" => "Thrill-seeker's Boots"),
-	array( "id" => "0008", "qual" => "4", "name" => "Doom-hunter's Boots")
+	array( "id" => "0008", "qual" => "4", "name" => "Doom-hunter's Boots"),
+	array( "id" => "0009", "qual" => "3", "name" => "Glorengris"),
+	array( "id" => "0010", "qual" => "3", "name" => "Frothrand"),
 );
 
 

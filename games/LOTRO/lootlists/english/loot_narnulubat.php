@@ -1,6 +1,6 @@
 <?php
 $loot = array(
-	array( "id" => "0400", "qual" => "4", "name" => "Glowing Red Ruby" ),
+	array( "id" => "0400", "qual" => "4", "name" => "Glowing Red Ruby"),
 	array( "id" => "0401", "qual" => "4", "name" => "Haematite Band"),
 	array( "id" => "0402", "qual" => "4", "name" => "Wandering Bards' Robe"),
 	array( "id" => "0403", "qual" => "4", "name" => "Breastplate of the Gloom-bane"),

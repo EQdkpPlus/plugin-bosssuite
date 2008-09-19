@@ -2,14 +2,14 @@
 /******************************
  * EQdkp BossSuite
  * (c) 2006 - 2008
- * created by sz3 
+ * created by sz3
  * ---------------------------
  * $Id$
  ******************************/
- 
+
 if ( !defined('EQDKP_INC') ){
     header('HTTP/1.0 404 Not Found');exit;
-} 
+}
 
 $lang = array(
 //General
@@ -52,9 +52,9 @@ $lang = array(
 'lang' => 'german',
 
 'dateFormat' => '%d.%m.%Y',
-'bs_out_date_format' => 'dd.mm.yy', 
+'bs_out_date_format' => 'dd.mm.yy',
 'bs_date_day' => array('start' => 0, 'length' => 2),
-'bs_date_month' => array('start' => 3, 'length' => 2), 
+'bs_date_month' => array('start' => 3, 'length' => 2),
 'bs_date_year' => array('start' => 6, 'length' => 4),
 
 // offset page
@@ -110,9 +110,9 @@ $lang = array(
 'item_lang_none' => 'keine',
 
 //Admin menu
-'bl_opt_minitemqual' => 'Minimumale Gegenstandsqualität, die angezeigt werden soll:',
+'bl_opt_minitemqual' => 'Minimale Gegenstandsqualität, die angezeigt werden soll:',
 'bl_opt_itemlang' => 'Auswahl der Lootliste',
-'bl_opt_ndl' => 'Zeige Gegenstände, die niemals gefallen ist?',
+'bl_opt_ndl' => 'Zeige Gegenstände, die niemals gefallen sind?',
 'bl_opt_wl' => 'Zeige Beute, die nicht eindeutig zuzuordnen war?',
 'bl_opt_is' => 'Aktiviere Itemstats für nie gefallene Gegenstände?',
 'bl_opt_eyecandy' => 'Aktiviere Akkordions?',

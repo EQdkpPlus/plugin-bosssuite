@@ -20,5 +20,9 @@ if ( !defined('EQDKP_INC') ){
                       'file'  => '406_to_409.php',
                       'old'   => '4.0.6',
         ),
+        '4.1.0'   => array(
+                      'file'  => '409_to_410.php',
+                      'old'   => '4.0.9',
+        ),
   );
 ?>

@@ -1,13 +1,13 @@
 <?php
 $loot = array(
-	array( "id" => "0700", "qual" => "4", "name" => "Dazzling Emerald" ),
-	array( "id" => "0701", "qual" => "4", "name" => "Firey Quartz" ),
-	array( "id" => "0702", "qual" => "4", "name" => "Lash Fragment" ),
-	array( "id" => "0703", "qual" => "4", "name" => "Gilechor" ),
-	array( "id" => "0704", "qual" => "4", "name" => "Wanir-men" ),
-	array( "id" => "0705", "qual" => "4", "name" => "Wig-feld" ),
-	array( "id" => "0705", "qual" => "4", "name" => "Edhelharlos" ),
-	array( "id" => "0706", "qual" => "3", "name" => "Thaurlach's Blade" ),
+	array( "id" => "0700", "qual" => "4", "name" => "Dazzling Emerald"),
+	array( "id" => "0701", "qual" => "4", "name" => "Firey Quartz"),
+	array( "id" => "0702", "qual" => "4", "name" => "Lash Fragment"),
+	array( "id" => "0703", "qual" => "4", "name" => "Gilechor"),
+	array( "id" => "0704", "qual" => "4", "name" => "Wanir-men"),
+	array( "id" => "0705", "qual" => "4", "name" => "Wig-feld"),
+	array( "id" => "0705", "qual" => "4", "name" => "Edhelharlos"),
+	array( "id" => "0706", "qual" => "3", "name" => "Thaurlach's Blade"),
 	array( "id" => "0707", "qual" => "4", "name" => "Wandering Bards' Shoulders"),
 	array( "id" => "0708", "qual" => "4", "name" => "Shoulders of the Gloom-bane"),
 	array( "id" => "0709", "qual" => "4", "name" => "Shoulders of the North Star"),
@@ -27,6 +27,7 @@ $loot = array(
 	array( "id" => "0723", "qual" => "4", "name" => "Saellang"),
 	array( "id" => "0724", "qual" => "4", "name" => "Torchathol"),
 	array( "id" => "0725", "qual" => "4", "name" => "Vorthrand"),
+	array( "id" => "0726", "qual" => "4", "name" => "Loringor" ),
 
 );
 
