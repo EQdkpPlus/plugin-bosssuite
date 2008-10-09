@@ -1,11 +1,20 @@
 <?php
-/******************************
- * EQdkp BossSuite
- * (c) 2006 - 2008
- * created by sz3
- * ---------------------------
- * $Id: lang_bossloot.php 1943 2008-04-24 23:37:28Z sz3 $
- ******************************/
+ /*
+ * Project:     BossSuite v4 MGS
+ * License:     Creative Commons - Attribution-Noncommercial-Share Alike 3.0 Unported
+ * Link:		    http://creativecommons.org/licenses/by-nc-sa/3.0/
+ * -----------------------------------------------------------------------
+ * Began:       2006
+ * Date:        $Date$
+ * -----------------------------------------------------------------------
+ * @author      $Author$
+ * @copyright   2006-2008 sz3
+ * @link        http://eqdkp-plus.com
+ * @package     bosssuite
+ * @version     $Rev$
+ *
+ * $Id$
+ */
 
 $lang = array(
     //Item languages

@@ -1,6 +1,6 @@
 <?php
  /*
- * Project:     BossSuite MGS v4
+ * Project:     BossSuite v4 MGS
  * License:     Creative Commons - Attribution-Noncommercial-Share Alike 3.0 Unported
  * Link:		    http://creativecommons.org/licenses/by-nc-sa/3.0/
  * -----------------------------------------------------------------------
@@ -15,8 +15,6 @@
  *
  * $Id$
  */
-
-
 
 if (!defined('EQDKP_INC')) {
 	die('You cannot access this file directly.');
@@ -52,7 +50,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 			'path' => 'bosssuite',
 			'contact' => 'sz3@gmx.net',
 			'template_path' => 'plugins/bosssuite/templates/',
-			'version' => '4.1.0'
+			'version' => '4.1.1'
 		));
 		
 		$this->additional_data = array(
