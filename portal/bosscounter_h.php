@@ -39,7 +39,7 @@ $portal_module['bosscounter_h'] = array(                   // the same name as t
 
 if(!function_exists(bosscounter_h_module)){
   function bosscounter_h_module(){
-  	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus;
+  	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus, $pm;
   	if ( !$pm->check(PLUGIN_INSTALLED, 'bosssuite') ){
 	    return '<table><tr><td>BossSuite plugin not installed.</td></tr></table>';
     }else{
