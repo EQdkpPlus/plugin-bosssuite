@@ -37,27 +37,15 @@ $portal_module['bosscounter_h'] = array(                   // the same name as t
                           ),
     );
 
-/* Define the Settings if needed
-
-name:       The name of the Database field & Input name
-language:   The name of the language string in the language file
-property:   What type of field? (text,checkbox,dropdown)
-size:       Size of the field if required (optional)
-options:    If dropdown: array('value'=>'Name')
-
-There could be unlimited amount of settings
-Settings page is created dynamically
-*/
-/*$portal_settings['bosscounter_v'] = array(
-);*/
-
-// The output function
-// the name MUST be FOLDERNAME_module, if not an error will occur
 if(!function_exists(bosscounter_h_module)){
   function bosscounter_h_module(){
   	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus;
+  	if ( !$pm->check(PLUGIN_INSTALLED, 'bosssuite') ){
+	    return '<table><tr><td>BossSuite plugin not installed.</td></tr></table>';
+    }else{
   	  include_once(dirname(__FILE__).'/../mods/bosscounter.php');
 		  return $bchout;
+		}
   }
 }
 ?>

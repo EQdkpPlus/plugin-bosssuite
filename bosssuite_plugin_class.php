@@ -50,7 +50,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 			'path' => 'bosssuite',
 			'contact' => 'sz3@gmx.net',
 			'template_path' => 'plugins/bosssuite/templates/',
-			'version' => '4.1.1'
+			'version' => '4.1.2'
 		));
 		
 		$this->additional_data = array(

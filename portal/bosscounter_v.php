@@ -55,11 +55,15 @@ Settings page is created dynamically
 // the name MUST be FOLDERNAME_module, if not an error will occur
 if(!function_exists(bosscounter_v_module)){
   function bosscounter_v_module(){
-  	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus;
-  	  include_once(dirname(__FILE__).'/../mods/bosscounter.php');
+  	global $eqdkp , $user , $tpl, $db, $plang, $conf_plus, $pm;
+  	if ( !$pm->check(PLUGIN_INSTALLED, 'bosssuite') ){
+	    return '<table><tr><td>BossSuite plugin not installed.</td></tr></table>';
+    }else{
+      include_once(dirname(__FILE__).'/../mods/bosscounter.php');
       $bla = '<table width=100% class="forumline" cellspacing="0" cellpadding="0"><tr><th colspan="2" align="center">BossCounter</th></tr>';
       $blupp = '</table>';
 		  return '<table width=100% cellspacing="0" cellpadding="0">'.substr($bcout, strlen($bla), -(strlen($blupp))).'</table>';
+    }
   }
 }
 ?>
