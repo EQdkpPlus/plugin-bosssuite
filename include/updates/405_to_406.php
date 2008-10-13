@@ -20,7 +20,8 @@ if ( !defined('EQDKP_INC') ){
     header('HTTP/1.0 404 Not Found');exit;
 }
  
-$new_version = '4.0.6';
+$new_version    = '4.0.6';
+$updateFunction = 'BS405to406Update';
 
 $updateDESC = array(
 );
@@ -29,7 +30,7 @@ $updateSQL = array(
 );
 
 
-function PerformMyUpdate(){
+function BS405to406Update(){
   global $db, $table_prefix, $eqdkp;
   
   //Check column count

@@ -20,7 +20,8 @@ if ( !defined('EQDKP_INC') ){
     header('HTTP/1.0 404 Not Found');exit;
 }
  
-$new_version = '4.1.0';
+$new_version    = '4.1.0';
+$updateFunction = 'BS409to410Update';
 
 $updateDESC = array(
 );
@@ -29,7 +30,7 @@ $updateSQL = array(
 );
 
 
-function PerformMyUpdate(){
+function BS409to410Update(){
   global $db, $table_prefix, $eqdkp;
   $sql = "SELECT * FROM ".$table_prefix."bs_config WHERE config_name='bp_boss_image_type';";
   $result = $db->query($sql); 
