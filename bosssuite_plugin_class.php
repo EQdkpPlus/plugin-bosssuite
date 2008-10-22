@@ -36,21 +36,24 @@ if (!defined('BS_MIN_DATE')) { define('BS_MIN_DATE', mktime (0,0,0,1,1,2000)); }
 class bosssuite_Plugin_Class extends EQdkp_Plugin {
 
   var $additional_data;
-
+  var $version = '4.1.4';
+  
 	function bosssuite_plugin_class($pm) {
 		
 		global $eqdkp, $eqdkp_root_path, $user, $SID, $table_prefix;
 		
 		$this->eqdkp_plugin($pm);
 		$this->pm->get_language_pack('bosssuite');
-
+    
+    $version = '4.1.5';
+    
 		$this->add_data(array (
 			'name' => 'BossSuite 4 MGS',
 			'code' => 'bosssuite',
 			'path' => 'bosssuite',
 			'contact' => 'sz3@gmx.net',
 			'template_path' => 'plugins/bosssuite/templates/',
-			'version' => '4.1.3'
+			'version' => $this->version
 		));
 		
 		$this->additional_data = array(
@@ -60,7 +63,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
       'manuallink' => $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php',
     );
 
-		//Permissions
+    //Permissions
 		$this->add_permission('2380', 'a_bosssuite_conf', 'N', $user->lang['bs_pm_conf']);
 		$this->add_permission('2381', 'a_bosssuite_offs', 'N', $user->lang['bs_pm_offs']);
 
@@ -131,6 +134,9 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 
   	 	    $this->add_sql(SQL_INSTALL, "INSERT INTO " . $table_prefix . "config VALUES ('bs_showBC', '1');");
           $this->add_sql(SQL_INSTALL, "INSERT INTO " . $table_prefix . "config VALUES ('bs_linkBL', '1');");
+          
+          //Write version info
+          $this->add_sql(SQL_INSTALL, "INSERT INTO " .BS_CONFIG_TABLE." VALUES ('bb_inst_version', '".$this->version."');");
     		  
 		}else{
     		//Menus
@@ -147,7 +153,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
     }
 	}
 
-function gen_main_menu1() {
+  function gen_main_menu1() {
 		if ($this->pm->check(PLUGIN_INSTALLED, 'bosssuite')) {
 			global $db, $user, $SID;
 

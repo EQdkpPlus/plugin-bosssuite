@@ -23,12 +23,8 @@ if ( !defined('EQDKP_INC') ){
 $new_version    = '4.1.0';
 $updateFunction = 'BS409to410Update';
 
-$updateDESC = array(
-);
-
-$updateSQL = array(
-);
-
+$updateDESC = false;
+$updateSQL = false;
 
 function BS409to410Update(){
   global $db, $table_prefix, $eqdkp;
