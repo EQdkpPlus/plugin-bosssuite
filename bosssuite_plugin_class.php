@@ -36,7 +36,7 @@ if (!defined('BS_MIN_DATE')) { define('BS_MIN_DATE', mktime (0,0,0,1,1,2000)); }
 class bosssuite_Plugin_Class extends EQdkp_Plugin {
 
   var $additional_data;
-  var $version = '4.1.4';
+  var $version = '4.1.6';
   
 	function bosssuite_plugin_class($pm) {
 		
@@ -44,8 +44,6 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 		
 		$this->eqdkp_plugin($pm);
 		$this->pm->get_language_pack('bosssuite');
-    
-    $version = '4.1.5';
     
 		$this->add_data(array (
 			'name' => 'BossSuite 4 MGS',
@@ -60,7 +58,6 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 		  'author' => 'sz3',
     	'description' => $user->lang['bs_short_desc'],
     	'homepage' => 'http://www.eqdkp-plus.com/',
-      'manuallink' => $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php',
     );
 
     //Permissions
@@ -177,7 +174,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 
 			$admin_menu = array (
 				'bosssuite' => array (
-					0 => '<A HREF="'. $eqdkp_root_path . 'plugins/bosssuite/docs/usage.php" style="cursor:help;" title="'.$user->lang['bs_short_desc'].'" TARGET="_top">'.$user->lang['bs_am_title'].'</A>',
+					0 => $user->lang['bs_am_title'],
 					1 => array (
 						'link' => $url_prefix . 'plugins/bosssuite/admin/settings.php' . $SID,
 						'text' => $user->lang['bs_am_conf'],
