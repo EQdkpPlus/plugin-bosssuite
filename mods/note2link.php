@@ -20,30 +20,26 @@ if (!defined('EQDKP_INC')) {
 	die('You cannot access this file directly.');
 }
 
+// new mgs class
+require_once(dirname(__FILE__).'/../include/bsmgs.class.php');
+$mybsmgs = new BSMGS();
+
+// sql class
+require_once(dirname(__FILE__).'/../include/bssql.class.php');
+$mybssql = new BSSQL();
+
+//get config
+$bb_pboss = $mybssql->get_parse_boss();
+$bb_conf = $mybssql->get_config('bossbase');
+
 function bl_note2link($rnote){
-global $SID, $eqdkp_root_path, $pm;
+global $SID, $eqdkp_root_path, $pm, $mybsmgs, $mybssql, $bb_pboss, $bb_conf;
 	if ($rnote == '')
 		return $rnote;
-
-	if ( !$pm->check(PLUGIN_INSTALLED, 'bosssuite') )
-	{
-    	return $rnote;
-	}
-	
-  // new mgs class
-  require_once(dirname(__FILE__).'/../include/bsmgs.class.php');
-  $mybsmgs = new BSMGS();
   
   if (!$mybsmgs->game_supported('bossbase')){
     return $rnote;
   }
-
-  // sql class
-  require_once(dirname(__FILE__).'/../include/bssql.class.php');
-  $mybssql = new BSSQL();
-
-	$bb_pboss = $mybssql->get_parse_boss();
-	$bb_conf = $mybssql->get_config('bossbase');
 
 	$delim = '/'.$bb_conf['noteDelim'].'/';
 	if ($delim != "//"){
