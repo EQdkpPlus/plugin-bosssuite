@@ -144,6 +144,7 @@ $lang = array(
 'bs_copyright' => 'Copyright:',
 'bs_url_web' => 'Web',
 'bs_short_desc' => 'Extended loot/progression information.',
+'bs_long_desc' => 'Overview over killed bossed and the progress of the zones and the received loot.',
 'bs_game_not_supported' => 'Sorry, your game is not supported.',
 'bs_enable_bosscounter' => 'Enable BossCounter',
 'bs_enable_note2link' => 'Enable note2link',
