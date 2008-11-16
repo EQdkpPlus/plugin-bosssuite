@@ -1,0 +1,267 @@
+{TABOUT}
+<form method="post" action="{F_CONFIG}" name="post">
+
+{UPDATER}
+
+<div id="bs_adm_tabs">
+<ul>
+    <li><a href="#fragment-1"><span>{L_GENERAL}</span></a></li>
+    <li><a href="#fragment-2"><span>{L_BOSSBASE}</span></a></li>
+    <li><a href="#fragment-3"><span>{L_BOSSLOOT}</span></a></li>
+    <li><a href="#fragment-4"><span>{L_BOSSPROGRESS}</span></a></li>
+    <li><a href="#fragment-5"><span>{L_BOSSCOUNTER}</span></a></li>
+    <li><a href="#fragment-6"><span>{L_TRIGGERS}</span></a></li>
+</ul>
+
+<div id="fragment-1">
+<table border="0" width="100%" cellspacing="1" cellpadding="2">
+            <tr>
+                 <th align="center" colspan="2">{L_GENERAL}</th>
+            </tr>
+            <tr>
+                <td width="70%" class="row2">{L_EBC}</td>
+                <td width="30%" class="row1"><input type="checkbox" name="ebc" value="1" {BS_EBC} /></td>
+            </tr>
+            <tr>
+                <td class="row2">{L_EN2L}</td>
+                <td class="row1"><input type="checkbox" name="en2l" value="1" {BS_EN2L} /></td>
+            </tr>
+</table>
+</div>
+<div id="fragment-2">
+<table border="0" width="100%" cellspacing="1" cellpadding="2">
+            <tr>
+                 <th align="center" colspan="2">{L_GENERAL}: BossBase</th>
+            </tr>
+            <tr>
+                <td class="row2">{L_SOURCE}</td>
+                <td class="row1">
+                    <select name="source" class="input">
+                    <!-- BEGIN source_row -->
+                        <option value="{source_row.VALUE}"{source_row.SELECTED}>{source_row.OPTION}</option>
+                    <!-- END source_row -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="70%" class="row2">{L_ZONEINFO}</td>
+                <td width="30%" class="row1">
+                    <select size="1" name="zoneInfo">
+                        <option value="rname" {ZONEINFO_SEL_RNAME}>{L_RNAME}</option>
+                        <option value="rnote" {ZONEINFO_SEL_RNOTE}>{L_RNOTE}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="row2">{L_BOSSINFO}</td>
+                <td class="row1">
+                    <select size="1" name="bossInfo">
+                        <option value="rname" {BOSSINFO_SEL_RNAME}>{L_RNAME}</option>
+                        <option value="rnote" {BOSSINFO_SEL_RNOTE}>{L_RNOTE}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="row2">{L_NOTEDELIM}</td>
+                <td class="row1"><input type="text" name="notedelim" size="32" value="{BP_NOTEDELIM}" class="input" /></td>
+            </tr>
+            <tr>
+                <td class="row2">{L_NAMEDELIM}</td>
+                <td class="row1"><input type="text" name="namedelim" size="32" value="{BP_NAMEDELIM}" class="input" /></td>
+            </tr>
+            <tr>
+                <td class="row2">{L_TABLES}</td>
+                <td class="row1"><input type="text" name="tables" size="32" value="{BP_TABLES}" class="input" /></td>
+            </tr>
+</table>
+</div>
+<div id="fragment-3">
+<table border="0" width="100%" cellspacing="1" cellpadding="2">
+			<tr>
+   				 <th align="center" colspan="2">{L_GENERAL}: BossLoot</th>
+			</tr>
+			      <tr>
+                <td class="row2">{L_BL_EYECANDY}</td>
+                <td class="row1"><input type="checkbox" name="bl_eyecandy" value="1" {BL_EYECANDY} /></td>
+            </tr>
+            <tr>
+                 <td width="70%" class="row2">{L_ITEMLANG}</td>
+                 <td width="30%" class="row1">
+                    <select name="itemlang" class="input">
+                    <!-- BEGIN itemlang_row -->
+                        <option value="{itemlang_row.VALUE}"{itemlang_row.SELECTED}>{itemlang_row.OPTION}</option>
+                    <!-- END itemlang_row -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+              <th colspan="2">
+                  {L_LOOTLIST_OPTS}
+              </th>
+            </tr>
+            <tr>
+                 <td class="row2">{L_ITEMQUAL}</td>
+                 <td class="row1">
+                    <select name="itemqual" class="input">
+                    <!-- BEGIN itemqual_row -->
+                        <option value="{itemqual_row.VALUE}"{itemqual_row.SELECTED}>{itemqual_row.OPTION}</option>
+                    <!-- END itemqual_row -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="row2">{L_NDL}</td>
+                <td class="row1"><input type="checkbox" name="ndl" value="1" {BL_NDL} /></td>
+            </tr>
+            <tr>
+                <td class="row2">{L_WL}</td>
+                <td class="row1"><input type="checkbox" name="wl" value="1" {BL_WL} /></td>
+            </tr>
+            <tr>
+                <td class="row2">{L_IS}</td>
+                <td class="row1"><input type="checkbox" name="is" value="1" {BL_IS} /></td>
+            </tr>
+</table>
+</div>
+<div id="fragment-4">
+<table border="0" width="100%" cellspacing="1" cellpadding="2">
+			<tr>
+   				 <th align="center" colspan="2">{L_GENERAL}: BossProgress</th>
+			</tr>
+						<tr>
+				<td class="row2">{L_BP_DYNLOC}</td>
+				<td class="row1"><input type="checkbox" name="bp_dynloc" value="1" {BP_DYNLOC} /></td>
+			</tr>
+			<tr>
+				<td class="row2">{L_BP_DYNBOSS}</td>
+				<td class="row1"><input type="checkbox" name="bp_dynboss" value="1" {BP_DYNBOSS} /></td>
+			</tr>
+			<tr>
+				<td class="row2">{L_BP_LINK}</td>
+				<td class="row1">
+         	<select name="bp_linkurl" class="input">
+					<!-- BEGIN bp_linkurl_row -->
+						<option value="{bp_linkurl_row.VALUE}"{bp_linkurl_row.SELECTED}>{bp_linkurl_row.OPTION}</option>
+					<!-- END bp_linkurl_row -->
+					</select>
+        	<select name="bp_linklength" class="input">
+					<!-- BEGIN bp_linklength_row -->
+						<option value="{bp_linklength_row.VALUE}"{bp_linklength_row.SELECTED}>{bp_linklength_row.OPTION}</option>
+					<!-- END bp_linklength_row -->
+					</select>
+        </td>
+			</tr>
+				<tr>
+				 <td class="row2">{L_BP_STYLE}</td>
+				 <td class="row1">
+				 	<select name="bp_style" class="input">
+					<!-- BEGIN bp_style_row -->
+						<option value="{bp_style_row.VALUE}"{bp_style_row.SELECTED}>{bp_style_row.OPTION}</option>
+					<!-- END bp_style_row -->
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+   				 <th align="center" colspan="2">{L_BP_STYLE_OPTS}</th>
+			</tr>
+		 	<tr>
+				<td width="70%" class="row2">{L_BP_SI_STYLE}</td>
+        <td class="row1">
+				 	<select name="bp_si_style" class="input">
+					<!-- BEGIN bp_si_style_row -->
+						<option value="{bp_si_style_row.VALUE}"{bp_si_style_row.SELECTED}>{bp_si_style_row.OPTION}</option>
+					<!-- END bp_si_style_row -->
+					</select>
+				</td>
+			</tr>
+			<tr>
+			  <td width="70%" class="row2">{L_BP_EI_STYLE}</td>
+		  	<td class="row1">
+				 	<select name="bp_ei_style" class="input">
+					<!-- BEGIN bp_ei_style_row -->
+						<option value="{bp_ei_style_row.VALUE}"{bp_ei_style_row.SELECTED}>{bp_ei_style_row.OPTION}</option>
+					<!-- END bp_ei_style_row -->
+					</select>
+				</td>
+			</tr>
+			<tr>
+			  <td width="70%" class="row2">{L_BP_ZTEXT}</td>
+		  	<td class="row1">
+				 	<select name="bp_ztext_style" class="input">
+					<!-- BEGIN bp_ztext_style_row -->
+						<option value="{bp_ztext_style_row.VALUE}"{bp_ztext_style_row.SELECTED}>{bp_ztext_style_row.OPTION}</option>
+					<!-- END bp_ztext_style_row -->
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="row2">{L_BP_SHOWSB}</td>
+				<td class="row1"><input type="checkbox" name="bp_showSB" value="1" {BP_SHOWSB} /></td>
+			</tr>
+
+			<tr>
+			  <td colspan="2">{SHOW_BP}</td>
+			</tr>
+</table>
+</div>
+<div id="fragment-5">
+<table border="0" width="100%" cellspacing="1" cellpadding="2">
+			<tr>
+   				 <th align="center" colspan="2">{L_GENERAL}: BossCounter</th>
+			</tr>
+      <tr>
+          <td class="row2">{L_BC_EYECANDY}</td>
+          <td class="row1"><input type="checkbox" name="bc_eyecandy" value="1" {BC_EYECANDY} /></td>
+      </tr>
+			<tr>
+				<td width="70%" class="row2">{L_BC_DYNLOC}</td>
+				<td width="30%" class="row1"><input type="checkbox" name="bc_dynloc" value="1" {BC_DYNLOC} /></td>
+			</tr>
+			<tr>
+				<td class="row2">{L_BC_DYNBOSS}</td>
+				<td class="row1"><input type="checkbox" name="bc_dynboss" value="1" {BC_DYNBOSS} /></td>
+			</tr>
+			<tr>
+				<td class="row2">{L_BC_ZONELENGTH}</td>
+				<td class="row1">
+         	<select name="bc_zonelength" class="input">
+					<!-- BEGIN bc_zonelength_row -->
+						<option value="{bc_zonelength_row.VALUE}"{bc_zonelength_row.SELECTED}>{bc_zonelength_row.OPTION}</option>
+					<!-- END bc_zonelength_row -->
+					</select>
+        </td>
+			</tr>
+			<tr>
+				<td class="row2">{L_BC_LINK}</td>
+				<td class="row1">
+         	<select name="bc_linkurl" class="input">
+					<!-- BEGIN bc_linkurl_row -->
+						<option value="{bc_linkurl_row.VALUE}"{bc_linkurl_row.SELECTED}>{bc_linkurl_row.OPTION}</option>
+					<!-- END bc_linkurl_row -->
+					</select>
+        	<select name="bc_linklength" class="input">
+					<!-- BEGIN bc_linklength_row -->
+						<option value="{bc_linklength_row.VALUE}"{bc_linklength_row.SELECTED}>{bc_linklength_row.OPTION}</option>
+					<!-- END bc_linklength_row -->
+					</select>
+        </td>
+			</tr>
+			<tr>
+			  <td colspan="2">{SHOW_BC}</td>
+			</tr>
+</table>
+</div>
+<div id="fragment-6">
+<table width="100%" border="0" cellspacing="1" cellpadding="2">
+    <tr>
+        <td>{PARSE_CONFIG}</td>
+    </tr>
+</table>
+</div>
+</div>
+<table width="100%" border="0" cellspacing="1" cellpadding="2">
+ <tr><th align="center" colspan="2"><input type="submit" name="bpsavebu" value="{L_SUBMIT}" class="mainoption" /></th></tr>
+</table>
+</form>
+<br />
