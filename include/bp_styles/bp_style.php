@@ -23,11 +23,20 @@ if ( !defined('EQDKP_INC') ){
  
 function bp_html_get_zhi($bp_conf, $location, $loc_completed){
 global $user, $eqdkp;
-
+global $bs_image_suffix, $bs_image_map;
   $game_arr = explode('_', $eqdkp->config['default_game']);
-  
-  $simg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['si_style'].'/'.$location.'.jpg';
-  $eimg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['ei_style'].'/'.$location.'.jpg';
+  if(isset($bs_image_suffix) && isset($bs_image_suffix['zone'])){
+    $suffix = $bs_image_suffix['zone'];
+  }else{
+    $suffix = '.jpg';
+  }
+  if(isset($bs_image_map) && isset($bs_image_map[$location])){
+    $simg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['si_style'].'/'.$bs_image_map[$location].$suffix;
+    $eimg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['ei_style'].'/'.$bs_image_map[$location].$suffix;
+  }else{
+    $simg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['si_style'].'/'.$location.$suffix;
+    $eimg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['ei_style'].'/'.$location.$suffix;
+  }
    
   $header1 = '<tr width="100%"><td colspan="4">';
 
@@ -95,13 +104,26 @@ global $user;
 
 
 function bp_html_get_boss_image_td($bossname, $bosscount, $imagetype) {
-global $eqdkp;
+global $eqdkp, $bs_image_map, $bs_image_suffix;
+  if(isset($bs_image_map) && isset($bs_image_map[$bossname])){
+    $boss_image = $bs_image_map[$bossname];
+  }else{
+    $boss_image = $bossname;
+  }
+ 
   if ($bosscount == 0)
-  	$bossname .= "_b";
+  	$boss_image .= "_b";
+  	
   $game_arr = explode('_', $eqdkp->config['default_game']);
+  
+  if(isset($bs_image_suffix) && isset($bs_image_suffix['boss']['small'])){
+    $suffix = $bs_image_suffix['boss']['small'];
+  }else{
+    $suffix = '.gif';
+  }
 
-  if (file_exists('games/'.$game_arr[0].'/images/bosses/small/' . $bossname . ".".$imagetype)) {
-  	return '<td width="60" height="60" align="center"><img src="games/'.$game_arr[0].'/images/bosses/small/' . $bossname . '.'.$imagetype.'" align="center" border="0" alt="' . $bossname . '" /></td>';
+  if (file_exists('games/'.$game_arr[0].'/images/bosses/small/' . $boss_image .$suffix)) {
+  	return '<td width="60" height="60" align="center"><img src="games/'.$game_arr[0].'/images/bosses/small/' . $boss_image . $suffix.'" align="center" border="0" alt="' . $bossname . '" /></td>';
   } else {
   	return '<td width="60" height="60" align="center"><img src="games/default/images/bosses/small/unknown.gif" height="60" border="0" alt= "' . $bossname . '" /></td>';
   }

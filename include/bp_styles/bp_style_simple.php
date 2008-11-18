@@ -23,12 +23,20 @@ if ( !defined('EQDKP_INC') ){
  
 function bp_html_get_zhi($bp_conf, $location, $loc_completed){
 global $user, $eqdkp;
-
+global $bs_image_suffix, $bs_image_map;
   $game_arr = explode('_', $eqdkp->config['default_game']);
-  
-  $simg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['si_style'].'/'.$location.'.jpg';
-  $eimg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['ei_style'].'/'.$location.'.jpg';
-   
+  if(isset($bs_image_suffix) && isset($bs_image_suffix['zone'])){
+    $suffix = $bs_image_suffix['zone'];
+  }else{
+    $suffix = '.jpg';
+  }
+  if(isset($bs_image_map) && isset($bs_image_map[$location])){
+    $simg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['si_style'].'/'.$bs_image_map[$location].$suffix;
+    $eimg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['ei_style'].'/'.$bs_image_map[$location].$suffix;
+  }else{
+    $simg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['si_style'].'/'.$location.$suffix;
+    $eimg = 'games/'.$game_arr[0].'/images/zones/'.$bp_conf['ei_style'].'/'.$location.$suffix;
+  }
   $header1 = '<tr width="100%"><td colspan="4">';
 
   //Images  

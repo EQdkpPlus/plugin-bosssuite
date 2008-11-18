@@ -203,4 +203,70 @@ $lang['fetwins'] = array('long' => 'Alythess & Sacrolash', 'short' => 'Twins');
 $lang['muru'] = array('long' => 'M\'uru', 'short' => 'M\'uru');
 $lang['kiljaeden'] = array('long' => 'Kil\'jaeden', 'short' => 'Kil\'jaeden');
 
+/******Naxxramas (10)*****/
+$lang['naxx_10'] = array('long' => 'Naxxramas (10)', 'short' => 'Naxx (10)');
+$lang['anubrekhan_10'] = array('long' => 'Anub\'Rekhan (10)', 'short' => 'Anub\'Rekhan (10)');
+$lang['faerlina_10'] = array('long' => 'Grand Widow Faerlina (10)', 'short' => 'Faerlina (10)');
+$lang['maexxna_10'] = array('long' => 'Maexxna (10)', 'short' => 'Maexxna (10)');
+$lang['noth_10'] = array('long' => 'Noth the Plaguebringer (10)', 'short' => 'Noth (10)');
+$lang['heigan_10'] = array('long' => 'Heigan the Unclean (10)', 'short' => 'Heigan (10)');
+$lang['loatheb_10'] = array('long' => 'Loatheb (10)', 'short' => 'Loatheb (10)');
+$lang['patchwerk_10'] = array('long' => 'Patchwerk' , 'short' => 'Patchwerk (10)');
+$lang['grobbulus_10'] = array('long' => 'Grobbulus (10)', 'short' => 'Grobbulus (10)');
+$lang['gluth_10'] = array('long' => 'Gluth (10)', 'short' => 'Gluth (10)');
+$lang['thaddius_10'] = array('long' => 'Thaddius (10)', 'short' => 'Thaddius (10)');
+$lang['razuvious_10'] = array('long' => 'Instructor Razuvious (10)', 'short' => 'Razuvious (10)');
+$lang['gothik_10'] = array('long' => 'Gothik the Harvester (10)', 'short' => 'Gothik (10)');
+$lang['horsemen_10'] = array('long' => 'Four Horsemen (10)', 'short' => 'Horsemen (10)');
+$lang['sapphiron_10'] = array('long' => 'Sapphiron (10)', 'short' => 'Sapphiron (10)');
+$lang['kelthuzad_10'] = array('long' => 'Kel\'Thuzad (10)', 'short' => 'Kel\'Thuzad (10)');
+
+/******Vault of Archavon (10)*****/
+$lang['vault_of_archavon_10'] = array('long' => 'Vault of Archavon (10)', 'short' => 'VoA (10)');
+$lang['archavon_10'] = array('long' => 'Archavon the Stone Watcher (10)', 'short' => 'Archavon (10)');
+
+/******Eye of Eternity (10)*****/  
+$lang['eye_of_eternity_10'] = array('long' => 'Eye of Eternity (10)', 'short' => 'EoE (10)');
+$lang['malygos_10'] = array('long' => 'Malygos (10)', 'short' => 'Malygos (10)');
+
+/******The Obsidian Sanctum (10)*****/
+$lang['obsidian_sanctum_10'] = array('long' => 'The Obsidian Sanctum (10)', 'short' => 'OS (10)');
+$lang['sartharion_0d_10'] = array('long' => 'Sartharion the Onyx Guardian 0 dragons (10)', 'short' => 'Sartharion 0d (10)');
+$lang['sartharion_1d_10'] = array('long' => 'Sartharion the Onyx Guardian 1 dragon (10)', 'short' => 'Sartharion 1d (10)');
+$lang['sartharion_2d_10'] = array('long' => 'Sartharion the Onyx Guardian 2 dragons (10)', 'short' => 'Sartharion 2d (10)');
+$lang['sartharion_3d_10'] = array('long' => 'Sartharion the Onyx Guardian 3 dragons (10)', 'short' => 'Sartharion 3d (10)');
+
+/******Naxxramas (25)*****/
+$lang['naxx_25'] = array('long' => 'Naxxramas (25)', 'short' => 'Naxx (25)');
+$lang['anubrekhan_25'] = array('long' => 'Anub\'Rekhan (25)', 'short' => 'Anub\'Rekhan (25)');
+$lang['faerlina_25'] = array('long' => 'Grand Widow Faerlina (25)', 'short' => 'Faerlina (25)');
+$lang['maexxna_25'] = array('long' => 'Maexxna (25)', 'short' => 'Maexxna (25)');
+$lang['noth_25'] = array('long' => 'Noth the Plaguebringer (25)', 'short' => 'Noth (25)');
+$lang['heigan_25'] = array('long' => 'Heigan the Unclean (25)', 'short' => 'Heigan (25)');
+$lang['loatheb_25'] = array('long' => 'Loatheb (25)', 'short' => 'Loatheb (25)');
+$lang['patchwerk_25'] = array('long' => 'Patchwerk' , 'short' => 'Patchwerk (25)');
+$lang['grobbulus_25'] = array('long' => 'Grobbulus (25)', 'short' => 'Grobbulus (25)');
+$lang['gluth_25'] = array('long' => 'Gluth (25)', 'short' => 'Gluth (25)');
+$lang['thaddius_25'] = array('long' => 'Thaddius (25)', 'short' => 'Thaddius (25)');
+$lang['razuvious_25'] = array('long' => 'Instructor Razuvious (25)', 'short' => 'Razuvious (25)');
+$lang['gothik_25'] = array('long' => 'Gothik the Harvester (25)', 'short' => 'Gothik (25)');
+$lang['horsemen_25'] = array('long' => 'Four Horsemen (25)', 'short' => 'Horsemen (25)');
+$lang['sapphiron_25'] = array('long' => 'Sapphiron (25)', 'short' => 'Sapphiron (25)');
+$lang['kelthuzad_25'] = array('long' => 'Kel\'Thuzad (25)', 'short' => 'Kel\'Thuzad (25)');
+
+/******Vault of Archavon (25)*****/
+$lang['vault_of_archavon_25'] = array('long' => 'Vault of Archavon (25)', 'short' => 'VoA (25)');
+$lang['archavon_25'] = array('long' => 'Archavon the Stone Watcher (25)', 'short' => 'Archavon (25)');
+
+/******Eye of Eternity (25)*****/  
+$lang['eye_of_eternity_25'] = array('long' => 'Eye of Eternity (25)', 'short' => 'EoE (25)');
+$lang['malygos_25'] = array('long' => 'Malygos (25)', 'short' => 'Malygos (25)');
+
+/******The Obsidian Sanctum (25)*****/
+$lang['obsidian_sanctum_25'] = array('long' => 'The Obsidian Sanctum (25)', 'short' => 'OS (25)');
+$lang['sartharion_0d_25'] = array('long' => 'Sartharion the Onyx Guardian 0 dragons (25)', 'short' => 'Sartharion 0d (25)');
+$lang['sartharion_1d_25'] = array('long' => 'Sartharion the Onyx Guardian 1 dragon (25)', 'short' => 'Sartharion 1d (25)');
+$lang['sartharion_2d_25'] = array('long' => 'Sartharion the Onyx Guardian 2 dragons (25)', 'short' => 'Sartharion 2d (25)');
+$lang['sartharion_3d_25'] = array('long' => 'Sartharion the Onyx Guardian 3 dragons (25)', 'short' => 'Sartharion 3d (25)');
+
 ?>

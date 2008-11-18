@@ -92,9 +92,18 @@ if ( !class_exists( "BLMGS" ) ) {
     }
     
     function bl_get_bossimage($bossid){
-    global $user;
-      if (file_exists('games/'.$this->game.'/images/bosses/big/' . $bossid . '.gif')) {
-        return '<img src="./games/'.$this->game.'/images/bosses/big/'.$bossid.'.gif" alt="'.$bossid.'" _base_target="_self">';
+    global $user, $bs_image_map;
+      if(isset($bs_image_map) && isset($bs_image_map[$bossid])){
+        $bossid = $bs_image_map[$bossid];
+      }
+      if(isset($bs_image_suffix) && isset($bs_image_suffix['boss']['big'])){
+        $suffix = $bs_image_suffix['boss']['big'];
+      }else{
+        $suffix = '.gif';
+      }
+      
+      if (file_exists('games/'.$this->game.'/images/bosses/big/' . $bossid.$suffix)) {
+        return '<img src="./games/'.$this->game.'/images/bosses/big/'.$bossid.$suffix.'" alt="'.$bossid.'" _base_target="_self">';
       }else{
         return '<img src="./games/default/images/bosses/big/unknown.gif" alt="'.$bossid.'" _base_target="_self"><br />'.$user->lang['bs_image_not_found'];
       }
