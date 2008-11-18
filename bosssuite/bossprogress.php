@@ -44,6 +44,22 @@ if (!$mybsmgs->game_supported('bossbase')){
 	$bchout = '<table cellpadding=2 cellspacing=0 border=0 width='.$BKtablewidth.' align=center>'."\n".
 	          '<tr><td>GAME NOT SUPPORTED</td></tr></table>';
 }else{
+ 
+  $bs_image_suffix = null;
+  $bs_image_map = null;
+  
+  function import_image_config(){ 
+  global $bs_image_suffix, $bs_image_map, $mybsmgs;
+    $mapfile = dirname(__FILE__)."/games/".$mybsmgs->get_current_game()."/image_config.php";
+    if(file_exists($mapfile)){
+      include($mapfile);
+      $bs_image_suffix = $suffix;
+      $bs_image_map = $image_map;
+    }
+  }
+  
+  import_image_config();
+
   # Get configuration data
   ####################################################
   $mybsmgs->load_game_specific_language('bossbase');

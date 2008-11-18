@@ -36,7 +36,7 @@ if (!defined('BS_MIN_DATE')) { define('BS_MIN_DATE', mktime (0,0,0,1,1,2000)); }
 class bosssuite_Plugin_Class extends EQdkp_Plugin {
 
   var $additional_data;
-  var $version = '4.1.7';
+  var $version = '4.2.0';
   
 	function bosssuite_plugin_class($pm) {
 		

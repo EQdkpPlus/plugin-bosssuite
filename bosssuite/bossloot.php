@@ -90,6 +90,21 @@ $data = $myblsql->get_data($bb_conf, $bossid);
 $bl_out  = '<tr class="row2"><th colspan="3" align="center">'. $user->lang['bl_loottable'].$user->lang[$bossid]['long'].$user->lang['bl_kc_p1'].$data['kc'].$user->lang['bl_kc_p2'].'</th></tr>'."\n";
 
 //Image
+$bs_image_suffix = null;
+$bs_image_map = null;
+
+function import_image_config(){ 
+global $bs_image_suffix, $bs_image_map, $mybsmgs;
+  $mapfile = dirname(__FILE__)."/games/".$mybsmgs->get_current_game()."/image_config.php";
+  if(file_exists($mapfile)){
+    include($mapfile);
+    $bs_image_suffix = $suffix;
+    $bs_image_map = $image_map;
+  }
+}
+
+import_image_config();
+
 $bl_out .= '<tr class="row1"><td colspan="3" align="center">'.$myblmgs->bl_get_bossimage($bossid).'</td></tr>'."\n";
 
 //get loot table
