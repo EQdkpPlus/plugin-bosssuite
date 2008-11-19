@@ -140,6 +140,7 @@ if ( !class_exists( "BPSQL" ) ) {
           }
         	foreach($dbdata as $row) {
           	foreach ($bzone as $zone => $bosses){
+          	  $zone_hit = false;
         			# Get zoneinfo from current row
         			################################
         			if ($delim[$zoneInfo] != "//"){
@@ -157,29 +158,31 @@ if ( !class_exists( "BPSQL" ) ) {
         					if ($data[$zone]['lvd'] < $row["rdate"]) {
         						$data[$zone]['lvd'] = $row["rdate"];
         					}
+        					$zone_hit = true;
         				}	
         			}
-        
-        			# Get bossinfo from current row
-        			################################
-        			if ($delim[$bossInfo] != "//"){
-        				$boss_element = preg_split($delim[$bossInfo], $row[$bossInfo], -1, PREG_SPLIT_NO_EMPTY);
-        			} else {
-        				$boss_element = array($row[$bossInfo]);
-        			}
-        			foreach ($boss_element as $raid){
-        				foreach ($bosses as $boss){
-                			$bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
-        					if ($this->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
-        						$data[$zone]['bosses'][$boss]['kc']++;
-        						if ($data[$zone]['bosses'][$boss]['fkd'] > $row["rdate"]) {
-        							$data[$zone]['bosses'][$boss]['fkd'] = $row["rdate"];
-        						}
-        						if ($data[$zone]['bosses'][$boss]['lkd'] < $row["rdate"]) {
-        							$data[$zone]['bosses'][$boss]['lkd'] = $row["rdate"];
-        						}
-        					}		
-        				}
+              if($zone_hit || !$bb_conf['depmatch']){  
+          			# Get bossinfo from current row
+          			################################
+          			if ($delim[$bossInfo] != "//"){
+          				$boss_element = preg_split($delim[$bossInfo], $row[$bossInfo], -1, PREG_SPLIT_NO_EMPTY);
+          			} else {
+          				$boss_element = array($row[$bossInfo]);
+          			}
+          			foreach ($boss_element as $raid){
+          				foreach ($bosses as $boss){
+                  			$bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
+          					if ($this->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
+          						$data[$zone]['bosses'][$boss]['kc']++;
+          						if ($data[$zone]['bosses'][$boss]['fkd'] > $row["rdate"]) {
+          							$data[$zone]['bosses'][$boss]['fkd'] = $row["rdate"];
+          						}
+          						if ($data[$zone]['bosses'][$boss]['lkd'] < $row["rdate"]) {
+          							$data[$zone]['bosses'][$boss]['lkd'] = $row["rdate"];
+          						}
+          					}		
+          				}
+          			}//end for bosses
         			}
         		}	
         	}

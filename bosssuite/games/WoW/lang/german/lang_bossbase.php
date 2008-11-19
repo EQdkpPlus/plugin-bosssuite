@@ -27,7 +27,7 @@ $lang['kazzak'] = array('long' => 'Lord Kazzak', 'short' => 'Kazzak');
 
 /******Pechschwingen Hort*****/
 $lang['bwl'] = array('long' => 'Pechschwingen Hort', 'short' => 'BWL');
-$lang['razorgore'] = array('long' => 'Razorgore der Ungezähmte', 'short' => 'Razorgore');
+$lang['razorgore'] = array('long' => 'Feuerkralle der Ungezähmte', 'short' => 'Feuerkralle');
 $lang['vaelastrasz'] = array('long' => 'Vaelastrasz der Verdorbene', 'short' => 'Vaelastrasz');
 $lang['lashlayer'] = array('long' => 'Brutwächter Dreschbringer', 'short' => 'Dreschbringer');
 $lang['firemaw'] = array('long' => 'Feuerschwinge', 'short' => 'Feuerschwinge');
