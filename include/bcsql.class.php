@@ -100,44 +100,73 @@ if ( !class_exists( "BCSQL" ) ) {
       }
    
       function get_db_data($bzone, $data, $bb_conf) {
-      global $db, $user;
+        	global $db;
           $delim = array (
-              'rnote' => '/'.$bb_conf['noteDelim'].'/',
-              'rname' => '/'.$bb_conf['nameDelim'].'/'
-          );
-      
-          $bossInfo = $bb_conf['bossInfo'];
+            'rnote' => '/'.$bb_conf['noteDelim'].'/',
+        		'rname' => '/'.$bb_conf['nameDelim'].'/'
+        	);
+        
+        	$bossInfo = $bb_conf['bossInfo'];
+        	$zoneInfo = $bb_conf['zoneInfo'];
           $bb_pboss = $this->get_parse_boss();
-          #Get data from the raids tables
-          ##################################################
-          $sql = $this->get_sql_data_string($bb_conf['tables']);
+          $bb_pzone = $this->get_parse_zone();
+        	#Get data from the raids tables
+        	##################################################
+        	$sql = $this->get_sql_data_string($bb_conf['tables']);	
+        
           $result = $db->query($sql);
-          
           $dbdata = $db->fetch_record_set();
           if (!is_array($dbdata)){
             return $data;
           }
-          
-      	  foreach($dbdata as $row) {
-              foreach ($bzone as $zone => $bosses){
-                  # Get bossinfo from current row
-                  ################################
-                  if ($delim[$bossInfo] != "//"){
-                      $boss_element = preg_split($delim[$bossInfo], $row[$bossInfo], -1, PREG_SPLIT_NO_EMPTY);
-                  } else {
-                      $boss_element = array($row[$bossInfo]);
-                  }
-                  foreach ($boss_element as $raid){
-                      foreach ($bosses as $boss){
-                          $bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
-                          if ($this->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
-                              $data[$zone]['bosses'][$boss]['kc']++;
-                          }
-                      }
-                  }
-              }
-          }
-        
+        	foreach($dbdata as $row) {
+          	foreach ($bzone as $zone => $bosses){
+          	  $zone_hit = false;
+        			# Get zoneinfo from current row
+        			################################
+        			if ($delim[$zoneInfo] != "//"){
+        				$zone_element = preg_split($delim[$zoneInfo], $row[$zoneInfo], -1, PREG_SPLIT_NO_EMPTY);
+        			} else {
+        				$zone_element = array($row[$zoneInfo]);
+        			}
+        			foreach ($zone_element as $raid){
+        				$zparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pzone['pz_'.$zone], "\' ")));
+        				if ($this->in_array_nocase(stripslashes(trim($raid)), $zparseList)) {
+        					$data[$zone]['vc']++;
+        					if ($data[$zone]['fvd'] > $row["rdate"]) {
+        						$data[$zone]['fvd'] = $row["rdate"];
+        					}
+        					if ($data[$zone]['lvd'] < $row["rdate"]) {
+        						$data[$zone]['lvd'] = $row["rdate"];
+        					}
+        					$zone_hit = true;
+        				}	
+        			}
+              if($zone_hit || !$bb_conf['depmatch']){  
+          			# Get bossinfo from current row
+          			################################
+          			if ($delim[$bossInfo] != "//"){
+          				$boss_element = preg_split($delim[$bossInfo], $row[$bossInfo], -1, PREG_SPLIT_NO_EMPTY);
+          			} else {
+          				$boss_element = array($row[$bossInfo]);
+          			}
+          			foreach ($boss_element as $raid){
+          				foreach ($bosses as $boss){
+                  			$bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
+          					if ($this->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
+          						$data[$zone]['bosses'][$boss]['kc']++;
+          						if ($data[$zone]['bosses'][$boss]['fkd'] > $row["rdate"]) {
+          							$data[$zone]['bosses'][$boss]['fkd'] = $row["rdate"];
+          						}
+          						if ($data[$zone]['bosses'][$boss]['lkd'] < $row["rdate"]) {
+          							$data[$zone]['bosses'][$boss]['lkd'] = $row["rdate"];
+          						}
+          					}		
+          				}
+          			}//end for bosses
+        			}
+        		}	
+        	}
         	foreach ($bzone as $zone => $bosses){
         	  $data[$zone]['zk'] = 0;
             foreach ($data[$zone]['bosses'] as $boss){

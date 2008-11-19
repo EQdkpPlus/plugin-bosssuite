@@ -45,6 +45,7 @@ function bs_get_sql_data_string($tablestring){
 
 function bs_data2cache(){
 // new mgs class
+global $db;
 require(dirname(__FILE__).'/../include/bsmgs.class.php');
 $mybsmgs = new BSMGS();
 
@@ -81,71 +82,78 @@ if (!$mybsmgs->game_supported('bossbase')){
 		}
 	}
 
-	$delim = array (
-    'rnote' => '/'.$bb_conf['noteDelim'].'/',
-		'rname' => '/'.$bb_conf['nameDelim'].'/'
-	);
+          $delim = array (
+            'rnote' => '/'.$bb_conf['noteDelim'].'/',
+        		'rname' => '/'.$bb_conf['nameDelim'].'/'
+        	);
+        
+        	$bossInfo = $bb_conf['bossInfo'];
+        	$zoneInfo = $bb_conf['zoneInfo'];
 
-	$bossInfo = $bb_conf['bossInfo'];
-	$zoneInfo = $bb_conf['zoneInfo'];
-
-	#Get data from the raids tables
-	##################################################
-	$sql = bs_get_sql_data_string($bb_conf['tables']);	
-	$result = mysql_query($sql) or message_die(mysql_error());
-
-	while ($row = mysql_fetch_assoc($result)) {
-		foreach ($bzone as $zone => $bosses){
-			# Get zoneinfo from current row
-			################################
-			if ($delim[$zoneInfo] != "//"){
-				$zone_element = preg_split($delim[$zoneInfo], $row[$zoneInfo], -1, PREG_SPLIT_NO_EMPTY);
-			} else {
-				$zone_element = array($row[$zoneInfo]);
-			}
-			foreach ($zone_element as $raid){
-				$zparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pzone['pz_'.$zone], "\' ")));
-				if (in_array(stripslashes(trim($raid)), $zparseList)) {
-					$data[$zone]['vc']++;
-					if ($data[$zone]['fvd'] > $row["rdate"]) {
-						$data[$zone]['fvd'] = $row["rdate"];
-					}
-					if ($data[$zone]['lvd'] < $row["rdate"]) {
-						$data[$zone]['lvd'] = $row["rdate"];
-					}
-				}	
-			}
-
-			# Get bossinfo from current row
-			################################
-			if ($delim[$bossInfo] != "//"){
-				$boss_element = preg_split($delim[$bossInfo], $row[$bossInfo], -1, PREG_SPLIT_NO_EMPTY);
-			} else {
-				$boss_element = array($row[$bossInfo]);
-			}
-			foreach ($boss_element as $raid){
-				foreach ($bosses as $boss){
-        			$bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
-					if (in_array(stripslashes(trim($raid)), $bparseList)) {
-						$data[$zone]['bosses'][$boss]['kc']++;
-						if ($data[$zone]['bosses'][$boss]['fkd'] > $row["rdate"]) {
-							$data[$zone]['bosses'][$boss]['fkd'] = $row["rdate"];
-						}
-						if ($data[$zone]['bosses'][$boss]['lkd'] < $row["rdate"]) {
-							$data[$zone]['bosses'][$boss]['lkd'] = $row["rdate"];
-						}
-					}		
-				}
-			}
-		}	
-	}
-	mysql_free_result($result);
-  foreach ($bzone as $zone => $bosses) 
-  {
-	 foreach ($bosses as $boss){
-		if ($data[$zone]['bosses'][$boss]['kc'] > 0)
-			$data[$zone]['zk'] = $data[$zone]['zk'] + 1;
-	}
+        	#Get data from the raids tables
+        	##################################################
+        	$sql = bs_get_sql_data_string($bb_conf['tables']);	
+        
+          $result = $db->query($sql);
+          $dbdata = $db->fetch_record_set();
+          if (!is_array($dbdata)){
+            return $data;
+          }
+        	foreach($dbdata as $row) {
+          	foreach ($bzone as $zone => $bosses){
+          	  $zone_hit = false;
+        			# Get zoneinfo from current row
+        			################################
+        			if ($delim[$zoneInfo] != "//"){
+        				$zone_element = preg_split($delim[$zoneInfo], $row[$zoneInfo], -1, PREG_SPLIT_NO_EMPTY);
+        			} else {
+        				$zone_element = array($row[$zoneInfo]);
+        			}
+        			foreach ($zone_element as $raid){
+        				$zparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pzone['pz_'.$zone], "\' ")));
+        				if ($mybssql->in_array_nocase(stripslashes(trim($raid)), $zparseList)) {
+        					$data[$zone]['vc']++;
+        					if ($data[$zone]['fvd'] > $row["rdate"]) {
+        						$data[$zone]['fvd'] = $row["rdate"];
+        					}
+        					if ($data[$zone]['lvd'] < $row["rdate"]) {
+        						$data[$zone]['lvd'] = $row["rdate"];
+        					}
+        					$zone_hit = true;
+        				}	
+        			}
+              if($zone_hit || !$bb_conf['depmatch']){  
+          			# Get bossinfo from current row
+          			################################
+          			if ($delim[$bossInfo] != "//"){
+          				$boss_element = preg_split($delim[$bossInfo], $row[$bossInfo], -1, PREG_SPLIT_NO_EMPTY);
+          			} else {
+          				$boss_element = array($row[$bossInfo]);
+          			}
+          			foreach ($boss_element as $raid){
+          				foreach ($bosses as $boss){
+                  			$bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
+          					if ($mybssql->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
+          						$data[$zone]['bosses'][$boss]['kc']++;
+          						if ($data[$zone]['bosses'][$boss]['fkd'] > $row["rdate"]) {
+          							$data[$zone]['bosses'][$boss]['fkd'] = $row["rdate"];
+          						}
+          						if ($data[$zone]['bosses'][$boss]['lkd'] < $row["rdate"]) {
+          							$data[$zone]['bosses'][$boss]['lkd'] = $row["rdate"];
+          						}
+          					}		
+          				}
+          			}//end for bosses
+        			}
+        		}	
+        	}
+        	foreach ($bzone as $zone => $bosses){
+        	  $data[$zone]['zk'] = 0;
+            foreach ($data[$zone]['bosses'] as $boss){
+              if ($boss['kc'] > 0)
+                $data[$zone]['zk']++;
+            }
+          
 	
 		}
 		$mybssql->update_cache($data);

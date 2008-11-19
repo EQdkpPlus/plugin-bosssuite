@@ -33,5 +33,9 @@ if ( !defined('EQDKP_INC') ){
                       'file'  => '409_to_410.php',
                       'old'   => '4.0.9',
         ),
+        '4.2.0'   => array(
+                      'file'  => '410_to_420.php',
+                      'old'   => '4.1.0',
+        ),
   );
 ?>

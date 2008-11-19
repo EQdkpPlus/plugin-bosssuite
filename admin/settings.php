@@ -80,6 +80,7 @@ if ($_POST['bpsavebu']){
 	$mybssql->update_config('bossbase', $bs_conf, 'bb_nameDelim', $_POST['namedelim']);
 	$mybssql->update_config('bossbase', $bs_conf, 'bb_tables', $_POST['tables']);
 	$mybssql->update_config('bossbase', $bs_conf, 'bb_source', $_POST['source']);
+	$mybssql->update_config('bossbase', $bs_conf, 'bb_depmatch', $_POST['bs_depmatch']);
 
 	//BossLoot Config
 	$mybssql->update_config('bossloot', $bl_conf, 'bl_item_minqual', $_POST['itemqual']);
@@ -167,6 +168,7 @@ $arrvals = array (
 	'ZONEINFO_SEL_RNOTE'    => ( $bs_conf['zoneInfo'] == "rnote" ) ? ' selected="selected"' : '',
 	'BOSSINFO_SEL_RNAME'    => ( $bs_conf['bossInfo'] == "rname" ) ? ' selected="selected"' : '',
 	'BOSSINFO_SEL_RNOTE'    => ( $bs_conf['bossInfo'] == "rnote" ) ? ' selected="selected"' : '',	
+	'BS_DEPMATCH' => ($bs_conf['depmatch'] == 1) ? ' checked="checked"' : '',
 	
 	// Language
 	'L_GENERAL' => $user->lang['bs_al_general'],
@@ -184,6 +186,7 @@ $arrvals = array (
 	'L_BC_LINK' =>  $user->lang['bs_al_linkInfo'],
 	'L_OFFSET_INFO' => $user->lang['bs_ol_dateFormat'],
 	'L_BL_EYECANDY' => $user->lang['bl_opt_eyecandy'],
+	'L_BS_DEPMATCH' => $user->lang['bs_depmatch'],
 	
 	//BossLoot
 	'BL_NDL' => ($bl_conf['show_ndl'] == 1) ? ' checked="checked"' : '',

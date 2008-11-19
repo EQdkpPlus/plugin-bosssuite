@@ -166,6 +166,7 @@ $lang = array(
 'bl_opt_lootlist' => 'Lootlist options, only work if a lootlist is selected',
 
 'bs_updateitem_l_name' => 'Updatepage for',
+'bs_depmatch' => 'Match bosses depending on the zone match:',
 );
 
 ?>
