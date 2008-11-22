@@ -358,9 +358,12 @@ if ( !class_exists( "BSSQL" ) ) {
         }
     }
     
-    function update_cache($data){
+    function update_cache(){
       global $eqdkp, $user, $db;
       $bzone = $this->get_bzone();
+      $config = $this->get_config('bossbase');
+      $config['source'] = 'both';
+      $data = $this->get_data($config, $bzone);
       $game_arr = explode('_', $eqdkp->config['default_game']);
       $game = $game_arr[0];
       $sql = "TRUNCATE TABLE `".BS_ZONE_CACHE."`;";

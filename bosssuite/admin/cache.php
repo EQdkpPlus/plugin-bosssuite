@@ -47,8 +47,7 @@ $bzone = $mybssql->get_bzone();
 
 // Saving
 if ($_POST['bs_refresh']){
-    require(dirname(__FILE__).'/../mods/data2cache.php');
-    bs_data2cache();
+    $pm->do_hooks('/plugins/bosssuite/admin/cache.php');
 }
 
 $bs_cache = $mybssql->get_cache();

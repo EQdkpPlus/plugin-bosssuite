@@ -124,7 +124,9 @@ if ($_POST['bpsavebu']){
 			$mybssql->update_parse_boss($pbrow, $bossid, $_POST['pb_'.$bossid]);
 		}
 	}
-
+	
+  //Update cache if necessary
+  $pm->do_hooks('/plugins/bosssuite/admin/settings.php');
 }
 
 $pzrow = $mybssql->get_parse_zone();

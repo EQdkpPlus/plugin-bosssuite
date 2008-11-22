@@ -36,7 +36,7 @@ if (!defined('BS_MIN_DATE')) { define('BS_MIN_DATE', mktime (0,0,0,1,1,2000)); }
 class bosssuite_Plugin_Class extends EQdkp_Plugin {
 
   var $additional_data;
-  var $version = '4.2.1';
+  var $version = '4.2.2';
   
 	function bosssuite_plugin_class($pm) {
 		
@@ -167,7 +167,30 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 		}
 		return;
 	}
-
+	
+  function do_hook($hook){
+  global $eqdkp_root_path;
+    $valid_hooks = array(
+      '/admin/addevent.php?action=update',
+      '/admin/addraid.php?action=add',
+      '/admin/addraid.php?action=update',
+      '/admin/addraid.php?action=delete',
+      '/plugins/bosssuite/admin/offsets.php',
+      '/plugins/bosssuite/admin/settings.php',
+      '/plugins/bosssuite/admin/cache.php',
+      '/plugins/ctrt/index.php'
+    );
+    if(in_array($hook, $valid_hooks)){
+      include($eqdkp_root_path.'plugins/bosssuite/include/bsmgs.class.php');
+      $bsmgs = new BSMGS();
+      if ($bsmgs->game_supported('bossbase')){
+        include($eqdkp_root_path.'plugins/bosssuite/include/bssql.class.php');
+        $bssql = new BSSQL();
+        $bssql->update_cache();
+      }
+    }
+  }
+  
 	function gen_admin_menu() {
 		if ($this->pm->check(PLUGIN_INSTALLED, 'bosssuite')) {
 			global $db, $user, $SID, $eqdkp_root_path, $eqdkp;
