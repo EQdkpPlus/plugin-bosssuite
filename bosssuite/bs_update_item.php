@@ -36,11 +36,8 @@ if (isset($_GET['item'])){
 } else {
   $bs_item_out = "No item!";
 }
-
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
-$bs_bp_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
-$bs_bp_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
+//Framework include
+include_once($eqdkp_root_path . 'plugins/bosssuite/include/libloader.inc.php');
 
 # Assign Vars
 ####################################################
@@ -48,7 +45,7 @@ $tpl->assign_vars(array (
   'L_ITEMNAME' => $user->lang['bs_updateitem_l_name'],
   'ITEM_NAME' => $item,
 	'ITEM_OUT' => $bs_item_out,
-	'JS_ABOUT' => $bs_bp_jquery->Dialog_URL('About', $user->lang['bs_about_header'], 'about.php', '400', '400'),
+	'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], 'about.php', '400', '400'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'BS_INFO_IMG' => 'images/credits/info.png',
 ));

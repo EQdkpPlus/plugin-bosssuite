@@ -91,10 +91,8 @@ foreach ($full_bzone as $zoneid => $bosses) {
 	);
 }
 
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
-$bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
-$bs_adm_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
+//Framework include
+include_once($eqdkp_root_path . 'plugins/bosssuite/include/libloader.inc.php');
 
 $bs_off_acc_array = array();
 
@@ -106,10 +104,10 @@ foreach ($bzone as $zoneid => $bosslist){
     $zbcode .= '<tr>';
     $zbcode .= '<td width="40%" class="row2">' .$user->lang[$zoneid]['long']. '</td>';
     $zbcode .= '<td class="row1">';
-    $zbcode .= $bs_adm_jquery->Calendar("dp_fd_".$zoneid, bs_date2text($zone_offsets[$zoneid]['fd']), '', $user->lang['bs_out_date_format']);
+    $zbcode .= $jquery->Calendar("dp_fd_".$zoneid, bs_date2text($zone_offsets[$zoneid]['fd']), '', $user->lang['bs_out_date_format']);
     $zbcode .= '</td>';
     $zbcode .= '<td class="row1">';
-    $zbcode .= $bs_adm_jquery->Calendar("dp_ld_".$zoneid, bs_date2text($zone_offsets[$zoneid]['ld']), '', $user->lang['bs_out_date_format']);
+    $zbcode .= $jquery->Calendar("dp_ld_".$zoneid, bs_date2text($zone_offsets[$zoneid]['ld']), '', $user->lang['bs_out_date_format']);
     $zbcode .= '</td>';
     $zbcode .= '<td class="row1"><input type="text" name="co_' . $zoneid .'" size="3" value="' . $zone_offsets[$zoneid]['counter'] . '" class="input" /></td>';
     $zbcode .= '</tr>';
@@ -118,10 +116,10 @@ foreach ($bzone as $zoneid => $bosslist){
     		$zbcode .= '<tr>';
     		$zbcode .= '<td class="row2">' . $user->lang[$bossid]['long'] . '</td>';
     		$zbcode .= '<td class="row1">';
-    		$zbcode .= $bs_adm_jquery->Calendar("dp_fd_".$bossid, bs_date2text($boss_offsets[$bossid]['fd']), '', $user->lang['bs_out_date_format']);
+    		$zbcode .= $jquery->Calendar("dp_fd_".$bossid, bs_date2text($boss_offsets[$bossid]['fd']), '', $user->lang['bs_out_date_format']);
     		$zbcode.= '</td>';
     		$zbcode .= '<td class="row1">';
-    		$zbcode .= $bs_adm_jquery->Calendar("dp_ld_".$bossid, bs_date2text($boss_offsets[$bossid]['ld']), '', $user->lang['bs_out_date_format']);
+    		$zbcode .= $jquery->Calendar("dp_ld_".$bossid, bs_date2text($boss_offsets[$bossid]['ld']), '', $user->lang['bs_out_date_format']);
     		$zbcode.= '</td>';
     		$zbcode .= '<td class="row1"><input type="text" name="co_' . $bossid .'" size="3" value="' . $boss_offsets[$bossid]['counter'] .'" class="input" /></td>';
     		$zbcode .= '</tr>';
@@ -137,8 +135,8 @@ $tpl->assign_vars(array(
 	'L_OFFSET_ZONESELECT' => $user->lang['bs_ol_zoneselect'],
 	'L_OFFSET_INFO' => $user->lang['bs_ol_dateFormat'].$user->lang['bs_out_date_format'],
 	'L_SUBMIT'      => $user->lang['bs_ol_submit'],
-  'OFFSET_CONFIG' => $bs_adm_jquery->accordion('bs_off_accordion', $bs_off_acc_array),
-  'JS_ABOUT'      => $bs_adm_jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
+  'OFFSET_CONFIG' => $jquery->accordion('bs_off_accordion', $bs_off_acc_array),
+  'JS_ABOUT'      => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
 	'L_CREDITS'     => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'BS_INFO_IMG'   => '../images/credits/info.png',
   ));

@@ -85,17 +85,14 @@ global $user;
 	}
 }
 
-//Output
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
-$bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
-$bs_adm_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
+//Framework include
+include_once($eqdkp_root_path . 'plugins/bosssuite/include/libloader.inc.php');
 
 $tpl->assign_vars(array (
 	'F_CONFIG' => 'cache.php' . $SID,
 	'L_CACHE_INFO' => $user->lang['bs_adm_cache_info'],
 	'L_REFRESH' => $user->lang['bs_adm_cache_refresh'],
-  'JS_ABOUT' => $bs_adm_jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
+  'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'CACHE_OUTPUT' => $zbcode,
 	'BS_INFO_IMG' => '../images/credits/info.png',
