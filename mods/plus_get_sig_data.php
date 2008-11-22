@@ -30,8 +30,8 @@ if (!$mybsmgs->game_supported('bossbase')){
 }else{
   # Get configuration data from the database
   ####################################################
-  require_once(dirname(__FILE__).'/../include/bcsql.class.php');
-  $mybcsql = new BCSQL();
+  require_once(dirname(__FILE__).'/../include/bssql.class.php');
+  $mybcsql = new BSSQL();
 
   $bb_conf = $mybcsql->get_config('bossbase');
   $bc_conf = $mybcsql->get_config('bosscounter');
@@ -40,8 +40,6 @@ if (!$mybsmgs->game_supported('bossbase')){
   # Get data
   ####################################################
   $data = $mybcsql->get_data($bb_conf, $sbzone);
-  //sizeof($data[$zone]['bosses'])
-  //$data[$zone]['zk'] > 0)
   return $data;
 }
 }

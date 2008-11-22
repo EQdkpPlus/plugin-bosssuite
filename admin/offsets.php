@@ -67,6 +67,8 @@ if ($_POST['bpsavebu']){
 			$mybssql->update_boss_offsets($boss_offsets, $bossid, $fdate, $ldate, $_POST['co_'.$bossid]);
 		}
 	}
+  //Update cache if necessary
+  $pm->do_hooks('/plugins/bosssuite/admin/offsets.php');
 }
 
 $boss_offsets = $mybssql->get_boss_offsets();

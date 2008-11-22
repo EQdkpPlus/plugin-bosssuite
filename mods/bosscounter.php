@@ -38,8 +38,8 @@ if (!$mybsmgs->game_supported('bossbase')){
   ####################################################
   $mybsmgs->load_game_specific_language('bossbase');
 
-  require_once(dirname(__FILE__).'/../include/bcsql.class.php');
-  $mybcsql = new BCSQL();
+  require_once(dirname(__FILE__).'/../include/bssql.class.php');
+  $mybcsql = new BSSQL();
 
   $bb_conf = $mybcsql->get_config('bossbase');
   $bc_conf = $mybcsql->get_config('bosscounter');
