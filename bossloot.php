@@ -84,7 +84,7 @@ if (isset($_GET['boss'])){
 	message_die("no bossname/id given");
 }
 
-$data = $myblsql->get_data($bb_conf, $bossid); 
+$data = $myblsql->get_bl_data($bb_conf, $bossid); 
 
 //Name
 $bl_out  = '<tr class="row2"><th colspan="3" align="center">'. $user->lang['bl_loottable'].$user->lang[$bossid]['long'].$user->lang['bl_kc_p1'].$data['kc'].$user->lang['bl_kc_p2'].'</th></tr>'."\n";
@@ -113,11 +113,9 @@ $loottable = $myblmgs->bl_get_loottable($bl_conf['item_lang'], $bossid, $bl_conf
 $printed0 = 0;
 $printed1 = 0;
 
-//WPFC
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
-$bl_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/jquery.class.php'); 
-$bl_jquery = new jQuery($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/'); 
+//Framework include
+include_once($eqdkp_root_path . 'plugins/bosssuite/include/libloader.inc.php');
+
 
 if ((is_array($loottable)) && !(empty($loottable))){
     if (($data['kc'] > 0) && (count($data['items'])>0)){
@@ -219,7 +217,7 @@ if (($bl_conf['show_wl'] == true) && ($bl_wloot != '')){
     $bl_acc_array[$bl_acc_title] = $bl_acc_content;
 }
 
-$bl_out .= '<tr><td>'.$bl_jquery->accordion('bl_accordion',$bl_acc_array).'</td></tr>';
+$bl_out .= '<tr><td>'.$jquery->accordion('bl_accordion',$bl_acc_array).'</td></tr>';
 
 }else{
 // Loot output
@@ -263,9 +261,8 @@ $bl_out .= '</td></tr>';
 # ####################################################
 $tpl->assign_vars(array (
 	'F_ACTION' => 'bossloot.php' . $SID,
-	'JQUERY_INCLUDES'   => $bl_jquery->Header(),
 	'BOSSLOOT' => $bl_out,
-	'JS_ABOUT' => $bl_jquery->Dialog_URL('About', $user->lang['bs_about_header'], 'about.php', '400', '400'),
+	'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], 'about.php', '400', '400'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'BS_INFO_IMG' => 'images/credits/info.png',
 ));

@@ -34,25 +34,25 @@ if ( !class_exists( "BLSQL" ) ) {
   */
   class BLSQL extends BSSQL{
 
-      function get_data($bb_conf, $bossid){
+      function get_bl_data($bb_conf, $bossid){
           if ($bb_conf['source'] == 'database'){
-            $data = $this->get_db_data($bb_conf, $bossid);
+            $data = $this->get_bl_db_data($bb_conf, $bossid);
           } else if ($bb_conf['source'] == 'offsets'){
             $bb_boffs = $this->get_boss_offsets();
             $data['kc'] = $bb_boffs[$bossid]['counter'];
           } else if ($bb_conf['source'] == 'both'){
-            $data = $this->get_db_data($bb_conf, $bossid);  
+            $data = $this->get_bl_db_data($bb_conf, $bossid);  
             $bb_boffs = $this->get_boss_offsets();
             $data['kc'] += $bb_boffs[$bossid]['counter'];
           } else if ($bb_conf['source'] == 'cache'){
-            $data = $this->get_db_data($bb_conf, $bossid);  
+            $data = $this->get_bl_db_data($bb_conf, $bossid);  
             $bb_boffs = $this->get_boss_offsets();
             $data['kc'] += $bb_boffs[$bossid]['counter'];
           }
           return $data;
       }
 
-      function get_db_data($bb_conf, $boss) {
+      function get_bl_db_data($bb_conf, $boss) {
       global $db, $table_prefix;
         $delim = array (
           'rnote' => '/'.$bb_conf['noteDelim'].'/',

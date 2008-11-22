@@ -31,14 +31,12 @@ if (!$pm->check(PLUGIN_INSTALLED, 'bosssuite')) {
 	message_die('The BossSuite plugin is not installed.');
 }
 
-//wpfc
-require_once($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/init.pwc.php'); 
-$bs_adm_wpfccore = new InitWPFC($eqdkp_root_path . 'plugins/bosssuite/include/wpfc/');
-$bs_adm_jquery = $bs_adm_wpfccore->InitJquery(); 
-$bs_adm_wpfccore->InitAdmin();
+//Framework include
+include_once($eqdkp_root_path . 'plugins/bosssuite/include/libloader.inc.php');
+$wpfccore->InitAdmin();
 
 //Updater
-$bsupdater = new PluginUpdater2('bosssuite','bb_','bs_config','include');
+$bsupdater = new PluginUpdater('bosssuite','bb_','bs_config','include');
 
 // new mgs class
 require(dirname(__FILE__).'/../include/bsmgs.class.php');
@@ -400,9 +398,9 @@ foreach ($bs_linklength as $value => $option) {
 
 $tpl->assign_vars(array(
   'UPDATER' => $bsupdater->OutputHTML(),
-  'JQUERY_INCLUDES'   => $bs_adm_jquery->Header(),
-  'TABOUT' => $bs_adm_jquery->Tab_header('bs_adm_tabs'),
-  'JS_ABOUT' => $bs_adm_jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
+  'JQUERY_INCLUDES'   => $jquery->Header(),
+  'TABOUT' => $jquery->Tab_header('bs_adm_tabs'),
+  'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'BS_INFO_IMG' => '../images/credits/info.png',
   ));

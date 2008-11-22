@@ -192,6 +192,65 @@ $idlist['default'] = array(
   'fetwins' => '99999',
   'muru' => '25741',
   'kiljaeden' => '25315',
+  
+  /******Naxxramas (10)*****/
+  'anubrekhan_10' => '15956',
+  'faerlina_10' => '15953',
+  'maexxna_10' => '15952',
+  'noth_10' => '15954',
+  'heigan_10' => '15936',
+  'loatheb_10' => '16011',
+  'patchwerk_10' => '16028',
+  'grobbulus_10' => '15931',
+  'gluth_10' => '15932',
+  'thaddius_10' => '15928',
+  'razuvious_10' => '16061',
+  'gothik_10' => '16060',
+  'horsemen_10' => '99999',
+  'sapphiron_10' => '15989',
+  'kelthuzad_10' => '15990',
+  
+  /******Vault of Archavon (10)*****/
+  'archavon_10' => '31125',
+  
+  /******Eye of Eternity (10)*****/
+  'malygos_10' => '28859',
+  
+  /******The Obsidian Sanctum (10)*****/
+  'sartharion_0d_10' => '28860',
+  'sartharion_1d_10' => '28860',
+  'sartharion_2d_10' => '28860',
+  'sartharion_3d_10' => '28860',
+  
+  /******Naxxramas (25)*****/
+  'anubrekhan_25' => '15956',
+  'faerlina_25' => '15953',
+  'maexxna_25' => '15952',
+  'noth_25' => '15954',
+  'heigan_25' => '15936',
+  'loatheb_25' => '16011',
+  'patchwerk_25' => '16028',
+  'grobbulus_25' => '15931',
+  'gluth_25' => '15932',
+  'thaddius_25' => '15928',
+  'razuvious_25' => '16061',
+  'gothik_25' => '16060',
+  'horsemen_25' => '99999',
+  'sapphiron_25' => '15989',
+  'kelthuzad_25' => '15990',
+  
+  /******Vault of Archavon (25)*****/
+  'archavon_25' => '31125',
+  
+  /******Eye of Eternity (25)*****/
+  'malygos_25' => '28859',
+  
+  /******The Obsidian Sanctum (25)*****/
+  'sartharion_0d_25' => '28860',
+  'sartharion_1d_25' => '28860',
+  'sartharion_2d_25' => '28860',
+  'sartharion_3d_25' => '28860',
+
 );
 
 ?>
