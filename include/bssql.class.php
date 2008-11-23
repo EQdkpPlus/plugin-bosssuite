@@ -380,7 +380,7 @@ if ( !class_exists( "BSSQL" ) ) {
 		  }
     }
     
-    function get_cache(){
+    function get_cache($bzone = null){
         global $eqdkp, $db, $table_prefix;
       
         $game_arr = explode('_', $eqdkp->config['default_game']);
@@ -393,10 +393,10 @@ if ( !class_exists( "BSSQL" ) ) {
       	}
       
       	while($roww = $db->fetch_record($result)) { 
-      	   		$data[$roww['zone_id']]['vc'] = $roww['zone_co_cache'];
-      	   		$data[$roww['zone_id']]['zk'] = $roww['zone_zk_cache'];
-      	   		$data[$roww['zone_id']]['fvd'] = $roww['zone_fd_cache'];
-      	   		$data[$roww['zone_id']]['lvd'] = $roww['zone_ld_cache'];
+      	   		$data2[$roww['zone_id']]['vc'] = $roww['zone_co_cache'];
+      	   		$data2[$roww['zone_id']]['zk'] = $roww['zone_zk_cache'];
+      	   		$data2[$roww['zone_id']]['fvd'] = $roww['zone_fd_cache'];
+      	   		$data2[$roww['zone_id']]['lvd'] = $roww['zone_ld_cache'];
       	}	
       	
       	$sql = 'SELECT * FROM `' . BS_BOSS_CACHE . "`;";
@@ -407,17 +407,20 @@ if ( !class_exists( "BSSQL" ) ) {
         unset($roww);
         
       	while($roww = $db->fetch_record($result2)) { 
-              $data[$roww['boss_id']]['kc'] = $roww['boss_co_cache'];
-      	   		$data[$roww['boss_id']]['fkd'] = $roww['boss_fd_cache'];
-      	   		$data[$roww['boss_id']]['lkd'] = $roww['boss_ld_cache'];
+              $data2[$roww['boss_id']]['kc'] = $roww['boss_co_cache'];
+      	   		$data2[$roww['boss_id']]['fkd'] = $roww['boss_fd_cache'];
+      	   		$data2[$roww['boss_id']]['lkd'] = $roww['boss_ld_cache'];
       	}	
-      	
-      	$bzone = $this->get_bzone();
+      	if($bzone == null){
+          $bzone = $this->get_bzone();
+        }
       	foreach ( $bzone as $zone => $bosses){
+      	  $data[$zone] = $data2[$zone];
           foreach ($bosses as $boss){
-            $data[$zone]['bosses'][$boss] = $data[$boss];
+            $data[$zone]['bosses'][$boss] = $data2[$boss];
           }
         }
+        unset($data2);
       	return $data;
     }
 
@@ -434,7 +437,7 @@ if ( !class_exists( "BSSQL" ) ) {
 
       function get_data($bb_conf, $bzone){
         if ($bb_conf['source'] == 'cache'){
-          return $this->get_cache();
+          return $this->get_cache($bzone);
         }
         if ($bb_conf['source'] == 'database'){
           $data = $this->init_data_array($bzone);
