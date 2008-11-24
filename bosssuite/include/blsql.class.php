@@ -70,8 +70,9 @@ if ( !class_exists( "BLSQL" ) ) {
         );
         
         $bossInfo = $bb_conf['bossInfo'];
+        $zoneInfo = $bb_conf['zoneInfo'];
         $bb_pboss = $this->get_parse_boss();
-
+        $bb_pzone = $this->get_parse_zone();
         $tables = array();
         
         if($bb_conf['tables'] != '')
@@ -89,7 +90,7 @@ if ( !class_exists( "BLSQL" ) ) {
           $result = $db->query($sql);
           $dbdata = $db->fetch_record_set();
           if (!is_array($dbdata)){
-            return $data;
+            return $this->data;
           }
          	
          	$zparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pzone['pz_'.$this->zoneid], "\' ")));
@@ -105,8 +106,10 @@ if ( !class_exists( "BLSQL" ) ) {
         			foreach ($zone_element as $raid){				
         				if ($this->in_array_nocase(stripslashes(trim($raid)), $zparseList)) {
         					$zone_hit = true;
+        					continue;
         				}	
         			}
+        			
               if($zone_hit || !$bb_conf['depmatch']){  
           			if ($delim[$bossInfo] != "//"){
           				$boss_element = preg_split($delim[$bossInfo], $row[$bossInfo], -1, PREG_SPLIT_NO_EMPTY);
