@@ -164,6 +164,12 @@ $lang = array(
 
 'bs_updateitem_l_name' => 'Updateseite für',
 'bs_depmatch' => 'Werte Bosse zonenabhängig aus:',
+'bs_am_bzone' => 'Zonen/Bosse',
+
+'bs_ec_show_bp' => 'Zeige(BossProgress)',
+'bs_ec_show_bc' => 'Zeige(BossCounter)',
+'bs_ec_strings' => 'Zeichenketten',
+
 );
 
 ?>

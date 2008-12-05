@@ -1,5 +1,6 @@
 <?php
 $loot = array(
+	array( "id" => "39297", "qual" => "4", "name" => "Cloak of Darkening" ),
 	array( "id" => "39310", "qual" => "4", "name" => "Mantle of the Extensive Mind" ),
 	array( "id" => "39309", "qual" => "4", "name" => "Leggings of the Instructor" ),
 	array( "id" => "39299", "qual" => "4", "name" => "Rapid Attack Gloves" ),

@@ -1,6 +1,6 @@
 <?php
 $loot = array(
-	array( "id" => "39297", "qual" => "4", "name" => "Umhang der Verdunkelung" ),
+	array( "id" => "39390", "qual" => "4", "name" => "Wiederauferstehende Phantombindungen" ),
 	array( "id" => "39386", "qual" => "4", "name" => "Tunika der Dislokation" ),
 	array( "id" => "39391", "qual" => "4", "name" => "Abscheulicher Panzerbrustschutz" ),
 	array( "id" => "39379", "qual" => "4", "name" => "Gurt des spektralen Reiters" ),

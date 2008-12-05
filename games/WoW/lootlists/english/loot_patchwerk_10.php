@@ -9,14 +9,5 @@ $loot = array(
 	array( "id" => "39261", "qual" => "4", "name" => "Tainted Girdle of Mending" ),
 	array( "id" => "39270", "qual" => "4", "name" => "Hatestrike" ),
 	array( "id" => "39271", "qual" => "4", "name" => "Blade of Dormant Memories" ),
-	array( "id" => "40270", "qual" => "4", "name" => "Boots of Septic Wounds" ),
-	array( "id" => "40272", "qual" => "4", "name" => "Girdle of the Gambit" ),
-	array( "id" => "40261", "qual" => "4", "name" => "Crude Discolored Battlegrips" ),
-	array( "id" => "40259", "qual" => "4", "name" => "Waistguard of Divine Grace" ),
-	array( "id" => "40071", "qual" => "4", "name" => "Chains of Adoration" ),
-	array( "id" => "40107", "qual" => "4", "name" => "Sand-Worn Band" ),
-	array( "id" => "40268", "qual" => "4", "name" => "Libram of Tolerance" ),
-	array( "id" => "40264", "qual" => "4", "name" => "Split Greathammer" ),
-	array( "id" => "40265", "qual" => "4", "name" => "Arrowsong" ),
 );
 ?>

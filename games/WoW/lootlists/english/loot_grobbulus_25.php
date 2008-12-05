@@ -1,0 +1,30 @@
+<?php
+$loot = array(
+
+	array( "id" => "40254", "qual" => "4", "name" => "Cloak of Averted Crisis" ),
+	array( "id" => "40252", "qual" => "4", "name" => "Cloak of the Shadowed Sun" ),
+	array( "id" => "40253", "qual" => "4", "name" => "Shawl of the Old Maid" ),
+	array( "id" => "40251", "qual" => "4", "name" => "Shroud of Luminosity" ),
+	array( "id" => "40287", "qual" => "4", "name" => "Cowl of Vanity" ),
+	array( "id" => "40286", "qual" => "4", "name" => "Mantle of the Corrupted" ),
+	array( "id" => "40351", "qual" => "4", "name" => "Mantle of the Fatigued Sage" ),
+	array( "id" => "40289", "qual" => "4", "name" => "Sympathetic Amice" ),
+	array( "id" => "40277", "qual" => "4", "name" => "Tunic of Indulgence" ),
+	array( "id" => "40285", "qual" => "4", "name" => "Desecrated Past" ),
+	array( "id" => "40288", "qual" => "4", "name" => "Spaulders of Incoherence" ),
+	array( "id" => "40283", "qual" => "4", "name" => "Fallout Impervious Tunic" ),
+	array( "id" => "40282", "qual" => "4", "name" => "Slime Stream Bands" ),
+	array( "id" => "40275", "qual" => "4", "name" => "Depraved Linked Belt" ),
+	array( "id" => "40279", "qual" => "4", "name" => "Chestguard of the Exhausted" ),
+	array( "id" => "40274", "qual" => "4", "name" => "Bracers of Liberation" ),
+	array( "id" => "40278", "qual" => "4", "name" => "Girdle of Chivalry" ),
+	array( "id" => "40257", "qual" => "4", "name" => "Defender's Code" ),
+	array( "id" => "40255", "qual" => "4", "name" => "Dying Curse" ),
+	array( "id" => "40258", "qual" => "4", "name" => "Forethought Talisman" ),
+	array( "id" => "40256", "qual" => "4", "name" => "Grim Toll" ),
+	array( "id" => "40273", "qual" => "4", "name" => "Surplus Limb" ),
+	array( "id" => "40281", "qual" => "4", "name" => "Twilight Mist" ),
+	array( "id" => "40280", "qual" => "4", "name" => "Origin of Nightmares" ),
+	array( "id" => "40284", "qual" => "4", "name" => "Plague Igniter" ),
+);
+?>
