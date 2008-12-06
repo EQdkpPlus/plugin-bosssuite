@@ -1,27 +1,8 @@
 <?php
 $loot = array(
-	array( "id" => "40325", "qual" => "4", "name" => "Bindings of the Expansive Mind" ),
-	array( "id" => "40326", "qual" => "4", "name" => "Boots of Forlorn Wishes" ),
-	array( "id" => "40305", "qual" => "4", "name" => "Spaulders of Egotism" ),
-	array( "id" => "40319", "qual" => "4", "name" => "Chestpiece of Suspicion" ),
-	array( "id" => "40323", "qual" => "4", "name" => "Esteemed Bindings" ),
-	array( "id" => "40315", "qual" => "4", "name" => "Shoulderpads of Secret Arts" ),
 	array( "id" => "40324", "qual" => "4", "name" => "Bands of Mutual Respect" ),
-	array( "id" => "40327", "qual" => "4", "name" => "Girdle of Recuperation" ),
-	array( "id" => "40306", "qual" => "4", "name" => "Bracers of the Unholy Knight" ),
 	array( "id" => "40316", "qual" => "4", "name" => "Gauntlets of Guiding Touch" ),
-	array( "id" => "40317", "qual" => "4", "name" => "Girdle of Razuvious" ),
-	array( "id" => "40318", "qual" => "4", "name" => "Legplates of Double Strikes" ),
 	array( "id" => "40320", "qual" => "4", "name" => "Faithful Steel Sabatons" ),
-	array( "id" => "40071", "qual" => "4", "name" => "Chains of Adoration" ),
-	array( "id" => "40065", "qual" => "4", "name" => "Fool's Trial" ),
 	array( "id" => "40069", "qual" => "4", "name" => "Heritage" ),
-	array( "id" => "40064", "qual" => "4", "name" => "Thunderstorm Amulet" ),
-	array( "id" => "40080", "qual" => "4", "name" => "Lost Jewel" ),
-	array( "id" => "40075", "qual" => "4", "name" => "Ruthlessness" ),
-	array( "id" => "40107", "qual" => "4", "name" => "Sand-Worn Band" ),
-	array( "id" => "40074", "qual" => "4", "name" => "Strong-Handed Ring" ),
-	array( "id" => "40321", "qual" => "4", "name" => "Idol of the Shooting Star" ),
-	array( "id" => "40322", "qual" => "4", "name" => "Totem of Dueling" ),
 );
 ?>

@@ -167,10 +167,6 @@ $lang = array(
 
 'bs_updateitem_l_name' => 'Updatepage for',
 'bs_depmatch' => 'Match bosses depending on the zone match:',
-'bs_am_bzone' => 'Zones/Bosses',
-'bs_ec_show_bp' => 'Show(BossProgress)',
-'bs_ec_show_bc' => 'Show(BossCounter)',
-'bs_ec_strings' => 'Triggers',
 );
 
 ?>

@@ -58,7 +58,7 @@ foreach ($bzone as $zoneid => $bosslist){
     $zbcode .= '<tr><th>'.$user->lang['bs_ol_in'].'</th><th>'.$user->lang['bs_ol_fd'].'</th><th>'.$user->lang['bs_ol_ld'].'</th><th>'.$user->lang['bs_ol_co'].'</th></tr>';
     
     $zbcode .= '<tr>';
-    $zbcode .= '<td width="60%" class="row2">' .$user->lang[$zoneid]['long'] . '</td>';
+    $zbcode .= '<td width="40%" class="row2">' .$user->lang[$zoneid]['long'] . '</td>';
     $zbcode .= '<td class="row1">' . bs_date2text($bs_cache[$zoneid]['fvd']) . '</td>';
     $zbcode .= '<td class="row1">' . bs_date2text($bs_cache[$zoneid]['lvd']) . '</td>';
     $zbcode .= '<td class="row1">' . $bs_cache[$zoneid]['vc'] . '</td>';
@@ -67,9 +67,9 @@ foreach ($bzone as $zoneid => $bosslist){
    	foreach ($bosslist as $bossid){
     		$zbcode .= '<tr>';
     		$zbcode .= '<td class="row2">' . $user->lang[$bossid]['long'] . '</td>';
-    		$zbcode .= '<td class="row1">' . bs_date2text($bs_cache[$zoneid]['bosses'][$bossid]['fkd']) . '</td>';
-    		$zbcode .= '<td class="row1">' . bs_date2text($bs_cache[$zoneid]['bosses'][$bossid]['lkd']) . '</td>';
-        $zbcode .= '<td class="row1">' . $bs_cache[$zoneid]['bosses'][$bossid]['kc'] . '</td>';
+    		$zbcode .= '<td class="row1">' . bs_date2text($bs_cache[$bossid]['fkd']) . '</td>';
+    		$zbcode .= '<td class="row1">' . bs_date2text($bs_cache[$bossid]['lkd']) . '</td>';
+        $zbcode .= '<td class="row1">' . $bs_cache[$bossid]['kc'] . '</td>';
     		$zbcode .= '</tr>';
 	  }
   $zbcode .= "</table>";

@@ -421,7 +421,6 @@ if ( !class_exists( "BSSQL" ) ) {
           }
         }
         unset($data2);
-        //d($data);
       	return $data;
     }
 

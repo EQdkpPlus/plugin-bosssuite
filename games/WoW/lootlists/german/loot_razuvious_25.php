@@ -1,27 +1,8 @@
 <?php
 $loot = array(
-	array( "id" => "40325", "qual" => "4", "name" => "Bindungen des wachen Geists" ),
-	array( "id" => "40326", "qual" => "4", "name" => "Stiefel der aussichtslosen Wünsche" ),
-	array( "id" => "40305", "qual" => "4", "name" => "Schiftung des Egoismus" ),
-	array( "id" => "40319", "qual" => "4", "name" => "Brustharnisch des Misstrauens" ),
-	array( "id" => "40323", "qual" => "4", "name" => "Geschätzte Bindungen" ),
-	array( "id" => "40315", "qual" => "4", "name" => "Schulterpolster der geheimen Künste" ),
 	array( "id" => "40324", "qual" => "4", "name" => "Bänder des gegenseitigen Respekts" ),
-	array( "id" => "40327", "qual" => "4", "name" => "Gurt der Erholung" ),
-	array( "id" => "40306", "qual" => "4", "name" => "Armschienen des unheiligen Ritters" ),
 	array( "id" => "40316", "qual" => "4", "name" => "Stulpen der leitenden Hand" ),
-	array( "id" => "40317", "qual" => "4", "name" => "Razuvious' Gurt" ),
-	array( "id" => "40318", "qual" => "4", "name" => "Beinplatten des Doppelschlags" ),
 	array( "id" => "40320", "qual" => "4", "name" => "Zuverlässige Stahlsabatons" ),
-	array( "id" => "40071", "qual" => "4", "name" => "Ketten der Verehrung" ),
-	array( "id" => "40065", "qual" => "4", "name" => "Narrenprüfung" ),
 	array( "id" => "40069", "qual" => "4", "name" => "Erbe" ),
-	array( "id" => "40064", "qual" => "4", "name" => "Gewitteramulett" ),
-	array( "id" => "40080", "qual" => "4", "name" => "Verlorenes Juwel" ),
-	array( "id" => "40075", "qual" => "4", "name" => "Skrupellosigkeit" ),
-	array( "id" => "40107", "qual" => "4", "name" => "Sandgeschliffenes Band" ),
-	array( "id" => "40074", "qual" => "4", "name" => "Ring der starken Hand" ),
-	array( "id" => "40321", "qual" => "4", "name" => "Götze der Sternschnuppe" ),
-	array( "id" => "40322", "qual" => "4", "name" => "Totem des Duells" ),
 );
 ?>

@@ -1,0 +1,24 @@
+{JQUERY_INCLUDES}
+<form method="post" action="{F_CONFIG}" name="post">
+<input name="zone_select" value="" type="hidden" /> 
+<table border="0" width="100%" border="0" cellspacing="1" cellpadding="2">
+    <tr>
+        <th align="center">{L_OFFSET_ZONESELECT}</th>
+        <th align="center">                    
+            <select name="offset_zoneselect" class="input" onchange="javascript:form.submit();">
+            <!-- BEGIN offset_select_row -->
+            <option value="{offset_select_row.VALUE}"{offset_select_row.SELECTED}>{offset_select_row.OPTION}</option>
+            <!-- END offset_select_row -->
+        </th>
+        <th align="center">{L_OFFSET_INFO}</th>
+    </tr>
+    <tr>
+        <td colspan="3">{OFFSET_CONFIG}</td>
+    </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="1" cellpadding="2">
+ <tr><th align="center" colspan="2"><input type="submit" name="bpsavebu" value="{L_SUBMIT}" class="mainoption" /></th></tr>
+</table>
+</form>
+<br />

@@ -36,7 +36,7 @@ if (!defined('BS_MIN_DATE')) { define('BS_MIN_DATE', mktime (0,0,0,1,1,2000)); }
 class bosssuite_Plugin_Class extends EQdkp_Plugin {
 
   var $additional_data;
-  var $version = '4.3.0';
+  var $version = '4.2.4';
   
 	function bosssuite_plugin_class($pm) {
 		
@@ -175,9 +175,9 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
       '/admin/addraid.php?action=add',
       '/admin/addraid.php?action=update',
       '/admin/addraid.php?action=delete',
+      '/plugins/bosssuite/admin/offsets.php',
       '/plugins/bosssuite/admin/settings.php',
       '/plugins/bosssuite/admin/cache.php',
-      '/plugins/bosssuite/admin/entity_conf.php',
       '/plugins/ctrt/index.php'
     );
     if(in_array($hook, $valid_hooks)){
@@ -206,8 +206,8 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 						'check' => 'a_bosssuite_conf'
 					),
 					2 => array (
-						'link' => $url_prefix . 'plugins/bosssuite/admin/bzone.php' . $SID,
-						'text' => $user->lang['bs_am_bzone'],
+						'link' => $url_prefix . 'plugins/bosssuite/admin/offsets.php' . $SID,
+						'text' => $user->lang['bs_am_offs'],
 						'check' => 'a_bosssuite_offs'
 					),
 					3 => array (

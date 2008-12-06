@@ -1,6 +1,6 @@
 <?php
 $loot = array(
-	array( "id" => "39390", "qual" => "4", "name" => "Resurgent Phantom Bindings" ),
+	array( "id" => "39297", "qual" => "4", "name" => "Cloak of Darkening" ),
 	array( "id" => "39386", "qual" => "4", "name" => "Tunic of Dislocation" ),
 	array( "id" => "39391", "qual" => "4", "name" => "Heinous Mail Chestguard" ),
 	array( "id" => "39379", "qual" => "4", "name" => "Spectral Rider's Girdle" ),
