@@ -10,12 +10,5 @@ $loot = array(
 	array( "id" => "39226", "qual" => "4", "name" => "Maexxna's Femur" ),
 	array( "id" => "39221", "qual" => "4", "name" => "Wraith Spear" ),
 	array( "id" => "39233", "qual" => "4", "name" => "Aegis of Damnation" ),
-	array( "id" => "40252", "qual" => "4", "name" => "Cloak of the Shadowed Sun" ),
-	array( "id" => "40060", "qual" => "4", "name" => "Distorted Limbs" ),
-	array( "id" => "39765", "qual" => "4", "name" => "Sinner's Bindings" ),
-	array( "id" => "39761", "qual" => "4", "name" => "Infectious Skitterer Leggings" ),
-	array( "id" => "39760", "qual" => "4", "name" => "Helm of Diminished Pride" ),
-	array( "id" => "39764", "qual" => "4", "name" => "Bindings of the Hapless Prey" ),
-	array( "id" => "40258", "qual" => "4", "name" => "Forethought Talisman" ),
 );
 ?>
