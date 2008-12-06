@@ -5,6 +5,7 @@ $loot = array(
 	array( "id" => "39409", "qual" => "4", "name" => "Cowl of Winged Fear" ),
 	array( "id" => "39408", "qual" => "4", "name" => "Leggings of Sapphiron" ),
 	array( "id" => "39399", "qual" => "4", "name" => "Helm of the Vast Legions" ),
+	array( "id" => "39405", "qual" => "4", "name" => "Helmet of the Inner Sanctum" ),
 	array( "id" => "39403", "qual" => "4", "name" => "Helm of the Unsubmissive" ),
 	array( "id" => "39398", "qual" => "4", "name" => "Massive Skeletal Ribcage" ),
 	array( "id" => "39401", "qual" => "4", "name" => "Circle of Death" ),

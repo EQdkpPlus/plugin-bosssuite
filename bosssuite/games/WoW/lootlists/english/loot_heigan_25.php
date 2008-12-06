@@ -1,13 +1,28 @@
 <?php
 $loot = array(
 	array( "id" => "40250", "qual" => "4", "name" => "Aged Winter Cloak" ),
+	array( "id" => "40254", "qual" => "4", "name" => "Cloak of Averted Crisis" ),
+	array( "id" => "40252", "qual" => "4", "name" => "Cloak of the Shadowed Sun" ),
+	array( "id" => "40253", "qual" => "4", "name" => "Shawl of the Old Maid" ),
+	array( "id" => "40251", "qual" => "4", "name" => "Shroud of Luminosity" ),
 	array( "id" => "40234", "qual" => "4", "name" => "Heigan's Putrid Vestments" ),
 	array( "id" => "40236", "qual" => "4", "name" => "Serene Echoes" ),
+	array( "id" => "40238", "qual" => "4", "name" => "Gloves of the Dancing Bear" ),
+	array( "id" => "40205", "qual" => "4", "name" => "Stalk-Skin Belt" ),
+	array( "id" => "40235", "qual" => "4", "name" => "Helm of Pilgrimage" ),
 	array( "id" => "40209", "qual" => "4", "name" => "Bindings of the Decrepit" ),
 	array( "id" => "40201", "qual" => "4", "name" => "Leggings of Colossal Strides" ),
 	array( "id" => "40237", "qual" => "4", "name" => "Eruption-Scared Boots" ),
 	array( "id" => "40203", "qual" => "4", "name" => "Breastplate of Tormented Rage" ),
+	array( "id" => "40210", "qual" => "4", "name" => "Chestguard of Bitter Charms" ),
+	array( "id" => "40204", "qual" => "4", "name" => "Legguards of the Apostle" ),
+	array( "id" => "40206", "qual" => "4", "name" => "Iron-Spring Jumpers" ),
+	array( "id" => "40257", "qual" => "4", "name" => "Defender's Code" ),
 	array( "id" => "40255", "qual" => "4", "name" => "Dying Curse" ),
+	array( "id" => "40258", "qual" => "4", "name" => "Forethought Talisman" ),
+	array( "id" => "40256", "qual" => "4", "name" => "Grim Toll" ),
+	array( "id" => "40207", "qual" => "4", "name" => "Sigil of Awareness" ),
 	array( "id" => "40208", "qual" => "4", "name" => "Cryptfiend's Bite" ),
+	array( "id" => "40233", "qual" => "4", "name" => "The Undeath Carrier" ),
 );
 ?>
