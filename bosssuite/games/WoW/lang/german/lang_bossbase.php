@@ -211,7 +211,7 @@ $lang['maexxna_10'] = array('long' => 'Maexxna (10)', 'short' => 'Maexxna (10)')
 $lang['noth_10'] = array('long' => 'Noth der Seuchenfürst (10)', 'short' => 'Noth (10)');
 $lang['heigan_10'] = array('long' => 'Heigan der Unreine (10)', 'short' => 'Heigan (10)');
 $lang['loatheb_10'] = array('long' => 'Loatheb (10)', 'short' => 'Loatheb (10)');
-$lang['patchwerk_10'] = array('long' => 'Flickwerk' , 'short' => 'Flickwerk (10)');
+$lang['patchwerk_10'] = array('long' => 'Flickwerk (10)' , 'short' => 'Flickwerk (10)');
 $lang['grobbulus_10'] = array('long' => 'Grobbulus (10)', 'short' => 'Grobbulus (10)');
 $lang['gluth_10'] = array('long' => 'Gluth (10)', 'short' => 'Gluth (10)');
 $lang['thaddius_10'] = array('long' => 'Thaddius (10)', 'short' => 'Thaddius (10)');
@@ -244,7 +244,7 @@ $lang['maexxna_25'] = array('long' => 'Maexxna (25)', 'short' => 'Maexxna (25)')
 $lang['noth_25'] = array('long' => 'Noth der Seuchenfürst (25)', 'short' => 'Noth (25)');
 $lang['heigan_25'] = array('long' => 'Heigan der Unreine (25)', 'short' => 'Heigan (25)');
 $lang['loatheb_25'] = array('long' => 'Loatheb (25)', 'short' => 'Loatheb (25)');
-$lang['patchwerk_25'] = array('long' => 'Flickwerk' , 'short' => 'Flickwerk (25)');
+$lang['patchwerk_25'] = array('long' => 'Flickwerk (25)' , 'short' => 'Flickwerk (25)');
 $lang['grobbulus_25'] = array('long' => 'Grobbulus (25)', 'short' => 'Grobbulus (25)');
 $lang['gluth_25'] = array('long' => 'Gluth (25)', 'short' => 'Gluth (25)');
 $lang['thaddius_25'] = array('long' => 'Thaddius (25)', 'short' => 'Thaddius (25)');
