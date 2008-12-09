@@ -40,8 +40,8 @@ if($mode != 'boss' && $mode!='zone'){
 if ($_POST['bpsavebu']){
   $strings = strip_tags(htmlspecialchars($_POST['strings']));
   $co_offs = intval($_POST['co_offs']);
-  $fd_offs = bs_text2date($_POST['fd_offs'], false);
-  $ld_offs = bs_text2date($_POST['ld_offs'], true);
+  $fd_offs = bs_text2date($_POST['fd_offs'], true);
+  $ld_offs = bs_text2date($_POST['ld_offs'], false);
 
   
   if($mode == 'zone'){
