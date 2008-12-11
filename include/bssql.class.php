@@ -27,7 +27,6 @@ if ( !class_exists( "BSSQL" ) ) {
   * BossSuite Base SQL class
   */
   class BSSQL{
-  
       
       //get default values
       function get_defaults($plugin){
@@ -88,7 +87,7 @@ if ( !class_exists( "BSSQL" ) ) {
               $prefix = 'bc_';
               break;
           default:
-              $prefix= 'bb_';
+              $prefix = 'bb_';
         }
         
       	$sql = "SELECT * FROM `" . BS_CONFIG_TABLE . "` WHERE config_name LIKE '".$prefix."%';";
@@ -130,8 +129,10 @@ if ( !class_exists( "BSSQL" ) ) {
       	
       	if (!empty($conf))
       	   return $conf;
-      	else
-      	   return $this->reset_pzone_to_defaults();
+      	else{
+          $this->reset_zones();
+          return $this->get_parse_zone();
+        }
       }
       
       function update_parse_zone($confarr, $fieldname, $value){
@@ -171,8 +172,10 @@ if ( !class_exists( "BSSQL" ) ) {
       	
       	if (!empty($conf))
       	   return $conf;
-      	else
-      	   return $this->reset_pboss_to_defaults();
+      	else{
+          $this->reset_bosses();
+          return $this->get_parse_boss();
+        }
       }
       
       function update_parse_boss($confarr, $fieldname, $value){
@@ -188,38 +191,6 @@ if ( !class_exists( "BSSQL" ) ) {
       	$sql = "INSERT INTO `".BS_BOSS_TABLE."` VALUES('".$fieldname."', '".strip_tags(htmlspecialchars($value))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."');";	
       	$db->query($sql);
       	}
-      }
-      
-      function reset_pboss_to_defaults(){
-        global $user;
-        $bzone = $this->get_bzone();
-	      foreach ($bzone as $zone => $bosses){
-	        foreach ($bosses as $boss){
-           if (strcmp($user->lang[$boss]['long'], $user->lang[$boss]['short'])){
-				     $bossstring = "''". str_replace("'", "''", $user->lang[$boss]['long']) . "'', ''" .  str_replace("'", "''", $user->lang[$boss]['short']) . "''";
-			     }else{
-				     $bossstring = "''". str_replace("'", "''", $user->lang[$boss]['long']) . "''";
-			     }   
-           $this->update_parse_boss(array(), $boss, $bossstring);
-           $defaults['pb_'.$boss] = str_replace("''", "'", $bossstring);     
-          }
-        }
-        return $defaults;
-      }
-      
-      function reset_pzone_to_defaults(){
-        global $user;       
-        $bzone = $this->get_bzone();
-	      foreach ($bzone as $zone => $bosses){
-          if (strcmp($user->lang[$zone]['long'], $user->lang[$zone]['short'])){
-				    $zonestring = "''". str_replace("'", "''", $user->lang[$zone]['long']) . "'', ''" .  str_replace("'", "''", $user->lang[$zone]['short']) . "''";
-			    }else{
-				    $zonestring = "''". str_replace("'", "''", $user->lang[$zone]['long']) . "''";
-			    }   
-          $this->update_parse_zone(array(), $zone, $zonestring);         
-          $defaults['pz_'.$zone] = str_replace("''", "'", $zonestring);
-        }
-        return $defaults;
       }
       
       function get_boss_offsets(){
@@ -239,10 +210,12 @@ if ( !class_exists( "BSSQL" ) ) {
       	   		$conf[$roww['boss_id']]['ld'] = $roww['boss_ld_offs'];
       	}	
       	
-      	if (!empty($conf))
+      	if (!empty($conf)){
       	   return $conf;
-      	else
-      	   return $this->reset_boss_offsets_to_defaults();
+      	}else{
+          $this->reset_bosses();
+          return $this->get_boss_offsets();
+        }
       }
       
       function get_zone_offsets(){
@@ -262,12 +235,46 @@ if ( !class_exists( "BSSQL" ) ) {
       	   		$conf[$roww['zone_id']]['ld'] = $roww['zone_ld_offs'];
       	}	
       	
-      	if (!empty($conf))
+      	if (!empty($conf)){
       	   return $conf;
-      	else
-      	   return $this->reset_zone_offsets_to_defaults();
+      	}else{
+          $this->reset_zones();
+          return $this->get_zone_offsets();
+        }
+      }
+
+      function reset_bosses(){
+      global $user, $db;
+        $bzone = $this->get_bzone();
+	      foreach ($bzone as $zone => $bosses){
+	        foreach ($bosses as $boss){
+            if (strcmp($user->lang[$boss]['long'], $user->lang[$boss]['short'])){
+				      $bossstring = "''". str_replace("'", "''", $user->lang[$boss]['long']) . "'', ''" .  str_replace("'", "''", $user->lang[$boss]['short']) . "''";
+			      }else{
+				      $bossstring = "''". str_replace("'", "''", $user->lang[$boss]['long']) . "''";
+			      }   
+      	    $sql = "INSERT INTO `".BS_BOSS_TABLE."` VALUES('".$boss."', '".strip_tags(htmlspecialchars($bossstring))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."');";	
+    	      if($db->query($sql) === false)
+              message_die("Couldn't reset/initialise bosses. See sql debug statement.");
+          }
+        }
       }
       
+      function reset_zones(){
+      global $user, $db;
+        $bzone = $this->get_bzone();
+	      foreach ($bzone as $zone => $bosses){
+          if (strcmp($user->lang[$zone]['long'], $user->lang[$zone]['short'])){
+			      $zonestring = "''". str_replace("'", "''", $user->lang[$zone]['long']) . "'', ''" .  str_replace("'", "''", $user->lang[$zone]['short']) . "''";
+		      }else{
+			      $zonestring = "''". str_replace("'", "''", $user->lang[$zone]['long']) . "''";
+		      }   
+    	    $sql = "INSERT INTO `".BS_ZONE_TABLE."` VALUES('".$zone."', '".strip_tags(htmlspecialchars($zonestring))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."','1','1');";	
+    	    if($db->query($sql) === false)
+            message_die("Couldn't reset/initialise zones. See sql debug statement.");
+        }
+      }
+            
       function update_boss_offsets($offsets, $id, $fdate, $ldate, $counter){
       global $eqdkp, $user, $db;
       
@@ -297,13 +304,7 @@ if ( !class_exists( "BSSQL" ) ) {
       	$db->query($sql);
       	}
       }
-      
-      function reset_boss_offsets_to_defaults(){
-      }
-      
-      function reset_zone_offsets_to_defaults(){
-      }
-      
+
       function get_bzone($plugin='all'){
        global $db, $eqdkp, $user;
        
@@ -370,6 +371,7 @@ if ( !class_exists( "BSSQL" ) ) {
       $db->query($sql);
       $sql = "TRUNCATE TABLE `".BS_BOSS_CACHE."`;";
       $db->query($sql);
+
       foreach ($bzone as $zone => $bosses){
 	      $sql = "INSERT INTO `".BS_ZONE_CACHE."` VALUES('".$zone."', '".$data[$zone]['vc']."', '".$data[$zone]['zk']."', '".$data[$zone]['fvd']."', '".$data[$zone]['lvd']."');";	
      	  $db->query($sql);
@@ -421,7 +423,6 @@ if ( !class_exists( "BSSQL" ) ) {
           }
         }
         unset($data2);
-        //d($data);
       	return $data;
     }
 
@@ -436,24 +437,24 @@ if ( !class_exists( "BSSQL" ) ) {
     }
 
 
-      function get_data($bb_conf, $bzone){
-        if ($bb_conf['source'] == 'cache'){
-          return $this->get_cache($bzone);
-        }
-        if ($bb_conf['source'] == 'database'){
-          $data = $this->init_data_array($bzone);
-          return $this->get_db_data($bzone, $data, $bb_conf);
-        }
-        if ($bb_conf['source'] == 'both'){
-          $data = $this->init_data_array($bzone);
-          $data = $this->get_offsets($bzone, $data);
-          return $this->get_db_data($bzone, $data, $bb_conf);
-        }
-        if ($bb_conf['source'] == 'offsets'){
-          $data = $this->init_data_array($bzone);
-          return $this->get_offsets($bzone, $data);
-        }  
+    function get_data($bb_conf, $bzone){
+      if ($bb_conf['source'] == 'cache'){
+        return $this->get_cache($bzone);
       }
+      if ($bb_conf['source'] == 'database'){
+        $data = $this->init_data_array($bzone);
+        return $this->get_db_data($bzone, $data, $bb_conf);
+      }
+      if ($bb_conf['source'] == 'both'){
+        $data = $this->init_data_array($bzone);
+        $data = $this->get_offsets($bzone, $data);
+        return $this->get_db_data($bzone, $data, $bb_conf);
+      }
+      if ($bb_conf['source'] == 'offsets'){
+        $data = $this->init_data_array($bzone);
+        return $this->get_offsets($bzone, $data);
+      }  
+    }   
           
       function init_data_array($bzone){
           foreach ($bzone as $zone => $bosses) {
@@ -504,7 +505,7 @@ if ( !class_exists( "BSSQL" ) ) {
          
         $sql = "";
         if (count($tables) == 0) {
-        $sql = "SELECT  raid_name AS rname, raid_date AS rdate, raid_note AS rnote FROM " . RAIDS_TABLE . ";";
+          $sql = "SELECT  raid_name AS rname, raid_date AS rdate, raid_note AS rnote FROM " . RAIDS_TABLE . ";";
         } else {
         $bpinc = 0;
         foreach ($tables as $raidtable) {
