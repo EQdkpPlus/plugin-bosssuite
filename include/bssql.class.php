@@ -29,34 +29,23 @@ if ( !class_exists( "BSSQL" ) ) {
   class BSSQL{
       
       //get default values
-      function get_defaults($plugin){
-        global $eqdkp, $user, $pm;
-        $game_arr = explode('_', $eqdkp->config['default_game']);
-        $gi_defaults = array();
-        if($plugin == 'bossbase'){
-          $gi_defaults['bb_inst_version'] = $pm->get_data('bosssuite', 'version');
-          $gi_defaults['bb_current_game'] = $game_arr[0];
-        }
-        $default_file = dirname(__FILE__).'/../games/'.$game_arr[0].'/lang/'.$user->lang_name.'/defaults.php';
-        if (file_exists($default_file)){
-          require($default_file);
-        }else{
-          if (file_exists(dirname(__FILE__).'/../games/'.$game_arr[0].'/defaults.php')){
-            require(dirname(__FILE__).'/../games/'.$game_arr[0].'/defaults.php');
-          }else{
-            return $gi_defaults;
-          }
-        }
-        return array_merge($gi_defaults, $defaults[$plugin]); 
-      }
-      
-      //get default values
       function reset_to_defaults($plugin){
-        $defaults = $this->get_defaults($plugin);
+      global $eqdkp, $user, $pm;
+        $game_arr = explode('_', $eqdkp->config['default_game']);
+
+        if (file_exists(dirname(__FILE__).'/../games/'.$game_arr[0].'/defaults.php')){
+          require(dirname(__FILE__).'/../games/'.$game_arr[0].'/defaults.php');
+        }
+        
+        $defaults = $defaults[$plugin];//array_merge($gi_defaults, $defaults[$plugin]); 
         foreach ($defaults as $key => $value){
           $this->update_config($plugin, array(), $key, $value);
         }
-        return $defaults;
+        $retvals = array();
+        foreach ($defaults as $key => $value){
+          $retvals[substr($key,3)] = $value;
+        }
+        return $retvals;
       }
         
       // Save or add values to the database.
@@ -73,9 +62,11 @@ if ( !class_exists( "BSSQL" ) ) {
       
       function get_config($plugin) {
       global $db;
+        $def_count = 0;
         switch ($plugin) {
           case "bossbase":
               $prefix = 'bb_';
+              $def_count = 1;
               break;
           case "bossprogress":
               $prefix = 'bp_';
@@ -99,7 +90,7 @@ if ( !class_exists( "BSSQL" ) ) {
       	   		$conf[substr($roww['config_name'],3)] = $roww['config_value'];
       	}	
       	
-      	if (!empty($conf))
+      	if (count($conf) > $def_count)
       	   return $conf;
       	else{
       	   $sql = "SELECT * FROM " . BS_CONFIG_TABLE . ";";

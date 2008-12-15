@@ -106,7 +106,11 @@ $tpl->assign_vars(array(
     'D_AUTHOR_CITY'             => 'Germany',
     'D_WEB_URL'                 => 'eqdkp-plus.com',
     'L_URL_WEB'                 => $user->lang['bs_url_web'],
-    'L_IMAGE_CREDITS'           => 'All images contained in this plugin are copyrighted by their respective creators. This is a fan made plugin and not intended for profit.',
+    'L_IMAGE_CREDITS'           => 'Glupschi the new BossSuite mascot <br>
+                                    &copy; by Elgaz
+                                    <br>
+                                    <br>
+                                    All images contained in this plugin are copyrighted by their respective creators. This is a fan made plugin and not intended for profit.',
     'L_ADDITONS'                => $user->lang['bs_additions'],
     'L_WOW_ADDITONS'            => $user->lang['bs_additions'] . ' World of Warcraft™',
     'L_VSOH_ADDITONS'           => $user->lang['bs_additions'] . ' Vanguard - Saga of Heroes™',
