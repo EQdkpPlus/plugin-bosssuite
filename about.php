@@ -102,6 +102,7 @@ foreach ($eq2_additions as $key => $value){
 }
 
 $tpl->assign_vars(array(
+    'I_GLUPSCHI'                => 'credits/glupschi.png',
     'I_ITEM_NAME'               => 'credits/bs4_logo.jpg',
     'D_AUTHOR_CITY'             => 'Germany',
     'D_WEB_URL'                 => 'eqdkp-plus.com',
