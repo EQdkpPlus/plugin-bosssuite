@@ -36,7 +36,7 @@ if (!defined('BS_MIN_DATE')) { define('BS_MIN_DATE', mktime (0,0,0,1,1,2000)); }
 class bosssuite_Plugin_Class extends EQdkp_Plugin {
 
   var $additional_data;
-  var $version = '4.3.3';
+  var $version = '4.3.4';
   
 	function bosssuite_plugin_class($pm) {
 		
@@ -199,6 +199,7 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 
 			$admin_menu = array (
 				'bosssuite' => array (
+				  99 => '../../plugins/bosssuite/images/glupschi_icon.png',
 					0 => $user->lang['bs_am_title'],
 					1 => array (
 						'link' => $url_prefix . 'plugins/bosssuite/admin/settings.php' . $SID,
