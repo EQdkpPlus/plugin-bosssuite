@@ -72,7 +72,7 @@ $tpl->assign_vars(array(
 	'F_CONFIG' => 'bzone.php' . $SID,
   'CONFIGURE_PACK'  => $html_conf_pack,
   'UPDATER' => $bsupdater->OutputHTML(),
-  'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
+  'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '500', '600'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
   'JQUERY_INCLUDES'   => $jquery->Header(),
 	'BS_INFO_IMG' => '../images/credits/info.png',

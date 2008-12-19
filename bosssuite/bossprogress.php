@@ -100,7 +100,7 @@ include_once($eqdkp_root_path . 'plugins/bosssuite/include/libloader.inc.php');
 ####################################################
 $tpl->assign_vars(array (
 	'BOSSKILLVV' => $bpout,
-	'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], 'about.php', '400', '400'),
+	'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], 'about.php', '500', '600'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'BS_INFO_IMG' => 'images/credits/info.png',
 ));

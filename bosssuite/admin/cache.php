@@ -91,7 +91,7 @@ $tpl->assign_vars(array (
 	'F_CONFIG' => 'cache.php' . $SID,
 	'L_CACHE_INFO' => $user->lang['bs_adm_cache_info'],
 	'L_REFRESH' => $user->lang['bs_adm_cache_refresh'],
-  'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '400', '400'),
+  'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '500', '600'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'CACHE_OUTPUT' => $zbcode,
 	'BS_INFO_IMG' => '../images/credits/info.png',

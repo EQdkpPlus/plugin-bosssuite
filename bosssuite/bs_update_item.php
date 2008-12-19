@@ -45,7 +45,7 @@ $tpl->assign_vars(array (
   'L_ITEMNAME' => $user->lang['bs_updateitem_l_name'],
   'ITEM_NAME' => $item,
 	'ITEM_OUT' => $bs_item_out,
-	'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], 'about.php', '400', '400'),
+	'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], 'about.php', '500', '600'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'BS_INFO_IMG' => 'images/credits/info.png',
 ));
