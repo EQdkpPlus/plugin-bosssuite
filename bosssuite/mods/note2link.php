@@ -76,6 +76,10 @@ global $mybsmgs, $bb_conf, $mybssql, $bossInfo, $zoneInfo, $bb_pboss, $bb_pzone,
 	} else {
 		$boss_element = array($rnote);
 	}
+  $count = sizeof($boss_element);
+  
+  if($count == 0)
+    return $rnote;
   
 	foreach ($boss_element as $raid){
     foreach ($sbzone as $zone => $bosses){
@@ -83,8 +87,16 @@ global $mybsmgs, $bb_conf, $mybssql, $bossInfo, $zoneInfo, $bb_pboss, $bb_pzone,
       foreach ($bosses as $boss){
       	$bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
   			if ($mybssql->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
-          $bl='<a href="'.$eqdkp_root_path.'plugins/bosssuite/bossloot.php'.$SID.'&amp;bossid='.$boss.'">'.$raid.'</a>';
-          $rnote = str_replace(trim($raid), $bl, $rnote);
+          $bl = '<a href="'.$eqdkp_root_path.'plugins/bosssuite/bossloot.php'.$SID.'&amp;bossid='.$boss.'">'.$raid.'</a>';
+          if($count == 1){
+            $rnote = str_replace(trim($raid), $bl, $rnote);
+          }else{
+            $matchme = "/(".$bb_conf['noteDelim'].")(".$raid.")/";
+            $rnote = preg_replace($matchme, "\\1$bl", $rnote);
+            
+            $matchme = "/(".$raid.")(".$bb_conf['noteDelim'].")/";
+            $rnote = preg_replace($matchme, "$bl\\2", $rnote);
+          }
           $boss_found = true;
           break;
   			}		
@@ -95,44 +107,4 @@ global $mybsmgs, $bb_conf, $mybssql, $bossInfo, $zoneInfo, $bb_pboss, $bb_pzone,
   }
   return $rnote;	
 }
-
-/*
-function bl_note2link($rnote, $rname=''){
-global $SID, $eqdkp_root_path, $mybsmgs, $mybssql, $bb_pboss, $bb_conf;
-	if ($rnote == '')
-		return $rnote;
-  
-  if (!$mybsmgs->game_supported('bossbase')){
-    return $rnote;
-  }
-  
-  d($rname);
-  
-	$delim = '/'.$bb_conf['noteDelim'].'/';
-	if ($delim != "//"){
- 		$elements = preg_split($delim, $rnote, -1, PREG_SPLIT_NO_EMPTY);
- 	} else {
- 		$elements = array($rnote);
- 	}
- 	
-	foreach ($elements as $boss){	
-		$bossid = "";
-		foreach($bb_pboss as $name => $value){
-			if(isset($value) && !(strpos($value, trim(stripslashes($boss))) === false)){
-				$bossid = substr($name, 3);
-				break;
-			}
-		}
-		
-		if ($bossid != "")
-			$bl='<a href="'.$eqdkp_root_path.'plugins/bosssuite/bossloot.php'.$SID.'&amp;bossid='.$bossid.'">'.$boss.'</a>';
-		else $bl=$boss;				
-
-		$rnote = str_replace(trim($boss), $bl, $rnote);
-	}
-																								
-    return $rnote;
-}
-*/
-
 ?>
