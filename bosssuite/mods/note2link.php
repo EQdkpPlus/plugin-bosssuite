@@ -91,10 +91,10 @@ global $mybsmgs, $bb_conf, $mybssql, $bossInfo, $zoneInfo, $bb_pboss, $bb_pzone,
           if($count == 1){
             $rnote = str_replace(trim($raid), $bl, $rnote);
           }else{
-            $matchme = "/(".$bb_conf['noteDelim'].")(".$raid.")/";
+            $matchme = "/(".$bb_conf['noteDelim'].")(".preg_quote($raid).")/";
             $rnote = preg_replace($matchme, "\\1$bl", $rnote);
             
-            $matchme = "/(".$raid.")(".$bb_conf['noteDelim'].")/";
+            $matchme = "/(".preg_quote($raid).")(".$bb_conf['noteDelim'].")/";
             $rnote = preg_replace($matchme, "$bl\\2", $rnote);
           }
           $boss_found = true;
