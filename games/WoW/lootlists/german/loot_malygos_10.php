@@ -10,5 +10,8 @@ $loot = array(
 	array( "id" => "40489", "qual" => "4", "name" => "Großstab des Nexus" ),
 	array( "id" => "40497", "qual" => "4", "name" => "Schwarzes Eis" ),
 	array( "id" => "40475", "qual" => "4", "name" => "Barrikade der Ewigkeit" ),
+	array( "id" => "43953", "qual" => "4", "name" => "Reins of the Blue Drake" ),
+	array( "id" => "44569", "qual" => "4", "name" => "Schlüssel der fokussierenden Iris" ),
+	array( "id" => "44650", "qual" => "1", "name" => "Herz der Magie" ),
 );
 ?>
