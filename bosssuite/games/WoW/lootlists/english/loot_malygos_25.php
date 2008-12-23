@@ -1,12 +1,27 @@
 <?php
 $loot = array(
+	array( "id" => "40562", "qual" => "4", "name" => "Hood of Rationality" ),
 	array( "id" => "40555", "qual" => "4", "name" => "Mantle of Dissemination" ),
+	array( "id" => "40194", "qual" => "4", "name" => "Blanketing Robes of Snow" ),
+	array( "id" => "40561", "qual" => "4", "name" => "Leash of Heedless Magic" ),
 	array( "id" => "40560", "qual" => "4", "name" => "Leggings of the Wanton Spellcaster" ),
+	array( "id" => "40558", "qual" => "4", "name" => "Arcanic Tramplers" ),
 	array( "id" => "40594", "qual" => "4", "name" => "Spaulders of Catatonia" ),
+	array( "id" => "40539", "qual" => "4", "name" => "Chestguard of the Recluse" ),
 	array( "id" => "40541", "qual" => "4", "name" => "Frosted Adroit Handguards" ),
+	array( "id" => "40566", "qual" => "4", "name" => "Unravelling Strands of Sanity" ),
+	array( "id" => "40543", "qual" => "4", "name" => "Blue Aspect Helm" ),
 	array( "id" => "40588", "qual" => "4", "name" => "Tunic of the Artifact Guardian" ),
 	array( "id" => "40564", "qual" => "4", "name" => "Winter Spectacle Gloves" ),
 	array( "id" => "40549", "qual" => "4", "name" => "Boots of the Renewed Flight" ),
 	array( "id" => "40590", "qual" => "4", "name" => "Elevated Lair Pauldrons" ),
+	array( "id" => "40589", "qual" => "4", "name" => "Legplates of Sovereignty" ),
+	array( "id" => "40592", "qual" => "4", "name" => "Boots of Healing Energies" ),
+	array( "id" => "40591", "qual" => "4", "name" => "Melancholy Sabatons" ),
+	array( "id" => "40532", "qual" => "4", "name" => "Living Ice Crystals" ),
+	array( "id" => "40531", "qual" => "4", "name" => "Mark of Norgannon" ),
+	array( "id" => "43952", "qual" => "4", "name" => "Reins of the Azure Drake" ),
+	array( "id" => "44577", "qual" => "4", "name" => "Heroic Key to the Focusing Iris" ),
+	array( "id" => "44650", "qual" => "1", "name" => "Heart of Magic" ),
 );
 ?>
