@@ -119,4 +119,58 @@ $lang['ivar'] = array('long' => 'Ivar the Bloodhand', 'short' => 'Ivar');
 $lang['vatar'] = array('long' => 'Vatar', 'short' => 'Vatar');
 $lang['naruhel'] = array('long' => 'Naruhel - The Red Maid', 'short' => 'Naruhel');
 
+/******The Vile Maw*****/
+$lang['vile_maw'] = array('long' => 'The Vile Maw', 'short' => 'VM');
+$lang['watcher'] = array('long' => 'The Watcher', 'short' => 'Watcher');
+
+/******The Grand Stair*****/
+$lang['grand_stair'] = array('long' => 'The Grand Stair', 'short' => 'GS');
+$lang['ilzkal'] = array('long' => 'Ilzkâl the Pummeler', 'short' => 'Ilzkâl');
+$lang['glothrok'] = array('long' => 'Glothrok the Vile', 'short' => 'Glothrok');
+$lang['forzunk'] = array('long' => 'Forzunk', 'short' => 'Forzunk');
+$lang['gothghaash'] = array('long' => 'Gothghaash the Firecaller', 'short' => 'Gothghaash');
+$lang['dorozg'] = array('long' => 'Dorozg the Beast Tamer', 'short' => 'Dorozg');
+$lang['the_beast'] = array('long' => 'The Beast', 'short' => 'Die Bestie');
+$lang['nardur'] = array('long' => 'Nardur the Shield', 'short' => 'Nardur');
+$lang['igash'] = array('long' => 'Igash the Fanatic', 'short' => 'Igash');
+
+/******The 16th Hall*****/
+$lang['16th_hall'] = array('long' => 'The Sixteenth Hall', 'short' => '16th Hall');
+$lang['tramug'] = array('long' => 'Tramug', 'short' => 'Tramug');
+$lang['dhurz'] = array('long' => 'Dhûrz', 'short' => 'Dhûrz');
+$lang['the_lost'] = array('long' => 'The lost', 'short' => 'The lost');
+
+/******Fil Gashan*****/
+$lang['fil_gashan'] = array('long' => 'Fil Gashan', 'short' => 'FG');
+$lang['chef_vrarz'] = array('long' => 'Chef Vrarz', 'short' => 'Vrarz');
+$lang['commander_greb'] = array('long' => 'Commander Greb', 'short' => 'Greb');
+$lang['general_talug'] = array('long' => 'General Talug', 'short' => 'Talug');
+
+/******The Forges of Khazad-Dûm*****/
+$lang['forges'] = array('long' => 'The Forges of Khazad-Dûm', 'short' => 'The Forges');
+$lang['narku'] = array('long' => 'Narkû', 'short' => 'Narkû');
+$lang['dhaub'] = array('long' => 'Dhaub', 'short' => 'Dhaub');
+$lang['thrug'] = array('long' => 'Thrug', 'short' => 'Thrug');
+$lang['krankluk'] = array('long' => 'Kranklûk', 'short' => 'Kranklûk');
+
+/******Skûmfil*****/
+$lang['skumfil'] = array('long' => 'Skûmfil', 'short' => 'Skûmfil');
+$lang['uammaethor'] = array('long' => 'Uammaethor', 'short' => 'Uammaethor');
+$lang['brumbereths_guards'] = array('long' => 'Brûmbereths Guards', 'short' => 'Brûmbereths Guards');
+$lang['brumbereth'] = array('long' => 'Brûmbereth', 'short' => 'Brûmbereth');
+$lang['bonetooth'] = array('long' => 'Bonetooth', 'short' => 'Bonetooth');
+$lang['old_gnawer'] = array('long' => 'Old Gnawer', 'short' => 'Old Gnawer');
+$lang['grimreaver'] = array('long' => 'Grimmreaver', 'short' => 'Grimmreaver');
+$lang['hwandrin'] = array('long' => 'Hwandrin', 'short' => 'Hwandrin');
+
+/******Dark Delvings*****/
+$lang['dark_delvings'] = array('long' => 'Dark Delvings', 'short' => 'DD');
+$lang['void_eater'] = array('long' => 'Void-Eater', 'short' => 'Void-Eater');
+$lang['doom_speaker'] = array('long' => 'Doom-Speaker', 'short' => 'Doom-Speaker');
+$lang['gurvand'] = array('long' => 'Gurvand', 'short' => 'Gurvand');
+
+/******The Forgotten Treasury*****/
+$lang['forgotten_treasury'] = array('long' => 'The Forgotten Treasury', 'short' => 'FT');
+$lang['skum_urauth'] = array('long' => 'Skûm and Urauth', 'short' => 'S&U');
+$lang['morthun'] = array('long' => 'Morthûn', 'short' => 'Morthûn');
 ?>

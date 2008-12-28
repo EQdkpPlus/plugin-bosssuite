@@ -27,6 +27,6 @@ $lang = array(
     'item_qual_2' => 'Uncommon',
     'item_qual_3' => 'Rare',
     'item_qual_4' => 'Incomparable',
-    'item_qual_5' => 'Legendary'
+    'item_qual_5' => 'Epic'
     );
 ?>

@@ -39,6 +39,53 @@ $bzone = array (
     'thrang',
     'thaurlach',
 ),
+'vile_maw' => array (
+    'watcher',
+),
+'grand_stair' => array (
+    'ilzkal',
+    'glothrok',
+    'forzunk',
+    'gothghaash',
+    'dorozg',
+    'the_beast',
+    'nardur',
+    'igash',
+),
+'16th_hall' => array (
+    'tramug',
+    'dhurz',
+    'the_lost',
+),
+'fil_gashan' => array (
+    'chef_vrarz',
+    'commander_greb',
+    'general_talug',
+),
+'forges' => array (
+    'narku',
+    'dhaub',
+    'thrug',
+    'krankluk',
+),
+'skumfil' => array (
+    'uammaethor',
+    'brumbereths_guards',
+    'brumbereth',
+    'bonetooth',
+    'old_gnawer',
+    'grimreaver',
+    'hwandrin',
+),
+'dark_delvings' => array (
+    'void_eater',
+    'doom_speaker',
+    'gurvand',
+),
+'forgotten_treasury' => array (
+	'skum_urauth',
+	'morthun',
+),
 'barad_gularan' => array (
 	'forvengwath',
   	'wisdan',
