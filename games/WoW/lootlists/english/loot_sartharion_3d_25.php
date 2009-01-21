@@ -17,7 +17,6 @@ $loot = array(
 	array( "id" => "40630", "qual" => "4", "name" => "Gauntlets of the Lost Vanquisher" ),
 	array( "id" => "44002", "qual" => "4", "name" => "The Sanctum's Flowing Vestments" ),
 	array( "id" => "44003", "qual" => "4", "name" => "Upstanding Spaulders" ),
-	array( "id" => "43998", "qual" => "4", "name" => "Chestguard of Flagrant Prowess" ),
 	array( "id" => "44004", "qual" => "4", "name" => "Bountiful Gauntlets" ),
 	array( "id" => "44000", "qual" => "4", "name" => "Dragonstorm Breastplate" ),
 	array( "id" => "44005", "qual" => "4", "name" => "Pennant Cloak" ),

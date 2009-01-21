@@ -9,7 +9,7 @@ $loot = array(
 	array( "id" => "40236", "qual" => "4", "name" => "Tragende Echos" ),
 	array( "id" => "40238", "qual" => "4", "name" => "Handschuhe des Tanzbären" ),
 	array( "id" => "40205", "qual" => "4", "name" => "Stängelhautgürtel" ),
-	array( "id" => "40235", "qual" => "4", "name" => "Helm of Pilgrimage" ),
+	array( "id" => "40235", "qual" => "4", "name" => "Wallfahrtshelm" ),
 	array( "id" => "40209", "qual" => "4", "name" => "Bindungen des Klapprigen" ),
 	array( "id" => "40201", "qual" => "4", "name" => "Gamaschen der gigantischen Schritte" ),
 	array( "id" => "40237", "qual" => "4", "name" => "Eruptionsgezeichnete Stiefel" ),

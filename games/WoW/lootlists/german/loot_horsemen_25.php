@@ -1,7 +1,7 @@
 <?php
 $loot = array(
 	array( "id" => "40349", "qual" => "4", "name" => "Handschuhe des friedlichen Todes" ),
-	array( "id" => "40344", "qual" => "4", "name" => "Helm of the Grave" ),
+	array( "id" => "40344", "qual" => "4", "name" => "Grabeshelm" ),
 	array( "id" => "40352", "qual" => "4", "name" => "Gamaschen der gierigen Schatten" ),
 	array( "id" => "40347", "qual" => "4", "name" => "Zelieks Stulpen" ),
 	array( "id" => "40350", "qual" => "4", "name" => "Urne der verlorenen Erinnerungen" ),

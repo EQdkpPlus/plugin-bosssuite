@@ -78,14 +78,12 @@ if ( !class_exists( "BLSQL" ) ) {
         if($bb_conf['tables'] != '')
           $tables = explode(", ", $bb_conf['tables']);
         else{
-          if(substr($table_prefix,-1) == "_")        
-            $tables[0] = trim(substr($table_prefix, 0, -1));
-          else $tables[0] = trim($table_prefix);
+          $tables[0] = $table_prefix;
         }
         
       
         foreach ($tables as $prefix){       
-          $sql = "SELECT raid_id AS id, raid_name AS rname, raid_note AS rnote FROM " . $prefix . "_raids;";
+          $sql = "SELECT raid_id AS id, raid_name AS rname, raid_note AS rnote FROM " . $prefix . "raids;";
           
           $result = $db->query($sql);
           $dbdata = $db->fetch_record_set();
@@ -119,7 +117,7 @@ if ( !class_exists( "BLSQL" ) ) {
           			foreach ($boss_element as $raid){                			
           					if ($this->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
                       $this->data['rids'] .= $row['id'] . "\n";
-                      $sql2 = "Select item_name, item_id from ". $prefix ."_items where raid_id = '".$row['id']."' order by item_name";
+                      $sql2 = "Select item_name, item_id from ". $prefix ."items where raid_id = '".$row['id']."' order by item_name";
                       $result2 = $db->query($sql2);
                       while($row2 = $db->fetch_record($result2)){
                         $this->data['items'][$row2['item_name']]['dc']++;

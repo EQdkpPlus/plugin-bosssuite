@@ -55,7 +55,7 @@ if ( !class_exists( "BSSQL" ) ) {
           $sql = "UPDATE `".BS_CONFIG_TABLE."` SET config_value='".strip_tags(htmlspecialchars($insertvalue))."' WHERE config_name='".$fieldname."';";
         	$db->query($sql);
         }else{
-        	$sql = "INSERT INTO `".BS_CONFIG_TABLE."` VALUES('".$prefix.$fieldname."', '".strip_tags(htmlspecialchars($insertvalue))."');";	
+        	$sql = "INSERT INTO `".BS_CONFIG_TABLE."` VALUES('".$fieldname."', '".strip_tags(htmlspecialchars($insertvalue))."');";	
         	$db->query($sql);
        	}
       }
@@ -104,7 +104,7 @@ if ( !class_exists( "BSSQL" ) ) {
       }
       
       function get_parse_zone(){
-        global $eqdkp, $db, $table_prefix;
+        global $eqdkp, $db;
       
         $game_arr = explode('_', $eqdkp->config['default_game']);
         $game = $game_arr[0];
@@ -147,7 +147,7 @@ if ( !class_exists( "BSSQL" ) ) {
       }     
       
       function get_parse_boss(){
-        global $eqdkp, $db, $table_prefix;
+        global $eqdkp, $db;
       
         $game_arr = explode('_', $eqdkp->config['default_game']);
         $game = $game_arr[0];
@@ -185,7 +185,7 @@ if ( !class_exists( "BSSQL" ) ) {
       }
       
       function get_boss_offsets(){
-        global $eqdkp, $db, $table_prefix;
+        global $eqdkp, $db;
       
         $game_arr = explode('_', $eqdkp->config['default_game']);
         $game = $game_arr[0];
@@ -210,7 +210,7 @@ if ( !class_exists( "BSSQL" ) ) {
       }
       
       function get_zone_offsets(){
-        global $eqdkp, $db, $table_prefix;
+        global $eqdkp, $db;
       
         $game_arr = explode('_', $eqdkp->config['default_game']);
         $game = $game_arr[0];
@@ -501,10 +501,10 @@ if ( !class_exists( "BSSQL" ) ) {
         $bpinc = 0;
         foreach ($tables as $raidtable) {
         	if ($bpinc == 0) {
-        		$sql .= "SELECT raid_name AS rname, raid_date AS rdate, raid_note AS rnote FROM " . $raidtable . "_raids";
+        		$sql .= "SELECT raid_name AS rname, raid_date AS rdate, raid_note AS rnote FROM " . $raidtable . "raids";
         		$bpinc++;
         	} else {
-        		$sql .= " UNION ALL SELECT raid_name, raid_date, raid_note FROM " . $raidtable . "_raids";
+        		$sql .= " UNION ALL SELECT raid_name, raid_date, raid_note FROM " . $raidtable . "raids";
         	}
         }
         $sql .= ";";

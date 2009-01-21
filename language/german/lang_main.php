@@ -23,8 +23,7 @@ if ( !defined('EQDKP_INC') ){
 $lang = array(
 //General
 'bosssuite' => 'BossSuite',
-'bosscounter_v' => 'BossCounter',
-'bosscounter_h' => 'BossCounter',
+'bosscounter' => 'BossCounter',
 
 //Permissions
 'bs_pm_conf' => 'Konfiguration',

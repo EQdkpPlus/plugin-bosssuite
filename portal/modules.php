@@ -16,6 +16,5 @@
  * $Id$
  */
 
-$pluginmodules[] = 'bosscounter_v';
-$pluginmodules[] = 'bosscounter_h';
+$pluginmodules[] = 'bosscounter';
 ?>

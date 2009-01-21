@@ -1,6 +1,5 @@
 <?php
 $loot = array(
-
 	array( "id" => "40254", "qual" => "4", "name" => "Umhang der abgewendeten Krise" ),
 	array( "id" => "40252", "qual" => "4", "name" => "Umhang der verfinsterten Sonne" ),
 	array( "id" => "40253", "qual" => "4", "name" => "Schal der alten Maid" ),
@@ -10,7 +9,7 @@ $loot = array(
 	array( "id" => "40329", "qual" => "4", "name" => "Kapuze des Exodus" ),
 	array( "id" => "40341", "qual" => "4", "name" => "Fesselsattelgurt" ),
 	array( "id" => "40333", "qual" => "4", "name" => "Gamaschen der flüchtigen Momente" ),
-	array( "id" => "40340", "qual" => "4", "name" => "Helm of Unleashed Energy" ),
+	array( "id" => "40340", "qual" => "4", "name" => "Helm der entfesselten Energie" ),
 	array( "id" => "40331", "qual" => "4", "name" => "Gamaschen der fehlgeschlagenen Flucht" ),
 	array( "id" => "40328", "qual" => "4", "name" => "Helm des lebensnotwendigen Schutzes" ),
 	array( "id" => "40334", "qual" => "4", "name" => "Niederdrückende Schulterplatten" ),

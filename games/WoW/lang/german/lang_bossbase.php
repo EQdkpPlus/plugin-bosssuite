@@ -218,7 +218,7 @@ $lang['thaddius_10'] = array('long' => 'Thaddius (10)', 'short' => 'Thaddius (10
 $lang['razuvious_10'] = array('long' => 'Instrukteur Razuvious (10)', 'short' => 'Razuvious (10)');
 $lang['gothik_10'] = array('long' => 'Gothik der Seelenjäger (10)', 'short' => 'Gothik (10)');
 $lang['horsemen_10'] = array('long' => 'Die Vier Reiter (10)', 'short' => 'Vier Reiter (10)');
-$lang['sapphiron_10'] = array('long' => 'Sapphiron (10)', 'short' => 'Sapphiron (10)');
+$lang['sapphiron_10'] = array('long' => 'Saphiron (10)', 'short' => 'Saphiron (10)');
 $lang['kelthuzad_10'] = array('long' => 'Kel\'Thuzad (10)', 'short' => 'Kel\'Thuzad (10)');
 
 /******Vault of Archavon (10)*****/
@@ -251,7 +251,7 @@ $lang['thaddius_25'] = array('long' => 'Thaddius (25)', 'short' => 'Thaddius (25
 $lang['razuvious_25'] = array('long' => 'Instrukteur Razuvious (25)', 'short' => 'Razuvious (25)');
 $lang['gothik_25'] = array('long' => 'Gothik der Seelenjäger (25)', 'short' => 'Gothik (25)');
 $lang['horsemen_25'] = array('long' => 'Die Vier Reiter (25)', 'short' => 'Vier Reiter (25)');
-$lang['sapphiron_25'] = array('long' => 'Sapphiron (25)', 'short' => 'Sapphiron (25)');
+$lang['sapphiron_25'] = array('long' => 'Saphiron (25)', 'short' => 'Saphiron (25)');
 $lang['kelthuzad_25'] = array('long' => 'Kel\'Thuzad (25)', 'short' => 'Kel\'Thuzad (25)');
 
 /******Vault of Archavon (25)*****/

@@ -17,14 +17,13 @@ $loot = array(
 	array( "id" => "40630", "qual" => "4", "name" => "Stulpen des verlorenen Bezwingers" ),
 	array( "id" => "44002", "qual" => "4", "name" => "Fließende Gewänder des Sanktums" ),
 	array( "id" => "44003", "qual" => "4", "name" => "Hochstehende Schiftung" ),
-	array( "id" => "43998", "qual" => "4", "name" => "Brustschutz des ungeheuerlichen Könnens" ),
 	array( "id" => "44004", "qual" => "4", "name" => "Reichliche Stulpen" ),
 	array( "id" => "44000", "qual" => "4", "name" => "Drachensturmbrustplatte" ),
 	array( "id" => "44005", "qual" => "4", "name" => "Wimpelumhang" ),
 	array( "id" => "44008", "qual" => "4", "name" => "Unbefleckte Fesseln" ),
 	array( "id" => "44007", "qual" => "4", "name" => "Kopfstück der Versöhnung" ),
 	array( "id" => "44011", "qual" => "4", "name" => "Gamaschen des Geehrten" ),
-	array( "id" => "44006", "qual" => "4", "name" => "Obsidian Greathelm" ),
-	array( "id" => "43954", "qual" => "4", "name" => "Reins of the Twilight Drake" ),
+	array( "id" => "44006", "qual" => "4", "name" => "Obsidiangroßhelm" ),
+	array( "id" => "43954", "qual" => "4", "name" => "Zügel des Zwielichtdrachen" ),
 );
 ?>
