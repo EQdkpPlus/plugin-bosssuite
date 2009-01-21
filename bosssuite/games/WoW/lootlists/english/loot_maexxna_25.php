@@ -1,6 +1,5 @@
 <?php
 $loot = array(
-
 	array( "id" => "40254", "qual" => "4", "name" => "Cloak of Averted Crisis" ),
 	array( "id" => "40252", "qual" => "4", "name" => "Cloak of the Shadowed Sun" ),
 	array( "id" => "40253", "qual" => "4", "name" => "Shawl of the Old Maid" ),

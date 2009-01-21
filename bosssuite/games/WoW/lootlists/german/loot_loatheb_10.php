@@ -1,7 +1,7 @@
 <?php
 $loot = array(
 	array( "id" => "39259", "qual" => "4", "name" => "Pilzbefleckte Tücher" ),
-	array( "id" => "39260", "qual" => "4", "name" => "Helm of the Corrupted Mind" ),
+	array( "id" => "39260", "qual" => "4", "name" => "Helm der korrumpierten Gedanken" ),
 	array( "id" => "39258", "qual" => "4", "name" => "Beinplatten des unausweichlichen Todes" ),
 	array( "id" => "39257", "qual" => "4", "name" => "Loathebs Schatten" ),
 	array( "id" => "39256", "qual" => "4", "name" => "Schwefelstab" ),

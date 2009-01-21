@@ -31,7 +31,7 @@ if (!$mybsmgs->game_supported('bossbase')){
   $bcout = '<table width=100% class="borderless" cellspacing="0" cellpadding="2">
 		        <tr><th colspan="2" align="center">BossCounter</th></tr>'."\n".
 	         '<tr><td>GAME NOT SUPPORTED!</td></tr></table>';
-	$bchout = '<table cellpadding=2 cellspacing=0 border=0 width='.$BKtablewidth.' align=center>'."\n".
+	$bchout = '<table cellpadding=2 cellspacing=0 border=0 width=100% align=center>'."\n".
 	          '<tr><td>GAME NOT SUPPORTED</td></tr></table>';
 }else{
   # Get configuration data from the database
@@ -111,31 +111,36 @@ if (!$mybsmgs->game_supported('bossbase')){
 
   //HORIZONTAL
   $bi = 1;
-  $BKtablewidth = '"600px"';
+  $BKtablewidth = '"100%"';
   $bchout .= '<table cellpadding=2 cellspacing=0 border=0 width='.$BKtablewidth.' align=center>'."\n";
 
-  foreach ($sbzone as $zone => $bosses)
-  {
+  foreach ($sbzone as $zone => $bosses){
+        $loc_killed = 0;
+      	 foreach ($data[$zone]['bosses'] as $boss){
+      		if ($boss['kc'] > 0)
+      			$loc_killed++;
+      	}
+      	if ((!$bc_conf['dynZone']) or ($loc_killed > 0)){
   		  $bchout .= '<tr class="row'.($bi+1).'" align="left">'."\n";
   			$bchout .= '<td colspan="8" style="text-decoration:underline"><span style="font-size:1em">'.$user->lang[$zone][$bc_conf['zonelength']].'</span></td></tr>'."\n";
   		  $bchout .= '<tr class="row'.($bi+1).'">'."\n";
   		  $i=0;
 
-  		  foreach ($bosses as $boss)
-  		  {
-  				$i++;
-  				$bchout .= '<td align="left" width="10%" class="bossname"><span style="font-size:1em">' . $mybslink->get_boss_link($boss) . '</span></td>'."\n";
-  				$bchout .= '<td align="left" width="5%" class="bosscount"><span style="font-size:1em">' . $data[$zone]['bosses'][$boss]['kc'] . '</span></td>'."\n";
-  				if (($i % 4) == 0)
-  				{
-  					$bchout .= '</tr><tr class="row'.($bi+1).'">'."\n";
+  		  foreach ($bosses as $boss){
+  				if ((!$bc_conf['dynBoss']) or ($data[$zone]['bosses'][$boss]['kc'] > 0)){
+            $i++;
+    				$bchout .= '<td align="left"><span style="font-size:1em">' . $mybslink->get_boss_link($boss) . '</span></td>'."\n";
+    				$bchout .= '<td align="left"><span style="font-size:1em">' . $data[$zone]['bosses'][$boss]['kc'] . '</span></td>'."\n";
+    				if (($i % 4) == 0){
+    					$bchout .= '</tr><tr class="row'.($bi+1).'">'."\n";
+    				}
   				}
   			}
 
   		  $rest = 4-($i % 4);
   		  $bchout .= str_repeat("<td></td>", ($rest)*2);
   		  $bchout .= '</tr>'."\n";
-
+        }
   		  $bi = 1-$bi;
   	}
   	$bchout .= '</table>';

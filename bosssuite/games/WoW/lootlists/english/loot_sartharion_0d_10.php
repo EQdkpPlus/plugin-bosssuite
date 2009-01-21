@@ -11,15 +11,5 @@ $loot = array(
 	array( "id" => "40613", "qual" => "4", "name" => "Gloves of the Lost Conqueror" ),
 	array( "id" => "40614", "qual" => "4", "name" => "Gloves of the Lost Protector" ),
 	array( "id" => "40615", "qual" => "4", "name" => "Gloves of the Lost Vanquisher" ),
-	array( "id" => "43988", "qual" => "4", "name" => "Gale-Proof Cloak" ),
-	array( "id" => "43990", "qual" => "4", "name" => "Blade-Scarred Tunic" ),
-	array( "id" => "43991", "qual" => "4", "name" => "Legguards of Composure" ),
-	array( "id" => "43989", "qual" => "4", "name" => "Remembrance Gridle" ),
-	array( "id" => "43992", "qual" => "4", "name" => "Volitant Amulet" ),
-	array( "id" => "43995", "qual" => "4", "name" => "Enamored Cowl" ),
-	array( "id" => "43996", "qual" => "4", "name" => "Sabatons of Firmament" ),
-	array( "id" => "43994", "qual" => "4", "name" => "Belabored Legplates" ),
-	array( "id" => "43993", "qual" => "4", "name" => "Greatring of Collision" ),
-	array( "id" => "43986", "qual" => "4", "name" => "Reins of the Black Drake" ),
 );
 ?>

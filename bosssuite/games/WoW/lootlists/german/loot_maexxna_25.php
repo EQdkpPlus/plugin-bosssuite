@@ -1,6 +1,5 @@
 <?php
 $loot = array(
-
 	array( "id" => "40254", "qual" => "4", "name" => "Umhang der abgewendeten Krise" ),
 	array( "id" => "40252", "qual" => "4", "name" => "Umhang der verfinsterten Sonne" ),
 	array( "id" => "40253", "qual" => "4", "name" => "Schal der alten Maid" ),
@@ -13,7 +12,7 @@ $loot = array(
 	array( "id" => "39761", "qual" => "4", "name" => "Infektiöse Huschergamaschen" ),
 	array( "id" => "40061", "qual" => "4", "name" => "Zitternde Tunika" ),
 	array( "id" => "39762", "qual" => "4", "name" => "Fußlappen des zerrissenen Netzes" ),
-	array( "id" => "39760", "qual" => "4", "name" => "Helm of Diminished Pride" ),
+	array( "id" => "39760", "qual" => "4", "name" => "Helm des lädierten Stolzes" ),
 	array( "id" => "39767", "qual" => "4", "name" => "Unverminderte Kampfplatte" ),
 	array( "id" => "39764", "qual" => "4", "name" => "Bindungen der bedauernswerten Beute" ),
 	array( "id" => "39759", "qual" => "4", "name" => "Stählender Chitingurt" ),

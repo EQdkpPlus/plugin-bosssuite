@@ -15,16 +15,5 @@ $loot = array(
 	array( "id" => "40628", "qual" => "4", "name" => "Gauntlets of the Lost Conqueror" ),
 	array( "id" => "40629", "qual" => "4", "name" => "Gauntlets of the Lost Protector" ),
 	array( "id" => "40630", "qual" => "4", "name" => "Gauntlets of the Lost Vanquisher" ),
-	array( "id" => "44002", "qual" => "4", "name" => "The Sanctum's Flowing Vestments" ),
-	array( "id" => "44003", "qual" => "4", "name" => "Upstanding Spaulders" ),
-	array( "id" => "43998", "qual" => "4", "name" => "Chestguard of Flagrant Prowess" ),
-	array( "id" => "44004", "qual" => "4", "name" => "Bountiful Gauntlets" ),
-	array( "id" => "44000", "qual" => "4", "name" => "Dragonstorm Breastplate" ),
-	array( "id" => "44005", "qual" => "4", "name" => "Pennant Cloak" ),
-	array( "id" => "44008", "qual" => "4", "name" => "Unsullied Cuffs" ),
-	array( "id" => "44007", "qual" => "4", "name" => "Headpiece of Reconciliation" ),
-	array( "id" => "44011", "qual" => "4", "name" => "Leggings of the Honored" ),
-	array( "id" => "44006", "qual" => "4", "name" => "Obsidian Greathelm" ),
-	array( "id" => "43954", "qual" => "4", "name" => "Reins of the Twilight Drake" ),
 );
 ?>

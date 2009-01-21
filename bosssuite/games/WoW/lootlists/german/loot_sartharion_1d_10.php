@@ -16,10 +16,5 @@ $loot = array(
 	array( "id" => "43991", "qual" => "4", "name" => "Beinschützer der Ruhe" ),
 	array( "id" => "43989", "qual" => "4", "name" => "Erinnerungsgurt" ),
 	array( "id" => "43992", "qual" => "4", "name" => "Flugamulett" ),
-	array( "id" => "43995", "qual" => "4", "name" => "Verliebte Gugel" ),
-	array( "id" => "43996", "qual" => "4", "name" => "Sabatons des Firmaments" ),
-	array( "id" => "43994", "qual" => "4", "name" => "Bearbeitete Beinplatten" ),
-	array( "id" => "43993", "qual" => "4", "name" => "Großring der Kollision" ),
-	array( "id" => "43986", "qual" => "4", "name" => "Reins of the Black Drake" ),
 );
 ?>

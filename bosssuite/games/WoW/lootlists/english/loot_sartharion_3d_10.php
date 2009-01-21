@@ -17,6 +17,7 @@ $loot = array(
 	array( "id" => "43989", "qual" => "4", "name" => "Remembrance Gridle" ),
 	array( "id" => "43992", "qual" => "4", "name" => "Volitant Amulet" ),
 	array( "id" => "43995", "qual" => "4", "name" => "Enamored Cowl" ),
+	array( "id" => "43998", "qual" => "4", "name" => "Chestguard of Flagrant Prowess" ),
 	array( "id" => "43996", "qual" => "4", "name" => "Sabatons of Firmament" ),
 	array( "id" => "43994", "qual" => "4", "name" => "Belabored Legplates" ),
 	array( "id" => "43993", "qual" => "4", "name" => "Greatring of Collision" ),
