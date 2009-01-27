@@ -21,16 +21,15 @@ if ( !defined('EQDKP_INC') ){
 }
  
 $new_version    = '4.3.8';
-$updateFunction = 'BS437to438Update';
+$updateFunction = false;
 $reloadSETT = 'settings.php';
 
-$updateDESC = false;
-$updateSQL = false;
+$updateDESC = array(
+  '',
+  'Add update check'
+);
 
-function BS437to438Update(){
-global $db, $user;
-  $sql = "INSERT INTO __bs_config VALUES ('bb_enable_updatechk', '1')";
-  $result = $db->query($sql);
-  $db->query($sql);
-}
+$updateSQL = array(
+  "INSERT INTO __bs_config VALUES ('bb_enable_updatechk', '1')"
+);
 ?>
