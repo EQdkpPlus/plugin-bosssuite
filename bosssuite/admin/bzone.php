@@ -43,12 +43,13 @@ $mybsmgs->load_game_specific_language('bossbase');
 require(dirname(__FILE__).'/../include/bssql.class.php');
 $mybssql = new BSSQL();
 
+//get zone/boss data, not a nice fix, but will prevent empty default strings
+$mybssql->get_parse_zone();
+$mybssql->get_parse_boss();
+
 //Framework include
 include_once($eqdkp_root_path . 'plugins/bosssuite/include/libloader.inc.php');
 $wpfccore->InitAdmin();
-
-//Updater
-$bsupdater = new PluginUpdater('bosssuite','bb_','bs_config','include');
 
 $bzone = $mybssql->get_bzone();
 foreach ($bzone as $zoneid => $bosslist){
@@ -71,7 +72,6 @@ foreach ($bzone as $zoneid => $bosslist){
 $tpl->assign_vars(array(
 	'F_CONFIG' => 'bzone.php' . $SID,
   'CONFIGURE_PACK'  => $html_conf_pack,
-  'UPDATER' => $bsupdater->OutputHTML(),
   'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '500', '600'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
   'JQUERY_INCLUDES'   => $jquery->Header(),

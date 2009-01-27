@@ -66,7 +66,7 @@ if ( !class_exists( "BSSQL" ) ) {
         switch ($plugin) {
           case "bossbase":
               $prefix = 'bb_';
-              $def_count = 1;
+              $def_count = 2;
               break;
           case "bossprogress":
               $prefix = 'bp_';
