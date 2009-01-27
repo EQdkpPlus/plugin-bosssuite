@@ -29,7 +29,7 @@ $updateSQL = false;
 
 function BS437to438Update(){
 global $db, $user;
-  $sql = "INSERT INTO __bs_config VALUES ('bb_enable_updatechk', '1');
+  $sql = "INSERT INTO __bs_config VALUES ('bb_enable_updatechk', '1')";
   $result = $db->query($sql);
   $db->query($sql);
 }

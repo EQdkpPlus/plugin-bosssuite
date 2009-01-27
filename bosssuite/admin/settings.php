@@ -112,7 +112,7 @@ $bc_conf = $mybssql->get_config('bosscounter');
 
 //Update check
 // Check if the Update Check should ne enabled or disabled...
-$updchk_enbled = true;//( $row['rb_updatecheck'] == 1 ) ? true : false;
+$updchk_enbled = ( $bs_conf['enable_updatechk'] == 1 ) ? true : false;
 // The Data for the Cache Table
 $cachedb = array(
   'table' => 'bs_config',
