@@ -36,7 +36,7 @@ if (!defined('BS_MIN_DATE')) { define('BS_MIN_DATE', mktime (0,0,0,1,1,2000)); }
 class bosssuite_Plugin_Class extends EQdkp_Plugin {
 
   var $additional_data;
-  var $version = '4.3.7';
+  var $version = '4.3.8';
   
 	function bosssuite_plugin_class($pm) {
 		
@@ -136,6 +136,9 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
           
           //Write version info
           $this->add_sql(SQL_INSTALL, "INSERT INTO " .BS_CONFIG_TABLE." VALUES ('bb_inst_version', '".$this->version."');");
+          
+          //update check
+          $this->add_sql(SQL_INSTALL, "INSERT INTO " .BS_CONFIG_TABLE." VALUES ('bb_enable_updatechk', '1');");
     		  
 		}else{
     		//Menus

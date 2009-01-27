@@ -22,6 +22,7 @@ if ( !defined('EQDKP_INC') ){
  
 $new_version    = '4.2.0';
 $updateFunction = 'BS410to420Update';
+$reloadSETT = 'settings.php';
 
 $updateDESC = false;
 $updateSQL = false;

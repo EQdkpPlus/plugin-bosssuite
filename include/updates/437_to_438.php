@@ -20,27 +20,17 @@ if ( !defined('EQDKP_INC') ){
     header('HTTP/1.0 404 Not Found');exit;
 }
  
-$new_version    = '4.3.7';
-$updateFunction = 'BS420to437Update';
+$new_version    = '4.3.8';
+$updateFunction = 'BS437to438Update';
 $reloadSETT = 'settings.php';
 
 $updateDESC = false;
 $updateSQL = false;
 
-function BS420to437Update(){
+function BS437to438Update(){
 global $db, $user;
-  $sql = "SELECT config_value FROM __bs_config WHERE config_name = 'bb_tables'";
+  $sql = "INSERT INTO __bs_config VALUES ('bb_enable_updatechk', '1');
   $result = $db->query($sql);
-  $prefices = $db->fetch_record($result);
-  if($prefices['config_value'] !== ""){
-    $prefarr = explode(", ", $prefices['config_value']);
-    $outarr = array();
-    foreach($prefarr as $prefix){
-      $outarr[] = $prefix."_";
-    }
-    $prefstring = implode(", ", $outarr);
-    $sql = "UPDATE __bs_config SET config_value='$prefstring' WHERE config_name = 'bb_tables'";
-    $db->query($sql);
-  } 
+  $db->query($sql);
 }
 ?>

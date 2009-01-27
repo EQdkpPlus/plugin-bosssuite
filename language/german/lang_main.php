@@ -169,6 +169,7 @@ $lang = array(
 'bs_ec_show_bc' => 'Zeige(BossCounter)',
 'bs_ec_strings' => 'Zeichenketten',
 
+'bs_enable_updchk' => 'Überprüfe ob neue Plugin Versionen existieren'
 );
 
 ?>

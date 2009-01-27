@@ -63,7 +63,8 @@ if ($_POST['bpsavebu']){
   //General Config
   $eqdkp->config_set('bs_showBC', $_POST['ebc']);
   $eqdkp->config_set('bs_linkBL', $_POST['en2l']);
-
+  $mybssql->update_config('bossbase', $bs_conf, 'bb_enable_updatechk', $_POST['enupdcheck']);
+  
   //BossBase Config
 	$mybssql->update_config('bossbase', $bs_conf, 'bb_zoneInfo', $_POST['zoneInfo']);
 	$mybssql->update_config('bossbase', $bs_conf, 'bb_bossInfo', $_POST['bossInfo']);
@@ -109,6 +110,30 @@ $bl_conf = $mybssql->get_config('bossloot');
 $bp_conf = $mybssql->get_config('bossprogress');
 $bc_conf = $mybssql->get_config('bosscounter');
 
+//Update check
+// Check if the Update Check should ne enabled or disabled...
+$updchk_enbled = true;//( $row['rb_updatecheck'] == 1 ) ? true : false;
+// The Data for the Cache Table
+$cachedb = array(
+  'table' => 'bs_config',
+  'data' => $bs_conf['vc_data'],
+  'f_data' => 'bb_vc_data',
+  'lastcheck' => $bs_conf['vc_lastcheck'],
+  'f_lastcheck' => 'bb_vc_lastcheck'
+);
+
+// The Version Information
+$versionthing   = array(
+  'name' => 'bosssuite', 
+  'version' => $pm->get_data('bosssuite', 'version'),
+//  'build' => $pm->plugins['bosssuite']->build, 
+//  'vstatus' => $pm->plugins['bosssuite']->vstatus,
+  'enabled' => $updchk_enbled
+);
+// Start Output ?DO NOT CHANGE....
+$bsvcheck = new PluginUpdCheck($versionthing, $cachedb);
+$bsvcheck->PerformUpdateCheck();
+
 $arrvals = array (
   'CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
 	'F_CONFIG' => 'settings.php' . $SID,
@@ -122,11 +147,13 @@ $arrvals = array (
   //General
   'BS_EBC'    => ( $eqdkp->config['bs_showBC'] == 1 ) ? ' checked="checked"' : '',
 	'BS_EN2L'   => ( $eqdkp->config['bs_linkBL'] == 1 ) ? ' checked="checked"' : '',
+  'BS_ENUPDCHECK' =>  ( $bs_conf['enable_updatechk'] == 1 ) ? ' checked="checked"' : '',
    
    // Language
 	'L_EBC' => $user->lang['bs_enable_bosscounter'],
 	'L_EN2L' => $user->lang['bs_enable_note2link'],
-   
+  'L_ENUPDCHECK' => $user->lang['bs_enable_updchk'],
+  
   //BossBase
 	'BP_NOTEDELIM' => $bs_conf['noteDelim'],
 	'BP_NAMEDELIM' => $bs_conf['nameDelim'],
@@ -327,6 +354,7 @@ foreach ($bs_linklength as $value => $option) {
 
 $tpl->assign_vars(array(
   'UPDATER' => $bsupdater->OutputHTML(),
+  'UPDCHECK_BOX'		  => $bsvcheck->OutputHTML(),
   'JQUERY_INCLUDES'   => $jquery->Header(),
   'TABOUT' => $jquery->Tab_header('bs_adm_tabs'),
   'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '500', '600'),
