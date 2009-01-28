@@ -22,5 +22,6 @@ $loot = array(
 	array( "id" => "39716", "qual" => "4", "name" => "Schild der Assimilierung" ),
 	array( "id" => "40208", "qual" => "4", "name" => "Biss der Gruftbestie" ),
 	array( "id" => "39712", "qual" => "4", "name" => "Edelsteinbesetzter Zauberstab der Neruber" ),
+  array( "id" => "39714", "qual" => "4", "name" => "Eingesponnener Tod" ),
 );
 ?>

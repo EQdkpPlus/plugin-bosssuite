@@ -22,5 +22,6 @@ $loot = array(
 	array( "id" => "39716", "qual" => "4", "name" => "Shield of Assimilation" ),
 	array( "id" => "40208", "qual" => "4", "name" => "Cryptfiend's Bite" ),
 	array( "id" => "39712", "qual" => "4", "name" => "Gemmed Wand of the Nerubians" ),
+	array( "id" => "39714", "qual" => "4", "name" => "Webbed Death" ),
 );
 ?>
