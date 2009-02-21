@@ -87,7 +87,7 @@ global $mybsmgs, $bb_conf, $mybssql, $bossInfo, $zoneInfo, $bb_pboss, $bb_pzone,
       foreach ($bosses as $boss){
       	$bparseList = preg_split("/\',[ ]*\'/", stripslashes(trim($bb_pboss['pb_'.$boss], "\' ")));
   			if ($mybssql->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
-          $bl = '<a href="'.$eqdkp_root_path.'plugins/bosssuite/bossloot.php'.$SID.'&amp;bossid='.$boss.'">'.$raid.'</a>';
+          $bl = '<a href="'.$eqdkp_root_path.'plugins/bosssuite/bossloot.php?bossid='.$boss.'">'.$raid.'</a>';
           if($count == 1){
             $rnote = str_replace(trim($raid), $bl, $rnote);
           }else{
