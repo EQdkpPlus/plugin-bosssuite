@@ -23,6 +23,7 @@ if (!defined('EQDKP_INC')) {
 // new mgs class
 require_once(dirname(__FILE__).'/../include/bsmgs.class.php');
 $mybsmgs = new BSMGS();
+$mybsmgs->load_game_specific_language('bossbase');
 
 // sql class
 require_once(dirname(__FILE__).'/../include/bssql.class.php');
