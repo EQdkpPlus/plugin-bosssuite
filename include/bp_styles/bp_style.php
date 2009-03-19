@@ -75,7 +75,12 @@ global $bs_image_suffix, $bs_image_map;
   if ( 'png' == $bp_conf['ztext_style'] ){
     $limg = 'games/'.$game_arr[0].'/images/zones/lang/'.$user->lang['lang'].'/'.$location.'.png';
     if (!file_exists(dirname(__file__).'/../../'.$limg)){
-      $header4 = '<div style="position:absolute; font-size:3em; top:5px; z-index: 10; width:800px; height:100%;">FB'.$user->lang[$location]['long'];
+      $limg = 'games/'.$game_arr[0].'/images/zones/lang/multilang/'.$location.'.png';
+      if (!file_exists(dirname(__file__).'/../../'.$limg)){
+        $header4 = '<div style="position:absolute; font-size:3em; top:5px; z-index: 10; width:800px; height:100%;">FB'.$user->lang[$location]['long'];
+      }else{
+        $header4 = '<div style="background-image:url('.$limg.'); position:absolute; top:5px; z-index: 10; width:800px; height:100%; background-repeat: no-repeat;">';
+      }
     }else{
       $header4 = '<div style="background-image:url('.$limg.'); position:absolute; top:5px; z-index: 10; width:800px; height:100%; background-repeat: no-repeat;">';
     }

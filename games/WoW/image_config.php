@@ -20,6 +20,22 @@ $suffix['zone'] = '.jpg';
 $suffix['boss']['big'] = '.gif';
 $suffix['boss']['small'] = '.gif';
 
+$image_map['ulduar_10'] = 'ulduar';
+$image_map['hodir_10'] = 'hodir';
+$image_map['thorim_10'] = 'thorim';
+$image_map['iron_council_10'] = 'iron_council';
+$image_map['freya_10'] = 'freya';
+$image_map['ignis_10'] = 'ignis';
+$image_map['leviathan_10'] = 'leviathan';
+$image_map['vezax_10'] = 'vezax';
+$image_map['razorscale_10'] = 'razorscale';
+$image_map['deconstructor_10'] = 'deconstructor';
+$image_map['kologarn_10'] = 'kologarn';
+$image_map['auriaya_10'] = 'auriaya';
+$image_map['mimiron_10'] = 'mimiron';
+$image_map['yoggsaron_10'] = 'yoggsaron';
+$image_map['algalon_10'] = 'algalon';
+    
 $image_map['naxx_10'] = 'naxx_wotlk';
 $image_map['anubrekhan_10'] = 'anubrekhan';
 $image_map['faerlina_10'] = 'faerlina';
@@ -48,6 +64,22 @@ $image_map['sartharion_0d_10'] = 'sartharion';
 $image_map['sartharion_1d_10'] = 'sartharion';
 $image_map['sartharion_2d_10'] = 'sartharion';
 $image_map['sartharion_3d_10'] = 'sartharion';
+
+$image_map['ulduar_25'] = 'ulduar';
+$image_map['hodir_25'] = 'hodir';
+$image_map['thorim_25'] = 'thorim';
+$image_map['iron_council_25'] = 'iron_council';
+$image_map['freya_25'] = 'freya';
+$image_map['ignis_25'] = 'ignis';
+$image_map['leviathan_25'] = 'leviathan';
+$image_map['vezax_25'] = 'vezax';
+$image_map['razorscale_25'] = 'razorscale';
+$image_map['deconstructor_25'] = 'deconstructor';
+$image_map['kologarn_25'] = 'kologarn';
+$image_map['auriaya_25'] = 'auriaya';
+$image_map['mimiron_25'] = 'mimiron';
+$image_map['yoggsaron_25'] = 'yoggsaron';
+$image_map['algalon_25'] = 'algalon';
 
 $image_map['naxx_25'] = 'naxx_wotlk';
 $image_map['anubrekhan_25'] = 'anubrekhan';

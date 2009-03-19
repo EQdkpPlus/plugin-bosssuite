@@ -222,6 +222,22 @@ $idlist['default'] = array(
   'sartharion_2d_10' => '28860',
   'sartharion_3d_10' => '28860',
   
+  /******Ulduar (10)*****/
+  'hodir_10' => '99999',
+  'thorim_10' => '99999',
+  'iron_council_10' => '99999',
+  'freya_10' => '99999',
+  'ignis_10' => '99999',
+  'leviathan_10' => '99999',
+  'vezax_10' => '99999',
+  'razorscale_10' => '99999',
+  'deconstructor_10' => '99999',
+  'kologarn_10' => '99999',
+  'auriaya_10' => '99999',
+  'mimiron_10' => '99999',
+  'yoggsaron_10' => '99999',
+  'algalon_10' => '99999',
+    
   /******Naxxramas (25)*****/
   'anubrekhan_25' => '15956',
   'faerlina_25' => '15953',
@@ -250,6 +266,22 @@ $idlist['default'] = array(
   'sartharion_1d_25' => '28860',
   'sartharion_2d_25' => '28860',
   'sartharion_3d_25' => '28860',
+  
+  /******Ulduar (25)*****/
+  'hodir_25' => '99999',
+  'thorim_25' => '99999',
+  'iron_council_25' => '99999',
+  'freya_25' => '99999',
+  'ignis_25' => '99999',
+  'leviathan_25' => '99999',
+  'vezax_25' => '99999',
+  'razorscale_25' => '99999',
+  'deconstructor_25' => '99999',
+  'kologarn_25' => '99999',
+  'auriaya_25' => '99999',
+  'mimiron_25' => '99999',
+  'yoggsaron_25' => '99999',
+  'algalon_25' => '99999',
 
 );
 
