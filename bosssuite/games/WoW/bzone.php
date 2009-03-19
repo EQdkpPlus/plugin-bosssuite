@@ -21,6 +21,22 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $bzone = array (
+  'ulduar_10' => array (
+    'hodir_10',
+    'thorim_10',
+    'iron_council_10',
+    'freya_10',
+    'ignis_10',
+    'leviathan_10',
+    'vezax_10',
+    'razorscale_10',
+    'deconstructor_10',
+    'kologarn_10',
+    'auriaya_10',
+    'mimiron_10',
+    'yoggsaron_10',
+    'algalon_10',
+  ),
   'naxx_10' => array (
 		'anubrekhan_10',
 		'faerlina_10',
@@ -49,6 +65,22 @@ $bzone = array (
     'sartharion_1d_10',
     'sartharion_2d_10',
     'sartharion_3d_10'
+  ),
+  'ulduar_25' => array (
+    'hodir_25',
+    'thorim_25',
+    'iron_council_25',
+    'freya_25',
+    'ignis_25',
+    'leviathan_25',
+    'vezax_25',
+    'razorscale_25',
+    'deconstructor_25',
+    'kologarn_25',
+    'auriaya_25',
+    'mimiron_25',
+    'yoggsaron_25',
+    'algalon_25',
   ),
   'naxx_25' => array (
 		'anubrekhan_25',
