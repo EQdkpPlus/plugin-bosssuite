@@ -81,6 +81,7 @@ if ($_POST['bpsavebu']){
 	$mybssql->update_config('bossloot', $bl_conf, 'bl_show_wl', $_POST['wl']);
 	$mybssql->update_config('bossloot', $bl_conf, 'bl_eyecandy', $_POST['bl_eyecandy']);
 	$mybssql->update_config('bossloot', $bl_conf, 'bl_get_itemstats', $_POST['is']);
+	$mybssql->update_config('bossloot', $bl_conf, 'bl_en_mv', $_POST['bl_en_mv']);
 	
 	//BossProgress Config
 	$mybssql->update_config('bossprogress', $bp_conf, 'bp_style', $_POST['bp_style']);
@@ -242,6 +243,18 @@ $tpl->assign_vars($arrvals);
 
 require(dirname(__FILE__).'/../include/blmgs.class.php');
 $myblmgs = new BLMGS();
+
+if($myblmgs->modelviewer_supported()){
+  $mv_checked = ($bl_conf['en_mv'] == 1) ? ' checked="checked"' : '';
+  $user->lang['bs_bl_mv'] = "Enable ModelViewer";
+  $tpl->assign_vars(array(
+    'BL_MODELVIEWER' => '<tr>
+                         <td class="row2">'.$user->lang['bl_opt_en_mv'].'</td>
+                         <td class="row1"><input type="checkbox" name="bl_en_mv" value="1"'
+                         .$mv_checked .' /></td>
+                         </tr>'
+  ));
+}
 
 //minimum item quality setting
 $bl_qual = $myblmgs-> bl_get_item_qualities();

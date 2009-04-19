@@ -224,6 +224,7 @@ $lang['kelthuzad_10'] = array('long' => 'Kel\'Thuzad (10)', 'short' => 'Kel\'Thu
 /******Vault of Archavon (10)*****/
 $lang['vault_of_archavon_10'] = array('long' => 'Vault of Archavon (10)', 'short' => 'VoA (10)');
 $lang['archavon_10'] = array('long' => 'Archavon the Stone Watcher (10)', 'short' => 'Archavon (10)');
+$lang['emalon_10'] = array('long' => 'Emalon the Storm Watcher (10)', 'short' => 'Emalon (10)');
 
 /******Eye of Eternity (10)*****/  
 $lang['eye_of_eternity_10'] = array('long' => 'Eye of Eternity (10)', 'short' => 'EoE (10)');
@@ -274,6 +275,7 @@ $lang['kelthuzad_25'] = array('long' => 'Kel\'Thuzad (25)', 'short' => 'Kel\'Thu
 /******Vault of Archavon (25)*****/
 $lang['vault_of_archavon_25'] = array('long' => 'Vault of Archavon (25)', 'short' => 'VoA (25)');
 $lang['archavon_25'] = array('long' => 'Archavon the Stone Watcher (25)', 'short' => 'Archavon (25)');
+$lang['emalon_25'] = array('long' => 'Emalon the Storm Watcher (25)', 'short' => 'Emalon (25)');
 
 /******Eye of Eternity (25)*****/  
 $lang['eye_of_eternity_25'] = array('long' => 'Eye of Eternity (25)', 'short' => 'EoE (25)');

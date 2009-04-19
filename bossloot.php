@@ -105,8 +105,11 @@ global $bs_image_suffix, $bs_image_map, $mybsmgs;
 
 import_image_config();
 
-$bl_out .= '<tr class="row1"><td colspan="3" align="center">'.$myblmgs->bl_get_bossimage($bossid).'</td></tr>'."\n";
-
+if($myblmgs->modelviewer_supported() && $bl_conf['en_mv'] == 1){
+  $bl_out .= '<tr class="row1"><td colspan="3" align="center">'.$myblmgs->bl_get_bossmodel($bossid).'</td></tr>'."\n";
+}else{
+  $bl_out .= '<tr class="row1"><td colspan="3" align="center">'.$myblmgs->bl_get_bossimage($bossid).'</td></tr>'."\n";
+}
 //get loot table
 $loottable = $myblmgs->bl_get_loottable($bl_conf['item_lang'], $bossid, $bl_conf['item_minqual']);
 

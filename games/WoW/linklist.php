@@ -27,6 +27,22 @@ $sources = array(
   'wowhead' => array('name' => 'Wowhead', 'idlist' => 'default', 'baseurl' => 'http://www.wowhead.com/?npc='),
 );
 
+$modelviewer = array(
+  'wowheadmv' => array('name' => 'Wowhead MV',
+                       'idlist' => 'wowheadmv',
+                       'object' => '<object id="head" width="600" height="400" 
+            				                  type="application/x-shockwave-flash" 
+                              				data="http://static.wowhead.com/modelviewer/ModelView.swf"
+                              				style="visibility: visible;">
+                              			<param name="quality" value="high"/>
+                              			<param name="allowscriptaccess" value="always"/>
+                              			<param name="menu" value="false"/>
+                          
+                              			<param name="bgcolor" value="#181818"/>
+                              			<param name="flashvars" value="model=%s&contentPath=http://static.wowhead.com/modelviewer/&blur=0"/>				
+                              			</object>'
+                  ),
+);
 
 $idlist['default'] = array(
   /******Miscellaneous bosses*****/
@@ -212,6 +228,7 @@ $idlist['default'] = array(
   
   /******Vault of Archavon (10)*****/
   'archavon_10' => '31125',
+  'emalon_10' => '99999',
   
   /******Eye of Eternity (10)*****/
   'malygos_10' => '28859',
@@ -257,6 +274,7 @@ $idlist['default'] = array(
   
   /******Vault of Archavon (25)*****/
   'archavon_25' => '31125',
+  'emalon_25' => '99999',
   
   /******Eye of Eternity (25)*****/
   'malygos_25' => '28859',
@@ -285,4 +303,224 @@ $idlist['default'] = array(
 
 );
 
+$idlist['wowheadmv'] = array(
+  /******Miscellaneous bosses*****/
+  'azuregos' => '11460&modelType=8', 
+  'kazzak' => '12449&modelType=8',
+  
+  /******Blackwing Lair*****/
+  'razorgore' => '10115&modelType=8',
+  'vaelastrasz' => '13992&modelType=8',
+  'lashlayer' => '14308&modelType=8',
+  'firemaw' => '6377&modelType=8',
+  'ebonroc' => '6377&modelType=8',
+  'flamegor' => '6377&modelType=8',
+  'chromaggus' => '14367&modelType=8',
+  'nefarian' => '11380&modelType=8',
+  
+  /******Onyxia*****/
+  'onyxia' => '8570&modelType=8',
+  
+  /******The Emerald Dream*****/
+  'ysondre' => '15364&modelType=8',
+  'taerar' => '15363&modelType=8',
+  'emeriss' => '15366&modelType=8',
+  'lethon' => '15365&modelType=8',
+  
+  /******Molten Core*****/
+  'lucifron' => '13031&modelType=8',
+  'magmadar' => '10193&modelType=8',
+  'gehennas' => '13030&modelType=8',
+  'garr' => '12110&modelType=8',
+  'geddon' => '12129&modelType=8',
+  'shazzrah' => '13032&modelType=8',
+  'sulfuron' => '13030&modelType=8',
+  'golemagg' => '11986&modelType=8',
+  'majordomo' => '12029&modelType=8',
+  'ragnaros' => '11121&modelType=8',
+  
+  /******Zul'Gurub*****/
+  'mandokir' => '11288&modelType=32',
+  'jindo' => '1311&modelType=32',
+  'gahzranka' => '15288&modelType=8',
+  'grilek' => '8390&modelType=8',
+  'hazzarah' => '15267&modelType=32',
+  'renataki' => '15268&modelType=32',
+  'wushoolay' => '15269&modelType=32',
+  'thekal' => '15216&modelType=32',
+  'arlokk' => '15218&modelType=32',
+  'jeklik' => '15219&modelType=32',
+  'marli' => '15220&modelType=32',
+  'venoxis' => '15217&modelType=32',
+  'hakkar' => '15295&modelType=8',
+  
+  /******Ruins of Ahn'Qiraj*****/
+  'kurinnaxx' => '15742&modelType=8',
+  'rajaxx' => '15376&modelType=8',
+  'ayamiss' => '15431&modelType=8',
+  'buru' => '15654&modelType=8',
+  'moam' => '15392&modelType=8',
+  'ossirian' => '15432&modelType=8',
+  
+  /******Gates of Ahn'Qiraj*****/
+  'skeram' => '15345&modelType=8',
+  'kri' => '15656&modelType=8',
+  'yauj' => '15657&modelType=8',
+  'vem' => '15658&modelType=8',
+  'sartura' => '15583&modelType=8',
+  'fankriss' => '15743&modelType=8',
+  'huhuran' => '15739&modelType=8',
+  'viscidus' => '15686&modelType=8',
+  'veknilash' => '15761&modelType=8',
+  'veklor' => '15778&modelType=8',
+  'ouro' => '15509&modelType=8',
+  'cthun' => '15787&modelType=8',
+  
+  /******Naxxramas*****/
+  'anubrekhan' => '15931&modelType=8',
+  'faerlina' => '15940&modelType=32',
+  'maexxna' => '15928&modelType=8',
+  'noth' => '16590&modelType=32',
+  'heigan' => '16309&modelType=8',
+  'loatheb' => '6110&modelType=8',
+  'patchwerk' => '16174&modelType=8',
+  'grobbulus' => '16035&modelType=8',
+  'gluth' => '16064&modelType=8',
+  'thaddius' => '16137&modelType=8',
+  'razuvious' => '16582&modelType=32',
+  'gothik' => '16279&modelType=8',
+  'horsemen' => '',
+  'sapphiron' => '16033&modelType=8',
+  'kelthuzad' => '15945&modelType=8',
+  
+  /******Outland Outdoor Bosses*****/
+  'doomkazzak' => '17887&modelType=8',
+  'doomwalker' => '21435&modelType=8',
+  
+  /******Magtheridon's Lais******/
+  'magtheridon' => '20127&modelType=8',
+  
+  /******Karazhan*****/
+  'attumen' => '16040&modelType=8',
+  'moroes' => '16540&modelType=32',
+  'maiden' => '16198&modelType=8',
+  'curator' => '16958&modelType=8',
+  'illhoof' => '11343&modelType=8',
+  'aran' => '16621&modelType=32',
+  'netherspite' => '15363&modelType=8',
+  'malchezaar' => '19274&modelType=8',
+  'nightbane' => '18062&modelType=8',
+  'chess' => '99999',
+  'opera' => '99999',
+  
+  /******Zul'Aman*****/
+  'nalorakk' => '21631&modelType=8',
+  'akilzon' => '21630&modelType=8',
+  'janalai' => '21633&modelType=8',
+  'halazzi' => '21632&modelType=8',
+  'malacrass' => '22332&modelType=32',
+  'zuljin' => '21899&modelType=8',
+  
+  /******Gruul's Lair*****/
+  'maulgar' => '18649&modelType=8',
+  'gruul' => '18698&modelType=8',
+  
+  /******Serpentshrine Cavern*****/
+  'hydross' => '0609&modelType=8',
+  'leotheras' => '20514&modelType=32',
+  'karathress' => '20662&modelType=32',
+  'morogrim' => '20739&modelType=8',
+  'lurker' =>  '20216&modelType=8',
+  'vashj' => '20748&modelType=8',
+  
+  /******The Eye*****/
+  'alar' => '18945&modelType=8',
+  'vreaver' => '18951&modelType=8',
+  'solarian' => '18239&modelType=32',
+  'kaelthas' => '20023&modelType=8',
+  
+  /******Battle of Mount Hyjal*****/
+  'winterchill' => '17444&modelType=8',
+  'anetheron' => '21069&modelType=8',
+  'kazrogal' => '17886&modelType=8',
+  'azgalor' => '18526&modelType=8',
+  'archimonde' => '20939&modelType=8',
+  
+  /******The Black Temple*****/
+  'najentus' => '21174&modelType=8',
+  'supremus' => '21145&modelType=8',
+  'akama' => '21357&modelType=8',
+  'gorefiend' => '21254&modelType=32',
+  'essence' => '99999',
+  'bloodboil' => '21443&modelType=8',
+  'shahraz' => '21252&modelType=8',
+  'council' => '99999',
+  'illidan' => '21135&modelType=8',
+  
+  /******Sunwell Plateau*****/
+  'kalecgos' => '23345&modelType=8',
+  'brutallus' => '22711&modelType=8',
+  'felmyst' => '22838&modelType=8',
+  'fetwins' => '99999',
+  'muru' => '23404&modelType=8',
+  'kiljaeden' => '23200&modelType=8',
+  
+  /******Naxxramas (10)*****/
+  'anubrekhan_10' => '15931&modelType=8',
+  'faerlina_10' => '15940&modelType=32',
+  'maexxna_10' => '15928&modelType=8',
+  'noth_10' => '16590&modelType=32',
+  'heigan_10' => '16309&modelType=8',
+  'loatheb_10' => '6110&modelType=8',
+  'patchwerk_10' => '16174&modelType=8',
+  'grobbulus_10' => '16035&modelType=8',
+  'gluth_10' => '16064&modelType=8',
+  'thaddius_10' => '16137&modelType=8',
+  'razuvious_10' => '16582&modelType=32',
+  'gothik_10' => '16279&modelType=8',
+  'horsemen_10' => '',
+  'sapphiron_10' => '16033&modelType=8',
+  'kelthuzad_10' => '15945&modelType=8',
+  
+  /******Vault of Archavon (10)*****/
+  'archavon_10' => '26967&modelType=8',
+  
+  /******Eye of Eternity (10)*****/
+  'malygos_10' => '26752&modelType=8',
+  
+  /******The Obsidian Sanctum (10)*****/
+  'sartharion_0d_10' => '27035&modelType=8',
+  'sartharion_1d_10' => '27035&modelType=8',
+  'sartharion_2d_10' => '27035&modelType=8',
+  'sartharion_3d_10' => '27035&modelType=8',
+  
+  /******Naxxramas (25)*****/
+  'anubrekhan_25' => '15931&modelType=8',
+  'faerlina_25' => '15940&modelType=32',
+  'maexxna_25' => '15928&modelType=8',
+  'noth_25' => '16590&modelType=32',
+  'heigan_25' => '16309&modelType=8',
+  'loatheb_25' => '6110&modelType=8',
+  'patchwerk_25' => '16174&modelType=8',
+  'grobbulus_25' => '16035&modelType=8',
+  'gluth_25' => '16064&modelType=8',
+  'thaddius_25' => '16137&modelType=8',
+  'razuvious_25' => '16582&modelType=32',
+  'gothik_25' => '16279&modelType=8',
+  'horsemen_25' => '',
+  'sapphiron_25' => '16033&modelType=8',
+  'kelthuzad_25' => '15945&modelType=8',
+  
+  /******Vault of Archavon (25)*****/
+  'archavon_25' => '26967&modelType=8',
+  
+  /******Eye of Eternity (25)*****/
+  'malygos_25' => '26752&modelType=8',
+  
+  /******The Obsidian Sanctum (25)*****/
+  'sartharion_0d_25' => '27035&modelType=8',
+  'sartharion_1d_25' => '27035&modelType=8',
+  'sartharion_2d_25' => '27035&modelType=8',
+  'sartharion_3d_25' => '27035&modelType=8',
+);
 ?>

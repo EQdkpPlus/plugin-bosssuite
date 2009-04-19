@@ -166,7 +166,8 @@ $lang = array(
 
 'bs_updateitem_l_name' => 'Обновить страницу',
 
-'bs_enable_updchk' => 'Enable check for new Plugin Versions'
+'bs_enable_updchk' => 'Enable check for new Plugin Versions',
+'bl_opt_en_mv' => 'Enable wowhead modelviewer',
 );
 
 ?>
