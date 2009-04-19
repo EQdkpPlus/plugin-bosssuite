@@ -166,7 +166,8 @@ $lang = array(
 'bl_opt_lootlist' => '掉落列表选项, 仅当一个掉落列表被选择时工作',
 
 'bs_updateitem_l_name' => '更新页 for',
-'bs_enable_updchk' => 'Enable check for new Plugin Versions'
+'bs_enable_updchk' => 'Enable check for new Plugin Versions',
+'bl_opt_en_mv' => 'Enable wowhead modelviewer',
 );
 
 ?>

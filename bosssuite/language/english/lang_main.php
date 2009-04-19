@@ -172,7 +172,8 @@ $lang = array(
 'bs_ec_show_bc' => 'Show(BossCounter)',
 'bs_ec_strings' => 'Triggers',
 
-'bs_enable_updchk' => 'Enable check for new Plugin Versions'
+'bs_enable_updchk' => 'Enable check for new Plugin Versions',
+'bl_opt_en_mv' => 'Enable wowhead modelviewer',
 );
 
 ?>

@@ -55,7 +55,8 @@ $bzone = array (
 		'kelthuzad_10'		
 	),
 	'vault_of_archavon_10' => array(
-    'archavon_10'
+    'archavon_10',
+    'emalon_10'
   ),
 	'eye_of_eternity_10' => array(
     'malygos_10'
@@ -100,7 +101,8 @@ $bzone = array (
 		'kelthuzad_25'		
 	),
 	'vault_of_archavon_25' => array(
-    'archavon_25'
+    'archavon_25',
+    'emalon_25'
   ),
 	'eye_of_eternity_25' => array(
     'malygos_25'

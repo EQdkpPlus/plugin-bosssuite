@@ -55,6 +55,7 @@ $image_map['kelthuzad_10'] = 'kelthuzad';
 
 $image_map['vault_of_archavon_10'] = 'vault_of_archavon';
 $image_map['archavon_10'] = 'archavon';
+$image_map['emalon_10'] = 'emalon';
 
 $image_map['eye_of_eternity_10'] = 'eye_of_eternity';
 $image_map['malygos_10'] = 'malygos';
@@ -100,6 +101,7 @@ $image_map['kelthuzad_25'] = 'kelthuzad';
 
 $image_map['vault_of_archavon_25'] = 'vault_of_archavon';
 $image_map['archavon_25'] = 'archavon';
+$image_map['emalon_25'] = 'emalon';
 
 $image_map['eye_of_eternity_25'] = 'eye_of_eternity';
 $image_map['malygos_25'] = 'malygos';

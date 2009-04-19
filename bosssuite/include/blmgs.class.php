@@ -109,6 +109,19 @@ if ( !class_exists( "BLMGS" ) ) {
       }
     }
     
+    function bl_get_bossmodel($bossid){
+      include('./games/'.$this->game.'/linklist.php');
+      $mv = array_pop($modelviewer);
+      $rid = $idlist[$mv['idlist']][$bossid];
+      
+      if(!isset($rid) || empty($rid)){
+        //fallback
+        return $this->bl_get_bossimage($bossid);
+      }else{
+        return sprintf($mv['object'], $rid);
+      }
+    }
+    
 
     function bl_get_lootlist_credits($lootlist){
         global $user;
@@ -132,6 +145,16 @@ if ( !class_exists( "BLMGS" ) ) {
         }else{
             return $user->lang['bl_no_bossimages_credits'];
         }
+    }
+    
+    function modelviewer_supported(){
+      $file = dirname(__FILE__).'/../games/'.$this->game.'/index.php';     
+      if (file_exists($file)){
+        require(dirname(__FILE__).'/../games/'.$this->game.'/index.php');
+        if ( !isset($mv_support) )
+          return false;
+        return $mv_support; 
+      }
     }
     
   }

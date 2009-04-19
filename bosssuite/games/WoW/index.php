@@ -21,5 +21,6 @@ if ( !defined('EQDKP_INC') ){
 } 
 $default_lang = 'english';
 $item_qualities = array (0, 1, 2 ,3, 4, 5);
+$mv_support = true;
 
 ?>
