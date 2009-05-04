@@ -52,10 +52,10 @@ if ( !class_exists( "BSSQL" ) ) {
       function update_config($plugin, $confarr, $fieldname, $insertvalue) {
       global $db;         
         if(array_key_exists( substr($fieldname,3), $confarr )){
-          $sql = "UPDATE `".BS_CONFIG_TABLE."` SET config_value='".strip_tags(htmlspecialchars($insertvalue))."' WHERE config_name='".$fieldname."';";
+          $sql = "UPDATE __bs_config SET config_value='".strip_tags(htmlspecialchars($insertvalue))."' WHERE config_name='".$fieldname."';";
         	$db->query($sql);
         }else{
-        	$sql = "INSERT INTO `".BS_CONFIG_TABLE."` VALUES('".$fieldname."', '".strip_tags(htmlspecialchars($insertvalue))."');";	
+        	$sql = "INSERT INTO __bs_config VALUES('".$fieldname."', '".strip_tags(htmlspecialchars($insertvalue))."');";	
         	$db->query($sql);
        	}
       }
@@ -81,7 +81,7 @@ if ( !class_exists( "BSSQL" ) ) {
               $prefix = 'bb_';
         }
         
-      	$sql = "SELECT * FROM `" . BS_CONFIG_TABLE . "` WHERE config_name LIKE '".$prefix."%';";
+      	$sql = "SELECT * FROM __bs_config WHERE config_name LIKE '".$prefix."%';";
       	if (!($settings_result = $db->query($sql))) {
       		message_die('Could not obtain '.$plugin.' configuration data', '', __FILE__, __LINE__, $sql);
       	}
@@ -93,7 +93,7 @@ if ( !class_exists( "BSSQL" ) ) {
       	if (count($conf) > $def_count)
       	   return $conf;
       	else{
-      	   $sql = "SELECT * FROM " . BS_CONFIG_TABLE . ";";
+      	   $sql = "SELECT * FROM __bs_config";
       	   if (!($count_result = $db->query($sql))) {
       		    message_die('Could not obtain '.$plugin.' configuration data', '', __FILE__, __LINE__, $sql);
       	   }
@@ -109,7 +109,7 @@ if ( !class_exists( "BSSQL" ) ) {
         $game_arr = explode('_', $eqdkp->config['default_game']);
         $game = $game_arr[0];
         
-      	$sql = 'SELECT zone_id, zone_string FROM `' . BS_ZONE_TABLE . "`;";
+      	$sql = 'SELECT zone_id, zone_string FROM __bs_data_zone';
       	if (!($settings_result = $db->query($sql))) {
       		message_die('Could not obtain zone string data', '', __FILE__, __LINE__, $sql);
       	}
@@ -133,12 +133,12 @@ if ( !class_exists( "BSSQL" ) ) {
         $game = $game_arr[0];
         
       if(array_key_exists( 'pz_'.$fieldname, $confarr )){
-        $sql = "UPDATE `".BS_ZONE_TABLE."` SET zone_string='".strip_tags(htmlspecialchars($value))."' WHERE zone_id='".$fieldname."';";
+        $sql = "UPDATE __bs_data_zone SET zone_string='".strip_tags(htmlspecialchars($value))."' WHERE zone_id='".$fieldname."';";
       	if (!($settings_result = $db->query($sql))) {
       		message_die('Could not update zone', '', __FILE__, __LINE__, $sql);
       	}
       }else{
-      	$sql = "INSERT INTO `".BS_ZONE_TABLE."` VALUES('".$fieldname."', '".strip_tags(htmlspecialchars($value))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."','1','1');";	
+      	$sql = "INSERT INTO __bs_data_zone VALUES('".$fieldname."', '".strip_tags(htmlspecialchars($value))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."','1','1');";	
       	if (!($settings_result = $db->query($sql))) {
       		message_die('Could not insert zone', '', __FILE__, __LINE__, $sql);
       	}
@@ -152,7 +152,7 @@ if ( !class_exists( "BSSQL" ) ) {
         $game_arr = explode('_', $eqdkp->config['default_game']);
         $game = $game_arr[0];
         
-      	$sql = 'SELECT boss_id, boss_string FROM `' . BS_BOSS_TABLE . "`;";
+      	$sql = 'SELECT boss_id, boss_string FROM __bs_data_boss';
       	if (!($settings_result = $db->query($sql))) {
       		message_die('Could not obtain boss string data', '', __FILE__, __LINE__, $sql);
       	}
@@ -176,10 +176,10 @@ if ( !class_exists( "BSSQL" ) ) {
         $game = $game_arr[0];
         
       if(array_key_exists( 'pb_'.$fieldname, $confarr )){
-        $sql = "UPDATE `".BS_BOSS_TABLE."` SET boss_string='".strip_tags(htmlspecialchars($value))."' WHERE boss_id='".$fieldname."';";
+        $sql = "UPDATE __bs_data_boss SET boss_string='".strip_tags(htmlspecialchars($value))."' WHERE boss_id='".$fieldname."';";
       	$db->query($sql);
       }else{
-      	$sql = "INSERT INTO `".BS_BOSS_TABLE."` VALUES('".$fieldname."', '".strip_tags(htmlspecialchars($value))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."');";	
+      	$sql = "INSERT INTO __bs_data_boss VALUES('".$fieldname."', '".strip_tags(htmlspecialchars($value))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."');";	
       	$db->query($sql);
       	}
       }
@@ -190,7 +190,7 @@ if ( !class_exists( "BSSQL" ) ) {
         $game_arr = explode('_', $eqdkp->config['default_game']);
         $game = $game_arr[0];
         
-      	$sql = 'SELECT boss_id, boss_co_offs, boss_fd_offs, boss_ld_offs FROM `' . BS_BOSS_TABLE . "`;";
+      	$sql = 'SELECT boss_id, boss_co_offs, boss_fd_offs, boss_ld_offs FROM __bs_data_boss';
       	if (!($settings_result = $db->query($sql))) {
       		message_die('Could not obtain boss offset data', '', __FILE__, __LINE__, $sql);
       	}
@@ -215,7 +215,7 @@ if ( !class_exists( "BSSQL" ) ) {
         $game_arr = explode('_', $eqdkp->config['default_game']);
         $game = $game_arr[0];
         
-      	$sql = 'SELECT zone_id, zone_co_offs, zone_fd_offs, zone_ld_offs FROM `' . BS_ZONE_TABLE . "`;";
+      	$sql = 'SELECT zone_id, zone_co_offs, zone_fd_offs, zone_ld_offs FROM __bs_data_zone';
       	if (!($settings_result = $db->query($sql))) {
       		message_die('Could not obtain zone offset data', '', __FILE__, __LINE__, $sql);
       	}
@@ -244,7 +244,7 @@ if ( !class_exists( "BSSQL" ) ) {
 			      }else{
 				      $bossstring = "''". str_replace("'", "''", $user->lang[$boss]['long']) . "''";
 			      }   
-      	    $sql = "INSERT INTO `".BS_BOSS_TABLE."` VALUES('".$boss."', '".strip_tags(htmlspecialchars($bossstring))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."');";	
+      	    $sql = "INSERT INTO __bs_data_boss VALUES('".$boss."', '".strip_tags(htmlspecialchars($bossstring))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."');";	
     	      if($db->query($sql) === false)
               message_die("Couldn't reset/initialise bosses. See sql debug statement.");
           }
@@ -260,7 +260,7 @@ if ( !class_exists( "BSSQL" ) ) {
 		      }else{
 			      $zonestring = "''". str_replace("'", "''", $user->lang[$zone]['long']) . "''";
 		      }   
-    	    $sql = "INSERT INTO `".BS_ZONE_TABLE."` VALUES('".$zone."', '".strip_tags(htmlspecialchars($zonestring))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."','1','1');";	
+    	    $sql = "INSERT INTO __bs_data_zone VALUES('".$zone."', '".strip_tags(htmlspecialchars($zonestring))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."','1','1');";	
     	    if($db->query($sql) === false)
             message_die("Couldn't reset/initialise zones. See sql debug statement.");
         }
@@ -273,10 +273,10 @@ if ( !class_exists( "BSSQL" ) ) {
         $game = $game_arr[0];
         
       if(array_key_exists( $id, $offsets )){
-        $sql = "UPDATE `".BS_BOSS_TABLE."` SET boss_co_offs='".$counter."', boss_ld_offs='".$ldate."', boss_fd_offs='".$fdate."' WHERE boss_id='".$id."';";
+        $sql = "UPDATE __bs_data_boss SET boss_co_offs='".$counter."', boss_ld_offs='".$ldate."', boss_fd_offs='".$fdate."' WHERE boss_id='".$id."';";
       	$db->query($sql);
       }else{
-      	$sql = "INSERT INTO `".BS_BOSS_TABLE."` VALUES('".$id."', '', '".$counter."', '".$fdate."', '".$ldate."');";	
+      	$sql = "INSERT INTO __bs_data_boss VALUES('".$id."', '', '".$counter."', '".$fdate."', '".$ldate."');";	
       	$db->query($sql);
       	}
       }
@@ -288,10 +288,10 @@ if ( !class_exists( "BSSQL" ) ) {
         $game = $game_arr[0];
         
       if(array_key_exists( $id, $offsets )){
-        $sql = "UPDATE `".BS_ZONE_TABLE."` SET zone_co_offs='".$counter."', zone_ld_offs='".$ldate."', zone_fd_offs='".$fdate."' WHERE zone_id='".$id."';";
+        $sql = "UPDATE __bs_data_zone SET zone_co_offs='".$counter."', zone_ld_offs='".$ldate."', zone_fd_offs='".$fdate."' WHERE zone_id='".$id."';";
       	$db->query($sql);
       }else{
-      	$sql = "INSERT INTO `".BS_ZONE_TABLE."` VALUES('".$id."', '', '".$counter."', '".$fdate."', '".$ldate."');";	
+      	$sql = "INSERT INTO __bs_data_zone VALUES('".$id."', '', '".$counter."', '".$fdate."', '".$ldate."');";	
       	$db->query($sql);
       	}
       }
@@ -306,7 +306,7 @@ if ( !class_exists( "BSSQL" ) ) {
     	 if ($plugin == 'all'){
 	       return $bzone;
 	     } else if ($plugin == 'bossprogress'){   
-         $sql = 'SELECT zone_id, zone_sz_bp FROM `' . BS_ZONE_TABLE . "`;";
+         $sql = 'SELECT zone_id, zone_sz_bp FROM __bs_data_zone';
          $settings_result = $db->query($sql);
          while($roww = $db->fetch_record($settings_result)) { 
            $szarr[$roww['zone_id']] = $roww['zone_sz_bp'];
@@ -319,7 +319,7 @@ if ( !class_exists( "BSSQL" ) ) {
 	       }	
       	 return $sbzone;
        } else if ($plugin == 'bosscounter'){
-         $sql = 'SELECT zone_id, zone_sz_bc FROM `' . BS_ZONE_TABLE . "`;";
+         $sql = 'SELECT zone_id, zone_sz_bc FROM __bs_data_zone';
          $settings_result = $db->query($sql);
          while($roww = $db->fetch_record($settings_result)) { 
            $szarr[$roww['zone_id']] = $roww['zone_sz_bc'];
@@ -342,10 +342,10 @@ if ( !class_exists( "BSSQL" ) ) {
         $game = $game_arr[0];
         
         if ( $plugin == 'bossprogress'){
-          $sql = "UPDATE `".BS_ZONE_TABLE."` SET zone_sz_bp='".$value."' WHERE zone_id='".$zoneid."';";
+          $sql = "UPDATE __bs_data_zone SET zone_sz_bp='".$value."' WHERE zone_id='".$zoneid."';";
       	  $db->query($sql);
       	}else if ( $plugin == 'bosscounter'){
-          $sql = "UPDATE `".BS_ZONE_TABLE."` SET zone_sz_bc='".$value."' WHERE zone_id='".$zoneid."';";
+          $sql = "UPDATE __bs_data_zone SET zone_sz_bc='".$value."' WHERE zone_id='".$zoneid."';";
       	  $db->query($sql);
         }
     }
@@ -358,16 +358,16 @@ if ( !class_exists( "BSSQL" ) ) {
       $data = $this->get_data($config, $bzone);
       $game_arr = explode('_', $eqdkp->config['default_game']);
       $game = $game_arr[0];
-      $sql = "TRUNCATE TABLE `".BS_ZONE_CACHE."`;";
+      $sql = 'TRUNCATE TABLE __bs_cache_zone';
       $db->query($sql);
-      $sql = "TRUNCATE TABLE `".BS_BOSS_CACHE."`;";
+      $sql = 'TRUNCATE TABLE __bs_cache_boss';
       $db->query($sql);
 
       foreach ($bzone as $zone => $bosses){
-	      $sql = "INSERT INTO `".BS_ZONE_CACHE."` VALUES('".$zone."', '".$data[$zone]['vc']."', '".$data[$zone]['zk']."', '".$data[$zone]['fvd']."', '".$data[$zone]['lvd']."');";	
+	      $sql = "INSERT INTO __bs_cache_zone VALUES('".$zone."', '".$data[$zone]['vc']."', '".$data[$zone]['zk']."', '".$data[$zone]['fvd']."', '".$data[$zone]['lvd']."');";	
      	  $db->query($sql);
 	      foreach ($bosses as $boss){
-		      $sql = "INSERT INTO `".BS_BOSS_CACHE."` VALUES('".$boss."', '".$data[$zone]['bosses'][$boss]['kc']."', '".$data[$zone]['bosses'][$boss]['fkd']."', '".$data[$zone]['bosses'][$boss]['lkd']."');";	
+		      $sql = "INSERT INTO __bs_cache_boss VALUES('".$boss."', '".$data[$zone]['bosses'][$boss]['kc']."', '".$data[$zone]['bosses'][$boss]['fkd']."', '".$data[$zone]['bosses'][$boss]['lkd']."');";	
       	  $db->query($sql);
 	      }
 		  }
@@ -380,7 +380,7 @@ if ( !class_exists( "BSSQL" ) ) {
         $game = $game_arr[0];
         
         $data = array();
-      	$sql = 'SELECT * FROM `' . BS_ZONE_CACHE . "`;";
+      	$sql = 'SELECT * FROM __bs_cache_zone';
       	if (!($result = $db->query($sql))) {
       		message_die('Could not obtain zone cache', '', __FILE__, __LINE__, $sql);
       	}
@@ -392,7 +392,7 @@ if ( !class_exists( "BSSQL" ) ) {
       	   		$data2[$roww['zone_id']]['lvd'] = $roww['zone_ld_cache'];
       	}	
       	
-      	$sql = 'SELECT * FROM `' . BS_BOSS_CACHE . "`;";
+      	$sql = 'SELECT * FROM __bs_cache_boss';
       	if (!($result2 = $db->query($sql))) {
       		message_die('Could not obtain boss cache', '', __FILE__, __LINE__, $sql);
       	}
@@ -496,7 +496,7 @@ if ( !class_exists( "BSSQL" ) ) {
          
         $sql = "";
         if (count($tables) == 0) {
-          $sql = "SELECT  raid_name AS rname, raid_date AS rdate, raid_note AS rnote FROM " . RAIDS_TABLE . ";";
+          $sql = "SELECT  raid_name AS rname, raid_date AS rdate, raid_note AS rnote FROM __raids";
         } else {
         $bpinc = 0;
         foreach ($tables as $raidtable) {

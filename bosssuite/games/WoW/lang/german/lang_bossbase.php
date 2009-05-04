@@ -240,18 +240,28 @@ $lang['sartharion_3d_10'] = array('long' => 'Sartharion der Onyxwächter 3 Drache
 /******Ulduar (10)*****/
 $lang['ulduar_10']    = array('long' => 'Ulduar (10)', 'short' => 'Ulduar (10)');
 $lang['hodir_10']       = array('long' => 'Hodir (10)', 'short' => 'Hodir (10)');
+$lang['hodir_10_hm']       = array('long' => 'Hodir HM(10)', 'short' => 'Hodir HM(10)');
 $lang['thorim_10']    = array('long' => 'Thorim (10)', 'short' => 'Thorim (10)');
+$lang['thorim_10_hm']    = array('long' => 'Thorim HM(10)', 'short' => 'Thorim HM(10)');
 $lang['iron_council_10']    = array('long' => 'Der Eiserne Rat (10)', 'short' => 'Eiserner Rat (10)');
+$lang['iron_council_10_hm']    = array('long' => 'Der Eiserne Rat HM(10)', 'short' => 'Eiserner Rat HM(10)');
 $lang['freya_10']       = array('long' => 'Freya (10)', 'short' => 'Freya (10)');
+$lang['freya_10_hm']       = array('long' => 'Freya HM(10)', 'short' => 'Freya HM(10)');
 $lang['ignis_10']       = array('long' => 'Ignis der Meister des Eisenwerks (10)', 'short' => 'Ignis (10)');
 $lang['leviathan_10']    = array('long' => 'Flammenleviathan (10)', 'short' => 'Flammenleviathan (10)');
+$lang['leviathan_10_hm']    = array('long' => 'Flammenleviathan HM(10)', 'short' => 'Flammenleviathan HM(10)');
 $lang['vezax_10']       = array('long' => 'General Vezax (10)', 'short' => 'Vezax (10)');
+$lang['vezax_10_hm']       = array('long' => 'General Vezax HM(10)', 'short' => 'Vezax HM(10)');
 $lang['razorscale_10']    = array('long' => 'Klingenschuppe (10)', 'short' => 'Klingenschuppe (10)');
 $lang['deconstructor_10']   = array('long' => 'Vernichter XT-002 (10)', 'short' => 'XT-002 (10)');
+$lang['deconstructor_10_hm']   = array('long' => 'Vernichter XT-002 HM(10)', 'short' => 'XT-002 HM(10)');
 $lang['kologarn_10']    = array('long' => 'Kologarn (10)', 'short' => 'Kologarn (10)');
 $lang['auriaya_10']    = array('long' => 'Auriaya (10)', 'short' => 'Auriaya (10)');
+$lang['auriaya_10_hm']    = array('long' => 'Auriaya HM(10)', 'short' => 'Auriaya HM(10)');
 $lang['mimiron_10']    = array('long' => 'Mimiron (10)', 'short' => 'Mimiron (10)');
+$lang['mimiron_10_hm']    = array('long' => 'Mimiron HM(10)', 'short' => 'Mimiron HM(10)');
 $lang['yoggsaron_10']       = array('long' => 'Yogg-saron (10)', 'short' => 'Yogg-Saron (10)');
+$lang['yoggsaron_10_hm']       = array('long' => 'Yogg-saron HM(10)', 'short' => 'Yogg-Saron HM(10)');
 $lang['algalon_10']    = array('long' => 'Algalon der Beobachter (10)', 'short' => 'Algalon (10)');
 
 /******Naxxramas (25)*****/
@@ -290,17 +300,27 @@ $lang['sartharion_3d_25'] = array('long' => 'Sartharion der Onyxwächter 3 Drache
 /******Ulduar (25)*****/
 $lang['ulduar_25']    = array('long' => 'Ulduar (25)', 'short' => 'Ulduar (25)');
 $lang['hodir_25']       = array('long' => 'Hodir (25)', 'short' => 'Hodir (25)');
+$lang['hodir_25_hm']       = array('long' => 'Hodir HM(25)', 'short' => 'Hodir HM(25)');
 $lang['thorim_25']    = array('long' => 'Thorim (25)', 'short' => 'Thorim (25)');
+$lang['thorim_25_hm']    = array('long' => 'Thorim HM(25)', 'short' => 'Thorim HM(25)');
 $lang['iron_council_25']    = array('long' => 'Der Eiserne Rat (25)', 'short' => 'Eiserner Rat (25)');
+$lang['iron_council_25_hm']    = array('long' => 'Der Eiserne Rat HM(25)', 'short' => 'Eiserner Rat HM(25)');
 $lang['freya_25']       = array('long' => 'Freya (25)', 'short' => 'Freya (25)');
+$lang['freya_25_hm']       = array('long' => 'Freya HM(25)', 'short' => 'Freya HM(25)');
 $lang['ignis_25']       = array('long' => 'Ignis der Meister des Eisenwerks (25)', 'short' => 'Ignis (25)');
 $lang['leviathan_25']    = array('long' => 'Flammenleviathan (25)', 'short' => 'Flammenleviathan (25)');
+$lang['leviathan_25_hm']    = array('long' => 'Flammenleviathan HM(25)', 'short' => 'Flammenleviathan HM(25)');
 $lang['vezax_25']       = array('long' => 'General Vezax (25)', 'short' => 'Vezax (25)');
+$lang['vezax_25_hm']       = array('long' => 'General Vezax HM(25)', 'short' => 'Vezax HM(25)');
 $lang['razorscale_25']    = array('long' => 'Klingenschuppe (25)', 'short' => 'Klingenschuppe (25)');
 $lang['deconstructor_25']   = array('long' => 'Vernichter XT-002 (25)', 'short' => 'XT-002 (25)');
+$lang['deconstructor_25_hm']   = array('long' => 'Vernichter XT-002 HM(25)', 'short' => 'XT-002 HM(25)');
 $lang['kologarn_25']    = array('long' => 'Kologarn (25)', 'short' => 'Kologarn (25)');
 $lang['auriaya_25']    = array('long' => 'Auriaya (25)', 'short' => 'Auriaya (25)');
+$lang['auriaya_25_hm']    = array('long' => 'Auriaya HM(25)', 'short' => 'Auriaya HM(25)');
 $lang['mimiron_25']    = array('long' => 'Mimiron (25)', 'short' => 'Mimiron (25)');
+$lang['mimiron_25_hm']    = array('long' => 'Mimiron HM(25)', 'short' => 'Mimiron HM(25)');
 $lang['yoggsaron_25']       = array('long' => 'Yogg-saron (25)', 'short' => 'Yogg-Saron (25)');
+$lang['yoggsaron_25_hm']       = array('long' => 'Yogg-saron HM(25)', 'short' => 'Yogg-Saron HM(25)');
 $lang['algalon_25']    = array('long' => 'Algalon der Beobachter (25)', 'short' => 'Algalon (25)');
 ?>
