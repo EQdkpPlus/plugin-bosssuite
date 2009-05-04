@@ -35,7 +35,17 @@ $image_map['auriaya_10'] = 'auriaya';
 $image_map['mimiron_10'] = 'mimiron';
 $image_map['yoggsaron_10'] = 'yoggsaron';
 $image_map['algalon_10'] = 'algalon';
-    
+$image_map['hodir_10_hm'] = 'hodir';
+$image_map['thorim_10_hm'] = 'thorim';
+$image_map['iron_council_10_hm'] = 'iron_council';
+$image_map['freya_10_hm'] = 'freya';
+$image_map['leviathan_10_hm'] = 'leviathan';
+$image_map['deconstructor_10_hm'] = 'deconstructor';
+$image_map['auriaya_10_hm'] = 'auriaya';
+$image_map['mimiron_10_hm'] = 'mimiron';
+$image_map['vezax_10_hm'] = 'vezax';
+$image_map['yoggsaron_10_hm'] = 'yoggsaron';
+  
 $image_map['naxx_10'] = 'naxx_wotlk';
 $image_map['anubrekhan_10'] = 'anubrekhan';
 $image_map['faerlina_10'] = 'faerlina';
@@ -81,6 +91,16 @@ $image_map['auriaya_25'] = 'auriaya';
 $image_map['mimiron_25'] = 'mimiron';
 $image_map['yoggsaron_25'] = 'yoggsaron';
 $image_map['algalon_25'] = 'algalon';
+$image_map['hodir_25_hm'] = 'hodir';
+$image_map['thorim_25_hm'] = 'thorim';
+$image_map['iron_council_25_hm'] = 'iron_council';
+$image_map['freya_25_hm'] = 'freya';
+$image_map['leviathan_25_hm'] = 'leviathan';
+$image_map['deconstructor_25_hm'] = 'deconstructor';
+$image_map['auriaya_25_hm'] = 'auriaya';
+$image_map['mimiron_25_hm'] = 'mimiron';
+$image_map['vezax_25_hm'] = 'vezax';
+$image_map['yoggsaron_25_hm'] = 'yoggsaron';
 
 $image_map['naxx_25'] = 'naxx_wotlk';
 $image_map['anubrekhan_25'] = 'anubrekhan';

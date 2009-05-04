@@ -228,7 +228,7 @@ $idlist['default'] = array(
   
   /******Vault of Archavon (10)*****/
   'archavon_10' => '31125',
-  'emalon_10' => '99999',
+  'emalon_10' => '33993',
   
   /******Eye of Eternity (10)*****/
   'malygos_10' => '28859',
@@ -240,19 +240,29 @@ $idlist['default'] = array(
   'sartharion_3d_10' => '28860',
   
   /******Ulduar (10)*****/
-  'hodir_10' => '99999',
-  'thorim_10' => '99999',
-  'iron_council_10' => '99999',
-  'freya_10' => '99999',
-  'ignis_10' => '99999',
-  'leviathan_10' => '99999',
-  'vezax_10' => '99999',
-  'razorscale_10' => '99999',
-  'deconstructor_10' => '99999',
-  'kologarn_10' => '99999',
-  'auriaya_10' => '99999',
-  'mimiron_10' => '99999',
-  'yoggsaron_10' => '99999',
+  'hodir_10' => '32845',
+  'hodir_10_hm' => '32845',
+  'thorim_10' => '32865',
+  'thorim_10_hm' => '32865',
+  'iron_council_10' => '32857',
+  'iron_council_10_hm' => '32857',
+  'freya_10' => '32906',
+  'freya_10_hm' => '32906',
+  'ignis_10' => '33118',
+  'leviathan_10' => '33113',
+  'leviathan_10_hm' => '33113',
+  'vezax_10' => '33271',
+  'vezax_10_hm' => '33271',
+  'razorscale_10' => '33186',
+  'deconstructor_10' => '33293',
+  'deconstructor_10_hm' => '33293',
+  'kologarn_10' => '32930',
+  'auriaya_10' => '33515',
+  'auriaya_10_hm' => '33515',
+  'mimiron_10' => '33412',
+  'mimiron_10_hm' => '33412',
+  'yoggsaron_10' => '33288',
+  'yoggsaron_10_hm' => '33288',
   'algalon_10' => '99999',
     
   /******Naxxramas (25)*****/
@@ -286,19 +296,29 @@ $idlist['default'] = array(
   'sartharion_3d_25' => '28860',
   
   /******Ulduar (25)*****/
-  'hodir_25' => '99999',
-  'thorim_25' => '99999',
-  'iron_council_25' => '99999',
-  'freya_25' => '99999',
-  'ignis_25' => '99999',
-  'leviathan_25' => '99999',
-  'vezax_25' => '99999',
-  'razorscale_25' => '99999',
-  'deconstructor_25' => '99999',
-  'kologarn_25' => '99999',
-  'auriaya_25' => '99999',
-  'mimiron_25' => '99999',
-  'yoggsaron_25' => '99999',
+  'hodir_25' => '32845',
+  'hodir_25_hm' => '32845',
+  'thorim_25' => '32865',
+  'thorim_25_hm' => '32865',
+  'iron_council_25' => '32857',
+  'iron_council_25_hm' => '32857',
+  'freya_25' => '32906',
+  'freya_25_hm' => '32906',
+  'ignis_25' => '33118',
+  'leviathan_25' => '33113',
+  'leviathan_25_hm' => '33113',
+  'vezax_25' => '33271',
+  'vezax_25_hm' => '33271',
+  'razorscale_25' => '33186',
+  'deconstructor_25' => '33293',
+  'deconstructor_25_hm' => '33293',
+  'kologarn_25' => '32930',
+  'auriaya_25' => '33515',
+  'auriaya_25_hm' => '33515',
+  'mimiron_25' => '33412',
+  'mimiron_25_hm' => '33412',
+  'yoggsaron_25' => '33288',
+  'yoggsaron_25_hm' => '33288',
   'algalon_25' => '99999',
 
 );
@@ -484,6 +504,7 @@ $idlist['wowheadmv'] = array(
   
   /******Vault of Archavon (10)*****/
   'archavon_10' => '26967&modelType=8',
+  'emalon_10' => '27108&modelType=8',
   
   /******Eye of Eternity (10)*****/
   'malygos_10' => '26752&modelType=8',
@@ -493,6 +514,32 @@ $idlist['wowheadmv'] = array(
   'sartharion_1d_10' => '27035&modelType=8',
   'sartharion_2d_10' => '27035&modelType=8',
   'sartharion_3d_10' => '27035&modelType=8',
+  
+  /******Ulduar (10)*****/
+  'hodir_10' => '28743&modelType=8',
+  'hodir_10_hm' => '28743&modelType=8',
+  'thorim_10' => '28977&modelType=8',
+  'thorim_10_hm' => '28977&modelType=8',
+  'iron_council_10' => '28344&modelType=8',
+  'iron_council_10_hm' => '28344&modelType=8',
+  'freya_10' => '28777&modelType=8',
+  'freya_10_hm' => '28777&modelType=8',
+  'ignis_10' => '29185&modelType=8',
+  'leviathan_10' => '28875&modelType=8',
+  'leviathan_10_hm' => '28875&modelType=8',
+  'vezax_10' => '28548&modelType=8',
+  'vezax_10_hm' => '28548&modelType=8',
+  'razorscale_10' => '28787&modelType=8',
+  'deconstructor_10' => '28611&modelType=8',
+  'deconstructor_10_hm' => '28611&modelType=8',
+  'kologarn_10' => '28638&modelType=8',
+  'auriaya_10' => '28651&modelType=8',
+  'auriaya_10_hm' => '28651&modelType=8',
+  'mimiron_10' => '29001&modelType=8',
+  'mimiron_10_hm' => '29001&modelType=8',
+  'yoggsaron_10' => '28817&modelType=8',
+  'yoggsaron_10_hm' => '28817&modelType=8',
+  'algalon_10' => '',
   
   /******Naxxramas (25)*****/
   'anubrekhan_25' => '15931&modelType=8',
@@ -513,6 +560,7 @@ $idlist['wowheadmv'] = array(
   
   /******Vault of Archavon (25)*****/
   'archavon_25' => '26967&modelType=8',
+  'emalon_25' => '27108&modelType=8',
   
   /******Eye of Eternity (25)*****/
   'malygos_25' => '26752&modelType=8',
@@ -522,5 +570,31 @@ $idlist['wowheadmv'] = array(
   'sartharion_1d_25' => '27035&modelType=8',
   'sartharion_2d_25' => '27035&modelType=8',
   'sartharion_3d_25' => '27035&modelType=8',
+  
+  /******Ulduar (25)*****/
+  'hodir_25' => '28743&modelType=8',
+  'hodir_25_hm' => '28743&modelType=8',
+  'thorim_25' => '28977&modelType=8',
+  'thorim_25_hm' => '28977&modelType=8',
+  'iron_council_25' => '28344&modelType=8',
+  'iron_council_25_hm' => '28344&modelType=8',
+  'freya_25' => '28777&modelType=8',
+  'freya_25_hm' => '28777&modelType=8',
+  'ignis_25' => '29185&modelType=8',
+  'leviathan_25' => '28875&modelType=8',
+  'leviathan_25_hm' => '28875&modelType=8',
+  'vezax_25' => '28548&modelType=8',
+  'vezax_25_hm' => '28548&modelType=8',
+  'razorscale_25' => '28787&modelType=8',
+  'deconstructor_25' => '28611&modelType=8',
+  'deconstructor_25_hm' => '28611&modelType=8',
+  'kologarn_25' => '28638&modelType=8',
+  'auriaya_25' => '28651&modelType=8',
+  'auriaya_25_hm' => '28651&modelType=8',
+  'mimiron_25' => '29001&modelType=8',
+  'mimiron_25_hm' => '29001&modelType=8',
+  'yoggsaron_25' => '28817&modelType=8',
+  'yoggsaron_25_hm' => '28817&modelType=8',
+  'algalon_25' => '',
 );
 ?>
