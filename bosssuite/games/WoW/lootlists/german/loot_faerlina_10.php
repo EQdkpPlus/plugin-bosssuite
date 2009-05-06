@@ -8,7 +8,7 @@ $loot = array(
 	array( "id" => "39198", "qual" => "4", "name" => "Schulterstücke der Frostseuche" ),
 	array( "id" => "39195", "qual" => "4", "name" => "Armschienen der verlorenen Empfindungen" ),
 	array( "id" => "39197", "qual" => "4", "name" => "Stulpen des Meisters" ),
-	array( "id" => "39200", "qual" => "4", "name" => "Trauernde Zauberklinge" ),
 	array( "id" => "39199", "qual" => "4", "name" => "Wachsames Auge" ),
+	array( "id" => "39200", "qual" => "4", "name" => "Trauernde Zauberklinge" ),
 );
 ?>

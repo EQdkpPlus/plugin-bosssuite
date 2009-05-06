@@ -8,7 +8,7 @@ $loot = array(
 	array( "id" => "39198", "qual" => "4", "name" => "Frostblight Pauldrons" ),
 	array( "id" => "39195", "qual" => "4", "name" => "Bracers of Lost Sentiments" ),
 	array( "id" => "39197", "qual" => "4", "name" => "Gauntlets of the Master" ),
-	array( "id" => "39200", "qual" => "4", "name" => "Grieving Spellblade" ),
 	array( "id" => "39199", "qual" => "4", "name" => "Watchful Eye" ),
+	array( "id" => "39200", "qual" => "4", "name" => "Grieving Spellblade" ),
 );
 ?>

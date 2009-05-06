@@ -7,7 +7,7 @@ $loot = array(
 	array( "id" => "39267", "qual" => "4", "name" => "Abomination Shoulderblades" ),
 	array( "id" => "39262", "qual" => "4", "name" => "Gauntlets of Combined Strength" ),
 	array( "id" => "39261", "qual" => "4", "name" => "Tainted Girdle of Mending" ),
-	array( "id" => "39270", "qual" => "4", "name" => "Hatestrike" ),
 	array( "id" => "39271", "qual" => "4", "name" => "Blade of Dormant Memories" ),
+	array( "id" => "39270", "qual" => "4", "name" => "Hatestrike" ),
 );
 ?>

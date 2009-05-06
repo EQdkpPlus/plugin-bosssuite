@@ -64,6 +64,7 @@ if ($_POST['bpsavebu']){
   $eqdkp->config_set('bs_showBC', $_POST['ebc']);
   $eqdkp->config_set('bs_linkBL', $_POST['en2l']);
   $mybssql->update_config('bossbase', $bs_conf, 'bb_enable_updatechk', $_POST['enupdcheck']);
+  $mybssql->update_config('bossbase', $bs_conf, 'bb_enable_autoclose', $_POST['enautoclose']);
   
   //BossBase Config
 	$mybssql->update_config('bossbase', $bs_conf, 'bb_zoneInfo', $_POST['zoneInfo']);
@@ -149,11 +150,13 @@ $arrvals = array (
   'BS_EBC'    => ( $eqdkp->config['bs_showBC'] == 1 ) ? ' checked="checked"' : '',
 	'BS_EN2L'   => ( $eqdkp->config['bs_linkBL'] == 1 ) ? ' checked="checked"' : '',
   'BS_ENUPDCHECK' =>  ( $bs_conf['enable_updatechk'] == 1 ) ? ' checked="checked"' : '',
+  'BS_ENAUTOCLOSE' =>  ( $bs_conf['enable_autoclose'] == 1 ) ? ' checked="checked"' : '',
    
    // Language
 	'L_EBC' => $user->lang['bs_enable_bosscounter'],
 	'L_EN2L' => $user->lang['bs_enable_note2link'],
   'L_ENUPDCHECK' => $user->lang['bs_enable_updchk'],
+  'L_ENAUTOCLOSE' => $user->lang['bs_enable_autoclose'],
   
   //BossBase
 	'BP_NOTEDELIM' => $bs_conf['noteDelim'],

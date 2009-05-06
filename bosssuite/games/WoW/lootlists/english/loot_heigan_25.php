@@ -12,7 +12,7 @@ $loot = array(
 	array( "id" => "40235", "qual" => "4", "name" => "Helm of Pilgrimage" ),
 	array( "id" => "40209", "qual" => "4", "name" => "Bindings of the Decrepit" ),
 	array( "id" => "40201", "qual" => "4", "name" => "Leggings of Colossal Strides" ),
-	array( "id" => "40237", "qual" => "4", "name" => "Eruption-Scared Boots" ),
+	array( "id" => "40237", "qual" => "4", "name" => "Eruption-Scarred Boots" ),
 	array( "id" => "40203", "qual" => "4", "name" => "Breastplate of Tormented Rage" ),
 	array( "id" => "40210", "qual" => "4", "name" => "Chestguard of Bitter Charms" ),
 	array( "id" => "40204", "qual" => "4", "name" => "Legguards of the Apostle" ),

@@ -1,6 +1,6 @@
 <?php
 $loot = array(
-	array( "id" => "40437", "qual" => "4", "name" => "Schulterposter des Verbergens" ),
+	array( "id" => "40437", "qual" => "4", "name" => "Schulterpolster des Verbergens" ),
 	array( "id" => "40439", "qual" => "4", "name" => "Mantelung der ewigen Schildwache" ),
 	array( "id" => "40451", "qual" => "4", "name" => "Hyalinhelm des Scharfschützen" ),
 	array( "id" => "40438", "qual" => "4", "name" => "Schulterklappen der Versammlungskammer" ),

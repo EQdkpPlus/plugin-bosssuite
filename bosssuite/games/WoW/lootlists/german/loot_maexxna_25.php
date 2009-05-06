@@ -11,7 +11,7 @@ $loot = array(
 	array( "id" => "39765", "qual" => "4", "name" => "Bindungen des Sünders" ),
 	array( "id" => "39761", "qual" => "4", "name" => "Infektiöse Huschergamaschen" ),
 	array( "id" => "40061", "qual" => "4", "name" => "Zitternde Tunika" ),
-	array( "id" => "39762", "qual" => "4", "name" => "Fußlappen des zerrissenen Netzes" ),
+	array( "id" => "39762", "qual" => "4", "name" => "Umwicklung aus zerrissenen Netzen" ),
 	array( "id" => "39760", "qual" => "4", "name" => "Helm des lädierten Stolzes" ),
 	array( "id" => "39767", "qual" => "4", "name" => "Unverminderte Kampfplatte" ),
 	array( "id" => "39764", "qual" => "4", "name" => "Bindungen der bedauernswerten Beute" ),

@@ -17,10 +17,11 @@ $loot = array(
 	array( "id" => "40075", "qual" => "4", "name" => "Skrupellosigkeit" ),
 	array( "id" => "40107", "qual" => "4", "name" => "Sandgeschliffenes Band" ),
 	array( "id" => "40074", "qual" => "4", "name" => "Ring der starken Hand" ),
+	array( "id" => "40273", "qual" => "4", "name" => "Überzähliger Arm" ),
 	array( "id" => "40267", "qual" => "4", "name" => "Totem der Verhexung" ),
 	array( "id" => "40268", "qual" => "4", "name" => "Buchband der Toleranz" ),
-	array( "id" => "40266", "qual" => "4", "name" => "Heldenhingabe" ),
 	array( "id" => "40264", "qual" => "4", "name" => "Gespaltener Großhammer" ),
+	array( "id" => "40266", "qual" => "4", "name" => "Heldenhingabe" ),
 	array( "id" => "40265", "qual" => "4", "name" => "Gesang der Pfeile" ),
 );
 ?>

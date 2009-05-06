@@ -37,8 +37,7 @@ $modelviewer = array(
                               			<param name="quality" value="high"/>
                               			<param name="allowscriptaccess" value="always"/>
                               			<param name="menu" value="false"/>
-                          
-                              			<param name="bgcolor" value="#181818"/>
+                              			<param name="wmode" value="transparent"/>
                               			<param name="flashvars" value="model=%s&contentPath=http://static.wowhead.com/modelviewer/&blur=0"/>				
                               			</object>'
                   ),

@@ -1,5 +1,6 @@
 <?php
 $loot = array(
+	array( "id" => "40250", "qual" => "4", "name" => "Aged Winter Cloak" ),
 	array( "id" => "40254", "qual" => "4", "name" => "Cloak of Averted Crisis" ),
 	array( "id" => "40252", "qual" => "4", "name" => "Cloak of the Shadowed Sun" ),
 	array( "id" => "40253", "qual" => "4", "name" => "Shawl of the Old Maid" ),
@@ -21,7 +22,6 @@ $loot = array(
 	array( "id" => "40255", "qual" => "4", "name" => "Dying Curse" ),
 	array( "id" => "40258", "qual" => "4", "name" => "Forethought Talisman" ),
 	array( "id" => "40256", "qual" => "4", "name" => "Grim Toll" ),
-	array( "id" => "40273", "qual" => "4", "name" => "Surplus Limb" ),
 	array( "id" => "40281", "qual" => "4", "name" => "Twilight Mist" ),
 	array( "id" => "40280", "qual" => "4", "name" => "Origin of Nightmares" ),
 	array( "id" => "40284", "qual" => "4", "name" => "Plague Igniter" ),
