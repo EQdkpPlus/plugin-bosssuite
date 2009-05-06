@@ -10,7 +10,6 @@ $loot = array(
 	array( "id" => "45418", "qual" => "4", "name" => "Lady Maye's Sapphire Ring" ),
 	array( "id" => "45332", "qual" => "4", "name" => "Stormtip" ),
 	array( "id" => "45331", "qual" => "4", "name" => "Rune-Etched Nightblade" ),
-	array( "id" => "45458", "qual" => "4", "name" => "Stormedge" ),
 	array( "id" => "45330", "qual" => "4", "name" => "Greaves of Iron Intensity" ),
 	array( "id" => "45456", "qual" => "4", "name" => "Loop of the Agile" ),
 	array( "id" => "45447", "qual" => "4", "name" => "Watchful Eye" ),

@@ -17,10 +17,11 @@ $loot = array(
 	array( "id" => "40075", "qual" => "4", "name" => "Ruthlessness" ),
 	array( "id" => "40107", "qual" => "4", "name" => "Sand-Worn Band" ),
 	array( "id" => "40074", "qual" => "4", "name" => "Strong-Handed Ring" ),
+	array( "id" => "40273", "qual" => "4", "name" => "Surplus Limb" ),
 	array( "id" => "40267", "qual" => "4", "name" => "Totem of Hex" ),
 	array( "id" => "40268", "qual" => "4", "name" => "Libram of Tolerance" ),
-	array( "id" => "40266", "qual" => "4", "name" => "Hero's Surrender" ),
 	array( "id" => "40264", "qual" => "4", "name" => "Split Greathammer" ),
+	array( "id" => "40266", "qual" => "4", "name" => "Hero's Surrender" ),
 	array( "id" => "40265", "qual" => "4", "name" => "Arrowsong" ),
 );
 ?>

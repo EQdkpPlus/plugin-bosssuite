@@ -1,5 +1,6 @@
 <?php
 $loot = array(
+	array( "id" => "40250", "qual" => "4", "name" => "Alter Winterumhang" ),
 	array( "id" => "40254", "qual" => "4", "name" => "Umhang der abgewendeten Krise" ),
 	array( "id" => "40252", "qual" => "4", "name" => "Umhang der verfinsterten Sonne" ),
 	array( "id" => "40253", "qual" => "4", "name" => "Schal der alten Maid" ),
@@ -21,7 +22,6 @@ $loot = array(
 	array( "id" => "40255", "qual" => "4", "name" => "Letzter Fluch" ),
 	array( "id" => "40258", "qual" => "4", "name" => "Talisman der Vorsehung" ),
 	array( "id" => "40256", "qual" => "4", "name" => "Grimmiger Tribut" ),
-	array( "id" => "40273", "qual" => "4", "name" => "Extrabein" ),
 	array( "id" => "40281", "qual" => "4", "name" => "Nebel des Zwielichts" ),
 	array( "id" => "40280", "qual" => "4", "name" => "Alptraumserzeuger" ),
 	array( "id" => "40284", "qual" => "4", "name" => "Seuchenzünder" ),

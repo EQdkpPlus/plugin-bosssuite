@@ -19,9 +19,8 @@ $loot = array(
 	array( "id" => "40075", "qual" => "4", "name" => "Ruthlessness" ),
 	array( "id" => "40107", "qual" => "4", "name" => "Sand-Worn Band" ),
 	array( "id" => "40074", "qual" => "4", "name" => "Strong-Handed Ring" ),
-	array( "id" => "39716", "qual" => "4", "name" => "Shield of Assimilation" ),
 	array( "id" => "40208", "qual" => "4", "name" => "Cryptfiend's Bite" ),
+	array( "id" => "39716", "qual" => "4", "name" => "Shield of Assimilation" ),
 	array( "id" => "39712", "qual" => "4", "name" => "Gemmed Wand of the Nerubians" ),
-	array( "id" => "39714", "qual" => "4", "name" => "Webbed Death" ),
 );
 ?>

@@ -10,6 +10,5 @@ $loot = array(
 	array( "id" => "45418", "qual" => "4", "name" => "Lady Mayes Saphirring" ),
 	array( "id" => "45332", "qual" => "4", "name" => "Sturmspitze" ),
 	array( "id" => "45331", "qual" => "4", "name" => "Runengeätzte Nachtklinge" ),
-	array( "id" => "45458", "qual" => "4", "name" => "Sturmschneide" ),
 );
 ?>

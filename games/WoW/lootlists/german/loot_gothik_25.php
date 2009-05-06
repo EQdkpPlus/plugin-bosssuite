@@ -20,7 +20,7 @@ $loot = array(
 	array( "id" => "40258", "qual" => "4", "name" => "Talisman der Vorsehung" ),
 	array( "id" => "40256", "qual" => "4", "name" => "Grimmiger Tribut" ),
 	array( "id" => "40342", "qual" => "4", "name" => "Götze der Erweckung" ),
-	array( "id" => "40337", "qual" => "4", "name" => "Buchband der Wiederauferstehung" ),
+	array( "id" => "40337", "qual" => "4", "name" => "Buchband des Wiederaufflammens" ),
 	array( "id" => "40336", "qual" => "4", "name" => "Leben und Tod" ),
 	array( "id" => "40335", "qual" => "4", "name" => "Berührung des Grauens" ),
 );

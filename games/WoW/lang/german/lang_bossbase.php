@@ -284,7 +284,8 @@ $lang['kelthuzad_25'] = array('long' => 'Kel\'Thuzad (25)', 'short' => 'Kel\'Thu
 
 /******Vault of Archavon (25)*****/
 $lang['vault_of_archavon_25'] = array('long' => 'Archavons Kammer (25)', 'short' => 'AK (25)');
-$lang['archavon_25'] = array('long' => 'Emalon der Sturmwächter (25)', 'short' => 'Archavon (25)');
+$lang['archavon_25'] = array('long' => 'Archavon der Steinwächter (25)', 'short' => 'Archavon (25)');
+$lang['emalon_25'] = array('long' => 'Emalon der Sturmwächter (25)', 'short' => 'Emalon (25)');
 
 /******Eye of Eternity (25)*****/  
 $lang['eye_of_eternity_25'] = array('long' => 'Auge der Ewigkeit (25)', 'short' => 'AdE (25)');

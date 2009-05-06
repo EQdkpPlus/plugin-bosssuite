@@ -123,9 +123,12 @@ if($mode == 'zone'){
 }
 $zbcode .= '</table>';
 
+$bs_conf = $mybssql->get_config('bossbase');
+
 $tpl->assign_vars(array(
     'F_SETTINGS'  => "entity_conf.php".$SID."&amp;mode=$mode&amp;entity=$entity",
     'SETTINGS'    => $zbcode,
+    'AUTOCLOSE'   => ( $bs_conf['enable_autoclose'] == 1 ) ? ' onclick="self.close()"' : '',
     'L_SUBMIT'    => $user->lang['bs_al_submit'],
     )
 );
