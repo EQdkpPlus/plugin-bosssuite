@@ -16,7 +16,7 @@ $loot = array(
 	array( "id" => "40370", "qual" => "4", "name" => "Gatekeeper" ),
 	array( "id" => "40375", "qual" => "4", "name" => "Ring of Decaying Beauty" ),
 	array( "id" => "40371", "qual" => "4", "name" => "Bandit's Insignia" ),
-	array( "id" => "40373", "qual" => "4", "name" => "Extract of Necromatic Power" ),
+	array( "id" => "40373", "qual" => "4", "name" => "Extract of Necromantic Power" ),
 	array( "id" => "40372", "qual" => "4", "name" => "Rune of Repulsion" ),
 	array( "id" => "40382", "qual" => "4", "name" => "Soul of the Dead" ),
 	array( "id" => "40368", "qual" => "4", "name" => "Murder" ),

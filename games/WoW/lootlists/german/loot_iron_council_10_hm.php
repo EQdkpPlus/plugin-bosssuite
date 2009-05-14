@@ -10,7 +10,6 @@ $loot = array(
 	array( "id" => "45418", "qual" => "4", "name" => "Lady Mayes Saphirring" ),
 	array( "id" => "45332", "qual" => "4", "name" => "Sturmspitze" ),
 	array( "id" => "45331", "qual" => "4", "name" => "Runengeätzte Nachtklinge" ),
-	array( "id" => "45458", "qual" => "4", "name" => "Sturmschneide" ),
 	array( "id" => "45330", "qual" => "4", "name" => "Schienbeinschützer der eisernen Intensität" ),
 	array( "id" => "45456", "qual" => "4", "name" => "Ring des Beweglichen" ),
 	array( "id" => "45447", "qual" => "4", "name" => "Wachsames Auge" ),

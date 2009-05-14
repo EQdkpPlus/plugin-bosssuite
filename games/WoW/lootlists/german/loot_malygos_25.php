@@ -23,5 +23,9 @@ $loot = array(
 	array( "id" => "43952", "qual" => "4", "name" => "Zügel des Azurdrachen" ),
 	array( "id" => "44577", "qual" => "4", "name" => "Heroischer Schlüssel der fokussierenden Iris" ),
 	array( "id" => "44650", "qual" => "1", "name" => "Herz der Magie" ),
+	array( "id" => "44664", "qual" => "4", "name" => "Gunst der Drachenkönigin" ),
+	array( "id" => "44662", "qual" => "4", "name" => "Medaillon der Lebensbinderin" ),
+	array( "id" => "44665", "qual" => "4", "name" => "Perlen des Nexuskriegchampions" ),
+	array( "id" => "44661", "qual" => "4", "name" => "Wyrmruhhalskette der Macht" ),
 );
 ?>

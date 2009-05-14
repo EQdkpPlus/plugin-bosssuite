@@ -7,7 +7,7 @@ $loot = array(
 	array( "id" => "39267", "qual" => "4", "name" => "Monstrositätenklingenschultern" ),
 	array( "id" => "39262", "qual" => "4", "name" => "Stulpen der kombinierten Stärke" ),
 	array( "id" => "39261", "qual" => "4", "name" => "Verdorbener Gurt der Heilung" ),
-	array( "id" => "39270", "qual" => "4", "name" => "Hasshieb" ),
 	array( "id" => "39271", "qual" => "4", "name" => "Klinge der schlummernden Erinnerungen" ),
+	array( "id" => "39270", "qual" => "4", "name" => "Hasshieb" ),
 );
 ?>

@@ -17,8 +17,8 @@ $loot = array(
 	array( "id" => "45235", "qual" => "4", "name" => "Strahlendes Siegel" ),
 	array( "id" => "45233", "qual" => "4", "name" => "Runenschneide" ),
 	array( "id" => "45234", "qual" => "4", "name" => "Euphorie" ),
-	array( "id" => "45242", "qual" => "4", "name" => "Drape of Mortal Downfall" ),
-	array( "id" => "45241", "qual" => "4", "name" => "Belt of Colossal Rage" ),
+	array( "id" => "45242", "qual" => "4", "name" => "Tuch des tödlichen Untergangs" ),
+	array( "id" => "45241", "qual" => "4", "name" => "Gürtel der kolossalen Wut" ),
 	array( "id" => "45857", "qual" => "4", "name" => "Datenscheibe des Archivums" ),
 );
 ?>

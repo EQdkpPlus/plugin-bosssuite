@@ -36,6 +36,8 @@ if($mode != 'boss' && $mode!='zone'){
   message_die("Invalid mode: $mode");
 }
 
+$bs_conf = $mybssql->get_config('bossbase');
+
 // Save the settings
 if ($_POST['bpsavebu']){
   $strings = strip_tags(htmlspecialchars($_POST['strings']));
@@ -62,6 +64,9 @@ if ($_POST['bpsavebu']){
   
   //Update cache if necessary
   $pm->do_hooks('/plugins/bosssuite/admin/entity_conf.php');
+  if($bs_conf['enable_autoclose'] == 1 ){
+    echo "<script>parent.window.location.href = 'bzone.php';</script>";
+  }
 }
 
 if($mode == 'zone'){
@@ -87,14 +92,14 @@ $zbcode = '<table width="100%" border="0" cellspacing="1" cellpadding="2">';
 $zbcode .= '<tr class="'.$eqdkp->switch_row_class().'">';
 $zbcode .= '<td>'.$user->lang['bs_ol_fd'].'</td>';
 $zbcode .= '<td>';
-$zbcode .= $jquery->Calendar("fd_offs", bs_date2text($data['fd_offs']), '', $user->lang['bs_out_date_format']);
+$zbcode .= $jquery->Calendar("fd_offs", bs_date2text($data['fd_offs']), '', array('format' => $user->lang['bs_out_date_format']));
 $zbcode .= '</td>';
 $zbcode .= '</tr>';
 
 $zbcode .= '<tr class="'.$eqdkp->switch_row_class().'">';
 $zbcode .= '<td>'.$user->lang['bs_ol_ld'].'</td>';
 $zbcode .= '<td>';
-$zbcode .= $jquery->Calendar("ld_offs", bs_date2text($data['ld_offs']), '', $user->lang['bs_out_date_format']);
+$zbcode .= $jquery->Calendar("ld_offs", bs_date2text($data['ld_offs']), '', array('format' => $user->lang['bs_out_date_format']));
 $zbcode .= '</td>';
 $zbcode .= '</tr>';
 

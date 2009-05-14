@@ -168,6 +168,7 @@ $lang = array(
 
 'bs_enable_updchk' => 'Enable check for new Plugin Versions',
 'bl_opt_en_mv' => 'Enable wowhead modelviewer',
+'bs_enable_autoclose' => 'Auto-close boss/zone popup after saving',
 );
 
 ?>

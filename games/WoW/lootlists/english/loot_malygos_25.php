@@ -23,5 +23,9 @@ $loot = array(
 	array( "id" => "43952", "qual" => "4", "name" => "Reins of the Azure Drake" ),
 	array( "id" => "44577", "qual" => "4", "name" => "Heroic Key to the Focusing Iris" ),
 	array( "id" => "44650", "qual" => "1", "name" => "Heart of Magic" ),
+	array( "id" => "44664", "qual" => "4", "name" => "Favor of the Dragon Queen" ),
+	array( "id" => "44662", "qual" => "4", "name" => "Life-Binder's Locket" ),
+	array( "id" => "44665", "qual" => "4", "name" => "Nexus War Champion Beads" ),
+	array( "id" => "44661", "qual" => "4", "name" => "Wyrmrest Necklace of Power" ),
 );
 ?>

@@ -2,7 +2,7 @@
 $loot = array(
 	array( "id" => "40325", "qual" => "4", "name" => "Bindungen des wachen Geists" ),
 	array( "id" => "40326", "qual" => "4", "name" => "Stiefel der aussichtslosen Wünsche" ),
-	array( "id" => "40305", "qual" => "4", "name" => "Schiftung des Egoismus" ),
+	array( "id" => "40305", "qual" => "4", "name" => "Schiftung des Geltungsbedürfnisses" ),
 	array( "id" => "40319", "qual" => "4", "name" => "Brustharnisch des Misstrauens" ),
 	array( "id" => "40323", "qual" => "4", "name" => "Geschätzte Bindungen" ),
 	array( "id" => "40315", "qual" => "4", "name" => "Schulterpolster der geheimen Künste" ),

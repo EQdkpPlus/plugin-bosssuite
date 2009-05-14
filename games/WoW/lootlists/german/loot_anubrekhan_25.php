@@ -19,9 +19,8 @@ $loot = array(
 	array( "id" => "40075", "qual" => "4", "name" => "Skrupellosigkeit" ),
 	array( "id" => "40107", "qual" => "4", "name" => "Sandgeschliffenes Band" ),
 	array( "id" => "40074", "qual" => "4", "name" => "Ring der starken Hand" ),
-	array( "id" => "39716", "qual" => "4", "name" => "Schild der Assimilierung" ),
 	array( "id" => "40208", "qual" => "4", "name" => "Biss der Gruftbestie" ),
+	array( "id" => "39716", "qual" => "4", "name" => "Schild der Assimilierung" ),
 	array( "id" => "39712", "qual" => "4", "name" => "Edelsteinbesetzter Zauberstab der Neruber" ),
-  array( "id" => "39714", "qual" => "4", "name" => "Eingesponnener Tod" ),
 );
 ?>

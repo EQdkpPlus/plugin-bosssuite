@@ -72,6 +72,7 @@ foreach ($bzone as $zoneid => $bosslist){
 $tpl->assign_vars(array(
 	'F_CONFIG' => 'bzone.php' . $SID,
   'CONFIGURE_PACK'  => $html_conf_pack,
+  'JS_POPUP_FUNC' =>  $jquery->Dialog_URL('BS_ENTITY_CONF', $user->lang['bs_am_conf'], "entity_conf.php?mode='+mode+'&entity='+entity+'", '640', '200', 'bzone.php'),
   'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '500', '600'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
   'JQUERY_INCLUDES'   => $jquery->Header(),
@@ -86,8 +87,8 @@ $eqdkp->set_vars(array(
 ));
 
 function bs_gen_popup_link($mode, $entity){
-global $user;
-  return "<a target=\"popup\" onClick=\"window.open('', 'popup', 'width=640,height=200,scrollbars=no, toolbar=no,status=no, resizable=yes,menubar=no,location=no,directories=no,top=50,left=50')\"href=\"entity_conf.php?mode=$mode&amp;entity=$entity\">".$user->lang['bs_am_conf']."</a>";
+global $user, $jquery;
+  return '<a onclick="javascript:EntityConf(\''.$mode.'\', \''.$entity.'\')"  style="cursor:pointer;" onmouseover="style.textDecoration=\'underline\';" onmouseout="style.textDecoration=\'none\';" />'.$user->lang['bs_am_conf'].'</a>';
 }
 
 ?>

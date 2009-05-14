@@ -1,6 +1,6 @@
 <?php
 $loot = array(
-	array( "id" => "40250", "qual" => "4", "name" => "Gealterter Winterumhang" ),
+	array( "id" => "40250", "qual" => "4", "name" => "Alter Winterumhang" ),
 	array( "id" => "40254", "qual" => "4", "name" => "Umhang der abgewendeten Krise" ),
 	array( "id" => "40252", "qual" => "4", "name" => "Umhang der verfinsterten Sonne" ),
 	array( "id" => "40253", "qual" => "4", "name" => "Schal der alten Maid" ),

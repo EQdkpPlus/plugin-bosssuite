@@ -13,5 +13,9 @@ $loot = array(
 	array( "id" => "43953", "qual" => "4", "name" => "Reins of the Blue Drake" ),
 	array( "id" => "44569", "qual" => "4", "name" => "Key to the Focusing Iris" ),
 	array( "id" => "44650", "qual" => "1", "name" => "Heart of Magic" ),
+	array( "id" => "44658", "qual" => "4", "name" => "Chain of the Ancient Wyrm" ),
+	array( "id" => "44660", "qual" => "4", "name" => "Drakescale Collar" ),
+	array( "id" => "44659", "qual" => "4", "name" => "Pendant of the Dragonsworn" ),
+	array( "id" => "44657", "qual" => "4", "name" => "Torque of the Red Dragonflight" ),
 );
 ?>

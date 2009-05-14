@@ -171,6 +171,7 @@ $lang = array(
 
 'bs_enable_updchk' => 'Überprüfe ob neue Plugin Versionen existieren',
 'bl_opt_en_mv' => 'wowhead Modelviewer aktivieren',
+'bs_enable_autoclose' => 'Schließe Boss/Zonen-Popup automatisch nach dem speichern',
 );
 
 ?>
