@@ -13,5 +13,6 @@ $loot = array(
 	array( "id" => "45886", "qual" => "4", "name" => "Eiskernstab" ),
 	array( "id" => "45887", "qual" => "4", "name" => "Eisbedeckte Barriere" ),
 	array( "id" => "45877", "qual" => "4", "name" => "Die boreale Wache" ),
+	array( "id" => "45786", "qual" => "1", "name" => "Hodirs Siegel" ),
 );
 ?>

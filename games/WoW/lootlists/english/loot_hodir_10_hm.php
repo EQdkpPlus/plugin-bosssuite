@@ -13,5 +13,6 @@ $loot = array(
 	array( "id" => "45886", "qual" => "4", "name" => "Icecore Staff" ),
 	array( "id" => "45887", "qual" => "4", "name" => "Ice Layered Barrier" ),
 	array( "id" => "45877", "qual" => "4", "name" => "The Boreal Guard" ),
+	array( "id" => "45786", "qual" => "1", "name" => "Hodir's Sigil" ),
 );
 ?>

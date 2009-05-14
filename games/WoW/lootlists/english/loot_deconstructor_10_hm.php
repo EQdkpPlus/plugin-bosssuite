@@ -10,6 +10,10 @@ $loot = array(
 	array( "id" => "45675", "qual" => "4", "name" => "Power Enhancing Loop" ),
 	array( "id" => "45685", "qual" => "4", "name" => "Plasma Foil" ),
 	array( "id" => "45682", "qual" => "4", "name" => "Pulsing Spellshield" ),
+	array( "id" => "45869", "qual" => "4", "name" => "Fluxing Energy Coils" ),
+	array( "id" => "45867", "qual" => "4", "name" => "Breastplate of the Stoneshaper" ),
+	array( "id" => "45871", "qual" => "4", "name" => "Seal of Ulduar" ),
 	array( "id" => "45868", "qual" => "4", "name" => "Aesir's Edge" ),
+	array( "id" => "45870", "qual" => "4", "name" => "Magnetized Projectile Emitter" ),
 );
 ?>
