@@ -49,9 +49,9 @@ if ( !defined('EQDKP_INC') ){
                       'file'  => '439_to_440.php',
                       'old'   => '4.3.9',
         ),
-        '4.5.0'   => array(
-                      'file'  => '440_to_450.php',
-                      'old'   => '4.4.0',
+        '4.5.1'   => array(
+                      'file'  => '450_to_451.php',
+                      'old'   => '4.5.0',
         ),
   );
 ?>
