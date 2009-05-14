@@ -5,7 +5,6 @@ $loot = array(
 	array( "id" => "45935", "qual" => "4", "name" => "Ironbark Faceguard" ),
 	array( "id" => "45936", "qual" => "4", "name" => "Legplates of Flourishing Resolve" ),
 	array( "id" => "45934", "qual" => "4", "name" => "Unraveling Reach" ),
-	array( "id" => "45947", "qual" => "4", "name" => "Serilas" ),
 	array( "id" => "46110", "qual" => "3", "name" => "Alchemist's Cache" ),
 	array( "id" => "45644", "qual" => "4", "name" => "Gloves of the Wayward Conqueror" ),
 	array( "id" => "45645", "qual" => "4", "name" => "Gloves of the Wayward Protector" ),
