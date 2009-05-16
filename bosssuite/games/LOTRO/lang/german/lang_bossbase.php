@@ -142,7 +142,7 @@ $lang['the_lost'] = array('long' => 'Der Verlorene', 'short' => 'Der Verlorene')
 
 /******Fil Gashan*****/
 $lang['fil_gashan'] = array('long' => 'Fil Gashan', 'short' => 'FG');
-$lang['chef_vrarz'] = array('long' => 'Anführer Vrarz', 'short' => 'Vrarz');
+$lang['chef_vrarz'] = array('long' => 'Vrarz der Koch', 'short' => 'Vrarz');
 $lang['commander_greb'] = array('long' => 'Kommandeur Greb', 'short' => 'Greb');
 $lang['general_talug'] = array('long' => 'General Talug', 'short' => 'Talug');
 
@@ -173,4 +173,8 @@ $lang['gurvand'] = array('long' => 'Gurvand', 'short' => 'Gurvand');
 $lang['forgotten_treasury'] = array('long' => 'Die Vergessene Schatzkammer', 'short' => 'VS');
 $lang['skum_urauth'] = array('long' => 'Skûm und Urauth', 'short' => 'S&U');
 $lang['morthun'] = array('long' => 'Morthûn', 'short' => 'Morthûn');
+
+/******Filikul*****/
+$lang['filikul'] = array('long' => 'Filikul', 'short' => 'Filikul');
+$lang['nornuan'] = array('long' => 'Nornúan', 'short' => 'Nornúan');
 ?>
