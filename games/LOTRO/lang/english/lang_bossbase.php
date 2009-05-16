@@ -173,4 +173,8 @@ $lang['gurvand'] = array('long' => 'Gurvand', 'short' => 'Gurvand');
 $lang['forgotten_treasury'] = array('long' => 'The Forgotten Treasury', 'short' => 'FT');
 $lang['skum_urauth'] = array('long' => 'Skûm and Urauth', 'short' => 'S&U');
 $lang['morthun'] = array('long' => 'Morthûn', 'short' => 'Morthûn');
+
+/******Filikul*****/
+$lang['filikul'] = array('long' => 'Filikul', 'short' => 'Filikul');
+$lang['nornuan'] = array('long' => 'Nornúan', 'short' => 'Nornúan');
 ?>

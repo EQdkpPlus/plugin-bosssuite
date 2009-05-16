@@ -53,5 +53,9 @@ if ( !defined('EQDKP_INC') ){
                       'file'  => '450_to_451.php',
                       'old'   => '4.5.0',
         ),
+        '4.5.2'   => array(
+                      'file'  => '451_to_452.php',
+                      'old'   => '4.5.1',
+        ),
   );
 ?>

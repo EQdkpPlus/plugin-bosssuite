@@ -42,6 +42,9 @@ $bzone = array (
 'vile_maw' => array (
     'watcher',
 ),
+'filikul' => array (
+    'nornuan',
+),
 'grand_stair' => array (
     'ilzkal',
     'glothrok',
