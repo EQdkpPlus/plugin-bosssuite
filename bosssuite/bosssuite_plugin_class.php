@@ -30,7 +30,8 @@ class bosssuite_Plugin_Class extends EQdkp_Plugin {
 
   var $additional_data;
   var $version = '4.5.3';
-  
+  var $fwversion  = '1.0.4';  // required framework Version
+
 	function bosssuite_plugin_class($pm) {
 		
 		global $eqdkp, $eqdkp_root_path, $user, $SID, $table_prefix;
