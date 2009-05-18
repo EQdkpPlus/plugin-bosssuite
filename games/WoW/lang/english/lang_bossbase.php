@@ -257,7 +257,6 @@ $lang['deconstructor_10']   = array('long' => 'XT-002 Deconstructor (10)', 'shor
 $lang['deconstructor_10_hm']   = array('long' => 'XT-002 Deconstructor HM(10)', 'short' => 'Deconstructor HM(10)');
 $lang['kologarn_10']    = array('long' => 'Kologarn (10)', 'short' => 'Kologarn (10)');
 $lang['auriaya_10']    = array('long' => 'Auriaya (10)', 'short' => 'Auriaya (10)');
-$lang['auriaya_10_hm']    = array('long' => 'Auriaya HM(10)', 'short' => 'Auriaya HM(10)');
 $lang['mimiron_10']    = array('long' => 'Mimiron (10)', 'short' => 'Mimiron (10)');
 $lang['mimiron_10_hm']    = array('long' => 'Mimiron HM(10)', 'short' => 'Mimiron HM(10)');
 $lang['yoggsaron_10']       = array('long' => 'Yogg-Saron (10)', 'short' => 'Yogg-Saron (10)');
@@ -318,7 +317,6 @@ $lang['deconstructor_25']   = array('long' => 'XT-002 Deconstructor (25)', 'shor
 $lang['deconstructor_25_hm']   = array('long' => 'XT-002 Deconstructor HM(25)', 'short' => 'Deconstructor HM(25)');
 $lang['kologarn_25']    = array('long' => 'Kologarn (25)', 'short' => 'Kologarn (25)');
 $lang['auriaya_25']    = array('long' => 'Auriaya (25)', 'short' => 'Auriaya (25)');
-$lang['auriaya_25_hm']    = array('long' => 'Auriaya HM(25)', 'short' => 'Auriaya HM(25)');
 $lang['mimiron_25']    = array('long' => 'Mimiron (25)', 'short' => 'Mimiron (25)');
 $lang['mimiron_25_hm']    = array('long' => 'Mimiron HM(25)', 'short' => 'Mimiron HM(25)');
 $lang['yoggsaron_25']       = array('long' => 'Yogg-Saron (25)', 'short' => 'Yogg-Saron (25)');
