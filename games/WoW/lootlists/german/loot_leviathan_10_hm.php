@@ -10,7 +10,7 @@ $loot = array(
 	array( "id" => "45284", "qual" => "4", "name" => "Kinetischer Reißer" ),
 	array( "id" => "45287", "qual" => "4", "name" => "Feuerseele" ),
 	array( "id" => "45282", "qual" => "4", "name" => "Eisenseele" ),
-	array( "id" => "45293", "qual" => "4", "name" => "Handguards of Potent Cures" ),
+	array( "id" => "45293", "qual" => "4", "name" => "Handschützer der mächtigen Heilungen" ),
 	array( "id" => "45300", "qual" => "4", "name" => "Mantelung der feurigen Rache" ),
 	array( "id" => "45295", "qual" => "4", "name" => "Vergoldete Stahlbeinplatten" ),
 	array( "id" => "45297", "qual" => "4", "name" => "Schimmerndes Siegel" ),

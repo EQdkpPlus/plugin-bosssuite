@@ -9,7 +9,7 @@ $loot = array(
 	array( "id" => "45680", "qual" => "4", "name" => "Armbänder des Konstrukts" ),
 	array( "id" => "45675", "qual" => "4", "name" => "Machtverstärkender Ring" ),
 	array( "id" => "45685", "qual" => "4", "name" => "Plasmaflorett" ),
-	array( "id" => "45682", "qual" => "4", "name" => "Pulsierendes Zauberschild" ),
+	array( "id" => "45682", "qual" => "4", "name" => "Pulsierender Zauberschild" ),
 	array( "id" => "45869", "qual" => "4", "name" => "Fluktuierende Energiespulen" ),
 	array( "id" => "45867", "qual" => "4", "name" => "Brustplatte des Steinformers" ),
 	array( "id" => "45871", "qual" => "4", "name" => "Siegel von Ulduar" ),
