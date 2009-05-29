@@ -14,6 +14,6 @@ $loot = array(
 	array( "id" => "45946", "qual" => "4", "name" => "Feuerorchideensiegel" ),
 	array( "id" => "45947", "qual" => "4", "name" => "Serilas, Blutklinge des Invar Einarm" ),
 	array( "id" => "45294", "qual" => "4", "name" => "Versteinerter Efeuzweig" ),
-	array( "id" => "45788", "qual" => "1", "name" => "Freya's Sigil" ),
+	array( "id" => "45788", "qual" => "1", "name" => "Freyas Siegel" ),
 );
 ?>

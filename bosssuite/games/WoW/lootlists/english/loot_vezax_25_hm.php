@@ -18,6 +18,6 @@ $loot = array(
 	array( "id" => "45498", "qual" => "4", "name" => "Lotrafen, Spear of the Damned" ),
 	array( "id" => "45511", "qual" => "4", "name" => "Scepter of Lost Souls" ),
 	array( "id" => "45518", "qual" => "4", "name" => "Flare of the Heavens" ),
-	array( "id" => "45516", "qual" => "4", "name" => "Voldrethar" ),
+	array( "id" => "45516", "qual" => "4", "name" => "Voldrethar, Dark Blade of Oblivion" ),
 );
 ?>

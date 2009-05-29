@@ -17,7 +17,7 @@ $loot = array(
 	array( "id" => "45145", "qual" => "4", "name" => "Buchband des geheiligten Schildes" ),
 	array( "id" => "45498", "qual" => "4", "name" => "Lotrafen, Speer der Verdammten" ),
 	array( "id" => "45511", "qual" => "4", "name" => "Szepter der verlorenen Seelen" ),
-	array( "id" => "45518", "qual" => "4", "name" => "Flare of the Heavens" ),
+	array( "id" => "45518", "qual" => "4", "name" => "Leuchtfeuer der Himmel" ),
 	array( "id" => "45516", "qual" => "4", "name" => "Voldrethar, dunkle Klinge der Auslöschung" ),
 );
 ?>

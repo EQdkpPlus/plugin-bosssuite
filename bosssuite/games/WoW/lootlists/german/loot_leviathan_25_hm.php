@@ -19,7 +19,7 @@ $loot = array(
 	array( "id" => "45086", "qual" => "4", "name" => "Aufgehende Sonne" ),
 	array( "id" => "45135", "qual" => "4", "name" => "Stiefel der feurigen Entschlossenheit" ),
 	array( "id" => "45136", "qual" => "4", "name" => "Schulterpolster der schlafenden Energien" ),
-	array( "id" => "45134", "qual" => "4", "name" => "Plated Leggings of Ruination" ),
+	array( "id" => "45134", "qual" => "4", "name" => "Plattengamaschen des Ruins" ),
 	array( "id" => "45133", "qual" => "4", "name" => "Anhänger der feurigen Verwüstung" ),
 	array( "id" => "45132", "qual" => "4", "name" => "Goldener Saronitdrache" ),
 );

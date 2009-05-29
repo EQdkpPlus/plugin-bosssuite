@@ -17,6 +17,6 @@ $loot = array(
 	array( "id" => "46095", "qual" => "4", "name" => "Seelenverschlingender Sattelgurt" ),
 	array( "id" => "46096", "qual" => "4", "name" => "Siegel der sanften Trauer" ),
 	array( "id" => "46097", "qual" => "4", "name" => "Liebkosung des Wahnsinns" ),
-	array( "id" => "46067", "qual" => "4", "name" => "Hammer of Crushing Whispers" ),
+	array( "id" => "46067", "qual" => "4", "name" => "Hammer des zerquetschenden Geflüsters" ),
 );
 ?>
