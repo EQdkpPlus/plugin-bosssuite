@@ -101,6 +101,20 @@ foreach ($eq2_additions as $key => $value){
   );
 }
 
+$rom_additions = array(
+  'Basic Support' => 'Cetos, of the Muinin Server',
+  'Zone Images' => 'Cetos from Ingame Content',
+  'Boss Images' => 'Cetos captured from the Buffed.de 3D-Views', 
+);
+      
+foreach ($rom_additions as $key => $value){
+  $tpl->assign_block_vars('rom_addition_row', array(
+      'KEY'    => $key,
+      'VALUE' => $value,
+    )
+  );
+}
+
 $tpl->assign_vars(array(
     'I_GLUPSCHI'                => 'credits/glupschi.png',
     'I_ITEM_NAME'               => 'credits/bs4_logo.jpg',
@@ -117,6 +131,7 @@ $tpl->assign_vars(array(
     'L_VSOH_ADDITONS'           => $user->lang['bs_additions'] . ' Vanguard - Saga of Heroes™',
     'L_LOTRO_ADDITONS'          => $user->lang['bs_additions'] . ' Lord of the rings: online™',
     'L_EQ2_ADDITONS'            => $user->lang['bs_additions'] . ' Everquest II™',
+    'L_ROM_ADDITONS'            => $user->lang['bs_additions'] . ' Runes of Magic™',
     'L_TXT_DEVTEAM'							=> $user->lang['bs_credits_p2'],
     'L_DEVTEAM'									=> $user->lang['bs_copyright'],
     'L_VERSION'                 => $pm->get_data('bosssuite', 'version'),
