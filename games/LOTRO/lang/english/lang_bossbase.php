@@ -177,4 +177,13 @@ $lang['morthun'] = array('long' => 'Morthûn', 'short' => 'Morthûn');
 /******Filikul*****/
 $lang['filikul'] = array('long' => 'Filikul', 'short' => 'Filikul');
 $lang['nornuan'] = array('long' => 'Nornúan', 'short' => 'Nornúan');
+
+/******Dâr Narbugud*****/
+$lang['dar_narbugud'] = array('long' => 'Dâr Narbugud', 'short' => 'Dâr Narbugud');
+$lang['rung_blagh'] = array('long' => 'Rung and Blagh', 'short' => 'Rung and Blagh');
+$lang['zholuga'] = array('long' => 'Zholuga', 'short' => 'Zholuga');
+$lang['istum'] = array('long' => 'Îstum', 'short' => 'Îstum');
+$lang['flagit'] = array('long' => 'Flâgît', 'short' => 'Flâgît');
+$lang['the_blind_one'] = array('long' => 'The Blind One', 'short' => 'The Blind One');
+$lang['mistress_of_pestilence'] = array('long' => 'The Mistress of Pestilence', 'short' => 'Mistress');
 ?>

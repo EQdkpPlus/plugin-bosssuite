@@ -17,6 +17,8 @@ $loot = array(
 	array( "id" => "45246", "qual" => "4", "name" => "Golem-Shard Sticker" ),
 	array( "id" => "45256", "qual" => "4", "name" => "Twisted Visage" ),
 	array( "id" => "45257", "qual" => "4", "name" => "Quartz Crystal Wand" ),
+	array( "id" => "45446", "qual" => "4", "name" => "Grasps of Reason" ),
+	array( "id" => "45444", "qual" => "4", "name" => "Gloves of the Steady Hand" ),
 	array( "id" => "45445", "qual" => "4", "name" => "Breastplate of the Devoted" ),
 	array( "id" => "45443", "qual" => "4", "name" => "Charm of Meticulous Timing" ),
 	array( "id" => "45442", "qual" => "4", "name" => "Sorthalis, Hammer of the Watchers" ),

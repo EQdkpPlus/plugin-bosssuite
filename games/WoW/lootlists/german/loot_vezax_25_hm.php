@@ -17,6 +17,9 @@ $loot = array(
 	array( "id" => "45145", "qual" => "4", "name" => "Buchband des geheiligten Schildes" ),
 	array( "id" => "45498", "qual" => "4", "name" => "Lotrafen, Speer der Verdammten" ),
 	array( "id" => "45511", "qual" => "4", "name" => "Szepter der verlorenen Seelen" ),
+	array( "id" => "45520", "qual" => "4", "name" => "Handlappen des Wachsamen" ),
+	array( "id" => "45519", "qual" => "4", "name" => "Gewänder des blinden Einwohners" ),
+	array( "id" => "45517", "qual" => "4", "name" => "Pendel der Unendlichkeit" ),
 	array( "id" => "45518", "qual" => "4", "name" => "Leuchtfeuer der Himmel" ),
 	array( "id" => "45516", "qual" => "4", "name" => "Voldrethar, dunkle Klinge der Auslöschung" ),
 );

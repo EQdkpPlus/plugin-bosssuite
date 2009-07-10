@@ -11,12 +11,11 @@ $loot = array(
 	array( "id" => "45320", "qual" => "4", "name" => "Schulterplatten des Ewigen" ),
 	array( "id" => "45334", "qual" => "4", "name" => "Unzerstörbarer Brustschutz" ),
 	array( "id" => "45434", "qual" => "4", "name" => "Schienbeinschützer des Felsheilers" ),
-	array( "id" => "45480", "qual" => "4", "name" => "Nymphenherzglücksbringer" ),
 	array( "id" => "45326", "qual" => "4", "name" => "Platinband der Aesir" ),
 	array( "id" => "45438", "qual" => "4", "name" => "Ring des treuen Dieners" ),
 	array( "id" => "45436", "qual" => "4", "name" => "Buchband des Entschlossenen" ),
-	array( "id" => "45315", "qual" => "4", "name" => "Steinreißer" ),
 	array( "id" => "45437", "qual" => "4", "name" => "Runenbeschriebene Klinge" ),
+	array( "id" => "45315", "qual" => "4", "name" => "Steinreißer" ),
 	array( "id" => "45327", "qual" => "4", "name" => "Weinen der Sirene" ),
 );
 ?>

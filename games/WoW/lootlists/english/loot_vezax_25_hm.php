@@ -17,6 +17,9 @@ $loot = array(
 	array( "id" => "45145", "qual" => "4", "name" => "Libram of the Sacred Shield" ),
 	array( "id" => "45498", "qual" => "4", "name" => "Lotrafen, Spear of the Damned" ),
 	array( "id" => "45511", "qual" => "4", "name" => "Scepter of Lost Souls" ),
+	array( "id" => "45520", "qual" => "4", "name" => "Handwraps of the Vigilant" ),
+	array( "id" => "45519", "qual" => "4", "name" => "Vestments of the Blind Denizen" ),
+	array( "id" => "45517", "qual" => "4", "name" => "Pendulum of Infinity" ),
 	array( "id" => "45518", "qual" => "4", "name" => "Flare of the Heavens" ),
 	array( "id" => "45516", "qual" => "4", "name" => "Voldrethar, Dark Blade of Oblivion" ),
 );

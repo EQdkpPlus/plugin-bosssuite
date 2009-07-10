@@ -5,9 +5,9 @@ $loot = array(
 	array( "id" => "45935", "qual" => "4", "name" => "Eisenborkengesichtsschutz" ),
 	array( "id" => "45936", "qual" => "4", "name" => "Beinplatten der blühenden Entschlossenheit" ),
 	array( "id" => "45934", "qual" => "4", "name" => "Entwirrende Reichweite" ),
-	array( "id" => "46110", "qual" => "3", "name" => "Alchemistenbeutel" ),
 	array( "id" => "45644", "qual" => "4", "name" => "Handschuhe des abtrünnigen Eroberers" ),
 	array( "id" => "45645", "qual" => "4", "name" => "Handschuhe des abtrünnigen Beschützers" ),
 	array( "id" => "45646", "qual" => "4", "name" => "Handschuhe des abtrünnigen Bezwingers" ),
+	array( "id" => "46110", "qual" => "3", "name" => "Alchemistenbeutel" ),
 );
 ?>

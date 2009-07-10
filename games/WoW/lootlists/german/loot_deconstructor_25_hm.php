@@ -17,6 +17,8 @@ $loot = array(
 	array( "id" => "45246", "qual" => "4", "name" => "Golemsplitterspieß" ),
 	array( "id" => "45256", "qual" => "4", "name" => "Verzerrte Visage" ),
 	array( "id" => "45257", "qual" => "4", "name" => "Zauberstab aus Quarzkristall" ),
+	array( "id" => "45446", "qual" => "4", "name" => "Griffe der Vernunft" ),
+	array( "id" => "45444", "qual" => "4", "name" => "Handschuhe der ruhigen Hand" ),
 	array( "id" => "45445", "qual" => "4", "name" => "Brustplatte des Ergebenen" ),
 	array( "id" => "45443", "qual" => "4", "name" => "Glücksbringer der akribischen Zeitberechnung" ),
 	array( "id" => "45442", "qual" => "4", "name" => "Sorthalis, Hammer der Wächter" ),

@@ -18,7 +18,11 @@ $loot = array(
 	array( "id" => "45233", "qual" => "4", "name" => "Runenschneide" ),
 	array( "id" => "45234", "qual" => "4", "name" => "Euphorie" ),
 	array( "id" => "45242", "qual" => "4", "name" => "Tuch des tödlichen Untergangs" ),
+	array( "id" => "45245", "qual" => "4", "name" => "Schulterpolster des Eindringlings" ),
+	array( "id" => "45244", "qual" => "4", "name" => "Schienbeinschützer der schnellen Vergeltung" ),
 	array( "id" => "45241", "qual" => "4", "name" => "Gürtel der kolossalen Wut" ),
+	array( "id" => "45243", "qual" => "4", "name" => "Saphiramulett der Erneuerung" ),
+	array( "id" => "45607", "qual" => "4", "name" => "Fangzahn des Vergessens" ),
 	array( "id" => "45857", "qual" => "4", "name" => "Datenscheibe des Archivums" ),
 );
 ?>

@@ -10,5 +10,12 @@ $loot = array(
 	array( "id" => "45638", "qual" => "4", "name" => "Crown of the Wayward Conqueror" ),
 	array( "id" => "45639", "qual" => "4", "name" => "Crown of the Wayward Protector" ),
 	array( "id" => "45640", "qual" => "4", "name" => "Crown of the Wayward Vanquisher" ),
+	array( "id" => "45473", "qual" => "4", "name" => "Embrace of the Gladiator" ),
+	array( "id" => "45474", "qual" => "4", "name" => "Pauldrons of the Combatant" ),
+	array( "id" => "45472", "qual" => "4", "name" => "Warhelm of the Champion" ),
+	array( "id" => "45471", "qual" => "4", "name" => "Fate's Clutch" ),
+	array( "id" => "45570", "qual" => "4", "name" => "Skyforge Crossbow" ),
+	array( "id" => "45470", "qual" => "4", "name" => "Wisdom's Hold" ),
+	array( "id" => "45817", "qual" => "1", "name" => "Thorim's Sigil" ),
 );
 ?>

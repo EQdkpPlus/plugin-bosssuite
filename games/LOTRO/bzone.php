@@ -45,6 +45,14 @@ $bzone = array (
 'filikul' => array (
     'nornuan',
 ),
+'dar_narbugud' => array (
+    'rung_blagh',
+    'zholuga',
+    'istum',
+    'flagit',
+    'the_blind_one',
+    'mistress_of_pestilence',
+),
 'grand_stair' => array (
     'ilzkal',
     'glothrok',
