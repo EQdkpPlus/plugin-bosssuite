@@ -18,7 +18,11 @@ $loot = array(
 	array( "id" => "45233", "qual" => "4", "name" => "Rune Edge" ),
 	array( "id" => "45234", "qual" => "4", "name" => "Rapture" ),
 	array( "id" => "45242", "qual" => "4", "name" => "Drape of Mortal Downfall" ),
+	array( "id" => "45245", "qual" => "4", "name" => "Shoulderpads of the Intruder" ),
+	array( "id" => "45244", "qual" => "4", "name" => "Greaves of Swift Vengeance" ),
 	array( "id" => "45241", "qual" => "4", "name" => "Belt of Colossal Rage" ),
+	array( "id" => "45243", "qual" => "4", "name" => "Sapphire Amulet of Renewal" ),
+	array( "id" => "45607", "qual" => "4", "name" => "Fang of Oblivion" ),
 	array( "id" => "45857", "qual" => "4", "name" => "Archivum Data Disc" ),
 );
 ?>

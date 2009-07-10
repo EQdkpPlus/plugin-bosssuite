@@ -14,6 +14,8 @@ $loot = array(
 	array( "id" => "45462", "qual" => "4", "name" => "Gloves of the Frozen Glade" ),
 	array( "id" => "45460", "qual" => "4", "name" => "Bindings of Winter Gale" ),
 	array( "id" => "45459", "qual" => "4", "name" => "Frigid Strength of Hodir" ),
+	array( "id" => "45612", "qual" => "4", "name" => "Constellus" ),
 	array( "id" => "45457", "qual" => "4", "name" => "Staff of Endless Winter" ),
+	array( "id" => "45815", "qual" => "1", "name" => "Hodir's Sigil" ),
 );
 ?>

@@ -10,5 +10,12 @@ $loot = array(
 	array( "id" => "45638", "qual" => "4", "name" => "Krone des abtrünnigen Eroberers" ),
 	array( "id" => "45639", "qual" => "4", "name" => "Krone des abtrünnigen Beschützers" ),
 	array( "id" => "45640", "qual" => "4", "name" => "Krone des abtrünnigen Bezwingers" ),
+	array( "id" => "45473", "qual" => "4", "name" => "Umarmung des Gladiators" ),
+	array( "id" => "45474", "qual" => "4", "name" => "Schulterstücke des Kombattanten" ),
+	array( "id" => "45472", "qual" => "4", "name" => "Kriegshelm des Champions" ),
+	array( "id" => "45471", "qual" => "4", "name" => "Umklammerung des Schicksals" ),
+	array( "id" => "45570", "qual" => "4", "name" => "Armbrust der Himmelsschmiede" ),
+	array( "id" => "45470", "qual" => "4", "name" => "Schild der Weisheit" ),
+	array( "id" => "45817", "qual" => "1", "name" => "Thorims Siegel" ),
 );
 ?>

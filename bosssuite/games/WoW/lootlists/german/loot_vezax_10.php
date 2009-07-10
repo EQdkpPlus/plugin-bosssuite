@@ -5,6 +5,7 @@ $loot = array(
 	array( "id" => "46012", "qual" => "4", "name" => "Gewänder des durchdringenden Lichts" ),
 	array( "id" => "46009", "qual" => "4", "name" => "Bindungen der Tiefe" ),
 	array( "id" => "46346", "qual" => "4", "name" => "Stiefel der unruhigen Beute" ),
+	array( "id" => "45997", "qual" => "4", "name" => "Stulpen des Elenden" ),
 	array( "id" => "46008", "qual" => "4", "name" => "Halsreif des Abgrunds" ),
 	array( "id" => "46015", "qual" => "4", "name" => "Anhänger der endlosen Verzweiflung" ),
 	array( "id" => "46010", "qual" => "4", "name" => "Dunkelsteinring" ),

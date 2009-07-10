@@ -10,5 +10,12 @@ $loot = array(
 	array( "id" => "45641", "qual" => "4", "name" => "Gauntlets of the Wayward Conqueror" ),
 	array( "id" => "45642", "qual" => "4", "name" => "Gauntlets of the Wayward Protector" ),
 	array( "id" => "45643", "qual" => "4", "name" => "Gauntlets of the Wayward Vanquisher" ),
+	array( "id" => "45496", "qual" => "4", "name" => "Titanskin Cloak" ),
+	array( "id" => "45497", "qual" => "4", "name" => "Crown of Luminescence" ),
+	array( "id" => "45663", "qual" => "4", "name" => "Armbands of Bedlam" ),
+	array( "id" => "45495", "qual" => "4", "name" => "Conductive Seal" ),
+	array( "id" => "45494", "qual" => "4", "name" => "Delirium's Touch" ),
+	array( "id" => "45494", "qual" => "4", "name" => "Delirium's Touch" ),
+	array( "id" => "45816", "qual" => "1", "name" => "Mimiron's Sigil" ),
 );
 ?>

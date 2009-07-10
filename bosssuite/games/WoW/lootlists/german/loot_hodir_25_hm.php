@@ -14,6 +14,8 @@ $loot = array(
 	array( "id" => "45462", "qual" => "4", "name" => "Handschuhe der gefrorenen Lichtung" ),
 	array( "id" => "45460", "qual" => "4", "name" => "Bindungen der Winterböe" ),
 	array( "id" => "45459", "qual" => "4", "name" => "Hodirs kalte Stärke" ),
+	array( "id" => "45612", "qual" => "4", "name" => "Konstellas" ),
 	array( "id" => "45457", "qual" => "4", "name" => "Stab des endlosen Winters" ),
+	array( "id" => "45815", "qual" => "1", "name" => "Hodirs Siegel" ),
 );
 ?>
