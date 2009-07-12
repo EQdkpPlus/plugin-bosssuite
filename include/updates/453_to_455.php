@@ -20,14 +20,14 @@ if ( !defined('EQDKP_INC') ){
     header('HTTP/1.0 404 Not Found');exit;
 }
  
-$new_version    = '4.5.4';
-$updateFunction = 'BS453to454Update';
+$new_version    = '4.5.5';
+$updateFunction = 'BS453to455Update';
 $reloadSETT = 'settings.php';
 
 $updateDESC = false;
 $updateSQL = false;
 
-function BS453to454Update(){
+function BS453to455Update(){
 global $db, $user;
   $game_arr = explode('_', $eqdkp->config['default_game']);
   $currentgame = $game_arr[0];
