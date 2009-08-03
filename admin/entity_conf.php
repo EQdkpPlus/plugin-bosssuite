@@ -27,7 +27,6 @@ $mybssql = new BSSQL();
 
 //Framework include
 include_once($eqdkp_root_path . 'plugins/bosssuite/include/libloader.inc.php');
-$wpfccore->InitAdmin();
  
 $entity = $_GET['entity'];
 $mode = $_GET['mode'];

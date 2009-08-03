@@ -49,7 +49,6 @@ $mybssql->get_parse_boss();
 
 //Framework include
 include_once($eqdkp_root_path . 'plugins/bosssuite/include/libloader.inc.php');
-$wpfccore->InitAdmin();
 
 $bzone = $mybssql->get_bzone();
 foreach ($bzone as $zoneid => $bosslist){
@@ -72,7 +71,7 @@ foreach ($bzone as $zoneid => $bosslist){
 $tpl->assign_vars(array(
 	'F_CONFIG' => 'bzone.php' . $SID,
   'CONFIGURE_PACK'  => $html_conf_pack,
-  'JS_POPUP_FUNC' =>  $jquery->Dialog_URL('BS_ENTITY_CONF', $user->lang['bs_am_conf'], "entity_conf.php?mode='+mode+'&entity='+entity+'", '640', '200'),
+  'JS_POPUP_FUNC' =>  $jquery->Dialog_URL('BS_ENTITY_CONF', $user->lang['bs_am_conf'], "entity_conf.php?mode='+mode+'&entity='+entity+'", '640', '220'),
   'JS_ABOUT' => $jquery->Dialog_URL('About', $user->lang['bs_about_header'], '../about.php', '500', '600'),
 	'L_CREDITS' => $user->lang['bs_credits_p1'].$pm->get_data('bosssuite', 'version').$user->lang['bs_credits_p2'],
   'JQUERY_INCLUDES'   => $jquery->Header(),
