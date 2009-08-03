@@ -33,7 +33,6 @@ if (!$pm->check(PLUGIN_INSTALLED, 'bosssuite')) {
 
 //Framework include
 include_once($eqdkp_root_path . 'plugins/bosssuite/include/libloader.inc.php');
-$wpfccore->InitAdmin();
 
 //Updater
 $bsupdater = new PluginUpdater('bosssuite','bb_','bs_config','include');
