@@ -24,6 +24,7 @@ $lang = array(
 //General
 'bosssuite' => 'BossSuite',
 'bosscounter' => 'BossCounter',
+'bossbars' => 'Progression',
 
 //Permissions
 'bs_pm_conf' => 'Конфигурация',

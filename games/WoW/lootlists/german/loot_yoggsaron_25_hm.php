@@ -20,5 +20,6 @@ $loot = array(
 	array( "id" => "45534", "qual" => "4", "name" => "Siegel des betrogenen Königs" ),
 	array( "id" => "45535", "qual" => "4", "name" => "Demonstration des Glaubens" ),
 	array( "id" => "45533", "qual" => "4", "name" => "Dunkle Schneide der Verderbnis" ),
+	array( "id" => "45693", "qual" => "4", "name" => "Mimirons Kopf" ),
 );
 ?>

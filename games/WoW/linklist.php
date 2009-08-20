@@ -228,6 +228,7 @@ $idlist['default'] = array(
   /******Vault of Archavon (10)*****/
   'archavon_10' => '31125',
   'emalon_10' => '33993',
+  'koralon_10' => '99999',
   
   /******Eye of Eternity (10)*****/
   'malygos_10' => '28859',
@@ -284,6 +285,7 @@ $idlist['default'] = array(
   /******Vault of Archavon (25)*****/
   'archavon_25' => '31125',
   'emalon_25' => '99999',
+  'koralon_25' => '99999',
   
   /******Eye of Eternity (25)*****/
   'malygos_25' => '28859',
@@ -320,6 +322,33 @@ $idlist['default'] = array(
   'yoggsaron_25_hm' => '33288',
   'algalon_25' => '99999',
 
+  /******Trial of the Crusader (10)*****/
+  'beasts_of_northrend_10' => '99999',
+  'lord_jaraxxus_10' => '99999',
+  'faction_champions_10' => '99999',
+  'twin_valkyr_10' => '99999',
+  'anubarak_10' => '99999',
+  
+  /******Trial of the Grand Crusader (10)*****/
+  'beasts_of_northrend_10_hm' => '99999',
+  'lord_jaraxxus_10_hm' => '99999',
+  'faction_champions_10_hm' => '99999',
+  'twin_valkyr_10_hm' => '99999',
+  'anubarak_10_hm' => '99999',
+
+  /******Trial of the Crusader (25)*****/
+  'beasts_of_northrend_25' => '99999',
+  'lord_jaraxxus_25' => '99999',
+  'faction_champions_25' => '99999',
+  'twin_valkyr_25' => '99999',
+  'anubarak_25' => '99999',
+  
+  /******Trial of the Grand Crusader (25)*****/
+  'beasts_of_northrend_25_hm' => '99999',
+  'lord_jaraxxus_25_hm' => '99999',
+  'faction_champions_25_hm' => '99999',
+  'twin_valkyr_25_hm' => '99999',
+  'anubarak_25_hm' => '99999',
 );
 
 $idlist['wowheadmv'] = array(
@@ -504,6 +533,7 @@ $idlist['wowheadmv'] = array(
   /******Vault of Archavon (10)*****/
   'archavon_10' => '26967&modelType=8',
   'emalon_10' => '27108&modelType=8',
+  'koralon_10' => '',
   
   /******Eye of Eternity (10)*****/
   'malygos_10' => '26752&modelType=8',
@@ -559,6 +589,7 @@ $idlist['wowheadmv'] = array(
   /******Vault of Archavon (25)*****/
   'archavon_25' => '26967&modelType=8',
   'emalon_25' => '27108&modelType=8',
+  'koralon_25' => '',
   
   /******Eye of Eternity (25)*****/
   'malygos_25' => '26752&modelType=8',
@@ -593,5 +624,33 @@ $idlist['wowheadmv'] = array(
   'yoggsaron_25' => '28817&modelType=8',
   'yoggsaron_25_hm' => '28817&modelType=8',
   'algalon_25' => '',
+  
+  /******Trial of the Crusader (10)*****/
+  'beasts_of_northrend_10' => '',
+  'lord_jaraxxus_10' => '',
+  'faction_champions_10' => '',
+  'twin_valkyr_10' => '',
+  'anubarak_10' => '',
+  
+  /******Trial of the Grand Crusader (10)*****/
+  'beasts_of_northrend_10_hm' => '',
+  'lord_jaraxxus_10_hm' => '',
+  'faction_champions_10_hm' => '',
+  'twin_valkyr_10_hm' => '',
+  'anubarak_10_hm' => '',
+
+  /******Trial of the Crusader (25)*****/
+  'beasts_of_northrend_25' => '',
+  'lord_jaraxxus_25' => '',
+  'faction_champions_25' => '',
+  'twin_valkyr_25' => '',
+  'anubarak_25' => '',
+  
+  /******Trial of the Grand Crusader (25)*****/
+  'beasts_of_northrend_25_hm' => '',
+  'lord_jaraxxus_25_hm' => '',
+  'faction_champions_25_hm' => '',
+  'twin_valkyr_25_hm' => '',
+  'anubarak_25_hm' => '',
 );
 ?>

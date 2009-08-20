@@ -129,5 +129,38 @@ $image_map['sartharion_0d_25'] = 'sartharion';
 $image_map['sartharion_1d_25'] = 'sartharion';
 $image_map['sartharion_2d_25'] = 'sartharion';
 $image_map['sartharion_3d_25'] = 'sartharion';
+
+
+//PATCH 3.2
+$image_map['totc_10'] = 'totc';
+$image_map['beasts_of_northrend_10'] = 'beasts_of_northrend';
+$image_map['lord_jaraxxus_10'] = 'lord_jaraxxus';
+$image_map['faction_champions_10'] = 'faction_champions';
+$image_map['twin_valkyr_10'] = 'twin_valkyr';
+$image_map['anubarak_10'] = 'anubarak';
+  
+$image_map['totgc_10'] = 'totc';
+$image_map['beasts_of_northrend_10_hm'] = 'beasts_of_northrend';
+$image_map['lord_jaraxxus_10_hm'] = 'lord_jaraxxus';
+$image_map['faction_champions_10_hm'] = 'faction_champions';
+$image_map['twin_valkyr_10_hm'] = 'twin_valkyr';
+$image_map['anubarak_10_hm'] = 'anubarak';
+  
+$image_map['totc_25'] = 'totc';
+$image_map['beasts_of_northrend_25'] = 'beasts_of_northrend';
+$image_map['lord_jaraxxus_25'] = 'lord_jaraxxus';
+$image_map['faction_champions_25'] = 'faction_champions';
+$image_map['twin_valkyr_25'] = 'twin_valkyr';
+$image_map['anubarak_25'] = 'anubarak';
+  
+$image_map['totgc_25'] = 'totc';
+$image_map['beasts_of_northrend_25_hm'] = 'beasts_of_northrend';
+$image_map['lord_jaraxxus_25_hm'] = 'lord_jaraxxus';
+$image_map['faction_champions_25_hm'] = 'faction_champions';
+$image_map['twin_valkyr_25_hm'] = 'twin_valkyr';
+$image_map['anubarak_25_hm'] = 'anubarak';
+
+$image_map['koralon_10'] = 'ignis';
+$image_map['koralon_25'] = 'ignis';
  
 ?>

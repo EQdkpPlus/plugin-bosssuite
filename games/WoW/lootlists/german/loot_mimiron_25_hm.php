@@ -15,7 +15,7 @@ $loot = array(
 	array( "id" => "45663", "qual" => "4", "name" => "Armbänder des Tumults" ),
 	array( "id" => "45495", "qual" => "4", "name" => "Leitendes Siegel" ),
 	array( "id" => "45494", "qual" => "4", "name" => "Berührung des Deliriums" ),
-	array( "id" => "45494", "qual" => "4", "name" => "Berührung des Deliriums" ),
+	array( "id" => "45620", "qual" => "4", "name" => "Sternensplitterschneide" ),
 	array( "id" => "45816", "qual" => "1", "name" => "Mimirons Siegel" ),
 );
 ?>

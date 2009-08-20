@@ -15,7 +15,7 @@ $loot = array(
 	array( "id" => "45193", "qual" => "4", "name" => "Insurmountable Fervor" ),
 	array( "id" => "45236", "qual" => "4", "name" => "Unblinking Eye" ),
 	array( "id" => "45235", "qual" => "4", "name" => "Radiant Seal" ),
-	array( "id" => "45233", "qual" => "4", "name" => "Rune Edge" ),
+	array( "id" => "45233", "qual" => "4", "name" => "Stormrune Edge" ),
 	array( "id" => "45234", "qual" => "4", "name" => "Rapture" ),
 	array( "id" => "45242", "qual" => "4", "name" => "Drape of Mortal Downfall" ),
 	array( "id" => "45245", "qual" => "4", "name" => "Shoulderpads of the Intruder" ),

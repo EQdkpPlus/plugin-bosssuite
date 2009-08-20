@@ -225,6 +225,7 @@ $lang['kelthuzad_10'] = array('long' => 'Kel\'Thuzad (10)', 'short' => 'Kel\'Thu
 $lang['vault_of_archavon_10'] = array('long' => 'Vault of Archavon (10)', 'short' => 'VoA (10)');
 $lang['archavon_10'] = array('long' => 'Archavon the Stone Watcher (10)', 'short' => 'Archavon (10)');
 $lang['emalon_10'] = array('long' => 'Emalon the Storm Watcher (10)', 'short' => 'Emalon (10)');
+$lang['koralon_10'] = array('long' => 'Koralon the Flame Watcher (10)', 'short' => 'Koralon (10)');
 
 /******Eye of Eternity (10)*****/  
 $lang['eye_of_eternity_10'] = array('long' => 'Eye of Eternity (10)', 'short' => 'EoE (10)');
@@ -240,27 +241,27 @@ $lang['sartharion_3d_10'] = array('long' => 'Sartharion the Onyx Guardian 3 drag
 /******Ulduar (10)*****/
 $lang['ulduar_10']    = array('long' => 'Ulduar (10)', 'short' => 'Ulduar (10)');
 $lang['hodir_10']       = array('long' => 'Hodir (10)', 'short' => 'Hodir (10)');
-$lang['hodir_10_hm']       = array('long' => 'Hodir HM(10)', 'short' => 'Hodir HM(10)');
+$lang['hodir_10_hm']       = array('long' => 'Hodir HM (10)', 'short' => 'Hodir HM (10)');
 $lang['thorim_10']    = array('long' => 'Thorim (10)', 'short' => 'Thorim (10)');
-$lang['thorim_10_hm']    = array('long' => 'Thorim HM(10)', 'short' => 'Thorim HM(10)');
+$lang['thorim_10_hm']    = array('long' => 'Thorim HM (10)', 'short' => 'Thorim HM (10)');
 $lang['iron_council_10']    = array('long' => 'The Iron Council (10)', 'short' => 'Council (10)');
-$lang['iron_council_10_hm']    = array('long' => 'The Iron Council HM(10)', 'short' => 'Council HM(10)');
+$lang['iron_council_10_hm']    = array('long' => 'The Iron Council HM (10)', 'short' => 'Council HM (10)');
 $lang['freya_10']       = array('long' => 'Freya (10)', 'short' => 'Freya (10)');
-$lang['freya_10_hm']       = array('long' => 'Freya HM(10)', 'short' => 'Freya HM(10)');
+$lang['freya_10_hm']       = array('long' => 'Freya HM (10)', 'short' => 'Freya HM (10)');
 $lang['ignis_10']       = array('long' => 'Ignis the Furnace Master (10)', 'short' => 'Ignis (10)');
 $lang['leviathan_10']    = array('long' => 'Flame Leviathan (10)', 'short' => 'Flame Leviathan (10)');
-$lang['leviathan_10_hm']    = array('long' => 'Flame Leviathan HM(10)', 'short' => 'Flame Leviathan HM(10)');
+$lang['leviathan_10_hm']    = array('long' => 'Flame Leviathan HM (10)', 'short' => 'Flame Leviathan HM (10)');
 $lang['vezax_10']       = array('long' => 'General Vezax (10)', 'short' => 'Vezax (10)');
-$lang['vezax_10_hm']       = array('long' => 'General Vezax HM(10)', 'short' => 'Vezax HM(10)');
+$lang['vezax_10_hm']       = array('long' => 'General Vezax HM (10)', 'short' => 'Vezax HM (10)');
 $lang['razorscale_10']    = array('long' => 'Razorscale (10)', 'short' => 'Razorscale (10)');
 $lang['deconstructor_10']   = array('long' => 'XT-002 Deconstructor (10)', 'short' => 'Deconstructor (10)');
-$lang['deconstructor_10_hm']   = array('long' => 'XT-002 Deconstructor HM(10)', 'short' => 'Deconstructor HM(10)');
+$lang['deconstructor_10_hm']   = array('long' => 'XT-002 Deconstructor HM (10)', 'short' => 'Deconstructor HM (10)');
 $lang['kologarn_10']    = array('long' => 'Kologarn (10)', 'short' => 'Kologarn (10)');
 $lang['auriaya_10']    = array('long' => 'Auriaya (10)', 'short' => 'Auriaya (10)');
 $lang['mimiron_10']    = array('long' => 'Mimiron (10)', 'short' => 'Mimiron (10)');
-$lang['mimiron_10_hm']    = array('long' => 'Mimiron HM(10)', 'short' => 'Mimiron HM(10)');
+$lang['mimiron_10_hm']    = array('long' => 'Mimiron HM (10)', 'short' => 'Mimiron HM (10)');
 $lang['yoggsaron_10']       = array('long' => 'Yogg-Saron (10)', 'short' => 'Yogg-Saron (10)');
-$lang['yoggsaron_10_hm']       = array('long' => 'Yogg-Saron HM(10)', 'short' => 'Yogg-Saron HM(10)');
+$lang['yoggsaron_10_hm']       = array('long' => 'Yogg-Saron HM (10)', 'short' => 'Yogg-Saron HM (10)');
 $lang['algalon_10']    = array('long' => 'Algalon the Observer (10)', 'short' => 'Algalon (10)');
 
 /******Naxxramas (25)*****/
@@ -285,6 +286,7 @@ $lang['kelthuzad_25'] = array('long' => 'Kel\'Thuzad (25)', 'short' => 'Kel\'Thu
 $lang['vault_of_archavon_25'] = array('long' => 'Vault of Archavon (25)', 'short' => 'VoA (25)');
 $lang['archavon_25'] = array('long' => 'Archavon the Stone Watcher (25)', 'short' => 'Archavon (25)');
 $lang['emalon_25'] = array('long' => 'Emalon the Storm Watcher (25)', 'short' => 'Emalon (25)');
+$lang['koralon_25'] = array('long' => 'Koralon the Flame Watcher (25)', 'short' => 'Koralon (25)');
 
 /******Eye of Eternity (25)*****/  
 $lang['eye_of_eternity_25'] = array('long' => 'Eye of Eternity (25)', 'short' => 'EoE (25)');
@@ -300,26 +302,58 @@ $lang['sartharion_3d_25'] = array('long' => 'Sartharion the Onyx Guardian 3 drag
 /******Ulduar (25)*****/
 $lang['ulduar_25']    = array('long' => 'Ulduar (25)', 'short' => 'Ulduar (25)');
 $lang['hodir_25']       = array('long' => 'Hodir (25)', 'short' => 'Hodir (25)');
-$lang['hodir_25_hm']       = array('long' => 'Hodir HM(25)', 'short' => 'Hodir HM(25)');
+$lang['hodir_25_hm']       = array('long' => 'Hodir HM (25)', 'short' => 'Hodir HM (25)');
 $lang['thorim_25']    = array('long' => 'Thorim (25)', 'short' => 'Thorim (25)');
-$lang['thorim_25_hm']    = array('long' => 'Thorim HM(25)', 'short' => 'Thorim HM(25)');
+$lang['thorim_25_hm']    = array('long' => 'Thorim HM (25)', 'short' => 'Thorim HM (25)');
 $lang['iron_council_25']    = array('long' => 'The Iron Council (25)', 'short' => 'Council (25)');
-$lang['iron_council_25_hm']    = array('long' => 'The Iron Council HM(25)', 'short' => 'Council HM(25)');
+$lang['iron_council_25_hm']    = array('long' => 'The Iron Council HM (25)', 'short' => 'Council HM (25)');
 $lang['freya_25']       = array('long' => 'Freya (25)', 'short' => 'Freya (25)');
-$lang['freya_25_hm']       = array('long' => 'Freya HM(25)', 'short' => 'Freya HM(25)');
+$lang['freya_25_hm']       = array('long' => 'Freya HM (25)', 'short' => 'Freya HM (25)');
 $lang['ignis_25']       = array('long' => 'Ignis the Furnace Master (25)', 'short' => 'Ignis (25)');
 $lang['leviathan_25']    = array('long' => 'Flame Leviathan (25)', 'short' => 'Flame Leviathan (25)');
-$lang['leviathan_25_hm']    = array('long' => 'Flame Leviathan HM(25)', 'short' => 'Flame Leviathan HM(25)');
+$lang['leviathan_25_hm']    = array('long' => 'Flame Leviathan HM (25)', 'short' => 'Flame Leviathan HM (25)');
 $lang['vezax_25']       = array('long' => 'General Vezax (25)', 'short' => 'Vezax (25)');
-$lang['vezax_25_hm']       = array('long' => 'General Vezax HM(25)', 'short' => 'Vezax HM(25)');
+$lang['vezax_25_hm']       = array('long' => 'General Vezax HM (25)', 'short' => 'Vezax HM (25)');
 $lang['razorscale_25']    = array('long' => 'Razorscale (25)', 'short' => 'Razorscale (25)');
 $lang['deconstructor_25']   = array('long' => 'XT-002 Deconstructor (25)', 'short' => 'Deconstructor (25)');
-$lang['deconstructor_25_hm']   = array('long' => 'XT-002 Deconstructor HM(25)', 'short' => 'Deconstructor HM(25)');
+$lang['deconstructor_25_hm']   = array('long' => 'XT-002 Deconstructor HM (25)', 'short' => 'Deconstructor HM (25)');
 $lang['kologarn_25']    = array('long' => 'Kologarn (25)', 'short' => 'Kologarn (25)');
 $lang['auriaya_25']    = array('long' => 'Auriaya (25)', 'short' => 'Auriaya (25)');
 $lang['mimiron_25']    = array('long' => 'Mimiron (25)', 'short' => 'Mimiron (25)');
-$lang['mimiron_25_hm']    = array('long' => 'Mimiron HM(25)', 'short' => 'Mimiron HM(25)');
+$lang['mimiron_25_hm']    = array('long' => 'Mimiron HM (25)', 'short' => 'Mimiron HM (25)');
 $lang['yoggsaron_25']       = array('long' => 'Yogg-Saron (25)', 'short' => 'Yogg-Saron (25)');
-$lang['yoggsaron_25_hm']       = array('long' => 'Yogg-Saron HM(25)', 'short' => 'Yogg-Saron HM(25)');
+$lang['yoggsaron_25_hm']       = array('long' => 'Yogg-Saron HM (25)', 'short' => 'Yogg-Saron HM (25)');
 $lang['algalon_25']    = array('long' => 'Algalon the Observer (25)', 'short' => 'Algalon (25)');
+
+/******Trial of the Crusader (10)*****/
+$lang['totc_10'] = array('long' => 'Trial of the Crusader (10)', 'short' => 'TotC (10)');
+$lang['beasts_of_northrend_10'] = array('long' => 'Beasts of Northrend (10)', 'short' => 'Beasts (10)');
+$lang['lord_jaraxxus_10'] = array('long' => 'Lord Jaraxxus (10)', 'short' => 'Jaraxxus (10)');
+$lang['faction_champions_10'] = array('long' => 'Faction Champions (10)', 'short' => 'Champions (10)');
+$lang['twin_valkyr_10'] = array('long' => 'Twin Val\'kyr (10)', 'short' => 'Twin Val\'kyr (10)');
+$lang['anubarak_10'] = array('long' => 'Anub\'arak (10)', 'short' => 'Anub\'arak (10)');
+
+/******Trial of the Grand Crusader (10)*****/
+$lang['totgc_10'] = array('long' => 'Trial of the Grand Crusader (10)', 'short' => 'TotGC (10)');
+$lang['beasts_of_northrend_10_hm'] = array('long' => 'Beasts of Northrend HM (10)', 'short' => 'Beasts HM (10)');
+$lang['lord_jaraxxus_10_hm'] = array('long' => 'Lord Jaraxxus HM (10)', 'short' => 'Jaraxxus HM (10)');
+$lang['faction_champions_10_hm'] = array('long' => 'Faction Champions HM (10)', 'short' => 'Champions HM (10)');
+$lang['twin_valkyr_10_hm'] = array('long' => 'Twin Val\'kyr HM (10)', 'short' => 'Twin Val\'kyr HM (10)');
+$lang['anubarak_10_hm'] = array('long' => 'Anub\'arak HM (10)', 'short' => 'Anub\'arak HM (10)');
+
+/******Trial of the Crusader (25)*****/
+$lang['totc_25'] = array('long' => 'Trial of the Crusader (25)', 'short' => 'TotC (25)');
+$lang['beasts_of_northrend_25'] = array('long' => 'Beasts of Northrend (25)', 'short' => 'Beasts (25)');
+$lang['lord_jaraxxus_25'] = array('long' => 'Lord Jaraxxus (25)', 'short' => 'Jaraxxus (25)');
+$lang['faction_champions_25'] = array('long' => 'Faction Champions (25)', 'short' => 'Champions (25)');
+$lang['twin_valkyr_25'] = array('long' => 'Twin Val\'kyr (25)', 'short' => 'Twin Val\'kyr (25)');
+$lang['anubarak_25'] = array('long' => 'Anub\'arak (25)', 'short' => 'Anub\'arak (25)');
+
+/******Trial of the Grand Crusader (25)*****/
+$lang['totgc_25'] = array('long' => 'Trial of the Grand Crusader (25)', 'short' => 'TotGC (25)');
+$lang['beasts_of_northrend_25_hm'] = array('long' => 'Beasts of Northrend HM (25)', 'short' => 'Beasts HM (25)');
+$lang['lord_jaraxxus_25_hm'] = array('long' => 'Lord Jaraxxus HM (25)', 'short' => 'Jaraxxus HM (25)');
+$lang['faction_champions_25_hm'] = array('long' => 'Faction Champions HM (25)', 'short' => 'Champions HM (25)');
+$lang['twin_valkyr_25_hm'] = array('long' => 'Twin Val\'kyr HM (25)', 'short' => 'Twin Val\'kyr HM (25)');
+$lang['anubarak_25_hm'] = array('long' => 'Anub\'arak HM (25)', 'short' => 'Anub\'arak HM (25)');
 ?>

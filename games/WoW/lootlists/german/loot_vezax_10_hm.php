@@ -10,7 +10,7 @@ $loot = array(
 	array( "id" => "46015", "qual" => "4", "name" => "Anhänger der endlosen Verzweiflung" ),
 	array( "id" => "46010", "qual" => "4", "name" => "Dunkelsteinring" ),
 	array( "id" => "46011", "qual" => "4", "name" => "Schattenbiss" ),
-	array( "id" => "45996", "qual" => "4", "name" => "Hoffnungsmacher" ),
+	array( "id" => "45996", "qual" => "4", "name" => "Ende aller Hoffnung" ),
 	array( "id" => "46032", "qual" => "4", "name" => "Tuch des gesichtslosen Generals" ),
 	array( "id" => "46034", "qual" => "4", "name" => "Gamaschen der tiefsten Dunkelheit" ),
 	array( "id" => "46036", "qual" => "4", "name" => "Leerensäbel" ),

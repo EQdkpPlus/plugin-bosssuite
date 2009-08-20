@@ -17,4 +17,5 @@
  */
 
 $pluginmodules[] = 'bosscounter';
+$pluginmodules[] = 'bossbars';
 ?>

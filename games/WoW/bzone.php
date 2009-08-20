@@ -21,6 +21,34 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $bzone = array (
+  'totc_10' => array(
+    'beasts_of_northrend_10',
+    'lord_jaraxxus_10',
+    'faction_champions_10',
+    'twin_valkyr_10',
+    'anubarak_10'
+  ),
+  'totgc_10' => array(
+    'beasts_of_northrend_10_hm',
+    'lord_jaraxxus_10_hm',
+    'faction_champions_10_hm',
+    'twin_valkyr_10_hm',
+    'anubarak_10_hm'
+  ),
+  'totc_25' => array(
+    'beasts_of_northrend_25',
+    'lord_jaraxxus_25',
+    'faction_champions_25',
+    'twin_valkyr_25',
+    'anubarak_25'
+  ),
+  'totgc_25' => array(
+    'beasts_of_northrend_25_hm',
+    'lord_jaraxxus_25_hm',
+    'faction_champions_25_hm',
+    'twin_valkyr_25_hm',
+    'anubarak_25_hm'
+  ),
   'ulduar_10' => array (
     'leviathan_10',
     'leviathan_10_hm',
@@ -65,7 +93,8 @@ $bzone = array (
 	),
 	'vault_of_archavon_10' => array(
     'archavon_10',
-    'emalon_10'
+    'emalon_10',
+    'koralon_10'
   ),
 	'eye_of_eternity_10' => array(
     'malygos_10'
@@ -120,7 +149,8 @@ $bzone = array (
 	),
 	'vault_of_archavon_25' => array(
     'archavon_25',
-    'emalon_25'
+    'emalon_25',
+    'koralon_25'
   ),
 	'eye_of_eternity_25' => array(
     'malygos_25'

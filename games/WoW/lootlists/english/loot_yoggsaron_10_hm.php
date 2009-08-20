@@ -10,13 +10,14 @@ $loot = array(
 	array( "id" => "46031", "qual" => "4", "name" => "Touch of Madness" ),
 	array( "id" => "46025", "qual" => "4", "name" => "Devotion" ),
 	array( "id" => "46018", "qual" => "4", "name" => "Deliverance" ),
-	array( "id" => "45632", "qual" => "4", "name" => "Breastplate of the Wayward Conqueror" ),
-	array( "id" => "45633", "qual" => "4", "name" => "Breastplate of the Wayward Protector" ),
+	array( "id" => "45635", "qual" => "4", "name" => "Chestguard of the Wayward Conqueror" ),
+	array( "id" => "45636", "qual" => "4", "name" => "Chestguard of the Wayward Protector" ),
 	array( "id" => "45637", "qual" => "4", "name" => "Chestguard of the Wayward Vanquisher" ),
 	array( "id" => "46068", "qual" => "4", "name" => "Amice of Inconceivable Horror" ),
 	array( "id" => "46095", "qual" => "4", "name" => "Soul-Devouring Cinch" ),
 	array( "id" => "46096", "qual" => "4", "name" => "Signet of Soft Lament" ),
 	array( "id" => "46097", "qual" => "4", "name" => "Caress of Insanity" ),
 	array( "id" => "46067", "qual" => "4", "name" => "Hammer of Crushing Whispers" ),
+	array( "id" => "46312", "qual" => "4", "name" => "Vanquished Clutches of Yogg-Saron" ),
 );
 ?>

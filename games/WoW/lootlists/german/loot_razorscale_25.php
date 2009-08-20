@@ -12,7 +12,7 @@ $loot = array(
 	array( "id" => "45140", "qual" => "4", "name" => "Klingenschuppenschulterschutz" ),
 	array( "id" => "45139", "qual" => "4", "name" => "Gurt des Drachentöters" ),
 	array( "id" => "45148", "qual" => "4", "name" => "Lebendige Flamme" ),
-	array( "id" => "45510", "qual" => "4", "name" => "Buchband  der Zwietracht" ),
+	array( "id" => "45510", "qual" => "4", "name" => "Buchband der Zwietracht" ),
 	array( "id" => "45144", "qual" => "4", "name" => "Siegel der Abwehr" ),
 	array( "id" => "45142", "qual" => "4", "name" => "Reue" ),
 	array( "id" => "45147", "qual" => "4", "name" => "Leitender Stern" ),
