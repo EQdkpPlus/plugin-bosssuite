@@ -20,5 +20,6 @@ $loot = array(
 	array( "id" => "45534", "qual" => "4", "name" => "Seal of the Betrayed King" ),
 	array( "id" => "45535", "qual" => "4", "name" => "Show of Faith" ),
 	array( "id" => "45533", "qual" => "4", "name" => "Dark Edge of Depravity" ),
+	array( "id" => "45693", "qual" => "4", "name" => "Mimiron's Head" ),
 );
 ?>

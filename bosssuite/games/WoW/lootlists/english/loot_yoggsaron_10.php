@@ -10,8 +10,8 @@ $loot = array(
 	array( "id" => "46031", "qual" => "4", "name" => "Touch of Madness" ),
 	array( "id" => "46025", "qual" => "4", "name" => "Devotion" ),
 	array( "id" => "46018", "qual" => "4", "name" => "Deliverance" ),
-	array( "id" => "45632", "qual" => "4", "name" => "Breastplate of the Wayward Conqueror" ),
-	array( "id" => "45633", "qual" => "4", "name" => "Breastplate of the Wayward Protector" ),
+	array( "id" => "45635", "qual" => "4", "name" => "Chestguard of the Wayward Conqueror" ),
+	array( "id" => "45636", "qual" => "4", "name" => "Chestguard of the Wayward Protector" ),
 	array( "id" => "45637", "qual" => "4", "name" => "Chestguard of the Wayward Vanquisher" ),
 );
 ?>

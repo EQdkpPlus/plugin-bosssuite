@@ -15,7 +15,7 @@ $loot = array(
 	array( "id" => "45193", "qual" => "4", "name" => "Unüberwindbare Inbrunst" ),
 	array( "id" => "45236", "qual" => "4", "name" => "Unverwandter Blick" ),
 	array( "id" => "45235", "qual" => "4", "name" => "Strahlendes Siegel" ),
-	array( "id" => "45233", "qual" => "4", "name" => "Runenschneide" ),
+	array( "id" => "45233", "qual" => "4", "name" => "Sturmrunenschneide" ),
 	array( "id" => "45234", "qual" => "4", "name" => "Euphorie" ),
 	array( "id" => "45242", "qual" => "4", "name" => "Tuch des tödlichen Untergangs" ),
 	array( "id" => "45245", "qual" => "4", "name" => "Schulterpolster des Eindringlings" ),

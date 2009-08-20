@@ -65,5 +65,9 @@ if ( !defined('EQDKP_INC') ){
                       'file'  => '453_to_455.php',
                       'old'   => '4.5.3',
         ),
+        '4.5.7'   => array(
+                      'file'  => '456_to_457.php',
+                      'old'   => '4.5.6',
+        ),
   );
 ?>

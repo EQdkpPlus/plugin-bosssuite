@@ -10,6 +10,6 @@ $loot = array(
 	array( "id" => "46015", "qual" => "4", "name" => "Anhänger der endlosen Verzweiflung" ),
 	array( "id" => "46010", "qual" => "4", "name" => "Dunkelsteinring" ),
 	array( "id" => "46011", "qual" => "4", "name" => "Schattenbiss" ),
-	array( "id" => "45996", "qual" => "4", "name" => "Hoffnungsmacher" ),
+	array( "id" => "45996", "qual" => "4", "name" => "Ende aller Hoffnung" ),
 );
 ?>
