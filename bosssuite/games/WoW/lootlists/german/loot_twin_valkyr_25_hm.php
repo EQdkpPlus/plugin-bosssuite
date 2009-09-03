@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47129", "qual" => "4", "name" => "Skyweaver Robes" ),
 	array( "id" => "47143", "qual" => "4", "name" => "Bindings of Dark Essence" ),
@@ -18,6 +19,9 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Ornat des großen Beschützers" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47462", "qual" => "4", "name" => "Skyweaver Vestments" ),
 	array( "id" => "47467", "qual" => "4", "name" => "Dark Essence Bindings" ),
 	array( "id" => "47469", "qual" => "4", "name" => "Belt of Pale Thorns" ),
@@ -37,4 +41,6 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Ornat des großen Beschützers" ),
 );
+}
+
 ?>

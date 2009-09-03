@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47745", "qual" => "4", "name" => "Gloves of Looming Shadow" ),
 	array( "id" => "49231", "qual" => "4", "name" => "Boots of the Grieving Soul" ),
@@ -12,8 +13,10 @@ $loot = array(
 	array( "id" => "47736", "qual" => "4", "name" => "Icefall Blade" ),
 	array( "id" => "47737", "qual" => "4", "name" => "Reckoning" ),
 	array( "id" => "47743", "qual" => "4", "name" => "Enlightenment" ),
-	array( "id" => "47741", "qual" => "4", "name" => "Baelgun's Heavy Crossbow" ),
 	array( "id" => "47740", "qual" => "4", "name" => "The Diplomat" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47889", "qual" => "4", "name" => "Looming Shadow Wraps" ),
 	array( "id" => "49232", "qual" => "4", "name" => "Sandals of the Grieving Soul" ),
 	array( "id" => "47891", "qual" => "4", "name" => "Helm of the High Mesa" ),
@@ -28,4 +31,6 @@ $loot = array(
 	array( "id" => "47892", "qual" => "4", "name" => "Illumination" ),
 	array( "id" => "47883", "qual" => "4", "name" => "Widebarrel Flintlock" ),
 );
+}
+
 ?>

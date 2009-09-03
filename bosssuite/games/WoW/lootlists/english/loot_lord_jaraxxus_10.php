@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47663", "qual" => "4", "name" => "Felspark Bindings" ),
 	array( "id" => "47620", "qual" => "4", "name" => "Leggings of the Demonic Messenger" ),
@@ -13,6 +14,9 @@ $loot = array(
 	array( "id" => "47618", "qual" => "4", "name" => "Firestorm Ring" ),
 	array( "id" => "47703", "qual" => "4", "name" => "Planestalker Signet" ),
 	array( "id" => "47676", "qual" => "4", "name" => "Dirk of the Night Watch" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47861", "qual" => "4", "name" => "Felspark Bracers" ),
 	array( "id" => "47865", "qual" => "4", "name" => "Legwraps of the Demonic Messenger" ),
 	array( "id" => "47863", "qual" => "4", "name" => "Belt of the Bloodhoof Emissary" ),
@@ -27,4 +31,6 @@ $loot = array(
 	array( "id" => "47868", "qual" => "4", "name" => "Planestalker Band" ),
 	array( "id" => "47871", "qual" => "4", "name" => "Orcish Deathblade" ),
 );
+}
+
 ?>

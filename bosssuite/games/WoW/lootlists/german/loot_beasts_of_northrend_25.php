@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "46970", "qual" => "4", "name" => "Tuch des ungezähmten Raubtiers" ),
 	array( "id" => "46976", "qual" => "4", "name" => "Schal der erfrischenden Winde" ),
@@ -16,6 +17,9 @@ $loot = array(
 	array( "id" => "46958", "qual" => "4", "name" => "Stahlklingenbrecher" ),
 	array( "id" => "46963", "qual" => "4", "name" => "Kristallplattenwall" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47257", "qual" => "4", "name" => "Umhang des ungezähmten Raubtiers" ),
 	array( "id" => "47256", "qual" => "4", "name" => "Tuch der erfrischenden Winde" ),
 	array( "id" => "47264", "qual" => "4", "name" => "Fließende Roben des Aufstiegs" ),
@@ -33,4 +37,6 @@ $loot = array(
 	array( "id" => "47260", "qual" => "4", "name" => "Einsame Barriere" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
+}
+
 ?>

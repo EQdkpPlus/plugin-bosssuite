@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47956", "qual" => "4", "name" => "Gloves of Looming Shadow" ),
 	array( "id" => "49234", "qual" => "4", "name" => "Boots of the Grieving Soul" ),
@@ -14,6 +15,9 @@ $loot = array(
 	array( "id" => "47960", "qual" => "4", "name" => "Enlightenment" ),
 	array( "id" => "47950", "qual" => "4", "name" => "The Diplomat" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
+);
+}else{
+$loot = array(
 	array( "id" => "48028", "qual" => "4", "name" => "Looming Shadow Wraps" ),
 	array( "id" => "49233", "qual" => "4", "name" => "Sandals of the Grieving Soul" ),
 	array( "id" => "48034", "qual" => "4", "name" => "Helm of the High Mesa" ),
@@ -29,4 +33,6 @@ $loot = array(
 	array( "id" => "48022", "qual" => "4", "name" => "Widebarrel Flintlock" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
+}
+
 ?>

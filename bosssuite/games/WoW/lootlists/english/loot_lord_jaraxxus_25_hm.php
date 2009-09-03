@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47063", "qual" => "4", "name" => "Pride of the Eredar" ),
 	array( "id" => "47062", "qual" => "4", "name" => "Leggings of the Soothing Touch" ),
@@ -18,6 +19,9 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47436", "qual" => "4", "name" => "Pride of the Demon Lord" ),
 	array( "id" => "47435", "qual" => "4", "name" => "Pants of the Soothing Touch" ),
 	array( "id" => "47431", "qual" => "4", "name" => "Vest of Calamitous Fate" ),
@@ -37,4 +41,6 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
 );
+}
+
 ?>

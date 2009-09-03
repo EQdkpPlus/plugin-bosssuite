@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47126", "qual" => "4", "name" => "Skyweaver Robes" ),
 	array( "id" => "47141", "qual" => "4", "name" => "Bindings of Dark Essence" ),
@@ -16,6 +17,9 @@ $loot = array(
 	array( "id" => "47104", "qual" => "4", "name" => "Twin Spike" ),
 	array( "id" => "47114", "qual" => "4", "name" => "Lupine Longstaff" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47301", "qual" => "4", "name" => "Skyweaver Vestments" ),
 	array( "id" => "47306", "qual" => "4", "name" => "Dark Essence Bindings" ),
 	array( "id" => "47308", "qual" => "4", "name" => "Belt of Pale Thorns" ),
@@ -33,4 +37,6 @@ $loot = array(
 	array( "id" => "47302", "qual" => "4", "name" => "Twin's Pact" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
+}
+
 ?>

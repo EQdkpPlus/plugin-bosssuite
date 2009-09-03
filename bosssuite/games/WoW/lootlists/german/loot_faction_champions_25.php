@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47089", "qual" => "4", "name" => "Umhang der Verschiebung" ),
 	array( "id" => "47081", "qual" => "4", "name" => "Kordel der beißenden Kälte" ),
@@ -16,6 +17,9 @@ $loot = array(
 	array( "id" => "47069", "qual" => "4", "name" => "Die Gerechte" ),
 	array( "id" => "47079", "qual" => "4", "name" => "Bastion der Reinheit" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47291", "qual" => "4", "name" => "Tuch der Verschiebung" ),
 	array( "id" => "47286", "qual" => "4", "name" => "Gürtel der beißenden Kälte" ),
 	array( "id" => "47293", "qual" => "4", "name" => "Sandalen der trauernden Witwe" ),
@@ -33,4 +37,6 @@ $loot = array(
 	array( "id" => "47287", "qual" => "4", "name" => "Bastion der Entschlossenheit" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
+}
+
 ?>

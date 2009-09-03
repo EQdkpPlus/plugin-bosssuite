@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47225", "qual" => "4", "name" => "Maiden's Favor" ),
 	array( "id" => "47183", "qual" => "4", "name" => "Strength of the Nerub" ),
@@ -21,6 +22,9 @@ $loot = array(
 	array( "id" => "47193", "qual" => "4", "name" => "Misery's End" ),
 	array( "id" => "47233", "qual" => "4", "name" => "Archon Glaive" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47328", "qual" => "4", "name" => "Maiden's Adoration" ),
 	array( "id" => "47320", "qual" => "4", "name" => "Might of the Nerub" ),
 	array( "id" => "47324", "qual" => "4", "name" => "Bindings of the Ashen Saint" ),
@@ -43,4 +47,6 @@ $loot = array(
 	array( "id" => "47329", "qual" => "4", "name" => "Hellion Glaive" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
+}
+
 ?>

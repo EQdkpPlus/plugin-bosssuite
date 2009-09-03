@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47042", "qual" => "4", "name" => "Stolz der Eredar" ),
 	array( "id" => "47051", "qual" => "4", "name" => "Gamaschen der besänftigenden Berührung" ),
@@ -16,6 +17,9 @@ $loot = array(
 	array( "id" => "46996", "qual" => "4", "name" => "Löwenkopfschlitzer" ),
 	array( "id" => "46994", "qual" => "4", "name" => "Klauenstoß" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47275", "qual" => "4", "name" => "Stolz des Dämonenlords" ),
 	array( "id" => "47274", "qual" => "4", "name" => "Hose der besänftigenden Berührung" ),
 	array( "id" => "47270", "qual" => "4", "name" => "Weste des verhängnisvollen Schicksals" ),
@@ -33,4 +37,6 @@ $loot = array(
 	array( "id" => "47267", "qual" => "4", "name" => "Totenkopfarmbrust" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
+}
+
 ?>

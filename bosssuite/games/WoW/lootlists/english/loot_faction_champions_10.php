@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47721", "qual" => "4", "name" => "Sandals of the Silver Magus" ),
 	array( "id" => "47719", "qual" => "4", "name" => "Gloves of the Silver Assassin" ),
@@ -10,6 +11,9 @@ $loot = array(
 	array( "id" => "47726", "qual" => "4", "name" => "Talisman of Volatile Power" ),
 	array( "id" => "47725", "qual" => "4", "name" => "Victor's Call" ),
 	array( "id" => "47724", "qual" => "4", "name" => "Blade of the Silver Disciple" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47873", "qual" => "4", "name" => "Sunreaver Magus' Sandals" ),
 	array( "id" => "47878", "qual" => "4", "name" => "Sunreaver Assassin's Gloves" ),
 	array( "id" => "47875", "qual" => "4", "name" => "Sunreaver Ranger's Helm" ),
@@ -21,4 +25,6 @@ $loot = array(
 	array( "id" => "47881", "qual" => "4", "name" => "Vengeance of the Forsaken" ),
 	array( "id" => "47874", "qual" => "4", "name" => "Sunreaver Disciple's Blade" ),
 );
+}
+
 ?>
