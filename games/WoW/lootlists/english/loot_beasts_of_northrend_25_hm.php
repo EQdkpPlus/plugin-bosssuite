@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "46971", "qual" => "4", "name" => "Drape of the Untamed Predator" ),
 	array( "id" => "46977", "qual" => "4", "name" => "Shawl of the Refreshing Winds" ),
@@ -18,6 +19,9 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47418", "qual" => "4", "name" => "Cloak of the Untamed Predator" ),
 	array( "id" => "47417", "qual" => "4", "name" => "Drape of the Refreshing Winds" ),
 	array( "id" => "47425", "qual" => "4", "name" => "Flowing Robes of Ascent" ),
@@ -37,4 +41,6 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
 );
+}
+
 ?>

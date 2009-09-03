@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "46971", "qual" => "4", "name" => "Drape of the Untamed Predator" ),
 	array( "id" => "46977", "qual" => "4", "name" => "Shawl of the Refreshing Winds" ),
@@ -18,6 +19,9 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Ornat des großen Beschützers" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47418", "qual" => "4", "name" => "Cloak of the Untamed Predator" ),
 	array( "id" => "47417", "qual" => "4", "name" => "Drape of the Refreshing Winds" ),
 	array( "id" => "47425", "qual" => "4", "name" => "Flowing Robes of Ascent" ),
@@ -29,12 +33,14 @@ $loot = array(
 	array( "id" => "47415", "qual" => "4", "name" => "Hauberk of the Towering Monstrosity" ),
 	array( "id" => "47414", "qual" => "4", "name" => "Boneshatter Vambraces" ),
 	array( "id" => "47424", "qual" => "4", "name" => "Sabatons of the Courageous" ),
-	array( "id" => "47413", "qual" => "4", "name" => "Ring of the Violent Temperament" ),
-	array( "id" => "47422", "qual" => "4", "name" => "Barb of Tarasque" ),
+	array( "id" => "47413", "qual" => "4", "name" => "Ring des wilden Temperaments" ),
+	array( "id" => "47422", "qual" => "4", "name" => "Haken von Tarasque" ),
 	array( "id" => "47416", "qual" => "4", "name" => "Stygian Bladebreaker" ),
 	array( "id" => "47421", "qual" => "4", "name" => "Forlorn Barrier" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Ornat des großen Beschützers" ),
 );
+}
+
 ?>

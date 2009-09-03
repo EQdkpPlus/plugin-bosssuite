@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47238", "qual" => "4", "name" => "Maiden's Favor" ),
 	array( "id" => "47192", "qual" => "4", "name" => "Strength of the Nerub" ),
@@ -23,6 +24,9 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47490", "qual" => "4", "name" => "Maiden's Adoration" ),
 	array( "id" => "47481", "qual" => "4", "name" => "Might of the Nerub" ),
 	array( "id" => "47485", "qual" => "4", "name" => "Bindings of the Ashen Saint" ),
@@ -37,8 +41,8 @@ $loot = array(
 	array( "id" => "47492", "qual" => "4", "name" => "Gauntlets of Bitter Reprisal" ),
 	array( "id" => "47484", "qual" => "4", "name" => "Girdle of the Forgotten Martyr" ),
 	array( "id" => "47473", "qual" => "4", "name" => "Greaves of the Saronite Citadel" ),
-	array( "id" => "47476", "qual" => "4", "name" => "Band of the Traitor King" ),
 	array( "id" => "47489", "qual" => "4", "name" => "Lurid Manifestation" ),
+	array( "id" => "47476", "qual" => "4", "name" => "Band of the Traitor King" ),
 	array( "id" => "47477", "qual" => "4", "name" => "Reign of the Dead" ),
 	array( "id" => "47475", "qual" => "4", "name" => "Hellscream Slicer" ),
 	array( "id" => "47483", "qual" => "4", "name" => "Suffering's End" ),
@@ -47,4 +51,6 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
 );
+}
+
 ?>

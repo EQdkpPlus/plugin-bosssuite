@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47721", "qual" => "4", "name" => "Sandalen des Silbernen Magus" ),
 	array( "id" => "47719", "qual" => "4", "name" => "Handschuhe des Silbernen Assassinen" ),
@@ -10,6 +11,9 @@ $loot = array(
 	array( "id" => "47726", "qual" => "4", "name" => "Talisman der flüchtigen Macht" ),
 	array( "id" => "47725", "qual" => "4", "name" => "Ruf des Siegers" ),
 	array( "id" => "47724", "qual" => "4", "name" => "Klinge des Silbernen Jüngers" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47873", "qual" => "4", "name" => "Sandalen des Sonnenhäschermagus'" ),
 	array( "id" => "47878", "qual" => "4", "name" => "Assassinenhandschuhe der Sonnenhäscher" ),
 	array( "id" => "47875", "qual" => "4", "name" => "Helm der Sonnenhäscherwaldläufers" ),
@@ -21,4 +25,6 @@ $loot = array(
 	array( "id" => "47881", "qual" => "4", "name" => "Rache der Verlassenen" ),
 	array( "id" => "47874", "qual" => "4", "name" => "Klinge des Sonnenhäscherjüngers" ),
 );
+}
+
 ?>

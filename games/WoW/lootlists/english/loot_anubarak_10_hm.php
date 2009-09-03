@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47974", "qual" => "4", "name" => "Vestments of the Sleepless" ),
 	array( "id" => "47977", "qual" => "4", "name" => "Cinch of the Undying" ),
@@ -18,6 +19,9 @@ $loot = array(
 	array( "id" => "47978", "qual" => "4", "name" => "Bulwark of the Royal Guard" ),
 	array( "id" => "47963", "qual" => "4", "name" => "Vigilant Ward" ),
 	array( "id" => "47975", "qual" => "4", "name" => "Baelgun's Heavy Crossbow" ),
+);
+}else{
+$loot = array(
 	array( "id" => "48051", "qual" => "4", "name" => "Robes of the Sleepless" ),
 	array( "id" => "48054", "qual" => "4", "name" => "Belt of the Eternal" ),
 	array( "id" => "48049", "qual" => "4", "name" => "Shoulderpads of the Snow Bandit" ),
@@ -37,4 +41,6 @@ $loot = array(
 	array( "id" => "48040", "qual" => "4", "name" => "Pride of the Kor'kron" ),
 	array( "id" => "48052", "qual" => "4", "name" => "Darkmaw Crossbow" ),
 );
+}
+
 ?>

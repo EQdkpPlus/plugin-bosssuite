@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47095", "qual" => "4", "name" => "Cloak of Displacement" ),
 	array( "id" => "47084", "qual" => "4", "name" => "Cord of Biting Cold" ),
@@ -18,6 +19,9 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47452", "qual" => "4", "name" => "Shroud of Displacement" ),
 	array( "id" => "47447", "qual" => "4", "name" => "Belt of Biting Cold" ),
 	array( "id" => "47454", "qual" => "4", "name" => "Sandals of the Mourning Widow" ),
@@ -37,4 +41,6 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
 );
+}
+
 ?>

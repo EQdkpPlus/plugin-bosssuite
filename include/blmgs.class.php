@@ -157,6 +157,22 @@ if ( !class_exists( "BLMGS" ) ) {
       }
     }
     
+    function get_faction(){
+      if($this->game == 'WoW'){
+        global $db;
+        $faction_result = $db->query("SELECT COUNT(DISTINCT member_race_id) AS alliance_count FROM __members WHERE member_race_id IN ('1','2','3','4','9')");
+        $count = $db->fetch_record($faction_result);
+        if($count['alliance_count'] > 0){
+          return 'alliance';
+        }else{
+          return 'horde';
+        }
+      }else{
+        return null;
+      }
+      
+    }
+    
   }
 }
 

@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47663", "qual" => "4", "name" => "Teufelsfunkenbindungen" ),
 	array( "id" => "47620", "qual" => "4", "name" => "Gamaschen des dämonischen Herolds" ),
@@ -13,6 +14,9 @@ $loot = array(
 	array( "id" => "47618", "qual" => "4", "name" => "Feuersturmring" ),
 	array( "id" => "47703", "qual" => "4", "name" => "Ebenenpirschersiegel" ),
 	array( "id" => "47676", "qual" => "4", "name" => "Dolch der Nachtwache" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47861", "qual" => "4", "name" => "Teufelsfunkenarmschienen" ),
 	array( "id" => "47865", "qual" => "4", "name" => "Beinwickel des dämonischen Herolds" ),
 	array( "id" => "47863", "qual" => "4", "name" => "Gürtel des Gesandten der Bluthuf" ),
@@ -27,4 +31,6 @@ $loot = array(
 	array( "id" => "47868", "qual" => "4", "name" => "Ebenenpirscherband" ),
 	array( "id" => "47871", "qual" => "4", "name" => "Orcische Todesklinge" ),
 );
+}
+
 ?>

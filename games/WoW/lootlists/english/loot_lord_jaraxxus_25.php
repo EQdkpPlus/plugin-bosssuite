@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47042", "qual" => "4", "name" => "Pride of the Eredar" ),
 	array( "id" => "47051", "qual" => "4", "name" => "Leggings of the Soothing Touch" ),
@@ -16,6 +17,9 @@ $loot = array(
 	array( "id" => "46996", "qual" => "4", "name" => "Lionhead Slasher" ),
 	array( "id" => "46994", "qual" => "4", "name" => "Talonstrike" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47275", "qual" => "4", "name" => "Pride of the Demon Lord" ),
 	array( "id" => "47274", "qual" => "4", "name" => "Pants of the Soothing Touch" ),
 	array( "id" => "47270", "qual" => "4", "name" => "Vest of Calamitous Fate" ),
@@ -33,4 +37,6 @@ $loot = array(
 	array( "id" => "47267", "qual" => "4", "name" => "Death's Head Crossbow" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
+}
+
 ?>

@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47617", "qual" => "4", "name" => "Icehowl Cinch" ),
 	array( "id" => "47613", "qual" => "4", "name" => "Shoulderpads of the Glacial Wilds" ),
@@ -12,6 +13,9 @@ $loot = array(
 	array( "id" => "47607", "qual" => "4", "name" => "Collar of Ceaseless Torment" ),
 	array( "id" => "47578", "qual" => "4", "name" => "Carnivorous Band" ),
 	array( "id" => "47612", "qual" => "4", "name" => "Rod of Imprisoned Souls" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47855", "qual" => "4", "name" => "Icehowl Binding" ),
 	array( "id" => "47857", "qual" => "4", "name" => "Pauldrons of the Glacial Wilds" ),
 	array( "id" => "47853", "qual" => "4", "name" => "Acidmaw Treads" ),
@@ -25,4 +29,6 @@ $loot = array(
 	array( "id" => "47854", "qual" => "4", "name" => "Gormok's Band" ),
 	array( "id" => "47856", "qual" => "4", "name" => "Scepter of Imprisoned Souls" ),
 );
+}
+
 ?>

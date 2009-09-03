@@ -1,8 +1,9 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47095", "qual" => "4", "name" => "Cloak of Displacement" ),
 	array( "id" => "47084", "qual" => "4", "name" => "Cord of Biting Cold" ),
-	array( "id" => "47097", "qual" => "4", "name" => "Boots of the Mourning Widow" ),
+	array( "id" => "47097", "qual" => "4", "name" => "Stiefel der trauernden Witwe" ),
 	array( "id" => "47096", "qual" => "4", "name" => "Vestments of the Shattered Fellowship" ),
 	array( "id" => "47077", "qual" => "4", "name" => "Treads of the Icewalker" ),
 	array( "id" => "47074", "qual" => "4", "name" => "Bracers of the Untold Massacre" ),
@@ -10,7 +11,7 @@ $loot = array(
 	array( "id" => "47099", "qual" => "4", "name" => "Boots of Tremoring Earth" ),
 	array( "id" => "47086", "qual" => "4", "name" => "Chestplate of the Frostborn Hero" ),
 	array( "id" => "47098", "qual" => "4", "name" => "Vambraces of the Broken Bond" ),
-	array( "id" => "47076", "qual" => "4", "name" => "Girdle of Bloodied Scars" ),
+	array( "id" => "47076", "qual" => "4", "name" => "Gurt der blutigen Narben" ),
 	array( "id" => "47075", "qual" => "4", "name" => "Ring of Callous Aggression" ),
 	array( "id" => "47088", "qual" => "4", "name" => "Satrina's Impeding Scarab" ),
 	array( "id" => "47078", "qual" => "4", "name" => "Justicebringer" ),
@@ -18,6 +19,9 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Ornat des großen Beschützers" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47452", "qual" => "4", "name" => "Shroud of Displacement" ),
 	array( "id" => "47447", "qual" => "4", "name" => "Belt of Biting Cold" ),
 	array( "id" => "47454", "qual" => "4", "name" => "Sandals of the Mourning Widow" ),
@@ -37,4 +41,6 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Ornat des großen Beschützers" ),
 );
+}
+
 ?>

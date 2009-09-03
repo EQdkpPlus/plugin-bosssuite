@@ -1,4 +1,5 @@
 <?php
+if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47617", "qual" => "4", "name" => "Eisheulers Sattelgurt" ),
 	array( "id" => "47613", "qual" => "4", "name" => "Schulterpolster der eiszeitlichen Wildnis" ),
@@ -12,6 +13,9 @@ $loot = array(
 	array( "id" => "47607", "qual" => "4", "name" => "Halsband der unaufhörlichen Qual" ),
 	array( "id" => "47578", "qual" => "4", "name" => "Fleischfressendes Band" ),
 	array( "id" => "47612", "qual" => "4", "name" => "Stab der gefangenen Seelen" ),
+);
+}else{
+$loot = array(
 	array( "id" => "47855", "qual" => "4", "name" => "Eisheulers Bindungen" ),
 	array( "id" => "47857", "qual" => "4", "name" => "Schulterstücke der eiszeitlichen Wildnis" ),
 	array( "id" => "47853", "qual" => "4", "name" => "Ätzschlundtreter" ),
@@ -25,4 +29,6 @@ $loot = array(
 	array( "id" => "47854", "qual" => "4", "name" => "Gormoks Band" ),
 	array( "id" => "47856", "qual" => "4", "name" => "Szepter der gefangenen Seelen" ),
 );
+}
+
 ?>
