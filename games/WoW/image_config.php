@@ -145,7 +145,10 @@ $image_map['lord_jaraxxus_10_hm'] = 'lord_jaraxxus';
 $image_map['faction_champions_10_hm'] = 'faction_champions';
 $image_map['twin_valkyr_10_hm'] = 'twin_valkyr';
 $image_map['anubarak_10_hm'] = 'anubarak';
-  
+$image_map['tribute_s_10_hm'] = 'argentum_tribute_chest';
+$image_map['tribute_ms_10_hm'] = 'argentum_tribute_chest';
+$image_map['tribute_ins_10_hm'] = 'argentum_tribute_chest';
+
 $image_map['totc_25'] = 'totc';
 $image_map['beasts_of_northrend_25'] = 'beasts_of_northrend';
 $image_map['lord_jaraxxus_25'] = 'lord_jaraxxus';
@@ -159,6 +162,9 @@ $image_map['lord_jaraxxus_25_hm'] = 'lord_jaraxxus';
 $image_map['faction_champions_25_hm'] = 'faction_champions';
 $image_map['twin_valkyr_25_hm'] = 'twin_valkyr';
 $image_map['anubarak_25_hm'] = 'anubarak';
+$image_map['tribute_s_25_hm'] = 'argentum_tribute_chest';
+$image_map['tribute_ms_25_hm'] = 'argentum_tribute_chest';
+$image_map['tribute_ins_25_hm'] = 'argentum_tribute_chest';
 
 $image_map['koralon_10'] = 'ignis';
 $image_map['koralon_25'] = 'ignis';

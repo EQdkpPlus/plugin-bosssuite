@@ -16,9 +16,7 @@ $loot = array(
 	array( "id" => "47088", "qual" => "4", "name" => "Satrina's Impeding Scarab" ),
 	array( "id" => "47078", "qual" => "4", "name" => "Justicebringer" ),
 	array( "id" => "47085", "qual" => "4", "name" => "Bastion of Purity" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -37,9 +35,7 @@ $loot = array(
 	array( "id" => "47451", "qual" => "4", "name" => "Juggernaut's Vitality" ),
 	array( "id" => "47446", "qual" => "4", "name" => "Dual-blade Butcher" ),
 	array( "id" => "47448", "qual" => "4", "name" => "Bastion of Resolve" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

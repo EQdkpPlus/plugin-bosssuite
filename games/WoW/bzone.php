@@ -33,7 +33,10 @@ $bzone = array (
     'lord_jaraxxus_10_hm',
     'faction_champions_10_hm',
     'twin_valkyr_10_hm',
-    'anubarak_10_hm'
+    'anubarak_10_hm',
+    'tribute_s_10_hm',
+    'tribute_ms_10_hm',
+    'tribute_ins_10_hm'
   ),
   'totc_25' => array(
     'beasts_of_northrend_25',
@@ -47,7 +50,10 @@ $bzone = array (
     'lord_jaraxxus_25_hm',
     'faction_champions_25_hm',
     'twin_valkyr_25_hm',
-    'anubarak_25_hm'
+    'anubarak_25_hm',
+    'tribute_s_25_hm',
+    'tribute_ms_25_hm',
+    'tribute_ins_25_hm'
   ),
   'ulduar_10' => array (
     'leviathan_10',

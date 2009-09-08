@@ -14,7 +14,6 @@ $loot = array(
 	array( "id" => "47951", "qual" => "4", "name" => "Reckoning" ),
 	array( "id" => "47960", "qual" => "4", "name" => "Enlightenment" ),
 	array( "id" => "47950", "qual" => "4", "name" => "The Diplomat" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -31,7 +30,6 @@ $loot = array(
 	array( "id" => "48023", "qual" => "4", "name" => "Edge of Agony" ),
 	array( "id" => "48036", "qual" => "4", "name" => "Illumination" ),
 	array( "id" => "48022", "qual" => "4", "name" => "Widebarrel Flintlock" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

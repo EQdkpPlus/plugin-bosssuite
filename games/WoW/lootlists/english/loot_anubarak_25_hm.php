@@ -21,9 +21,7 @@ $loot = array(
 	array( "id" => "47156", "qual" => "4", "name" => "Stormpike Cleaver" ),
 	array( "id" => "47206", "qual" => "4", "name" => "Misery's End" ),
 	array( "id" => "47239", "qual" => "4", "name" => "Archon Glaive" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -41,15 +39,13 @@ $loot = array(
 	array( "id" => "47492", "qual" => "4", "name" => "Gauntlets of Bitter Reprisal" ),
 	array( "id" => "47484", "qual" => "4", "name" => "Girdle of the Forgotten Martyr" ),
 	array( "id" => "47473", "qual" => "4", "name" => "Greaves of the Saronite Citadel" ),
-	array( "id" => "47489", "qual" => "4", "name" => "Lurid Manifestation" ),
 	array( "id" => "47476", "qual" => "4", "name" => "Band of the Traitor King" ),
+	array( "id" => "47489", "qual" => "4", "name" => "Lurid Manifestation" ),
 	array( "id" => "47477", "qual" => "4", "name" => "Reign of the Dead" ),
 	array( "id" => "47475", "qual" => "4", "name" => "Hellscream Slicer" ),
 	array( "id" => "47483", "qual" => "4", "name" => "Suffering's End" ),
 	array( "id" => "47491", "qual" => "4", "name" => "Hellion Glaive" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

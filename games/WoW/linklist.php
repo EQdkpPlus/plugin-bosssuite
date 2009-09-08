@@ -324,31 +324,37 @@ $idlist['default'] = array(
 
   /******Trial of the Crusader (10)*****/
   'beasts_of_northrend_10' => '99999',
-  'lord_jaraxxus_10' => '99999',
+  'lord_jaraxxus_10' => '34780',
   'faction_champions_10' => '99999',
   'twin_valkyr_10' => '99999',
-  'anubarak_10' => '99999',
+  'anubarak_10' => '34564',
   
   /******Trial of the Grand Crusader (10)*****/
   'beasts_of_northrend_10_hm' => '99999',
-  'lord_jaraxxus_10_hm' => '99999',
+  'lord_jaraxxus_10_hm' => '34780',
   'faction_champions_10_hm' => '99999',
   'twin_valkyr_10_hm' => '99999',
-  'anubarak_10_hm' => '99999',
-
+  'anubarak_10_hm' => '34564',
+  'tribute_s_10_hm' => '99999',
+  'tribute_ms_10_hm' => '99999',
+  'tribute_ins_10_hm' => '99999',
+  
   /******Trial of the Crusader (25)*****/
   'beasts_of_northrend_25' => '99999',
   'lord_jaraxxus_25' => '99999',
   'faction_champions_25' => '99999',
   'twin_valkyr_25' => '99999',
-  'anubarak_25' => '99999',
+  'anubarak_25' => '34564',
   
   /******Trial of the Grand Crusader (25)*****/
   'beasts_of_northrend_25_hm' => '99999',
-  'lord_jaraxxus_25_hm' => '99999',
+  'lord_jaraxxus_25_hm' => '34780',
   'faction_champions_25_hm' => '99999',
   'twin_valkyr_25_hm' => '99999',
-  'anubarak_25_hm' => '99999',
+  'anubarak_25_hm' => '34564',
+  'tribute_s_25_hm' => '99999',
+  'tribute_ms_25_hm' => '99999',
+  'tribute_ins_25_hm' => '99999',
 );
 
 $idlist['wowheadmv'] = array(
@@ -638,7 +644,10 @@ $idlist['wowheadmv'] = array(
   'faction_champions_10_hm' => '',
   'twin_valkyr_10_hm' => '',
   'anubarak_10_hm' => '',
-
+  'tribute_s_10_hm' => '',
+  'tribute_ms_10_hm' => '',
+  'tribute_ins_10_hm' => '',
+  
   /******Trial of the Crusader (25)*****/
   'beasts_of_northrend_25' => '',
   'lord_jaraxxus_25' => '',
@@ -652,5 +661,8 @@ $idlist['wowheadmv'] = array(
   'faction_champions_25_hm' => '',
   'twin_valkyr_25_hm' => '',
   'anubarak_25_hm' => '',
+  'tribute_s_25_hm' => '',
+  'tribute_ms_25_hm' => '',
+  'tribute_ins_25_hm' => '',
 );
 ?>
