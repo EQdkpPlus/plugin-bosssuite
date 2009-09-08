@@ -14,7 +14,6 @@ $loot = array(
 	array( "id" => "47928", "qual" => "4", "name" => "Feuersturmring" ),
 	array( "id" => "47934", "qual" => "4", "name" => "Ebenenpirschersiegel" ),
 	array( "id" => "47938", "qual" => "4", "name" => "Dolch der Nachtwache" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }else{
 $loot = array(
@@ -31,7 +30,6 @@ $loot = array(
 	array( "id" => "48001", "qual" => "4", "name" => "Feuersturmband" ),
 	array( "id" => "48007", "qual" => "4", "name" => "Ebenenpirscherband" ),
 	array( "id" => "48010", "qual" => "4", "name" => "Orcische Todesklinge" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }
 

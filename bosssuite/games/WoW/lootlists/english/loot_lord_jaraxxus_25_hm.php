@@ -16,9 +16,7 @@ $loot = array(
 	array( "id" => "47064", "qual" => "4", "name" => "Symbol of Transgression" ),
 	array( "id" => "47001", "qual" => "4", "name" => "Lionhead Slasher" ),
 	array( "id" => "46995", "qual" => "4", "name" => "Talonstrike" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -37,9 +35,7 @@ $loot = array(
 	array( "id" => "47437", "qual" => "4", "name" => "Talisman of Heedless Sins" ),
 	array( "id" => "47427", "qual" => "4", "name" => "Blood Fury" ),
 	array( "id" => "47428", "qual" => "4", "name" => "Death's Head Crossbow" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

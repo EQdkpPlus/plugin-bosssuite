@@ -3,7 +3,7 @@ if($this->get_faction() == 'alliance'){
 $loot = array(
 	array( "id" => "47940", "qual" => "4", "name" => "Sandalen des Silbernen Magus" ),
 	array( "id" => "47945", "qual" => "4", "name" => "Handschuhe des Silbernen Assassinen" ),
-	array( "id" => "47942", "qual" => "4", "name" => "Helm of the Silver Ranger" ),
+	array( "id" => "47942", "qual" => "4", "name" => "Helm des Silbernen Waldläufers" ),
 	array( "id" => "47943", "qual" => "4", "name" => "Gesichtsschutz des Silbernen Champions" ),
 	array( "id" => "47944", "qual" => "4", "name" => "Schulterstücke des Silbernen Verteidigers" ),
 	array( "id" => "47947", "qual" => "4", "name" => "Bindendes Licht" ),
@@ -11,7 +11,6 @@ $loot = array(
 	array( "id" => "47946", "qual" => "4", "name" => "Talisman der flüchtigen Macht" ),
 	array( "id" => "47948", "qual" => "4", "name" => "Ruf des Siegers" ),
 	array( "id" => "47941", "qual" => "4", "name" => "Klinge des Silbernen Jüngers" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }else{
 $loot = array(
@@ -25,7 +24,6 @@ $loot = array(
 	array( "id" => "48018", "qual" => "4", "name" => "Fetisch der flüchtigen Macht" ),
 	array( "id" => "48020", "qual" => "4", "name" => "Rache der Verlassenen" ),
 	array( "id" => "48013", "qual" => "4", "name" => "Klinge des Sonnenhäscherjüngers" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }
 

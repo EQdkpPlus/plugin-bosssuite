@@ -11,7 +11,6 @@ $loot = array(
 	array( "id" => "47946", "qual" => "4", "name" => "Talisman of Volatile Power" ),
 	array( "id" => "47948", "qual" => "4", "name" => "Victor's Call" ),
 	array( "id" => "47941", "qual" => "4", "name" => "Blade of the Silver Disciple" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -25,7 +24,6 @@ $loot = array(
 	array( "id" => "48018", "qual" => "4", "name" => "Fetish of Volatile Power" ),
 	array( "id" => "48020", "qual" => "4", "name" => "Vengeance of the Forsaken" ),
 	array( "id" => "48013", "qual" => "4", "name" => "Sunreaver Disciple's Blade" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

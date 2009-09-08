@@ -16,9 +16,7 @@ $loot = array(
 	array( "id" => "46980", "qual" => "4", "name" => "Blade of Tarasque" ),
 	array( "id" => "46969", "qual" => "4", "name" => "Steel Bladebreaker" ),
 	array( "id" => "46964", "qual" => "4", "name" => "Crystal Plated Vanguard" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -37,9 +35,7 @@ $loot = array(
 	array( "id" => "47422", "qual" => "4", "name" => "Barb of Tarasque" ),
 	array( "id" => "47416", "qual" => "4", "name" => "Stygian Bladebreaker" ),
 	array( "id" => "47421", "qual" => "4", "name" => "Forlorn Barrier" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

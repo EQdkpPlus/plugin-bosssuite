@@ -340,6 +340,9 @@ $lang['lord_jaraxxus_10_hm'] = array('long' => 'Lord Jaraxxus HM (10)', 'short' 
 $lang['faction_champions_10_hm'] = array('long' => 'Faction Champions HM (10)', 'short' => 'Champions HM (10)');
 $lang['twin_valkyr_10_hm'] = array('long' => 'Twin Val\'kyr HM (10)', 'short' => 'Twin Val\'kyr HM (10)');
 $lang['anubarak_10_hm'] = array('long' => 'Anub\'arak HM (10)', 'short' => 'Anub\'arak HM (10)');
+$lang['tribute_s_10_hm'] = array('long' => 'A Tribute to Skill (10)', 'short' => 'Tribute: Skill (10)');
+$lang['tribute_ms_10_hm'] = array('long' => 'A Tribute to Mad Skill (10)', 'short' => 'Tribute: Mad Skill (10)');
+$lang['tribute_ins_10_hm'] = array('long' => 'A Tribute to Insanity (10)', 'short' => 'Tribute: Insanity (10)');
 
 /******Trial of the Crusader (25)*****/
 $lang['totc_25'] = array('long' => 'Trial of the Crusader (25)', 'short' => 'TotC (25)');
@@ -356,4 +359,7 @@ $lang['lord_jaraxxus_25_hm'] = array('long' => 'Lord Jaraxxus HM (25)', 'short' 
 $lang['faction_champions_25_hm'] = array('long' => 'Faction Champions HM (25)', 'short' => 'Champions HM (25)');
 $lang['twin_valkyr_25_hm'] = array('long' => 'Twin Val\'kyr HM (25)', 'short' => 'Twin Val\'kyr HM (25)');
 $lang['anubarak_25_hm'] = array('long' => 'Anub\'arak HM (25)', 'short' => 'Anub\'arak HM (25)');
+$lang['tribute_s_25_hm'] = array('long' => 'A Tribute to Skill (25)', 'short' => 'Tribute: Skill (25)');
+$lang['tribute_ms_25_hm'] = array('long' => 'A Tribute to Mad Skill (25)', 'short' => 'Tribute: Mad Skill (25)');
+$lang['tribute_ins_25_hm'] = array('long' => 'A Tribute to Insanity (25)', 'short' => 'Tribute: Insanity (25)');
 ?>

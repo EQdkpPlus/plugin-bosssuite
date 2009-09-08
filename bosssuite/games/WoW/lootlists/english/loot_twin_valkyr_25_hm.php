@@ -16,9 +16,7 @@ $loot = array(
 	array( "id" => "47146", "qual" => "4", "name" => "Chalice of Searing Light" ),
 	array( "id" => "47113", "qual" => "4", "name" => "Twin Spike" ),
 	array( "id" => "47130", "qual" => "4", "name" => "Lupine Longstaff" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -37,9 +35,7 @@ $loot = array(
 	array( "id" => "47470", "qual" => "4", "name" => "Mystifying Charm" ),
 	array( "id" => "47461", "qual" => "4", "name" => "Gouge of the Frigid Heart" ),
 	array( "id" => "47463", "qual" => "4", "name" => "Twin's Pact" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
-	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

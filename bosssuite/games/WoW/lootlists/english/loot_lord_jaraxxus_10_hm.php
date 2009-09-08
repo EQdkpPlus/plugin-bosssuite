@@ -14,7 +14,6 @@ $loot = array(
 	array( "id" => "47928", "qual" => "4", "name" => "Firestorm Ring" ),
 	array( "id" => "47934", "qual" => "4", "name" => "Planestalker Signet" ),
 	array( "id" => "47938", "qual" => "4", "name" => "Dirk of the Night Watch" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -31,7 +30,6 @@ $loot = array(
 	array( "id" => "48001", "qual" => "4", "name" => "Firestorm Band" ),
 	array( "id" => "48007", "qual" => "4", "name" => "Planestalker Band" ),
 	array( "id" => "48010", "qual" => "4", "name" => "Orcish Deathblade" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

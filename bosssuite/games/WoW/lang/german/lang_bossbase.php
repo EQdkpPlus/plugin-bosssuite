@@ -340,6 +340,9 @@ $lang['lord_jaraxxus_10_hm'] = array('long' => 'Lord Jaraxxus HM (10)', 'short' 
 $lang['faction_champions_10_hm'] = array('long' => 'Fraktions-Champions HM (10)', 'short' => 'Champions HM (10)');
 $lang['twin_valkyr_10_hm'] = array('long' => 'Die Zwillingsval\'kyr HM (10)', 'short' => 'Zwillingsval\'kyr HM (10)');
 $lang['anubarak_10_hm'] = array('long' => 'Anub\'arak HM (10)', 'short' => 'Anub\'arak HM (10)');
+$lang['tribute_s_10_hm'] = array('long' => 'Ein Tribut an die gute Leistung (10)', 'short' => 'Tribut: Gute Leistung (10)');
+$lang['tribute_ms_10_hm'] = array('long' => 'Ein Tribut an die hervorragende Leistung (10)', 'short' => 'Tribut: Herv. Leistung (10)');
+$lang['tribute_ins_10_hm'] = array('long' => 'Ein Tribut an den Wahnsinn (10)', 'short' => 'Tribut: Wahnsinn (10)');
 
 /******Trial of the Crusader (25)*****/
 $lang['totc_25'] = array('long' => 'Prüfung des Kreuzfahrers (25)', 'short' => 'PdK (25)');
@@ -356,4 +359,7 @@ $lang['lord_jaraxxus_25_hm'] = array('long' => 'Lord Jaraxxus HM (25)', 'short' 
 $lang['faction_champions_25_hm'] = array('long' => 'Fraktions-Champions HM (25)', 'short' => 'Champions HM (25)');
 $lang['twin_valkyr_25_hm'] = array('long' => 'Die Zwillingsval\'kyr HM (25)', 'short' => 'Zwillingsval\'kyr HM (25)');
 $lang['anubarak_25_hm'] = array('long' => 'Anub\'arak HM (25)', 'short' => 'Anub\'arak HM (25)');
+$lang['tribute_s_25_hm'] = array('long' => 'Ein Tribut an die gute Leistung (25)', 'short' => 'Tribut: Gute Leistung (25)');
+$lang['tribute_ms_25_hm'] = array('long' => 'Ein Tribut an die hervorragende Leistung (25)', 'short' => 'Tribut: Herv. Leistung (25)');
+$lang['tribute_ins_25_hm'] = array('long' => 'Ein Tribut an den Wahnsinn (25)', 'short' => 'Tribut: Wahnsinn (25)');
 ?>
