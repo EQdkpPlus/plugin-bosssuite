@@ -24,6 +24,7 @@ if ( !class_exists( "BLMGS" ) ) {
   class BLMGS{
     var $game;
     var $user_lang;
+    var $current_game = null;
     
     function BLMGS(){
       $this->game = $this->bl_get_current_game();
@@ -32,8 +33,12 @@ if ( !class_exists( "BLMGS" ) ) {
     
     function bl_get_current_game(){
       global $eqdkp;
-      $game_arr = explode('_', $eqdkp->config['default_game']);
-      return $game_arr[0];
+      if($this->current_game == null){
+        $game_arr = explode('_', $eqdkp->config['default_game']);
+        $this->current_game = $game_arr[0];
+      }
+      return $this->current_game;
+      
     }
   
     function bl_get_current_language(){
@@ -41,8 +46,6 @@ if ( !class_exists( "BLMGS" ) ) {
       return $user->lang_name;
     }
     
-    
-  
     function bl_get_language_strings(){
         require(dirname(__FILE__).'/../games/'.$this->game.'/lang/'.$this->user_lang.'/lang_bossloot.php');
         return $bl_lang;

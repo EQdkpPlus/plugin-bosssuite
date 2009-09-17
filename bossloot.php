@@ -110,6 +110,7 @@ if($myblmgs->modelviewer_supported() && $bl_conf['en_mv'] == 1){
 }else{
   $bl_out .= '<tr class="row1"><td colspan="3" align="center">'.$myblmgs->bl_get_bossimage($bossid).'</td></tr>'."\n";
 }
+
 //get loot table
 $loottable = $myblmgs->bl_get_loottable($bl_conf['item_lang'], $bossid, $bl_conf['item_minqual']);
 
@@ -119,28 +120,49 @@ $printed1 = 0;
 //Framework include
 include_once($eqdkp_root_path . 'plugins/bosssuite/include/libloader.inc.php');
 
-
 if ((is_array($loottable)) && !(empty($loottable))){
     if (($data['kc'] > 0) && (count($data['items'])>0)){
         arsort($data['items']);	
-    
-        foreach($data['items'] as $itemname => $values){
-            $itemcount = $values['dc'];
-            $itemeid = $values['id'];			      
-            if( (in_array($itemname, $loottable)) ){
-                $droprate = round($itemcount/$data['kc']*100,2);
-                $rowid0 = $printed0%2+1;
-                $is_itemname = itemstats_decorate_name(stripslashes($itemname));
-                $bl_cloot .= "\t\t\t".'<tr class="row'.$rowid0.'"><td><a href="'.$eqdkp_root_path.'viewitem.php?s=&i='.$itemeid.'">'.$is_itemname.'</a></td><td>'.$itemcount.'</td><td>'.$droprate.'%</td></tr>'."\n";
-                $printed0++;
-            } else {
-                $rowid1 = $printed1%2+1;
-                $droprate = round($itemcount/$data['kc']*100,2);
-                $is_itemname = itemstats_decorate_name(stripslashes($itemname));
-                $bl_wloot .= "\t\t\t".'<tr class="row'.$rowid1.'"><td><a href="'.$eqdkp_root_path.'viewitem.php?s=&i='.$itemeid.'">'.$is_itemname.'</a></td><td>'.$itemcount.'</td><td>'.$droprate.'%</td></tr>'."\n";
-                $printed1++;
-            }
+        if($myblmgs->bl_get_current_game() == 'WoW'){
+          foreach($data['items'] as $item_info => $values){
+              list($itemname, $ingame_item_id) = explode('__', $item_info);
+              $itemcount = $values['dc'];
+              $itemeid = $values['id'];
+     
+              if( array_key_exists($ingame_item_id, $loottable) ){
+                  $droprate = round($itemcount/$data['kc']*100,2);
+                  $rowid0 = $printed0%2+1;
+                  $is_itemname = itemstats_decorate_name(stripslashes($itemname), $ingame_item_id);
+                  $bl_cloot .= "\t\t\t".'<tr class="row'.$rowid0.'"><td><a href="'.$eqdkp_root_path.'viewitem.php?s=&i='.$itemeid.'">'.$is_itemname.'</a></td><td>'.$itemcount.'</td><td>'.$droprate.'%</td></tr>'."\n";
+                  $printed0++;
+              } else {
+                  $rowid1 = $printed1%2+1;
+                  $droprate = round($itemcount/$data['kc']*100,2);
+                  $is_itemname = itemstats_decorate_name(stripslashes($itemname), $ingame_item_id);
+                  $bl_wloot .= "\t\t\t".'<tr class="row'.$rowid1.'"><td><a href="'.$eqdkp_root_path.'viewitem.php?s=&i='.$itemeid.'">'.$is_itemname.'</a></td><td>'.$itemcount.'</td><td>'.$droprate.'%</td></tr>'."\n";
+                  $printed1++;
+              }
+          }
+        }else{
+          foreach($data['items'] as $itemname => $values){
+              $itemcount = $values['dc'];
+              $itemeid = $values['id'];			      
+              if( in_array($itemname, $loottable) ){
+                  $droprate = round($itemcount/$data['kc']*100,2);
+                  $rowid0 = $printed0%2+1;
+                  $is_itemname = itemstats_decorate_name(stripslashes($itemname));
+                  $bl_cloot .= "\t\t\t".'<tr class="row'.$rowid0.'"><td><a href="'.$eqdkp_root_path.'viewitem.php?s=&i='.$itemeid.'">'.$is_itemname.'</a></td><td>'.$itemcount.'</td><td>'.$droprate.'%</td></tr>'."\n";
+                  $printed0++;
+              } else {
+                  $rowid1 = $printed1%2+1;
+                  $droprate = round($itemcount/$data['kc']*100,2);
+                  $is_itemname = itemstats_decorate_name(stripslashes($itemname));
+                  $bl_wloot .= "\t\t\t".'<tr class="row'.$rowid1.'"><td><a href="'.$eqdkp_root_path.'viewitem.php?s=&i='.$itemeid.'">'.$is_itemname.'</a></td><td>'.$itemcount.'</td><td>'.$droprate.'%</td></tr>'."\n";
+                  $printed1++;
+              }
+          }
         }
+        
     }
 }else{
     if (($data['kc'] > 0) && (count($data['items'])>0)){
@@ -161,16 +183,19 @@ if ((is_array($loottable)) && !(empty($loottable))){
 if ($bl_conf['show_ndl'] == true){	
   $printed2 = 0;
 	if (is_array($loottable)){
-		foreach($loottable as $id => $name){
+		foreach($loottable as $ingame_item_id => $name){
 			if ($data['items'][$name]['dc'] == 0){
 				$rowid2 = $printed2%2+1;
 				if ($bl_conf['get_itemstats'] == true){
-						$is_itemname = itemstats_decorate_name(stripslashes($name));
+				  if($myblmgs->bl_get_current_game() == 'WoW'){
+						$is_itemname = itemstats_decorate_name(stripslashes($name), $ingame_item_id);
+					}else{
+            $is_itemname = itemstats_decorate_name(stripslashes($name));
+          }
 				}else{
 					$is_itemname = $name;
 				}
-        $bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'plugins/bosssuite/bs_update_item.php?item='.urlencode(urlencode($name)).'">'.$is_itemname.'</a></td></tr>'."\n";
-				//$bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3">'.$is_itemname.'</td></tr>'."\n";
+        $bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'plugins/bosssuite/bs_update_item.php?item='.urlencode($name).'&ingame_item_id='.urlencode($ingame_item_id).'">'.$is_itemname.'</a></td></tr>'."\n";
 				$printed2++;
 			}
 		}

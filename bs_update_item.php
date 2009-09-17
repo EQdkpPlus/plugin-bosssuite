@@ -31,8 +31,17 @@ if ( !$pm->check(PLUGIN_INSTALLED, 'bosssuite') )
 }
 
 if (isset($_GET['item'])){
-  $item = stripslashes(urldecode($_GET['item']));
-  $bs_item_out = itemstats_get_html($item);
+  $item = $in->get('item');
+  $ingame_item_id = $in->get('ingame_item_id', 0);
+  
+  require(dirname(__FILE__).'/include/blmgs.class.php');
+  $myblmgs = new BLMGS();
+  
+  if($myblmgs->bl_get_current_game() == 'WoW'){
+    $bs_item_out = itemstats_get_html($item, $ingame_item_id);
+  }else{
+    $bs_item_out = itemstats_get_html($item);
+  }
 } else {
   $bs_item_out = "No item!";
 }
