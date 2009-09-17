@@ -63,7 +63,7 @@ if ( !class_exists( "BLSQL" ) ) {
       }
 
       function get_bl_db_data($bb_conf, $boss) {
-      global $db, $table_prefix;
+      global $db, $table_prefix, $eqdkp;
         $delim = array (
           'rnote' => '/'.$bb_conf['noteDelim'].'/',
           'rname' => '/'.$bb_conf['nameDelim'].'/'
@@ -117,11 +117,21 @@ if ( !class_exists( "BLSQL" ) ) {
           			foreach ($boss_element as $raid){                			
           					if ($this->in_array_nocase(stripslashes(trim($raid)), $bparseList)) {
                       $this->data['rids'] .= $row['id'] . "\n";
-                      $sql2 = "Select item_name, item_id from ". $prefix ."items where raid_id = '".$row['id']."' order by item_name";
+                      $sql2 = "Select item_name, item_id, game_itemid from ". $prefix ."items where raid_id = '".$row['id']."' order by item_name";
                       $result2 = $db->query($sql2);
-                      while($row2 = $db->fetch_record($result2)){
-                        $this->data['items'][$row2['item_name']]['dc']++;
-                        $this->data['items'][$row2['item_name']]['id'] = $row2['item_id'];
+                      
+                      //current game == wow?
+                      $game_arr = explode('_', $eqdkp->config['default_game']);
+                      if($game_arr[0] == 'WoW'){
+                        while($row2 = $db->fetch_record($result2)){
+                          $this->data['items'][$row2['item_name'].'__'.$row2['game_itemid']]['dc']++;
+                          $this->data['items'][$row2['item_name'].'__'.$row2['game_itemid']]['id'] = $row2['item_id'];
+                        }
+                      }else{
+                        while($row2 = $db->fetch_record($result2)){
+                          $this->data['items'][$row2['item_name']]['dc']++;
+                          $this->data['items'][$row2['item_name']]['id'] = $row2['item_id'];
+                        }
                       }
                       $db->free_result($result2);	
           					}		          				
