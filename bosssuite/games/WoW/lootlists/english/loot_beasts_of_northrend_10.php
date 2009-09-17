@@ -11,7 +11,7 @@ $loot = array(
 	array( "id" => "47615", "qual" => "4", "name" => "Belt of the Frozen Reach" ),
 	array( "id" => "47614", "qual" => "4", "name" => "Girdle of the Impaler" ),
 	array( "id" => "47607", "qual" => "4", "name" => "Collar of Ceaseless Torment" ),
-	array( "id" => "47854", "qual" => "4", "name" => "Gormok's Band" ),
+	array( "id" => "47578", "qual" => "4", "name" => "Carnivorous Band" ),
 	array( "id" => "47612", "qual" => "4", "name" => "Rod of Imprisoned Souls" ),
 );
 }else{
@@ -26,7 +26,7 @@ $loot = array(
 	array( "id" => "47859", "qual" => "4", "name" => "Belt of the Impaler" ),
 	array( "id" => "47858", "qual" => "4", "name" => "Girdle of the Frozen Reach" ),
 	array( "id" => "47849", "qual" => "4", "name" => "Collar of Unending Torment" ),
-	array( "id" => "47578", "qual" => "4", "name" => "Carnivorous Band" ),
+	array( "id" => "47854", "qual" => "4", "name" => "Gormok's Band" ),
 	array( "id" => "47856", "qual" => "4", "name" => "Scepter of Imprisoned Souls" ),
 );
 }

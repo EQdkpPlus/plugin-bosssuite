@@ -19,7 +19,6 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
-	array( "id" => "49047", "qual" => "4", "name" => "Swift Alliance Steed" ),
 );
 }else{
 $loot = array(
@@ -41,7 +40,6 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
-	array( "id" => "49046", "qual" => "4", "name" => "Swift Horde Wolf" ),
 );
 }
 
