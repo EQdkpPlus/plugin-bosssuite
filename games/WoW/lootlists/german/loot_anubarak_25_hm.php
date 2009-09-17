@@ -1,14 +1,14 @@
 <?php
 if($this->get_faction() == 'alliance'){
 $loot = array(
-	array( "id" => "47238", "qual" => "4", "name" => "Maiden's Favor" ),
+	array( "id" => "47238", "qual" => "4", "name" => "Gabe der Maid" ),
 	array( "id" => "47192", "qual" => "4", "name" => "Strength of the Nerub" ),
 	array( "id" => "47208", "qual" => "4", "name" => "Armbands of the Ashen Saint" ),
 	array( "id" => "47236", "qual" => "4", "name" => "Gloves of the Lifeless Touch" ),
 	array( "id" => "47189", "qual" => "4", "name" => "Leggings of the Deepening Void" ),
 	array( "id" => "47205", "qual" => "4", "name" => "Footpads of the Icy Floe" ),
 	array( "id" => "47155", "qual" => "4", "name" => "Bracers of Dark Determination" ),
-	array( "id" => "47190", "qual" => "4", "name" => "Legwraps of the Awakening" ),
+	array( "id" => "47190", "qual" => "4", "name" => "Beinwickel des Erwachens" ),
 	array( "id" => "47209", "qual" => "4", "name" => "Chestguard of Flowing Elements" ),
 	array( "id" => "47153", "qual" => "4", "name" => "Belt of Deathly Dominion" ),
 	array( "id" => "47191", "qual" => "4", "name" => "Legguards of the Lurking Threat" ),
@@ -18,7 +18,7 @@ $loot = array(
 	array( "id" => "47237", "qual" => "4", "name" => "Band of Deplorable Violence" ),
 	array( "id" => "47157", "qual" => "4", "name" => "Signet of the Traitor King" ),
 	array( "id" => "47188", "qual" => "4", "name" => "Reign of the Unliving" ),
-	array( "id" => "47156", "qual" => "4", "name" => "Stormpike Cleaver" ),
+	array( "id" => "47156", "qual" => "4", "name" => "Sturmspitzenspalter" ),
 	array( "id" => "47206", "qual" => "4", "name" => "Misery's End" ),
 	array( "id" => "47239", "qual" => "4", "name" => "Archon Glaive" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),

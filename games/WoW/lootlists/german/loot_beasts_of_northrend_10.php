@@ -11,7 +11,7 @@ $loot = array(
 	array( "id" => "47615", "qual" => "4", "name" => "Gürtel der gefrorenen Weite" ),
 	array( "id" => "47614", "qual" => "4", "name" => "Gurt des Pfählers" ),
 	array( "id" => "47607", "qual" => "4", "name" => "Halsband der unaufhörlichen Qual" ),
-	array( "id" => "47854", "qual" => "4", "name" => "Gormoks Band" ),
+	array( "id" => "47578", "qual" => "4", "name" => "Fleischfressendes Band" ),
 	array( "id" => "47612", "qual" => "4", "name" => "Stab der gefangenen Seelen" ),
 );
 }else{
@@ -26,7 +26,7 @@ $loot = array(
 	array( "id" => "47859", "qual" => "4", "name" => "Gürtel des Pfählers" ),
 	array( "id" => "47858", "qual" => "4", "name" => "Gurt der gefrorenen Weite" ),
 	array( "id" => "47849", "qual" => "4", "name" => "Halsband der endlosen Qual" ),
-	array( "id" => "47578", "qual" => "4", "name" => "Fleischfressendes Band" ),
+	array( "id" => "47854", "qual" => "4", "name" => "Gormoks Band" ),
 	array( "id" => "47856", "qual" => "4", "name" => "Szepter der gefangenen Seelen" ),
 );
 }

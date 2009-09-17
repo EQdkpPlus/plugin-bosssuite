@@ -13,7 +13,7 @@ $loot = array(
 	array( "id" => "48675", "qual" => "4", "name" => "Cloak of the Unmoving Guardian" ),
 	array( "id" => "48674", "qual" => "4", "name" => "Cloak of the Victorious Combatant" ),
 	array( "id" => "48671", "qual" => "4", "name" => "Drape of Bitter Incantation" ),
-	array( "id" => "48672", "qual" => "4", "name" => "Shawl of the Fervent Crusader" ),
+	array( "id" => "48672", "qual" => "4", "name" => "Shawl of Fervent Crusader" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "49047", "qual" => "4", "name" => "Swift Alliance Steed" ),
 );
