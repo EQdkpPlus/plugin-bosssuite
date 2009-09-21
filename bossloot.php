@@ -183,23 +183,34 @@ if ((is_array($loottable)) && !(empty($loottable))){
 if ($bl_conf['show_ndl'] == true){	
   $printed2 = 0;
 	if (is_array($loottable)){
-		foreach($loottable as $ingame_item_id => $name){
-			if ($data['items'][$name]['dc'] == 0){
-				$rowid2 = $printed2%2+1;
-				if ($bl_conf['get_itemstats'] == true){
-				  if($myblmgs->bl_get_current_game() == 'WoW'){
-						$is_itemname = itemstats_decorate_name(stripslashes($name), $ingame_item_id);
-					}else{
+	  if($myblmgs->bl_get_current_game() == 'WoW'){
+  	  foreach($loottable as $ingame_item_id => $name){
+    			if ($data['items'][$name.'__'.$ingame_item_id]['dc'] == 0){
+    				$rowid2 = $printed2%2+1;
+    				if ($bl_conf['get_itemstats'] == true){
+              $is_itemname = itemstats_decorate_name(stripslashes($name), $ingame_item_id);
+    				}else{
+    					$is_itemname = $name;
+    				}
+            $bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'plugins/bosssuite/bs_update_item.php?item='.urlencode($name).'&ingame_item_id='.urlencode($ingame_item_id).'">'.$is_itemname.'</a></td></tr>'."\n";
+    				$printed2++;
+    			}
+    		}
+    }else{
+   		foreach($loottable as $ingame_item_id => $name){
+  			if ($data['items'][$name]['dc'] == 0){
+  				$rowid2 = $printed2%2+1;
+  				if ($bl_conf['get_itemstats'] == true){
             $is_itemname = itemstats_decorate_name(stripslashes($name));
-          }
-				}else{
-					$is_itemname = $name;
-				}
-        $bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'plugins/bosssuite/bs_update_item.php?item='.urlencode($name).'&ingame_item_id='.urlencode($ingame_item_id).'">'.$is_itemname.'</a></td></tr>'."\n";
-				$printed2++;
-			}
-		}
-	}
+  				}else{
+  					$is_itemname = $name;
+  				}
+          $bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'plugins/bosssuite/bs_update_item.php?item='.urlencode($name).'&ingame_item_id='.urlencode($ingame_item_id).'">'.$is_itemname.'</a></td></tr>'."\n";
+  				$printed2++;
+  			}
+  		}
+    }
+  }
 }
 
 if($bl_conf['eyecandy'] == true){
