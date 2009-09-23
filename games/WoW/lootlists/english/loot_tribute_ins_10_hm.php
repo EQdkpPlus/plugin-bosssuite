@@ -15,7 +15,7 @@ $loot = array(
 	array( "id" => "48671", "qual" => "4", "name" => "Drape of Bitter Incantation" ),
 	array( "id" => "48672", "qual" => "4", "name" => "Shawl of Fervent Crusader" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
-	array( "id" => "49047", "qual" => "4", "name" => "Swift Alliance Steed" ),
+	array( "id" => "49044", "qual" => "4", "name" => "Swift Alliance Steed" ),
 );
 }else{
 $loot = array(

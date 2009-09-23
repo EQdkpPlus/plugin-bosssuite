@@ -32,6 +32,14 @@ $loot = array(
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
 	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
+	array( "id" => "47551", "qual" => "4", "name" => "Aethas' Intensity" ),
+	array( "id" => "47550", "qual" => "4", "name" => "Cairne's Endurance" ),
+	array( "id" => "47548", "qual" => "4", "name" => "Garrosh's Rage" ),
+	array( "id" => "47554", "qual" => "4", "name" => "Lady Liadrin's Conviction" ),
+	array( "id" => "47546", "qual" => "4", "name" => "Sylvanas' Cunning" ),
+	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
+	array( "id" => "47557", "qual" => "4", "name" => "Regalia of the Grand Conqueror" ),
+	array( "id" => "47558", "qual" => "4", "name" => "Regalia of the Grand Protector" ),
 );
 }
 

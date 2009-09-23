@@ -362,4 +362,12 @@ $lang['anubarak_25_hm'] = array('long' => 'Anub\'arak HM (25)', 'short' => 'Anub
 $lang['tribute_s_25_hm'] = array('long' => 'Ein Tribut an die gute Leistung (25)', 'short' => 'Tribut: Gute Leistung (25)');
 $lang['tribute_ms_25_hm'] = array('long' => 'Ein Tribut an die hervorragende Leistung (25)', 'short' => 'Tribut: Herv. Leistung (25)');
 $lang['tribute_ins_25_hm'] = array('long' => 'Ein Tribut an den Wahnsinn (25)', 'short' => 'Tribut: Wahnsinn (25)');
+
+/******Onyxia (10)*****/
+$lang['onylair_10'] = array('long' => 'Onyxias Hort (10)', 'short' => 'Onyxia (10)');
+$lang['onyxia_10'] = array('long' => 'Onyxia (10)', 'short' => 'Onyxia (10)');
+
+/******Onyxia (25)*****/
+$lang['onylair_25'] = array('long' => 'Onyxias Hort (25)', 'short' => 'Onyxia (25)');
+$lang['onyxia_25'] = array('long' => 'Onyxia (25)', 'short' => 'Onyxia (25)');
 ?>
