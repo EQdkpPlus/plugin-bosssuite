@@ -168,5 +168,11 @@ $image_map['tribute_ins_25_hm'] = 'argentum_tribute_chest';
 
 $image_map['koralon_10'] = 'ignis';
 $image_map['koralon_25'] = 'ignis';
- 
+
+//PATCH 3.2.2
+$image_map['onylair_10'] = 'onylair';
+$image_map['onyxia_10'] = 'onyxia';
+
+$image_map['onylair_25'] = 'onylair';
+$image_map['onyxia_25'] = 'onyxia';
 ?>

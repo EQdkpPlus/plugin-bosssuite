@@ -21,6 +21,12 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $bzone = array (
+  'onylair_10' => array(
+    'onyxia_10'
+  ),
+  'onylair_25' => array(
+    'onyxia_25'
+  ),
   'totc_10' => array(
     'beasts_of_northrend_10',
     'lord_jaraxxus_10',
