@@ -15,7 +15,7 @@ $loot = array(
 	array( "id" => "48671", "qual" => "4", "name" => "Tuch der bitteren Zauberformeln" ),
 	array( "id" => "48672", "qual" => "4", "name" => "Schal des begeisterten Kreuzfahrers" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
-	array( "id" => "49044", "qual" => "4", "name" => "Swift Alliance Steed" ),
+	array( "id" => "49044", "qual" => "4", "name" => "Schnelles Ross der Allianz" ),
 );
 }else{
 $loot = array(
@@ -33,7 +33,7 @@ $loot = array(
 	array( "id" => "48666", "qual" => "4", "name" => "Tuch der Sonnenhäscher" ),
 	array( "id" => "48667", "qual" => "4", "name" => "Schal des ergebenen Kreuzfahrers" ),
 	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
-	array( "id" => "49046", "qual" => "4", "name" => "Swift Horde Wolf" ),
+	array( "id" => "49046", "qual" => "4", "name" => "Schneller Wolf der Horde" ),
 );
 }
 

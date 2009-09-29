@@ -4,7 +4,7 @@ $loot = array(
 	array( "id" => "47974", "qual" => "4", "name" => "Vestments of the Sleepless" ),
 	array( "id" => "47977", "qual" => "4", "name" => "Cinch of the Undying" ),
 	array( "id" => "47972", "qual" => "4", "name" => "Spaulders of the Snow Bandit" ),
-	array( "id" => "47965", "qual" => "4", "name" => "Headpiece of the Crypt Lord" ),
+	array( "id" => "47965", "qual" => "4", "name" => "Helmet of the Crypt Lord" ),
 	array( "id" => "47969", "qual" => "4", "name" => "Pauldrons of the Timeless Hunter" ),
 	array( "id" => "47964", "qual" => "4", "name" => "Chestguard of the Warden" ),
 	array( "id" => "47976", "qual" => "4", "name" => "Legplates of the Immortal Spider" ),

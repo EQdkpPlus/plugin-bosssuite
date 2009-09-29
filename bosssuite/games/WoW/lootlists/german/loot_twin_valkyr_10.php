@@ -26,7 +26,7 @@ $loot = array(
 	array( "id" => "47890", "qual" => "4", "name" => "Nachtbanns Amulett" ),
 	array( "id" => "47888", "qual" => "4", "name" => "Band der Zwillingsval'kyr" ),
 	array( "id" => "47913", "qual" => "4", "name" => "Lichtbanns Fokus" ),
-	array( "id" => "47886", "qual" => "4", "name" => "Nemesisklinge" ),
+	array( "id" => "47886", "qual" => "4", "name" => "Klinge der Nemesis" ),
 	array( "id" => "47884", "qual" => "4", "name" => "Schneide der Agonie" ),
 	array( "id" => "47892", "qual" => "4", "name" => "Illumination" ),
 	array( "id" => "47883", "qual" => "4", "name" => "Bauchige Steinschlossbüchse" ),
