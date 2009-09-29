@@ -9,7 +9,7 @@ $loot = array(
 	array( "id" => "47811", "qual" => "4", "name" => "Brustschutz des Aufsehers" ),
 	array( "id" => "47836", "qual" => "4", "name" => "Beinplatten der unsterblichen Spinne" ),
 	array( "id" => "47830", "qual" => "4", "name" => "Beinplatten der Silbernen Hand" ),
-	array( "id" => "47810", "qual" => "4", "name" => "Glorie des Kreuzfahrers" ),
+	array( "id" => "47810", "qual" => "4", "name" => "Ruhm des Kreuzfahrers" ),
 	array( "id" => "47814", "qual" => "4", "name" => "Westfallsäbel" ),
 	array( "id" => "47808", "qual" => "4", "name" => "Das Löwenmaul" ),
 	array( "id" => "47809", "qual" => "4", "name" => "Argentumentschlossenheit" ),

@@ -24,10 +24,10 @@ $loot = array(
 $loot = array(
 	array( "id" => "47518", "qual" => "4", "name" => "Mortalis" ),
 	array( "id" => "47513", "qual" => "4", "name" => "Ogrims Ablenker" ),
-	array( "id" => "47516", "qual" => "4", "name" => "Fleshrender" ),
+	array( "id" => "47516", "qual" => "4", "name" => "Fleischfetzer" ),
 	array( "id" => "47528", "qual" => "4", "name" => "Cudgel of the Damned" ),
 	array( "id" => "47520", "qual" => "4", "name" => "Grievance" ),
-	array( "id" => "47525", "qual" => "4", "name" => "Sufferance" ),
+	array( "id" => "47525", "qual" => "4", "name" => "Das Leid" ),
 	array( "id" => "47523", "qual" => "4", "name" => "Fezzik's Autocannon" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
 	array( "id" => "47557", "qual" => "4", "name" => "Ornat des großen Eroberers" ),
