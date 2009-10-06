@@ -25,9 +25,6 @@ $loot = array(
 	array( "id" => "49463", "qual" => "4", "name" => "Purified Shard of the Flame" ),
 	array( "id" => "49310", "qual" => "4", "name" => "Purified Shard of the Scale" ),
 	array( "id" => "49308", "qual" => "4", "name" => "Antique Cornerstone Grimoire" ),
-	array( "id" => "49295", "qual" => "4", "name" => "Enlarged Onyxia Hide Backpack" ),
-	array( "id" => "49636", "qual" => "4", "name" => "Reins of the Onyxian Drake" ),
-	array( "id" => "49294", "qual" => "4", "name" => "Ashen Sack of Gems" ),
 	array( "id" => "49304", "qual" => "4", "name" => "Sharpened Fang of the Mystics" ),
 	array( "id" => "49437", "qual" => "4", "name" => "Rusted Gutgore Ripper" ),
 	array( "id" => "49298", "qual" => "4", "name" => "Glinting Azuresong Mageblade" ),
@@ -42,6 +39,9 @@ $loot = array(
 	array( "id" => "49485", "qual" => "4", "name" => "Sparkling Onyxia Tooth Pendant" ),
 	array( "id" => "49486", "qual" => "4", "name" => "Polished Dragonslayer's Signet" ),
 	array( "id" => "49487", "qual" => "4", "name" => "Purified Onyxia Blood Talisman" ),
+	array( "id" => "49295", "qual" => "4", "name" => "Enlarged Onyxia Hide Backpack" ),
+	array( "id" => "49294", "qual" => "4", "name" => "Ashen Sack of Gems" ),
+	array( "id" => "49636", "qual" => "4", "name" => "Reins of the Onyxian Drake" ),
 );
 
 ?>

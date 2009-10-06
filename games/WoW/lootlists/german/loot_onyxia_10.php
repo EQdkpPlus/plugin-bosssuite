@@ -25,9 +25,6 @@ $loot = array(
 	array( "id" => "49463", "qual" => "4", "name" => "Geläuterter Splitter der Schuppe" ),
 	array( "id" => "49310", "qual" => "4", "name" => "Geläuterter Splitter der Schuppe" ),
 	array( "id" => "49308", "qual" => "4", "name" => "Zauberfoliant des antiken Grundsteins" ),
-	array( "id" => "49295", "qual" => "4", "name" => "Vergrößerter Rucksack aus Onyxias Haut" ),
-	array( "id" => "49636", "qual" => "4", "name" => "Zügel des Drachen von Onyxia" ),
-	array( "id" => "49294", "qual" => "4", "name" => "Aschgrauer Sack voller Edelsteine" ),
 	array( "id" => "49304", "qual" => "4", "name" => "Geschärfter Fangzahn der Mystiker" ),
 	array( "id" => "49437", "qual" => "4", "name" => "Verrosteter Räuderipper" ),
 	array( "id" => "49298", "qual" => "4", "name" => "Glitzernde Magierklinge des Azurlieds" ),
@@ -42,6 +39,9 @@ $loot = array(
 	array( "id" => "49485", "qual" => "4", "name" => "Funkelnder Zahn Onyxias" ),
 	array( "id" => "49486", "qual" => "4", "name" => "Poliertes Drachentötersignet" ),
 	array( "id" => "49487", "qual" => "4", "name" => "Geläuterter Talisman mit Onyxiablut" ),
+	array( "id" => "49295", "qual" => "4", "name" => "Vergrößerter Rucksack aus Onyxias Haut" ),
+	array( "id" => "49294", "qual" => "4", "name" => "Aschgrauer Sack voller Edelsteine" ),
+	array( "id" => "49636", "qual" => "4", "name" => "Zügel des Drachen von Onyxia" ),
 );
 
 ?>
