@@ -58,7 +58,7 @@ if(!function_exists(bossbars_module)){
 
       require_once($eqdkp_root_path.'plugins/bosssuite/include/bslink.class.php');
       $mybslink = new BSLINK($bc_conf['linkurl'], $bc_conf['linklength']);
-      $bcout ='<style>#bossbars{width:200px;}</style>';
+      $bcout ='<style>#bossbars{min-width:200px;}</style>';
       $bcout .= '<table width="100%" cellspacing="0" cellpadding="0">';
       
       foreach ($sbzone as $zone => $bosses)
