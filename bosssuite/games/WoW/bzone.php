@@ -21,6 +21,58 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $bzone = array (
+  'icecrown_10' => array(
+    'marrowgar_10',
+    'marrowgar_10_hm',
+    'deathwhisper_10',
+    'deathwhisper_10_hm',    
+    'gunship_battle_10',
+    'gunship_battle_10_hm',
+    'deathbringer_10',
+    'deathbringer_10_hm',
+    'festergut_10',
+    'festergut_10_hm',
+    'rotface_10',
+    'rotface_10_hm',
+    'putricide_10',
+    'putricide_10_hm',
+    'blood_prince_council_10',
+    'blood_prince_council_10_hm',
+    'lanathel_10',
+    'lanathel_10_hm',
+    'dreamwalker_rescue_10',
+    'dreamwalker_rescue_10_hm',
+    'sindragosa_10',
+    'sindragosa_10_hm',
+    'lichking_10',
+    'lichking_10_hm',
+  ),
+  'icecrown_25' => array(
+    'marrowgar_25',
+    'marrowgar_25_hm',
+    'deathwhisper_25',
+    'deathwhisper_25_hm',    
+    'gunship_battle_25',
+    'gunship_battle_25_hm',
+    'deathbringer_25',
+    'deathbringer_25_hm',
+    'festergut_25',
+    'festergut_25_hm',
+    'rotface_25',
+    'rotface_25_hm',
+    'putricide_25',
+    'putricide_25_hm',
+    'blood_prince_council_25',
+    'blood_prince_council_25_hm',
+    'lanathel_25',
+    'lanathel_25_hm',
+    'dreamwalker_rescue_25',
+    'dreamwalker_rescue_25_hm',
+    'sindragosa_25',
+    'sindragosa_25_hm',
+    'lichking_25',
+    'lichking_25_hm',
+  ),
   'onylair_10' => array(
     'onyxia_10'
   ),
@@ -106,7 +158,8 @@ $bzone = array (
 	'vault_of_archavon_10' => array(
     'archavon_10',
     'emalon_10',
-    'koralon_10'
+    'koralon_10',
+    'toravon_10',
   ),
 	'eye_of_eternity_10' => array(
     'malygos_10'
@@ -162,7 +215,8 @@ $bzone = array (
 	'vault_of_archavon_25' => array(
     'archavon_25',
     'emalon_25',
-    'koralon_25'
+    'koralon_25',
+    'toravon_25',
   ),
 	'eye_of_eternity_25' => array(
     'malygos_25'

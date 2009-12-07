@@ -31,7 +31,7 @@ function BS452to453Update(){
 global $db, $user;
   $game_arr = explode('_', $eqdkp->config['default_game']);
   $currentgame = $game_arr[0];
-  if($currentgame = "WoW"){
+  if($currentgame == "WoW"){
     $sql = "DELETE FROM __bs_data_boss WHERE boss_id='auriaya_10_hm' OR boss_id='auriaya_25_hm'";
     $db->query($sql);
   }

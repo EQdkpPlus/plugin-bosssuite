@@ -31,7 +31,7 @@ function BS456to457Update(){
 global $db, $user;
   $game_arr = explode('_', $eqdkp->config['default_game']);
   $currentgame = $game_arr[0];
-  if($currentgame = "WoW"){
+  if($currentgame == "WoW"){
     include(dirname(__FILE__).'/../bssql.class.php');
     $mybssql = new BSSQL();
     $bzone = array (

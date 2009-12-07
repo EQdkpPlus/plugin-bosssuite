@@ -169,10 +169,68 @@ $image_map['tribute_ins_25_hm'] = 'argentum_tribute_chest';
 $image_map['koralon_10'] = 'ignis';
 $image_map['koralon_25'] = 'ignis';
 
+
 //PATCH 3.2.2
 $image_map['onylair_10'] = 'onylair';
 $image_map['onyxia_10'] = 'onyxia';
 
 $image_map['onylair_25'] = 'onylair';
 $image_map['onyxia_25'] = 'onyxia';
+
+
+//PATCH 3.3
+$image_map['icecrown_10'] = 'icecrown';
+$image_map['marrowgar_10'] = 'marrowgar';
+$image_map['marrowgar_10_hm'] = 'marrowgar';
+$image_map['deathwhisper_10'] = 'deathwhisper';
+$image_map['deathwhisper_10_hm'] = 'deathwhisper';    
+$image_map['gunship_battle_10'] = 'gunship_battle';
+$image_map['gunship_battle_10_hm'] = 'gunship_battle';
+$image_map['deathbringer_10'] = 'deathbringer';
+$image_map['deathbringer_10_hm'] = 'deathbringer';
+$image_map['festergut_10'] = 'festergut';
+$image_map['festergut_10_hm'] = 'festergut';
+$image_map['rotface_10'] = 'rotface';
+$image_map['rotface_10_hm'] = 'rotface';
+$image_map['putricide_10'] = 'putricide';
+$image_map['putricide_10_hm'] = 'putricide';
+$image_map['blood_prince_council_10'] = 'blood_prince_council';
+$image_map['blood_prince_council_10_hm'] = 'blood_prince_council';
+$image_map['lanathel_10'] = 'lanathel';
+$image_map['lanathel_10_hm'] = 'lanathel';
+$image_map['dreamwalker_rescue_10'] = 'dreamwalker_rescue';
+$image_map['dreamwalker_rescue_10_hm'] = 'dreamwalker_rescue';
+$image_map['sindragosa_10'] = 'sindragosa';
+$image_map['sindragosa_10_hm'] = 'sindragosa';
+$image_map['lichking_10'] = 'lichking';
+$image_map['lichking_10_hm'] = 'lichking';
+
+$image_map['icecrown_25'] = 'icecrown';
+$image_map['marrowgar_25'] = 'marrowgar';
+$image_map['marrowgar_25_hm'] = 'marrowgar';
+$image_map['deathwhisper_25'] = 'deathwhisper';
+$image_map['deathwhisper_25_hm'] = 'deathwhisper';    
+$image_map['gunship_battle_25'] = 'gunship_battle';
+$image_map['gunship_battle_25_hm'] = 'gunship_battle';
+$image_map['deathbringer_25'] = 'deathbringer';
+$image_map['deathbringer_25_hm'] = 'deathbringer';
+$image_map['festergut_25'] = 'festergut';
+$image_map['festergut_25_hm'] = 'festergut';
+$image_map['rotface_25'] = 'rotface';
+$image_map['rotface_25_hm'] = 'rotface';
+$image_map['putricide_25'] = 'putricide';
+$image_map['putricide_25_hm'] = 'putricide';
+$image_map['blood_prince_council_25'] = 'blood_prince_council';
+$image_map['blood_prince_council_25_hm'] = 'blood_prince_council';
+$image_map['lanathel_25'] = 'lanathel';
+$image_map['lanathel_25_hm'] = 'lanathel';
+$image_map['dreamwalker_rescue_25'] = 'dreamwalker_rescue';
+$image_map['dreamwalker_rescue_25_hm'] = 'dreamwalker_rescue';
+$image_map['sindragosa_25'] = 'sindragosa';
+$image_map['sindragosa_25_hm'] = 'sindragosa';
+$image_map['lichking_25'] = 'lichking';
+$image_map['lichking_25_hm'] = 'lichking';
+
+$image_map['toravon_10'] = 'hodir';
+$image_map['toravon_25'] = 'hodir';
 ?>

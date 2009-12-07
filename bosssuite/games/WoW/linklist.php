@@ -30,7 +30,7 @@ $sources = array(
 $modelviewer = array(
   'wowheadmv' => array('name' => 'Wowhead MV',
                        'idlist' => 'wowheadmv',
-                       'object' => '<object id="head" width="600" height="400" 
+                       'object' => '<object id="head" width="500" height="500" 
             				                  type="application/x-shockwave-flash" 
                               				data="http://static.wowhead.com/modelviewer/ModelView.swf"
                               				style="visibility: visible;">
@@ -355,6 +355,58 @@ $idlist['default'] = array(
   'tribute_s_25_hm' => '99999',
   'tribute_ms_25_hm' => '99999',
   'tribute_ins_25_hm' => '99999',
+  
+  /******Icecrown Citadel (10)*****/  
+  'marrowgar_10' => '36612',
+  'marrowgar_10_hm' => '36612',
+  'deathwhisper_10' => '36855',
+  'deathwhisper_10_hm' => '36855',    
+  'gunship_battle_10' => '',
+  'gunship_battle_10_hm' => '',
+  'deathbringer_10' => '37813',
+  'deathbringer_10_hm' => '37813',
+  'festergut_10' => '36626',
+  'festergut_10_hm' => '36626',
+  'rotface_10' => '36627',
+  'rotface_10_hm' => '36627',
+  'putricide_10' => '36678',
+  'putricide_10_hm' => '36678',
+  'blood_prince_council_10' => '',
+  'blood_prince_council_10_hm' => '',
+  'lanathel_10' => '38004',
+  'lanathel_10_hm' => '38004',
+  'dreamwalker_rescue_10' => '36789',
+  'dreamwalker_rescue_10_hm' => '36789',
+  'sindragosa_10' => '37755',
+  'sindragosa_10_hm' => '37755',
+  'lichking_10' => '29983',
+  'lichking_10_hm' => '29983',
+  
+    /******Icecrown Citadel (25)*****/  
+  'marrowgar_25' => '36612',
+  'marrowgar_25_hm' => '36612',
+  'deathwhisper_25' => '36855',
+  'deathwhisper_25_hm' => '36855',    
+  'gunship_battle_25' => '',
+  'gunship_battle_25_hm' => '',
+  'deathbringer_25' => '37813',
+  'deathbringer_25_hm' => '37813',
+  'festergut_25' => '36626',
+  'festergut_25_hm' => '36626',
+  'rotface_25' => '36627',
+  'rotface_25_hm' => '36627',
+  'putricide_25' => '36678',
+  'putricide_25_hm' => '36678',
+  'blood_prince_council_25' => '',
+  'blood_prince_council_25_hm' => '',
+  'lanathel_25' => '38004',
+  'lanathel_25_hm' => '38004',
+  'dreamwalker_rescue_25' => '36789',
+  'dreamwalker_rescue_25_hm' => '36789',
+  'sindragosa_25' => '37755',
+  'sindragosa_25_hm' => '37755',
+  'lichking_25' => '29983',
+  'lichking_25_hm' => '29983',
 );
 
 $idlist['wowheadmv'] = array(
@@ -539,7 +591,8 @@ $idlist['wowheadmv'] = array(
   /******Vault of Archavon (10)*****/
   'archavon_10' => '26967&modelType=8',
   'emalon_10' => '27108&modelType=8',
-  'koralon_10' => '',
+  'koralon_10' => '29185&modelType=8',
+  'toravon_10' => '28743&modelType=8',
   
   /******Eye of Eternity (10)*****/
   'malygos_10' => '26752&modelType=8',
@@ -573,7 +626,7 @@ $idlist['wowheadmv'] = array(
   'mimiron_10_hm' => '29001&modelType=8',
   'yoggsaron_10' => '28817&modelType=8',
   'yoggsaron_10_hm' => '28817&modelType=8',
-  'algalon_10' => '',
+  'algalon_10' => '28641&modelType=8',
   
   /******Naxxramas (25)*****/
   'anubrekhan_25' => '15931&modelType=8',
@@ -595,7 +648,8 @@ $idlist['wowheadmv'] = array(
   /******Vault of Archavon (25)*****/
   'archavon_25' => '26967&modelType=8',
   'emalon_25' => '27108&modelType=8',
-  'koralon_25' => '',
+  'koralon_25' => '29185&modelType=8',
+  'toravon_25' => '28743&modelType=8',
   
   /******Eye of Eternity (25)*****/
   'malygos_25' => '26752&modelType=8',
@@ -629,7 +683,7 @@ $idlist['wowheadmv'] = array(
   'mimiron_25_hm' => '29001&modelType=8',
   'yoggsaron_25' => '28817&modelType=8',
   'yoggsaron_25_hm' => '28817&modelType=8',
-  'algalon_25' => '',
+  'algalon_25' => '28641&modelType=8',
   
   /******Trial of the Crusader (10)*****/
   'beasts_of_northrend_10' => '',
@@ -664,5 +718,57 @@ $idlist['wowheadmv'] = array(
   'tribute_s_25_hm' => '',
   'tribute_ms_25_hm' => '',
   'tribute_ins_25_hm' => '',
+
+  /******Icecrown Citadel (10)*****/  
+  'marrowgar_10' => '31119&modelType=8',
+  'marrowgar_10_hm' => '31119&modelType=8',
+  'deathwhisper_10' => '30893&modelType=8',
+  'deathwhisper_10_hm' => '30893&modelType=8',    
+  'gunship_battle_10' => '',
+  'gunship_battle_10_hm' => '',
+  'deathbringer_10' => '30790&modelType=32',
+  'deathbringer_10_hm' => '30790&modelType=32',
+  'festergut_10' => '31001&modelType=8',
+  'festergut_10_hm' => '31001&modelType=8',
+  'rotface_10' => '31005&modelType=8',
+  'rotface_10_hm' => '31005&modelType=8',
+  'putricide_10' => '30993&modelType=8',
+  'putricide_10_hm' => '30993&modelType=8',
+  'blood_prince_council_10' => '',
+  'blood_prince_council_10_hm' => '',
+  'lanathel_10' => '31093&modelType=8',
+  'lanathel_10_hm' => '31093&modelType=8',
+  'dreamwalker_rescue_10' => '30318&modelType=8',
+  'dreamwalker_rescue_10_hm' => '30318&modelType=8',
+  'sindragosa_10' => '27971&modelType=8',
+  'sindragosa_10_hm' => '27971&modelType=8',
+  'lichking_10' => '24213&modelType=8',
+  'lichking_10_hm' => '24213&modelType=8',
+  
+  /******Icecrown Citadel (25)*****/  
+  'marrowgar_25' => '31119&modelType=8',
+  'marrowgar_25_hm' => '31119&modelType=8',
+  'deathwhisper_25' => '30893&modelType=8',
+  'deathwhisper_25_hm' => '30893&modelType=8',    
+  'gunship_battle_25' => '',
+  'gunship_battle_25_hm' => '',
+  'deathbringer_25' => '30790&modelType=32',
+  'deathbringer_25_hm' => '30790&modelType=32',
+  'festergut_25' => '31001&modelType=8',
+  'festergut_25_hm' => '31001&modelType=8',
+  'rotface_25' => '31005&modelType=8',
+  'rotface_25_hm' => '31005&modelType=8',
+  'putricide_25' => '30993&modelType=8',
+  'putricide_25_hm' => '30993&modelType=8',
+  'blood_prince_council_25' => '',
+  'blood_prince_council_25_hm' => '',
+  'lanathel_25' => '31093&modelType=8',
+  'lanathel_25_hm' => '31093&modelType=8',
+  'dreamwalker_rescue_25' => '30318&modelType=8',
+  'dreamwalker_rescue_25_hm' => '30318&modelType=8',
+  'sindragosa_25' => '27971&modelType=8',
+  'sindragosa_25_hm' => '27971&modelType=8',
+  'lichking_25' => '24213&modelType=8',
+  'lichking_25_hm' => '24213&modelType=8',
 );
 ?>
