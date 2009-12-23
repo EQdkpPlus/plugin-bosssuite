@@ -15,13 +15,13 @@ $loot = array(
 	array( "id" => "47234", "qual" => "4", "name" => "Gloves of Bitter Reprisal" ),
 	array( "id" => "47195", "qual" => "4", "name" => "Belt of the Forgotten Martyr" ),
 	array( "id" => "47150", "qual" => "4", "name" => "Greaves of the 7th Legion" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "47054", "qual" => "4", "name" => "Band of Deplorable Violence" ),
 	array( "id" => "47149", "qual" => "4", "name" => "Signet of the Traitor King" ),
 	array( "id" => "47182", "qual" => "4", "name" => "Reign of the Unliving" ),
 	array( "id" => "47148", "qual" => "4", "name" => "Stormpike Cleaver" ),
 	array( "id" => "47193", "qual" => "4", "name" => "Misery's End" ),
 	array( "id" => "47233", "qual" => "4", "name" => "Archon Glaive" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -39,13 +39,13 @@ $loot = array(
 	array( "id" => "47330", "qual" => "4", "name" => "Gauntlets of Bitter Reprisal" ),
 	array( "id" => "47323", "qual" => "4", "name" => "Girdle of the Forgotten Martyr" ),
 	array( "id" => "47312", "qual" => "4", "name" => "Greaves of the Saronite Citadel" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "47315", "qual" => "4", "name" => "Band of the Traitor King" ),
 	array( "id" => "47327", "qual" => "4", "name" => "Lurid Manifestation" ),
 	array( "id" => "47316", "qual" => "4", "name" => "Reign of the Dead" ),
 	array( "id" => "47314", "qual" => "4", "name" => "Hellscream Slicer" ),
 	array( "id" => "47322", "qual" => "4", "name" => "Suffering's End" ),
 	array( "id" => "47329", "qual" => "4", "name" => "Hellion Glaive" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

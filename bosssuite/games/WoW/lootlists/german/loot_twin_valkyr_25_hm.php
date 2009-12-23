@@ -14,9 +14,9 @@ $loot = array(
 	array( "id" => "47144", "qual" => "4", "name" => "Wehklagen der Val'kyr" ),
 	array( "id" => "47131", "qual" => "4", "name" => "Des Todes Urteil" ),
 	array( "id" => "47146", "qual" => "4", "name" => "Kelch des sengenden Lichts" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "47113", "qual" => "4", "name" => "Zwillingsstachel" ),
 	array( "id" => "47130", "qual" => "4", "name" => "Wölfischer Langstab" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }else{
 $loot = array(
@@ -33,9 +33,9 @@ $loot = array(
 	array( "id" => "47458", "qual" => "4", "name" => "Das Laster des Henkers" ),
 	array( "id" => "47464", "qual" => "4", "name" => "Des Todes Wahl" ),
 	array( "id" => "47470", "qual" => "4", "name" => "Rätselhafter Glücksbringer" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "47461", "qual" => "4", "name" => "Stich des kalten Herzens" ),
 	array( "id" => "47463", "qual" => "4", "name" => "Zwillingspakt" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }
 

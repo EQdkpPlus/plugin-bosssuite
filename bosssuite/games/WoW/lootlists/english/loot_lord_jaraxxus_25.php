@@ -10,13 +10,13 @@ $loot = array(
 	array( "id" => "47057", "qual" => "4", "name" => "Legplates of Failing Light" ),
 	array( "id" => "47052", "qual" => "4", "name" => "Legguards of Feverish Dedication" ),
 	array( "id" => "46997", "qual" => "4", "name" => "Dawnbreaker Greaves" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "47043", "qual" => "4", "name" => "Charge of the Demon Lord" ),
 	array( "id" => "47223", "qual" => "4", "name" => "Ring of the Darkmender" ),
 	array( "id" => "47041", "qual" => "4", "name" => "Solace of the Defeated" ),
 	array( "id" => "47053", "qual" => "4", "name" => "Symbol of Transgression" ),
 	array( "id" => "46996", "qual" => "4", "name" => "Lionhead Slasher" ),
 	array( "id" => "46994", "qual" => "4", "name" => "Talonstrike" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -29,13 +29,13 @@ $loot = array(
 	array( "id" => "47279", "qual" => "4", "name" => "Leggings of Failing Light" ),
 	array( "id" => "47273", "qual" => "4", "name" => "Legplates of Feverish Dedication" ),
 	array( "id" => "47269", "qual" => "4", "name" => "Dawnbreaker Sabatons" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "47272", "qual" => "4", "name" => "Charge of the Eredar" ),
 	array( "id" => "47278", "qual" => "4", "name" => "Circle of the Darkmender" ),
 	array( "id" => "47271", "qual" => "4", "name" => "Solace of the Fallen" ),
 	array( "id" => "47276", "qual" => "4", "name" => "Talisman of Heedless Sins" ),
 	array( "id" => "47266", "qual" => "4", "name" => "Blood Fury" ),
 	array( "id" => "47267", "qual" => "4", "name" => "Death's Head Crossbow" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

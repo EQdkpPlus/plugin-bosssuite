@@ -1,6 +1,7 @@
 <?php
 if($this->get_faction() == 'alliance'){
 $loot = array(
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "48712", "qual" => "4", "name" => "The Spinebreaker" ),
 	array( "id" => "48708", "qual" => "4", "name" => "Spellstorm Blade" ),
 	array( "id" => "48713", "qual" => "4", "name" => "Lothar's Edge" ),
@@ -14,11 +15,11 @@ $loot = array(
 	array( "id" => "48674", "qual" => "4", "name" => "Cloak of the Victorious Combatant" ),
 	array( "id" => "48671", "qual" => "4", "name" => "Drape of Bitter Incantation" ),
 	array( "id" => "48672", "qual" => "4", "name" => "Shawl of Fervent Crusader" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "49044", "qual" => "4", "name" => "Swift Alliance Steed" ),
 );
 }else{
 $loot = array(
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "48703", "qual" => "4", "name" => "The Facebreaker" ),
 	array( "id" => "48701", "qual" => "4", "name" => "Spellharvest" ),
 	array( "id" => "48695", "qual" => "4", "name" => "Mor'kosh, the Bloodreaver" ),
@@ -32,7 +33,6 @@ $loot = array(
 	array( "id" => "48670", "qual" => "4", "name" => "Cloak of the Unflinching Guardian" ),
 	array( "id" => "48666", "qual" => "4", "name" => "Drape of the Sunreavers" ),
 	array( "id" => "48667", "qual" => "4", "name" => "Shawl of the Devout Crusader" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "49046", "qual" => "4", "name" => "Swift Horde Wolf" ),
 );
 }

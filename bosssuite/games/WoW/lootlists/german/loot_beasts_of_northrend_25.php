@@ -12,11 +12,11 @@ $loot = array(
 	array( "id" => "46962", "qual" => "4", "name" => "Brustplatte der gewaltigen Monstrosität" ),
 	array( "id" => "46961", "qual" => "4", "name" => "Knochenschmetternde Armplatten" ),
 	array( "id" => "46985", "qual" => "4", "name" => "Stiefel des Mutigen" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "46959", "qual" => "4", "name" => "Band des wilden Temperaments" ),
 	array( "id" => "46979", "qual" => "4", "name" => "Klinge von Tarasque" ),
 	array( "id" => "46958", "qual" => "4", "name" => "Stahlklingenbrecher" ),
 	array( "id" => "46963", "qual" => "4", "name" => "Kristallplattenwall" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }else{
 $loot = array(
@@ -31,11 +31,11 @@ $loot = array(
 	array( "id" => "47254", "qual" => "4", "name" => "Halsberge der gewaltigen Monstrosität" ),
 	array( "id" => "47253", "qual" => "4", "name" => "Knochenschmetternde Unterarmschienen" ),
 	array( "id" => "47263", "qual" => "4", "name" => "Sabatons des Mutigen" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "47252", "qual" => "4", "name" => "Ring des wilden Temperaments" ),
 	array( "id" => "47261", "qual" => "4", "name" => "Haken von Tarasque" ),
 	array( "id" => "47255", "qual" => "4", "name" => "Stygischer Klingenbrecher" ),
 	array( "id" => "47260", "qual" => "4", "name" => "Einsame Barriere" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }
 

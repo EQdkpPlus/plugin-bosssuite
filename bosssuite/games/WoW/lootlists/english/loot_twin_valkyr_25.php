@@ -14,9 +14,9 @@ $loot = array(
 	array( "id" => "47139", "qual" => "4", "name" => "Wail of the Val'kyr" ),
 	array( "id" => "47115", "qual" => "4", "name" => "Death's Verdict" ),
 	array( "id" => "47138", "qual" => "4", "name" => "Chalice of Searing Light" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "47104", "qual" => "4", "name" => "Twin Spike" ),
 	array( "id" => "47114", "qual" => "4", "name" => "Lupine Longstaff" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -33,9 +33,9 @@ $loot = array(
 	array( "id" => "47297", "qual" => "4", "name" => "The Executioner's Vice" ),
 	array( "id" => "47303", "qual" => "4", "name" => "Death's Choice" ),
 	array( "id" => "47309", "qual" => "4", "name" => "Mystifying Charm" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "47300", "qual" => "4", "name" => "Gouge of the Frigid Heart" ),
 	array( "id" => "47302", "qual" => "4", "name" => "Twin's Pact" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

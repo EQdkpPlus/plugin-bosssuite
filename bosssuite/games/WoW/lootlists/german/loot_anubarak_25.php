@@ -15,13 +15,13 @@ $loot = array(
 	array( "id" => "47234", "qual" => "4", "name" => "Handschuhe der bitteren Erwiderung" ),
 	array( "id" => "47195", "qual" => "4", "name" => "Gürtel des vergessenen Märtyrers" ),
 	array( "id" => "47150", "qual" => "4", "name" => "Schienbeinschützer der 7. Legion" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "47054", "qual" => "4", "name" => "Band der bedauernswerten Gewalt" ),
 	array( "id" => "47149", "qual" => "4", "name" => "Siegel des Verräterkönigs" ),
 	array( "id" => "47182", "qual" => "4", "name" => "Herrschaft der Leblosen" ),
 	array( "id" => "47148", "qual" => "4", "name" => "Sturmspitzenspalter" ),
 	array( "id" => "47193", "qual" => "4", "name" => "Ende des Jammers" ),
 	array( "id" => "47233", "qual" => "4", "name" => "Archonengleve" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }else{
 $loot = array(
@@ -39,13 +39,13 @@ $loot = array(
 	array( "id" => "47330", "qual" => "4", "name" => "Stulpen der bitteren Erwiderung" ),
 	array( "id" => "47323", "qual" => "4", "name" => "Gurt des vergessenen Märtyrers" ),
 	array( "id" => "47312", "qual" => "4", "name" => "Schienbeinschützer der Saronitzitadelle" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "47315", "qual" => "4", "name" => "Band des Verräterkönigs" ),
 	array( "id" => "47327", "qual" => "4", "name" => "Blutrünstige Offenbarung" ),
 	array( "id" => "47316", "qual" => "4", "name" => "Herrschaft der Toten" ),
 	array( "id" => "47314", "qual" => "4", "name" => "Höllschreis Zerteiler" ),
 	array( "id" => "47322", "qual" => "4", "name" => "Ende des Leides" ),
 	array( "id" => "47329", "qual" => "4", "name" => "Helliongleve" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }
 

@@ -10,13 +10,13 @@ $loot = array(
 	array( "id" => "47067", "qual" => "4", "name" => "Beinplatten des erlöschenden Lichts" ),
 	array( "id" => "47061", "qual" => "4", "name" => "Beinschützer der fieberhaften Hingabe" ),
 	array( "id" => "47003", "qual" => "4", "name" => "Schienbeinschützer des anbrechenden Morgens" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "47060", "qual" => "4", "name" => "Kraft des Dämonenlords" ),
 	array( "id" => "47224", "qual" => "4", "name" => "Ring des Dunkelheilers" ),
 	array( "id" => "47059", "qual" => "4", "name" => "Trost der Besiegten" ),
 	array( "id" => "47064", "qual" => "4", "name" => "Symbol der Sünde" ),
 	array( "id" => "47001", "qual" => "4", "name" => "Löwenkopfschlitzer" ),
 	array( "id" => "46995", "qual" => "4", "name" => "Klauenstoß" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }else{
 $loot = array(
@@ -29,13 +29,13 @@ $loot = array(
 	array( "id" => "47440", "qual" => "4", "name" => "Gamaschen des erlöschenden Lichts" ),
 	array( "id" => "47434", "qual" => "4", "name" => "Beinplatten der fieberhaften Hingabe" ),
 	array( "id" => "47430", "qual" => "4", "name" => "Sabatons des anbrechenden Morgens" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "47433", "qual" => "4", "name" => "Kraft der Eredar" ),
 	array( "id" => "47439", "qual" => "4", "name" => "Kreis des Dunkelheilers" ),
 	array( "id" => "47432", "qual" => "4", "name" => "Trost der Gefallenen" ),
 	array( "id" => "47437", "qual" => "4", "name" => "Talisman der achtlosen Sünden" ),
 	array( "id" => "47427", "qual" => "4", "name" => "Blutfuror" ),
 	array( "id" => "47428", "qual" => "4", "name" => "Totenkopfarmbrust" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 );
 }
 

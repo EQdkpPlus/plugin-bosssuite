@@ -12,11 +12,11 @@ $loot = array(
 	array( "id" => "46968", "qual" => "4", "name" => "Chestplate of the Towering Monstrosity" ),
 	array( "id" => "46967", "qual" => "4", "name" => "Boneshatter Armplates" ),
 	array( "id" => "46986", "qual" => "4", "name" => "Boots of the Courageous" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "46966", "qual" => "4", "name" => "Band of the Violent Temperment" ),
 	array( "id" => "46980", "qual" => "4", "name" => "Blade of Tarasque" ),
 	array( "id" => "46969", "qual" => "4", "name" => "Steel Bladebreaker" ),
 	array( "id" => "46964", "qual" => "4", "name" => "Crystal Plated Vanguard" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -31,11 +31,11 @@ $loot = array(
 	array( "id" => "47415", "qual" => "4", "name" => "Hauberk of the Towering Monstrosity" ),
 	array( "id" => "47414", "qual" => "4", "name" => "Boneshatter Vambraces" ),
 	array( "id" => "47424", "qual" => "4", "name" => "Sabatons of the Courageous" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "47413", "qual" => "4", "name" => "Ring of the Violent Temperament" ),
 	array( "id" => "47422", "qual" => "4", "name" => "Barb of Tarasque" ),
 	array( "id" => "47416", "qual" => "4", "name" => "Stygian Bladebreaker" ),
 	array( "id" => "47421", "qual" => "4", "name" => "Forlorn Barrier" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

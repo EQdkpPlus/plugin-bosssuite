@@ -1,6 +1,7 @@
 <?php
 if($this->get_faction() == 'alliance'){
 $loot = array(
+	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "48712", "qual" => "4", "name" => "Der Rückgratbrecher" ),
 	array( "id" => "48708", "qual" => "4", "name" => "Zaubersturmklinge" ),
 	array( "id" => "48713", "qual" => "4", "name" => "Lothars Schneide" ),
@@ -14,11 +15,11 @@ $loot = array(
 	array( "id" => "48674", "qual" => "4", "name" => "Umhang des siegreichen Kombattanten" ),
 	array( "id" => "48671", "qual" => "4", "name" => "Tuch der bitteren Zauberformeln" ),
 	array( "id" => "48672", "qual" => "4", "name" => "Schal des begeisterten Kreuzfahrers" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "49044", "qual" => "4", "name" => "Schnelles Ross der Allianz" ),
 );
 }else{
 $loot = array(
+	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "48703", "qual" => "4", "name" => "Der Gesichtsbrecher" ),
 	array( "id" => "48701", "qual" => "4", "name" => "Zauberernte" ),
 	array( "id" => "48695", "qual" => "4", "name" => "Mor'kosh der Bluthäscher" ),
@@ -32,7 +33,6 @@ $loot = array(
 	array( "id" => "48670", "qual" => "4", "name" => "Umhang des steinharten Wächters" ),
 	array( "id" => "48666", "qual" => "4", "name" => "Tuch der Sonnenhäscher" ),
 	array( "id" => "48667", "qual" => "4", "name" => "Schal des ergebenen Kreuzfahrers" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophäe des Kreuzzugs" ),
 	array( "id" => "49046", "qual" => "4", "name" => "Schneller Wolf der Horde" ),
 );
 }

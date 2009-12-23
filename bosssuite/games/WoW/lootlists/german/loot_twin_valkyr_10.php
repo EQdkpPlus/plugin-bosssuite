@@ -11,7 +11,7 @@ $loot = array(
 	array( "id" => "47700", "qual" => "4", "name" => "Schleife der Zwillingsval'kyr" ),
 	array( "id" => "47742", "qual" => "4", "name" => "Kelch von Benedictus" ),
 	array( "id" => "47736", "qual" => "4", "name" => "Eissturzklinge" ),
-	array( "id" => "47737", "qual" => "4", "name" => "Abrechnnung" ),
+	array( "id" => "47737", "qual" => "4", "name" => "Abrechnung" ),
 	array( "id" => "47743", "qual" => "4", "name" => "Erleuchtung" ),
 	array( "id" => "47740", "qual" => "4", "name" => "Der Diplomat" ),
 );

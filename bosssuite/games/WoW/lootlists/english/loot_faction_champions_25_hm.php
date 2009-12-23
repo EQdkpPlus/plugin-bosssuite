@@ -12,11 +12,11 @@ $loot = array(
 	array( "id" => "47086", "qual" => "4", "name" => "Chestplate of the Frostborn Hero" ),
 	array( "id" => "47098", "qual" => "4", "name" => "Vambraces of the Broken Bond" ),
 	array( "id" => "47076", "qual" => "4", "name" => "Girdle of Bloodied Scars" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "47075", "qual" => "4", "name" => "Ring of Callous Aggression" ),
 	array( "id" => "47088", "qual" => "4", "name" => "Satrina's Impeding Scarab" ),
 	array( "id" => "47078", "qual" => "4", "name" => "Justicebringer" ),
 	array( "id" => "47085", "qual" => "4", "name" => "Bastion of Purity" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }else{
 $loot = array(
@@ -31,11 +31,11 @@ $loot = array(
 	array( "id" => "47449", "qual" => "4", "name" => "Chestplate of the Frostwolf Hero" ),
 	array( "id" => "47455", "qual" => "4", "name" => "Bracers of the Broken Bond" ),
 	array( "id" => "47444", "qual" => "4", "name" => "Belt of Bloodied Scars" ),
+	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 	array( "id" => "47443", "qual" => "4", "name" => "Band of Callous Aggression" ),
 	array( "id" => "47451", "qual" => "4", "name" => "Juggernaut's Vitality" ),
 	array( "id" => "47446", "qual" => "4", "name" => "Dual-blade Butcher" ),
 	array( "id" => "47448", "qual" => "4", "name" => "Bastion of Resolve" ),
-	array( "id" => "47242", "qual" => "4", "name" => "Trophy of the Crusade" ),
 );
 }
 

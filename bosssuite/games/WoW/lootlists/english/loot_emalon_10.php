@@ -107,7 +107,7 @@ $loot = array(
 	array( "id" => "42063", "qual" => "4", "name" => "Deadly Gladiator's Cloak of Subjugation" ),
 	array( "id" => "42067", "qual" => "4", "name" => "Deadly Gladiator's Cloak of Triumph" ),
 	array( "id" => "42068", "qual" => "4", "name" => "Deadly Gladiator's Cloak of Victory" ),
-	array( "id" => "45624", "qual" => "4", "name" => "Emblem of Conquest" ),
+	array( "id" => "47241", "qual" => "4", "name" => "Emblem of Triumph" ),
 	array( "id" => "43959", "qual" => "4", "name" => "Reins of the Grand Black War Mammoth" ),
 	array( "id" => "44083", "qual" => "4", "name" => "Reins of the Grand Black War Mammoth" ),
 	array( "id" => "42030", "qual" => "4", "name" => "Deadly Gladiator's Pendant of Ascendancy" ),
