@@ -13,8 +13,10 @@ $loot = array(
 	array( "id" => "49985", "qual" => "4", "name" => "Juggernaut Band" ),
 	array( "id" => "49990", "qual" => "4", "name" => "Ring of Maddening Whispers" ),
 	array( "id" => "49982", "qual" => "4", "name" => "Heartpierce" ),
-	array( "id" => "50034", "qual" => "4", "name" => "Zod's Repeating Longbow" ),
 	array( "id" => "49992", "qual" => "4", "name" => "Nibelung" ),
+	array( "id" => "50034", "qual" => "4", "name" => "Zod's Repeating Longbow" ),
+	array( "id" => "50274", "qual" => "5", "name" => "Shadowfrost Shard" ),
+	array( "id" => "49908", "qual" => "4", "name" => "Primordial Saronite" ),
 );
 
 ?>

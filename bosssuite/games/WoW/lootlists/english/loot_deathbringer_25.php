@@ -5,6 +5,8 @@ $loot = array(
 	array( "id" => "50015", "qual" => "4", "name" => "Belt of the Blood Nova" ),
 	array( "id" => "50362", "qual" => "4", "name" => "Deathbringer's Will" ),
 	array( "id" => "50412", "qual" => "4", "name" => "Bloodvenom Blade" ),
+	array( "id" => "50274", "qual" => "5", "name" => "Shadowfrost Shard" ),
+	array( "id" => "49908", "qual" => "4", "name" => "Primordial Saronite" ),
 	array( "id" => "52027", "qual" => "4", "name" => "Conqueror's Mark of Sanctification" ),
 	array( "id" => "52026", "qual" => "4", "name" => "Protector's Mark of Sanctification" ),
 	array( "id" => "52025", "qual" => "4", "name" => "Vanquisher's Mark of Sanctification" ),

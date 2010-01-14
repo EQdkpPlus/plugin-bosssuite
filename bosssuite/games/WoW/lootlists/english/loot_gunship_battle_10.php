@@ -9,8 +9,8 @@ $loot = array(
 	array( "id" => "50788", "qual" => "4", "name" => "Bone Drake's Enameled Boots" ),
 	array( "id" => "50790", "qual" => "4", "name" => "Abomination's Bloody Ring" ),
 	array( "id" => "50340", "qual" => "4", "name" => "Muradin's Spyglass" ),
-	array( "id" => "50787", "qual" => "4", "name" => "Frost Giant's Cleaver" ),
 	array( "id" => "50793", "qual" => "4", "name" => "Midnight Sun" ),
+	array( "id" => "50787", "qual" => "4", "name" => "Frost Giant's Cleaver" ),
 	array( "id" => "50794", "qual" => "4", "name" => "Neverending Winter" ),
 );
 

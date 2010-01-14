@@ -8,10 +8,10 @@ $loot = array(
 	array( "id" => "50772", "qual" => "4", "name" => "Ancient Skeletal Boots" ),
 	array( "id" => "50763", "qual" => "4", "name" => "Marrowgar's Scratching Choker" ),
 	array( "id" => "50339", "qual" => "4", "name" => "Sliver of Pure Ice" ),
-	array( "id" => "50759", "qual" => "4", "name" => "Bone Warden's Splitter" ),
-	array( "id" => "50760", "qual" => "4", "name" => "Bonebreaker Scepter" ),
 	array( "id" => "50771", "qual" => "4", "name" => "Frost Needle" ),
 	array( "id" => "50761", "qual" => "4", "name" => "Citadel Enforcer's Claymore" ),
+	array( "id" => "50759", "qual" => "4", "name" => "Bone Warden's Splitter" ),
+	array( "id" => "50760", "qual" => "4", "name" => "Bonebreaker Scepter" ),
 );
 
 ?>

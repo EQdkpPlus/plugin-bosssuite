@@ -9,8 +9,8 @@ $loot = array(
 	array( "id" => "50788", "qual" => "4", "name" => "Beschlagene Stiefel des Knochendrachen" ),
 	array( "id" => "50790", "qual" => "4", "name" => "Blutiger Ring der Monstrosität" ),
 	array( "id" => "50340", "qual" => "4", "name" => "Muradins Handfernrohr" ),
-	array( "id" => "50787", "qual" => "4", "name" => "Spaltbeil des Frostriesen" ),
 	array( "id" => "50793", "qual" => "4", "name" => "Mitternachtssonne" ),
+	array( "id" => "50787", "qual" => "4", "name" => "Spaltbeil des Frostriesen" ),
 	array( "id" => "50794", "qual" => "4", "name" => "Unendlicher Winter" ),
 );
 

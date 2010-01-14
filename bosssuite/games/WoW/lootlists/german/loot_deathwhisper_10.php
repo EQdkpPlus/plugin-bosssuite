@@ -9,8 +9,8 @@ $loot = array(
 	array( "id" => "50784", "qual" => "4", "name" => "Gürtel des Jüngers der Todessprecher" ),
 	array( "id" => "50779", "qual" => "4", "name" => "Helm des Zeloten der Todessprecher" ),
 	array( "id" => "50786", "qual" => "4", "name" => "Kürass des Ghulkommandanten" ),
-	array( "id" => "50781", "qual" => "4", "name" => "Baton des Geißelfürsten" ),
 	array( "id" => "50342", "qual" => "4", "name" => "Flüsternder Gezahnter Schädel" ),
+	array( "id" => "50781", "qual" => "4", "name" => "Baton des Geißelfürsten" ),
 	array( "id" => "50776", "qual" => "4", "name" => "Knochenbogen aus Njorndar" ),
 );
 

@@ -13,8 +13,10 @@ $loot = array(
 	array( "id" => "49985", "qual" => "4", "name" => "Molochband" ),
 	array( "id" => "49990", "qual" => "4", "name" => "Ring des Unerträglichen Flüsterns" ),
 	array( "id" => "49982", "qual" => "4", "name" => "Herzdurchbohrer" ),
-	array( "id" => "50034", "qual" => "4", "name" => "Zod's Repetierlangbogen" ),
 	array( "id" => "49992", "qual" => "4", "name" => "Nibelung" ),
+	array( "id" => "50034", "qual" => "4", "name" => "Zod's Repetierlangbogen" ),
+	array( "id" => "50274", "qual" => "5", "name" => "Schattenfrostsplitter" ),
+	array( "id" => "49908", "qual" => "4", "name" => "Urtümliches Saronit" ),
 );
 
 ?>

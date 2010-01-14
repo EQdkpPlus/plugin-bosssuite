@@ -9,6 +9,8 @@ $loot = array(
 	array( "id" => "50003", "qual" => "4", "name" => "Boneguard Commander's Pauldrons" ),
 	array( "id" => "50002", "qual" => "4", "name" => "Polar Bear Claw Bracers" ),
 	array( "id" => "50010", "qual" => "4", "name" => "Waistband of Righteous Fury" ),
+	array( "id" => "50274", "qual" => "5", "name" => "Shadowfrost Shard" ),
+	array( "id" => "49908", "qual" => "4", "name" => "Primordial Saronite" ),
 	array( "id" => "50005", "qual" => "4", "name" => "Amulet of the Silent Eulogy" ),
 	array( "id" => "50008", "qual" => "4", "name" => "Ring of Rapid Ascent" ),
 	array( "id" => "49999", "qual" => "4", "name" => "Skeleton Lord's Circle" ),

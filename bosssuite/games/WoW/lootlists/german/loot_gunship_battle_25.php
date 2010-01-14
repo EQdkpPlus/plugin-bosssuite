@@ -9,6 +9,8 @@ $loot = array(
 	array( "id" => "50003", "qual" => "4", "name" => "Schulterstücke des Kommandanten der Knochenwache" ),
 	array( "id" => "50002", "qual" => "4", "name" => "Armschienen aus Eisbärenklauen" ),
 	array( "id" => "50010", "qual" => "4", "name" => "Gürtelbund des gerechten Zorns" ),
+	array( "id" => "50274", "qual" => "5", "name" => "Schattenfrostsplitter" ),
+	array( "id" => "49908", "qual" => "4", "name" => "Urtümliches Saronit" ),
 	array( "id" => "50005", "qual" => "4", "name" => "Amulett der lautlosen Euloge" ),
 	array( "id" => "50008", "qual" => "4", "name" => "Ring des Schnellen Aufstiegs" ),
 	array( "id" => "49999", "qual" => "4", "name" => "Kreis des Skelettfürsten" ),

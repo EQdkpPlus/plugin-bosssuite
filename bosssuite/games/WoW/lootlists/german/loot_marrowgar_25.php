@@ -15,6 +15,8 @@ $loot = array(
 	array( "id" => "49968", "qual" => "4", "name" => "Gefrorener Knochenstachel" ),
 	array( "id" => "50415", "qual" => "4", "name" => "Bryntroll, der Knochenrächer" ),
 	array( "id" => "49976", "qual" => "4", "name" => "Bollwerk des schwelenden Stahls" ),
+	array( "id" => "50274", "qual" => "5", "name" => "Schattenfrostsplitter" ),
+	array( "id" => "49908", "qual" => "4", "name" => "Urtümliches Saronit" ),
 );
 
 ?>
