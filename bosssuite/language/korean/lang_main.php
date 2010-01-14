@@ -165,7 +165,6 @@ $lang = array(
 'bs_bp_style_ztext_text' => 'text',
 'bl_opt_lootlist' => '전리품목록 옵션, 전리품목록이 허용될 때만 가능',
 
-'bs_updateitem_l_name' => 'Updatepage for',
 'bs_depmatch' => 'Match bosses depending on the zone match:',
 'bs_am_bzone' => '지역/보스',
 'bs_ec_show_bp' => '보기(보스진행)',

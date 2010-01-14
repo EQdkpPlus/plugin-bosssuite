@@ -166,7 +166,6 @@ $lang = array(
 'bs_bp_style_ztext_text' => 'text',
 'bl_opt_lootlist' => 'Lootlist options, only work if a lootlist is selected',
 
-'bs_updateitem_l_name' => 'Updatepage for',
 'bs_depmatch' => 'Match bosses depending on the zone match:',
 'bs_am_bzone' => 'Zones/Bosses',
 'bs_ec_show_bp' => 'Show(BossProgress)',

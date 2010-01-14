@@ -165,8 +165,6 @@ $lang = array(
 'bs_bp_style_ztext_text' => 'Текст',
 'bl_opt_lootlist' => 'Опции списка трофеев, работает, только если выбран список трофеев',
 
-'bs_updateitem_l_name' => 'Обновить страницу',
-
 'bs_enable_updchk' => 'Enable check for new Plugin Versions',
 'bl_opt_en_mv' => 'Enable wowhead modelviewer',
 'bs_enable_autoclose' => 'Auto-close boss/zone popup after saving',

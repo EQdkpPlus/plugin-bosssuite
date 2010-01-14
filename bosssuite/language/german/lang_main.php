@@ -162,7 +162,6 @@ $lang = array(
 'bs_bp_style_ztext_text' => 'Text',
 'bl_opt_lootlist' => 'Einstellungen für Lootlisten, funktionieren nur, wenn eine Lootliste ausgewählt wurde',
 
-'bs_updateitem_l_name' => 'Updateseite für',
 'bs_depmatch' => 'Werte Bosse zonenabhängig aus:',
 'bs_am_bzone' => 'Zonen/Bosse',
 

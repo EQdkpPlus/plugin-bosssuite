@@ -192,7 +192,7 @@ if ($bl_conf['show_ndl'] == true){
     				}else{
     					$is_itemname = $name;
     				}
-            $bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'plugins/bosssuite/bs_update_item.php?item='.urlencode($name).'&ingame_item_id='.urlencode($ingame_item_id).'">'.$is_itemname.'</a></td></tr>'."\n";
+            $bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'itemstats/updateitem.php?item='.urlencode($ingame_item_id).'">'.$is_itemname.'</a></td></tr>'."\n";
     				$printed2++;
     			}
     		}
@@ -205,7 +205,7 @@ if ($bl_conf['show_ndl'] == true){
   				}else{
   					$is_itemname = $name;
   				}
-          $bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'plugins/bosssuite/bs_update_item.php?item='.urlencode($name).'&ingame_item_id='.urlencode($ingame_item_id).'">'.$is_itemname.'</a></td></tr>'."\n";
+          $bl_ndloot .= "\t\t\t".'<tr class="row'.$rowid2.'"><td colspan="3"><a href="' . $eqdkp_root_path . 'itemstats/updateitem.php?item='.urlencode($name).'">'.$is_itemname.'</a></td></tr>'."\n";
   				$printed2++;
   			}
   		}

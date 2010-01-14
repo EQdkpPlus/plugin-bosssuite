@@ -166,7 +166,6 @@ $lang = array(
 'bs_bp_style_ztext_text' => 'texto',
 'bl_opt_lootlist' => 'Opciones de la lista de botín, sólo funciona si hay una seleccionada',
 
-'bs_updateitem_l_name' => 'Actualizar página para',
 'bs_depmatch' => 'Igualar jefes dependiendo de la zona:',
 'bs_am_bzone' => 'Zonas/Jefes',
 'bs_ec_show_bp' => 'Mostrar(BossProgress)',
