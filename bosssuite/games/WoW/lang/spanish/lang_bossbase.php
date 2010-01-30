@@ -11,9 +11,9 @@
  * @copyright   2006-2008 sz3
  * @link        http://eqdkp-plus.com
  * @package     bosssuite
- * @version     $Rev: 5816 $
+ * @version     $Rev: 6618 $
  *
- * $Id: lang_bossbase.php 5816 2009-09-08 22:10:04Z sz3 $
+ * $Id: lang_bossbase.php 6618 2009-12-07 16:06:41Z sz3 $
  */
 
 if ( !defined('EQDKP_INC') ){
@@ -226,6 +226,7 @@ $lang['vault_of_archavon_10'] = array('long' => 'Cámara de Archavon (10)', 'sho
 $lang['archavon_10'] = array('long' => 'Archavon el Vigía de piedra (10)', 'short' => 'Archavon (10)');
 $lang['emalon_10'] = array('long' => 'Emalon el Vigía de la Tormenta (10)', 'short' => 'Emalon (10)');
 $lang['koralon_10'] = array('long' => 'Koralon el Vigía de las llamas (10)', 'short' => 'Koralon (10)');
+$lang['toravon_10'] = array('long' => 'Toravon el Vigía de Hielo (10)', 'short' => 'Toravon (10)');
 
 /******Ojo de la Eternidad (10)*****/  
 $lang['eye_of_eternity_10'] = array('long' => 'Ojo de la Eternidad (10)', 'short' => 'EoE (10)');
@@ -287,6 +288,7 @@ $lang['vault_of_archavon_25'] = array('long' => 'Cámara de Archavon (25)', 'sho
 $lang['archavon_25'] = array('long' => 'Archavon el Vigía de piedra (25)', 'short' => 'Archavon (25)');
 $lang['emalon_25'] = array('long' => 'Emalon el Vigía de la Tormenta (25)', 'short' => 'Emalon (25)');
 $lang['koralon_25'] = array('long' => 'Koralon el Vigía de las llamas (25)', 'short' => 'Koralon (25)');
+$lang['toravon_25'] = array('long' => 'Toravon el Vigía de Hielo (25)', 'short' => 'Toravon (25)');
 
 /******Ojo de la Eternidad (25)*****/  
 $lang['eye_of_eternity_25'] = array('long' => 'Ojo de la Eternidad (25)', 'short' => 'EoE (25)');
@@ -362,4 +364,66 @@ $lang['anubarak_25_hm'] = array('long' => 'Anub\'arak MH (25)', 'short' => 'Anub
 $lang['tribute_s_25_hm'] = array('long' => 'Un tributo a la habilidad  (25)', 'short' => 'Tributo: Habilidad (25)');
 $lang['tribute_ms_25_hm'] = array('long' => 'Un tributo a la habilidad loca (25)', 'short' => 'Tributo: Habilidad Loca (25)');
 $lang['tribute_ins_25_hm'] = array('long' => 'Un tributo a la locura (25)', 'short' => 'Tributo: Locura (25)');
+
+/******Onyxia (10)*****/
+$lang['onylair_10'] = array('long' => 'Guarida de Onyxia (10)', 'short' => 'Onyxia (10)');
+$lang['onyxia_10'] = array('long' => 'Onyxia (10)', 'short' => 'Onyxia (10)');
+
+/******Onyxia (25)*****/
+$lang['onylair_25'] = array('long' => 'Guarida de Onyxia (25)', 'short' => 'Onyxia (25)');
+$lang['onyxia_25'] = array('long' => 'Onyxia (25)', 'short' => 'Onyxia (25)');
+
+/******Ciudadela Corona de Hielo (10)*****/
+$lang['icecrown_10'] = array('long' => 'Ciudadela de la Corona de Hielo (10)', 'short' => 'CCH (10)');
+$lang['marrowgar_10'] = array('long' => 'Lord Tuétano (10)', 'short' => 'Tuétano (10)');
+$lang['marrowgar_10_hm'] = array('long' => 'Lord Tuétano MH (10)', 'short' => 'Tuétano MH (10)');
+$lang['deathwhisper_10'] = array('long' => 'Lady Susurramuerte (10)', 'short' => 'Susurramuerte (10)');
+$lang['deathwhisper_10_hm'] = array('long' => 'Lady Susurramuerte MH (10)', 'short' => 'Susurramuerte MH (10)');
+$lang['gunship_battle_10'] = array('long' => 'Combate Naval (10)', 'short' => 'Barcos (10)');
+$lang['gunship_battle_10_hm'] = array('long' => 'Combate Naval MH (10)', 'short' => 'Barcos MH (10)');
+$lang['deathbringer_10'] = array('long' => 'Libramorte Colmillosauro (10)', 'short' => 'Libramorte (10)');
+$lang['deathbringer_10_hm'] = array('long' => 'Libramorte Colmillosauro MH (10)', 'short' => 'Libramorte MH (10)');
+$lang['festergut_10'] = array('long' => 'Panzachancro (10)', 'short' => 'Panzachancro (10)');
+$lang['festergut_10_hm'] = array('long' => 'Panzachancro MH (10)', 'short' => 'Panzachancro MH (10)');
+$lang['rotface_10'] = array('long' => 'Carapútrea (10)', 'short' => 'Carapútrea (10)');
+$lang['rotface_10_hm'] = array('long' => 'Carapútrea MH (10)', 'short' => 'Carapútrea MH (10)');
+$lang['putricide_10'] = array('long' => 'Profesor Putricidio (10)', 'short' => 'Putricidio (10)');
+$lang['putricide_10_hm'] = array('long' => 'Profesor Putricidio MH (10)', 'short' => 'Putricidio MH (10)');
+$lang['blood_prince_council_10'] = array('long' => 'Concilio de los Príncipes de Sangre (10)', 'short' => 'Concilio de Sangre (10)');
+$lang['blood_prince_council_10_hm'] = array('long' => 'Concilio de los Príncipes de Sangre MH (10)', 'short' => 'Concilio de Sangre MH (10)');
+$lang['lanathel_10'] = array('long' => 'Reina Lana\'thel (10)', 'short' => 'Lana\'thel (10)');
+$lang['lanathel_10_hm'] = array('long' => 'Reina Lana\'thel MH (10)', 'short' => 'Lana\'thel MH (10)');
+$lang['dreamwalker_rescue_10'] = array('long' => 'Rescata a Valithiria Caminasueños (10)', 'short' => 'Resc. Caminasueños (10)');
+$lang['dreamwalker_rescue_10_hm'] = array('long' => 'Rescata a Valithiria Caminasueños MH (10)', 'short' => 'Resc. Caminasueños MH (10)');
+$lang['sindragosa_10'] = array('long' => 'Sindragosa (10)', 'short' => 'Sindragosa (10)');
+$lang['sindragosa_10_hm'] = array('long' => 'Sindragosa MH (10)', 'short' => 'Sindragosa MH (10)');
+$lang['lichking_10'] = array('long' => 'El Rey Exánime (10)', 'short' => 'Rey Exánime (10)');
+$lang['lichking_10_hm'] = array('long' => 'El Rey Exánime MH (10)', 'short' => 'Rey Exánime MH (10)');
+
+/******Ciudadela Corona de Hielo (25)*****/
+$lang['icecrown_25'] = array('long' => 'Icecrown Citadel (25)', 'short' => 'IC (25)');
+$lang['marrowgar_25'] = array('long' => 'Lord Tuétano (25)', 'short' => 'Tuétano (25)');
+$lang['marrowgar_25_hm'] = array('long' => 'Lord Tuétano MH (25)', 'short' => 'Tuétano MH (25)');
+$lang['deathwhisper_25'] = array('long' => 'Lady Susurramuerte (25)', 'short' => 'Susurramuerte (25)');
+$lang['deathwhisper_25_hm'] = array('long' => 'Lady Susurramuerte MH (25)', 'short' => 'Susurramuerte MH (25)');
+$lang['gunship_battle_25'] = array('long' => 'Combate Naval (25)', 'short' => 'Barcos (25)');
+$lang['gunship_battle_25_hm'] = array('long' => 'Combate Naval MH (25)', 'short' => 'Barcos MH (25)');
+$lang['deathbringer_25'] = array('long' => 'Libramorte Colmillosauro (25)', 'short' => 'Libramorte (25)');
+$lang['deathbringer_25_hm'] = array('long' => 'Libramorte Colmillosauro MH (25)', 'short' => 'Libramorte MH (25)');
+$lang['festergut_25'] = array('long' => 'Panzachancro (25)', 'short' => 'Panzachancro (25)');
+$lang['festergut_25_hm'] = array('long' => 'Panzachancro MH (25)', 'short' => 'Panzachancro MH (25)');
+$lang['rotface_25'] = array('long' => 'Carapútrea (25)', 'short' => 'Carapútrea (25)');
+$lang['rotface_25_hm'] = array('long' => 'Carapútrea MH (25)', 'short' => 'Carapútrea MH (25)');
+$lang['putricide_25'] = array('long' => 'Profesor Putricidio (25)', 'short' => 'Putricidio (25)');
+$lang['putricide_25_hm'] = array('long' => 'Profesor Putricidio MH (25)', 'short' => 'Putricidio MH (25)');
+$lang['blood_prince_council_25'] = array('long' => 'Concilio de los Príncipes de Sangre (25)', 'short' => 'Concilio de Sangre (25)');
+$lang['blood_prince_council_25_hm'] = array('long' => 'Concilio de los Príncipes de Sangre MH (25)', 'short' => 'Concilio de Sangre MH (25)');
+$lang['lanathel_25'] = array('long' => 'Reina Lana\'thel (25)', 'short' => 'Lana\'thel (25)');
+$lang['lanathel_25_hm'] = array('long' => 'Reina Lana\'thel MH (25)', 'short' => 'Lana\'thel MH (25)');
+$lang['dreamwalker_rescue_25'] = array('long' => 'Rescata a Valithiria Caminasueños (25)', 'short' => 'Resc. Caminasueños (25)');
+$lang['dreamwalker_rescue_25_hm'] = array('long' => 'Rescata a Valithiria Caminasueños MH (25)', 'short' => 'Resc. Caminasueños MH (25)');
+$lang['sindragosa_25'] = array('long' => 'Sindragosa (25)', 'short' => 'Sindragosa (25)');
+$lang['sindragosa_25_hm'] = array('long' => 'Sindragosa MH (25)', 'short' => 'Sindragosa MH (25)');
+$lang['lichking_25'] = array('long' => 'El Rey Exánime (25)', 'short' => 'Rey Exánime (25)');
+$lang['lichking_25_hm'] = array('long' => 'El Rey Exánime MH (25)', 'short' => 'Rey Exánime MH (25)');
 ?>

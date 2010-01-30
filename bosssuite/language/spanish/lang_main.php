@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
  /*
  * Project:     BossSuite v4 MGS
  * License:     Creative Commons - Attribution-Noncommercial-Share Alike 3.0 Unported
@@ -24,7 +24,7 @@ $lang = array(
 //General
 'bosssuite' => 'BossSuite',
 'bosscounter' => 'BossCounter',
-'bossbars' => 'Progresión',
+'bossbars' => 'ProgresiÃ³n',
 
 //Permissions
 'bs_pm_conf' => 'configurar',
@@ -42,11 +42,11 @@ $lang = array(
 // admin page
 'bs_al_submit' => 'Guardar',
 'bs_al_general' => 'Ajustes generales',
-'bs_al_delimRNO' => 'Delimitador de nota de banda (Opc.: Expresión regular):',
-'bs_al_delimRNA' => 'Delimitador de nombre de banda (Opc.: Expresión regular):',
-'bs_al_tables' => 'Opc.: Lista de prefijo EQdkp (vacío => sólo la actual):',
-'bs_al_zoneInfo' => '¿Dónde (en la entrada de bandas) buscamos info de zona?',
-'bs_al_bossInfo' => '¿Dónde (en la entrada de bandas) buscamos info de jefes?',
+'bs_al_delimRNO' => 'Delimitador de nota de banda (Opc.: ExpresiÃ³n regular):',
+'bs_al_delimRNA' => 'Delimitador de nombre de banda (Opc.: ExpresiÃ³n regular):',
+'bs_al_tables' => 'Opc.: Lista de prefijo EQdkp (vacÃ­o => sÃ³lo la actual):',
+'bs_al_zoneInfo' => 'Â¿DÃ³nde (en la entrada de bandas) buscamos info de zona?',
+'bs_al_bossInfo' => 'Â¿DÃ³nde (en la entrada de bandas) buscamos info de jefes?',
 'bs_al_linkInfo' => 'Opciones de enlace:',
 'bs_al_name' => 'Nombre',
 'bs_al_trigger' => 'Cadenas activadoras',
@@ -58,7 +58,7 @@ $lang = array(
 'bs_source_both' => 'ambos',
 'bs_source_cache' => 'cache',
 'bs_al_showZone' => 'Selecciona las zonas que deben mostrarse en el plugin:',
-'lang' => 'inglés',
+'lang' => 'inglÃ©s',
 
 'dateFormat' => '%m/%d/%Y',
 'bs_out_date_format' => 'mm/dd/yy', 
@@ -70,33 +70,33 @@ $lang = array(
 'bs_ol_dateFormat' => 'El formato de fecha es: ',
 'bs_ol_in' => 'Nombre',
 'bs_ol_fd' => 'Primera fecha',
-'bs_ol_ld' => 'Última fecha',
+'bs_ol_ld' => 'Ãšltima fecha',
 'bs_ol_co' => 'Contador',
 'bs_ol_submit' => 'Guardar',
 
 // cache page
-'bs_adm_cache_info' => 'Cache: Usando esta función se reducirán los tiempos de carga en sistemas con muchas abndas',
-'bs_adm_cache_refresh' => 'Refrescar caché',
+'bs_adm_cache_info' => 'Cache: Usando esta funciÃ³n se reducirÃ¡n los tiempos de carga en sistemas con muchas abndas',
+'bs_adm_cache_refresh' => 'Refrescar cachÃ©',
 
 //BossProgress User Page
 'bp_um_link' => 'BossProgress',
 'firstkill' => 'Primera muerte: ',
-'lastkill' => 'Última muerte: ',
+'lastkill' => 'Ãšltima muerte: ',
 'firstvisit' => 'Primera visita: ',
-'lastvisit' => 'Última visita: ',
+'lastvisit' => 'Ãšltima visita: ',
 'zonevisitcount' => 'Contador de visitas: ',
 'bosskillcount' => 'Contador de muertes: ',
 'status' => 'Estado: ',
 'never' => 'Nunca',
 'all_zones' => 'todas las zonas',
-'bs_ol_zoneselect' => 'Selección de zona:',
+'bs_ol_zoneselect' => 'SelecciÃ³n de zona:',
 
 'opt_general' => 'Ajustes generales',
-'opt_dynloc' => '¿Ocultar zonas sin jefes muertos?',
-'opt_dynboss' => '¿Ocultar jefes que nunca han sido derrotados?',
+'opt_dynloc' => 'Â¿Ocultar zonas sin jefes muertos?',
+'opt_dynboss' => 'Â¿Ocultar jefes que nunca han sido derrotados?',
 'opt_showzone' => 'Mostrar: ',
-'opt_showSB' => '¿Mostrar una barra de progresión de zona?',
-'opt_zhiType' => '¿Cómo se muestra el progreso en la imagen de cabecera?',
+'opt_showSB' => 'Â¿Mostrar una barra de progresiÃ³n de zona?',
+'opt_zhiType' => 'Â¿CÃ³mo se muestra el progreso en la imagen de cabecera?',
 'zhi_jitter' =>'vieja foto',
 'zhi_bw' => 'negro/blanco',
 'zhi_none' => 'en absoluto',
@@ -115,27 +115,27 @@ $lang = array(
 'bl_itemcount' => 'Contador de drops',
 'bl_droprate' => 'Probabilidad de obtenerse',
 'bl_loottable_offsets' => '(Modo Offset) Lista de objetos:',
-'bl_dl' => 'Botín obtenido',
-'bl_ndl' => 'Botín nunca obtenido',
-'bl_wl' => 'Botín mal/confusamente asignado',
+'bl_dl' => 'BotÃ­n obtenido',
+'bl_ndl' => 'BotÃ­n nunca obtenido',
+'bl_wl' => 'BotÃ­n mal/confusamente asignado',
 
 'bl_itemsfound' => 'objetos encontrados',
 'item_lang_none' => 'ninguno',
 
 //Admin menu
-'bl_opt_minitemqual' => 'Mínima calidad para ser mostrado:',
-'bl_opt_itemlang' => 'Seleccionar lista de botín',
-'bl_opt_ndl' => '¿Mostra botín que nunca has obtenido?',
-'bl_opt_wl' => '¿Mostrar botín encontrado pero que no pertenece al jefe?',
-'bl_opt_is' => '¿Activar estadísticas de objetos para los que nunca se obtuvieron?',
-'bl_opt_eyecandy' => '¿Activar acordeones llamativos?',
-'bc_opt_eyecandy' => '¿Activar acordeones llamativos? (¡SOLO PLUS 0.5+!)',
+'bl_opt_minitemqual' => 'MÃ­nima calidad para ser mostrado:',
+'bl_opt_itemlang' => 'Seleccionar lista de botÃ­n',
+'bl_opt_ndl' => 'Â¿Mostra botÃ­n que nunca has obtenido?',
+'bl_opt_wl' => 'Â¿Mostrar botÃ­n encontrado pero que no pertenece al jefe?',
+'bl_opt_is' => 'Â¿Activar estadÃ­sticas de objetos para los que nunca se obtuvieron?',
+'bl_opt_eyecandy' => 'Â¿Activar acordeones llamativos?',
+'bc_opt_eyecandy' => 'Â¿Activar acordeones llamativos? (Â¡SOLO PLUS 0.5+!)',
 'bs_credits_p1' => 'EQDKP BossSuite v',
 'bs_credits_p2' => ' por sz3',
-'bl_credits_ll' => 'Lista de botín: ',
-'bl_credits_bi' => 'Imágenes de jefes: ',
-'bl_no_lootlist_credits' => 'no se seleccionó/encontró lista de botín',
-'bl_no_bossimages_credits' => 'no se han encontrado créditos de imagen de jefes',
+'bl_credits_ll' => 'Lista de botÃ­n: ',
+'bl_credits_bi' => 'ImÃ¡genes de jefes: ',
+'bl_no_lootlist_credits' => 'no se seleccionÃ³/encontrÃ³ lista de botÃ­n',
+'bl_no_bossimages_credits' => 'no se han encontrado crÃ©ditos de imagen de jefes',
 
 'item_qual_-1' => 'todo',
 
@@ -144,9 +144,9 @@ $lang = array(
 'bs_additions' => 'Contribucioens:',
 'bs_copyright' => 'Copyright:',
 'bs_url_web' => 'Web',
-'bs_short_desc' => 'Información extendida de botín/progresión.',
-'bs_long_desc' => 'Visión de los jefes derrotados, el progreso de las zonas y el botín conseguido.',
-'bs_game_not_supported' => 'Lo sentimos, tu juego no está soportado.',
+'bs_short_desc' => 'InformaciÃ³n extendida de botÃ­n/progresiÃ³n.',
+'bs_long_desc' => 'VisiÃ³n de los jefes derrotados, el progreso de las zonas y el botÃ­n conseguido.',
+'bs_game_not_supported' => 'Lo sentimos, tu juego no estÃ¡ soportado.',
 'bs_enable_bosscounter' => 'Activar BossCounter',
 'bs_enable_note2link' => 'Activar note2link',
 
@@ -164,7 +164,7 @@ $lang = array(
 'bs_bp_style_ztext_none' => 'nada',
 'bs_bp_style_ztext_png' => 'png',
 'bs_bp_style_ztext_text' => 'texto',
-'bl_opt_lootlist' => 'Opciones de la lista de botín, sólo funciona si hay una seleccionada',
+'bl_opt_lootlist' => 'Opciones de la lista de botÃ­n, sÃ³lo funciona si hay una seleccionada',
 
 'bs_depmatch' => 'Igualar jefes dependiendo de la zona:',
 'bs_am_bzone' => 'Zonas/Jefes',
@@ -172,9 +172,9 @@ $lang = array(
 'bs_ec_show_bc' => 'Mostrar(BossCounter)',
 'bs_ec_strings' => 'Activadores',
 
-'bs_enable_updchk' => 'Revisar automáticamente nuevas versiones de Plugins',
+'bs_enable_updchk' => 'Revisar automÃ¡ticamente nuevas versiones de Plugins',
 'bl_opt_en_mv' => 'Activar visualizador de modelos de wowhead',
-'bs_enable_autoclose' => 'Cerrar automáticamente ventana emergente de jefe/zona tras guardar',
+'bs_enable_autoclose' => 'Cerrar automÃ¡ticamente ventana emergente de jefe/zona tras guardar',
 );
 
 ?>
