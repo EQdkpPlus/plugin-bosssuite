@@ -7,7 +7,7 @@ $loot = array(
 	array( "id" => "51006", "qual" => "4", "name" => "Schlurfende Schuhe" ),
 	array( "id" => "51000", "qual" => "4", "name" => "Bahrengurt des Fleischformers" ),
 	array( "id" => "51008", "qual" => "4", "name" => "Halsreif aus schmutzigen Diamanten" ),
-	array( "id" => "51001", "qual" => "4", "name" => "Modermines reißender Ring" ),
+	array( "id" => "51001", "qual" => "4", "name" => "Modermienes reißender Ring" ),
 	array( "id" => "51003", "qual" => "4", "name" => "Monstrositätenschlagring" ),
 	array( "id" => "51004", "qual" => "4", "name" => "Maulsperre" ),
 	array( "id" => "50998", "qual" => "4", "name" => "Schaft aus Gletschereis" ),

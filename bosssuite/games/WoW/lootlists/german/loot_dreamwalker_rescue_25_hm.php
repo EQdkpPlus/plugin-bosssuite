@@ -4,7 +4,7 @@ $loot = array(
 	array( "id" => "50629", "qual" => "4", "name" => "Robe of the Waking Nightmare" ),
 	array( "id" => "50630", "qual" => "4", "name" => "Bracers of Eternal Dreaming" ),
 	array( "id" => "50626", "qual" => "4", "name" => "Snowstorm Helm" ),
-	array( "id" => "50619", "qual" => "4", "name" => "Anub'ar Stalker's Gloves" ),
+	array( "id" => "50619", "qual" => "4", "name" => "Handschuhe des Anub'arpirschers" ),
 	array( "id" => "50620", "qual" => "4", "name" => "Coldwraith Links" ),
 	array( "id" => "50623", "qual" => "4", "name" => "Leggings of Dying Candles" ),
 	array( "id" => "50624", "qual" => "4", "name" => "Scourge Reaver's Legplates" ),

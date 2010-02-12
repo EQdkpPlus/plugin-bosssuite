@@ -8,10 +8,10 @@ $loot = array(
 	array( "id" => "51891", "qual" => "4", "name" => "Taldron's Long Neglected Boots" ),
 	array( "id" => "51886", "qual" => "4", "name" => "Festergut's Gaseous Gloves" ),
 	array( "id" => "51892", "qual" => "4", "name" => "Festering Fingerguards" ),
-	array( "id" => "51890", "qual" => "4", "name" => "Precious's Putrid Collar" ),
-	array( "id" => "51884", "qual" => "4", "name" => "Signet of Putrefaction" ),
-	array( "id" => "51893", "qual" => "4", "name" => "Gutbuster" ),
-	array( "id" => "51887", "qual" => "4", "name" => "Abracadaver" ),
+	array( "id" => "51890", "qual" => "4", "name" => "Schatz' eitriges Halsband" ),
+	array( "id" => "51884", "qual" => "4", "name" => "Siegelring der Fäulnis" ),
+	array( "id" => "51893", "qual" => "4", "name" => "Darmplatzer" ),
+	array( "id" => "51887", "qual" => "4", "name" => "Abrakadaver" ),
 );
 
 ?>

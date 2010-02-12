@@ -4,7 +4,7 @@ $loot = array(
 	array( "id" => "50670", "qual" => "4", "name" => "Toskk's Maximized Wristguards" ),
 	array( "id" => "50671", "qual" => "4", "name" => "Belt of the Blood Nova" ),
 	array( "id" => "50363", "qual" => "4", "name" => "Deathbringer's Will" ),
-	array( "id" => "50672", "qual" => "4", "name" => "Bloodvenom Blade" ),
+	array( "id" => "50672", "qual" => "4", "name" => "Blutgiftklinge" ),
 	array( "id" => "50274", "qual" => "5", "name" => "Schattenfrostsplitter" ),
 	array( "id" => "49908", "qual" => "4", "name" => "Urtümliches Saronit" ),
 	array( "id" => "52030", "qual" => "4", "name" => "Weiheabzeichen des Eroberers" ),

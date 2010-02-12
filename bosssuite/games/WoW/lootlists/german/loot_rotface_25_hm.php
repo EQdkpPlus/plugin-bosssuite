@@ -9,7 +9,7 @@ $loot = array(
 	array( "id" => "50674", "qual" => "4", "name" => "Raging Behemoth's Shoulderplates" ),
 	array( "id" => "50681", "qual" => "4", "name" => "Blightborne Warplate" ),
 	array( "id" => "50680", "qual" => "4", "name" => "Rot-Resistant Breastplate" ),
-	array( "id" => "50682", "qual" => "4", "name" => "Bile-Encrusted Medallion" ),
+	array( "id" => "50682", "qual" => "4", "name" => "Galleverkrustetes Medaillon" ),
 	array( "id" => "50678", "qual" => "4", "name" => "Seal of Many Mouths" ),
 	array( "id" => "50348", "qual" => "4", "name" => "Dislodged Foreign Object" ),
 	array( "id" => "50685", "qual" => "4", "name" => "Trauma" ),
