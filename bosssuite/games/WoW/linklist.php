@@ -407,6 +407,14 @@ $idlist['default'] = array(
   'sindragosa_25_hm' => '37755',
   'lichking_25' => '29983',
   'lichking_25_hm' => '29983',
+  
+  /******Ruby Sanctum (10)*****/
+  'halion_10' => '39863',
+  'halion_10_hm' => '39863',
+
+	/******Ruby Sanctum (25)*****/
+  'halion_25' => '39863',
+  'halion_25_hm' => '39863',
 );
 
 $idlist['wolids'] = array(
@@ -774,5 +782,13 @@ $idlist['wowheadmv'] = array(
   'sindragosa_25_hm' => '27971&modelType=8',
   'lichking_25' => '24213&modelType=8',
   'lichking_25_hm' => '24213&modelType=8',
+  
+  /******Ruby Sanctum (10)*****/
+  'halion_10' => '31952&modelType=8',
+  'halion_10_hm' => '31952&modelType=8',
+
+	/******Ruby Sanctum (25)*****/
+  'halion_25' => '31952&modelType=8',
+  'halion_25_hm' => '31952&modelType=8',
 );
 ?>

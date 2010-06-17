@@ -186,4 +186,48 @@ $lang['istum'] = array('long' => 'Îstum', 'short' => 'Îstum');
 $lang['flagit'] = array('long' => 'Flâgît', 'short' => 'Flâgît');
 $lang['the_blind_one'] = array('long' => 'The Blind One', 'short' => 'The Blind One');
 $lang['mistress_of_pestilence'] = array('long' => 'The Mistress of Pestilence', 'short' => 'Mistress');
+
+/*****Barad Guldur*******/
+$lang['barad_guldur'] = array('long' => 'Barad Guldur', 'short' => 'Barad Guldur');
+$lang['durchest'] = array('long' => 'Dúrchest', 'short' => 'Dúrchest');
+$lang['cargaraf_and_morgaraf'] = array('long' => 'Cargaraf and Morgaraf', 'short' => 'Cargaraf & Morgaraf');
+$lang['the_lieutenant_of_dol_guldur'] = array('long' => 'The Lieutenant of Dol Guldur', 'short' => 'Lieutenant');
+
+/*****Sammath Gûl*******/
+$lang['sammath_gul'] = array('long' => 'Sammath Gûl', 'short' => 'Sammath Gûl');
+$lang['urchir'] = array('long' => 'Urchír', 'short' => 'Urchír');
+$lang['alagossir'] = array('long' => 'Alagossír', 'short' => 'Alagossír');
+$lang['gorothul'] = array('long' => 'Gorothúl', 'short' => 'Gorothúl');
+$lang['demafaer'] = array('long' => 'Demafaer', 'short' => 'Demafaer');
+
+/*****Warg Pens*******/
+$lang['warg_pens'] = array('long' => 'Warg-pens', 'short' => 'Warg-pens');
+$lang['athgrat'] = array('long' => 'Athgrat', 'short' => 'Athgrat');
+$lang['kranklob'] = array('long' => 'Kranklob', 'short' => 'Kranklob');
+
+/*****Sword Hall*******/
+$lang['sword_hall'] = array('long' => 'Sword Hall', 'short' => 'Sword Hall');
+$lang['carchrien'] = array('long' => 'Carchrien', 'short' => 'Carchrien');
+$lang['durkar'] = array('long' => 'Durkâr', 'short' => 'Durkâr');
+$lang['urcheron'] = array('long' => 'Urcheron', 'short' => 'Urcheron');
+
+/*****Dungeons of Dol Guldur*******/
+$lang['dungeons_of_dol_guldur'] = array('long' => 'Dungeons of Dol Guldur', 'short' => 'Dungeons of Dol Guldur');
+$lang['the_warden'] = array('long' => 'The Warden', 'short' => 'The Warden');
+
+/*****Lumul Nar - The Mirror Halls*******/
+$lang['lumul_nar'] = array('long' => 'Lumul-nar - The Mirror Halls', 'short' => 'Lumul-nar ');
+$lang['frost-tail'] = array('long' => 'Frost-tail', 'short' => 'Frost-tail');
+$lang['ergoth'] = array('long' => 'Ergoth', 'short' => 'Ergoth');
+
+/*****Nalâ-dûm - The Water Wheels*******/
+$lang['nala_dum'] = array('long' => 'Nalâ-dûm - The Water Wheels', 'short' => 'Nalâ-dûm');
+$lang['spit-tail'] = array('long' => 'Spit-tail', 'short' => 'Spit-tail');
+$lang['caerlug'] = array('long' => 'Caerlûg', 'short' => 'Caerlûg');
+
+/*****Halls of Crafting*******/
+$lang['halls_of_crafting'] = array('long' => 'Halls of Crafting', 'short' => 'Halls of Crafting');
+$lang['ambal'] = array('long' => 'Ambal', 'short' => 'Ambal');
+$lang['bashkuga'] = array('long' => 'Bashkuga', 'short' => 'Bashkuga');
+$lang['thaguzg'] = array('long' => 'Thaguzg', 'short' => 'Thaguzg');
 ?>

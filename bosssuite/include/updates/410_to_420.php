@@ -28,7 +28,7 @@ $updateDESC = false;
 $updateSQL = false;
 
 function BS410to420Update(){
-global $db, $user;
+global $db, $user, $eqdkp;
   $game_arr = explode('_', $eqdkp->config['default_game']);
   $currentgame = $game_arr[0];
   if($currentgame == "WoW"){

@@ -233,4 +233,12 @@ $image_map['lichking_25_hm'] = 'lichking';
 
 $image_map['toravon_10'] = 'hodir';
 $image_map['toravon_25'] = 'hodir';
+
+$image_map['ruby_sanctum_10'] = 'ruby_sanctum';
+$image_map['ruby_sanctum_25'] = 'ruby_sanctum';
+
+$image_map['halion_10'] = 'halion';
+$image_map['halion_10_hm'] = 'halion';
+$image_map['halion_25'] = 'halion';
+$image_map['halion_25_hm'] = 'halion';
 ?>

@@ -21,6 +21,14 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $bzone = array (
+	'ruby_sanctum_10' => array(
+	  'halion_10',
+	  'halion_10_hm',
+	),
+	'ruby_sanctum_25' => array(
+		'halion_25',
+		'halion_25_hm',
+	),
   'icecrown_10' => array(
     'marrowgar_10',
     'marrowgar_10_hm',

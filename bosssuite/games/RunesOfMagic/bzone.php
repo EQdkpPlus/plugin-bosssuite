@@ -129,11 +129,32 @@ $bzone = array (
 	'kal_turok',
 ),
 'kingdom_ruins_high' => array (
+    'ooze_boss',
     'hairyfoot_high',
     'ice_guardian_high',
     'mula_nail_high',
     'pangkor',
     'thynos',
+),
+'heart_of_the_ocean' => array (
+    'bloodthirsty_claw',
+    'teeth_of_the_reef',
+    'jiasha',
+    'geba',
+    'medusa',
+),
+'heart_of_the_ocean_easy' => array (
+    'bloodthirsty_claw_easy',
+    'teeth_of_the_reef_easy',
+    'jiasha_easy',
+    'geba_easy',
+    'medusa_easy',
+),
+'the_origin' => array (
+    'life_leecher',
+    'razor_lurker',
+    'lorlin_taburen',
+    'tree_falynum',
 ),
 'treasure_trove' => array (
     'curse',
@@ -141,6 +162,40 @@ $bzone = array (
     'sidaar',
     'luke',
     'blake',
+),
+'hall_of_survivors' => array (
+    'andriol',
+    'glamo',
+    'guldamor',
+    'vrantal',
+    'zygro',
+    'mantarick_sydaphex',
+    'andaphelmor',
+),
+'hall_of_survivors_easy' => array (
+    'andriol_easy',
+    'glamo_easy',
+    'guldamor_easy',
+    'vrantal_easy',
+    'zygro_easy',
+    'mantarick_sydaphex_easy',
+    'andaphelmor_easy',
+),
+'cave_of_the_water_dragon' => array (
+    'lytfir',
+),
+'lair_of_the_demon_dragon' => array (
+    'gestero',
+),
+'zurhidon_stronghold' => array (
+    'charionys',
+    'lady_hansis',
+    'balothar',
+    'new_messenger',
+),
+'hall_of_the_demon_lord' => array (
+    'naos',
+    'yash',
 )
 );
 

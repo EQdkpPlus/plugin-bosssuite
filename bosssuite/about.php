@@ -102,7 +102,7 @@ foreach ($eq2_additions as $key => $value){
 }
 
 $rom_additions = array(
-  'Basic Support' => 'Cetos, of the Muinin Server',
+  'Basic Support' => 'Cetos of Muinin, Selfine of Laoch',
   'Zone Images' => 'Cetos from Ingame Content',
   'Boss Images' => 'Cetos captured from the Buffed.de 3D-Views', 
 );

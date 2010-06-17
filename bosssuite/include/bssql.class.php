@@ -105,10 +105,7 @@ if ( !class_exists( "BSSQL" ) ) {
       
       function get_parse_zone(){
         global $eqdkp, $db;
-      
-        $game_arr = explode('_', $eqdkp->config['default_game']);
-        $game = $game_arr[0];
-        
+
       	$sql = 'SELECT zone_id, zone_string FROM __bs_data_zone';
       	if (!($settings_result = $db->query($sql))) {
       		message_die('Could not obtain zone string data', '', __FILE__, __LINE__, $sql);
@@ -129,29 +126,19 @@ if ( !class_exists( "BSSQL" ) ) {
       function update_parse_zone($confarr, $fieldname, $value){
         global $eqdkp, $user, $db;
       
-        $game_arr = explode('_', $eqdkp->config['default_game']);
-        $game = $game_arr[0];
-        
-      if(array_key_exists( 'pz_'.$fieldname, $confarr )){
-        $sql = "UPDATE __bs_data_zone SET zone_string='".strip_tags(htmlspecialchars($value))."' WHERE zone_id='".$fieldname."';";
-      	if (!($settings_result = $db->query($sql))) {
-      		message_die('Could not update zone', '', __FILE__, __LINE__, $sql);
-      	}
-      }else{
-      	$sql = "INSERT INTO __bs_data_zone VALUES('".$fieldname."', '".strip_tags(htmlspecialchars($value))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."','1','1');";	
-      	if (!($settings_result = $db->query($sql))) {
-      		message_die('Could not insert zone', '', __FILE__, __LINE__, $sql);
-      	}
-      }
+	      if(array_key_exists( 'pz_'.$fieldname, $confarr )){
+	        $sql = "UPDATE __bs_data_zone SET zone_string='".strip_tags(htmlspecialchars($value))."' WHERE zone_id='".$fieldname."';";
+	        $db->query($sql);
+	      }else{
+	      	$sql = "INSERT INTO __bs_data_zone VALUES('".$fieldname."', '".strip_tags(htmlspecialchars($value))."','0','".BS_MAX_DATE."','".BS_MIN_DATE."','1','1');";
+	      	$db->query($sql);
+	      }
       
       }     
       
       function get_parse_boss(){
         global $eqdkp, $db;
       
-        $game_arr = explode('_', $eqdkp->config['default_game']);
-        $game = $game_arr[0];
-        
       	$sql = 'SELECT boss_id, boss_string FROM __bs_data_boss';
       	if (!($settings_result = $db->query($sql))) {
       		message_die('Could not obtain boss string data', '', __FILE__, __LINE__, $sql);
@@ -172,9 +159,6 @@ if ( !class_exists( "BSSQL" ) ) {
       function update_parse_boss($confarr, $fieldname, $value){
         global $eqdkp, $user, $db;
       
-        $game_arr = explode('_', $eqdkp->config['default_game']);
-        $game = $game_arr[0];
-        
       if(array_key_exists( 'pb_'.$fieldname, $confarr )){
         $sql = "UPDATE __bs_data_boss SET boss_string='".strip_tags(htmlspecialchars($value))."' WHERE boss_id='".$fieldname."';";
       	$db->query($sql);
@@ -187,9 +171,6 @@ if ( !class_exists( "BSSQL" ) ) {
       function get_boss_offsets(){
         global $eqdkp, $db;
       
-        $game_arr = explode('_', $eqdkp->config['default_game']);
-        $game = $game_arr[0];
-        
       	$sql = 'SELECT boss_id, boss_co_offs, boss_fd_offs, boss_ld_offs FROM __bs_data_boss';
       	if (!($settings_result = $db->query($sql))) {
       		message_die('Could not obtain boss offset data', '', __FILE__, __LINE__, $sql);
@@ -212,9 +193,6 @@ if ( !class_exists( "BSSQL" ) ) {
       function get_zone_offsets(){
         global $eqdkp, $db;
       
-        $game_arr = explode('_', $eqdkp->config['default_game']);
-        $game = $game_arr[0];
-        
       	$sql = 'SELECT zone_id, zone_co_offs, zone_fd_offs, zone_ld_offs FROM __bs_data_zone';
       	if (!($settings_result = $db->query($sql))) {
       		message_die('Could not obtain zone offset data', '', __FILE__, __LINE__, $sql);
@@ -269,9 +247,6 @@ if ( !class_exists( "BSSQL" ) ) {
       function update_boss_offsets($offsets, $id, $fdate, $ldate, $counter){
       global $eqdkp, $user, $db;
       
-        $game_arr = explode('_', $eqdkp->config['default_game']);
-        $game = $game_arr[0];
-        
       if(array_key_exists( $id, $offsets )){
         $sql = "UPDATE __bs_data_boss SET boss_co_offs='".$counter."', boss_ld_offs='".$ldate."', boss_fd_offs='".$fdate."' WHERE boss_id='".$id."';";
       	$db->query($sql);
@@ -284,9 +259,6 @@ if ( !class_exists( "BSSQL" ) ) {
       function update_zone_offsets($offsets, $id, $fdate, $ldate, $counter){
       global $eqdkp, $user, $db;
       
-        $game_arr = explode('_', $eqdkp->config['default_game']);
-        $game = $game_arr[0];
-        
       if(array_key_exists( $id, $offsets )){
         $sql = "UPDATE __bs_data_zone SET zone_co_offs='".$counter."', zone_ld_offs='".$ldate."', zone_fd_offs='".$fdate."' WHERE zone_id='".$id."';";
       	$db->query($sql);
@@ -338,9 +310,6 @@ if ( !class_exists( "BSSQL" ) ) {
     function update_zone_visibility($plugin, $zoneid, $value){
       global $eqdkp, $user, $db;
       
-        $game_arr = explode('_', $eqdkp->config['default_game']);
-        $game = $game_arr[0];
-        
         if ( $plugin == 'bossprogress'){
           $sql = "UPDATE __bs_data_zone SET zone_sz_bp='".$value."' WHERE zone_id='".$zoneid."';";
       	  $db->query($sql);
@@ -356,8 +325,6 @@ if ( !class_exists( "BSSQL" ) ) {
       $config = $this->get_config('bossbase');
       $config['source'] = 'both';
       $data = $this->get_data($config, $bzone);
-      $game_arr = explode('_', $eqdkp->config['default_game']);
-      $game = $game_arr[0];
       $sql = 'TRUNCATE TABLE __bs_cache_zone';
       $db->query($sql);
       $sql = 'TRUNCATE TABLE __bs_cache_boss';
@@ -376,9 +343,6 @@ if ( !class_exists( "BSSQL" ) ) {
     function get_cache($bzone = null){
         global $eqdkp, $db, $table_prefix;
       
-        $game_arr = explode('_', $eqdkp->config['default_game']);
-        $game = $game_arr[0];
-        
         $data = array();
       	$sql = 'SELECT * FROM __bs_cache_zone';
       	if (!($result = $db->query($sql))) {

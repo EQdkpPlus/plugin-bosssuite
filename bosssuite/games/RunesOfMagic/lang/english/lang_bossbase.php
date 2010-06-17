@@ -145,11 +145,35 @@ $lang['kal_turok'] = array('long' => 'Kal Turok Queen', 'short' => 'Kal Turok');
 
 /******Kingdom Ruins of the ice dwarf High Lvl*****/
 $lang['kingdom_ruins_high'] = array('long' => 'Kingdom Ruins of the ice dwarf Lvl 50', 'short' => 'Ice dwarf ruins Lvl 50');
+$lang['ooze_boss'] = array('long' => 'Ooze Boss', 'short' => 'Ooze Boss');
 $lang['hairyfoot_high'] = array('long' => 'Crasset Hairyfoot', 'short' => 'Crasset');
 $lang['ice_guardian_high'] = array('long' => 'Icebound Guardian', 'short' => 'Icebound Guardian');
 $lang['mula_nail_high'] = array('long' => 'Mula Nail', 'short' => 'Mula');
 $lang['pangkor'] = array('long' => 'Pangkor', 'short' => 'Pangkor');
 $lang['thynos'] = array('long' => 'Thynos', 'short' => 'Thynos');
+
+/******Heart of the Ocean*****/
+$lang['heart_of_the_ocean'] = array('long' => 'Heart of the Ocean', 'short' => 'Heart of the Ocean');
+$lang['bloodthirsty_claw'] = array('long' => 'Bloodthirsty Claw', 'short' => 'Bloodthirsty Claw');
+$lang['teeth_of_the_reef'] = array('long' => 'Teeth of the Reef', 'short' => 'Teeth of the Reef');
+$lang['jiasha'] = array('long' => 'Jiasha', 'short' => 'Jiasha');
+$lang['geba'] = array('long' => 'Geba', 'short' => 'Geba');
+$lang['medusa'] = array('long' => 'Medusa', 'short' => 'Medusa');
+
+/******Heart of the Ocean Easy*****/
+$lang['heart_of_the_ocean_easy'] = array('long' => 'Heart of the Ocean (Easy)', 'short' => 'Heart of the Ocean (Easy)');
+$lang['bloodthirsty_claw_easy'] = array('long' => 'Bloodthirsty Claw', 'short' => 'Bloodthirsty Claw');
+$lang['teeth_of_the_reef_easy'] = array('long' => 'Teeth of the Reef', 'short' => 'Teeth of the Reef');
+$lang['jiasha_easy'] = array('long' => 'Jiasha', 'short' => 'Jiasha');
+$lang['geba_easy'] = array('long' => 'Geba', 'short' => 'Geba');
+$lang['medusa_easy'] = array('long' => 'Medusa', 'short' => 'Medusa');
+
+/******The Origin*****/
+$lang['the_origin'] = array('long' => 'The Origin', 'short' => 'The Origin');
+$lang['life_leecher'] = array('long' => 'Live Leecher', 'short' => 'Live Leecher');
+$lang['razor_lurker'] = array('long' => 'Razor Lurker', 'short' => 'Razor Lurker');
+$lang['lorlin_taburen'] = array('long' => 'Lorlin and Taburen', 'short' => 'Lorlin and Taburen');
+$lang['tree_falynum'] = array('long' => 'Tree Falynum', 'short' => 'Falynum');
 
 /******Treasure Trove*****/
 $lang['treasure_trove'] = array('long' => 'Treasure Trove', 'short' => 'Treasure Trove');
@@ -159,4 +183,43 @@ $lang['sidaar'] = array('long' => 'Boulder Sidaar', 'short' => 'Sidaar');
 $lang['luke'] = array('long' => 'Lookout Luke', 'short' => 'Luke');
 $lang['blake'] = array('long' => 'Snow Blake', 'short' => 'Snow Blake');
 
+/******Hall of Survivors*****/
+$lang['hall_of_survivors'] = array('long' => 'Hall of Survivors', 'short' => 'Hall of Survivors');
+$lang['andriol'] = array('long' => 'Andriol', 'short' => 'Andriol');
+$lang['glamo'] = array('long' => 'Glamo', 'short' => 'Glamo');
+$lang['guldamor'] = array('long' => 'Guldamor', 'short' => 'Guldamor');
+$lang['vrantal'] = array('long' => 'Vrantal', 'short' => 'Vrantal');
+$lang['zygro'] = array('long' => 'Zygro', 'short' => 'Zygro');
+$lang['mantarick_sydaphex'] = array('long' => 'Mantarick / Sydaphex', 'short' => 'Mantarick / Sydaphex');
+$lang['andaphelmor'] = array('long' => 'Andaphelmor', 'short' => 'Andaphelmor');
+
+/******Hall of Survivors Easy*****/
+$lang['hall_of_survivors_easy'] = array('long' => 'Hall of Survivors Easy', 'short' => 'Hall of Survivors Easy');
+$lang['andriol_easy'] = array('long' => 'Andriol', 'short' => 'Andriol');
+$lang['glamo_easy'] = array('long' => 'Glamo', 'short' => 'Glamo');
+$lang['guldamor_easy'] = array('long' => 'Guldamor', 'short' => 'Guldamor');
+$lang['vrantal_easy'] = array('long' => 'Vrantal', 'short' => 'Vrantal');
+$lang['zygro_easy'] = array('long' => 'Zygro', 'short' => 'Zygro');
+$lang['mantarick_sydaphex_easy'] = array('long' => 'Mantarick / Sydaphex', 'short' => 'Mantarick / Sydaphex');
+$lang['andaphelmor_easy'] = array('long' => 'Andaphelmor', 'short' => 'Andaphelmor');
+
+/******Cave of the Water Dragon*****/
+$lang['cave_of_the_water_dragon'] = array('long' => 'Cave of the Water Dragon', 'short' => 'Cave of the Water Dragon');
+$lang['lytfir'] = array('long' => 'Lytfir', 'short' => 'Lytfir');
+
+/******Lair of the Demon Dragon*****/
+$lang['lair_of_the_demon_dragon'] = array('long' => 'Lair of the Demon Dragon', 'short' => 'Lair of the Demon Dragon');
+$lang['gestero'] = array('long' => 'Gestero', 'short' => 'Gestero');
+
+/******Zurhidon Stronghold*****/
+$lang['zurhidon_stronghold'] = array('long' => 'Zurhidon Stronghold', 'short' => 'Zurhidon Stronghold');
+$lang['charionys'] = array('long' => 'Charionys', 'short' => 'Charionys');
+$lang['lady_hansis'] = array('long' => 'Lady Hansis', 'short' => 'Lady Hansis');
+$lang['balothar'] = array('long' => 'Balothar', 'short' => 'Balothar');
+$lang['new_messenger'] = array('long' => 'New Messenger', 'short' => 'New Messenger');
+
+/******Hall of the Demon Lord*****/
+$lang['hall_of_the_demon_lord'] = array('long' => 'Hall of the Demon Lord', 'short' => 'Hall of the Demon Lord');
+$lang['naos'] = array('long' => 'Naos', 'short' => 'Naos');
+$lang['yash'] = array('long' => 'Yash', 'short' => 'Yash');
 ?>

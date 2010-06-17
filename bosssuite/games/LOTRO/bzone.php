@@ -53,6 +53,29 @@ $bzone = array (
     'the_blind_one',
     'mistress_of_pestilence',
 ),
+'barad_guldur' => array (
+    'durchest',
+    'cargaraf_and_morgaraf',
+    'the_lieutenant_of_dol_guldur',
+),
+'sammath_gul' => array (
+    'urchir',
+    'alagossir',
+    'gorothul',
+    'demafaer',
+),
+'warg_pens' => array (
+    'athgrat',
+    'kranklob',
+),
+'sword_hall' => array (
+    'carchrien',
+    'durkar',
+    'urcheron',
+), 
+'dungeons_of_dol_guldur' => array (
+    'the_warden',
+),       
 'grand_stair' => array (
     'ilzkal',
     'glothrok',
@@ -93,6 +116,19 @@ $bzone = array (
     'doom_speaker',
     'gurvand',
 ),
+'lumul_nar' => array (
+    'frost-tail',
+    'ergoth',
+),
+'nala_dum' => array (
+    'spit-tail',
+    'caerlug',
+),
+'halls_of_crafting' => array (
+    'ambal',
+    'bashkuga',
+    'thaguzg',
+),        
 'forgotten_treasury' => array (
 	'skum_urauth',
 	'morthun',

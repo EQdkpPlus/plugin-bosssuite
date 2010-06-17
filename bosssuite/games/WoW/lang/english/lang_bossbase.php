@@ -426,4 +426,14 @@ $lang['sindragosa_25'] = array('long' => 'Sindragosa (25)', 'short' => 'Sindrago
 $lang['sindragosa_25_hm'] = array('long' => 'Sindragosa HM (25)', 'short' => 'Sindragosa HM (25)');
 $lang['lichking_25'] = array('long' => 'The Lich King (25)', 'short' => 'Lich King (25)');
 $lang['lichking_25_hm'] = array('long' => 'The Lich King HM (25)', 'short' => 'Lich King HM (25)');
+
+/******Ruby Sanctum (10)*****/
+$lang['ruby_sanctum_10'] = array('long' => 'Ruby Sanctum (10)', 'short' => 'RS (10)');
+$lang['halion_10'] = array('long' => 'Halion the Twilight Destroyer (10)', 'short' => 'Halion (10)');
+$lang['halion_10_hm'] = array('long' => 'Halion the Twilight Destroyer HM (10)', 'short' => 'Halion HM (10)');
+
+/******Ruby Sanctum (25)*****/
+$lang['ruby_sanctum_25'] = array('long' => 'Ruby Sanctum (25)', 'short' => 'RS (25)');
+$lang['halion_25'] = array('long' => 'Halion the Twilight Destroyer (25)', 'short' => 'Halion (25)');
+$lang['halion_25_hm'] = array('long' => 'Halion the Twilight Destroyer HM (25)', 'short' => 'Halion HM (25)');
 ?>
