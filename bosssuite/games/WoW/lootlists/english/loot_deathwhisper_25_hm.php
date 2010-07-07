@@ -3,7 +3,7 @@ $loot = array(
 	array( "id" => "50643", "qual" => "4", "name" => "Shoulders of Mercy Killing" ),
 	array( "id" => "50651", "qual" => "4", "name" => "The Lady's Brittle Bracers" ),
 	array( "id" => "50646", "qual" => "4", "name" => "Cultist's Bloodsoaked Spaulders" ),
-	array( "id" => "50649", "qual" => "4", "name" => "Deathwhisper Chestpiece" ),
+	array( "id" => "50649", "qual" => "4", "name" => "Deathwhisper Raiment" ),
 	array( "id" => "50645", "qual" => "4", "name" => "Leggings of Northern Lights" ),
 	array( "id" => "50652", "qual" => "4", "name" => "Necrophotic Greaves" ),
 	array( "id" => "50640", "qual" => "4", "name" => "Broken Ram Skull Helm" ),

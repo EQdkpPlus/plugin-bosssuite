@@ -11,7 +11,7 @@ $loot = array(
 	array( "id" => "51003", "qual" => "4", "name" => "Monstrositätenschlagring" ),
 	array( "id" => "51004", "qual" => "4", "name" => "Maulsperre" ),
 	array( "id" => "50998", "qual" => "4", "name" => "Schaft aus Gletschereis" ),
-	array( "id" => "50999", "qual" => "4", "name" => "Gluths fesselndes Messer" ),
+	array( "id" => "50999", "qual" => "4", "name" => "Gluths Apportiermesser" ),
 );
 
 ?>

@@ -11,7 +11,7 @@ $loot = array(
 	array( "id" => "51917", "qual" => "4", "name" => "Ghoul Commander's Cuirass" ),
 	array( "id" => "50343", "qual" => "4", "name" => "Whispering Fanged Skull" ),
 	array( "id" => "51922", "qual" => "4", "name" => "Scourgelord's Baton" ),
-	array( "id" => "51927", "qual" => "4", "name" => "Njordnar Bone Bow" ),
+	array( "id" => "51927", "qual" => "4", "name" => "Njorndar Bone Bow" ),
 );
 
 ?>

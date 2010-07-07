@@ -1,7 +1,7 @@
 <?php
 $loot = array(
 	array( "id" => "50653", "qual" => "4", "name" => "Schlächterumhang des Schattengewölbes" ),
-	array( "id" => "50661", "qual" => "4", "name" => "Corp'rethar Ceremonial Crown" ),
+	array( "id" => "50661", "qual" => "4", "name" => "Zeremonienkrone von Corp'rethar" ),
 	array( "id" => "50663", "qual" => "4", "name" => "Fäustlinge des Kanonenbootkapitäns" ),
 	array( "id" => "50656", "qual" => "4", "name" => "Ikfirus' Wundersack" ),
 	array( "id" => "50665", "qual" => "4", "name" => "Stiefel des unnatürlichen Wachstums" ),
@@ -14,8 +14,8 @@ $loot = array(
 	array( "id" => "50658", "qual" => "4", "name" => "Amulett der lautlosen Euloge" ),
 	array( "id" => "50664", "qual" => "4", "name" => "Ring des Schnellen Aufstiegs" ),
 	array( "id" => "50657", "qual" => "4", "name" => "Kreis des Skelettfürsten" ),
-	array( "id" => "50366", "qual" => "4", "name" => "Althor's Abacus" ),
-	array( "id" => "50349", "qual" => "4", "name" => "Corpse Tongue Coin" ),
+	array( "id" => "50366", "qual" => "4", "name" => "Althors Abakus" ),
+	array( "id" => "50349", "qual" => "4", "name" => "Fährmünze der Toten" ),
 	array( "id" => "50654", "qual" => "4", "name" => "Kriegsaxt des Geißelerben" ),
 );
 

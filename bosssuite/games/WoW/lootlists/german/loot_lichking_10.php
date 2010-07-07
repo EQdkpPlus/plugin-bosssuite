@@ -1,6 +1,6 @@
 <?php
 $loot = array(
-	array( "id" => "51801", "qual" => "4", "name" => "Pugius" ),
+	array( "id" => "51801", "qual" => "4", "name" => "Pugius, Faust des Trotzes" ),
 	array( "id" => "51803", "qual" => "4", "name" => "Tel'thas, Dolch des Blutkönigs" ),
 	array( "id" => "51800", "qual" => "4", "name" => "Sturmzorn, schwarze Klinge des Verräters" ),
 	array( "id" => "51795", "qual" => "4", "name" => "Troggbann, Axt des frostgeborenen Königs" ),

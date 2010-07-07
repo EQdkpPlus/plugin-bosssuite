@@ -1,7 +1,7 @@
 <?php
 $loot = array(
 	array( "id" => "50014", "qual" => "4", "name" => "Großumhang des bekehrten Champions" ),
-	array( "id" => "50333", "qual" => "4", "name" => "Toskk's maximierte Handgelenksschützer" ),
+	array( "id" => "50333", "qual" => "4", "name" => "Toskks maximierte Handgelenksschützer" ),
 	array( "id" => "50015", "qual" => "4", "name" => "Gürtel der Blutnova" ),
 	array( "id" => "50362", "qual" => "4", "name" => "Wille des Todesbringers" ),
 	array( "id" => "50412", "qual" => "4", "name" => "Blutgiftklinge" ),

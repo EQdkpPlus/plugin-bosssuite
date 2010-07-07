@@ -13,7 +13,7 @@ $loot = array(
 	array( "id" => "50614", "qual" => "4", "name" => "Loop of the Endless Labyrinth" ),
 	array( "id" => "50610", "qual" => "4", "name" => "Marrowgar's Frigid Eye" ),
 	array( "id" => "50608", "qual" => "4", "name" => "Frozen Bonespike" ),
-	array( "id" => "50709", "qual" => "4", "name" => "Bryntroll" ),
+	array( "id" => "50709", "qual" => "4", "name" => "Bryntroll, the Bone Arbiter" ),
 	array( "id" => "50616", "qual" => "4", "name" => "Bulwark of Smouldering Steel" ),
 	array( "id" => "50274", "qual" => "5", "name" => "Shadowfrost Shard" ),
 	array( "id" => "49908", "qual" => "4", "name" => "Primordial Saronite" ),

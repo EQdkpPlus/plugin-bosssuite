@@ -1,9 +1,9 @@
 <?php
 $loot = array(
-	array( "id" => "50668", "qual" => "4", "name" => "Greatcloak of the Turned Champion" ),
-	array( "id" => "50670", "qual" => "4", "name" => "Toskk's Maximized Wristguards" ),
-	array( "id" => "50671", "qual" => "4", "name" => "Belt of the Blood Nova" ),
-	array( "id" => "50363", "qual" => "4", "name" => "Deathbringer's Will" ),
+	array( "id" => "50668", "qual" => "4", "name" => "Großumhang des bekehrten Champions" ),
+	array( "id" => "50670", "qual" => "4", "name" => "Toskks maximierte Handgelenksschützer" ),
+	array( "id" => "50671", "qual" => "4", "name" => "Gürtel der Blutnova" ),
+	array( "id" => "50363", "qual" => "4", "name" => "Wille des Todesbringers" ),
 	array( "id" => "50672", "qual" => "4", "name" => "Blutgiftklinge" ),
 	array( "id" => "50274", "qual" => "5", "name" => "Schattenfrostsplitter" ),
 	array( "id" => "49908", "qual" => "4", "name" => "Urtümliches Saronit" ),

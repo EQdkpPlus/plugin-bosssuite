@@ -1,7 +1,7 @@
 <?php
 $loot = array(
 	array( "id" => "50426", "qual" => "4", "name" => "Himmelsfall, Kris der tausend Lügen" ),
-	array( "id" => "50427", "qual" => "4", "name" => "Bloodsurge" ),
+	array( "id" => "50427", "qual" => "4", "name" => "Blutschäumer, Kel'Thuzad's Klinge der Pein" ),
 	array( "id" => "50070", "qual" => "4", "name" => "Glorenzelg, die Hohe Klinge der Silbernen Hand" ),
 	array( "id" => "50012", "qual" => "4", "name" => "Chaosruf, Klinge der Könige von Lordaeron" ),
 	array( "id" => "50428", "qual" => "4", "name" => "Königliches Szepter von Terenas II" ),

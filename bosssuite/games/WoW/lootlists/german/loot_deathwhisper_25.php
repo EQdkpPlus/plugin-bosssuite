@@ -3,7 +3,7 @@ $loot = array(
 	array( "id" => "49991", "qual" => "4", "name" => "Schultern des Gnadentods" ),
 	array( "id" => "49994", "qual" => "4", "name" => "Brüchige Armschienen der Lady" ),
 	array( "id" => "49987", "qual" => "4", "name" => "Blutgetränkte Schulterpolster des Kultisten" ),
-	array( "id" => "49996", "qual" => "4", "name" => "Todeswispers Brustharnisch" ),
+	array( "id" => "49996", "qual" => "4", "name" => "Todeswispers Gewandung" ),
 	array( "id" => "49988", "qual" => "4", "name" => "Gamaschen des Nordlichts" ),
 	array( "id" => "49993", "qual" => "4", "name" => "Nekrophotische Schienbeinschützer" ),
 	array( "id" => "49986", "qual" => "4", "name" => "Zerbrochener Widderschädelhelm" ),

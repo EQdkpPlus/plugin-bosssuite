@@ -3,7 +3,7 @@ $loot = array(
 	array( "id" => "51382", "qual" => "4", "name" => "Cape des Betrübnisheilers" ),
 	array( "id" => "51379", "qual" => "4", "name" => "Blutseelengewandung" ),
 	array( "id" => "51380", "qual" => "4", "name" => "Bleiche Leichenstiefel" ),
-	array( "id" => "51023", "qual" => "4", "name" => "Taldarams weiche Schuhe" ),
+	array( "id" => "51023", "qual" => "4", "name" => "Taldarams weiche Pantoffeln" ),
 	array( "id" => "51325", "qual" => "4", "name" => "Gurt des Bluttrinkers" ),
 	array( "id" => "51383", "qual" => "4", "name" => "Schiftung der Blutprinzen" ),
 	array( "id" => "51025", "qual" => "4", "name" => "Beinschützer der Kriegsmaid" ),
