@@ -21,6 +21,50 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $bzone = array (
+	'blackwing_descent_10' => array(
+		'magmaw_10',
+		'omnotron_defense_system_10',
+		'maloriak_10',
+		'atramedes_10',
+		'chimaeron_10',
+		'nefarian_10',
+	),
+	'blackwing_descent_25' => array(
+		'magmaw_25',
+		'omnotron_defense_system_25',
+		'maloriak_25',
+		'atramedes_25',
+		'chimaeron_25',
+		'nefarian_25',
+	),
+	'bastion_of_twilight_10' => array(
+		'valiona_theralion_10',
+		'wyrmbreaker_10',
+		'twilight_council_10',
+		'chogall_10',
+		'sinestra_10',
+	),
+	'bastion_of_twilight_25' => array(
+		'valiona_theralion_25',
+		'wyrmbreaker_25',
+		'twilight_council_25',
+		'chogall_25',
+		'sinestra_25',
+	),
+	'throne_of_four_winds_10' => array(
+		'conclave_of_wind_10',
+		'alakir_10',
+	),
+	'throne_of_four_winds_25' => array(
+		'conclave_of_wind_25',
+		'alakir_25',
+	),
+	'baradin_hold_10' => array(
+		'argaloth_10',
+	),
+	'baradin_hold_25' => array(
+		'argaloth_25',
+	),
 	'ruby_sanctum_10' => array(
 	  'halion_10',
 	  'halion_10_hm',

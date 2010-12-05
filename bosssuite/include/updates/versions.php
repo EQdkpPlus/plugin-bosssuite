@@ -85,5 +85,9 @@ if ( !defined('EQDKP_INC') ){
                       'file'  => '470_to_471.php',
                       'old'   => '4.7.0',
         ),
+        '4.8.0'   => array(
+                      'file'  => '471_to_480.php',
+                      'old'   => '4.7.1',
+        ),
   );
 ?>

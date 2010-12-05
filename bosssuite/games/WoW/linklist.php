@@ -415,6 +415,43 @@ $idlist['default'] = array(
 	/******Ruby Sanctum (25)*****/
   'halion_25' => '39863',
   'halion_25_hm' => '39863',
+  
+  	/******Cataclysm*****/
+	'magmaw_10' => '41570',
+	'omitron_defense_system_10' => '42180',
+	'maloriak_10' => '41378',
+	'atramedes_10' => '41442',
+	'chimaeron_10' => '43296',
+	'nefarian_10' => '41376',
+
+	'magmaw_25' => '41570',
+	'omitron_defense_system_25' => '42180',
+	'maloriak_25' => '41378',
+	'atramedes_25' => '41442',
+	'chimaeron_25' => '43296',
+	'nefarian_25' => '41376',
+
+	'valiona_theralion_10' => '45992',
+	'wyrmbreaker_10' => '44600',
+	'twilight_council_10' => '43735',
+	'chogall_10' => '43324',
+	'sinestra_10' => '45213',
+
+	'valiona_theralion_25' => '45992',
+	'wyrmbreaker_25' => '44600',
+	'twilight_council_25' => '43735',
+	'chogall_25' => '43324',
+	'sinestra_25' => '45213',
+
+	'conclave_of_wind_10' => '45871',
+	'alakir_10' => '46753',
+
+	'conclave_of_wind_25' => '45871',
+	'alakir_25' => '46753',
+
+	'argaloth_10' => '47120',
+
+	'argaloth_25' => '47120',
 );
 
 $idlist['wolids'] = array(
@@ -790,5 +827,42 @@ $idlist['wowheadmv'] = array(
 	/******Ruby Sanctum (25)*****/
   'halion_25' => '31952&modelType=8',
   'halion_25_hm' => '31952&modelType=8',
+
+	/******Cataclysm*****/
+	'magmaw_10' => '32679&modelType=8',
+	'omitron_defense_system_10' => '32684&modelType=8',
+	'maloriak_10' => '33186&modelType=8',
+	'atramedes_10' => '34547&modelType=8',
+	'chimaeron_10' => '33308&modelType=8',
+	'nefarian_10' => '32716&modelType=8',
+
+	'magmaw_25' => '32679&modelType=8',
+	'omitron_defense_system_25' => '32684&modelType=8',
+	'maloriak_25' => '33186&modelType=8',
+	'atramedes_25' => '34547&modelType=8',
+	'chimaeron_25' => '33308&modelType=8',
+	'nefarian_25' => '32716&modelType=8',
+
+	'valiona_theralion_10' => '34812&modelType=8',
+	'wyrmbreaker_10' => '34816&modelType=8',
+	'twilight_council_10' => '34825&modelType=8',
+	'chogall_10' => '34576&modelType=8',
+	'sinestra_10' => '21401&modelType=8',
+
+	'valiona_theralion_25' => '34812&modelType=8',
+	'wyrmbreaker_25' => '34816&modelType=8',
+	'twilight_council_25' => '34825&modelType=8',
+	'chogall_25' => '34576&modelType=8',
+	'sinestra_25' => '21401&modelType=8',
+
+	'conclave_of_wind_10' => '35232&modelType=8',
+	'alakir_10' => '35248&modelType=8',
+
+	'conclave_of_wind_25' => '35232&modelType=8',
+	'alakir_25' => '35248&modelType=8',
+
+	'argaloth_10' => '35426&modelType=8',
+
+	'argaloth_25' => '35426&modelType=8',
 );
 ?>

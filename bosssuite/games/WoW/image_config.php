@@ -241,4 +241,49 @@ $image_map['halion_10'] = 'halion';
 $image_map['halion_10_hm'] = 'halion';
 $image_map['halion_25'] = 'halion';
 $image_map['halion_25_hm'] = 'halion';
+
+// Cataclysm 
+$image_map['blackwing_descent_10'] = 'blackwing_descent';
+$image_map['magmaw_10'] = 'magmaw';
+$image_map['omnotron_defense_system_10'] = 'omnontron_defense_system';
+$image_map['maloriak_10'] = 'maloriak';
+$image_map['atramedes_10'] = 'atramedes';
+$image_map['chimaeron_10'] = 'chimaeron';
+$image_map['nefarian_10'] = 'nefarian_cata';
+
+$image_map['bastion_of_twilight_10'] = 'bastion_of_twilight';
+$image_map['valiona_theralion_10'] = 'valiona_theralion';
+$image_map['wyrmbreaker_10'] = 'wyrmbreaker';
+$image_map['twilight_council_10'] = 'twilight_council';
+$image_map['chogall_10'] = 'chogall';
+$image_map['sinestra_10'] = 'sinestra';
+
+$image_map['throne_of_four_winds_10'] = 'throne_of_four_winds';
+$image_map['conclave_of_wind_10'] = 'conclave_of_wind';
+$image_map['alakir_10'] = 'alakir';
+
+$image_map['baradin_hold_10'] = 'baradin_hold';
+$image_map['argaloth_10'] = 'argaloth';
+
+$image_map['blackwing_descent_25'] = 'blackwing_descent';
+$image_map['magmaw_25'] = 'magmaw';
+$image_map['omnotron_defense_system_25'] = 'omnontron_defense_system';
+$image_map['maloriak_25'] = 'maloriak';
+$image_map['atramedes_25'] = 'atramedes';
+$image_map['chimaeron_25'] = 'chimaeron';
+$image_map['nefarian_25'] = 'nefarian_cata';
+
+$image_map['bastion_of_twilight_25'] = 'bastion_of_twilight';
+$image_map['valiona_theralion_25'] = 'valiona_theralion';
+$image_map['wyrmbreaker_25'] = 'wyrmbreaker';
+$image_map['twilight_council_25'] = 'twilight_council';
+$image_map['chogall_25'] = 'chogall';
+$image_map['sinestra_25'] = 'sinestra';
+
+$image_map['throne_of_four_winds_25'] = 'throne_of_four_winds';
+$image_map['conclave_of_wind_25'] = 'conclave_of_wind';
+$image_map['alakir_25'] = 'alakir';
+
+$image_map['baradin_hold_25'] = 'baradin_hold';
+$image_map['argaloth_25'] = 'argaloth';
 ?>

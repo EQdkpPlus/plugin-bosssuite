@@ -436,4 +436,56 @@ $lang['halion_10_hm'] = array('long' => 'Halion the Twilight Destroyer HM (10)',
 $lang['ruby_sanctum_25'] = array('long' => 'Ruby Sanctum (25)', 'short' => 'RS (25)');
 $lang['halion_25'] = array('long' => 'Halion the Twilight Destroyer (25)', 'short' => 'Halion (25)');
 $lang['halion_25_hm'] = array('long' => 'Halion the Twilight Destroyer HM (25)', 'short' => 'Halion HM (25)');
+
+/******Blackwing Descent (10)*****/
+$lang['blackwing_descent_10'] = array('long' => 'Blackwing Descent (10)', 'short' => 'BD (10)');
+$lang['magmaw_10'] = array('long' => 'Magmaw (10)', 'short' => 'Magmaw (10)');
+$lang['omnotron_defense_system_10'] = array('long' => 'Omnotron Defense System (10)', 'short' => 'Omnotron DS (10)');
+$lang['maloriak_10'] = array('long' => 'Maloriak (10)', 'short' => 'Maloriak (10)');
+$lang['atramedes_10'] = array('long' => 'Atramedes (10)', 'short' => 'Atramedes (10)');
+$lang['chimaeron_10'] = array('long' => 'Chimaeron (10)', 'short' => 'Chimaeron (10)');
+$lang['nefarian_10'] = array('long' => 'Nefarian (10)', 'short' => 'Nefarian (10)');
+
+/******Baradin Hold (10)*****/
+$lang['baradin_hold_10'] = array('long' => 'Baradin Hold (10)', 'short' => 'BH (10)');
+$lang['argaloth_10'] = array('long' => 'Argaloth (10)', 'short' => 'Argaloth (10)');
+
+/******Throne of the Four Winds (10)*****/
+$lang['throne_of_four_winds_10'] = array('long' => 'Throne of the Four Winds (10)', 'short' => 'ToFW (10)');
+$lang['conclave_of_wind_10'] = array('long' => 'Conclave of Wind (10)', 'short' => 'Conclave (10)');
+$lang['alakir_10'] = array('long' => 'Al\'Akir (10)', 'short' => 'Al\'Akir (10)');
+
+/******Bastion of twilight (10)*****/
+$lang['bastion_of_twilight_10'] = array('long' => 'The Bastion of Twilight (10)', 'short' => 'BoT (10)');
+$lang['valiona_theralion_10'] = array('long' => 'Valiona and Theralion (10)', 'short' => 'Valiona and Theralion (10)');
+$lang['wyrmbreaker_10'] = array('long' => 'Halfus Wyrmbreaker (10)', 'short' => 'Wyrmbreaker (10)');
+$lang['twilight_council_10'] = array('long' => 'Twilight Ascendant Council (10)', 'short' => 'Ascendant Council (10)');
+$lang['chogall_10'] = array('long' => 'Cho\'gall (10)', 'short' => 'Cho\'gall (10)');
+$lang['sinestra_10'] = array('long' => 'Sinestra (10)', 'short' => 'Sinestra (10)');
+
+/******Blackwing Descent (25)*****/
+$lang['blackwing_descent_25'] = array('long' => 'Blackwing Descent (25)', 'short' => 'BD (25)');
+$lang['magmaw_25'] = array('long' => 'Magmaw (25)', 'short' => 'Magmaw (25)');
+$lang['omnotron_defense_system_25'] = array('long' => 'Omnotron Defense System (25)', 'short' => 'Omnotron DS (25)');
+$lang['maloriak_25'] = array('long' => 'Maloriak (25)', 'short' => 'Maloriak (25)');
+$lang['atramedes_25'] = array('long' => 'Atramedes (25)', 'short' => 'Atramedes (25)');
+$lang['chimaeron_25'] = array('long' => 'Chimaeron (25)', 'short' => 'Chimaeron (25)');
+$lang['nefarian_25'] = array('long' => 'Nefarian (25)', 'short' => 'Nefarian (25)');
+
+/******Baradin Hold (25)*****/
+$lang['baradin_hold_25'] = array('long' => 'Baradin Hold (25)', 'short' => 'BH (25)');
+$lang['argaloth_25'] = array('long' => 'Argaloth (25)', 'short' => 'Argaloth (25)');
+
+/******Throne of the Four Winds (25)*****/
+$lang['throne_of_four_winds_25'] = array('long' => 'Throne of the Four Winds (25)', 'short' => 'ToFW (25)');
+$lang['conclave_of_wind_25'] = array('long' => 'Conclave of Wind (25)', 'short' => 'Conclave (25)');
+$lang['alakir_25'] = array('long' => 'Al\'Akir (25)', 'short' => 'Al\'Akir (25)');
+
+/******Bastion of twilight (25)*****/
+$lang['bastion_of_twilight_25'] = array('long' => 'The Bastion of Twilight (25)', 'short' => 'BoT (25)');
+$lang['valiona_theralion_25'] = array('long' => 'Valiona and Theralion (25)', 'short' => 'Valiona and Theralion (25)');
+$lang['wyrmbreaker_25'] = array('long' => 'Halfus Wyrmbreaker (25)', 'short' => 'Wyrmbreaker (25)');
+$lang['twilight_council_25'] = array('long' => 'Twilight Ascendant Council (25)', 'short' => 'Ascendant Council (25)');
+$lang['chogall_25'] = array('long' => 'Cho\'gall (25)', 'short' => 'Cho\'gall (25)');
+$lang['sinestra_25'] = array('long' => 'Sinestra (25)', 'short' => 'Sinestra (25)');
 ?>

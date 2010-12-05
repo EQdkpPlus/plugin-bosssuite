@@ -195,7 +195,7 @@ $lang['council'] = array('long' => 'Rat der Illidari', 'short' => 'Illidari Rat'
 $lang['illidan'] = array('long' => 'Illidan Sturmgrimm', 'short' => 'Illidan');
 
 /******Sunwell Plateau*****/
-$lang['sunwell'] = array('long' => 'Sunwell Plateau', 'short' => 'SW');
+$lang['sunwell'] = array('long' => 'Sonnenbrunnenplateau', 'short' => 'SP');
 $lang['kalecgos'] = array('long' => 'Kalecgos', 'short' => 'Kalecgos');
 $lang['brutallus'] = array('long' => 'Brutallus', 'short' => 'Brutallus');
 $lang['felmyst'] = array('long' => 'Teufelsruch', 'short' => 'Teufelsruch');
@@ -436,4 +436,56 @@ $lang['halion_10_hm'] = array('long' => 'Halion der Zwielichtzerstörer HM (10)',
 $lang['ruby_sanctum_25'] = array('long' => 'Rubinsanktum (25)', 'short' => 'RS (25)');
 $lang['halion_25'] = array('long' => 'Halion der Zwielichtzerstörer (25)', 'short' => 'Halion (25)');
 $lang['halion_25_hm'] = array('long' => 'Halion der Zwielichtzerstörer HM (25)', 'short' => 'Halion HM (25)');
+
+/******Blackwing Descent (10)*****/
+$lang['blackwing_descent_10'] = array('long' => 'Pechschwingenabstieg (10)', 'short' => 'PSA (10)');
+$lang['magmaw_10'] = array('long' => 'Magmaul (10)', 'short' => 'Magmaul (10)');
+$lang['omnotron_defense_system_10'] = array('long' => 'Omnotron-Verteidigungssystem (10)', 'short' => 'Omnotron-VS (10)');
+$lang['maloriak_10'] = array('long' => 'Maloriak (10)', 'short' => 'Maloriak (10)');
+$lang['atramedes_10'] = array('long' => 'Atramedes (10)', 'short' => 'Atramedes (10)');
+$lang['chimaeron_10'] = array('long' => 'Schimaeron (10)', 'short' => 'Schimaeron (10)');
+$lang['nefarian_10'] = array('long' => 'Nefarian (10)', 'short' => 'Nefarian (10)');
+
+/******Baradin Hold (10)*****/
+$lang['baradin_hold_10'] = array('long' => 'Baradinfestung (10)', 'short' => 'BF (10)');
+$lang['argaloth_10'] = array('long' => 'Argaloth (10)', 'short' => 'Argaloth (10)');
+
+/******Throne of the Four Winds (10)*****/
+$lang['throne_of_four_winds_10'] = array('long' => 'Thron der Vier Winde (10)', 'short' => 'TdVW (10)');
+$lang['conclave_of_wind_10'] = array('long' => 'Konklave des Windes (10)', 'short' => 'Konklave (10)');
+$lang['alakir_10'] = array('long' => 'Al\'Akir (10)', 'short' => 'Al\'Akir (10)');
+
+/******Bastion of twilight (10)*****/
+$lang['bastion_of_twilight_10'] = array('long' => 'Die Bastion des Zwielichts (10)', 'short' => 'BdZ (10)');
+$lang['valiona_theralion_10'] = array('long' => 'Valiona und Theralion (10)', 'short' => 'Valiona und Theralion (10)');
+$lang['wyrmbreaker_10'] = array('long' => 'Halfus Wyrmbrecher (10)', 'short' => 'Wyrmbrecher (10)');
+$lang['twilight_council_10'] = array('long' => 'Rat der Aszendenten (10)', 'short' => 'Rat der Aszendenten (10)');
+$lang['chogall_10'] = array('long' => 'Cho\'gall (10)', 'short' => 'Cho\'gall (10)');
+$lang['sinestra_10'] = array('long' => 'Sinestra (10)', 'short' => 'Sinestra (10)');
+
+/******Blackwing Descent (25)*****/
+$lang['blackwing_descent_25'] = array('long' => 'Pechschwingenabstieg (25)', 'short' => 'PSA (25)');
+$lang['magmaw_25'] = array('long' => 'Magmaul (25)', 'short' => 'Magmaul (25)');
+$lang['omnotron_defense_system_25'] = array('long' => 'Omnotron-Verteidigungssystem (25)', 'short' => 'Omnotron-VS (25)');
+$lang['maloriak_25'] = array('long' => 'Maloriak (25)', 'short' => 'Maloriak (25)');
+$lang['atramedes_25'] = array('long' => 'Atramedes (25)', 'short' => 'Atramedes (25)');
+$lang['chimaeron_25'] = array('long' => 'Schimaeron (25)', 'short' => 'Schimaeron (25)');
+$lang['nefarian_25'] = array('long' => 'Nefarian (25)', 'short' => 'Nefarian (25)');
+
+/******Baradin Hold (25)*****/
+$lang['baradin_hold_25'] = array('long' => 'Baradinfestung (25)', 'short' => 'BF (25)');
+$lang['argaloth_25'] = array('long' => 'Argaloth (25)', 'short' => 'Argaloth (25)');
+
+/******Throne of the Four Winds (25)*****/
+$lang['throne_of_four_winds_25'] = array('long' => 'Thron der Vier Winde (25)', 'short' => 'TdVW (25)');
+$lang['conclave_of_wind_25'] = array('long' => 'Konklave des Windes (25)', 'short' => 'Konklave (25)');
+$lang['alakir_25'] = array('long' => 'Al\'Akir (25)', 'short' => 'Al\'Akir (25)');
+
+/******Bastion of twilight (25)*****/
+$lang['bastion_of_twilight_25'] = array('long' => 'Die Bastion des Zwielichts (25)', 'short' => 'BdZ (25)');
+$lang['valiona_theralion_25'] = array('long' => 'Valiona und Theralion (25)', 'short' => 'Valiona und Theralion (25)');
+$lang['wyrmbreaker_25'] = array('long' => 'Halfus Wyrmbrecher (25)', 'short' => 'Wyrmbrecher (25)');
+$lang['twilight_council_25'] = array('long' => 'Rat der Aszendenten (25)', 'short' => 'Rat der Aszendenten (25)');
+$lang['chogall_25'] = array('long' => 'Cho\'gall (25)', 'short' => 'Cho\'gall (25)');
+$lang['sinestra_25'] = array('long' => 'Sinestra (25)', 'short' => 'Sinestra (25)');
 ?>
