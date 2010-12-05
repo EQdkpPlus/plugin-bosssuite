@@ -245,7 +245,7 @@ $image_map['halion_25_hm'] = 'halion';
 // Cataclysm 
 $image_map['blackwing_descent_10'] = 'blackwing_descent';
 $image_map['magmaw_10'] = 'magmaw';
-$image_map['omnotron_defense_system_10'] = 'omnontron_defense_system';
+$image_map['omnotron_defense_system_10'] = 'omnotron_defense_system';
 $image_map['maloriak_10'] = 'maloriak';
 $image_map['atramedes_10'] = 'atramedes';
 $image_map['chimaeron_10'] = 'chimaeron';
@@ -267,7 +267,7 @@ $image_map['argaloth_10'] = 'argaloth';
 
 $image_map['blackwing_descent_25'] = 'blackwing_descent';
 $image_map['magmaw_25'] = 'magmaw';
-$image_map['omnotron_defense_system_25'] = 'omnontron_defense_system';
+$image_map['omnotron_defense_system_25'] = 'omnotron_defense_system';
 $image_map['maloriak_25'] = 'maloriak';
 $image_map['atramedes_25'] = 'atramedes';
 $image_map['chimaeron_25'] = 'chimaeron';
