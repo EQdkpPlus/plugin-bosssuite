@@ -46,7 +46,7 @@ $wow_additions = array(
                             adjusted for the use within the BossSuite by Cattiebrie, Trionix and sz3',
     'Boss images' 	    => 'All characters and designs are ™ & © their respective owners. <br/>
                             captured for the BossSuite from the World of Warcraft game files by Cattiebrie, mikedoh, Trionix, sz3 ',
-    'Lootlists'		      => 'extracted from <a href="http://www.daviesh.net/atlasloot_enhanced/">Daviesh\' Atlasloot enhanced</a> by sz3',
+    'Lootlists'		      => 'extracted from <a href="http://www.atlasloot.net/news.php">Daviesh\' Atlasloot enhanced</a> by sz3',
 );
       
 foreach ($wow_additions as $key => $value){

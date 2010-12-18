@@ -168,12 +168,17 @@ if ((is_array($loottable)) && !(empty($loottable))){
     if (($data['kc'] > 0) && (count($data['items'])>0)){
         arsort($data['items']);	
     
-        foreach($data['items'] as $itemname => $values){
+        foreach($data['items'] as $item_name => $values){
             $itemcount = $values['dc'];
             $itemeid = $values['id'];			      
             $droprate = round($itemcount/$data['kc']*100,2);
             $rowid0 = $printed0%2+1;
-            $is_itemname = itemstats_decorate_name(stripslashes($itemname));
+            if($myblmgs->bl_get_current_game() == 'WoW'){
+              list($itemname, $ingame_item_id) = explode('__', $item_name);
+              $is_itemname = itemstats_decorate_name(stripslashes($itemname), $ingame_item_id);
+            }else{
+							$is_itemname = itemstats_decorate_name(stripslashes($item_name));
+						}            
             $bl_cloot .= "\t\t\t".'<tr class="row'.$rowid0.'"><td><a href="'.$eqdkp_root_path.'viewitem.php?s=&i='.$itemeid.'">'.$is_itemname.'</a></td><td>'.$itemcount.'</td><td>'.$droprate.'%</td></tr>'."\n";
             $printed0++;            
         }

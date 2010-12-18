@@ -847,13 +847,11 @@ $idlist['wowheadmv'] = array(
 	'wyrmbreaker_10' => '34816&modelType=8',
 	'twilight_council_10' => '34825&modelType=8',
 	'chogall_10' => '34576&modelType=8',
-	'sinestra_10' => '21401&modelType=8',
 
 	'valiona_theralion_25' => '34812&modelType=8',
 	'wyrmbreaker_25' => '34816&modelType=8',
 	'twilight_council_25' => '34825&modelType=8',
 	'chogall_25' => '34576&modelType=8',
-	'sinestra_25' => '21401&modelType=8',
 
 	'conclave_of_wind_10' => '35232&modelType=8',
 	'alakir_10' => '35248&modelType=8',
@@ -864,5 +862,38 @@ $idlist['wowheadmv'] = array(
 	'argaloth_10' => '35426&modelType=8',
 
 	'argaloth_25' => '35426&modelType=8',
+	
+		/******Cataclysm Heroic*****/
+	'magmaw_10_hc' => '32679&modelType=8',
+	'omitron_defense_system_10_hc' => '32684&modelType=8',
+	'maloriak_10_hc' => '33186&modelType=8',
+	'atramedes_10_hc' => '34547&modelType=8',
+	'chimaeron_10_hc' => '33308&modelType=8',
+	'nefarian_10_hc' => '32716&modelType=8',
+
+	'magmaw_25_hc' => '32679&modelType=8',
+	'omitron_defense_system_25_hc' => '32684&modelType=8',
+	'maloriak_25_hc' => '33186&modelType=8',
+	'atramedes_25_hc' => '34547&modelType=8',
+	'chimaeron_25_hc' => '33308&modelType=8',
+	'nefarian_25_hc' => '32716&modelType=8',
+
+	'valiona_theralion_10_hc' => '34812&modelType=8',
+	'wyrmbreaker_10_hc' => '34816&modelType=8',
+	'twilight_council_10_hc' => '34825&modelType=8',
+	'chogall_10_hc' => '34576&modelType=8',
+	'sinestra_10_hc' => '21401&modelType=8',
+
+	'valiona_theralion_25_hc' => '34812&modelType=8',
+	'wyrmbreaker_25_hc' => '34816&modelType=8',
+	'twilight_council_25_hc' => '34825&modelType=8',
+	'chogall_25_hc' => '34576&modelType=8',
+	'sinestra_25_hc' => '21401&modelType=8',
+
+	'conclave_of_wind_10_hc' => '35232&modelType=8',
+	'alakir_10_hc' => '35248&modelType=8',
+
+	'conclave_of_wind_25_hc' => '35232&modelType=8',
+	'alakir_25_hc' => '35248&modelType=8',
 );
 ?>

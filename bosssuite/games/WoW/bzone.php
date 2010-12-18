@@ -21,6 +21,44 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $bzone = array (
+	'blackwing_descent_10_hc' => array(
+		'magmaw_10_hc',
+		'omnotron_defense_system_10_hc',
+		'maloriak_10_hc',
+		'atramedes_10_hc',
+		'chimaeron_10_hc',
+		'nefarian_10_hc',
+	),
+	'blackwing_descent_25_hc' => array(
+		'magmaw_25_hc',
+		'omnotron_defense_system_25_hc',
+		'maloriak_25_hc',
+		'atramedes_25_hc',
+		'chimaeron_25_hc',
+		'nefarian_25_hc',
+	),
+	'bastion_of_twilight_10_hc' => array(
+		'valiona_theralion_10_hc',
+		'wyrmbreaker_10_hc',
+		'twilight_council_10_hc',
+		'chogall_10_hc',
+		'sinestra_10_hc',
+	),
+	'bastion_of_twilight_25_hc' => array(
+		'valiona_theralion_25_hc',
+		'wyrmbreaker_25_hc',
+		'twilight_council_25_hc',
+		'chogall_25_hc',
+		'sinestra_25_hc',
+	),
+	'throne_of_four_winds_10_hc' => array(
+		'conclave_of_wind_10_hc',
+		'alakir_10_hc',
+	),
+	'throne_of_four_winds_25_hc' => array(
+		'conclave_of_wind_25_hc',
+		'alakir_25_hc',
+	),
 	'blackwing_descent_10' => array(
 		'magmaw_10',
 		'omnotron_defense_system_10',
@@ -42,14 +80,12 @@ $bzone = array (
 		'wyrmbreaker_10',
 		'twilight_council_10',
 		'chogall_10',
-		'sinestra_10',
 	),
 	'bastion_of_twilight_25' => array(
 		'valiona_theralion_25',
 		'wyrmbreaker_25',
 		'twilight_council_25',
 		'chogall_25',
-		'sinestra_25',
 	),
 	'throne_of_four_winds_10' => array(
 		'conclave_of_wind_10',
