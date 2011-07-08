@@ -895,5 +895,41 @@ $idlist['wowheadmv'] = array(
 
 	'conclave_of_wind_25_hc' => '35232&modelType=8',
 	'alakir_25_hc' => '35248&modelType=8',
+
+	'shannox_10' => '38448&modelType=8',
+	'bethtilac_10' => '38227&modelType=8',
+	'lord_rhyolith_10' => '38594&modelType=8',
+	'alysrazar_10' => '38446&modelType=8',
+	'baloroc_10' => '38621&modelType=8',
+	'majordomo_staghelm_10' => '37953&modelType=32',
+	'ragnaros_fl_10' => '37875&modelType=8',
+	
+	'shannox_25' => '38448&modelType=8',
+	'bethtilac_25' => '38227&modelType=8',
+	'lord_rhyolith_25' => '38594&modelType=8',
+	'alysrazar_25' => '38446&modelType=8',
+	'baloroc_25' => '38621&modelType=8',
+	'majordomo_staghelm_25' => '37953&modelType=32',
+	'ragnaros_fl_25' => '37875&modelType=8',
+
+	'shannox_10_hc' => '38448&modelType=8',
+	'bethtilac_10_hc' => '38227&modelType=8',
+	'lord_rhyolith_10_hc' => '38594&modelType=8',
+	'alysrazar_10_hc' => '38446&modelType=8',
+	'baloroc_10_hc' => '38621&modelType=8',
+	'majordomo_staghelm_10_hc' => '37953&modelType=32',
+	'ragnaros_fl_10_hc' => '37875&modelType=8',
+	
+	'shannox_25_hc' => '38448&modelType=8',
+	'bethtilac_25_hc' => '38227&modelType=8',
+	'lord_rhyolith_25_hc' => '38594&modelType=8',
+	'alysrazar_25_hc' => '38446&modelType=8',
+	'baloroc_25_hc' => '38621&modelType=8',
+	'majordomo_staghelm_25_hc' => '37953&modelType=32',
+	'ragnaros_fl_25_hc' => '37875&modelType=8',
+	
+	
+
+
 );
 ?>

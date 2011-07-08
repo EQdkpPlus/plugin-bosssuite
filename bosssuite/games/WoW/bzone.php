@@ -21,6 +21,43 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $bzone = array (
+
+	'firelands_10_hc' => array(
+		'shannox_10_hc',
+		'bethtilac_10_hc',
+		'lord_rhyolith_10_hc',
+		'alysrazar_10_hc',
+		'baloroc_10_hc',
+		'majordomo_staghelm_10_hc',
+		'ragnaros_fl_10_hc',
+	),
+	'firelands_25_hc' => array(
+		'shannox_25_hc',
+		'bethtilac_25_hc',
+		'lord_rhyolith_25_hc',
+		'alysrazar_25_hc',
+		'baloroc_25_hc',
+		'majordomo_staghelm_25_hc',
+		'ragnaros_fl_25_hc',
+	),
+	'firelands_10' => array(
+		'shannox_10',
+		'bethtilac_10',
+		'lord_rhyolith_10',
+		'alysrazar_10',
+		'baloroc_10',
+		'majordomo_staghelm_10',
+		'ragnaros_fl_10',
+	),
+	'firelands_25' => array(
+		'shannox_25',
+		'bethtilac_25',
+		'lord_rhyolith_25',
+		'alysrazar_25',
+		'baloroc_25',
+		'majordomo_staghelm_25',
+		'ragnaros_fl_25',
+	),
 	'blackwing_descent_10_hc' => array(
 		'magmaw_10_hc',
 		'omnotron_defense_system_10_hc',

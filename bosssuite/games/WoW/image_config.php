@@ -323,4 +323,44 @@ $image_map['sinestra_25_hc'] = 'sinestra';
 $image_map['throne_of_four_winds_25_hc'] = 'throne_of_four_winds';
 $image_map['conclave_of_wind_25_hc'] = 'conclave_of_wind';
 $image_map['alakir_25_hc'] = 'alakir';
+
+#firelands
+
+$image_map['firelands_10'] = 'firelands';
+$image_map['shannox_10'] = 'shannox';
+$image_map['bethtilac_10'] = 'bethtilac';
+$image_map['lord_rhyolith_10'] = 'lord_rhyolith';
+$image_map['alysrazar_10'] = 'alysrazar';
+$image_map['baloroc_10'] = 'baloroc';
+$image_map['majordomo_staghelm_10'] = 'majordomo_staghelm';
+$image_map['ragnaros_fl_10'] = 'ragnaros_fl';
+
+$image_map['firelands_25'] = 'firelands';
+$image_map['shannox_25'] = 'shannox';
+$image_map['bethtilac_25'] = 'bethtilac';
+$image_map['lord_rhyolith_25'] = 'lord_rhyolith';
+$image_map['alysrazar_25'] = 'alysrazar';
+$image_map['baloroc_25'] = 'baloroc';
+$image_map['majordomo_staghelm_25'] = 'majordomo_staghelm';
+$image_map['ragnaros_fl_25'] = 'ragnaros_fl';
+
+$image_map['firelands_10_hc'] = 'firelands';
+$image_map['shannox_10_hc'] = 'shannox';
+$image_map['bethtilac_10_hc'] = 'bethtilac';
+$image_map['lord_rhyolith_10_hc'] = 'lord_rhyolith';
+$image_map['alysrazar_10_hc'] = 'alysrazar';
+$image_map['baloroc_10_hc'] = 'baloroc';
+$image_map['majordomo_staghelm_10_hc'] = 'majordomo_staghelm';
+$image_map['ragnaros_fl_10_hc'] = 'ragnaros_fl';
+
+$image_map['firelands_25_hc'] = 'firelands';
+$image_map['shannox_25_hc'] = 'shannox';
+$image_map['bethtilac_25_hc'] = 'bethtilac';
+$image_map['lord_rhyolith_25_hc'] = 'lord_rhyolith';
+$image_map['alysrazar_25_hc'] = 'alysrazar';
+$image_map['baloroc_25_hc'] = 'baloroc';
+$image_map['majordomo_staghelm_25_hc'] = 'majordomo_staghelm';
+$image_map['ragnaros_fl_25_hc'] = 'ragnaros_fl';
+
+
 ?>

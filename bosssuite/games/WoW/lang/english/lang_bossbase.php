@@ -531,4 +531,45 @@ $lang['wyrmbreaker_25_hc'] = array('long' => 'Halfus Wyrmbreaker HM (25)', 'shor
 $lang['twilight_council_25_hc'] = array('long' => 'Twilight Ascendant Council HM (25)', 'short' => 'Ascendant Council HM (25)');
 $lang['chogall_25_hc'] = array('long' => 'Cho\'gall HM (25)', 'short' => 'Cho\'gall HM (25)');
 $lang['sinestra_25_hc'] = array('long' => 'Sinestra HM (25)', 'short' => 'Sinestra HM (25)');
+
+/******Firelands (10)*****/
+$lang['firelands_10'] = array('long' => 'Firelands (10)', 'short' => 'FL (10)');
+$lang['shannox_10'] = array('long' => 'Shannox (10)', 'short' => 'Shannox (10)');
+$lang['bethtilac_10'] = array('long' => 'Beth\'tilac (10)', 'short' => 'Beth\'tilac (10)');
+$lang['lord_rhyolith_10'] = array('long' => 'Lord Rhyolith (10)', 'short' => 'Lord Rhyolith (10)');
+$lang['alysrazar_10'] = array('long' => 'Alysrazar (10)', 'short' => 'Alysrazar (10)');
+$lang['baloroc_10'] = array('long' => 'Baleroc, the Gatekeeper (10)', 'short' => 'Baleroc (10)');
+$lang['majordomo_staghelm_10'] = array('long' => 'Majordomo Staghelm (10)', 'short' => 'Majordomo (10)');
+$lang['ragnaros_fl_10'] = array('long' => 'Ragnaros (10)', 'short' => 'Ragnaros (10)');
+
+/******Firelands (25)*****/
+$lang['firelands_25'] = array('long' => 'Firelands (25)', 'short' => 'FL (25)');
+$lang['shannox_25'] = array('long' => 'Shannox (25)', 'short' => 'Shannox (25)');
+$lang['bethtilac_25'] = array('long' => 'Beth\'tilac (25)', 'short' => 'Beth\'tilac (25)');
+$lang['lord_rhyolith_25'] = array('long' => 'Lord Rhyolith (25)', 'short' => 'Lord Rhyolith (25)');
+$lang['alysrazar_25'] = array('long' => 'Alysrazar (25)', 'short' => 'Alysrazar (25)');
+$lang['baloroc_25'] = array('long' => 'Baleroc, the Gatekeeper (25)', 'short' => 'Baleroc (25)');
+$lang['majordomo_staghelm_25'] = array('long' => 'Majordomo Staghelm (25)', 'short' => 'Majordomo (25)');
+$lang['ragnaros_fl_25'] = array('long' => 'Ragnaros (25)', 'short' => 'Ragnaros (25)');
+
+/******Firelands HM (10)*****/
+$lang['firelands_10_hc'] = array('long' => 'Firelands HM (10)', 'short' => 'FL HM (10)');
+$lang['shannox_10_hc'] = array('long' => 'Shannox HM (10)', 'short' => 'Shannox HM (10)');
+$lang['bethtilac_10_hc'] = array('long' => 'Beth\'tilac HM (10)', 'short' => 'Beth\'tilac HM (10)');
+$lang['lord_rhyolith_10_hc'] = array('long' => 'Lord Rhyolith HM (10)', 'short' => 'Lord Rhyolith HM (10)');
+$lang['alysrazar_10_hc'] = array('long' => 'Alysrazar HM (10)', 'short' => 'Alysrazar HM (10)');
+$lang['baloroc_10_hc'] = array('long' => 'Baleroc, the Gatekeeper HM (10)', 'short' => 'Baleroc HM (10)');
+$lang['majordomo_staghelm_10_hc'] = array('long' => 'Majordomo Staghelm HM (10)', 'short' => 'Majordomo HM (10)');
+$lang['ragnaros_fl_10_hc'] = array('long' => 'Ragnaros HM (10)', 'short' => 'Ragnaros HM (10)');
+
+/******Firelands HM (25)*****/
+$lang['firelands_25_hc'] = array('long' => 'Firelands HM (25)', 'short' => 'FL HM (25)');
+$lang['shannox_25_hc'] = array('long' => 'Shannox HM (25)', 'short' => 'Shannox HM (25)');
+$lang['bethtilac_25_hc'] = array('long' => 'Beth\'tilac HM (25)', 'short' => 'Beth\'tilac HM (25)');
+$lang['lord_rhyolith_25_hc'] = array('long' => 'Lord Rhyolith HM (25)', 'short' => 'Lord Rhyolith HM (25)');
+$lang['alysrazar_25_hc'] = array('long' => 'Alysrazar HM (25)', 'short' => 'Alysrazar HM (25)');
+$lang['baloroc_25_hc'] = array('long' => 'Baleroc, the Gatekeeper HM (25)', 'short' => 'Baleroc HM (25)');
+$lang['majordomo_staghelm_25_hc'] = array('long' => 'Majordomo Staghelm HM (25)', 'short' => 'Majordomo HM (25)');
+$lang['ragnaros_fl_25_hc'] = array('long' => 'Ragnaros HM (25)', 'short' => 'Ragnaros HM (25)');
+
 ?>
