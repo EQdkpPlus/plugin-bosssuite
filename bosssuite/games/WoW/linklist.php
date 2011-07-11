@@ -862,6 +862,9 @@ $idlist['wowheadmv'] = array(
 	'argaloth_10' => '35426&modelType=8',
 
 	'argaloth_25' => '35426&modelType=8',
+
+	'occuthar_10' => '37876&modelType=8',
+	'occuthar_25' => '37876&modelType=8',
 	
 		/******Cataclysm Heroic*****/
 	'magmaw_10_hc' => '32679&modelType=8',

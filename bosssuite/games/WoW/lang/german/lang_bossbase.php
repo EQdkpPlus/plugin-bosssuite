@@ -449,6 +449,8 @@ $lang['nefarian_10'] = array('long' => 'Nefarian (10)', 'short' => 'Nefarian (10
 /******Baradin Hold (10)*****/
 $lang['baradin_hold_10'] = array('long' => 'Baradinfestung (10)', 'short' => 'BF (10)');
 $lang['argaloth_10'] = array('long' => 'Argaloth (10)', 'short' => 'Argaloth (10)');
+$lang['occuthar_10'] = array('long' => 'Occu\'thar (10)', 'short' => 'Occu\'thar (10)');
+
 
 /******Throne of the Four Winds (10)*****/
 $lang['throne_of_four_winds_10'] = array('long' => 'Thron der Vier Winde (10)', 'short' => 'TdVW (10)');
@@ -474,6 +476,7 @@ $lang['nefarian_25'] = array('long' => 'Nefarian (25)', 'short' => 'Nefarian (25
 /******Baradin Hold (25)*****/
 $lang['baradin_hold_25'] = array('long' => 'Baradinfestung (25)', 'short' => 'BF (25)');
 $lang['argaloth_25'] = array('long' => 'Argaloth (25)', 'short' => 'Argaloth (25)');
+$lang['occuthar_25'] = array('long' => 'Occu\'thar (25)', 'short' => 'Occu\'thar (25)');
 
 /******Throne of the Four Winds (25)*****/
 $lang['throne_of_four_winds_25'] = array('long' => 'Thron der Vier Winde (25)', 'short' => 'TdVW (25)');

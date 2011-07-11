@@ -134,9 +134,11 @@ $bzone = array (
 	),
 	'baradin_hold_10' => array(
 		'argaloth_10',
+		'occuthar_10',
 	),
 	'baradin_hold_25' => array(
 		'argaloth_25',
+		'occuthar_25',
 	),
 	'ruby_sanctum_10' => array(
 	  'halion_10',

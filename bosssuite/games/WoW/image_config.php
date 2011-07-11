@@ -35,6 +35,9 @@ $image_map['auriaya_10'] = 'auriaya';
 $image_map['mimiron_10'] = 'mimiron';
 $image_map['yoggsaron_10'] = 'yoggsaron';
 $image_map['algalon_10'] = 'algalon';
+$image_map['occuthar_10'] = 'occuthar';
+$image_map['occuthar_25'] = 'occuthar';
+
 $image_map['hodir_10_hm'] = 'hodir';
 $image_map['thorim_10_hm'] = 'thorim';
 $image_map['iron_council_10_hm'] = 'iron_council';
