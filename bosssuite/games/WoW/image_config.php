@@ -327,8 +327,7 @@ $image_map['throne_of_four_winds_25_hc'] = 'throne_of_four_winds';
 $image_map['conclave_of_wind_25_hc'] = 'conclave_of_wind';
 $image_map['alakir_25_hc'] = 'alakir';
 
-#firelands
-
+//Firelands
 $image_map['firelands_10'] = 'firelands';
 $image_map['shannox_10'] = 'shannox';
 $image_map['bethtilac_10'] = 'bethtilac';
@@ -365,5 +364,44 @@ $image_map['baloroc_25_hc'] = 'baloroc';
 $image_map['majordomo_staghelm_25_hc'] = 'majordomo_staghelm';
 $image_map['ragnaros_fl_25_hc'] = 'ragnaros_fl';
 
+//Dragon Soul
+$image_map['dragon_soul_10'] = 'dragon_soul';
+$image_map['morchok_10'] = 'morchok';
+$image_map['zonozz_10'] = 'zonozz';
+$image_map['yorsahj_10'] = 'yorsahj';
+$image_map['hagara_10'] = 'hagara';
+$image_map['ultraxion_10'] = 'ultraxion';
+$image_map['blackhorn_10'] = 'blackhorn';
+$image_map['spine_of_deathwing_10'] = 'spine_of_deathwing';
+$image_map['madness_of_deathwing_10'] = 'madness_of_deathwing';
 
+$image_map['dragon_soul_10_hc'] = 'dragon_soul';
+$image_map['morchok_10_hc'] = 'morchok';
+$image_map['zonozz_10_hc'] = 'zonozz';
+$image_map['yorsahj_10_hc'] = 'yorsahj';
+$image_map['hagara_10_hc'] = 'hagara';
+$image_map['ultraxion_10_hc'] = 'ultraxion';
+$image_map['blackhorn_10_hc'] = 'blackhorn';
+$image_map['spine_of_deathwing_10_hc'] = 'spine_of_deathwing';
+$image_map['madness_of_deathwing_10_hc'] = 'madness_of_deathwing';
+
+$image_map['dragon_soul_25'] = 'dragon_soul';
+$image_map['morchok_25'] = 'morchok';
+$image_map['zonozz_25'] = 'zonozz';
+$image_map['yorsahj_25'] = 'yorsahj';
+$image_map['hagara_25'] = 'hagara';
+$image_map['ultraxion_25'] = 'ultraxion';
+$image_map['blackhorn_25'] = 'blackhorn';
+$image_map['spine_of_deathwing_25'] = 'spine_of_deathwing';
+$image_map['madness_of_deathwing_25'] = 'madness_of_deathwing';
+
+$image_map['dragon_soul_25_hc'] = 'dragon_soul';
+$image_map['morchok_25_hc'] = 'morchok';
+$image_map['zonozz_25_hc'] = 'zonozz';
+$image_map['yorsahj_25_hc'] = 'yorsahj';
+$image_map['hagara_25_hc'] = 'hagara';
+$image_map['ultraxion_25_hc'] = 'ultraxion';
+$image_map['blackhorn_25_hc'] = 'blackhorn';
+$image_map['spine_of_deathwing_25_hc'] = 'spine_of_deathwing';
+$image_map['madness_of_deathwing_25_hc'] = 'madness_of_deathwing';
 ?>

@@ -450,8 +450,80 @@ $idlist['default'] = array(
 	'alakir_25' => '46753',
 
 	'argaloth_10' => '47120',
-
+	'occuthar_10' => '52363',
+	'alizabal_10' => '55869',
+	
 	'argaloth_25' => '47120',
+	'occuthar_25' => '52363',
+	'alizabal_25' => '55869',
+	
+	'shannox_10' => '53691',
+	'bethtilac_10' => '52498',
+	'lord_rhyolith_10' => '52558',
+	'alysrazar_10' => '52530',
+	'baloroc_10' => '53494',
+	'majordomo_staghelm_10' => '52571',
+	'ragnaros_fl_10' => '52409',
+
+	'shannox_10_hc' => '53691',
+	'bethtilac_10_hc' => '52498',
+	'lord_rhyolith_10_hc' => '52558',
+	'alysrazar_10_hc' => '52530',
+	'baloroc_10_hc' => '53494',
+	'majordomo_staghelm_10_hc' => '52571',
+	'ragnaros_fl_10_hc' => '52409',
+	
+	'shannox_25' => '53691',
+	'bethtilac_25' => '52498',
+	'lord_rhyolith_25' => '52558',
+	'alysrazar_25' => '52530',
+	'baloroc_25' => '53494',
+	'majordomo_staghelm_25' => '52571',
+	'ragnaros_fl_25' => '52409',
+	
+	'shannox_25_hc' => '53691',
+	'bethtilac_25_hc' => '52498',
+	'lord_rhyolith_25_hc' => '52558',
+	'alysrazar_25_hc' => '52530',
+	'baloroc_25_hc' => '53494',
+	'majordomo_staghelm_25_hc' => '52571',
+	'ragnaros_fl_25_hc' => '52409',
+	
+	'morchok_10' => '55265',
+	'zonozz_10' => '55308',
+	'yorsahj_10' => '55312',
+	'hagara_10' => '55689',
+	'ultraxion_10' => '55294',
+	'blackhorn_10' => '56427',
+	'spine_of_deathwing_10' => '',
+	'madness_of_deathwing_10' => '',
+	
+	'morchok_10_hc' => '55265',
+	'zonozz_10_hc' => '55308',
+	'yorsahj_10_hc' => '55312',
+	'hagara_10_hc' => '55689',
+	'ultraxion_10_hc' => '55294',
+	'blackhorn_10_hc' => '56427',
+	'spine_of_deathwing_10_hc' => '',
+	'madness_of_deathwing_10_hc' => '',
+
+	'morchok_25' => '55265',
+	'zonozz_25' => '55308',
+	'yorsahj_25' => '55312',
+	'hagara_25' => '55689',
+	'ultraxion_25' => '55294',
+	'blackhorn_25' => '56427',
+	'spine_of_deathwing_25' => '',
+	'madness_of_deathwing_25' => '',
+	
+	'morchok_25_hc' => '55265',
+	'zonozz_25_hc' => '55308',
+	'yorsahj_25_hc' => '55312',
+	'hagara_25_hc' => '55689',
+	'ultraxion_25_hc' => '55294',
+	'blackhorn_25_hc' => '56427',
+	'spine_of_deathwing_25_hc' => '',
+	'madness_of_deathwing_25_hc' => '',
 );
 
 $idlist['wolids'] = array(
@@ -565,8 +637,8 @@ $idlist['wowheadmv'] = array(
   'netherspite' => '15363&modelType=8',
   'malchezaar' => '19274&modelType=8',
   'nightbane' => '18062&modelType=8',
-  'chess' => '99999',
-  'opera' => '99999',
+  'chess' => '',
+  'opera' => '',
   
   /******Zul'Aman*****/
   'nalorakk' => '21631&modelType=8',
@@ -860,10 +932,9 @@ $idlist['wowheadmv'] = array(
 	'alakir_25' => '35248&modelType=8',
 
 	'argaloth_10' => '35426&modelType=8',
-
-	'argaloth_25' => '35426&modelType=8',
-
 	'occuthar_10' => '37876&modelType=8',
+	
+	'argaloth_25' => '35426&modelType=8',
 	'occuthar_25' => '37876&modelType=8',
 	
 		/******Cataclysm Heroic*****/
@@ -931,8 +1002,40 @@ $idlist['wowheadmv'] = array(
 	'majordomo_staghelm_25_hc' => '37953&modelType=32',
 	'ragnaros_fl_25_hc' => '37875&modelType=8',
 	
+	'morchok_10' => '39094&modelType=8',
+	'zonozz_10' => '39138&modelType=8',
+	'yorsahj_10' => '39101&modelType=8',
+	'hagara_10' => '39318&modelType=32',
+	'ultraxion_10' => '39099&modelType=8',
+	'blackhorn_10' => '39399&modelType=32',
+	'spine_of_deathwing_10' => '',
+	'madness_of_deathwing_10' => '',
 	
-
-
+	'morchok_10_hc' => '39094&modelType=8',
+	'zonozz_10_hc' => '39138&modelType=8',
+	'yorsahj_10_hc' => '39101&modelType=8',
+	'hagara_10_hc' => '39318&modelType=32',
+	'ultraxion_10_hc' => '39099&modelType=8',
+	'blackhorn_10_hc' => '39399&modelType=32',
+	'spine_of_deathwing_10_hc' => '',
+	'madness_of_deathwing_10_hc' => '',
+	
+	'morchok_25' => '39094&modelType=8',
+	'zonozz_25' => '39138&modelType=8',
+	'yorsahj_25' => '39101&modelType=8',
+	'hagara_25' => '39318&modelType=32',
+	'ultraxion_25' => '39099&modelType=8',
+	'blackhorn_25' => '39399&modelType=32',
+	'spine_of_deathwing_25' => '',
+	'madness_of_deathwing_25' => '',
+	
+	'morchok_25_hc' => '39094&modelType=8',
+	'zonozz_25_hc' => '39138&modelType=8',
+	'yorsahj_25_hc' => '39101&modelType=8',
+	'hagara_25_hc' => '39318&modelType=32',
+	'ultraxion_25_hc' => '39099&modelType=8',
+	'blackhorn_25_hc' => '39399&modelType=32',
+	'spine_of_deathwing_25_hc' => '',
+	'madness_of_deathwing_25_hc' => '',
 );
 ?>

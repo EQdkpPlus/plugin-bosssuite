@@ -21,7 +21,46 @@ if ( !defined('EQDKP_INC') ){
 } 
 
 $bzone = array (
-
+	'dragon_soul_10_hc' => array(
+		'morchok_10_hc',
+		'zonozz_10_hc',
+		'yorsahj_10_hc',
+		'hagara_10_hc',
+		'ultraxion_10_hc',
+		'blackhorn_10_hc',
+		'spine_of_deathwing_10_hc',
+		'madness_of_deathwing_10_hc'
+	),
+	'dragon_soul_25_hc' => array(
+		'morchok_25_hc',
+		'zonozz_25_hc',
+		'yorsahj_25_hc',
+		'hagara_25_hc',
+		'ultraxion_25_hc',
+		'blackhorn_25_hc',
+		'spine_of_deathwing_25_hc',
+		'madness_of_deathwing_25_hc'
+	),
+	'dragon_soul_10' => array(
+		'morchok_10',
+		'zonozz_10',
+		'yorsahj_10',
+		'hagara_10',
+		'ultraxion_10',
+		'blackhorn_10',
+		'spine_of_deathwing_10',
+		'madness_of_deathwing_10'
+	),
+	'dragon_soul_25' => array(
+		'morchok_25',
+		'zonozz_25',
+		'yorsahj_25',
+		'hagara_25',
+		'ultraxion_25',
+		'blackhorn_25',
+		'spine_of_deathwing_25',
+		'madness_of_deathwing_25'
+	),
 	'firelands_10_hc' => array(
 		'shannox_10_hc',
 		'bethtilac_10_hc',
@@ -135,10 +174,12 @@ $bzone = array (
 	'baradin_hold_10' => array(
 		'argaloth_10',
 		'occuthar_10',
+		'alizabal_10',
 	),
 	'baradin_hold_25' => array(
 		'argaloth_25',
 		'occuthar_25',
+		'alizabal_25',
 	),
 	'ruby_sanctum_10' => array(
 	  'halion_10',

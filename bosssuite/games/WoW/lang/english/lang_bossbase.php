@@ -450,6 +450,7 @@ $lang['nefarian_10'] = array('long' => 'Nefarian (10)', 'short' => 'Nefarian (10
 $lang['baradin_hold_10'] = array('long' => 'Baradin Hold (10)', 'short' => 'BH (10)');
 $lang['argaloth_10'] = array('long' => 'Argaloth (10)', 'short' => 'Argaloth (10)');
 $lang['occuthar_10'] = array('long' => 'Occu\'thar (10)', 'short' => 'Occu\'thar (10)');
+$lang['alizabal_10'] = array('long' => 'Alizabal, Mistress of Hate (10)', 'short' => 'Alizabal (10)');
 
 /******Throne of the Four Winds (10)*****/
 $lang['throne_of_four_winds_10'] = array('long' => 'Throne of the Four Winds (10)', 'short' => 'ToFW (10)');
@@ -476,6 +477,7 @@ $lang['nefarian_25'] = array('long' => 'Nefarian (25)', 'short' => 'Nefarian (25
 $lang['baradin_hold_25'] = array('long' => 'Baradin Hold (25)', 'short' => 'BH (25)');
 $lang['argaloth_25'] = array('long' => 'Argaloth (25)', 'short' => 'Argaloth (25)');
 $lang['occuthar_25'] = array('long' => 'Occu\'thar (25)', 'short' => 'Occu\'thar (25)');
+$lang['alizabal_25'] = array('long' => 'Alizabal, Mistress of Hate (25)', 'short' => 'Alizabal (25)');
 
 /******Throne of the Four Winds (25)*****/
 $lang['throne_of_four_winds_25'] = array('long' => 'Throne of the Four Winds (25)', 'short' => 'ToFW (25)');
@@ -539,7 +541,7 @@ $lang['firelands_10'] = array('long' => 'Firelands (10)', 'short' => 'FL (10)');
 $lang['shannox_10'] = array('long' => 'Shannox (10)', 'short' => 'Shannox (10)');
 $lang['bethtilac_10'] = array('long' => 'Beth\'tilac (10)', 'short' => 'Beth\'tilac (10)');
 $lang['lord_rhyolith_10'] = array('long' => 'Lord Rhyolith (10)', 'short' => 'Lord Rhyolith (10)');
-$lang['alysrazar_10'] = array('long' => 'Alysrazar (10)', 'short' => 'Alysrazar (10)');
+$lang['alysrazar_10'] = array('long' => 'Alysrazor (10)', 'short' => 'Alysrazor (10)');
 $lang['baloroc_10'] = array('long' => 'Baleroc, the Gatekeeper (10)', 'short' => 'Baleroc (10)');
 $lang['majordomo_staghelm_10'] = array('long' => 'Majordomo Staghelm (10)', 'short' => 'Majordomo (10)');
 $lang['ragnaros_fl_10'] = array('long' => 'Ragnaros (10)', 'short' => 'Ragnaros (10)');
@@ -549,7 +551,7 @@ $lang['firelands_25'] = array('long' => 'Firelands (25)', 'short' => 'FL (25)');
 $lang['shannox_25'] = array('long' => 'Shannox (25)', 'short' => 'Shannox (25)');
 $lang['bethtilac_25'] = array('long' => 'Beth\'tilac (25)', 'short' => 'Beth\'tilac (25)');
 $lang['lord_rhyolith_25'] = array('long' => 'Lord Rhyolith (25)', 'short' => 'Lord Rhyolith (25)');
-$lang['alysrazar_25'] = array('long' => 'Alysrazar (25)', 'short' => 'Alysrazar (25)');
+$lang['alysrazar_25'] = array('long' => 'Alysrazor (25)', 'short' => 'Alysrazor (25)');
 $lang['baloroc_25'] = array('long' => 'Baleroc, the Gatekeeper (25)', 'short' => 'Baleroc (25)');
 $lang['majordomo_staghelm_25'] = array('long' => 'Majordomo Staghelm (25)', 'short' => 'Majordomo (25)');
 $lang['ragnaros_fl_25'] = array('long' => 'Ragnaros (25)', 'short' => 'Ragnaros (25)');
@@ -559,7 +561,7 @@ $lang['firelands_10_hc'] = array('long' => 'Firelands HM (10)', 'short' => 'FL H
 $lang['shannox_10_hc'] = array('long' => 'Shannox HM (10)', 'short' => 'Shannox HM (10)');
 $lang['bethtilac_10_hc'] = array('long' => 'Beth\'tilac HM (10)', 'short' => 'Beth\'tilac HM (10)');
 $lang['lord_rhyolith_10_hc'] = array('long' => 'Lord Rhyolith HM (10)', 'short' => 'Lord Rhyolith HM (10)');
-$lang['alysrazar_10_hc'] = array('long' => 'Alysrazar HM (10)', 'short' => 'Alysrazar HM (10)');
+$lang['alysrazar_10_hc'] = array('long' => 'Alysrazor HM (10)', 'short' => 'Alysrazor HM (10)');
 $lang['baloroc_10_hc'] = array('long' => 'Baleroc, the Gatekeeper HM (10)', 'short' => 'Baleroc HM (10)');
 $lang['majordomo_staghelm_10_hc'] = array('long' => 'Majordomo Staghelm HM (10)', 'short' => 'Majordomo HM (10)');
 $lang['ragnaros_fl_10_hc'] = array('long' => 'Ragnaros HM (10)', 'short' => 'Ragnaros HM (10)');
@@ -569,9 +571,52 @@ $lang['firelands_25_hc'] = array('long' => 'Firelands HM (25)', 'short' => 'FL H
 $lang['shannox_25_hc'] = array('long' => 'Shannox HM (25)', 'short' => 'Shannox HM (25)');
 $lang['bethtilac_25_hc'] = array('long' => 'Beth\'tilac HM (25)', 'short' => 'Beth\'tilac HM (25)');
 $lang['lord_rhyolith_25_hc'] = array('long' => 'Lord Rhyolith HM (25)', 'short' => 'Lord Rhyolith HM (25)');
-$lang['alysrazar_25_hc'] = array('long' => 'Alysrazar HM (25)', 'short' => 'Alysrazar HM (25)');
+$lang['alysrazar_25_hc'] = array('long' => 'Alysrazor HM (25)', 'short' => 'Alysrazor HM (25)');
 $lang['baloroc_25_hc'] = array('long' => 'Baleroc, the Gatekeeper HM (25)', 'short' => 'Baleroc HM (25)');
 $lang['majordomo_staghelm_25_hc'] = array('long' => 'Majordomo Staghelm HM (25)', 'short' => 'Majordomo HM (25)');
 $lang['ragnaros_fl_25_hc'] = array('long' => 'Ragnaros HM (25)', 'short' => 'Ragnaros HM (25)');
 
+/******Dragon Soul (10)*****/
+$lang['dragon_soul_10'] = array('long' => 'Dragon Soul (10)', 'short' => 'DS (10)');
+$lang['morchok_10'] = array('long' => 'Morchok (10)', 'short' => 'Morchok (10)');
+$lang['zonozz_10'] = array('long' => 'Warlord Zon\'ozz (10)', 'short' => 'Zon\'ozz (10)');
+$lang['yorsahj_10'] = array('long' => 'Yor\'sahj the Unsleeping (10)', 'short' => 'Yor\'sahj (10)');
+$lang['hagara_10'] = array('long' => 'Hagara the Stormbinder (10)', 'short' => 'Hagara (10)');
+$lang['ultraxion_10'] = array('long' => 'Ultraxion (10)', 'short' => 'Ultraxion (10)');
+$lang['blackhorn_10'] = array('long' => 'Warmaster Blackhorn (10)', 'short' => 'Blackhorn (10)');
+$lang['spine_of_deathwing_10'] = array('long' => 'Spine of Deathwing (10)', 'short' => 'Spine (10)');
+$lang['madness_of_deathwing_10'] = array('long' => 'Madness of Deathwing (10)', 'short' => 'Madness (10)');
+
+/******Dragon Soul (25)*****/
+$lang['dragon_soul_25'] = array('long' => 'Dragon Soul (25)', 'short' => 'DS (25)');
+$lang['morchok_25'] = array('long' => 'Morchok (25)', 'short' => 'Morchok (25)');
+$lang['zonozz_25'] = array('long' => 'Warlord Zon\'ozz (25)', 'short' => 'Zon\'ozz (25)');
+$lang['yorsahj_25'] = array('long' => 'Yor\'sahj the Unsleeping (25)', 'short' => 'Yor\'sahj (25)');
+$lang['hagara_25'] = array('long' => 'Hagara the Stormbinder (25)', 'short' => 'Hagara (25)');
+$lang['ultraxion_25'] = array('long' => 'Ultraxion (25)', 'short' => 'Ultraxion (25)');
+$lang['blackhorn_25'] = array('long' => 'Warmaster Blackhorn (25)', 'short' => 'Blackhorn (25)');
+$lang['spine_of_deathwing_25'] = array('long' => 'Spine of Deathwing (25)', 'short' => 'Spine (25)');
+$lang['madness_of_deathwing_25'] = array('long' => 'Madness of Deathwing (25)', 'short' => 'Madness (25)');
+
+/******Dragon Soul HM (10)*****/
+$lang['dragon_soul_10_hc'] = array('long' => 'Dragon Soul HM (10)', 'short' => 'DS HM (10)');
+$lang['morchok_10_hc'] = array('long' => 'Morchok HM (10)', 'short' => 'Morchok HM (10)');
+$lang['zonozz_10_hc'] = array('long' => 'Warlord Zon\'ozz HM (10)', 'short' => 'Zon\'ozz HM (10)');
+$lang['yorsahj_10_hc'] = array('long' => 'Yor\'sahj the Unsleeping HM (10)', 'short' => 'Yor\'sahj HM (10)');
+$lang['hagara_10_hc'] = array('long' => 'Hagara the Stormbinder HM (10)', 'short' => 'Hagara HM (10)');
+$lang['ultraxion_10_hc'] = array('long' => 'Ultraxion HM (10)', 'short' => 'Ultraxion HM (10)');
+$lang['blackhorn_10_hc'] = array('long' => 'Warmaster Blackhorn HM (10)', 'short' => 'Blackhorn HM (10)');
+$lang['spine_of_deathwing_10_hc'] = array('long' => 'Spine of Deathwing HM (10)', 'short' => 'Spine HM (10)');
+$lang['madness_of_deathwing_10_hc'] = array('long' => 'Madness of Deathwing HM (10)', 'short' => 'Madness HM (10)');
+
+/******Dragon Soul HM (25)*****/
+$lang['dragon_soul_25_hc'] = array('long' => 'Dragon Soul HM (25)', 'short' => 'DS HM (25)');
+$lang['morchok_25_hc'] = array('long' => 'Morchok HM (25)', 'short' => 'Morchok HM (25)');
+$lang['zonozz_25_hc'] = array('long' => 'Warlord Zon\'ozz HM (25)', 'short' => 'Zon\'ozz HM (25)');
+$lang['yorsahj_25_hc'] = array('long' => 'Yor\'sahj the Unsleeping HM (25)', 'short' => 'Yor\'sahj HM (25)');
+$lang['hagara_25_hc'] = array('long' => 'Hagara the Stormbinder HM (25)', 'short' => 'Hagara HM (25)');
+$lang['ultraxion_25_hc'] = array('long' => 'Ultraxion HM (25)', 'short' => 'Ultraxion HM (25)');
+$lang['blackhorn_25_hc'] = array('long' => 'Warmaster Blackhorn HM (25)', 'short' => 'Blackhorn HM (25)');
+$lang['spine_of_deathwing_25_hc'] = array('long' => 'Spine of Deathwing HM (25)', 'short' => 'Spine HM (25)');
+$lang['madness_of_deathwing_25_hc'] = array('long' => 'Madness of Deathwing HM (25)', 'short' => 'Madness HM (25)');
 ?>
