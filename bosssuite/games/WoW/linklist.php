@@ -1008,8 +1008,8 @@ $idlist['wowheadmv'] = array(
 	'hagara_10' => '39318&modelType=32',
 	'ultraxion_10' => '39099&modelType=8',
 	'blackhorn_10' => '39399&modelType=32',
-	'spine_of_deathwing_10' => '',
-	'madness_of_deathwing_10' => '',
+	'spine_of_deathwing_10' => '35943&modelType=8',
+	'madness_of_deathwing_10' => '39355&modelType=8',
 	
 	'morchok_10_hc' => '39094&modelType=8',
 	'zonozz_10_hc' => '39138&modelType=8',
@@ -1017,8 +1017,8 @@ $idlist['wowheadmv'] = array(
 	'hagara_10_hc' => '39318&modelType=32',
 	'ultraxion_10_hc' => '39099&modelType=8',
 	'blackhorn_10_hc' => '39399&modelType=32',
-	'spine_of_deathwing_10_hc' => '',
-	'madness_of_deathwing_10_hc' => '',
+	'spine_of_deathwing_10_hc' => '35943&modelType=8',
+	'madness_of_deathwing_10_hc' => '39355&modelType=8',
 	
 	'morchok_25' => '39094&modelType=8',
 	'zonozz_25' => '39138&modelType=8',
@@ -1026,8 +1026,8 @@ $idlist['wowheadmv'] = array(
 	'hagara_25' => '39318&modelType=32',
 	'ultraxion_25' => '39099&modelType=8',
 	'blackhorn_25' => '39399&modelType=32',
-	'spine_of_deathwing_25' => '',
-	'madness_of_deathwing_25' => '',
+	'spine_of_deathwing_25' => '35943&modelType=8',
+	'madness_of_deathwing_25' => '39355&modelType=8',
 	
 	'morchok_25_hc' => '39094&modelType=8',
 	'zonozz_25_hc' => '39138&modelType=8',
@@ -1035,7 +1035,7 @@ $idlist['wowheadmv'] = array(
 	'hagara_25_hc' => '39318&modelType=32',
 	'ultraxion_25_hc' => '39099&modelType=8',
 	'blackhorn_25_hc' => '39399&modelType=32',
-	'spine_of_deathwing_25_hc' => '',
-	'madness_of_deathwing_25_hc' => '',
+	'spine_of_deathwing_25_hc' => '35943&modelType=8',
+	'madness_of_deathwing_25_hc' => '39355&modelType=8',
 );
 ?>
