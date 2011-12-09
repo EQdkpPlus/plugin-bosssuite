@@ -266,6 +266,7 @@ $image_map['alakir_10'] = 'alakir';
 
 $image_map['baradin_hold_10'] = 'baradin_hold';
 $image_map['argaloth_10'] = 'argaloth';
+$image_map['alizabal_10'] = 'shahraz';
 
 $image_map['blackwing_descent_25'] = 'blackwing_descent';
 $image_map['magmaw_25'] = 'magmaw';
@@ -287,6 +288,7 @@ $image_map['alakir_25'] = 'alakir';
 
 $image_map['baradin_hold_25'] = 'baradin_hold';
 $image_map['argaloth_25'] = 'argaloth';
+$image_map['alizabal_25'] = 'shahraz';
 
 // Cataclysm 
 $image_map['blackwing_descent_10_hc'] = 'blackwing_descent';
